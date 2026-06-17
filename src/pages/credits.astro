@@ -1,0 +1,77 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import MarqueeLights from '@components/MarqueeLights.astro';
+import { creditGroups } from '@data/credits';
+import { getProductionHref } from '@data/productions';
+
+const sectionIds: Record<string, string> = {
+  'Broadway': 'broadway',
+  'Goodman Theatre': 'goodman',
+  'Wisdom Bridge Theatre': 'wisdom-bridge',
+  'Opera': 'opera',
+  'Recent Work': 'recent-work',
+};
+---
+
+<BaseLayout
+  title="Credits — Robert Falls"
+  description="Selected directing credits of Robert Falls across Broadway, the Goodman Theatre, Wisdom Bridge Theatre, and opera."
+>
+  <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
+    <div class="grain-overlay"></div>
+    <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
+      <div class="section-container !py-0">
+        <p class="section-eyebrow text-brand-gold">A Working Life</p>
+        <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">Selected Credits</h1>
+        <p class="font-serif italic text-brand-cream/70 text-lg mt-6 max-w-xl">
+          Sixteen Broadway stagings, decades of world premieres at the Goodman, a Tony Award,
+          and a directing career that began with amateur productions in rural Illinois. For the
+          complete chronological record, see the <a href="/timeline" class="underline underline-offset-4 hover:text-brand-goldBright">full career timeline</a>.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-8">
+          <a href="/productions" class="btn-primary">Browse Production Pages</a>
+          <a href="/timeline" class="btn-outline border-brand-cream/30 text-brand-cream hover:border-brand-gold hover:text-brand-goldBright">
+            Career Timeline
+          </a>
+        </div>
+      </div>
+      <MarqueeLights class="mt-12" />
+    </div>
+  </section>
+
+  {creditGroups.map((group) => (
+    <section id={sectionIds[group.label]} class="section-container border-b border-brand-ink/10 last:border-0">
+      <div class="flex items-baseline justify-between mb-8 flex-wrap gap-2">
+        <h2 class="font-display text-4xl text-brand-ink">{group.label}</h2>
+        <span class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold">{group.count}</span>
+      </div>
+      <div class="divide-y divide-brand-ink/10">
+        {group.credits.map((credit) => (
+          <div class="py-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <div>
+              <a
+                href={getProductionHref(credit.title)}
+                class="font-serif text-xl text-brand-ink hover:text-brand-oxblood transition-colors"
+              >
+                {credit.title}
+              </a>
+              <span class="text-brand-ink/50 text-sm ml-3">{credit.venue}</span>
+            </div>
+            <div class="flex items-center gap-4 shrink-0">
+              {credit.note && <span class="text-sm italic text-brand-oxblood/80">{credit.note}</span>}
+              <span class="text-sm text-brand-ink/65 font-display tracking-wide">{credit.year}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <section class="bg-brand-oxbloodDeep text-brand-cream text-center py-16">
+    <p class="font-serif italic text-xl text-brand-cream/85 max-w-xl mx-auto px-6">
+      This page highlights selected work by venue. For every production in chronological order,
+      visit the <a href="/timeline" class="text-brand-goldBright underline underline-offset-4">full career timeline</a>,
+      or <a href="/contact" class="text-brand-goldBright underline underline-offset-4">get in touch</a> directly.
+    </p>
+  </section>
+</BaseLayout>

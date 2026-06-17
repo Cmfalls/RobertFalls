@@ -1,0 +1,132 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import MarqueeLights from '@components/MarqueeLights.astro';
+import TimelineEntry from '@components/TimelineEntry.astro';
+import { timelineEntries } from '@data/timeline';
+
+function decadeOf(yearStr: string): string {
+  const year = parseInt(yearStr.slice(0, 4), 10);
+  if (year < 1980) return '1954–79';
+  if (year < 1990) return '1980s';
+  if (year < 2000) return '1990s';
+  if (year < 2010) return '2000s';
+  if (year < 2020) return '2010s';
+  return '2020s';
+}
+
+const decadeOrder = ['1954–79', '1980s', '1990s', '2000s', '2010s', '2020s'];
+const groups = decadeOrder
+  .map((decade) => ({
+    decade,
+    entries: timelineEntries.filter((e) => decadeOf(e.year) === decade),
+  }))
+  .filter((g) => g.entries.length > 0);
+
+function slug(decade: string) {
+  return 'decade-' + decade.replace(/[^0-9a-z]+/gi, '-').toLowerCase();
+}
+---
+
+<BaseLayout
+  title="Timeline — Robert Falls"
+  description="An interactive career timeline of theatre director Robert Falls, from 1954 to the present — Wisdom Bridge, the Goodman Theatre, Broadway, and beyond."
+>
+  <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
+    <div class="grain-overlay"></div>
+    <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
+      <div class="section-container !py-0">
+        <p class="section-eyebrow text-brand-gold">Seven Decades</p>
+        <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">Career Timeline</h1>
+        <p class="font-serif italic text-brand-cream/70 text-lg mt-6 max-w-xl">
+          From a childhood in Ashland, Illinois, to four decades shaping Chicago theatre — a life in the American stage.
+        </p>
+      </div>
+      <MarqueeLights class="mt-12" />
+    </div>
+  </section>
+
+  <section class="section-container max-w-3xl">
+    <div class="flex items-center gap-4 mb-6 text-xs uppercase tracking-[0.16em] text-brand-ink/65">
+      <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-brand-gold inline-block"></span> Career</span>
+      <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-brand-oxbloodBright inline-block"></span> Production</span>
+      <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-brand-goldBright inline-block"></span> Award</span>
+    </div>
+
+    <div class="mb-6">
+      <div class="text-[11px] uppercase tracking-[0.2em] text-brand-oxblood font-semibold mb-3">
+        Filter entries
+      </div>
+      <div class="timeline-filter-shell" data-timeline-filters>
+        <button type="button" class="filter-pill" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter-pill" data-filter="Career" aria-pressed="false">Career</button>
+        <button type="button" class="filter-pill" data-filter="Production" aria-pressed="false">Productions</button>
+        <button type="button" class="filter-pill" data-filter="Award" aria-pressed="false">Awards</button>
+      </div>
+    </div>
+
+    <nav class="mb-12 pb-8 border-b border-dashed border-brand-ink/15" aria-label="Jump to decade">
+      <div class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/50 mb-3">
+        Jump to decade
+      </div>
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+        {groups.map((g) => (
+          <a href={`#${slug(g.decade)}`} class="jump-pill">{g.decade}</a>
+        ))}
+      </div>
+    </nav>
+
+    {groups.map((g) => (
+      <div class="mb-14">
+        <h2 id={slug(g.decade)} class="font-display text-3xl text-brand-oxblood mb-6 scroll-mt-28">{g.decade}</h2>
+        <ul class="relative">
+          {g.entries.map((entry, i) => (
+            <TimelineEntry entry={entry} isLast={i === g.entries.length - 1} />
+          ))}
+        </ul>
+      </div>
+    ))}
+  </section>
+</BaseLayout>
+
+<style>
+  .timeline-filter-shell {
+    @apply inline-flex flex-wrap gap-2 rounded-[1.5rem] border border-brand-ink/15 bg-white/70 p-1.5 shadow-[0_10px_30px_rgba(34,24,20,0.06)];
+  }
+  .filter-pill {
+    @apply rounded-full px-4 py-2 text-xs font-display font-semibold uppercase tracking-[0.18em] border border-transparent text-brand-ink/65 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+  }
+  .filter-pill[aria-pressed='true'] {
+    @apply bg-brand-oxblood border-brand-oxblood text-brand-cream shadow-sm;
+  }
+  .jump-pill {
+    @apply text-xs font-display font-semibold uppercase tracking-[0.16em] text-brand-oxblood/70 underline decoration-brand-oxblood/20 underline-offset-[0.35rem] transition-colors duration-200 hover:text-brand-oxblood focus-visible:outline-none focus-visible:text-brand-oxblood focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+  }
+</style>
+
+<script>
+  const filterBar = document.querySelector('[data-timeline-filters]');
+  if (filterBar) {
+    const buttons = filterBar.querySelectorAll<HTMLButtonElement>('[data-filter]');
+    const items = document.querySelectorAll<HTMLElement>('li[data-category]');
+    const groupHeadings = document.querySelectorAll<HTMLElement>('h2[id^="decade-"]');
+
+    filterBar.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      const btn = target.closest<HTMLButtonElement>('[data-filter]');
+      if (!btn) return;
+      const filter = btn.dataset.filter;
+
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+      items.forEach((li) => {
+        const show = filter === 'all' || li.dataset.category === filter;
+        li.classList.toggle('hidden', !show);
+      });
+
+      groupHeadings.forEach((h2) => {
+        const wrapper = h2.closest('div');
+        const visibleCount = wrapper?.querySelectorAll('li[data-category]:not(.hidden)').length ?? 0;
+        if (wrapper) wrapper.classList.toggle('hidden', visibleCount === 0);
+      });
+    });
+  }
+</script>

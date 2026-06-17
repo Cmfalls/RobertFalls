@@ -1,0 +1,234 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import MarqueeLights from '@components/MarqueeLights.astro';
+import portrait from '../images/robert-falls-portrait-2025.jpg';
+import libraryPhoto from '../images/robert-falls-library.webp';
+import wisdomBridgePhoto from '../images/falls-wisdom-bridge-rehearsal.jpg';
+import katFallsPhoto from '../images/kat-falls.webp';
+import gilmanPhoto from '../images/rebecca-gilman.jpeg';
+---
+
+<BaseLayout
+  title="About Robert Falls — Theatre Director"
+  description="The biography of Robert Falls: rural Illinois roots, Wisdom Bridge Theatre, 35 years as Artistic Director of the Goodman Theatre, and his current freelance directing career."
+>
+  <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
+    <div class="grain-overlay"></div>
+    <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
+      <div class="section-container !py-0">
+        <p class="section-eyebrow text-brand-gold">Biography</p>
+        <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">About Robert</h1>
+      </div>
+      <MarqueeLights class="mt-12" />
+    </div>
+  </section>
+
+  <section class="section-container max-w-5xl grid md:grid-cols-[260px_1fr] gap-12 md:gap-16">
+    <div class="md:sticky md:top-28 self-start">
+      <Image
+        src={portrait}
+        alt="Portrait of Robert Falls"
+        width={400}
+        class="w-full aspect-square object-cover grayscale-[15%]"
+      />
+      <p class="text-xs uppercase tracking-[0.18em] text-brand-ink/65 mt-3">Robert Falls, theatre director</p>
+    </div>
+
+    <div class="space-y-7 text-brand-ink/80 leading-relaxed text-lg font-serif max-w-3xl">
+      <p>
+        Robert Arthur Falls was born March 2, 1954, in Springfield, Illinois, and raised in
+        Ashland, a small town in the rural center of the state. By his own account he was "a major
+        oddity" as a child — reading plays nonstop at the local library and staging elaborate play
+        scenarios for the neighborhood kids years before he ever set foot in a real theatre. One
+        moment left a lasting mark: watching Lee J. Cobb play Willy Loman on television in
+        <em> Death of a Salesman</em> — a role he would direct on Broadway himself four decades
+        later. Told he was too tall to be an actor, he studied acting briefly in New York before
+        committing fully to directing. At the University of Illinois, where he earned a B.F.A. in
+        Theatre in 1976, he became the first undergraduate to direct in the main theater of the
+        Krannert Center. Within months of graduating he had launched a professional directing
+        career in Chicago: first with a remount of his university production of
+        <em> Moonchildren</em>, then with <em>Of Mice and Men</em> at Wisdom Bridge Theatre — a
+        production that won him his second Jeff Award and led directly to his appointment as the
+        company's Artistic Director in 1977, at twenty-three.
+      </p>
+
+      <p>
+        From 1977 to 1985, Falls led Wisdom Bridge, a small but fiercely ambitious company on
+        Chicago's North Side. He later recalled that being "artistic director" there often meant
+        cleaning the toilets before opening the box office — total institutional labor that taught
+        him how a small ensemble house functions, and shaped the collaborative model he would later
+        build at the Goodman. He built a reputation for bold, theatrical interpretations of classic
+        and contemporary work, directing productions including Arthur Kopit's <em>Wings</em>
+        (1979), Bertolt Brecht's <em>Mother Courage and Her Children</em> (1981), Tennessee
+        Williams's <em>A Streetcar Named Desire</em> (1982), and a landmark <em>Hamlet</em> (1985)
+        starring a young Aidan Quinn.
+      </p>
+
+      <figure class="my-10 -mx-1">
+        <Image
+          src={wisdomBridgePhoto}
+          alt="A young Robert Falls in rehearsal during the Wisdom Bridge years"
+          width={1200}
+          loading="lazy"
+          class="w-full object-cover"
+        />
+        <figcaption class="text-xs uppercase tracking-[0.18em] text-brand-ink/65 mt-3">In rehearsal, Wisdom Bridge era</figcaption>
+      </figure>
+
+      <blockquote class="font-serif italic text-2xl text-brand-oxblood border-l-2 border-brand-gold pl-6 my-10">
+        "Chicago's most essential director." <span class="not-italic text-sm uppercase tracking-[0.16em] text-brand-ink/65 block mt-2">— Chicago Tribune</span>
+      </blockquote>
+
+      <p>
+        In 1986, Falls became Artistic Director of the Goodman Theatre, a position he held for
+        thirty-five years — one of the longest tenures of any artistic leader at a major American
+        theatre. Over that span the Goodman produced more than one hundred fifty world premieres
+        and transferred more than two dozen productions to Broadway, earning twenty-two Tony Awards
+        along the way. Under his leadership the Goodman received the 1992 Special Tony Award for
+        Outstanding Regional Theater and was named the number one regional theater in the United
+        States by <em>Time</em> magazine in 2003. In 2000 the Goodman opened its $46 million
+        downtown Loop campus, where its rehearsal hall was named the Robert Falls Rehearsal Wing in
+        his honor. Under Falls and executive director Roche Schulfer, the Goodman averaged 90
+        percent capacity, grew its subscriber base past 23,000, increased sales revenue from $2.5
+        million to $8.5 million, and lifted public support from $1.5 million to $5.6 million. The
+        Goodman also became the first theater in the country to produce all ten plays of August
+        Wilson's century cycle, and in 2017 established the Alice C. Rapoport Center for Education
+        and Engagement. Falls has named his proudest achievement not any single production but the
+        Artistic Collective he built around him — a rotating circle of directors and artists,
+        including Frank Galati, Michael Maggio, Mary Zimmerman, Regina Taylor, Chuck Smith, Henry
+        Godinez, Dael Orlandersmith, Steve Scott, Kimberly Senior, and Henry Wishcamper — designed
+        so the Goodman would be an artistic home rather than a single director's theatre.
+      </p>
+
+      <p>
+        His own Broadway work includes the Tony Award for Best Direction of a Play for
+        <em> Death of a Salesman</em> (1999), and a 2003 transfer of <em>Long Day's Journey Into
+        Night</em> that went on to win three Tony Awards. He also directed and co-wrote the book
+        for Disney's <em>Aida</em> on Broadway, a production that continues to be staged around
+        the world. Other Broadway credits — <em>Shining City</em>, <em>American Buffalo</em>,
+        <em> Desire Under the Elms</em>, and two separate Broadway runs of <em>The Rose Tattoo</em>
+        (1995 and 2019) — round out a directing career that moved fluidly between Chicago and New
+        York for four decades.
+      </p>
+
+      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Collaborators &amp; Critical Reception</h2>
+      <p>
+        Falls's work is best understood through his collaborators. His most important artistic
+        partnership was with actor Brian Dennehy, a relationship that stretched back to Wisdom
+        Bridge and ran through <em>Galileo</em>, <em>The Iceman Cometh</em>, <em>Death of a
+        Salesman</em>, and <em>Long Day's Journey Into Night</em> — work that tested his approach
+        to O'Neill, Miller, and large-scale classical form. The two sensed early on, as Falls put
+        it, that they would be "climbing mountains together." His most enduring playwright
+        collaboration was with Rebecca Gilman, with whom he shared at least six Goodman world
+        premieres, including <em>Blue Surge</em>, <em>Dollhouse</em>, and <em>Luna Gale</em>. He
+        spoke often about building an "artistic home" for writers and actors to do their best
+        work, rather than chasing any single signature production. His designers became part of
+        that same artistic home — Walt Spangler's sets and Ana Kuzmanic's costumes recur across
+        more than half a dozen productions, from <em>Desire Under the Elms</em> and <em>2666</em>
+        to <em>The Winter's Tale</em>.
+      </p>
+
+      <div class="flex items-center gap-4 not-prose bg-brand-cream/60 border border-brand-ink/10 px-5 py-4 my-8">
+        <Image
+          src={gilmanPhoto}
+          alt="Rebecca Gilman"
+          width={120}
+          loading="lazy"
+          class="w-16 h-16 rounded-full object-cover shrink-0"
+        />
+        <p class="text-sm text-brand-ink/70 leading-snug">
+          <span class="block font-display text-base text-brand-ink">Rebecca Gilman</span>
+          Falls's most enduring playwright collaborator — six Goodman world premieres together, from
+          <em> Blue Surge</em> (2001) to <em>Swing State</em> (2022).
+        </p>
+      </div>
+      <p>
+        The longtime Chicago Tribune critic Chris Jones identified Falls's defining signature as a
+        taste for "the big project" — the willingness to pursue work of "heft and ambition and
+        scale" when many regional theatres settle for safer, more manageable seasons. His direction
+        was widely praised as muscular, bold, and theatrically vivid — Variety called
+        <em> Long Day's Journey Into Night</em> "superlative." But the same ambition occasionally
+        drew pushback: some critics found his work overemphatic, and his 2018 adaptation of
+        <em> An Enemy of the People</em> split reviewers between praise for its political urgency
+        and criticism of its loose modernization. Falls himself has been disarmingly candid about
+        the tension — and about outright failure, once calling his own staging of Arthur Miller's
+        <em> Finishing the Picture</em> "not a successful play." "Every show has its own
+        explosions," he said in 2010. "I underline them... some people accuse me of doing so with a
+        heavy hand." It's a fair self-assessment of a director who favored pressure-filled,
+        high-concept theatre, who has said he would rather an audience leave angry than unaffected
+        — and whose biggest swings produced some of the most talked-about American stagings of his
+        generation.
+      </p>
+
+      <p>
+        Falls has always taken Chicago's combative theatre criticism as part of the deal. He said
+        he had been one of the "rock throwers" himself in his off-Loop years, and expected younger
+        directors to throw rocks at the Goodman in turn once he was running it — a culture he
+        described as fundamentally collegial rather than hostile. He brought that same candor to
+        the field's 2020 reckoning over equity and representation. After the open letter
+        <em> We See You, White American Theater</em> circulated nationally, Falls called it "a
+        reckoning that was due" and said the Goodman was "a lot better" for the questions it
+        raised — a response that helped shape the Goodman's Future Labs initiative, launched in
+        2020 to develop new work by Black, Indigenous, Latinx, and AAPI artists.
+      </p>
+
+      <p>
+        Falls stepped down as the Goodman's Artistic Director in 2022 after thirty-five years,
+        closing one of the longest and most consequential tenures in American regional theatre. He
+        has been careful, since, to resist the word "retired." His most recent chapter took him to
+        Steppenwolf Theatre for his directorial debut there with <em>Amadeus</em> in late 2025,
+        followed by a return to the Goodman in early 2026 to direct <em>Holiday</em> — his first
+        Goodman production since stepping down, staged in the theatre's Centennial Season.
+      </p>
+
+      <blockquote class="font-serif italic text-2xl text-brand-oxblood border-l-2 border-brand-gold pl-6 my-10">
+        "It's certainly not a retirement." <span class="not-italic text-sm uppercase tracking-[0.16em] text-brand-ink/65 block mt-2">— Robert Falls, January 2026</span>
+      </blockquote>
+
+      <figure class="my-10 -mx-1">
+        <Image
+          src={libraryPhoto}
+          alt="Robert Falls at home, between projects"
+          width={1200}
+          loading="lazy"
+          class="w-full object-cover"
+        />
+        <figcaption class="text-xs uppercase tracking-[0.18em] text-brand-ink/65 mt-3">At home, between projects</figcaption>
+      </figure>
+
+      <p>
+        Beyond the stage, Falls served as board president of Theatre Communications Group and led
+        Northwestern University's graduate directing program; he was elected a Fellow of the
+        American Academy of Arts and Sciences in 2003. Among his honors: the Drama Desk Award and
+        Obie Award, the Helen Hayes Award, the League of Chicago Theatres' Artistic Leadership
+        Award, induction into the Theater Hall of Fame, the O'Neill Medallion, the Savva Morozov
+        Diamond Award from the Moscow Art Theatre, the Illinois Arts Council Governor's Award, and
+        the Goodman's roughly one hundred sixty Jeff Awards earned under his leadership. He lives in
+        Evanston, Illinois, with his wife,
+        <a href="https://katfalls.com" target="_blank" rel="noopener" class="text-brand-oxblood underline underline-offset-4 hover:text-brand-oxbloodBright">author Kat Falls</a>.
+      </p>
+
+      <div class="flex items-center gap-4 not-prose bg-brand-cream/60 border border-brand-ink/10 px-5 py-4 my-8">
+        <Image
+          src={katFallsPhoto}
+          alt="Kat Falls"
+          width={120}
+          loading="lazy"
+          class="w-16 h-16 rounded-full object-cover shrink-0"
+        />
+        <p class="text-sm text-brand-ink/70 leading-snug">
+          <span class="block font-display text-base text-brand-ink">Kat Falls</span>
+          Novelist and screenwriter, married since 1993. Visit
+          <a href="https://katfalls.com" target="_blank" rel="noopener" class="text-brand-oxblood underline underline-offset-4">katfalls.com</a>.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-4 pt-5">
+        <a href="/timeline" class="btn-primary">Full Career Timeline</a>
+        <a href="/credits" class="btn-outline">Selected Credits</a>
+        <a href="/awards" class="btn-outline">Awards &amp; Honors</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,254 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import MarqueeLights from '@components/MarqueeLights.astro';
+import { awards } from '@data/awards';
+import { getProductionHref } from '@data/productions';
+import { pressItems } from '@data/press';
+import amadeusMozart from '../images/amadeus-mozart.jpg';
+import amadeus1 from '../images/amadeus-1.jpg';
+import amadeus2 from '../images/amadeus-2.jpg';
+import rehearsalPhoto from '../images/robert-falls-rehearsal.jpg';
+import holidayRehearsal1 from '../images/holiday-rehearsal-1.jpg';
+import swingState1 from '../images/swing-state-1.jpg';
+import swingState2 from '../images/swing-state-2.jpg';
+
+const featuredAwardNames = [
+  'Tony Award, Best Direction of a Play',
+  'Special Tony Award, Outstanding Regional Theatre',
+  'Drama Desk Award, Outstanding Director of a Play',
+  'Theater Hall of Fame Induction',
+];
+const featuredAwards = featuredAwardNames.map((name) => awards.find((a) => a.name === name)!);
+const featuredPress = pressItems.slice(0, 3);
+const selectedProductions = [
+  {
+    src: amadeus1,
+    alt: 'Amadeus at Steppenwolf Theatre',
+    title: 'Amadeus',
+    venue: 'Steppenwolf Theatre',
+    href: getProductionHref('Amadeus'),
+  },
+  {
+    src: amadeus2,
+    alt: 'Amadeus at Steppenwolf Theatre',
+    title: 'Amadeus',
+    venue: 'Steppenwolf Theatre',
+    href: getProductionHref('Amadeus'),
+  },
+  {
+    src: swingState1,
+    alt: 'Swing State at Goodman Theatre',
+    title: 'Swing State',
+    venue: 'Goodman Theatre',
+    href: getProductionHref('Swing State'),
+  },
+  {
+    src: swingState2,
+    alt: 'Swing State at Goodman Theatre',
+    title: 'Swing State',
+    venue: 'Goodman Theatre',
+    href: getProductionHref('Swing State'),
+  },
+];
+---
+
+<BaseLayout
+  title="Robert Falls — Theatre Director"
+  description="Robert Falls, Tony Award-winning theatre director and Artistic Director of Chicago's Goodman Theatre for 35 years. Recently directed Amadeus at Steppenwolf and Holiday at the Goodman."
+  transparentHeader={true}
+>
+  <!-- HERO -->
+  <section class="relative bg-brand-ink text-brand-cream overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-oxbloodDeep/40 via-brand-ink to-brand-ink"></div>
+    <div class="grain-overlay"></div>
+
+    <div class="relative pt-32 pb-10 md:pt-44 md:pb-14">
+      <MarqueeLights class="mb-12 md:mb-16" />
+      <div class="max-w-6xl mx-auto px-6">
+        <p class="section-eyebrow text-brand-gold">Tony Award-Winning Director</p>
+        <h1 class="font-display font-extrabold leading-[0.85] tracking-tight text-[16vw] md:text-[9rem] lg:text-[10.5rem]">
+          ROBERT<br /><span class="text-brand-oxbloodBright">FALLS</span>
+        </h1>
+        <p class="font-serif italic text-xl md:text-2xl text-brand-cream/75 mt-8 max-w-2xl">
+          Five decades shaping the American stage — from Wisdom Bridge to thirty-five years
+          leading Chicago's Goodman Theatre, and now, a new chapter of freelance work.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-10">
+          <a href="/credits" class="btn-primary">View Selected Credits</a>
+          <a href="/about" class="border border-brand-cream/30 text-brand-cream font-display uppercase tracking-[0.12em] text-sm font-semibold px-7 py-3.5 hover:border-brand-gold hover:text-brand-goldBright transition-colors">
+            About Robert
+          </a>
+        </div>
+      </div>
+      <MarqueeLights class="mt-14 md:mt-20" />
+    </div>
+  </section>
+
+  <!-- STAT STRIP -->
+  <section class="bg-brand-cream border-b border-brand-ink/10">
+    <div class="max-w-6xl mx-auto px-6 py-14 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
+      <div>
+        <div class="font-display text-5xl text-brand-oxblood">35</div>
+        <div class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/55 mt-2">Years as Artistic<br />Director, Goodman</div>
+      </div>
+      <div>
+        <div class="font-display text-5xl text-brand-oxblood">150+</div>
+        <div class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/55 mt-2">World Premieres<br />Produced</div>
+      </div>
+      <div>
+        <div class="font-display text-5xl text-brand-oxblood">22</div>
+        <div class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/55 mt-2">Tony Awards for<br />Goodman Broadway Transfers</div>
+      </div>
+      <div>
+        <div class="font-display text-5xl text-brand-oxblood">1999</div>
+        <div class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/55 mt-2">Tony Award,<br />Death of a Salesman</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT WORK -->
+  <section id="recent-work" class="section-container grid md:grid-cols-[1fr_1.2fr] gap-12 items-center">
+    <div>
+      <p class="section-eyebrow">Recent Work</p>
+      <h2 class="section-heading">Amadeus &amp; Holiday<span class="text-brand-oxblood">.</span></h2>
+      <p class="text-brand-ink/70 leading-relaxed mb-6">
+        Robert's most recent chapter took him to two stages: his Steppenwolf directorial debut with
+        <em>Amadeus</em> in late 2025, followed by <em>Holiday</em> at the Goodman in early 2026 — his
+        first production there since stepping down as Artistic Director, staged in the theatre's
+        Centennial Season.
+      </p>
+      <p class="font-serif italic text-brand-oxblood/90 text-lg border-l-2 border-brand-gold pl-5 mb-6">
+        "I feel very lucky that I can be selective. I want to continue to work on exciting projects."
+      </p>
+      <a href="/credits#recent-work" class="btn-outline">See Recent &amp; Current Work</a>
+    </div>
+    <div class="grid grid-cols-2 gap-2">
+      <div class="bg-brand-ink aspect-[3/4] relative overflow-hidden">
+        <Image
+          src={amadeusMozart}
+          alt="A scene from Amadeus at Steppenwolf Theatre, directed by Robert Falls"
+          width={600}
+          loading="lazy"
+          class="w-full h-full object-cover opacity-95"
+        />
+      </div>
+      <div class="bg-brand-ink aspect-[3/4] relative overflow-hidden">
+        <Image
+          src={holidayRehearsal1}
+          alt="Robert Falls in rehearsal for Holiday at the Goodman Theatre"
+          width={600}
+          loading="lazy"
+          class="w-full h-full object-cover opacity-95"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED PRODUCTIONS GALLERY -->
+  <section class="bg-brand-ink py-4 md:py-6">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-center text-xs uppercase tracking-[0.2em] text-brand-cream/55 mb-4 md:mb-5">Selected Productions</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-1.5 md:gap-2">
+        {selectedProductions.map((production) => (
+          <a href={production.href} class="group relative overflow-hidden bg-brand-ink aspect-[4/3] block">
+            <Image
+              src={production.src}
+              alt={production.alt}
+              width={720}
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/85 via-brand-ink/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute inset-x-0 bottom-0 p-3 md:p-3.5">
+              <div class="font-display text-base md:text-lg text-brand-cream tracking-tight leading-none">
+                {production.title}
+              </div>
+              <div class="text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-brand-cream/65 mt-1">
+                {production.venue}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- THE GOODMAN YEARS -->
+  <section class="bg-brand-oxbloodDeep text-brand-cream relative overflow-hidden">
+    <Image
+      src={rehearsalPhoto}
+      alt=""
+      aria-hidden="true"
+      width={900}
+      loading="lazy"
+      class="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-luminosity"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-oxbloodDeep via-brand-oxbloodDeep/95 to-brand-oxbloodDeep/70"></div>
+    <div class="grain-overlay"></div>
+    <div class="section-container relative">
+      <p class="section-eyebrow text-brand-gold">1986 &mdash; 2022</p>
+      <h2 class="section-heading text-brand-cream">The Goodman Years</h2>
+      <p class="text-brand-cream/75 leading-relaxed max-w-2xl mb-10">
+        Over thirty-five years as Artistic Director, Robert transformed Chicago's Goodman Theatre
+        into one of the nation's leading arts institutions — producing over one hundred fifty world
+        premieres and twenty-four Broadway transfers that together earned twenty-two Tony Awards.
+        Under his leadership the Goodman received the Special Tony Award for Outstanding Regional
+        Theatre and was named the number one regional theater in the U.S. by <em class="font-serif italic">Time</em>.
+        When the Goodman opened its downtown Loop campus in 2000, the building's rehearsal hall was
+        named the Robert Falls Rehearsal Wing in his honor — a lasting, physical mark of his tenure.
+      </p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="border border-brand-cream/15 p-6">
+          <div class="font-display text-2xl text-brand-goldBright mb-1">The Iceman Cometh</div>
+          <div class="text-xs uppercase tracking-[0.16em] text-brand-cream/60">2012</div>
+        </div>
+        <div class="border border-brand-cream/15 p-6">
+          <div class="font-display text-2xl text-brand-goldBright mb-1">King Lear</div>
+          <div class="text-xs uppercase tracking-[0.16em] text-brand-cream/60">2006 · Helen Hayes Award</div>
+        </div>
+        <div class="border border-brand-cream/15 p-6">
+          <div class="font-display text-2xl text-brand-goldBright mb-1">Finishing the Picture</div>
+          <div class="text-xs uppercase tracking-[0.16em] text-brand-cream/60">2004 · Arthur Miller's final play</div>
+        </div>
+      </div>
+      <a href="/credits#goodman" class="btn-primary mt-10 inline-flex">Full Goodman Credits</a>
+    </div>
+  </section>
+
+  <!-- AWARDS PREVIEW -->
+  <section class="section-container">
+    <p class="section-eyebrow">Recognition</p>
+    <h2 class="section-heading">Awards &amp; Honors</h2>
+    <div class="grid sm:grid-cols-2 gap-px bg-brand-ink/10 mt-8">
+      {featuredAwards.map((award) => (
+        <div class="bg-brand-cream p-6">
+          <div class="font-display text-xl text-brand-ink">{award.name}</div>
+          {award.work && <div class="text-sm text-brand-ink/55 mt-1">{award.work}{award.year ? ` · ${award.year}` : ''}</div>}
+        </div>
+      ))}
+    </div>
+    <a href="/awards" class="btn-outline mt-8 inline-flex">View All Awards</a>
+  </section>
+
+  <!-- PRESS PREVIEW -->
+  <section class="bg-brand-ink text-brand-cream">
+    <div class="section-container">
+      <p class="section-eyebrow text-brand-gold">In the Press</p>
+      <h2 class="section-heading text-brand-cream">Recent Coverage</h2>
+      <div class="space-y-1 mt-8">
+        {featuredPress.map((item) => (
+          <a href={item.url} target="_blank" rel="noopener" class="flex items-center justify-between py-5 border-b border-brand-cream/10 group">
+            <div>
+              <div class="text-xs uppercase tracking-[0.18em] text-brand-gold mb-1">{item.outlet} {item.date && `· ${item.date}`}</div>
+              <div class="font-serif text-lg text-brand-cream group-hover:text-brand-goldBright transition-colors">{item.title}</div>
+            </div>
+            <span class="text-brand-cream/55 group-hover:text-brand-goldBright transition-colors">↗</span>
+          </a>
+        ))}
+      </div>
+      <a href="/press" class="btn-primary mt-10 inline-flex">All Press Coverage</a>
+    </div>
+  </section>
+</BaseLayout>

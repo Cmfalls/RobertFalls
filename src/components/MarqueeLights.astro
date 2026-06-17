@@ -1,0 +1,37 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+<div class:list={['marquee-lights', className]} aria-hidden="true">
+  {Array.from({ length: 28 }).map(() => <span></span>)}
+</div>
+
+<style>
+  .marquee-lights {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4%;
+  }
+  .marquee-lights span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #e8c35c;
+    box-shadow: 0 0 6px 1px rgba(232, 195, 94, 0.85);
+    animation: bulb-flicker 2.6s ease-in-out infinite;
+  }
+  .marquee-lights span:nth-child(odd) { animation-delay: -1.3s; }
+  .marquee-lights span:nth-child(3n) { animation-delay: -0.6s; }
+  .marquee-lights span:nth-child(4n) { animation-delay: -1.9s; }
+
+  @keyframes bulb-flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+
+  @media (max-width: 640px) {
+    .marquee-lights span:nth-child(even) { display: none; }
+  }
+</style>

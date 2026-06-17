@@ -1,0 +1,490 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { featuredProductions, productions, productionStats } from '@data/productions';
+
+const decadeOrder = ['2020s', '2010s', '2000s', '1990s', '1980s', '1970s'];
+const groupedProductions = decadeOrder
+  .map((decade) => ({
+    decade,
+    productions: productions.filter((production) => production.decadeLabel === decade),
+  }))
+  .filter((group) => group.productions.length > 0);
+
+const featuredRail = [...featuredProductions].sort(
+  (a, b) => b.latestYearValue - a.latestYearValue || a.title.localeCompare(b.title),
+);
+
+function sectionId(decade: string) {
+  return `decade-${decade.toLowerCase()}`;
+}
+
+function sourceStatusLabel(status: (typeof productions)[number]['sourceStatus']) {
+  if (status === 'featured-ready') return 'Featured ready';
+  if (status === 'researched') return 'Researched';
+  return 'Repo seed';
+}
+
+function sourceStatusClass(status: (typeof productions)[number]['sourceStatus']) {
+  if (status === 'featured-ready') return 'status-ready';
+  if (status === 'researched') return 'status-researched';
+  return 'status-seed';
+}
+
+function previewText(text: string, limit = 150) {
+  return text.length > limit ? `${text.slice(0, limit - 3).trim()}...` : text;
+}
+
+function productionTags(production: (typeof productions)[number]) {
+  const venueText = production.venues.join(' ').toLowerCase();
+  const tags = ['all'];
+
+  tags.push(production.stagingCount > 1 ? 'repeat' : 'single');
+  if (venueText.includes('goodman')) tags.push('goodman');
+  if (
+    venueText.includes('broadway') ||
+    venueText.includes('new york') ||
+    venueText.includes('off-broadway') ||
+    venueText.includes('lincoln center') ||
+    venueText.includes('public theater')
+  ) {
+    tags.push('new-york');
+  }
+  if (venueText.includes('opera')) tags.push('opera');
+  if (production.pageMode === 'featured') tags.push('featured');
+
+  return tags.join(' ');
+}
+---
+
+<BaseLayout
+  title="Productions - Robert Falls"
+  description="Browse Robert Falls productions through a featured editorial set and a full archive index organized by decade, venue, and staging history."
+>
+  <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(138,19,36,0.55),_transparent_40%),radial-gradient(circle_at_80%_20%,_rgba(232,195,94,0.12),_transparent_26%),linear-gradient(135deg,_rgba(13,10,8,0.96),_rgba(27,18,14,0.88))]"></div>
+    <div class="grain-overlay"></div>
+    <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
+      <div class="section-container !py-0">
+        <p class="section-eyebrow text-brand-gold">Production Library</p>
+        <div class="grid xl:grid-cols-[1.15fr_0.85fr] gap-10 items-end">
+          <div>
+            <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight max-w-4xl">
+              Theatre Archive
+            </h1>
+            <p class="font-serif italic text-brand-cream/72 text-lg md:text-xl mt-6 max-w-3xl">
+              Featured pages now carry the fuller editorial story. The archive below remains the
+              complete browseable index: every title, every staging trail, every decade.
+            </p>
+          </div>
+          <div class="library-hero-panel">
+            <div class="library-hero-row">
+              <span>Production titles</span>
+              <strong>{productionStats.titleCount}</strong>
+            </div>
+            <div class="library-hero-row">
+              <span>Documented stagings</span>
+              <strong>{productionStats.stagingCount}</strong>
+            </div>
+            <div class="library-hero-row">
+              <span>Featured pages</span>
+              <strong>{productionStats.featuredCount}</strong>
+            </div>
+            <div class="library-hero-row">
+              <span>Career span</span>
+              <strong>{productionStats.earliestYear} - {productionStats.latestYear}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container pb-8">
+    <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
+      <div>
+        <p class="section-eyebrow">Priority Set</p>
+        <h2 class="section-heading">Featured Production Pages</h2>
+      </div>
+      <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/45">
+        richer profiles, stronger navigation, cleaner source status
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-5 xl:gap-6">
+      {featuredRail.map((production) => {
+        const heroImage = production.images[0];
+        return (
+          <a href={`/productions/${production.slug}`} class="group featured-library-card">
+            <div class="featured-library-media-shell">
+              {heroImage ? (
+                <img
+                  src={heroImage.src.src}
+                  alt={heroImage.alt}
+                  width={heroImage.src.width}
+                  height={heroImage.src.height}
+                  class="featured-library-media"
+                />
+              ) : (
+                <div class="featured-library-type">
+                  <div class="featured-library-type-mark">{production.yearSpan}</div>
+                  <div class="featured-library-type-title">{production.title}</div>
+                </div>
+              )}
+              <div class="featured-library-overlay"></div>
+              <div class="featured-library-badges">
+                <span class={`featured-status-pill ${sourceStatusClass(production.sourceStatus)}`}>
+                  {sourceStatusLabel(production.sourceStatus)}
+                </span>
+                <span class="featured-mode-pill">{production.images.length > 0 ? 'Media-backed' : 'Type-led'}</span>
+              </div>
+            </div>
+
+            <div class="p-5 md:p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <div class="text-[11px] uppercase tracking-[0.18em] text-brand-oxblood font-semibold">
+                    {production.yearSpan}
+                  </div>
+                  <h3 class="font-display text-3xl leading-none text-brand-ink mt-3 group-hover:text-brand-oxblood transition-colors">
+                    {production.title}
+                  </h3>
+                </div>
+                <div class="featured-count-pill">
+                  {production.stagingCount} {production.stagingCount === 1 ? 'staging' : 'stagings'}
+                </div>
+              </div>
+
+              <p class="text-brand-ink/76 leading-relaxed mt-4">{previewText(production.summary, 165)}</p>
+
+              <p class="text-sm text-brand-ink/60 leading-relaxed mt-4">
+                {previewText(production.significance, 125)}
+              </p>
+
+              <div class="flex items-center justify-between gap-4 mt-6 pt-5 border-t border-brand-ink/10">
+                <div class="space-y-1">
+                  <div class="text-[11px] uppercase tracking-[0.16em] text-brand-ink/42">Primary venue</div>
+                  <div class="text-sm text-brand-ink/68">{production.venueAnchor}</div>
+                </div>
+                <span class="font-display uppercase tracking-[0.16em] text-xs text-brand-oxblood group-hover:text-brand-oxbloodBright transition-colors">
+                  Open page
+                </span>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="section-container pt-4">
+    <div class="flex items-baseline justify-between gap-4 flex-wrap mb-8">
+      <div>
+        <p class="section-eyebrow">Full Archive</p>
+        <h2 class="section-heading">Browse Every Production</h2>
+      </div>
+      <div class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold">
+        all titles remain in the archive index
+      </div>
+    </div>
+
+    <div class="production-toolbar">
+      <label class="production-search-shell">
+        <span class="production-search-label">Search titles, venues, or context</span>
+        <input
+          type="search"
+          placeholder="Search productions"
+          class="production-search-input"
+          data-production-search
+        />
+      </label>
+
+      <div class="production-filter-stack">
+        <div class="production-filter-meta">Filter archive cards</div>
+        <div class="production-filter-group" data-production-filters>
+          <button type="button" class="production-filter-pill" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="production-filter-pill" data-filter="repeat" aria-pressed="false">Repeat titles</button>
+          <button type="button" class="production-filter-pill" data-filter="single" aria-pressed="false">Single stagings</button>
+          <button type="button" class="production-filter-pill" data-filter="goodman" aria-pressed="false">Goodman</button>
+          <button type="button" class="production-filter-pill" data-filter="new-york" aria-pressed="false">Broadway / NY</button>
+          <button type="button" class="production-filter-pill" data-filter="opera" aria-pressed="false">Opera</button>
+        </div>
+      </div>
+
+      <div class="production-results-meta">
+        <span data-visible-count>{productions.length}</span> visible
+      </div>
+    </div>
+
+    <nav
+      class="flex flex-wrap gap-2 md:gap-3 mb-12 pb-8 border-b border-dashed border-brand-ink/15"
+      aria-label="Jump to production decade"
+    >
+      {groupedProductions.map((group) => (
+        <a href={`#${sectionId(group.decade)}`} class="decade-jump-link" data-decade-link={group.decade}>
+          {group.decade}
+        </a>
+      ))}
+    </nav>
+
+    <div
+      class="hidden border border-brand-ink/10 bg-white/80 px-5 py-8 text-center text-brand-ink/60"
+      data-empty-state
+    >
+      No productions match that search or filter.
+    </div>
+
+    <div class="space-y-14">
+      {groupedProductions.map((group) => (
+        <section id={sectionId(group.decade)} class="scroll-mt-28" data-decade-section={group.decade}>
+          <div class="flex items-end justify-between gap-4 flex-wrap mb-6">
+            <div>
+              <div class="text-[11px] uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-2">
+                Entry Era
+              </div>
+              <h3 class="font-display text-4xl md:text-5xl text-brand-ink">{group.decade}</h3>
+            </div>
+            <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/45" data-decade-count>
+              {group.productions.length} titles
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-4 md:gap-5">
+            {group.productions.map((production) => (
+              <a
+                href={`/productions/${production.slug}`}
+                class="group archive-library-card"
+                data-production-card
+                data-decade={group.decade}
+                data-tags={productionTags(production)}
+                data-search={`${production.title} ${production.summary} ${production.significance} ${production.venues.join(' ')}`.toLowerCase()}
+              >
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="flex flex-wrap items-center gap-2">
+                      <span class="archive-year-pill">{production.yearSpan}</span>
+                      {production.pageMode === 'featured' && (
+                        <span class="archive-featured-pill">Featured</span>
+                      )}
+                    </div>
+                    <h4 class="font-display text-2xl md:text-[2rem] leading-none text-brand-ink mt-3 group-hover:text-brand-oxblood transition-colors">
+                      {production.title}
+                    </h4>
+                  </div>
+                  <div class="archive-count-stack">
+                    <div class="archive-count-value">{production.stagingCount}</div>
+                    <div class="archive-count-label">stagings</div>
+                  </div>
+                </div>
+
+                <p class="text-brand-ink/78 leading-relaxed mt-4">{previewText(production.significance, 135)}</p>
+
+                <div class="grid sm:grid-cols-3 gap-3 mt-5 text-sm">
+                  <div>
+                    <div class="archive-meta-label">Venue anchor</div>
+                    <div class="archive-meta-value">{production.venueAnchor}</div>
+                  </div>
+                  <div>
+                    <div class="archive-meta-label">Era</div>
+                    <div class="archive-meta-value">{production.eraLabel}</div>
+                  </div>
+                  <div>
+                    <div class="archive-meta-label">Source status</div>
+                    <div class="archive-meta-value">{sourceStatusLabel(production.sourceStatus)}</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between gap-4 mt-6 pt-5 border-t border-brand-ink/10">
+                  <div class="flex flex-wrap gap-2">
+                    {production.venues.slice(0, 2).map((venue) => (
+                      <span class="production-venue-pill">{venue}</span>
+                    ))}
+                  </div>
+                  <span class="font-display uppercase tracking-[0.16em] text-xs text-brand-oxblood group-hover:text-brand-oxbloodBright transition-colors">
+                    Open page
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .library-hero-panel {
+    @apply border border-brand-cream border-opacity-20 bg-brand-cream bg-opacity-5 p-6 md:p-7 backdrop-blur-sm;
+  }
+  .library-hero-row {
+    @apply flex items-baseline justify-between gap-4 border-b border-brand-cream border-opacity-10 pb-3 text-sm text-brand-cream text-opacity-60 last:border-b-0 last:pb-0;
+  }
+  .library-hero-row strong {
+    @apply font-display text-xl md:text-2xl text-brand-cream;
+  }
+  .featured-library-card {
+    @apply overflow-hidden border border-brand-ink border-opacity-10 bg-white bg-opacity-90 shadow-[0_18px_48px_rgba(34,24,20,0.08)] transition-all duration-200 hover:-translate-y-1 hover:border-brand-oxblood hover:border-opacity-30 hover:shadow-[0_24px_64px_rgba(34,24,20,0.14)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+  }
+  .featured-library-media-shell {
+    @apply relative aspect-[4/3] overflow-hidden bg-brand-ink;
+  }
+  .featured-library-media {
+    @apply h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03];
+  }
+  .featured-library-type {
+    @apply absolute inset-0 flex flex-col justify-end bg-[linear-gradient(160deg,rgba(40,22,18,0.9),rgba(15,12,10,0.95))] p-6 text-brand-cream;
+  }
+  .featured-library-type-mark {
+    @apply text-[11px] uppercase tracking-[0.22em] text-brand-gold;
+  }
+  .featured-library-type-title {
+    @apply mt-3 font-display text-4xl md:text-5xl leading-none max-w-[12ch];
+  }
+  .featured-library-overlay {
+    @apply absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-brand-ink via-black to-transparent;
+  }
+  .featured-library-badges {
+    @apply absolute left-4 right-4 top-4 flex flex-wrap gap-2;
+  }
+  .featured-status-pill,
+  .featured-mode-pill {
+    @apply inline-flex items-center rounded-full px-3 py-1.5 text-[11px] font-display font-semibold uppercase tracking-[0.16em];
+  }
+  .featured-mode-pill {
+    @apply border border-white border-opacity-20 bg-black bg-opacity-30 text-brand-cream backdrop-blur-sm;
+  }
+  .status-ready {
+    @apply bg-brand-gold text-brand-ink;
+  }
+  .status-researched {
+    @apply bg-brand-cream text-brand-oxblood;
+  }
+  .status-seed {
+    @apply bg-white bg-opacity-80 text-brand-ink;
+  }
+  .featured-count-pill {
+    @apply rounded-full border border-brand-oxblood border-opacity-10 bg-brand-oxblood bg-opacity-5 px-3 py-1.5 text-[11px] font-display font-semibold uppercase tracking-[0.16em] text-brand-oxblood;
+  }
+  .production-toolbar {
+    @apply mb-8 grid gap-4 rounded-[1.5rem] border border-brand-ink border-opacity-10 bg-white bg-opacity-80 p-5 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end;
+  }
+  .production-search-shell {
+    @apply block;
+  }
+  .production-search-label {
+    @apply block text-[11px] uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-2;
+  }
+  .production-search-input {
+    @apply w-full border border-brand-ink border-opacity-20 bg-white px-4 py-3 text-brand-ink outline-none transition-colors duration-200 placeholder:text-stone-400 focus:border-brand-oxblood;
+  }
+  .production-filter-stack {
+    @apply lg:justify-self-end;
+  }
+  .production-filter-meta {
+    @apply mb-2 text-[11px] uppercase tracking-[0.18em] text-brand-ink text-opacity-40;
+  }
+  .production-filter-group {
+    @apply flex flex-wrap gap-2;
+  }
+  .production-filter-pill {
+    @apply inline-flex items-center rounded-full border border-brand-ink border-opacity-20 bg-white px-3 py-2 text-[11px] font-display font-semibold uppercase tracking-[0.16em] text-brand-ink text-opacity-70 transition-colors duration-200 hover:border-brand-oxblood hover:border-opacity-30 hover:text-brand-oxblood focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+  }
+  .production-filter-pill[aria-pressed='true'] {
+    @apply border-brand-oxblood bg-brand-oxblood text-brand-cream;
+  }
+  .production-results-meta {
+    @apply text-xs uppercase tracking-[0.16em] text-brand-ink text-opacity-50 lg:col-span-2;
+  }
+  .decade-jump-link {
+    @apply inline-flex items-center rounded-full border border-brand-ink border-opacity-10 px-4 py-2 text-xs font-display font-semibold uppercase tracking-[0.18em] text-brand-ink text-opacity-60 transition-colors duration-200 hover:border-brand-oxblood hover:border-opacity-30 hover:text-brand-oxblood focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+  }
+  .archive-library-card {
+    @apply border border-brand-ink border-opacity-10 bg-white bg-opacity-80 p-5 md:p-6 transition-all duration-200 hover:border-brand-oxblood hover:border-opacity-30 hover:shadow-[0_16px_44px_rgba(34,24,20,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+  }
+  .archive-year-pill,
+  .archive-featured-pill {
+    @apply inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-display font-semibold uppercase tracking-[0.16em];
+  }
+  .archive-year-pill {
+    @apply border border-brand-ink border-opacity-10 bg-brand-cream bg-opacity-40 text-brand-ink text-opacity-70;
+  }
+  .archive-featured-pill {
+    @apply bg-brand-gold text-brand-ink;
+  }
+  .archive-count-stack {
+    @apply min-w-[4.25rem] border-l border-brand-ink border-opacity-10 pl-4 text-right;
+  }
+  .archive-count-value {
+    @apply font-display text-3xl leading-none text-brand-ink;
+  }
+  .archive-count-label {
+    @apply mt-1 text-[11px] uppercase tracking-[0.16em] text-brand-ink text-opacity-50;
+  }
+  .archive-meta-label {
+    @apply text-[11px] uppercase tracking-[0.16em] text-brand-ink text-opacity-40;
+  }
+  .archive-meta-value {
+    @apply mt-1 text-sm leading-snug text-brand-ink text-opacity-70;
+  }
+  .production-venue-pill {
+    @apply border border-brand-ink border-opacity-10 px-2.5 py-1 text-[11px] uppercase tracking-[0.16em] text-brand-ink text-opacity-60;
+  }
+</style>
+
+<script>
+  const searchInput = document.querySelector('[data-production-search]');
+  const filterBar = document.querySelector('[data-production-filters]');
+  const cards = Array.from(document.querySelectorAll('[data-production-card]'));
+  const sections = Array.from(document.querySelectorAll('[data-decade-section]'));
+  const emptyState = document.querySelector('[data-empty-state]');
+  const visibleCountEl = document.querySelector('[data-visible-count]');
+  let activeFilter = 'all';
+
+  const applyFilters = () => {
+    const query = searchInput instanceof HTMLInputElement ? searchInput.value.trim().toLowerCase() : '';
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const text = card.getAttribute('data-search') ?? '';
+      const tags = (card.getAttribute('data-tags') ?? '').split(' ');
+      const matchesQuery = !query || text.includes(query);
+      const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+      const visible = matchesQuery && matchesFilter;
+      card.classList.toggle('hidden', !visible);
+      if (visible) visibleCount += 1;
+    });
+
+    sections.forEach((section) => {
+      const decade = section.getAttribute('data-decade-section');
+      const visibleCards = section.querySelectorAll('[data-production-card]:not(.hidden)').length;
+      const count = section.querySelector('[data-decade-count]');
+      if (count) count.textContent = `${visibleCards} ${visibleCards === 1 ? 'title' : 'titles'}`;
+      section.classList.toggle('hidden', visibleCards === 0);
+
+      const link = decade ? document.querySelector(`[data-decade-link="${decade}"]`) : null;
+      if (link) link.classList.toggle('hidden', visibleCards === 0);
+    });
+
+    if (visibleCountEl) visibleCountEl.textContent = String(visibleCount);
+    if (emptyState) emptyState.classList.toggle('hidden', visibleCount !== 0);
+  };
+
+  if (searchInput instanceof HTMLInputElement) {
+    searchInput.addEventListener('input', applyFilters);
+  }
+
+  if (filterBar) {
+    filterBar.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+      const button = target.closest('[data-filter]');
+      if (!(button instanceof HTMLButtonElement)) return;
+
+      activeFilter = button.dataset.filter ?? 'all';
+      filterBar.querySelectorAll('[data-filter]').forEach((item) => {
+        item.setAttribute('aria-pressed', String(item === button));
+      });
+      applyFilters();
+    });
+  }
+</script>

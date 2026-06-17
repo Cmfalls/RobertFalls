@@ -1,0 +1,82 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import MarqueeLights from '@components/MarqueeLights.astro';
+import { pressItems } from '@data/press';
+---
+
+<BaseLayout
+  title="Press — Robert Falls"
+  description="Press coverage of theatre director Robert Falls, from his 35-year tenure at the Goodman Theatre to his current freelance directing work."
+>
+  <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
+    <div class="grain-overlay"></div>
+    <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
+      <div class="section-container !py-0">
+        <p class="section-eyebrow text-brand-gold">Press Kit &amp; Coverage</p>
+        <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">Press</h1>
+      </div>
+      <MarqueeLights class="mt-12" />
+    </div>
+  </section>
+
+  <section class="section-container max-w-3xl">
+    <h2 class="font-display text-3xl text-brand-ink mb-6">Press Kit</h2>
+    <div class="bg-brand-cream border border-brand-ink/15 p-7 mb-6">
+      <p class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-3">Official Bio — for use in print</p>
+      <p class="font-serif text-brand-ink/80 leading-relaxed">
+        Robert Falls is a Tony Award-winning theatre director and the former Artistic Director of
+        Chicago's Goodman Theatre, a position he held from 1986 to 2022. Over thirty-five years he
+        led the Goodman to more than one hundred fifty world premieres and over two dozen Broadway
+        transfers earning twenty-two Tony Awards, including his own Tony Award for Best Direction of
+        a Play for <em>Death of a Salesman</em> in 1999. He continues to direct freelance work,
+        including <em>Amadeus</em> at Steppenwolf Theatre (2025) and <em>Holiday</em> at the
+        Goodman (2026).
+      </p>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mb-14">
+      <a
+        href="/images/robert-falls-portrait.webp"
+        download
+        class="flex items-center justify-between gap-4 border border-brand-ink/15 px-5 py-4 hover:border-brand-oxblood transition-colors group"
+      >
+        <div>
+          <div class="text-sm font-semibold text-brand-ink">Headshot</div>
+          <div class="text-xs text-brand-ink/50">High-resolution download</div>
+        </div>
+        <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors">&darr;</span>
+      </a>
+      <a
+        href="/images/amadeus-mozart.jpg"
+        download
+        class="flex items-center justify-between gap-4 border border-brand-ink/15 px-5 py-4 hover:border-brand-oxblood transition-colors group"
+      >
+        <div>
+          <div class="text-sm font-semibold text-brand-ink">Production Photo</div>
+          <div class="text-xs text-brand-ink/50">Amadeus, Steppenwolf Theatre</div>
+        </div>
+        <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors">&darr;</span>
+      </a>
+    </div>
+
+    <h2 class="font-display text-3xl text-brand-ink mb-6">Coverage</h2>
+    <div class="divide-y divide-brand-ink/10">
+      {pressItems.map((item) => (
+        <a href={item.url} target="_blank" rel="noopener" class="flex items-center justify-between gap-6 py-7 group">
+          <div>
+            <div class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-2">
+              {item.outlet}{item.date && ` · ${item.date}`}
+            </div>
+            <div class="font-serif text-2xl text-brand-ink group-hover:text-brand-oxblood transition-colors leading-snug">
+              {item.title}
+            </div>
+          </div>
+          <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors shrink-0">↗</span>
+        </a>
+      ))}
+    </div>
+
+    <p class="text-sm text-brand-ink/50 mt-10">
+      For media inquiries, interview requests, or press photography, see <a href="/contact" class="text-brand-oxblood underline underline-offset-4">Contact</a>.
+    </p>
+  </section>
+</BaseLayout>

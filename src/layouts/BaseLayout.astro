@@ -1,0 +1,131 @@
+---
+import Navigation from '@components/Navigation.astro';
+import Footer from '@components/Footer.astro';
+import '@fontsource/big-shoulders-display/600.css';
+import '@fontsource/big-shoulders-display/800.css';
+import '@fontsource/newsreader/400.css';
+import '@fontsource/newsreader/500.css';
+import '@fontsource/newsreader/600.css';
+import '@fontsource/newsreader/400-italic.css';
+import '@styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  schema?: Record<string, unknown> | Record<string, unknown>[] | null;
+  transparentHeader?: boolean;
+}
+
+const {
+  title,
+  description = 'Robert Falls — Tony Award-winning theatre director, 35 years as Artistic Director of Chicago’s Goodman Theatre.',
+  image = '/images/robert-falls-portrait-2025.jpg',
+  schema = null,
+  transparentHeader = false,
+} = Astro.props;
+
+const siteUrl = 'https://robertfalls.netlify.app';
+const siteBase = Astro.site ?? siteUrl;
+const canonicalURL = new URL(Astro.url.pathname, siteBase);
+const absoluteImage = new URL(image, siteBase).toString();
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${siteUrl}/#person`,
+  name: 'Robert Falls',
+  url: siteUrl,
+  image: `${siteUrl}/images/robert-falls-portrait-2025.jpg`,
+  sameAs: [
+    'https://en.wikipedia.org/wiki/Robert_Falls',
+    'https://www.goodmantheatre.org/about/people-at-goodman/artistic-director/',
+    'https://www.broadwayworld.com/people/Robert-Falls/',
+    'https://www.imdb.com/name/nm0266478/',
+  ],
+  jobTitle: ['Theatre Director', 'Former Artistic Director, Goodman Theatre'],
+  description: 'Tony Award-winning American theatre director; Artistic Director of Chicago’s Goodman Theatre, 1986–2022.',
+  birthPlace: { '@type': 'Place', name: 'Springfield, Illinois' },
+  homeLocation: { '@type': 'Place', name: 'Evanston, Illinois' },
+  spouse: { '@type': 'Person', name: 'Kat Falls', url: 'https://katfalls.com' },
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'University of Illinois Urbana-Champaign' },
+  ],
+  award: [
+    'Tony Award, Best Direction of a Play (Death of a Salesman, 1999)',
+    'Drama Desk Award (Long Day’s Journey Into Night)',
+    'Obie Award (subUrbia)',
+    'Helen Hayes Award (King Lear)',
+    'Theatre Hall of Fame',
+  ],
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
+  name: 'Robert Falls',
+  url: siteUrl,
+  founder: { '@id': `${siteUrl}/#person` },
+  sameAs: personSchema.sameAs,
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  url: siteUrl,
+  name: 'Robert Falls',
+  alternateName: 'Robert Falls Official Website',
+  description: 'Official website of Robert Falls, Tony Award-winning theatre director.',
+  publisher: { '@id': `${siteUrl}/#organization` },
+  creator: { '@id': `${siteUrl}/#person` },
+  about: { '@id': `${siteUrl}/#person` },
+  inLanguage: 'en-US',
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <title set:html={title} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Robert Falls" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={absoluteImage} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+
+    <!-- JSON-LD structured data -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    {schema && (
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+  </head>
+  <body>
+    <Navigation transparent={transparentHeader} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

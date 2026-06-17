@@ -1,0 +1,10 @@
+node_modules
+dist
+.astro
+.claude
+*.log
+
+# Research documents and unprocessed photo drops at project root —
+# not site content; real assets live under public/images once wired in
+*.pdf
+*.docx

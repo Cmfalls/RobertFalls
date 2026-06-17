@@ -1,0 +1,26 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import MarqueeLights from '@components/MarqueeLights.astro';
+---
+
+<BaseLayout
+  title="Message Sent — Robert Falls"
+  description="Thank you for getting in touch."
+>
+  <section class="bg-brand-ink text-brand-cream relative overflow-hidden min-h-[70vh] flex flex-col">
+    <div class="grain-overlay"></div>
+    <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
+      <div class="section-container !py-0">
+        <p class="section-eyebrow text-brand-gold">Thank You</p>
+        <h1 class="font-display font-extrabold text-5xl md:text-7xl tracking-tight">Message Sent</h1>
+        <p class="font-serif italic text-brand-cream/70 text-lg mt-6 max-w-xl">
+          Thanks for reaching out — your message has been received and will be passed along.
+        </p>
+        <a href="/contact" class="btn-outline mt-10 inline-flex border-brand-cream/30 text-brand-cream hover:border-brand-gold hover:text-brand-goldBright">
+          Back to Contact
+        </a>
+      </div>
+      <MarqueeLights class="mt-12" />
+    </div>
+  </section>
+</BaseLayout>

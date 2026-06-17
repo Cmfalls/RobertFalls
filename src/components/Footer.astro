@@ -1,0 +1,147 @@
+---
+const year = new Date().getFullYear();
+
+const exploreLinks = [
+  { href: '/about',    label: 'About Robert' },
+  { href: '/timeline', label: 'Career Timeline' },
+  { href: '/credits',  label: 'Selected Credits' },
+  { href: '/awards',   label: 'Awards & Honors' },
+  { href: '/press',    label: 'Press Coverage' },
+  { href: '/contact',  label: 'Booking & Contact' },
+];
+
+const legacyLinks = [
+  { href: 'https://www.goodmantheatre.org', label: 'Goodman Theatre', external: true },
+  { href: '/credits#broadway', label: 'Broadway Productions' },
+  { href: '/credits#goodman', label: 'Goodman Theatre' },
+  { href: '/credits#wisdom-bridge', label: 'Wisdom Bridge Theatre' },
+];
+---
+
+<footer class="bg-brand-ink text-brand-cream relative">
+  <!-- Stat band -->
+  <div class="border-b border-brand-gold/15">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-14 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="border-l-2 border-brand-gold pl-4">
+        <div class="font-display text-4xl md:text-5xl text-brand-goldBright">35</div>
+        <div class="text-[11px] uppercase tracking-[0.18em] text-brand-cream/55 mt-1">Years as Artistic<br />Director, Goodman</div>
+      </div>
+      <div class="border-l-2 border-brand-gold pl-4">
+        <div class="font-display text-4xl md:text-5xl text-brand-goldBright">150+</div>
+        <div class="text-[11px] uppercase tracking-[0.18em] text-brand-cream/55 mt-1">World Premieres<br />Produced</div>
+      </div>
+      <div class="border-l-2 border-brand-gold pl-4">
+        <div class="font-display text-4xl md:text-5xl text-brand-goldBright">22</div>
+        <div class="text-[11px] uppercase tracking-[0.18em] text-brand-cream/55 mt-1">Tony Awards for<br />Goodman Broadway Transfers</div>
+      </div>
+      <div class="border-l-2 border-brand-gold pl-4">
+        <div class="font-display text-4xl md:text-5xl text-brand-goldBright">1999</div>
+        <div class="text-[11px] uppercase tracking-[0.18em] text-brand-cream/55 mt-1">Tony Award,<br />Best Direction</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav grid -->
+  <div class="border-b border-brand-gold/15">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-14 grid md:grid-cols-[1.3fr_1fr_1fr] gap-12">
+      <div>
+        <a href="/" class="font-display font-extrabold text-3xl text-brand-cream hover:text-brand-goldBright transition-colors">
+          ROBERT <span class="text-brand-gold">FALLS</span>
+        </a>
+        <p class="text-sm text-brand-cream/60 mt-4 max-w-sm leading-relaxed">
+          Theatre director. Artistic Director of Chicago's Goodman Theatre, 1986–2022.
+          Tony Award winner. Currently directing freelance work across Chicago and beyond.
+        </p>
+        <div class="flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-brand-cream/60 mt-6">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Chicago, Illinois
+        </div>
+      </div>
+
+      <div>
+        <div class="text-[11px] uppercase tracking-[0.22em] text-brand-gold font-semibold mb-5 pb-3 border-b border-dashed border-brand-gold/20">
+          Explore
+        </div>
+        <ul class="flex flex-col gap-1">
+          {exploreLinks.map(({ href, label }) => (
+            <li>
+              <a href={href} class="flex items-center justify-between py-2.5 text-sm text-brand-cream/70 hover:text-brand-goldBright transition-colors border-b border-dashed border-brand-cream/10">
+                <span>{label}</span>
+                <span class="text-brand-cream/30">&rarr;</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-[11px] uppercase tracking-[0.22em] text-brand-gold font-semibold mb-5 pb-3 border-b border-dashed border-brand-gold/20">
+          Legacy
+        </div>
+        <ul class="flex flex-col gap-1">
+          {legacyLinks.map(({ href, label, external }) => (
+            <li>
+              <a
+                href={href}
+                target={external ? '_blank' : undefined}
+                rel={external ? 'noopener' : undefined}
+                class="flex items-center justify-between py-2.5 text-sm text-brand-cream/70 hover:text-brand-goldBright transition-colors border-b border-dashed border-brand-cream/10"
+              >
+                <span>{label}</span>
+                <span class="text-brand-cream/30">{external ? '↗' : '→'}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact strip -->
+  <div class="border-b border-brand-gold/15">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-8 grid md:grid-cols-3 gap-4">
+      <div class="bg-brand-cream/[0.03] border border-brand-gold/15 px-5 py-4 flex items-center gap-3">
+        <span class="text-brand-gold">✦</span>
+        <div>
+          <div class="text-[10px] uppercase tracking-[0.18em] text-brand-cream/60">Representation</div>
+          <div class="text-sm text-brand-cream/85">Contact info coming soon</div>
+        </div>
+      </div>
+      <div class="bg-brand-cream/[0.03] border border-brand-gold/15 px-5 py-4 flex items-center gap-3">
+        <span class="text-brand-gold">✦</span>
+        <div>
+          <div class="text-[10px] uppercase tracking-[0.18em] text-brand-cream/60">Press &amp; Media</div>
+          <a href="/press" class="text-sm text-brand-cream/85 hover:text-brand-goldBright transition-colors">View Press Kit</a>
+        </div>
+      </div>
+      <div class="bg-brand-cream/[0.03] border border-brand-gold/15 px-5 py-4 flex items-center gap-3">
+        <span class="text-brand-gold">✦</span>
+        <div>
+          <div class="text-[10px] uppercase tracking-[0.18em] text-brand-cream/60">General Inquiries</div>
+          <a href="/contact" class="text-sm text-brand-cream/85 hover:text-brand-goldBright transition-colors">Send a Message</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meta bar -->
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-6 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-4 text-[10.5px] uppercase tracking-[0.14em] text-brand-cream/55">
+      <span>&copy; {year} Robert Falls</span>
+      <span class="w-px h-3 bg-brand-cream/15"></span>
+      <a href="https://connorfalls.com" target="_blank" rel="noopener" class="hover:text-brand-goldBright transition-colors">Site by Connor Falls Digital</a>
+    </div>
+    <button id="back-to-top" class="text-[10.5px] uppercase tracking-[0.16em] text-brand-cream/60 border border-brand-cream/15 px-4 py-2 hover:border-brand-gold hover:text-brand-goldBright transition-colors">
+      Back to top
+    </button>
+  </div>
+</footer>
+
+<script is:inline>
+  var btt = document.getElementById('back-to-top');
+  if (btt) {
+    btt.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>

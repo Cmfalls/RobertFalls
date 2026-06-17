@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-cream text-brand-ink font-serif antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 py-20;
+  }
+
+  .section-eyebrow {
+    @apply text-brand-oxblood uppercase tracking-[0.28em] text-xs font-semibold mb-4;
+  }
+
+  .section-heading {
+    @apply text-5xl md:text-6xl font-display tracking-tight text-brand-ink mb-4;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-brand-oxblood text-brand-cream font-display
+           uppercase tracking-[0.12em] text-sm font-semibold
+           px-7 py-3.5
+           hover:bg-brand-oxbloodBright transition-colors duration-200;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-brand-ink/30 text-brand-ink font-display
+           uppercase tracking-[0.12em] text-sm font-semibold
+           px-7 py-3.5
+           hover:border-brand-oxblood hover:text-brand-oxblood transition-colors duration-200;
+  }
+
+  /* faint film-grain texture for dark sections, layered via ::after in markup */
+  .grain-overlay {
+    @apply pointer-events-none absolute inset-0 bg-grain mix-blend-overlay opacity-40;
+  }
+}

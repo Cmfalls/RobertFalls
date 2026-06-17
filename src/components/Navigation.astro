@@ -1,0 +1,104 @@
+---
+interface Props {
+  transparent?: boolean;
+}
+
+const navLinks = [
+  { href: '/about',    label: 'About'    },
+  { href: '/timeline', label: 'Timeline' },
+  { href: '/credits',  label: 'Credits'  },
+  { href: '/awards',   label: 'Awards'   },
+  { href: '/press',    label: 'Press'    },
+  { href: '/contact',  label: 'Contact'  },
+];
+
+const currentPath = Astro.url.pathname;
+const { transparent = false } = Astro.props;
+
+function isActive(href: string) {
+  if (href === '/') return currentPath === '/';
+  return currentPath === href || currentPath.startsWith(href + '/');
+}
+---
+
+<header
+  data-overlay-nav={transparent ? 'true' : undefined}
+  class:list={[
+    'top-0 z-50 border-b transition-all duration-300',
+    transparent
+      ? 'fixed inset-x-0 border-transparent bg-transparent'
+      : 'sticky bg-brand-ink border-brand-gold/15 shadow-md',
+  ]}
+>
+  <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:h-24 md:px-8">
+
+    <!-- Wordmark -->
+    <a href="/" class="shrink-0 group">
+      <span class="block font-display font-extrabold text-2xl md:text-3xl tracking-tight text-brand-cream group-hover:text-brand-goldBright transition-colors">
+        ROBERT <span class="text-brand-gold group-hover:text-brand-goldBright">FALLS</span>
+      </span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden lg:flex items-center gap-9">
+      {navLinks.map(({ href, label }) => (
+        <li>
+          <a
+            href={href}
+            class:list={[
+              'inline-flex items-center text-[0.8rem] font-display font-semibold uppercase tracking-[0.22em] transition-colors whitespace-nowrap',
+              isActive(href) ? 'text-brand-gold' : 'text-brand-cream/75 hover:text-brand-cream',
+            ]}
+            aria-current={isActive(href) ? 'page' : undefined}
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <label class="lg:hidden cursor-pointer p-2 text-brand-cream" for="mobile-menu-toggle" aria-label="Toggle menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </label>
+  </nav>
+
+  <!-- Mobile menu -->
+  <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
+  <div class="peer-checked:block hidden lg:hidden border-t border-brand-gold/15 bg-brand-ink">
+    <ul class="max-w-7xl mx-auto px-6 py-5 grid grid-cols-2 gap-3">
+      {navLinks.map(({ href, label }) => (
+        <li>
+          <a href={href}
+             class:list={[
+               'block px-2 py-3 text-xs font-display font-semibold uppercase tracking-[0.2em] transition-colors',
+               isActive(href) ? 'text-brand-gold' : 'text-brand-cream hover:text-brand-goldBright',
+             ]}>
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</header>
+
+{transparent && (
+  <script is:inline>
+    const header = document.querySelector('[data-overlay-nav="true"]');
+    if (header) {
+      const applyState = () => {
+        if (window.scrollY > 18) {
+          header.classList.add('bg-brand-ink', 'shadow-md', 'border-brand-gold/15');
+          header.classList.remove('bg-transparent', 'border-transparent');
+        } else {
+          header.classList.remove('bg-brand-ink', 'shadow-md', 'border-brand-gold/15');
+          header.classList.add('bg-transparent', 'border-transparent');
+        }
+      };
+      applyState();
+      window.addEventListener('scroll', applyState, { passive: true });
+    }
+  </script>
+)}

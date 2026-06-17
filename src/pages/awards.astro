@@ -1,0 +1,37 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import MarqueeLights from '@components/MarqueeLights.astro';
+import { awards } from '@data/awards';
+---
+
+<BaseLayout
+  title="Awards & Honors — Robert Falls"
+  description="Awards and honors received by theatre director Robert Falls, including a Tony Award, Drama Desk Award, Obie Award, and induction into the Theatre Hall of Fame."
+>
+  <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
+    <div class="grain-overlay"></div>
+    <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
+      <div class="section-container !py-0">
+        <p class="section-eyebrow text-brand-gold">Recognition</p>
+        <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">Awards &amp; Honors</h1>
+      </div>
+      <MarqueeLights class="mt-12" />
+    </div>
+  </section>
+
+  <section class="section-container">
+    <div class="grid sm:grid-cols-2 gap-px bg-brand-ink/10">
+      {awards.map((award) => (
+        <div class="bg-brand-cream p-8 flex flex-col gap-2">
+          <span class="text-brand-gold text-xl">✦</span>
+          <div class="font-display text-2xl text-brand-ink leading-snug">{award.name}</div>
+          {(award.work || award.year) && (
+            <div class="text-sm text-brand-ink/55">
+              {award.work}{award.work && award.year ? ' · ' : ''}{award.year}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

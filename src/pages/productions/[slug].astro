@@ -1,0 +1,694 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { getRelatedProductions, productions, type ProductionRecord } from '@data/productions';
+
+export function getStaticPaths() {
+  return productions.map((production) => ({
+    params: { slug: production.slug },
+    props: { production },
+  }));
+}
+
+interface Props {
+  production: ProductionRecord;
+}
+
+const { production } = Astro.props;
+const relatedProductions = getRelatedProductions(production.slug, 3);
+const productionIndex = productions.findIndex((item) => item.slug === production.slug);
+const previousProduction = productionIndex > 0 ? productions[productionIndex - 1] : null;
+const nextProduction =
+  productionIndex >= 0 && productionIndex < productions.length - 1 ? productions[productionIndex + 1] : null;
+const heroImage = production.images.find((image) => image.priority) ?? production.images[0];
+const summary = production.publicSummary ?? production.summary;
+const synopsis = production.synopsis ?? production.publicSummary ?? production.story ?? production.summary;
+const fallsContext = production.fallsContext ?? production.significance;
+const assetImages = production.images;
+const hasAssets = assetImages.length > 0 || production.watchLinks.length > 0;
+const hasReviews = production.reviews.length > 0;
+const hasExternalSources = production.externalSources.length > 0;
+const hasPeople = production.cast.length > 0 || production.creativeTeam.length > 0;
+const railFacts = production.quickFacts.some((fact) => /stagings?/i.test(fact.label))
+  ? production.quickFacts
+  : [...production.quickFacts, { label: 'Stagings', value: String(production.stagingCount) }];
+const heroStyle = heroImage ? `--production-hero-image: url('${heroImage.src.src}')` : undefined;
+const introFacts = [
+  production.yearSpan,
+  production.venueAnchor,
+  production.eraLabel,
+].filter(Boolean);
+---
+
+<BaseLayout
+  title={`${production.title} - Robert Falls`}
+  description={`${production.title} production profile for Robert Falls, with synopsis, visual assets, cast, reviews, and source links.`}
+>
+  <section class={`production-hero ${heroImage ? 'production-hero-with-image' : ''}`} style={heroStyle}>
+    <div class="production-hero-bg"></div>
+    <div class="grain-overlay"></div>
+    <div class="production-hero-inner">
+      <div class="production-hero-copy">
+        <div class="production-breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/productions">Productions</a>
+        </div>
+
+        <div class="production-kicker-row">
+          {introFacts.map((fact) => (
+            <span>{fact}</span>
+          ))}
+        </div>
+
+        <h1>{production.title}</h1>
+        <p>{summary}</p>
+
+        <div class="production-hero-actions">
+          <a href="#overview">Overview</a>
+          <a href="#assets-main">Assets</a>
+          <a href="#press-main">Press</a>
+        </div>
+      </div>
+
+      {!heroImage && (
+        <figure class="production-hero-media production-type-media">
+          <div class="production-type-year">{production.yearSpan}</div>
+          <div class="production-type-title">{production.title}</div>
+        </figure>
+      )}
+    </div>
+  </section>
+
+  <div class="production-page">
+    <section id="overview" class="production-main-grid">
+      <div class="production-story-stack">
+        <section class="production-overview-pair">
+          <article class="production-panel production-intro-panel">
+            <p class="production-eyebrow">Production summary</p>
+            <h2>Synopsis</h2>
+            <p>{synopsis}</p>
+          </article>
+
+          <article class="production-panel production-context-panel">
+            <p class="production-eyebrow">Robert Falls context</p>
+            <p>{fallsContext}</p>
+          </article>
+        </section>
+
+        <section id="assets" class="production-assets-section">
+          <div class="production-section-heading production-slider-heading">
+            <div>
+              <p class="production-eyebrow">Assets</p>
+              <h2>Look & Listen</h2>
+            </div>
+            <div class="production-slider-cue" aria-hidden="true">
+              <span>Scroll</span>
+              <strong>← →</strong>
+            </div>
+          </div>
+
+          {hasAssets ? (
+            <div class="production-asset-strip" aria-label={`${production.title} production assets`}>
+              {assetImages.map((image) => (
+                <figure class="production-asset-card">
+                  <img
+                    src={image.src.src}
+                    alt={image.alt}
+                    width={image.src.width}
+                    height={image.src.height}
+                  />
+                </figure>
+              ))}
+              {production.watchLinks.map((link) => (
+                <a href={link.href} class="production-watch-card">
+                  {link.thumbnail && (
+                    <img
+                      src={link.thumbnail.src}
+                      alt=""
+                      width={link.thumbnail.width}
+                      height={link.thumbnail.height}
+                    />
+                  )}
+                  <div class="production-watch-overlay"></div>
+                  <span>Watch</span>
+                  <strong>{link.label}</strong>
+                  {link.description && <p>{link.description}</p>}
+                </a>
+              ))}
+            </div>
+          ) : (
+            <div class="production-panel production-empty-visual">
+              <p>Assets have not been attached for this production yet.</p>
+            </div>
+          )}
+        </section>
+
+        <section id="press" class="production-bottom-section">
+          <div class="production-section-heading">
+            <p class="production-eyebrow">Reception</p>
+            <h2>Reviews & Links</h2>
+          </div>
+
+          <div class={`production-review-grid ${hasExternalSources ? 'production-review-grid-with-sources' : ''}`}>
+            <div class="production-review-cards">
+              {hasReviews ? (
+                production.reviews.map((review) => (
+                  <a href={review.href} class="production-review-card">
+                    <span>{review.source}</span>
+                    <p>{review.summary}</p>
+                    <small>{review.note ?? 'Open link'}</small>
+                  </a>
+                ))
+              ) : (
+                <div class="production-panel production-empty-visual">
+                  <p>Review cards have not been researched for this production yet.</p>
+                </div>
+              )}
+            </div>
+
+            {hasExternalSources && (
+              <aside class="production-source-card">
+                <p class="production-eyebrow">Sources</p>
+                {production.externalSources.slice(0, 6).map((source) => (
+                  <a href={source.href}>{source.label}</a>
+                ))}
+              </aside>
+            )}
+          </div>
+        </section>
+      </div>
+
+      <aside class="production-side-rail" aria-label="Production facts and credits">
+        <section class="production-rail-card">
+          <p class="production-eyebrow">Quick facts</p>
+          <dl class="production-facts">
+            {railFacts.map((fact) => (
+              <div>
+                <dt>{fact.label}</dt>
+                <dd>{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+        {false && production.awardsOrSignificance.length > 0 && (
+          <section class="production-rail-card production-significance-card">
+            <p class="production-eyebrow">Highlights</p>
+            <div class="production-callouts">
+              {production.awardsOrSignificance.slice(0, 2).map((item) => (
+                <article>
+                  <h3>{item.label}</h3>
+                  <p>{item.detail}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {false && hasPeople && (
+          <section class="production-rail-card">
+            <p class="production-eyebrow">Cast & creative</p>
+            {production.cast.length > 0 && (
+              <div class="production-people-group">
+                <h3>Cast</h3>
+                {production.cast.map((person) => (
+                  <div class="production-person-row">
+                    <span>{person.role}</span>
+                    <strong>{person.name}</strong>
+                  </div>
+                ))}
+              </div>
+            )}
+            {production.creativeTeam.length > 0 && (
+              <div class="production-people-group">
+                <h3>Creative</h3>
+                {production.creativeTeam.map((person) => (
+                  <div class="production-person-row">
+                    <span>{person.role}</span>
+                    <strong>{person.name}</strong>
+                  </div>
+                ))}
+              </div>
+            )}
+          </section>
+        )}
+      </aside>
+    </section>
+
+    <section id="assets-main" class="production-assets-section production-assets-wide">
+      <div class="production-section-heading production-slider-heading">
+        <div>
+          <p class="production-eyebrow">Assets</p>
+          <h2>Look & Listen</h2>
+        </div>
+        <span class="production-slider-note">Scroll to browse</span>
+      </div>
+
+      {hasAssets ? (
+        <div class="production-asset-strip" aria-label={`${production.title} production assets`}>
+          {assetImages.map((image) => (
+            <figure class="production-asset-card">
+              <img
+                src={image.src.src}
+                alt={image.alt}
+                width={image.src.width}
+                height={image.src.height}
+              />
+            </figure>
+          ))}
+          {production.watchLinks.map((link) => (
+            <a href={link.href} class="production-watch-card">
+              {link.thumbnail && (
+                <img
+                  src={link.thumbnail.src}
+                  alt=""
+                  width={link.thumbnail.width}
+                  height={link.thumbnail.height}
+                />
+              )}
+              <div class="production-watch-overlay"></div>
+              <span>Watch</span>
+              <strong>{link.label}</strong>
+              {link.description && <p>{link.description}</p>}
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div class="production-panel production-empty-visual">
+          <p>Assets have not been attached for this production yet.</p>
+        </div>
+      )}
+    </section>
+
+    {hasPeople && (
+      <section class="production-credits-section production-panel">
+        <p class="production-eyebrow">Cast & creative</p>
+        <div class="production-credit-columns">
+          {production.cast.length > 0 && (
+            <div class="production-people-group">
+              <h3>Cast</h3>
+              {production.cast.map((person) => (
+                <div class="production-person-row">
+                  <span>{person.role}</span>
+                  <strong>{person.name}</strong>
+                </div>
+              ))}
+            </div>
+          )}
+          {production.creativeTeam.length > 0 && (
+            <div class="production-people-group">
+              <h3>Creative</h3>
+              {production.creativeTeam.map((person) => (
+                <div class="production-person-row">
+                  <span>{person.role}</span>
+                  <strong>{person.name}</strong>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+    )}
+
+    <section id="press-main" class="production-bottom-section">
+      <div class="production-section-heading">
+        <p class="production-eyebrow">Reception</p>
+        <h2>Reviews & Links</h2>
+      </div>
+
+      <div class="production-review-grid">
+        <div class="production-review-cards">
+          {hasReviews ? (
+            production.reviews.map((review) => (
+              <a href={review.href} class="production-review-card">
+                <span>{review.source}</span>
+                <p>{review.summary}</p>
+                <small>{review.note ?? 'Open link'}</small>
+              </a>
+            ))
+          ) : (
+            <div class="production-panel production-empty-visual">
+              <p>Review cards have not been researched for this production yet.</p>
+            </div>
+          )}
+        </div>
+
+        {hasExternalSources && (
+          <aside class="production-source-card">
+            <p class="production-eyebrow">Sources</p>
+            {production.externalSources.slice(0, 6).map((source) => (
+              <a href={source.href}>{source.label}</a>
+            ))}
+          </aside>
+        )}
+      </div>
+    </section>
+
+    <section class="production-related-section">
+      <div class="production-section-heading">
+        <p class="production-eyebrow">Related productions</p>
+        <h2>Keep Browsing</h2>
+      </div>
+
+      <div class="production-related-grid">
+        {relatedProductions.map((related) => (
+          <a href={`/productions/${related.slug}`}>
+            <span>{related.yearSpan}</span>
+            <h3>{related.title}</h3>
+            <p>{related.venueAnchor}</p>
+          </a>
+        ))}
+      </div>
+
+      <nav class="production-browse-nav" aria-label="Production library navigation">
+        <a href="/productions">
+          <span>Library</span>
+          <strong>All Productions</strong>
+        </a>
+        {previousProduction ? (
+          <a href={`/productions/${previousProduction.slug}`}>
+            <span>Previous</span>
+            <strong>{previousProduction.title}</strong>
+          </a>
+        ) : (
+          <div>
+            <span>Previous</span>
+            <strong>Start of archive</strong>
+          </div>
+        )}
+        {nextProduction ? (
+          <a href={`/productions/${nextProduction.slug}`}>
+            <span>Next</span>
+            <strong>{nextProduction.title}</strong>
+          </a>
+        ) : (
+          <div>
+            <span>Next</span>
+            <strong>End of archive</strong>
+          </div>
+        )}
+      </nav>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .production-hero {
+    @apply relative min-h-[34rem] overflow-hidden bg-brand-inkDeep text-brand-cream;
+  }
+  .production-hero-bg {
+    @apply absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,_rgba(110,20,35,0.8),_transparent_34%),radial-gradient(circle_at_84%_20%,_rgba(201,162,39,0.18),_transparent_26%),linear-gradient(145deg,_rgba(12,9,8,0.98),_rgba(27,18,15,0.95))];
+  }
+  .production-hero-with-image .production-hero-bg {
+    background-image:
+      linear-gradient(90deg, rgba(12, 9, 8, 0.96) 0%, rgba(16, 10, 9, 0.84) 36%, rgba(16, 10, 9, 0.46) 62%, rgba(12, 9, 8, 0.78) 100%),
+      linear-gradient(180deg, rgba(12, 9, 8, 0.28), rgba(12, 9, 8, 0.92)),
+      var(--production-hero-image);
+    background-position: center;
+    background-size: cover;
+  }
+  .production-hero-inner {
+    @apply relative mx-auto flex min-h-[34rem] max-w-7xl items-end px-6 pb-14 pt-28 md:pb-16 md:pt-36;
+  }
+  .production-breadcrumb {
+    @apply mb-6 flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream text-opacity-50;
+  }
+  .production-breadcrumb a {
+    @apply transition-colors duration-200 hover:text-brand-goldBright;
+  }
+  .production-kicker-row {
+    @apply mb-5 flex flex-wrap gap-2;
+  }
+  .production-kicker-row span {
+    @apply rounded-full border border-brand-cream border-opacity-20 bg-brand-cream bg-opacity-5 px-3 py-1.5 font-display text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-cream text-opacity-75;
+  }
+  .production-hero-copy h1 {
+    @apply max-w-4xl font-display text-6xl font-extrabold leading-none tracking-normal text-brand-cream md:text-8xl;
+  }
+  .production-hero-copy p {
+    @apply mt-6 max-w-2xl text-xl italic leading-relaxed text-brand-cream text-opacity-80 md:text-2xl;
+  }
+  .production-hero-actions {
+    @apply mt-8 flex flex-wrap gap-3;
+  }
+  .production-hero-actions a {
+    @apply inline-flex rounded-full border border-brand-cream border-opacity-20 bg-black bg-opacity-20 px-5 py-3 font-display text-xs font-semibold uppercase tracking-[0.16em] text-brand-cream text-opacity-80 transition-colors duration-200 hover:border-brand-gold hover:text-brand-goldBright;
+  }
+  .production-hero-media {
+    @apply relative min-h-[22rem] overflow-hidden border border-white border-opacity-10 bg-black bg-opacity-30 shadow-[0_28px_80px_rgba(0,0,0,0.32)] md:min-h-[30rem];
+  }
+  .production-hero-media img {
+    @apply h-full min-h-[22rem] w-full object-cover md:min-h-[30rem];
+  }
+  .production-hero-media figcaption {
+    @apply absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-5 pb-5 pt-16 text-sm leading-relaxed text-brand-cream text-opacity-80;
+  }
+  .production-type-media {
+    @apply flex min-h-[22rem] flex-col justify-end bg-[radial-gradient(circle_at_50%_20%,_rgba(201,162,39,0.16),_transparent_34%),linear-gradient(145deg,_rgba(30,22,18,0.92),_rgba(8,6,5,0.98))] p-6 md:min-h-[30rem];
+  }
+  .production-type-year {
+    @apply font-display text-6xl leading-none text-brand-goldBright;
+  }
+  .production-type-title {
+    @apply mt-3 max-w-lg font-display text-5xl font-bold leading-none text-brand-cream;
+  }
+  .production-page {
+    @apply mx-auto max-w-7xl px-6 py-10 md:py-12;
+  }
+  .production-main-grid {
+    @apply grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start xl:grid-cols-[minmax(0,1fr)_22rem];
+  }
+  .production-story-stack {
+    @apply space-y-6;
+  }
+  .production-story-stack > .production-assets-section,
+  .production-story-stack > .production-bottom-section {
+    @apply hidden;
+  }
+  .production-panel,
+  .production-rail-card,
+  .production-review-card,
+  .production-source-card,
+  .production-related-grid a,
+  .production-browse-nav a,
+  .production-browse-nav div {
+    @apply border border-brand-ink border-opacity-10 bg-white bg-opacity-80 shadow-[0_14px_42px_rgba(34,24,20,0.055)];
+  }
+  .production-panel,
+  .production-rail-card,
+  .production-source-card {
+    @apply p-5 md:p-6;
+  }
+  .production-eyebrow {
+    @apply mb-3 font-display text-[11px] font-bold uppercase tracking-[0.22em] text-brand-oxblood;
+  }
+  .production-section-heading h2,
+  .production-panel h2 {
+    @apply font-display text-4xl font-semibold leading-none tracking-normal text-brand-ink;
+  }
+  .production-panel p:not(.production-eyebrow) {
+    @apply mt-4 max-w-3xl text-base leading-relaxed text-brand-ink text-opacity-75;
+  }
+  .production-overview-pair {
+    @apply grid gap-4 md:grid-cols-[minmax(0,1.35fr)_minmax(16rem,0.65fr)] md:items-stretch;
+  }
+  .production-intro-panel {
+    @apply bg-white;
+  }
+  .production-context-panel {
+    @apply bg-brand-ink text-brand-cream;
+  }
+  .production-context-panel .production-eyebrow {
+    @apply text-brand-goldBright;
+  }
+  .production-context-panel p:not(.production-eyebrow) {
+    @apply text-brand-cream text-opacity-75;
+  }
+  .production-side-rail {
+    @apply space-y-4 lg:sticky lg:top-24;
+  }
+  .production-facts {
+    @apply space-y-0;
+  }
+  .production-facts div {
+    @apply flex items-baseline justify-between gap-4 border-b border-brand-ink border-opacity-10 py-2.5 first:pt-0 last:border-b-0 last:pb-0;
+  }
+  .production-facts dt {
+    @apply text-xs text-brand-ink text-opacity-60;
+  }
+  .production-facts dd {
+    @apply max-w-[12rem] text-right font-display text-base leading-tight text-brand-ink;
+  }
+  .production-callouts {
+    @apply space-y-3;
+  }
+  .production-callouts article {
+    @apply border-l-2 border-brand-gold pl-4;
+  }
+  .production-callouts h3 {
+    @apply font-display text-xl leading-tight text-brand-ink;
+  }
+  .production-callouts p {
+    @apply mt-1 text-xs leading-relaxed text-brand-ink text-opacity-70;
+  }
+  .production-people-group {
+    @apply border-t border-brand-ink border-opacity-10 pt-4 first:border-t-0 first:pt-0;
+  }
+  .production-people-group + .production-people-group {
+    @apply mt-5;
+  }
+  .production-people-group h3 {
+    @apply mb-2 font-display text-xl text-brand-ink;
+  }
+  .production-person-row {
+    @apply grid grid-cols-[minmax(5.5rem,0.82fr)_1fr] gap-3 border-b border-brand-ink border-opacity-10 py-2 last:border-b-0;
+  }
+  .production-person-row span {
+    @apply text-xs uppercase tracking-[0.12em] text-brand-ink text-opacity-50;
+  }
+  .production-person-row strong {
+    @apply font-display text-base leading-tight text-brand-ink;
+  }
+  .production-assets-section,
+  .production-history-section,
+  .production-bottom-section,
+  .production-related-section {
+    @apply scroll-mt-28;
+  }
+  .production-section-heading {
+    @apply mb-4;
+  }
+  .production-slider-heading {
+    @apply flex items-end justify-between gap-4;
+  }
+  .production-slider-cue {
+    @apply hidden items-center gap-3 border border-brand-ink border-opacity-10 bg-white bg-opacity-60 px-3 py-2 font-display text-xs uppercase tracking-[0.16em] text-brand-ink text-opacity-60 md:flex;
+  }
+  .production-slider-cue strong {
+    @apply text-lg leading-none text-brand-oxblood;
+  }
+  .production-slider-note {
+    @apply hidden border border-brand-ink border-opacity-10 bg-white bg-opacity-60 px-3 py-2 font-display text-xs uppercase tracking-[0.16em] text-brand-ink text-opacity-60 md:inline-flex;
+  }
+  .production-asset-strip {
+    @apply flex snap-x gap-4 overflow-x-auto pr-12;
+    scrollbar-width: none;
+  }
+  .production-asset-strip::-webkit-scrollbar {
+    display: none;
+  }
+  .production-asset-card,
+  .production-watch-card {
+    @apply min-w-[82%] snap-start overflow-hidden border border-brand-ink border-opacity-10 bg-white bg-opacity-80 shadow-[0_14px_42px_rgba(34,24,20,0.055)] sm:min-w-[21rem] lg:min-w-[calc((100%-3rem)/4)];
+  }
+  .production-asset-card img {
+    @apply aspect-[4/3] w-full object-cover;
+  }
+  .production-watch-card {
+    @apply relative flex min-h-0 flex-col justify-end bg-brand-ink p-4 text-brand-cream transition-all duration-200 hover:-translate-y-1 hover:border-brand-gold;
+  }
+  .production-watch-card img {
+    @apply absolute inset-0 h-full w-full object-cover opacity-70;
+  }
+  .production-watch-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent;
+  }
+  .production-watch-card span {
+    @apply relative font-display text-[11px] font-bold uppercase tracking-[0.18em] text-brand-goldBright;
+  }
+  .production-watch-card strong {
+    @apply relative mt-2 block font-display text-2xl leading-none text-brand-cream;
+  }
+  .production-watch-card p {
+    @apply relative mt-2 line-clamp-2 text-xs leading-relaxed text-brand-cream text-opacity-75;
+  }
+  .production-empty-visual p {
+    @apply text-base leading-relaxed text-brand-ink text-opacity-70;
+  }
+  .production-timeline-list {
+    @apply space-y-3;
+  }
+  .production-timeline-list article {
+    @apply grid gap-4 border border-brand-ink border-opacity-10 bg-white bg-opacity-80 p-5 shadow-[0_14px_42px_rgba(34,24,20,0.055)] md:grid-cols-[6rem_minmax(0,1fr)];
+  }
+  .production-timeline-year {
+    @apply font-display text-4xl leading-none text-brand-oxblood;
+  }
+  .production-timeline-list h3 {
+    @apply font-display text-2xl leading-none text-brand-ink;
+  }
+  .production-timeline-list p {
+    @apply mt-2 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-oxblood text-opacity-80;
+  }
+  .production-timeline-list span {
+    @apply mt-3 block text-sm leading-relaxed text-brand-ink text-opacity-70;
+  }
+  .production-bottom-section {
+    @apply mt-7 pt-0;
+  }
+  .production-review-grid {
+    @apply grid gap-3;
+  }
+  .production-review-cards {
+    @apply grid gap-2.5;
+  }
+  .production-review-card {
+    @apply grid gap-3 p-3.5 transition-all duration-200 hover:-translate-y-1 hover:border-brand-oxblood hover:border-opacity-25 hover:shadow-[0_18px_48px_rgba(34,24,20,0.09)] md:grid-cols-[12rem_minmax(0,1fr)_6rem] md:items-center;
+  }
+  .production-review-card span {
+    @apply font-display text-[11px] font-bold uppercase tracking-[0.18em] text-brand-oxblood;
+  }
+  .production-review-card p {
+    @apply line-clamp-2 text-sm leading-relaxed text-brand-ink text-opacity-75 md:mt-0;
+  }
+  .production-review-card small {
+    @apply block border-t border-brand-ink border-opacity-10 pt-2 text-xs leading-relaxed text-brand-ink text-opacity-50 md:border-t-0 md:pt-0 md:text-right;
+  }
+  .production-source-card {
+    @apply self-start p-4;
+  }
+  .production-source-card a {
+    @apply block border-b border-brand-ink border-opacity-10 py-2 font-display text-base leading-tight text-brand-ink transition-colors duration-200 last:border-b-0 hover:text-brand-oxblood;
+  }
+  .production-assets-wide,
+  .production-credits-section {
+    @apply mt-7;
+  }
+  .production-credit-columns {
+    @apply grid gap-5 md:grid-cols-2;
+  }
+  .production-credit-columns .production-people-group {
+    @apply border-t-0 pt-0;
+  }
+  .production-related-section {
+    @apply mt-12 border-t border-brand-ink border-opacity-10 pt-10;
+  }
+  .production-related-grid {
+    @apply grid gap-4 md:grid-cols-3;
+  }
+  .production-related-grid a {
+    @apply block p-5 transition-all duration-200 hover:-translate-y-1 hover:border-brand-oxblood hover:border-opacity-25;
+  }
+  .production-related-grid span {
+    @apply font-display text-[11px] font-bold uppercase tracking-[0.16em] text-brand-oxblood;
+  }
+  .production-related-grid h3 {
+    @apply mt-4 font-display text-3xl leading-none text-brand-ink;
+  }
+  .production-related-grid p {
+    @apply mt-4 text-sm uppercase tracking-[0.14em] text-brand-ink text-opacity-50;
+  }
+  .production-browse-nav {
+    @apply mt-6 grid gap-4 md:grid-cols-3;
+  }
+  .production-browse-nav a,
+  .production-browse-nav div {
+    @apply flex min-h-[7rem] flex-col justify-between p-5;
+  }
+  .production-browse-nav span {
+    @apply font-display text-[11px] font-bold uppercase tracking-[0.18em] text-brand-oxblood;
+  }
+  .production-browse-nav strong {
+    @apply font-display text-2xl leading-tight text-brand-ink;
+  }
+</style>

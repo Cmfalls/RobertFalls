@@ -1,0 +1,93 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import MarqueeLights from '@components/MarqueeLights.astro';
+---
+
+<BaseLayout
+  title="Contact — Robert Falls"
+  description="Get in touch with Robert Falls for booking, media inquiries, and representation."
+>
+  <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
+    <div class="grain-overlay"></div>
+    <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
+      <div class="section-container !py-0">
+        <p class="section-eyebrow text-brand-gold">Get in Touch</p>
+        <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">Contact</h1>
+      </div>
+      <MarqueeLights class="mt-12" />
+    </div>
+  </section>
+
+  <section class="section-container grid md:grid-cols-2 gap-16">
+    <div>
+      <h2 class="font-display text-2xl text-brand-ink mb-6">Inquiries</h2>
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-2">Representation &amp; Booking</h3>
+          <p class="text-brand-ink/70 text-sm leading-relaxed">For directing engagements and bookings.</p>
+          <p class="text-brand-ink/65 italic text-sm mt-1">Contact info coming soon</p>
+        </div>
+        <div>
+          <h3 class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-2">Media &amp; Press</h3>
+          <p class="text-brand-ink/70 text-sm leading-relaxed">For interviews, press photography, and media inquiries.</p>
+          <p class="text-brand-ink/65 italic text-sm mt-1">Contact info coming soon</p>
+        </div>
+        <div>
+          <h3 class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-2">General</h3>
+          <p class="text-brand-ink/70 text-sm leading-relaxed">Use the form to send a message directly.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="font-display text-2xl text-brand-ink mb-6">Send a Message</h2>
+      <form
+        method="POST"
+        action="/contact/success/"
+        name="contact"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="space-y-5"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+        <div>
+          <label for="name" class="block text-sm font-medium text-brand-ink mb-1">Name</label>
+          <input
+            type="text" id="name" name="name" required
+            class="w-full border border-brand-ink/20 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-oxblood bg-white"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-brand-ink mb-1">Email</label>
+          <input
+            type="email" id="email" name="email" required
+            class="w-full border border-brand-ink/20 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-oxblood bg-white"
+          />
+        </div>
+        <div>
+          <label for="subject" class="block text-sm font-medium text-brand-ink mb-1">Subject</label>
+          <select
+            id="subject" name="subject"
+            class="w-full border border-brand-ink/20 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-oxblood bg-white"
+          >
+            <option>Booking / Representation</option>
+            <option>Media / Press</option>
+            <option>General Inquiry</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-brand-ink mb-1">Message</label>
+          <textarea
+            id="message" name="message" rows="5" required
+            class="w-full border border-brand-ink/20 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-oxblood bg-white resize-y"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn-primary w-full justify-center">Send Message</button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
