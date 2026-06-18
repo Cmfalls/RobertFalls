@@ -1,8 +1,14 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import MarqueeLights from '@components/MarqueeLights.astro';
 import { creditGroups } from '@data/credits';
-import { getProductionHref } from '@data/productions';
+import { getProductionHref, getFeaturedThumbnail } from '@data/productions';
+import goodmanPhoto from '../images/venues/goodman-theatre.jpg';
+import lyricPhoto from '../images/venues/lyric-opera.jpg';
+import oneillPhoto from '../images/venues/eugene-oneill-theatre.jpg';
+import steppenwolfPhoto from '../images/venues/steppenwolf-theatre.jpg';
 
 const sectionIds: Record<string, string> = {
   'Broadway': 'broadway',
@@ -10,6 +16,13 @@ const sectionIds: Record<string, string> = {
   'Wisdom Bridge Theatre': 'wisdom-bridge',
   'Opera': 'opera',
   'Recent Work': 'recent-work',
+};
+
+const sectionPhotos: Record<string, { src: ImageMetadata; caption: string } | undefined> = {
+  'Broadway': { src: oneillPhoto, caption: 'Eugene O’Neill Theatre, Broadway — site of his 1999 Tony Award' },
+  'Goodman Theatre': { src: goodmanPhoto, caption: 'Goodman Theatre, Chicago — his artistic home for 35 years' },
+  'Opera': { src: lyricPhoto, caption: 'Civic Opera Building, home of Lyric Opera of Chicago' },
+  'Recent Work': { src: steppenwolfPhoto, caption: 'Steppenwolf Theatre Company, Chicago' },
 };
 ---
 
@@ -39,33 +52,85 @@ const sectionIds: Record<string, string> = {
     </div>
   </section>
 
-  {creditGroups.map((group) => (
-    <section id={sectionIds[group.label]} class="section-container border-b border-brand-ink/10 last:border-0">
-      <div class="flex items-baseline justify-between mb-8 flex-wrap gap-2">
-        <h2 class="font-display text-4xl text-brand-ink">{group.label}</h2>
-        <span class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold">{group.count}</span>
-      </div>
-      <div class="divide-y divide-brand-ink/10">
-        {group.credits.map((credit) => (
-          <div class="py-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-            <div>
-              <a
-                href={getProductionHref(credit.title)}
-                class="font-serif text-xl text-brand-ink hover:text-brand-oxblood transition-colors"
-              >
-                {credit.title}
-              </a>
-              <span class="text-brand-ink/50 text-sm ml-3">{credit.venue}</span>
-            </div>
-            <div class="flex items-center gap-4 shrink-0">
-              {credit.note && <span class="text-sm italic text-brand-oxblood/80">{credit.note}</span>}
-              <span class="text-sm text-brand-ink/65 font-display tracking-wide">{credit.year}</span>
+  <!-- QUICK JUMP NAV -->
+  <nav class="bg-brand-cream border-b border-brand-ink/10 sticky top-20 md:top-24 z-30 backdrop-blur-sm" aria-label="Jump to venue">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-x-5 gap-y-1 flex-wrap text-xs">
+      <span class="uppercase tracking-[0.16em] text-brand-ink/40 hidden sm:inline">Jump to</span>
+      {creditGroups.map((group) => (
+        <a
+          href={`#${sectionIds[group.label]}`}
+          class="font-display font-semibold uppercase tracking-[0.14em] text-brand-oxblood/75 hover:text-brand-oxblood transition-colors"
+        >
+          {group.label}
+        </a>
+      ))}
+    </div>
+  </nav>
+
+  {creditGroups.map((group) => {
+    const photo = sectionPhotos[group.label];
+    return (
+      <section id={sectionIds[group.label]} class="border-b border-brand-ink/10 last:border-0 scroll-mt-32 md:scroll-mt-36">
+        <!-- VENUE BANNER -->
+        <div class="relative h-56 md:h-72 overflow-hidden bg-brand-oxbloodDeep">
+          {photo ? (
+            <Image
+              src={photo.src}
+              alt={photo.caption}
+              width={1600}
+              loading="lazy"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+          ) : (
+            <div class="grain-overlay"></div>
+          )}
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/90 via-brand-ink/30 to-brand-ink/10"></div>
+          <div class="relative h-full max-w-6xl mx-auto px-6 flex flex-col justify-end pb-6">
+            <h2 class="font-display text-4xl md:text-5xl text-brand-cream tracking-tight">{group.label}</h2>
+            <div class="flex items-center gap-3 mt-2">
+              <span class="text-xs uppercase tracking-[0.18em] text-brand-goldBright font-semibold">{group.count}</span>
+              {photo && <span class="text-xs text-brand-cream/55 hidden md:inline">{photo.caption}</span>}
             </div>
           </div>
-        ))}
-      </div>
-    </section>
-  ))}
+        </div>
+
+        <!-- CREDIT LIST -->
+        <div class="section-container !pt-10">
+          <div class="divide-y divide-brand-ink/10">
+            {group.credits.map((credit) => {
+              const thumbnail = getFeaturedThumbnail(credit.title);
+              return (
+                <div class="py-4 flex items-center gap-4">
+                  {thumbnail ? (
+                    <a href={getProductionHref(credit.title)} class="shrink-0 block w-14 h-14 overflow-hidden bg-brand-ink/5">
+                      <Image src={thumbnail.src} alt="" width={112} loading="lazy" class="w-full h-full object-cover" />
+                    </a>
+                  ) : (
+                    <span class="shrink-0 block w-1.5 h-1.5 rounded-full bg-brand-oxblood/40 ml-1.5 mr-1.5" aria-hidden="true"></span>
+                  )}
+                  <div class="flex-1 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 min-w-0">
+                    <div class="min-w-0">
+                      <a
+                        href={getProductionHref(credit.title)}
+                        class="font-serif text-xl text-brand-ink hover:text-brand-oxblood transition-colors"
+                      >
+                        {credit.title}
+                      </a>
+                      <span class="text-brand-ink/50 text-sm ml-3">{credit.venue}</span>
+                    </div>
+                    <div class="flex items-center gap-4 shrink-0">
+                      {credit.note && <span class="text-sm italic text-brand-oxblood/80">{credit.note}</span>}
+                      <span class="text-sm text-brand-ink/65 font-display tracking-wide">{credit.year}</span>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    );
+  })}
 
   <section class="bg-brand-oxbloodDeep text-brand-cream text-center py-16">
     <p class="font-serif italic text-xl text-brand-cream/85 max-w-xl mx-auto px-6">
