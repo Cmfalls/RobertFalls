@@ -1,6 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import type { TimelineEntry as TimelineEntryType } from '@data/timeline';
-import { getProductionHref } from '@data/productions';
+import { getProductionHref, getFeaturedThumbnail } from '@data/productions';
 
 interface Props {
   entry: TimelineEntryType;
@@ -16,6 +17,7 @@ const categoryColor: Record<string, string> = {
 
 const openByDefault = entry.category !== 'Production';
 const productionHref = entry.category === 'Production' ? getProductionHref(entry.title) : null;
+const thumbnail = entry.category === 'Production' ? getFeaturedThumbnail(entry.title) : null;
 ---
 <li class="relative pl-9 md:pl-12" data-category={entry.category}>
   <span
@@ -27,22 +29,29 @@ const productionHref = entry.category === 'Production' ? getProductionHref(entry
   )}
 
   <details class="group pb-7" open={openByDefault}>
-    <summary class="cursor-pointer list-none flex flex-wrap items-baseline gap-x-4 gap-y-1 [&::-webkit-details-marker]:hidden">
-      <span class="font-display text-xl md:text-2xl text-brand-oxblood tracking-tight tabular-nums shrink-0">{entry.year}</span>
-      {productionHref ? (
-        <a
-          href={productionHref}
-          class="font-display text-lg md:text-xl text-brand-ink hover:text-brand-oxblood transition-colors"
-        >
-          {entry.title}
+    <summary class="cursor-pointer list-none flex items-start gap-3 [&::-webkit-details-marker]:hidden">
+      {thumbnail && (
+        <a href={productionHref} class="shrink-0 block w-14 h-14 overflow-hidden bg-brand-ink/5">
+          <Image src={thumbnail.src} alt="" width={112} loading="lazy" class="w-full h-full object-cover" />
         </a>
-      ) : (
-        <span class="font-display text-lg md:text-xl text-brand-ink">{entry.title}</span>
       )}
-      {entry.venue && <span class="text-xs uppercase tracking-[0.14em] text-brand-ink/65">{entry.venue}</span>}
-      <span class="ml-auto text-brand-ink/30 text-sm transition-transform group-open:rotate-180" aria-hidden="true">&#9662;</span>
+      <span class="flex flex-wrap items-baseline gap-x-4 gap-y-1 flex-1 pt-0.5">
+        <span class="font-display text-xl md:text-2xl text-brand-oxblood tracking-tight tabular-nums shrink-0">{entry.year}</span>
+        {productionHref ? (
+          <a
+            href={productionHref}
+            class="font-display text-lg md:text-xl text-brand-ink hover:text-brand-oxblood transition-colors"
+          >
+            {entry.title}
+          </a>
+        ) : (
+          <span class="font-display text-lg md:text-xl text-brand-ink">{entry.title}</span>
+        )}
+        {entry.venue && <span class="text-xs uppercase tracking-[0.14em] text-brand-ink/65">{entry.venue}</span>}
+        <span class="ml-auto text-brand-ink/30 text-sm transition-transform group-open:rotate-180" aria-hidden="true">&#9662;</span>
+      </span>
     </summary>
-    <p class="font-serif text-brand-ink/70 mt-2 max-w-2xl leading-relaxed text-[0.95rem]">
+    <p class:list={['font-serif text-brand-ink/70 mt-2 max-w-2xl leading-relaxed text-[0.95rem]', { 'pl-[68px]': thumbnail }]}>
       {entry.description}
     </p>
   </details>

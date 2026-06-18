@@ -1666,6 +1666,12 @@ export function getProductionHref(title: string): string {
   return `/productions/${slugify(stripQualifier(title))}`;
 }
 
+export function getFeaturedThumbnail(title: string): ProductionImage | null {
+  const production = productions.find((p) => p.title === stripQualifier(title));
+  if (!production || production.pageMode !== 'featured' || production.images.length === 0) return null;
+  return production.images[0];
+}
+
 export function getProductionBySlug(slug: string): ProductionRecord | undefined {
   return productions.find((production) => production.slug === slug);
 }

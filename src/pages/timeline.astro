@@ -1,8 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import MarqueeLights from '@components/MarqueeLights.astro';
 import TimelineEntry from '@components/TimelineEntry.astro';
 import { timelineEntries } from '@data/timeline';
+import { getFeaturedThumbnail } from '@data/productions';
 
 function decadeOf(yearStr: string): string {
   const year = parseInt(yearStr.slice(0, 4), 10);
@@ -15,11 +17,17 @@ function decadeOf(yearStr: string): string {
 }
 
 const decadeOrder = ['1954–79', '1980s', '1990s', '2000s', '2010s', '2020s'];
+const defaultOpenDecades = new Set(['2010s', '2020s']);
+
 const groups = decadeOrder
-  .map((decade) => ({
-    decade,
-    entries: timelineEntries.filter((e) => decadeOf(e.year) === decade),
-  }))
+  .map((decade) => {
+    const entries = timelineEntries.filter((e) => decadeOf(e.year) === decade);
+    const previews = entries
+      .map((e) => (e.category === 'Production' ? getFeaturedThumbnail(e.title) : null))
+      .filter((img): img is NonNullable<typeof img> => img !== null)
+      .slice(0, 3);
+    return { decade, entries, previews };
+  })
   .filter((g) => g.entries.length > 0);
 
 function slug(decade: string) {
@@ -66,25 +74,38 @@ function slug(decade: string) {
 
     <nav class="mb-12 pb-8 border-b border-dashed border-brand-ink/15" aria-label="Jump to decade">
       <div class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/50 mb-3">
-        Jump to decade
+        Jump to decade — click to expand
       </div>
       <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
         {groups.map((g) => (
-          <a href={`#${slug(g.decade)}`} class="jump-pill">{g.decade}</a>
+          <a href={`#${slug(g.decade)}`} class="jump-pill" data-jump-decade={slug(g.decade)}>{g.decade} <span class="text-brand-ink/35">({g.entries.length})</span></a>
         ))}
       </div>
     </nav>
 
-    {groups.map((g) => (
-      <div class="mb-14">
-        <h2 id={slug(g.decade)} class="font-display text-3xl text-brand-oxblood mb-6 scroll-mt-28">{g.decade}</h2>
-        <ul class="relative">
-          {g.entries.map((entry, i) => (
-            <TimelineEntry entry={entry} isLast={i === g.entries.length - 1} />
-          ))}
-        </ul>
-      </div>
-    ))}
+    <div data-decade-list>
+      {groups.map((g) => (
+        <details class="decade-group mb-6 group" id={slug(g.decade)} open={defaultOpenDecades.has(g.decade)}>
+          <summary class="decade-summary list-none cursor-pointer flex items-center gap-4 pb-5 border-b border-brand-ink/10 [&::-webkit-details-marker]:hidden">
+            <span class="font-display text-3xl text-brand-oxblood scroll-mt-28">{g.decade}</span>
+            <span class="text-xs uppercase tracking-[0.16em] text-brand-ink/40">{g.entries.length} entries</span>
+            {g.previews.length > 0 && (
+              <span class="hidden sm:flex items-center -space-x-2 ml-1">
+                {g.previews.map((img) => (
+                  <Image src={img.src} alt="" width={64} loading="lazy" class="w-8 h-8 rounded-full object-cover ring-2 ring-brand-cream" />
+                ))}
+              </span>
+            )}
+            <svg class="ml-auto w-5 h-5 text-brand-ink/40 transition-transform group-open:rotate-180 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <ul class="relative pt-6">
+            {g.entries.map((entry, i) => (
+              <TimelineEntry entry={entry} isLast={i === g.entries.length - 1} />
+            ))}
+          </ul>
+        </details>
+      ))}
+    </div>
   </section>
 </BaseLayout>
 
@@ -105,10 +126,12 @@ function slug(decade: string) {
 
 <script>
   const filterBar = document.querySelector('[data-timeline-filters]');
-  if (filterBar) {
+  const decadeList = document.querySelector('[data-decade-list]');
+
+  if (filterBar && decadeList) {
     const buttons = filterBar.querySelectorAll<HTMLButtonElement>('[data-filter]');
-    const items = document.querySelectorAll<HTMLElement>('li[data-category]');
-    const groupHeadings = document.querySelectorAll<HTMLElement>('h2[id^="decade-"]');
+    const items = decadeList.querySelectorAll<HTMLElement>('li[data-category]');
+    const decadeDetails = decadeList.querySelectorAll<HTMLDetailsElement>('details.decade-group');
 
     filterBar.addEventListener('click', (e) => {
       const target = e.target as HTMLElement;
@@ -122,11 +145,26 @@ function slug(decade: string) {
         li.classList.toggle('hidden', !show);
       });
 
-      groupHeadings.forEach((h2) => {
-        const wrapper = h2.closest('div');
-        const visibleCount = wrapper?.querySelectorAll('li[data-category]:not(.hidden)').length ?? 0;
-        if (wrapper) wrapper.classList.toggle('hidden', visibleCount === 0);
+      decadeDetails.forEach((details) => {
+        const visibleCount = details.querySelectorAll('li[data-category]:not(.hidden)').length;
+        details.classList.toggle('hidden', visibleCount === 0);
+        // Expand decades that contain matches for a non-"all" filter so results are immediately visible
+        if (filter !== 'all' && visibleCount > 0) details.open = true;
       });
     });
+  }
+
+  // Clicking a "jump to decade" pill should expand that decade before the browser scrolls to it
+  document.querySelectorAll<HTMLAnchorElement>('[data-jump-decade]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const target = document.getElementById(link.dataset.jumpDecade || '');
+      if (target instanceof HTMLDetailsElement) target.open = true;
+    });
+  });
+
+  // Deep-link support: if the page loads with a #decade-xxxx hash, expand it
+  if (location.hash.startsWith('#decade-')) {
+    const target = document.querySelector<HTMLDetailsElement>(location.hash);
+    if (target) target.open = true;
   }
 </script>
