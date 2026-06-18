@@ -3,15 +3,11 @@ import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import MarqueeLights from '@components/MarqueeLights.astro';
 import { awards } from '@data/awards';
-import { getProductionHref } from '@data/productions';
+import { getProductionHref, getFeaturedThumbnail, productionStats } from '@data/productions';
 import { pressItems } from '@data/press';
 import amadeusMozart from '../images/amadeus-mozart.jpg';
-import amadeus1 from '../images/amadeus-1.jpg';
-import amadeus2 from '../images/amadeus-2.jpg';
 import rehearsalPhoto from '../images/robert-falls-rehearsal.jpg';
 import holidayRehearsal1 from '../images/holiday-rehearsal-1.jpg';
-import swingState1 from '../images/swing-state-1.jpg';
-import swingState2 from '../images/swing-state-2.jpg';
 
 const featuredAwardNames = [
   'Tony Award, Best Direction of a Play',
@@ -21,36 +17,27 @@ const featuredAwardNames = [
 ];
 const featuredAwards = featuredAwardNames.map((name) => awards.find((a) => a.name === name)!);
 const featuredPress = pressItems.slice(0, 3);
-const selectedProductions = [
-  {
-    src: amadeus1,
-    alt: 'Amadeus at Steppenwolf Theatre',
-    title: 'Amadeus',
-    venue: 'Steppenwolf Theatre',
-    href: getProductionHref('Amadeus'),
-  },
-  {
-    src: amadeus2,
-    alt: 'Amadeus at Steppenwolf Theatre',
-    title: 'Amadeus',
-    venue: 'Steppenwolf Theatre',
-    href: getProductionHref('Amadeus'),
-  },
-  {
-    src: swingState1,
-    alt: 'Swing State at Goodman Theatre',
-    title: 'Swing State',
-    venue: 'Goodman Theatre',
-    href: getProductionHref('Swing State'),
-  },
-  {
-    src: swingState2,
-    alt: 'Swing State at Goodman Theatre',
-    title: 'Swing State',
-    venue: 'Goodman Theatre',
-    href: getProductionHref('Swing State'),
-  },
+
+const goodmanHighlights = [
+  { title: 'The Iceman Cometh', meta: '2012' },
+  { title: 'King Lear', meta: '2006 · Helen Hayes Award' },
+  { title: 'Finishing the Picture', meta: "2004 · Arthur Miller's final play" },
 ];
+
+const galleryPicks = [
+  { title: 'Death of a Salesman', venue: 'Goodman & Broadway', year: '1999' },
+  { title: 'The Seagull', venue: 'Goodman Theatre', year: '2010' },
+  { title: '2666', venue: 'Goodman Theatre', year: '2016' },
+  { title: 'The Cherry Orchard', venue: 'Goodman Theatre', year: '2023' },
+  { title: 'Amadeus', venue: 'Steppenwolf Theatre', year: '2025' },
+  { title: 'Holiday', venue: 'Goodman Theatre', year: '2026' },
+];
+const selectedProductions = galleryPicks
+  .map((pick) => {
+    const thumbnail = getFeaturedThumbnail(pick.title);
+    return thumbnail ? { ...pick, thumbnail, href: getProductionHref(pick.title) } : null;
+  })
+  .filter((p): p is NonNullable<typeof p> => p !== null);
 ---
 
 <BaseLayout
@@ -147,30 +134,40 @@ const selectedProductions = [
   </section>
 
   <!-- SELECTED PRODUCTIONS GALLERY -->
-  <section class="bg-brand-ink py-4 md:py-6">
-    <div class="max-w-6xl mx-auto px-6">
-      <p class="text-center text-xs uppercase tracking-[0.2em] text-brand-cream/55 mb-4 md:mb-5">Selected Productions</p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-1.5 md:gap-2">
+  <section class="bg-brand-cream border-y border-brand-ink/10">
+    <div class="section-container">
+      <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
+        <div>
+          <p class="section-eyebrow">Seventy Years on Stage</p>
+          <h2 class="section-heading">Selected Productions</h2>
+        </div>
+        <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/45 max-w-xs text-right hidden sm:block">
+          {productionStats.titleCount}+ productions documented, {productionStats.earliestYear}–{productionStats.latestYear}
+        </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {selectedProductions.map((production) => (
-          <a href={production.href} class="group relative overflow-hidden bg-brand-ink aspect-[4/3] block">
-            <Image
-              src={production.src}
-              alt={production.alt}
-              width={720}
-              loading="lazy"
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/85 via-brand-ink/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
-            <div class="absolute inset-x-0 bottom-0 p-3 md:p-3.5">
-              <div class="font-display text-base md:text-lg text-brand-cream tracking-tight leading-none">
-                {production.title}
-              </div>
-              <div class="text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-brand-cream/65 mt-1">
-                {production.venue}
-              </div>
+          <a href={production.href} class="group block">
+            <div class="aspect-[3/4] overflow-hidden bg-brand-ink relative mb-3">
+              <Image
+                src={production.thumbnail.src}
+                alt={production.thumbnail.alt}
+                width={400}
+                loading="lazy"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+              />
+            </div>
+            <div class="font-display text-base text-brand-ink leading-tight group-hover:text-brand-oxblood transition-colors">
+              {production.title}
+            </div>
+            <div class="text-[10px] uppercase tracking-[0.16em] text-brand-ink/45 mt-1">
+              {production.venue} · {production.year}
             </div>
           </a>
         ))}
+      </div>
+      <div class="flex items-center justify-center mt-10">
+        <a href="/productions" class="btn-outline">Browse the Full Productions Archive</a>
       </div>
     </div>
   </section>
@@ -200,18 +197,12 @@ const selectedProductions = [
         named the Robert Falls Rehearsal Wing in his honor — a lasting, physical mark of his tenure.
       </p>
       <div class="grid sm:grid-cols-3 gap-6">
-        <div class="border border-brand-cream/15 p-6">
-          <div class="font-display text-2xl text-brand-goldBright mb-1">The Iceman Cometh</div>
-          <div class="text-xs uppercase tracking-[0.16em] text-brand-cream/60">2012</div>
-        </div>
-        <div class="border border-brand-cream/15 p-6">
-          <div class="font-display text-2xl text-brand-goldBright mb-1">King Lear</div>
-          <div class="text-xs uppercase tracking-[0.16em] text-brand-cream/60">2006 · Helen Hayes Award</div>
-        </div>
-        <div class="border border-brand-cream/15 p-6">
-          <div class="font-display text-2xl text-brand-goldBright mb-1">Finishing the Picture</div>
-          <div class="text-xs uppercase tracking-[0.16em] text-brand-cream/60">2004 · Arthur Miller's final play</div>
-        </div>
+        {goodmanHighlights.map((item) => (
+          <a href={getProductionHref(item.title)} class="border border-brand-cream/15 p-6 hover:border-brand-gold transition-colors group">
+            <div class="font-display text-2xl text-brand-goldBright mb-1 group-hover:text-brand-cream transition-colors">{item.title}</div>
+            <div class="text-xs uppercase tracking-[0.16em] text-brand-cream/60">{item.meta}</div>
+          </a>
+        ))}
       </div>
       <a href="/credits#goodman" class="btn-primary mt-10 inline-flex">Full Goodman Credits</a>
     </div>
