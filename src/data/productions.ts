@@ -59,6 +59,20 @@ import soups5 from '../images/soups-stews/soups-5.jpg';
 import soupsReh2 from '../images/soups-stews/soups-reh-2.jpg';
 import soupsReh3 from '../images/soups-stews/soups-reh-3.jpg';
 import soupsReh8 from '../images/soups-stews/soups-reh-8.jpg';
+import pamplonaShowArt from '../images/pamplona/pamplona-show-art.png';
+import pamplonaPoster from '../images/pamplona/pamplona-poster.jpg';
+import pamplona1 from '../images/pamplona/pamplona-1.jpg';
+import pamplona2 from '../images/pamplona/pamplona-2.jpg';
+import pamplona3 from '../images/pamplona/pamplona-3.jpg';
+import pamplona4 from '../images/pamplona/pamplona-4.jpg';
+import pamplonaParis from '../images/pamplona/pamplona-paris.webp';
+import pamplonaPhone from '../images/pamplona/pamplona-phone.jpg';
+import mollySweeneyShowArt from '../images/molly-sweeney/molly-sweeney-show-art.jpg';
+import brianFrielPortrait from '../images/molly-sweeney/brian-friel-portrait.png';
+import mollySweeney1 from '../images/molly-sweeney/molly-sweeney-1.jpg';
+import mollySweeney2 from '../images/molly-sweeney/molly-sweeney-2.jpg';
+import mollySweeney3 from '../images/molly-sweeney/molly-sweeney-3.jpg';
+import mollySweeney4 from '../images/molly-sweeney/molly-sweeney-4.jpg';
 import swingState1 from '../images/swing-state-1.jpg';
 import swingState2 from '../images/swing-state-2.jpg';
 import swingState3 from '../images/swing-state-3.jpg';
@@ -1996,43 +2010,131 @@ const productionSeeds: Record<string, ProductionSeed> = {
   'molly-sweeney': {
     pageMode: 'archive',
     summary:
-      'Molly Sweeney sits near the end of Falls\'s Goodman years as an intimate Brian Friel revival built around perception, damage, and the emotional cost of trying to "fix" another person.',
+      'Molly Sweeney is the production the pandemic stopped before it could open: a fully designed, fully cast Brian Friel revival that reached final tech and official production photography in March 2020, then never played a single public performance.',
     publicSummary:
-      'Brian Friel\'s searching drama follows a blind woman whose life is upended by an operation meant to restore her sight.',
+      'A three-actor Brian Friel chamber drama that Robert Falls brought all the way to dress rehearsal in spring 2020, only for the COVID-19 shutdown to end its run before opening night.',
     synopsis:
-      'Having lost her sight in infancy, Molly agrees to a procedure that may restore vision. What sounds like a miracle becomes a harsher test of marriage, ambition, and the stories other people project onto her body and future.',
+      'Blind since infancy, Molly Sweeney agrees to a risky operation that might restore her sight, urged on by her restless husband Frank and her ambitious doctor, Mr. Rice. Told through interlocking monologues from all three characters rather than direct scenes, the play asks whose life the surgery really changes: Molly\'s, or the men who need her transformation more than she does.',
     fallsContext:
-      'Compared with the large-canvas transfer stories elsewhere in the archive, Molly Sweeney shows Falls returning to chamber-scale psychological theatre late in his Goodman tenure.',
+      'Molly Sweeney pairs Falls with longtime Goodman design collaborators Noël Huntzinger and Richard Woodbury and with Chicago veterans Kate Fry and Christopher Donahue alongside screen and stage actor Brendan Coyle, in a three-person monologue structure that is far more intimate than the ensemble epics dominating the rest of his late Goodman record.',
     significance:
-      'A late Goodman-era revival that turns away from spectacle and toward a quiet, actor-led tragedy about hope, change, and unintended harm.',
+      'A planned major revival of Brian Friel\'s acclaimed drama that became, instead, an archive case study in interrupted work: cast, designed, built, lit, and photographed, then halted by the COVID-19 shutdown days before it was due to meet an audience, and never rescheduled.',
     story:
-      'The production arrives as a stripped-down counterweight to the louder public-facing titles around it. Friel\'s structure, which asks audiences to listen their way through competing versions of experience, fits a director whose archive often oscillates between institutional scale and rehearsal-room intimacy.',
+      'The production\'s record runs almost entirely through process rather than reception. Casting was announced for a Mar 27 - Apr 26, 2020 engagement; the Goodman\'s own synopsis page separately lists Apr 10 - May 10, 2020. Either way, Illinois\'s COVID-19 shutdown landed before the run could open, and the Goodman\'s notice that performances were "suspended up to and including April 19th, 2020" was never followed by a reopening. Michael Brosilow\'s official production photographs, taken on Todd Rosenthal\'s finished set, prove the show reached full tech before the shutdown, but no Chicago critic appears to have reviewed it, because no paying audience ever saw it. The Goodman\'s production page still lists the show as postponed to the 2020/2021 season with no rescheduled date, years later. Brian Friel\'s play did eventually return to a Chicago stage, but through Irish Theatre of Chicago\'s unrelated 2022 production at the Chopin Theatre, not through this one.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
+    images: [
+      {
+        src: mollySweeneyShowArt,
+        alt: 'Molly Sweeney show art: a close-up eye in a gilded picture frame on a green gallery wall, with the title and Goodman Theatre credit below.',
+        caption: 'Official show art for the planned revival, built around the close-up eye-in-a-frame motif used across the production\'s marketing.',
+        orientation: 'portrait',
+        priority: true,
+        kind: 'art',
+      },
+      {
+        src: mollySweeney2,
+        alt: 'An actress playing Molly Sweeney stands with arms outstretched on the production\'s stone-and-light set.',
+        caption: 'Kate Fry as Molly, photographed by Michael Brosilow on Todd Rosenthal\'s set during the production\'s final tech process.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: mollySweeney3,
+        alt: 'An actor playing Frank Sweeney points accusingly in a dimly lit production still from Molly Sweeney.',
+        caption: 'Brendan Coyle as Frank, captured in the same Brosilow photo session documenting the unfinished run.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: mollySweeney4,
+        alt: 'An actor playing Mr. Rice gestures while speaking in a warmly lit production still from Molly Sweeney.',
+        caption: 'Christopher Donahue as Mr. Rice, completing the three-actor monologue structure at the center of Friel\'s play.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: mollySweeney1,
+        alt: 'A wide view of the abstract stone set for Molly Sweeney with all three cast members positioned across the stage.',
+        caption: 'A wide view of the finished Owen Theatre set, the clearest evidence that the production reached full tech before it was halted.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: brianFrielPortrait,
+        alt: 'Portrait of playwright Brian Friel.',
+        caption: 'Brian Friel, the play\'s author, included in the production\'s source materials.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+    ],
     collaborators: [
       { role: 'Playwright', name: 'Brian Friel' },
       { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Kate Fry' },
+      { role: 'Cast highlight', name: 'Brendan Coyle' },
+      { role: 'Cast highlight', name: 'Christopher Donahue' },
     ],
     quickFacts: [
-      { label: 'Run', value: '2020/2021 season postponement' },
-      { label: 'Venue', value: 'Goodman\'s Owen Theatre' },
-      { label: 'Focus', value: 'Major revival' },
-      { label: 'Theme', value: 'Sight, loss, and unintended consequence' },
+      { label: 'Scheduled run', value: 'Spring 2020, Owen Theatre' },
+      { label: 'Status', value: 'Halted by COVID-19 before opening' },
+      { label: 'Cast size', value: 'Three-actor monologue structure' },
+      { label: 'Current status', value: 'Still listed as postponed, no new date set' },
+    ],
+    cast: [
+      { role: 'Molly Sweeney', name: 'Kate Fry' },
+      { role: 'Frank Sweeney', name: 'Brendan Coyle' },
+      { role: 'Mr. Rice', name: 'Christopher Donahue' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Brian Friel' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Set Design', name: 'Todd Rosenthal' },
+      { role: 'Costume Design', name: 'Noël Huntzinger' },
+      { role: 'Lighting Design', name: 'Eric Southern' },
+      { role: 'Sound Design and Composition', name: 'Richard Woodbury' },
+      { role: 'Production Stage Manager', name: 'Nikki Blue' },
     ],
     recognition: [
       {
-        label: 'Late-career chamber piece',
-        detail: 'The official Goodman page frames the revival as a deeply moving meditation on hope, change, and despair.',
+        label: 'Full cast and design team',
+        detail: 'Casting coverage confirms Kate Fry, Brendan Coyle, and Christopher Donahue as the three-actor cast, with Todd Rosenthal, Noël Huntzinger, Eric Southern, and Richard Woodbury leading design.',
+      },
+      {
+        label: 'Reached final tech',
+        detail: 'Michael Brosilow\'s official production photography shows a finished set, full lighting, and costumed performers, confirming the production was essentially complete when the shutdown hit.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'An archive entry defined by absence',
+        detail: 'Unlike most pages in this system, Molly Sweeney has no opening night, no run, and no local reviews to draw on, making it a rare record of a production stopped at the threshold of completion.',
+      },
+      {
+        label: 'COVID-19 timing',
+        detail: 'The Goodman\'s own suspension notice and the freecraic.com account of the Irish Theatre of Chicago\'s later revival both confirm the pandemic, not any artistic or business decision, ended the engagement.',
       },
     ],
     contextNotes: [
       {
-        label: 'Scheduling context',
-        text: 'Goodman currently labels the production as postponed to the 2020/2021 season rather than presenting a standard completed run listing.',
+        label: 'Conflicting scheduled dates',
+        text: 'Spotlight On Lake\'s casting announcement lists a Mar 27 - Apr 26, 2020 engagement, while the Goodman\'s own synopsis page lists Apr 10 - May 10, 2020. The page preserves both rather than guessing which superseded the other.',
       },
       {
-        label: 'Archive position',
-        text: 'Molly Sweeney helps broaden the late Goodman years beyond premieres and adaptations, showing Falls still investing in severe modern classics.',
+        label: 'Never opened to critics',
+        text: 'No Chicago outlet appears to have reviewed this staging. The "Critical Praise" quotes on the Goodman\'s own marketing page (The New York Times, Variety) read as general blurbs about Friel\'s play rather than notices of this unopened Chicago run, so they are not presented here as reviews of the production.',
+      },
+      {
+        label: 'Still postponed',
+        text: 'Years after the 2020 shutdown, the official Goodman production page still lists Molly Sweeney as postponed to the 2020/2021 season with no rescheduled date, and the venue\'s public listing pages show no submitted reviews.',
+      },
+      {
+        label: 'A different company finished the story',
+        text: 'Irish Theatre of Chicago staged its own, unrelated production of Molly Sweeney at the Chopin Theatre in 2022, directed by Siiri Scott. A 2022 account of that production explicitly notes that Falls\'s Goodman staging had been planned for 2020 or 2021 before "the pandemic put a halt to that."',
+      },
+      {
+        label: 'Source package',
+        text: 'The folder includes finished show art, four Michael Brosilow production stills from the completed set and tech process, a portrait of Brian Friel, a local video of Falls discussing the production, a cast-and-creative screenshot, and a press trail spanning the original announcement through the indefinite postponement.',
       },
     ],
     reviews: [
@@ -2040,12 +2142,72 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Goodman Theatre',
         href: 'https://www.goodmantheatre.org/show/molly-sweeney/',
         summary:
-          'The official page presents the revival as a major Brian Friel production directed by Robert Falls and centers the play\'s medical-miracle premise.',
+          'The official page still lists the production as postponed to the 2020/2021 season, with no tickets or rescheduled dates available.',
+        note: 'Official production page',
+      },
+      {
+        source: 'Spotlight On Lake',
+        href: 'https://www.spotlightonlake.com/posts/cast-announced-molly-sweeney-directed-robert-falls',
+        summary:
+          'Casting announcement confirming Kate Fry, Brendan Coyle, and Christopher Donahue, plus the production\'s design team, ahead of the planned spring 2020 engagement.',
+        note: 'Casting coverage',
+      },
+      {
+        source: 'Playbill',
+        href: 'https://playbill.com/production/molly-sweeneygoodman-theatre-albert-i-goodman-theatre-2019-2020',
+        summary:
+          'Playbill\'s production listing for the planned Goodman engagement, part of the 2019-20 season.',
+        note: 'Listing',
+      },
+      {
+        source: 'American Theatre',
+        href: 'https://www.americantheatre.org/2019/03/28/3-world-premieres-set-for-goodman-theatres-2019-20-season/',
+        summary:
+          'Coverage of the Goodman\'s 2019/20 season announcement, in which Molly Sweeney was unveiled alongside that season\'s new-play premieres.',
+        note: 'Season announcement',
+      },
+      {
+        source: 'Chicago Theater',
+        href: 'https://www.chicago-theater.com/shows/albert-theatre/molly-sweeney',
+        summary:
+          'A listings page confirming the suspension notice and showing no audience reviews were ever submitted for the engagement.',
+        note: 'Listing, no reviews on file',
+      },
+      {
+        source: 'Theatre in Chicago',
+        href: 'https://www.theatreinchicago.com/molly-sweeney/10434/',
+        summary:
+          'A listings page showing showtimes as "TBA" with no cast information ever published for the run.',
+        note: 'Listing',
+      },
+      {
+        source: 'freecraic.com',
+        href: 'https://freecraic.com/irish-theatre-of-chicago-back-on-the-boards-with-molly-sweeney/',
+        summary:
+          'Coverage of Irish Theatre of Chicago\'s unrelated 2022 revival that explicitly confirms Falls\'s Goodman production "had been planned" for 2020 or 2021 before the pandemic intervened.',
+        note: 'Confirms the 2020 production never opened',
       },
     ],
-    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/molly-sweeney/' }],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/molly-sweeney/' },
+      { label: 'Goodman press room', href: 'https://www.goodmantheatre.org/press-rooms/molly-sweeney/' },
+      { label: 'Spotlight On Lake casting announcement', href: 'https://www.spotlightonlake.com/posts/cast-announced-molly-sweeney-directed-robert-falls' },
+      { label: 'Playbill production listing', href: 'https://playbill.com/production/molly-sweeneygoodman-theatre-albert-i-goodman-theatre-2019-2020' },
+      { label: 'American Theatre season announcement', href: 'https://www.americantheatre.org/2019/03/28/3-world-premieres-set-for-goodman-theatres-2019-20-season/' },
+      { label: 'Chicago Theater listing', href: 'https://www.chicago-theater.com/shows/albert-theatre/molly-sweeney' },
+      { label: 'Theatre in Chicago listing', href: 'https://www.theatreinchicago.com/molly-sweeney/10434/' },
+      { label: 'freecraic.com on Irish Theatre of Chicago\'s 2022 revival', href: 'https://freecraic.com/irish-theatre-of-chicago-back-on-the-boards-with-molly-sweeney/' },
+    ],
+    watchLinks: [
+      {
+        label: 'Director Robert Falls | Molly Sweeney',
+        href: '/media/productions/molly-sweeney/molly-sweeney-director-robert-falls.mp4',
+        description: 'Local video in which Falls discusses directing the production during the Goodman\'s 2019/20 season.',
+        thumbnail: mollySweeneyShowArt,
+      },
+    ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'the-winters-tale': {
     pageMode: 'archive',
@@ -2989,42 +3151,151 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   pamplona: {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
-      'Pamplona captures an unusual kind of archive entry: a late Goodman world premiere built around Stacy Keach as Ernest Hemingway, then abruptly cut short by illness after opening.',
+      'Pamplona is a Jim McGrath solo play built entirely around Stacy Keach as an aging Ernest Hemingway, world-premiered at the Goodman in 2017, derailed on opening night by a heart attack, and then completed in a full, well-reviewed run in 2018.',
     publicSummary:
-      'A compact Hemingway play became one of the more fragile late-career entries in the Falls archive when its Goodman run was canceled after opening.',
+      'Stacy Keach returned to the Goodman to triumphantly complete the Hemingway solo play that a 2017 health emergency had cut short, earning some of the warmest notices of any late Falls premiere.',
     synopsis:
-      'The play imagines Ernest Hemingway under pressure, with the production designed around Stacy Keach\'s performance in the title role. Instead of becoming a standard run-and-reception story, the staging now survives in the archive partly through its interruption.',
+      'Five years after winning the 1953 Pulitzer Prize and the 1954 Nobel Prize for Literature, Ernest Hemingway is holed up alone in a Spanish hotel room with a deadline looming for a story about the rivalrous matadors of Pamplona. The real fight is outside the bullring: in declining health, consumed by the collapse of his fourth marriage, and haunted by projected faces from his past, he has to find a way through the despair threatening to engulf him.',
     fallsContext:
-      'Pamplona shows Falls continuing to champion new writing in the Goodman years, even where the public record is shaped as much by contingency as by review history.',
+      'Pamplona extends Falls\'s late-career interest in single-actor, interior portraits of damaged, larger-than-life American men, paired here with a star, Stacy Keach, who had already played Hemingway once before, in the 1988 TV mini-series Hemingway, and brought a Golden Globe-winning history with the character back to the stage.',
     significance:
-      'A 2017 world premiere whose historical importance in the archive comes from both its Hemingway premise and the fact that the run was cut short after Keach became ill.',
+      'A 2017 Goodman world premiere whose completion became its own story: a heart attack forced Keach off stage and canceled the remaining performances, and Falls and the Goodman brought the production back for a full, extended run in summer 2018 that drew some of the most enthusiastic reviews of the period.',
     story:
-      'Most production pages in this system turn on premieres, transfers, or critical afterlife. Pamplona is different. Its record is defined by the gap between intention and completion: a new work, a major leading actor, and a run that effectively became a fragment once the remainder of the performances were canceled.',
+      'Pamplona\'s archive record runs in two parts. The May-June 2017 world premiere gave eleven previews before Keach suffered a heart attack on opening night and the rest of the engagement was scrapped, turning the local NYT coverage into a cancellation story. What the source folder shows clearly, though, is that the production did not end there: Goodman and Falls brought Keach and the same creative team back for a full six-week run from July 10 to August 19, 2018, complete with an extension, a wall of strong Chicago reviews, and an audience-testimonial video calling the play "absolutely magnificent." The page treats 2018 as the production\'s real critical record while preserving the 2017 health emergency as the reason the story took an extra year to finish.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
-    collaborators: [{ role: 'Cast highlight', name: 'Stacy Keach' }],
+    images: [
+      {
+        src: pamplonaShowArt,
+        alt: 'Stacy Keach as Ernest Hemingway stands with arms outstretched in a hotel-room set for Pamplona.',
+        caption: 'Show art built from Keach\'s performance as a tormented, declining Hemingway in his Spanish hotel room.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'art',
+      },
+      {
+        src: pamplonaPoster,
+        alt: 'Yellow-and-red Pamplona poster art featuring a close portrait of Stacy Keach as Hemingway.',
+        caption: 'On Stage promotional art for the production, built around a close, weathered portrait of Keach in character.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: pamplona1,
+        alt: 'Stacy Keach stands among period furniture in the hotel-room set of Pamplona.',
+        caption: 'A full-stage view of Kevin Depinet\'s hotel-room set, isolating Hemingway among his own belongings.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: pamplona2,
+        alt: 'Stacy Keach sits in a chair as two projected portraits of women loom on the walls behind him in Pamplona.',
+        caption: 'Adam Flemming\'s projection design surfaces the women in Hemingway\'s past as looming presences in the room.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: pamplona3,
+        alt: 'Stacy Keach sits beside projected portraits of a man and a woman on the hotel-room walls in Pamplona.',
+        caption: 'Another projection composition that keeps Hemingway physically still while his memories crowd the set around him.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: pamplona4,
+        alt: 'Stacy Keach gestures as bullfighting posters are projected across the set in Pamplona.',
+        caption: 'Projected bullfighting posters bring Pamplona itself into the room as Hemingway wrestles with the story he owes his editor.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: pamplonaParis,
+        alt: 'Stacy Keach stands beneath a large projected face and a Paris skyline in a moody, wide production photo of Pamplona.',
+        caption: 'A wide, painterly production image pairing Hemingway\'s present isolation with the projected Paris of his memory.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: pamplonaPhone,
+        alt: 'Stacy Keach shouts into a vintage telephone in a candid promotional photo for Pamplona.',
+        caption: 'A candid, in-character photo of Keach mid-tirade on a vintage telephone, used in the production\'s press materials.',
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Jim McGrath' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Stacy Keach' },
+    ],
     quickFacts: [
-      { label: 'Run', value: 'May 19 - Jun 25, 2017' },
-      { label: 'Venue', value: 'Owen Theatre' },
-      { label: 'Runtime', value: '80 minutes, no intermission' },
-      { label: 'Archive note', value: 'Remaining performances canceled' },
+      { label: 'World premiere', value: 'May 19 - Jun 25, 2017 (cut short)' },
+      { label: 'Full run', value: 'Jul 10 - Aug 19, 2018 (extended)' },
+      { label: 'Venue', value: 'Owen Theatre, Goodman Theatre' },
+      { label: 'Runtime', value: '90 minutes, no intermission' },
+    ],
+    cast: [{ role: 'Ernest Hemingway', name: 'Stacy Keach' }],
+    creativeTeam: [
+      { role: 'Written by', name: 'Jim McGrath' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Kevin Depinet' },
+      { role: 'Costume Design', name: 'Noël Huntzinger' },
+      { role: 'Lighting Design', name: 'Jesse Klug' },
+      { role: 'Composer and Soundscape', name: 'Michael Roth' },
+      { role: 'Projection Design', name: 'Adam Flemming' },
+      { role: 'Dramaturg', name: 'Tanya Palmer' },
+      { role: 'Production Stage Manager', name: 'Lauren V. Hickman' },
     ],
     recognition: [
       {
         label: 'World premiere',
-        detail: 'Timeline data records Pamplona as a world premiere starring Stacy Keach as Hemingway.',
+        detail: 'Pamplona is a Jim McGrath world premiere built specifically around Stacy Keach\'s performance as Hemingway.',
+      },
+      {
+        label: 'Keach\'s second Hemingway',
+        detail: 'The role marked Keach\'s second time playing Hemingway, after his Golden Globe-winning, Emmy-nominated turn in the 1988 TV mini-series Hemingway.',
+      },
+      {
+        label: 'Completed after a health emergency',
+        detail: 'Local and national coverage frames the production around its rare two-part life: a 2017 premiere ended by Keach\'s heart attack, and a full 2018 run that completed and extended the engagement.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'A premiere that finished a year late',
+        detail: 'Few entries in the archive carry a documented health-emergency interruption between a show\'s premiere and its actual full critical run.',
+      },
+      {
+        label: 'Extended run',
+        detail: 'TheaterMania\'s coverage of the 2018 engagement specifically reports an extension, indicating strong box-office response once the production finally played out.',
+      },
+      {
+        label: 'Hemingway specialist casting',
+        detail: 'The production leaned on Keach\'s established history with the role, giving the Goodman premiere built-in star authority on its subject.',
       },
     ],
     contextNotes: [
       {
-        label: 'Cancellation context',
-        text: 'The current Goodman page is structured primarily as a cancellation notice after Stacy Keach became ill following the opening-night performance.',
+        label: 'Original announcement',
+        text: 'Goodman and Playbill announced the world premiere as a vehicle for Robert Falls and Stacy Keach, staged in the Owen Theatre as part of new-play programming.',
       },
       {
-        label: 'Source limits',
-        text: 'Because the official page now foregrounds the cancellation rather than the original production pitch, this entry is intentionally conservative about artistic detail.',
+        label: '2017 cancellation',
+        text: 'After eleven preview performances, Keach suffered a heart attack on opening night; the Goodman and The New York Times both reported that the remaining 2017 performances were canceled while he recovered.',
+      },
+      {
+        label: '2018 completion',
+        text: 'The Goodman brought the production back for a full Jul 10 - Aug 19, 2018 run, which TheaterMania reports was extended, giving the play the complete public life its 2017 premiere never got to finish.',
+      },
+      {
+        label: 'Audience reception',
+        text: 'The local source folder preserves a Goodman audience-testimonial video in which a patron calls the play "absolutely magnificent," alongside the press quotes gathered from the 2018 run.',
+      },
+      {
+        label: 'Source package',
+        text: 'The folder includes both show-art and full-resolution production stills from the completed run, a YouTube trailer, a local audience-testimonial video, a cast-and-creative screenshot, a full-text accessibility script, and a wide press trail spanning the 2017 announcement through the 2018 reviews.',
       },
     ],
     reviews: [
@@ -3032,12 +3303,105 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Goodman Theatre',
         href: 'https://www.goodmantheatre.org/show/pamplona/',
         summary:
-          'The official page now functions mainly as a cancellation notice, documenting that the remaining performances were called off after Stacy Keach became ill.',
+          'The official page frames Pamplona as Stacy Keach\'s tour-de-force return to the Goodman as Ernest Hemingway.',
+        note: 'Official production page',
+      },
+      {
+        source: 'New City Stage',
+        href: 'https://www.newcitystage.com/2018/07/25/a-moveable-feast-a-review-of-pamplona-at-the-goodman/',
+        summary:
+          'A 2018 review of the completed Goodman run, weighing Keach\'s performance against McGrath\'s portrait of late-career Hemingway.',
+        note: 'Chicago review',
+      },
+      {
+        source: 'BroadwayWorld',
+        href: 'https://www.broadwayworld.com/chicago/article/BWW-Review-PAMPLONA-at-Goodman-Theatre-20180723',
+        summary:
+          'Review coverage of the 2018 engagement preserved in the local source packet.',
+        note: 'Chicago review',
+      },
+      {
+        source: 'PerformInk',
+        href: 'https://perform.ink/review-pamplona-at-goodman-theatre/',
+        summary:
+          'PerformInk\'s review of the 2018 run, source of the "stellar performance" and "jovial and witty" pull quotes used in the production\'s critical-praise materials.',
+        note: 'Chicago review',
+      },
+      {
+        source: 'Chicago Onstage',
+        href: 'https://www.chicagoonstage.com/pamplona-is-stacy-keachs-love-letter-to-hemingway/',
+        summary:
+          'A feature framing the production as Keach\'s personal love letter to Hemingway, tied to his long history with the role.',
+        note: 'Chicago feature',
+      },
+      {
+        source: 'WTTW News',
+        href: 'https://news.wttw.com/2018/07/23/pamplona-stacy-keach-runs-hemingway-and-matadors',
+        summary:
+          'A 2018 feature on the completed run, covering Keach, the Hemingway material, and the play\'s bullfighting backdrop.',
+        note: 'Chicago feature',
+      },
+      {
+        source: 'The New York Times',
+        href: 'https://www.nytimes.com/2017/06/04/theater/goodman-theater-cancels-pamplona-stacy-keach.html',
+        summary:
+          'National coverage of the 2017 cancellation after Keach\'s opening-night heart attack, preserved as the record of why the premiere did not finish on schedule.',
+        note: 'National coverage, 2017',
+      },
+      {
+        source: 'ABC7 Chicago',
+        href: 'https://abc7chicago.com/post/stacy-keach-returns-to-goodman-in-pamplona-after-heart-attack/3789733/',
+        summary:
+          'Local coverage explicitly framing the 2018 run as Keach\'s return to the Goodman after his heart attack.',
+        note: 'Local news, 2018',
       },
     ],
-    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/pamplona/' }],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/pamplona/' },
+      { label: 'Goodman press room', href: 'https://www.goodmantheatre.org/press-rooms/pamplona/' },
+      { label: 'Playbill premiere announcement', href: 'https://playbill.com/article/robert-falls-to-direct-stacy-keach-in-goodmans-pamplona' },
+      { label: 'TheaterMania premiere announcement', href: 'https://www.theatermania.com/news/robert-falls-to-direct-stacy-keach-in-ernest-hemingway-drama-pamplona_80066/' },
+      { label: 'TheaterMania extension news', href: 'https://www.theatermania.com/news/ernest-hemingway-drama-pamplona-starring-stacy-keach-extends_81149/' },
+      { label: 'Hemingway Society feature', href: 'https://www.hemingwaysociety.org/stacy-keach-stars-new-hemingway-play-pamplona' },
+      { label: 'New York Times cancellation coverage', href: 'https://www.nytimes.com/2017/06/04/theater/goodman-theater-cancels-pamplona-stacy-keach.html' },
+      { label: 'ABC7 Chicago return coverage', href: 'https://abc7chicago.com/post/stacy-keach-returns-to-goodman-in-pamplona-after-heart-attack/3789733/' },
+      { label: 'Theatre in Chicago reviews', href: 'https://www.theatreinchicago.com/pamplona/reviews/9953/' },
+      { label: 'New City Stage review', href: 'https://www.newcitystage.com/2018/07/25/a-moveable-feast-a-review-of-pamplona-at-the-goodman/' },
+      { label: 'BroadwayWorld review', href: 'https://www.broadwayworld.com/chicago/article/BWW-Review-PAMPLONA-at-Goodman-Theatre-20180723' },
+      { label: 'PerformInk review', href: 'https://perform.ink/review-pamplona-at-goodman-theatre/' },
+      { label: 'Chicago Onstage feature', href: 'https://www.chicagoonstage.com/pamplona-is-stacy-keachs-love-letter-to-hemingway/' },
+      { label: 'WTTW News feature', href: 'https://news.wttw.com/2018/07/23/pamplona-stacy-keach-runs-hemingway-and-matadors' },
+    ],
+    watchLinks: [
+      {
+        label: 'Pamplona | Trailer',
+        href: 'https://www.youtube.com/watch?v=f1S1RYyAIuk',
+        description: 'Official Goodman trailer starring Stacy Keach as Ernest Hemingway.',
+        thumbnail: pamplonaShowArt,
+      },
+      {
+        label: 'Pamplona | Audience Testimonials',
+        href: '/media/productions/pamplona/pamplona-audience-testimonials.mp4',
+        description: 'Local audience-testimonial video included in the production source folder.',
+        thumbnail: pamplonaPoster,
+      },
+    ],
+    pressQuotes: [
+      { quote: 'Hemingway\'s words, Stacy Keach\'s courage, battling it out in a hotel room', source: 'Chicago Tribune' },
+      { quote: 'A delight to witness', source: 'Chicago Reader' },
+      { quote: 'A one-actor show of the highest order', source: 'Splash' },
+      { quote: 'Engaging', source: 'Chicago Sun-Times' },
+      { quote: 'Memorable and evocative', source: 'TheaterMania' },
+      { quote: 'Keach makes for a terrific Hemingway', source: 'Chicago Sun-Times' },
+      { quote: 'Mines the emotional content of Hemingway\'s biography', source: 'Chicago Tribune' },
+      { quote: 'Stacy Keach "remains a force as ever"', source: 'Third Coast Review' },
+      { quote: 'A stellar performance', source: 'PerformInk' },
+      { quote: 'You couldn\'t ask for a better Hemingway than Keach', source: 'TheaterMania' },
+      { quote: 'There\'s a clear passion burning inside Keach\'s performance', source: 'TheaterMania' },
+      { quote: 'Keach is jovial and witty as Hemingway', source: 'PerformInk' },
+    ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'soups-stews-and-casseroles-1976': {
     pageMode: 'archive',
