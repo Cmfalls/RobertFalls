@@ -115,7 +115,7 @@ export const timelineEntries: TimelineEntry[] = [
   { year: '2011', title: 'Chinglish', description: 'David Henry Hwang’s play — Goodman world premiere in June, Broadway opening that October.', category: 'Production', venue: 'Goodman Theatre & Broadway' },
   { year: '2012', title: 'The Iceman Cometh', description: 'Revival starring Brian Dennehy, Nathan Lane, and John Douglas Thompson; later moved to BAM.', category: 'Production', venue: 'Goodman Theatre' },
   { year: '2012', title: 'Jeff Award', description: 'Awarded for The Iceman Cometh.', category: 'Award' },
-  { year: '2013', title: 'Measure for Measure', description: 'A Shakespeare staging notable for its bold, unsettling reinterpretation of the play’s ending.', category: 'Production', venue: 'Goodman Theatre' },
+  { year: '2013', title: 'Measure for Measure', description: 'Reset in disco-era 1970s Times Square, the staging replaced Shakespeare’s ambiguous ending with Falls’s own: Barnardine stabs Isabella to death mid-dance.', category: 'Production', venue: 'Goodman Theatre' },
   { year: '2013', title: 'Luna Gale', description: 'World premiere, later remounted at the Kirk Douglas Theatre in Los Angeles.', category: 'Production', venue: 'Goodman Theatre' },
   { year: '2012', title: 'The Jacksonian', description: 'World premiere of Beth Henley’s play at the Geffen Playhouse, directed by Falls and featuring Ed Harris, Amy Madigan, Glenne Headly, Bill Pullman, and Bess Rous.', category: 'Production', venue: 'Geffen Playhouse, Los Angeles' },
   { year: '2014', title: 'The Jacksonian', description: 'Off-Broadway continuation of the Geffen world premiere through The New Group.', category: 'Production', venue: 'The New Group, Off-Broadway' },

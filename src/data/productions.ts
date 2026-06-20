@@ -73,6 +73,15 @@ import mollySweeney1 from '../images/molly-sweeney/molly-sweeney-1.jpg';
 import mollySweeney2 from '../images/molly-sweeney/molly-sweeney-2.jpg';
 import mollySweeney3 from '../images/molly-sweeney/molly-sweeney-3.jpg';
 import mollySweeney4 from '../images/molly-sweeney/molly-sweeney-4.jpg';
+import measureShowArt from '../images/measure-for-measure/measure-show-art.png';
+import measurePoster from '../images/measure-for-measure/measure-poster.jpg';
+import measure1 from '../images/measure-for-measure/measure-1.jpg';
+import measure2 from '../images/measure-for-measure/measure-2.jpg';
+import measure3 from '../images/measure-for-measure/measure-3.jpg';
+import measure4 from '../images/measure-for-measure/measure-4.jpg';
+import measure5 from '../images/measure-for-measure/measure-5.jpg';
+import measure6 from '../images/measure-for-measure/measure-6.jpg';
+import measure7 from '../images/measure-for-measure/measure-7.jpg';
 import swingState1 from '../images/swing-state-1.jpg';
 import swingState2 from '../images/swing-state-2.jpg';
 import swingState3 from '../images/swing-state-3.jpg';
@@ -4049,58 +4058,272 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'researched',
   },
   'measure-for-measure': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
-      'Measure for Measure shows Falls pushing Shakespeare toward disorder, sexuality, and coercive power rather than treating the play as a tidy moral puzzle.',
+      'Measure for Measure relocates Shakespeare\'s "problem play" to a gritty, disco-era 1970s Times Square, then ends it with Isabella stabbed to death mid-dance, a deliberate break from the text that turned the production into one of Falls\'s most argued-over Shakespeare stagings.',
     publicSummary:
-      'Falls turns Shakespeare\'s dark comedy into a raw public argument about law, desire, hypocrisy, and the uses of authority.',
+      'Falls reset Shakespeare\'s dark comedy in seedy 1970s New York and rewrote its ending into a shocking, audience-dividing act of violence.',
     synopsis:
-      'When the Duke hands Vienna over to Angelo, a campaign of moral purification quickly reveals itself as another form of appetite and domination. The resulting story knots together religious language, state violence, sibling loyalty, and sexual bargaining.',
+      'When the Duke hands Vienna over to the puritanical Angelo, a campaign of moral purification quickly reveals itself as another form of appetite and domination. After a pious novice, Isabella, pleads for her condemned brother\'s life, Angelo\'s response exposes a web of desire, hypocrisy, and coercion running through every level of the city.',
     fallsContext:
-      'The production helps explain the Shakespeare thread in Falls\'s archive: not museum staging, but aggressive reinterpretation aimed at exposing what is unstable or ugly in the text.',
+      'The production sharpens a recurring Falls trait: he approaches canonical work by leaning harder into danger rather than polishing it into respectability. Resetting the play in a chain-link, graffiti-soaked 1970s Times Square (designed by Walt Spangler) and then rewriting Shakespeare\'s own ending puts Measure for Measure alongside King Lear and, later, The Winter\'s Tale and An Enemy of the People as evidence of how far he is willing to push a classical text.',
     significance:
-      'A key 2013 Goodman Shakespeare production, remembered in the local timeline for its bold and unsettling treatment of the ending.',
+      'A widely reviewed (fifteen Chicago notices, eight of them "Highly Recommended" and none "Not Recommended") 2013 Goodman Shakespeare production, remembered specifically for an ending Falls invented himself: rather than the text\'s ambiguous marriage proposal, the staging has the prisoner Barnardine stab Isabella to death during a dance, a choice Falls defended on the grounds that the Duke is "an egocentric, incompetent ruler" undeserving of a tidy resolution.',
     story:
-      'Measure for Measure is useful in the archive because it sharpens a recurring Falls trait: he often approaches canonical work by leaning harder into danger instead of polishing it into respectability. The official response around the production stresses audacity, roughness, and comic force, which makes it a strong precursor to later restless classics like The Winter\'s Tale and An Enemy of the People.',
+      'Measure for Measure earns its place in the archive less for its reviews, strong as they were, than for what Falls did to the last five minutes. Shakespeare\'s ending leaves Isabella\'s response to the Duke\'s marriage proposal unresolved; Falls treated that ambiguity as license, restaging the finale so that Barnardine kills Isabella mid-celebration, with the rest of the cast still dancing around her. Both the Chicago Sun-Times and Chicago magazine cover this choice directly: Falls cited the film Blow Out as an influence and said plainly that "the world is not always tied up neatly," acknowledging that at least one audience member protested loudly on the way out. Paired with Ana Kuzmanic\'s disco-era costuming and Walt Spangler\'s neon-and-chain-link Times Square set, the production turned a four-centuries-old "problem play" into a staging people left arguing about, which is exactly the kind of restless, confrontational classicism that runs through the rest of Falls\'s Shakespeare and Ibsen work.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
+    images: [
+      {
+        src: measureShowArt,
+        alt: 'A nun-costumed Isabella stands center stage in the neon-lit, graffiti-covered set of Measure for Measure.',
+        caption: 'Isabella (Alejandra Escalante) in the production\'s seedy, neon-lit 1970s Times Square hotel room.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'art',
+      },
+      {
+        src: measurePoster,
+        alt: 'Graffiti-textured Measure for Measure poster art with a masked woman\'s portrait beneath the title.',
+        caption: 'Title art built from the production\'s graffiti-and-wheat-paste visual identity.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: measure1,
+        alt: 'A wide view of the full Times Square set, lit with neon signs for peep shows and bars, with a lone figure center stage.',
+        caption: 'Walt Spangler\'s full set: chain-link fence, barbed wire, and a skyline of neon adult-entertainment signage.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: measure2,
+        alt: 'Isabella and Angelo stand close together in a tense, intimate confrontation.',
+        caption: 'Isabella confronts Angelo, the scene at the center of the play\'s web of coercion and hypocrisy.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: measure3,
+        alt: 'An older man embraces a crying woman in a pink dress.',
+        caption: 'One of the production\'s emotional turns, staged with the period\'s heightened, melodramatic energy.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: measure4,
+        alt: 'Isabella lies on a leather couch while a man in a suit sits nearby under a green banker\'s lamp.',
+        caption: 'A quieter domestic-interior moment that grounds the production\'s 1970s setting in period furniture and lighting.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: measure5,
+        alt: 'A line of men in suits, one wearing sunglasses, stands across the stage in a formal confrontation scene.',
+        caption: 'The Duke\'s officials line up for the play\'s closing reckoning, shortly before Falls\'s rewritten ending.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: measure6,
+        alt: 'A man in a clergy collar holds a young woman with curly hair in his arms.',
+        caption: 'A disguised-Duke moment that keeps the production\'s religious imagery in constant tension with its street-level grime.',
+        orientation: 'square',
+        kind: 'production-still',
+      },
+      {
+        src: measure7,
+        alt: 'Sean Fortunato as Elbow, Kevin Fugaro as Claudio, and Travis A. Knight in an ensemble scene from Measure for Measure.',
+        caption: 'Sean Fortunato (Elbow), Kevin Fugaro (Claudio), and Travis A. Knight (Ensemble) in one of the production\'s street scenes.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+    ],
     collaborators: [
       { role: 'Playwright', name: 'William Shakespeare' },
       { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Jay Whittaker' },
+      { role: 'Cast highlight', name: 'Alejandra Escalante' },
+      { role: 'Cast highlight', name: 'James Newcomb' },
+      { role: 'Cast highlight', name: 'Jeffrey Carlson' },
     ],
     quickFacts: [
       { label: 'Run', value: 'Mar 9 - Apr 14, 2013' },
       { label: 'Venue', value: 'Albert Theatre' },
-      { label: 'Runtime', value: '2 hr 30 min' },
-      { label: 'Audience note', value: 'Intended for mature audiences' },
+      { label: 'Runtime', value: '2 hr 30 min, one intermission' },
+      { label: 'Setting', value: 'Disco-era 1970s Times Square' },
+    ],
+    cast: [
+      { role: 'Angelo', name: 'Jay Whittaker' },
+      { role: 'Isabella', name: 'Alejandra Escalante' },
+      { role: 'Duke', name: 'James Newcomb' },
+      { role: 'Lucio', name: 'Jeffrey Carlson' },
+      { role: 'Claudio', name: 'Kevin Fugaro' },
+      { role: 'Mistress Overdone', name: 'Cindy Gold' },
+      { role: 'Provost', name: 'A.C. Smith' },
+      { role: 'Pompey', name: 'Aaron Todd Douglas' },
+      { role: 'Escalus', name: 'John Judd' },
+      { role: 'Mariana', name: 'Kate LoConti' },
+      { role: 'Elbow', name: 'Sean Fortunato' },
+      { role: 'Conrad Thomas / Barnardine', name: 'Joe Foust' },
+      { role: 'Abhorson', name: 'Daniel Smith' },
+      { role: 'Froth', name: 'Billy Fenderson' },
+      { role: 'Ensemble', name: 'John Victor Allen' },
+      { role: 'Ensemble', name: 'Amanda Catania' },
+      { role: 'Juliet', name: 'Celeste M Cooper' },
+      { role: 'Ensemble', name: 'Anthony DiNicola' },
+      { role: 'Ensemble', name: 'Amanda Drinkall' },
+      { role: 'Ensemble', name: 'Isabel Ellson' },
+      { role: 'Ensemble', name: 'LaNisa Frederick' },
+      { role: 'Ensemble', name: 'Quinton Guyton' },
+      { role: 'Ensemble', name: 'Carolyn Ann Hoerdemann' },
+      { role: 'Ensemble', name: 'Travis A. Knight' },
+      { role: 'Ensemble', name: 'Glenn Stanton' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'William Shakespeare' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Walt Spangler' },
+      { role: 'Costume Design', name: 'Ana Kuzmanic' },
+      { role: 'Lighting Design', name: 'Marcus Doshi' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Dramaturgy', name: 'Neena Arndt' },
+      { role: 'Casting', name: 'Adam Belcuore' },
+      { role: 'Production Stage Manager', name: 'Alden J. Vasquez' },
+      { role: 'Stage Manager', name: 'Jamie Wolfe' },
     ],
     recognition: [
       {
-        label: 'Interpretive risk',
-        detail: 'Timeline notes the production for its bold, unsettling reinterpretation of the play\'s ending.',
+        label: 'Strong critical consensus',
+        detail: 'TheatreInChicago\'s aggregate of fifteen reviews shows eight "Highly Recommended," five "Recommended," two "Somewhat Recommended," and none "Not Recommended."',
+      },
+      {
+        label: 'A rewritten ending',
+        detail: 'Falls replaced the play\'s ambiguous final reconciliation with an invented act of violence: Barnardine stabs Isabella to death as the company dances, a choice covered directly by the Chicago Sun-Times and Chicago magazine.',
+      },
+      {
+        label: 'Civic-scale reading',
+        detail: 'Windy City Times\'s Mary Shen Barnidge praised Falls for keeping the focus on "the leaders responsible for societies in turmoil" rather than reducing the play to a safe Angelo-versus-Isabella scene study.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'A defining Falls Shakespeare',
+        detail: 'A 2017 Sun-Times retrospective on Falls\'s career holds this production up as a signature example of his style, describing him as someone who "whittles material to a point and thrusts it into your eye."',
+      },
+      {
+        label: 'Audacity over polish',
+        detail: 'Reviewers across the spectrum, from the Tribune to Chicago Stage Review, single out the production\'s rawness and willingness to make a four-centuries-old "problem play" feel dangerous again.',
       },
     ],
     contextNotes: [
       {
-        label: 'Official framing',
-        text: 'The Goodman page emphasizes how deeply the production links lust, law, hypocrisy, and civic collapse.',
+        label: 'The rewritten ending',
+        text: 'Chicago magazine and the Chicago Sun-Times both confirm Falls scrapped the play\'s ambiguous marriage-proposal ending in favor of having Barnardine kill Isabella mid-dance. Falls told Chicago magazine he was drawing on the film Blow Out and wanted to resist a tidy resolution, noting that at least one audience member protested loudly at a performance.',
       },
       {
-        label: 'Reception pattern',
-        text: 'Goodman\'s review pull-quotes consistently point toward the staging\'s audacity, comic energy, and rawness.',
+        label: 'Source cleanup: unrelated 2022 production excluded',
+        text: 'The local folder also contained production photos and a Chicago Tribune review from Chicago Shakespeare Theater\'s unrelated 2022 staging of Measure for Measure (set amid "Cuban turmoil," not Falls\'s 1970s Times Square). Those images and that review are not Falls\'s work and have been left out of this page.',
+      },
+      {
+        label: 'Source package',
+        text: 'The folder includes show art, poster art, several Goodman production stills, a full cast-and-creative screenshot, and an unusually complete review trail, including a 15-review critical-consensus tally from TheatreInChicago.',
       },
     ],
     reviews: [
       {
         source: 'Goodman Theatre',
         href: 'https://www.goodmantheatre.org/show/measure-for-measure/',
-        summary:
-          'The official page presents the 2013 Albert Theatre run and collects praise describing the production as audacious, raw, and theatrically arresting.',
+        summary: 'The official page frames the production around law, desire, hypocrisy, and the abuse of power, and notes it was intended for mature audiences.',
+        note: 'Official production page',
+      },
+      {
+        source: 'Chicago Tribune',
+        href: 'http://www.chicagotribune.com/entertainment/theater/theaterloop/ct-ent-0319-measure-review-20130318,0,3056852.column?track=rss',
+        summary: 'Chris Jones called the staging "audacious, arresting (and) highly amusing," praising Falls\'s embrace of Shakespeare\'s tonal whiplash and Walt Spangler\'s "sea of soaring, graffiti-soaked neon."',
+        note: 'Highly Recommended',
+      },
+      {
+        source: 'Newcity',
+        href: 'https://www.newcitystage.com/2013/03/18/review-measure-for-measuregoodman-theatre/',
+        summary: 'Called the production raw and raucous, writing that "vice oozes from the very walls" and that "never in the history of this play has such a raw and raucous production been seen."',
+        note: 'Review',
+      },
+      {
+        source: 'Chicago Stage Review',
+        href: 'http://www.chicagostagereview.com/measure-for-measure-review/',
+        summary: 'Venus Zarris called it "a rare and wonderful theatrical triumph," adding that "this is Goodman Theatre at its bravest and best."',
+        note: 'Highly Recommended',
+      },
+      {
+        source: 'ChicagoCritic',
+        href: 'http://chicagocritic.com/measure-measure-goodman-theatre/',
+        summary: 'Anthony J. Mangini wrote that the production was "wickedly smart" and "as beautifully constructed as it is intellectually evocative."',
+        note: 'Highly Recommended',
+      },
+      {
+        source: 'Chicago Theatre Review',
+        href: 'http://www.chicagotheatrereview.com/2013/03/goodman-measures-up/',
+        summary: 'Lazlo Collins described the staging as "grimy, gritty, uncomfortable, and downright sinful," and "the most intriguing Shakespeare you have seen in a while."',
+        note: 'Recommended',
+      },
+      {
+        source: 'Chicago magazine',
+        href: 'https://www.chicagomag.com/arts-culture/march-2013/measure-for-measure-ending/',
+        summary: 'A feature on Falls\'s rewritten ending, in which he explains his reasoning for having Barnardine kill Isabella rather than staging the text\'s ambiguous final reconciliation.',
+        note: 'Feature on the ending',
+      },
+      {
+        source: 'Chicago Sun-Times',
+        href: 'https://chicago.suntimes.com/2017/2/11/18376221/when-you-see-a-bob-falls-play-you-remember-it',
+        summary: 'A 2017 retrospective on Falls\'s directorial reputation that singles out this production\'s ending, describing Falls as a director who "whittles" source material "to a point and thrusts it into your eye."',
+        note: 'Retrospective feature',
+      },
+      {
+        source: 'TheatreInChicago',
+        href: 'https://www.theatreinchicago.com/measure-for-measure/11197/',
+        summary: 'Aggregates fifteen Chicago reviews of the production: eight Highly Recommended, five Recommended, two Somewhat Recommended, none Not Recommended.',
+        note: 'Review aggregate',
       },
     ],
-    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/measure-for-measure/' }],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/measure-for-measure/' },
+      { label: 'TheatreInChicago review aggregate', href: 'https://www.theatreinchicago.com/measure-for-measure/11197/' },
+      { label: 'Chicago magazine on the rewritten ending', href: 'https://www.chicagomag.com/arts-culture/march-2013/measure-for-measure-ending/' },
+      { label: 'Chicago Sun-Times retrospective', href: 'https://chicago.suntimes.com/2017/2/11/18376221/when-you-see-a-bob-falls-play-you-remember-it' },
+      { label: 'Newcity review', href: 'https://www.newcitystage.com/2013/03/18/review-measure-for-measuregoodman-theatre/' },
+      { label: 'Chicago Stage Review', href: 'http://www.chicagostagereview.com/measure-for-measure-review/' },
+      { label: 'Chicago Theatre Review', href: 'http://www.chicagotheatrereview.com/2013/03/goodman-measures-up/' },
+      { label: 'Stage and Cinema review', href: 'http://www.stageandcinema.com/2013/03/19/measure-for-measure-goodman/' },
+      { label: 'Chicago on the Aisle review', href: 'http://www.chicagoontheaisle.com/2013/03/21/review-of-shakespeares-measure-for-measure-at-goodman-theatre-directed-by-robert-falls/' },
+      { label: 'Time Out Chicago review', href: 'http://timeoutchicago.com/arts-culture/theater/16154011/measure-for-measure-at-goodman-theatre-theater-review' },
+      { label: 'Around the Town Chicago review', href: 'http://www.aroundthetownchicago.com/theatre-reviews/measure-for-measure/' },
+      { label: 'BroadwayWorld first-look video feature', href: 'https://www.broadwayworld.com/chicago/article/BWW-TV-First-Look-at-Goodman-Theatres-MEASURE-FOR-MEASURE-20130313' },
+    ],
+    watchLinks: [
+      {
+        label: 'Measure for Measure | Trailer',
+        href: 'https://www.youtube.com/watch?v=vz15owFkLBw',
+        description: 'Official Goodman trailer for the production.',
+        thumbnail: measureShowArt,
+      },
+      {
+        label: 'Measure for Measure | Behind the Scenes',
+        href: 'https://www.youtube.com/watch?v=aIMapfvRthc',
+        description: 'Goodman behind-the-scenes feature on the production\'s design and rehearsal process.',
+        thumbnail: measurePoster,
+      },
+    ],
+    pressQuotes: [
+      { quote: 'Audacious, arresting (and) highly amusing', source: 'Chicago Tribune' },
+      { quote: 'Vice oozes from the very walls... never in the history of this play has such a raw and raucous production been seen', source: 'Newcity' },
+      { quote: 'A rare and wonderful theatrical triumph... Goodman Theatre at its bravest and best', source: 'Chicago Stage Review' },
+      { quote: 'Wickedly smart... as beautifully constructed as it is intellectually evocative', source: 'ChicagoCritic' },
+      { quote: 'Bursting with a plethora of interlocking but distinct ideas', source: 'Chicago Tribune' },
+      { quote: 'Grimy, gritty, uncomfortable, and downright sinful... the most intriguing Shakespeare you have seen in a while', source: 'Chicago Theatre Review' },
+    ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   chinglish: {
     pageMode: 'archive',
