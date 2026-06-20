@@ -6,10 +6,68 @@ import amadeus3 from '../images/amadeus-3.jpg';
 import amadeusMozart from '../images/amadeus-mozart.jpg';
 import holidayRehearsal1 from '../images/holiday-rehearsal-1.jpg';
 import holidayRehearsal2 from '../images/holiday-rehearsal-2.jpg';
-import seagullStage from '../images/seagull-stage.png';
+import onlyAlivePoster from '../images/only-alive/only-alive-poster.jpg';
+import onlyAliveKeyArt from '../images/only-alive/only-alive-key-art.jpg';
+import onlyAlive1 from '../images/only-alive/only-alive-1.jpg';
+import onlyAlive5 from '../images/only-alive/only-alive-5.jpg';
+import onlyAlive6 from '../images/only-alive/only-alive-6.jpg';
+import onlyAliveReh1 from '../images/only-alive/only-alive-reh-1.jpg';
+import onlyAliveReh2 from '../images/only-alive/only-alive-reh-2.jpg';
+import onlyAliveReh3 from '../images/only-alive/only-alive-reh-3.jpg';
+import onlyAliveReh4 from '../images/only-alive/only-alive-reh-4.jpg';
+import davidCalePortrait from '../images/only-alive/david-cale-portrait.jpg';
+import robertFallsPortrait2013 from '../images/only-alive/robert-falls-portrait-2013.jpg';
+import uncleVanyaShowArt from '../images/uncle-vanya/uncle-vanya-show-art.png';
+import uncleVanya2 from '../images/uncle-vanya/uncle-vanya-2.webp';
+import uncleVanya3 from '../images/uncle-vanya/uncle-vanya-3.webp';
+import uncleVanya4 from '../images/uncle-vanya/uncle-vanya-4.webp';
+import uncleVanya6 from '../images/uncle-vanya/uncle-vanya-6.webp';
+import uncleVanya7 from '../images/uncle-vanya/uncle-vanya-7.webp';
+import uncleVanya8 from '../images/uncle-vanya/uncle-vanya-8.webp';
+import uncleVanya9 from '../images/uncle-vanya/uncle-vanya-9.webp';
+import uncleVanya11 from '../images/uncle-vanya/uncle-vanya-11.webp';
+import seagullShowArt from '../images/seagull/seagull-show-art.png';
+import seagullEnsemble from '../images/seagull/seagull-ensemble.jpg';
+import seagull1 from '../images/seagull/seagull-1.jpg';
+import seagull2 from '../images/seagull/seagull-2.jpg';
+import seagull3 from '../images/seagull/seagull-3.jpg';
+import seagull4 from '../images/seagull/seagull-4.jpg';
+import seagull5 from '../images/seagull/seagull-5.jpg';
+import seagull6 from '../images/seagull/seagull-6.jpg';
+import seagull7 from '../images/seagull/seagull-7.jpg';
+import seagull8 from '../images/seagull/seagull-8.jpg';
+import icemanShowArt from '../images/iceman-cometh/iceman-show-art.webp';
+import iceman1 from '../images/iceman-cometh/iceman-1.webp';
+import iceman2 from '../images/iceman-cometh/iceman-2.webp';
+import iceman3 from '../images/iceman-cometh/iceman-3.webp';
+import iceman4 from '../images/iceman-cometh/iceman-4.jpg';
+import iceman5 from '../images/iceman-cometh/iceman-5.jpg';
+import icemanBam1 from '../images/iceman-cometh/iceman-bam-1.webp';
+import icemanBam2 from '../images/iceman-cometh/iceman-bam-2.jpg';
+import icemanBam3 from '../images/iceman-cometh/iceman-bam-3.jpg';
+import icemanBam4 from '../images/iceman-cometh/iceman-bam-4.jpg';
+import jacksonianHero from '../images/jacksonian/jacksonian-hero.jpg';
+import jacksonian1 from '../images/jacksonian/jacksonian-1.jpg';
+import jacksonian2 from '../images/jacksonian/jacksonian-2.webp';
+import jacksonian3 from '../images/jacksonian/jacksonian-3.jpg';
+import jacksonianShowArt from '../images/jacksonian/jacksonian-show-art.png';
+import soupsShowArt from '../images/soups-stews/soups-show-art.png';
+import soups1 from '../images/soups-stews/soups-1.jpg';
+import soups3 from '../images/soups-stews/soups-3.jpg';
+import soups4 from '../images/soups-stews/soups-4.jpg';
+import soups5 from '../images/soups-stews/soups-5.jpg';
+import soupsReh2 from '../images/soups-stews/soups-reh-2.jpg';
+import soupsReh3 from '../images/soups-stews/soups-reh-3.jpg';
+import soupsReh8 from '../images/soups-stews/soups-reh-8.jpg';
 import swingState1 from '../images/swing-state-1.jpg';
 import swingState2 from '../images/swing-state-2.jpg';
 import swingState3 from '../images/swing-state-3.jpg';
+import wintersTaleFeatured from '../images/winter-s-tale/winter-s-tale-featured.png';
+import wintersTale1 from '../images/winter-s-tale/winter-s-tale-1.jpg';
+import wintersTale2 from '../images/winter-s-tale/winter-s-tale-2.jpg';
+import wintersTale3 from '../images/winter-s-tale/winter-s-tale-3.jpg';
+import wintersTale5 from '../images/winter-s-tale/winter-s-tale-5.jpg';
+import wintersTale11 from '../images/winter-s-tale/winter-s-tale-11.jpg';
 import aidaPlaybillFull from '../images/web-sourced/aida-playbill-full.jpg';
 import amadeusBanner from '../images/web-sourced/amadeus-steppenwolf-banner.png';
 import amadeusAudienceVideoThumb from '../images/web-sourced/amadeus-audience-video-thumb.jpg';
@@ -31,8 +89,6 @@ import holidayGoodmanThumb from '../images/web-sourced/holiday-goodman-thumb.jpg
 import holidayProduction2 from '../images/web-sourced/holiday-production-2.webp';
 import holidayProduction7 from '../images/web-sourced/holiday-production-7.webp';
 import holidayProduction8 from '../images/web-sourced/holiday-production-8.webp';
-import iceman112 from '../images/web-sourced/iceman-112.jpg';
-import iceman114 from '../images/web-sourced/iceman-114.jpg';
 import lunaGaleGoodman from '../images/web-sourced/luna-gale-goodman.png';
 import soundInsideGoodmanThumb from '../images/web-sourced/sound-inside-goodman-thumb.jpg';
 import soundInsideWttw from '../images/web-sourced/sound-inside-wttw.jpg';
@@ -113,6 +169,18 @@ export interface ProductionWatchLink {
   thumbnail?: ImageMetadata;
 }
 
+export interface ProductionPressQuote {
+  quote: string;
+  source: string;
+  href?: string;
+}
+
+export interface ProductionAudienceFeedback {
+  quote: string;
+  author: string;
+  source?: string;
+}
+
 export interface ProductionRecord {
   slug: string;
   title: string;
@@ -146,6 +214,8 @@ export interface ProductionRecord {
   reviews: ProductionReview[];
   externalSources: ProductionExternalSource[];
   watchLinks: ProductionWatchLink[];
+  pressQuotes: ProductionPressQuote[];
+  audienceFeedback: ProductionAudienceFeedback[];
   contextNotes: ProductionContextNote[];
   relatedLinks: ProductionRelatedLink[];
   sourceStatus: ProductionSourceStatus;
@@ -171,6 +241,8 @@ interface ProductionSeed {
   reviews?: ProductionReview[];
   externalSources?: ProductionExternalSource[];
   watchLinks?: ProductionWatchLink[];
+  pressQuotes?: ProductionPressQuote[];
+  audienceFeedback?: ProductionAudienceFeedback[];
   contextNotes?: ProductionContextNote[];
   relatedLinks?: ProductionRelatedLink[];
   sourceStatus?: ProductionSourceStatus;
@@ -1298,54 +1370,322 @@ const productionSeeds: Record<string, ProductionSeed> = {
   'the-iceman-cometh': {
     pageMode: 'featured',
     summary:
-      'The Iceman Cometh is one of the recurring epics in the archive, a title Falls revisited over decades and across Chicago, Dublin, and New York.',
+      'The Iceman Cometh is one of the recurring epics in the archive, a Eugene O\'Neill title Falls kept returning to as a test of scale, ensemble stamina, and actor collaboration across Chicago, Dublin, and New York.',
+    publicSummary:
+      'Falls\'s major O\'Neill revival gathered Brian Dennehy, Nathan Lane, and John Douglas Thompson inside a monumental saloon drama that moved from Goodman to BAM and left behind one of the richest source packets in the archive.',
+    synopsis:
+      'Welcome to Harry Hope\'s saloon, home to a ragtag band of drunks and dreamers who wait for Hickey, the charismatic traveling salesman whose visits usually mean a grand good time. When Hickey arrives sober and newly evangelical about giving up pipe dreams, he throws the room into a devastatingly comic and ultimately heartbreaking reckoning.',
+    fallsContext:
+      'The Iceman Cometh sits deep inside Falls\'s long Brian Dennehy collaboration and shows how he used O\'Neill not as museum drama but as a living endurance test for actors, audience, and ensemble storytelling. The 2012 Goodman revival, followed by the 2015 BAM engagement, makes the page a record of revisitation rather than a one-off event.',
     significance:
-      'A signature Eugene O’Neill chapter inside the Falls/Brian Dennehy collaboration and one of the archive’s clearest examples of long-form revisitation.',
+      'A signature Eugene O\'Neill chapter inside the Falls/Brian Dennehy collaboration and one of the archive\'s clearest examples of long-form revisitation, large-canvas ensemble direction, and Chicago-to-New York afterlife.',
     story:
-      'Starting at the Goodman in 1990, then resurfacing in Dublin, returning in a major 2012 Chicago revival, and moving again to BAM in 2015, The Iceman Cometh charts how Falls kept returning to O’Neill as a scale test, an actor collaboration engine, and a reputation-making text.',
+      'Starting at the Goodman in 1990, resurfacing in Dublin in 1992, then returning in a major 2012 Chicago revival that moved to BAM in 2015, The Iceman Cometh tracks how Falls kept coming back to O\'Neill as a scale test, an actor engine, and a reputation-making text. The folder makes that evolution unusually visible: official copy, review links, critic pull quotes, roster cards, and a deep image set all point to a production treated not just as a revival but as an event.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Broadway transfer years',
     images: [
       {
-        src: iceman112,
-        alt: 'Nathan Lane onstage in The Iceman Cometh at Goodman Theatre.',
-        caption: 'Nathan Lane in The Iceman Cometh at Goodman Theatre. Image sourced from ChicagoCritic review coverage.',
+        src: icemanShowArt,
+        alt: 'Brian Dennehy and Nathan Lane face one another in the saloon in the show art for The Iceman Cometh.',
+        caption: 'Show art foregrounding the Dennehy-Lane duel at the center of Falls\'s revival.',
         orientation: 'landscape',
         priority: true,
+        kind: 'art',
+      },
+      {
+        src: iceman1,
+        alt: 'Brian Dennehy confronts Nathan Lane in a tense saloon exchange from The Iceman Cometh.',
+        caption: 'A confrontation still that captures the production\'s bruising Dennehy-Lane center.',
+        orientation: 'landscape',
         kind: 'production-still',
       },
       {
-        src: iceman114,
-        alt: 'Brian Dennehy onstage in The Iceman Cometh at Goodman Theatre.',
-        caption: 'Brian Dennehy in The Iceman Cometh at Goodman Theatre. Image sourced from ChicagoCritic review coverage.',
+        src: iceman2,
+        alt: 'Brian Dennehy stands at the bar while Nathan Lane appears in the doorway behind him.',
+        caption: 'Falls stages Hickey\'s return like a disturbance already rippling through the room.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: iceman3,
+        alt: 'The saloon ensemble gathers in a wide production still from The Iceman Cometh.',
+        caption: 'A wide Goodman still that shows the production\'s packed room of drinkers, hangers-on, and broken hopes.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: iceman4,
+        alt: 'A large ensemble scene unfolds around a long table in The Iceman Cometh.',
+        caption: 'An ensemble-heavy still that emphasizes the production\'s scale and crowded social world.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: iceman5,
+        alt: 'Brian Dennehy sits at a table with Nathan Lane in a quiet barroom scene from The Iceman Cometh.',
+        caption: 'A more intimate Goodman image of Dennehy and Lane in close, exhausted conversation. Photo: Liz Lauren.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: icemanBam1,
+        alt: 'Nathan Lane raises his hand as members of the BAM ensemble watch from the saloon floor.',
+        caption: 'One of the BAM stills preserved in the folder, showing Hickey working the room as performance and provocation.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: icemanBam2,
+        alt: 'Nathan Lane reaches upward while two other actors watch in a BAM production still from The Iceman Cometh.',
+        caption: 'A BAM close-up that turns Hickey into a preacher, salesman, and destabilizing ringmaster at once.',
+        orientation: 'square',
+        kind: 'production-still',
+      },
+      {
+        src: icemanBam3,
+        alt: 'Three members of the ensemble sit around a table laughing in a BAM scene from The Iceman Cometh.',
+        caption: 'A smaller BAM scene that keeps the play\'s ribald humor alive inside the production\'s darker world.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: icemanBam4,
+        alt: 'Four men sit and stand around a table in the saloon in a BAM production still.',
+        caption: 'Another BAM ensemble still, emphasizing the worn room and the production\'s patient group dynamics.',
         orientation: 'landscape',
         kind: 'production-still',
       },
     ],
     collaborators: [
-      { role: 'Playwright', name: 'Eugene O’Neill' },
+      { role: 'Playwright', name: 'Eugene O\'Neill' },
+      { role: 'Director', name: 'Robert Falls' },
       { role: 'Cast highlight', name: 'Brian Dennehy' },
       { role: 'Cast highlight', name: 'Nathan Lane' },
       { role: 'Cast highlight', name: 'John Douglas Thompson' },
     ],
+    quickFacts: [
+      { label: 'Run', value: 'Apr 21 - Jun 17, 2012' },
+      { label: 'Venue', value: 'Albert Theatre, Goodman Theatre' },
+      { label: 'Runtime', value: '4 hr 45 min, including 3 intermissions' },
+      { label: 'Afterlife', value: 'Brooklyn Academy of Music, 2015' },
+    ],
+    cast: [
+      { role: 'Don Parritt', name: 'Patrick Andrews' },
+      { role: 'Cora', name: 'Kate Arrington' },
+      { role: 'Larry Slade', name: 'Brian Dennehy' },
+      { role: 'Chuck Morello', name: 'Marc Grapey' },
+      { role: 'Jimmy Tomorrow', name: 'James Harms' },
+      { role: 'Willie Oban', name: 'John Hoogenakker' },
+      { role: 'Rocky Pioggi', name: 'Salvatore Inzerillo' },
+      { role: 'Pete Wetjoen', name: 'John Judd' },
+      { role: 'Hickey', name: 'Nathan Lane' },
+      { role: 'Moran', name: 'Loren Lazerine' },
+      { role: 'Ed Mosher', name: 'Larry Neumann Jr.' },
+      { role: 'Harry Hope', name: 'Stephen Ouimette' },
+      { role: 'Cecil Lewis', name: 'John Reeger' },
+      { role: 'Pearl', name: 'Tara Sissom' },
+      { role: 'Margie', name: 'Lee Stark' },
+      { role: 'Joe Mott', name: 'John Douglas Thompson' },
+      { role: 'Lieb', name: 'Bret Tuomi' },
+      { role: 'Hugo Kalmar', name: 'Lee Wilkof' },
+    ],
+    creativeTeam: [
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Playwright', name: 'Eugene O\'Neill' },
+      { role: 'Scenic Design', name: 'Kevin Depinet' },
+      { role: 'Costume Design', name: 'Merrily Murray-Walsh' },
+      { role: 'Lighting Design', name: 'Natasha Katz' },
+      { role: 'Dramaturgy', name: 'Neena Arndt' },
+      { role: 'Casting', name: 'Adam Belcuore' },
+      { role: 'Production Stage Manager', name: 'Joseph Drummond' },
+      { role: 'Stage Manager', name: 'Alden J. Vasquez' },
+      { role: 'Stage Manager', name: 'Claire E. Zawa' },
+    ],
     recognition: [
       {
-        label: 'Recurring production',
-        detail: 'Credits note returns in 2012 and 2015 beyond the original 1990 Goodman staging.',
+        label: 'Long-arc revisitation',
+        detail: 'Timeline entries track the production from Goodman in 1990 to Dublin in 1992, back to Chicago in 2012, and onward to BAM in 2015, making it one of the archive\'s clearest examples of Falls returning to the same title across decades.',
+      },
+      {
+        label: 'Dennehy-Lane center',
+        detail: 'The 2012 revival source packet consistently frames Brian Dennehy and Nathan Lane as the production\'s gravitational force, with John Douglas Thompson and the wider ensemble close behind.',
       },
       {
         label: 'Jeff context',
-        detail: 'Timeline records a 2012 Jeff Award for The Iceman Cometh.',
+        detail: 'The local timeline records a 2012 Jeff Award connected to The Iceman Cometh, underscoring how strongly the Chicago return landed.',
+      },
+      {
+        label: 'Critical spread',
+        detail: 'The folder preserves praise and review links from Chicago, New York, and national outlets, showing the production sustained attention well beyond a single local run.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Decades-long return',
+        detail: 'Few titles in the archive show this kind of repeated attention: Goodman 1990, Dublin 1992, Goodman 2012, and BAM 2015.',
+      },
+      {
+        label: 'Major O\'Neill ensemble',
+        detail: 'Falls anchored the revival around Brian Dennehy, Nathan Lane, John Douglas Thompson, and a deep supporting cast built for marathon dramatic pressure.',
+      },
+      {
+        label: 'Chicago to New York',
+        detail: 'The source packet ties the Goodman event directly to the later BAM life of the production through stills, review links, and a preserved video excerpt.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/the-iceman-cometh/',
+        summary:
+          'The official Goodman page supplies the preserved run dates, runtime, and house synopsis for the 2012 Albert Theatre revival.',
+        note: 'Official production page',
+      },
+      {
+        source: 'The New York Times',
+        href: 'https://www.nytimes.com/2015/02/13/theater/review-the-iceman-cometh-revived-with-nathan-lane-and-brian-dennehy.html',
+        summary:
+          'The folder links directly to New York Times review coverage of the BAM engagement, extending the page beyond Chicago into the production\'s New York reception.',
+        note: 'BAM review',
+      },
+      {
+        source: 'Variety',
+        href: 'https://variety.com/2015/legit/reviews/iceman-cometh-review-nathan-lane-bam-1201432373/',
+        summary:
+          'Variety is part of the preserved BAM review spread and is also quoted in the local critical-praise screenshot.',
+        note: 'BAM review',
+      },
+      {
+        source: 'Exeunt NYC',
+        href: 'https://exeuntnyc.com/reviews/the-iceman-cometh/',
+        summary:
+          'One of the New York review links saved in the source doc for the Brooklyn run.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Newcity Stage',
+        href: 'https://www.newcitystage.com/2012/05/03/review-the-iceman-comethgoodman-theatre/',
+        summary:
+          'Chicago review coverage linked in the local document alongside the Goodman materials.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Theatre In Chicago',
+        href: 'https://www.theatreinchicago.com/the-iceman-cometh/5017/',
+        summary:
+          'The source packet preserves Theatre In Chicago\'s listing and review hub for the Goodman staging.',
+        note: 'Chicago review hub',
+      },
+      {
+        source: 'Talkin\' Broadway',
+        href: 'https://www.talkinbroadway.com/page/regional/chicago/ch395.html',
+        summary:
+          'Regional Chicago review coverage preserved in the local source packet.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'USA Today',
+        href: 'https://www.usatoday.com/story/life/theater/2015/02/12/the-iceman-cometh-brooklyn-academy-of-music-review/23283953/',
+        summary:
+          'National review coverage of the BAM transfer, confirming the production\'s reach beyond the Chicago run.',
+        note: 'BAM review',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/the-iceman-cometh/' },
+      { label: 'New York Times review', href: 'https://www.nytimes.com/2015/02/13/theater/review-the-iceman-cometh-revived-with-nathan-lane-and-brian-dennehy.html' },
+      { label: 'New York Times video excerpt', href: 'https://www.nytimes.com/video/theater/100000001525848/excerpt-the-iceman-cometh.html?smid=url-share' },
+      { label: 'Variety review', href: 'https://variety.com/2015/legit/reviews/iceman-cometh-review-nathan-lane-bam-1201432373/' },
+      { label: 'Exeunt NYC review', href: 'https://exeuntnyc.com/reviews/the-iceman-cometh/' },
+      { label: 'Theatre In Chicago review hub', href: 'https://www.theatreinchicago.com/the-iceman-cometh/5017/' },
+      { label: 'Newcity Stage review', href: 'https://www.newcitystage.com/2012/05/03/review-the-iceman-comethgoodman-theatre/' },
+      { label: 'Talkin\' Broadway review', href: 'https://www.talkinbroadway.com/page/regional/chicago/ch395.html' },
+      { label: 'TheaterMania announcement', href: 'https://www.theatermania.com/news/nathan-lane-and-brian-dennehy-to-star-in-robert-falls-directed-the-iceman-cometh_66965/' },
+      { label: 'Hollywood Reporter mention', href: 'https://www.hollywoodreporter.com/news/general-news/nathan-lane-iceman-cometh-theater-772744/' },
+      { label: 'Playbill BAM opening item', href: 'https://playbill.com/article/oneill-epic-the-iceman-cometh-with-nathan-lane-and-brian-dennehy-opens-at-bam-com-341515' },
+      { label: 'BroadwayWorld BAM review', href: 'https://www.broadwayworld.com/brooklyn/article/BWW-Reviews-Falls-THE-ICEMAN-COMETH-a-Superlative-and-Sensitive-Production-20150216' },
+      { label: 'USA Today review', href: 'https://www.usatoday.com/story/life/theater/2015/02/12/the-iceman-cometh-brooklyn-academy-of-music-review/23283953/' },
+      { label: 'Johns Hopkins review PDF', href: 'https://muse.jhu.edu/pub/2/article/594496/pdf' },
+      { label: 'Backstage feature', href: 'https://www.backstage.com/magazine/article/robert-falls-brian-dennehy-team-iceman-cometh-53876/' },
+    ],
+    watchLinks: [
+      {
+        label: 'The Iceman Cometh | NYT Video Excerpt',
+        href: 'https://www.nytimes.com/video/theater/100000001525848/excerpt-the-iceman-cometh.html?smid=url-share',
+        description: 'Video excerpt link preserved in the local BAM source document.',
+        thumbnail: icemanShowArt,
+      },
+    ],
+    pressQuotes: [
+      {
+        quote: '3 1/2 stars (out of 4)',
+        source: 'Chicago Tribune',
+      },
+      {
+        quote: 'No matter how far you have to go to get there, the place to be right now is Chicago',
+        source: 'The Wall Street Journal',
+      },
+      {
+        quote: 'A volcanic production',
+        source: 'Variety',
+      },
+      {
+        quote: 'Epic',
+        source: 'Chicago Tribune',
+      },
+      {
+        quote: 'Dennehy undertakes an evening-long struggle with himself that\'s riveting to watch',
+        source: 'Time Out Chicago',
+      },
+      {
+        quote: 'A series of sudden, breathtaking punches to the gut, with moments of piercing emotion',
+        source: 'The New York Times',
+      },
+      {
+        quote: 'Extraordinary... a masterpiece',
+        source: 'The Wall Street Journal',
+      },
+      {
+        quote: 'Lane brings out qualities in Hickey that perhaps no other actor could highlight as effectively',
+        source: 'Variety',
+      },
+      {
+        quote: 'Nathan Lane excels in Goodman\'s gorgeously dark The Iceman Cometh',
+        source: 'Chicago Sun-Times',
+      },
+      {
+        quote: 'Space forbids me from giving full due to all of the worthy performances',
+        source: 'The New York Times',
+      },
+      {
+        quote: 'Mr. Lane gives a performance that will stay with you for as long as you live',
+        source: 'The Wall Street Journal',
+      },
+      {
+        quote: 'An intense ensemble of actors whose demons rage before you',
+        source: 'Chicago Tribune',
+      },
+      {
+        quote: 'Gorgeously realized, crystal clear [and] meticulously cast',
+        source: 'Chicago Sun-Times',
       },
     ],
     contextNotes: [
       {
-        label: 'International context',
-        text: 'The 1992 Abbey Theatre remount shows the production entering an international festival setting early in its life.',
+        label: 'Source-doc anomaly',
+        text: 'The 2015 BAM document preserves a New York title and company label, but the body copy inside it is the fuller Goodman 2012 synopsis, run information, and runtime language. That mismatch is retained here as part of the local archive record rather than treated as an error to hide.',
       },
       {
-        label: 'Photo source',
-        text: 'Current production stills are sourced from ChicagoCritic review coverage of the Goodman revival; official Goodman archive pages supplied the production metadata and casting context.',
+        label: 'Production history',
+        text: 'Timeline data places this page inside a much longer Iceman history for Falls: an original Goodman staging in 1990, a 1992 Abbey Theatre remount in Dublin, the major 2012 Goodman revival, and the 2015 BAM engagement.',
+      },
+      {
+        label: 'Review pattern',
+        text: 'The review trail in the folder spans official Goodman materials, Chicago review hubs, New York response to the BAM run, and national outlets such as Variety, The New York Times, and USA Today.',
+      },
+      {
+        label: 'Source package',
+        text: 'The local folder includes official copy, stills from both the Goodman and BAM lives of the production, a critic-praise screenshot, and a full roster image with cast and creative credits.',
       },
     ],
     relatedLinks: seedLinks,
@@ -1445,6 +1785,1959 @@ const productionSeeds: Record<string, ProductionSeed> = {
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
   },
+  'talk-radio': {
+    pageMode: 'archive',
+    summary:
+      'Talk Radio places Falls inside a Broadway revival of Eric Bogosian\'s media-age pressure cooker, built around Liev Schreiber\'s unraveling shock-jock performance.',
+    publicSummary:
+      'Falls directs a Broadway revival of Bogosian\'s corrosive radio-station drama, with celebrity, rage, and performance all collapsing into one another.',
+    synopsis:
+      'On the eve of national syndication, late-night host Barry Champlain works the phones, humiliates callers, and weaponizes intimacy until the radio booth becomes a chamber for exhaustion, vanity, and public self-destruction.',
+    fallsContext:
+      'The production widens the archive beyond Goodman-originated transfers, showing Falls entering a Broadway revival with a text already famous for its media critique and masculine volatility.',
+    significance:
+      'A 2007 Broadway revival that ties Falls to one of the archive\'s clearest media-saturation plays and brought Tony attention through Liev Schreiber\'s central performance.',
+    story:
+      'Talk Radio matters because it lets the archive register another side of Falls: not civic Shakespeare, not O\'Neill tragedy, but fast, acidic contemporary American performance writing. The revival arrived in a period when celebrity confession, aggressive audience intimacy, and media self-display all felt newly volatile again.',
+    venueAnchor: 'Longacre Theatre, Broadway',
+    eraLabel: 'Broadway transfer years',
+    collaborators: [
+      { role: 'Playwright', name: 'Eric Bogosian' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Liev Schreiber' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Mar 11 - Jun 24, 2007' },
+      { label: 'Venue', value: 'Longacre Theatre' },
+      { label: 'Type', value: 'Broadway revival' },
+      { label: 'Recognition', value: 'Tony-nominated revival' },
+    ],
+    recognition: [
+      {
+        label: 'Tony context',
+        detail: 'The revival received Tony nominations for Best Revival of a Play and Best Actor in a Play for Liev Schreiber.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Source status',
+        text: 'This entry draws on the local credits record plus public secondary Broadway references rather than a full official production archive page.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'The New Yorker',
+        href: 'https://www.newyorker.com/magazine/2007/03/26/air-rage',
+        summary:
+          'The review uses Schreiber\'s performance to frame the revival as a study in male rage, media exposure, and public breakdown under Robert Falls\'s direction.',
+      },
+    ],
+    externalSources: [
+      { label: 'The New Yorker review', href: 'https://www.newyorker.com/magazine/2007/03/26/air-rage' },
+      { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/Talk_Radio_(play)' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'shining-city': {
+    pageMode: 'archive',
+    summary:
+      'Shining City brings Falls into Conor McPherson\'s haunted, intimate Dublin world, turning grief and damaged faith into a spare Broadway chamber piece.',
+    publicSummary:
+      'Falls directs McPherson\'s ghost-haunted drama about therapy, bereavement, and the lives people fail to build for themselves.',
+    synopsis:
+      'A widower seeks help after seeing the ghost of his dead wife, while the therapist hearing his story struggles with faith, loneliness, and the wreckage of his own private life. Their conversations turn into a double portrait of men unable to make proper contact with the living or the dead.',
+    fallsContext:
+      'This title adds another scale to the archive: a Broadway play of quiet dread and spiritual fatigue, far from the public thunder of O\'Neill or Shakespeare but still deeply actor-driven.',
+    significance:
+      'A 2006 Broadway staging that earned Tony recognition and shows Falls working with contemporary psychological writing at a notably stripped-back pitch.',
+    story:
+      'Shining City matters because it proves the Falls record is not all volume. Here the work depends on atmosphere, listening, and an almost anti-spectacular patience. That restraint is part of why the title is useful in the archive: it shows how much of his career also rested on giving actors room inside uneasy, inward writing.',
+    venueAnchor: 'Biltmore Theatre, Broadway',
+    eraLabel: 'Broadway transfer years',
+    collaborators: [
+      { role: 'Playwright', name: 'Conor McPherson' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Oliver Platt' },
+      { role: 'Cast highlight', name: 'Brían F. O\'Byrne' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'May 9 - Jul 18, 2006' },
+      { label: 'Venue', value: 'Biltmore Theatre' },
+      { label: 'Performances', value: '80 performances, 21 previews' },
+      { label: 'Recognition', value: 'Tony nominations for Best Play and Best Actor' },
+    ],
+    recognition: [
+      {
+        label: 'Tony context',
+        detail: 'The production received Tony nominations for Best Play and for Oliver Platt\'s performance.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Source status',
+        text: 'This entry is based on the local credits file and public secondary Broadway documentation rather than a currently reachable official archive page.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Wikipedia summary citing New York Times context',
+        href: 'https://en.wikipedia.org/wiki/Shining_City',
+        summary:
+          'The production history records Falls\'s Broadway staging, major cast, run dates, and the strong critical response highlighted there by Ben Brantley.',
+      },
+    ],
+    externalSources: [{ label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/Shining_City' }],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  "franks-home": {
+    pageMode: 'archive',
+    summary:
+      'Frank\'s Home gives Falls a Richard Nelson world premiere about Frank Lloyd Wright, using one American visionary\'s public brilliance and domestic failure as the basis for a late-life portrait.',
+    publicSummary:
+      'A lyrical Richard Nelson world premiere studies Frank Lloyd Wright as artistic genius, family failure, and restless American myth.',
+    synopsis:
+      'The play centers on Frank Lloyd Wright, tracing the gap between monumental artistic invention and the inability to create lasting safety or coherence at home. The result is a portrait of ambition shadowed by emotional and moral cost.',
+    fallsContext:
+      'This production sits inside the Goodman new-work line of the mid-2000s and shows Falls continuing to commission playwrights for biographical and historically inflected contemporary drama.',
+    significance:
+      'A 2006 Richard Nelson world premiere that broadens the archive\'s portrait of Falls as a director of new plays, not only revivals and transfers.',
+    story:
+      'Frank\'s Home matters partly because of subject and partly because of scale. It takes an iconic American figure and reduces him to damage, memory, and human contradiction. That makes it a useful counterweight to the bigger theatrical machines elsewhere in the archive: still public, still historical, but quieter and more elegiac.',
+    venueAnchor: "Goodman's Owen Theatre",
+    eraLabel: 'National and international period',
+    collaborators: [
+      { role: 'Playwright', name: 'Richard Nelson' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Subject', name: 'Frank Lloyd Wright' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Nov 25 - Dec 23, 2006' },
+      { label: 'Venue', value: "Goodman's Owen Theatre" },
+      { label: 'Runtime', value: '1 hr 45 min' },
+      { label: 'Status', value: 'World premiere' },
+    ],
+    recognition: [
+      {
+        label: 'World premiere',
+        detail: 'The official Goodman page identifies the play as a world premiere and notes its association with Playwrights Horizons.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'Goodman presents the production as a lyrical, heartbreaking portrait of Wright as visionary artist and failed family man.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/franks-home/',
+        summary:
+          'The official page presents the production as a Richard Nelson world premiere about Frank Lloyd Wright and highlights its biographical, emotionally reflective angle.',
+      },
+    ],
+    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/franks-home/' }],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  dollhouse: {
+    pageMode: 'archive',
+    summary:
+      'Dollhouse is a key Rebecca Gilman adaptation in the Goodman years, pulling Ibsen\'s domestic revolt into explicitly contemporary social language without giving up the force of the original break.',
+    publicSummary:
+      'Rebecca Gilman reworks Ibsen for Goodman, and Falls directs the commission as a contemporary social drama about marriage, selfhood, and escape.',
+    synopsis:
+      'A woman who has long performed the role expected of her begins to see how thoroughly her home has been structured around obedience, concealment, and charm. The play tracks the cost of that recognition and the danger of acting on it.',
+    fallsContext:
+      'Dollhouse belongs to the collaborative line between Falls and Gilman that later includes Luna Gale, Soups, Stews, and Casseroles: 1976, and Swing State, but here the route in is adaptation rather than wholly original drama.',
+    significance:
+      'A 2005 Goodman commission and world premiere that joins Falls\'s new-work practice to Gilman\'s contemporary rethinking of a foundational feminist classic.',
+    story:
+      'This entry matters because it shows how the Goodman under Falls handled canonical material through living playwrights instead of only through direct revival. Gilman\'s version reframes Ibsen through contemporary speech and social pressure, which makes the page an important predecessor to later archive entries where Falls uses adaptation as a central method.',
+    venueAnchor: "Goodman's Albert Theatre",
+    eraLabel: 'National and international period',
+    collaborators: [
+      { role: 'Playwright / adapter', name: 'Rebecca Gilman' },
+      { role: 'Original playwright', name: 'Henrik Ibsen' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Jun 18 - Jul 24, 2005' },
+      { label: 'Venue', value: "Goodman's Albert Theatre" },
+      { label: 'Runtime', value: '2 hr 30 min' },
+      { label: 'Status', value: 'World premiere and Goodman commission' },
+    ],
+    recognition: [
+      {
+        label: 'Commission premiere',
+        detail: 'The official Goodman page identifies the production as both a world premiere and a Goodman Theatre commission.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'Goodman describes Gilman\'s take as a contemporary-social lens on Ibsen\'s groundbreaking domestic drama.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/dollhouse/',
+        summary:
+          'The official page frames the production as a Rebecca Gilman world-premiere adaptation of A Doll\'s House directed by Robert Falls.',
+      },
+    ],
+    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/dollhouse/' }],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'molly-sweeney': {
+    pageMode: 'archive',
+    summary:
+      'Molly Sweeney sits near the end of Falls\'s Goodman years as an intimate Brian Friel revival built around perception, damage, and the emotional cost of trying to "fix" another person.',
+    publicSummary:
+      'Brian Friel\'s searching drama follows a blind woman whose life is upended by an operation meant to restore her sight.',
+    synopsis:
+      'Having lost her sight in infancy, Molly agrees to a procedure that may restore vision. What sounds like a miracle becomes a harsher test of marriage, ambition, and the stories other people project onto her body and future.',
+    fallsContext:
+      'Compared with the large-canvas transfer stories elsewhere in the archive, Molly Sweeney shows Falls returning to chamber-scale psychological theatre late in his Goodman tenure.',
+    significance:
+      'A late Goodman-era revival that turns away from spectacle and toward a quiet, actor-led tragedy about hope, change, and unintended harm.',
+    story:
+      'The production arrives as a stripped-down counterweight to the louder public-facing titles around it. Friel\'s structure, which asks audiences to listen their way through competing versions of experience, fits a director whose archive often oscillates between institutional scale and rehearsal-room intimacy.',
+    venueAnchor: 'Goodman Theatre',
+    eraLabel: 'Late Goodman years',
+    collaborators: [
+      { role: 'Playwright', name: 'Brian Friel' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: '2020/2021 season postponement' },
+      { label: 'Venue', value: 'Goodman\'s Owen Theatre' },
+      { label: 'Focus', value: 'Major revival' },
+      { label: 'Theme', value: 'Sight, loss, and unintended consequence' },
+    ],
+    recognition: [
+      {
+        label: 'Late-career chamber piece',
+        detail: 'The official Goodman page frames the revival as a deeply moving meditation on hope, change, and despair.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Scheduling context',
+        text: 'Goodman currently labels the production as postponed to the 2020/2021 season rather than presenting a standard completed run listing.',
+      },
+      {
+        label: 'Archive position',
+        text: 'Molly Sweeney helps broaden the late Goodman years beyond premieres and adaptations, showing Falls still investing in severe modern classics.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/molly-sweeney/',
+        summary:
+          'The official page presents the revival as a major Brian Friel production directed by Robert Falls and centers the play\'s medical-miracle premise.',
+      },
+    ],
+    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/molly-sweeney/' }],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'the-winters-tale': {
+    pageMode: 'archive',
+    summary:
+      'The Winter\'s Tale records Falls returning to Shakespeare late in his Goodman tenure with a visually bold Goodman staging that critics repeatedly described as inventive, playful, and emotionally generous.',
+    publicSummary:
+      'Falls stages Shakespeare\'s late romance as a vivid swing between jealousy, loss, comedy, and repair.',
+    synopsis:
+      'A jealous king accuses his wife of infidelity, setting off a calamitous series of events. What begins as tragedy evolves into a fantastical journey from wrath to redemption to reconciliation, without ever letting the earlier damage disappear.',
+    fallsContext:
+      'This is part of the Shakespeare line that runs through Falls\'s Chicago work, but the official response around the production emphasizes clarity, feeling, and theatrical playfulness more than monumentality.',
+    significance:
+      'A late Goodman Shakespeare production that shows Falls balancing narrative readability with the tonal instability that makes the play so difficult and rewarding.',
+    story:
+      'The archive already places The Winter\'s Tale beside Measure for Measure and The Seagull as evidence of Falls\'s appetite for unstable texts. What makes this page useful is not transfer history but tone: a production praised for making one of Shakespeare\'s most cryptic plays feel accessible without flattening its strangeness, while giving the evening a sharply memorable visual identity built around crowns, fur, and the play\'s famous bear.',
+    venueAnchor: 'Goodman Theatre',
+    eraLabel: 'Late Goodman years',
+    images: [
+      {
+        src: wintersTaleFeatured,
+        alt: 'Promotional artwork for The Winter\'s Tale featuring the bear-costumed Mamillius.',
+        caption: 'Featured art for Goodman Theatre\'s 2019 production of The Winter\'s Tale.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'art',
+      },
+      {
+        src: wintersTale1,
+        alt: 'Dan Donohue as Leontes stands in the foreground while other characters gather behind him in The Winter\'s Tale.',
+        caption: 'Leontes dominates the stage as the production\'s early courtly unease turns volatile.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: wintersTale2,
+        alt: 'Charlie Herman as Mamillius stands alone in the bear costume in The Winter\'s Tale.',
+        caption: 'Mamillius, framed by the production\'s now-iconic bear imagery.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: wintersTale3,
+        alt: 'Perdita and Florizel kiss center stage while couples gather around them in The Winter\'s Tale.',
+        caption: 'The Bohemia scenes push the production toward warmth, romance, and comic release.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: wintersTale5,
+        alt: 'Kate Fry, Dan Donohue, and Nathan Hosner share a tense court scene in The Winter\'s Tale.',
+        caption: 'Hermione, Leontes, and Polixenes in the brittle court world before the collapse.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: wintersTale11,
+        alt: 'A crowned court figure squares off with the production\'s bear in The Winter\'s Tale.',
+        caption: 'The production leans into Shakespeare\'s wild theatricality instead of sanding it down.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'William Shakespeare' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Dan Donohue' },
+      { role: 'Cast highlight', name: 'Kate Fry' },
+      { role: 'Cast highlight', name: 'Henry Godinez' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'May 4 - Jun 9, 2019' },
+      { label: 'Venue', value: 'Goodman\'s Albert Theatre' },
+      { label: 'Runtime', value: '2 hr 15 min, with one intermission' },
+      { label: 'Mode', value: 'Late-career Shakespeare staging' },
+    ],
+    cast: [
+      { role: 'Clown', name: 'Will Allan' },
+      { role: 'Nell', name: 'Cher Alvarez' },
+      { role: 'Perdita', name: 'Chloe Baldwin' },
+      { role: 'Florizel', name: 'Xavier Edward King' },
+      { role: 'Dion / Shepherd', name: 'Josh Carpenter' },
+      { role: 'Paulina', name: 'Christiana Clark' },
+      { role: 'Leontes', name: 'Dan Donohue' },
+      { role: 'Emelia / Mopsa', name: 'Amanda Drinkall' },
+      { role: 'Hermione', name: 'Kate Fry' },
+      { role: 'Camillo', name: 'Henry Godinez' },
+      { role: 'Mamillius', name: 'Charlie Herman' },
+      { role: 'Polixenes', name: 'Nathan Hosner' },
+      { role: 'Mariana / Dorcas', name: 'Susan Jamshidi' },
+      { role: 'Autolycus', name: 'Philip Earl Johnson' },
+      { role: 'Jailer / Bear', name: 'Mark Lancaster' },
+      { role: 'Antigonus', name: 'Gregory Linington' },
+      { role: 'Old Shepherd', name: 'Tim Monsion' },
+      { role: 'Archidamus / Shepherd', name: 'Christopher Sheard' },
+      { role: 'Cleomenes / Shepherd', name: 'Martin Yousif Zebari' },
+      { role: 'Understudy', name: 'Alan Ball' },
+      { role: 'Understudy', name: 'Dee Dee Batteast' },
+      { role: 'Understudy', name: 'Evan T. Coles' },
+      { role: 'Understudy', name: 'Will Mobley' },
+      { role: 'Understudy', name: 'Eric Parks' },
+      { role: 'Understudy', name: 'Christian Wilson' },
+    ],
+    creativeTeam: [
+      { role: 'Playwright', name: 'William Shakespeare' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Set Design', name: 'Walt Spangler' },
+      { role: 'Costume Design', name: 'Ana Kuzmanic' },
+      { role: 'Lighting Design', name: 'Aaron Spivey' },
+      { role: 'Original Music / Sound Design', name: 'Richard Woodbury' },
+      { role: 'Choreography', name: 'Tommy Rapley' },
+      { role: 'Dramaturg', name: 'Neena Arndt' },
+      { role: 'Production Stage Manager', name: 'Briana J. Fahey' },
+      { role: 'Stage Manager', name: 'Kimberly Ann McCann' },
+      { role: 'Stage Manager', name: 'Nikki Blue' },
+    ],
+    recognition: [
+      {
+        label: 'Critical response',
+        detail: 'The source package shows praise from Chicago Tribune, Chicago Sun-Times, Newcity Stage, BroadwayWorld, Broadway Blog, Around the Town, and Windy City Times.',
+      },
+      {
+        label: 'Shakespeare thread',
+        detail: 'The production was framed by Goodman as following Falls\'s celebrated King Lear and Measure for Measure.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/the-winters-tale/',
+        summary:
+          'The official page frames the production as a 2019 Albert Theatre staging and emphasizes how the play swings from jealousy and calamity toward reconciliation and wonder.',
+      },
+      {
+        source: 'Newcity Stage',
+        href: 'https://www.newcitystage.com/2019/05/14/a-tale-of-two-tales-a-review-of-the-winters-tale-at-goodman-theatre/',
+        summary:
+          'Newcity Stage praises the production as an engaging, dramatic interpretation that communicates Shakespeare\'s storytelling with unusual clarity.',
+      },
+      {
+        source: 'Chicago Sun-Times',
+        href: 'https://chicago.suntimes.com/2019/5/14/18626969/winter-s-tale-as-confounding-as-ever-in-fabulous-goodman-theatre-production',
+        summary:
+          'The Sun-Times treats the play as a difficult but rewarding challenge and casts Falls\'s staging as a fabulous Goodman production worth wrestling with.',
+      },
+      {
+        source: 'BroadwayWorld Chicago',
+        href: 'https://www.broadwayworld.com/chicago/article/BWW-Review-THE-WINTERS-TALE-at-Goodman-Theatre-20190514',
+        summary:
+          'BroadwayWorld leans into the production\'s whimsy and calls it one of the most inventive and playful Shakespeare stagings in recent memory.',
+      },
+      {
+        source: 'Around the Town Chicago',
+        href: 'https://aroundthetownchicago.com/theatre-reviews/the-winters-tale/',
+        summary:
+          'Around the Town responds to the emotional breadth of the evening, stressing that the production can make an audience laugh, cry, and leave impressed by the ensemble.',
+      },
+      {
+        source: 'Stage and Cinema',
+        href: 'https://stageandcinema.com/2019/05/14/winters-tale-goodman/',
+        summary:
+          'Stage and Cinema places the Goodman production inside the play\'s larger tragicomic sweep, reading Falls\'s approach as a way into Shakespeare\'s late strangeness.',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/the-winters-tale/' },
+      { label: 'Newcity Stage review', href: 'https://www.newcitystage.com/2019/05/14/a-tale-of-two-tales-a-review-of-the-winters-tale-at-goodman-theatre/' },
+      { label: 'Stage and Cinema review', href: 'https://stageandcinema.com/2019/05/14/winters-tale-goodman/' },
+      { label: 'Around the Town Chicago review', href: 'https://aroundthetownchicago.com/theatre-reviews/the-winters-tale/' },
+      { label: 'Picture This Post review', href: 'https://www.picturethispost.com/goodman-theatre-presents-the-winters-tale-review/' },
+      { label: 'BroadwayWorld Chicago review', href: 'https://www.broadwayworld.com/chicago/article/BWW-Review-THE-WINTERS-TALE-at-Goodman-Theatre-20190514' },
+      { label: 'Chicago Sun-Times review', href: 'https://chicago.suntimes.com/2019/5/14/18626969/winter-s-tale-as-confounding-as-ever-in-fabulous-goodman-theatre-production' },
+      { label: 'Splash Mags review', href: 'https://splashmags.com/2019/05/a-winters-tale-at-the-goodman-theatre-review-an-obscure-delight/' },
+    ],
+    watchLinks: [
+      {
+        label: 'The Winter\'s Tale | Director Robert Falls',
+        href: '/media/productions/the-winter-s-tale/the-winter-s-tale-director-robert-falls.mp4',
+        description: 'Local director video included with the Winter\'s Tale source folder.',
+        thumbnail: wintersTaleFeatured,
+      },
+    ],
+    pressQuotes: [
+      { quote: 'Not dull for a moment.', source: 'Chicago Tribune' },
+      {
+        quote: 'One of the most engaging, dramatic interpretations of Shakespeare\'s work you\'re likely to see.',
+        source: 'Newcity Stage',
+        href: 'https://www.newcitystage.com/2019/05/14/a-tale-of-two-tales-a-review-of-the-winters-tale-at-goodman-theatre/',
+      },
+      {
+        quote: 'Goodman Theatre delivers a The Winter\'s Tale full of whimsy.',
+        source: 'BroadwayWorld',
+        href: 'https://www.broadwayworld.com/chicago/article/BWW-Review-THE-WINTERS-TALE-at-Goodman-Theatre-20190514',
+      },
+      { quote: 'Embraces ambiguity with gusto, offering a smartly realized and multi-dimensional realization of one of Shakespeare\'s most cryptic works.', source: 'Broadway Blog' },
+      {
+        quote: 'Powerful and very extraordinary.',
+        source: 'Around the Town',
+        href: 'https://aroundthetownchicago.com/theatre-reviews/the-winters-tale/',
+      },
+      {
+        quote: 'A fabulous Goodman Theatre production.',
+        source: 'Chicago Sun-Times',
+        href: 'https://chicago.suntimes.com/2019/5/14/18626969/winter-s-tale-as-confounding-as-ever-in-fabulous-goodman-theatre-production',
+      },
+      {
+        quote: 'One of the most inventive and playful productions of Shakespeare I\'ve seen.',
+        source: 'BroadwayWorld',
+        href: 'https://www.broadwayworld.com/chicago/article/BWW-Review-THE-WINTERS-TALE-at-Goodman-Theatre-20190514',
+      },
+      { quote: 'A clear-eyed staging.', source: 'Chicago Tribune' },
+      { quote: 'A masterpiece of storytelling.', source: 'Windy City Times' },
+      { quote: 'Both Goodman and Falls do the Bard proud... you\'re in for a treat.', source: 'Windy City Times' },
+      {
+        quote: 'Will have you laughing and crying.',
+        source: 'Around the Town',
+        href: 'https://aroundthetownchicago.com/theatre-reviews/the-winters-tale/',
+      },
+      { quote: 'Both accessible and magical.', source: 'Windy City Times' },
+      {
+        quote: 'Provides a startling masterclass in communicating the clear, concise storytelling of Shakespeare\'s language.',
+        source: 'Newcity Stage',
+        href: 'https://www.newcitystage.com/2019/05/14/a-tale-of-two-tales-a-review-of-the-winters-tale-at-goodman-theatre/',
+      },
+      {
+        quote: 'The Winter\'s Tale is a bear of a play; seeing Falls wrestle with it is worth your time.',
+        source: 'Chicago Sun-Times',
+        href: 'https://chicago.suntimes.com/2019/5/14/18626969/winter-s-tale-as-confounding-as-ever-in-fabulous-goodman-theatre-production',
+      },
+    ],
+    audienceFeedback: [
+      {
+        quote: 'This play holds your... attention. The set, costumes, props, and acting are all superb. We highly recommend this play.',
+        author: 'Rich R.',
+        source: 'Facebook',
+      },
+      {
+        quote: 'Quite a performance. Made Shakespeare come alive. Don\'t miss it.',
+        author: 'Linda F.',
+        source: 'Facebook',
+      },
+      {
+        quote: 'I saw The Winter\'s Tale at @GoodmanTheatre last night, and I have SO MANY FEELINGS. Which is exactly the reaction I should have after watching The Winter\'s Tale. I have to go simultaneously cry and rejoice now.',
+        author: 'Lauren E.',
+        source: 'X',
+      },
+      {
+        quote: 'Stunning... I was especially grateful to the cast.',
+        author: 'Wendy B.',
+        source: 'Facebook',
+      },
+      {
+        quote: 'Enjoyed last night\'s performance! Unique Shakespeare play made easy to enjoy with great cast and directorial embellishments.',
+        author: 'Marcia S.',
+        source: 'Facebook',
+      },
+      {
+        quote: 'A really different Shakespeare play-both tragedy and comedy. But so well done. Saw it last night and enjoyed it very much!',
+        author: 'Neta J.',
+        source: 'Facebook',
+      },
+      {
+        quote: 'It was delightful! The cast is so comfortable and fun to watch. Loved it!',
+        author: 'Debbie R.',
+        source: 'Facebook',
+      },
+      {
+        quote: 'Saw this Shakespeare play at the Goodman today-amazing!!',
+        author: 'Catherine F.',
+        source: 'Facebook',
+      },
+      {
+        quote: 'An engaging, heartfelt production with great staging, a wonderful, talented ensemble and a story which struggles with jealousy, deception, humor, redemption and love.',
+        author: 'Jim H.',
+        source: 'Facebook',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Reception pattern',
+        text: 'The source package consistently emphasizes clarity, whimsy, and emotional force rather than reverence alone.',
+      },
+      {
+        label: 'Local source drop',
+        text: 'The local production folder includes still photography, a director video, critical pull quotes, audience reactions, and a full cast-and-creative roster.',
+      },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
+  'were-only-alive-for-a-short-amount-of-time': {
+    pageMode: 'featured',
+    summary:
+      'We\'re Only Alive for a Short Amount of Time widens Falls\'s late Goodman record into autobiographical music theatre: David Cale\'s one-man survival story, built from family memory, song, and a chamber-orchestra frame, later traveled from Chicago to New York.',
+    publicSummary:
+      'David Cale\'s musical memoir follows a boy surviving a fraught home through song, birds, and theatrical invention in a deeply personal Goodman staging backed by a six-piece orchestra.',
+    synopsis:
+      'Growing up, writer-performer David Cale escaped his parents\' fraught marriage by singing in his bedroom and tending to birds in his backyard animal hospital until tragedy changed everything. Under Robert Falls\'s direction, those memories become an intimate musical memoir of hope, family, transcendence, and survival.',
+    fallsContext:
+      'The production places Falls inside a highly authored solo form: not a conventional play but a memoir-musical shaped around Cale\'s voice, songs, and stage presence. Its later Public Theater transfer shows how successfully Falls translated that personal material into a production with life beyond Chicago.',
+    significance:
+      'A late Goodman-era memoir musical that later transferred to the Public Theater in New York, broadening the archive\'s picture of Falls beyond ensemble drama, adaptation, and classical repertoire.',
+    story:
+      'This title matters because it shifts the scale of the archive without reducing ambition. Instead of epic adaptation or institutional farewell, the page turns toward a single performer, a six-piece ensemble, and the careful shaping of memory into theatre. The source documents also reveal a fuller life cycle: a work-in-progress appearance at The Public\'s 2018 Under the Radar Festival, a full Goodman run, and a 2019 Public Theater engagement in New York.',
+    venueAnchor: 'Goodman Theatre',
+    eraLabel: 'Late Goodman years',
+    images: [
+      {
+        src: onlyAlivePoster,
+        alt: 'Poster art for We\'re Only Alive for a Short Amount of Time featuring David Cale surrounded by birds and childhood imagery.',
+        caption: 'Poster art for Goodman Theatre\'s production of We\'re Only Alive for a Short Amount of Time.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'art',
+      },
+      {
+        src: onlyAliveKeyArt,
+        alt: 'Key art for We\'re Only Alive for a Short Amount of Time featuring David Cale without title treatment.',
+        caption: 'Title-free key art centered on David Cale and the production\'s bird imagery.',
+        orientation: 'square',
+        kind: 'art',
+      },
+      {
+        src: onlyAlive1,
+        alt: 'David Cale performs at a standing microphone with the chamber ensemble behind him.',
+        caption: 'David Cale in performance with the onstage ensemble just visible behind him.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: onlyAlive5,
+        alt: 'David Cale stands beneath hanging model airplanes as the ensemble performs behind him.',
+        caption: 'Model airplanes and chamber players enlarge the memoir into theatrical flight.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: onlyAlive6,
+        alt: 'An empty stage picture of suspended bird cages and a stool from We\'re Only Alive for a Short Amount of Time.',
+        caption: 'The scenic world strips the stage down to bird cages, shadow, and memory.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: onlyAliveReh1,
+        alt: 'Robert Falls and a collaborator study notes during rehearsal for We\'re Only Alive for a Short Amount of Time.',
+        caption: 'Robert Falls in rehearsal, working through the piece\'s precise musical-theatrical structure.',
+        orientation: 'portrait',
+        kind: 'rehearsal',
+      },
+      {
+        src: onlyAliveReh2,
+        alt: 'David Cale poses with the ensemble in a rehearsal photo for We\'re Only Alive for a Short Amount of Time.',
+        caption: 'The ensemble photo highlights the chamber-music scale that shapes the production.',
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+      {
+        src: onlyAliveReh3,
+        alt: 'A pianist rehearses the show in a studio for We\'re Only Alive for a Short Amount of Time.',
+        caption: 'Rehearsal materials underline how tightly the show depends on live musical collaboration.',
+        orientation: 'portrait',
+        kind: 'rehearsal',
+      },
+      {
+        src: onlyAliveReh4,
+        alt: 'David Cale sings at a microphone during rehearsal with a pianist behind him.',
+        caption: 'A rehearsal moment that captures the show\'s hybrid of concert, memoir, and theatre.',
+        orientation: 'portrait',
+        kind: 'rehearsal',
+      },
+      {
+        src: davidCalePortrait,
+        alt: 'Portrait of David Cale seated onstage.',
+        caption: 'David Cale portrait included with the local source package.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: robertFallsPortrait2013,
+        alt: 'Portrait of Robert Falls from the local source package for We\'re Only Alive for a Short Amount of Time.',
+        caption: 'Robert Falls portrait included alongside the production materials.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+    ],
+    collaborators: [
+      { role: 'Writer / composer / performer', name: 'David Cale' },
+      { role: 'Music', name: 'David Cale and Matthew Dean Marsh' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Sep 15 - Oct 21, 2018' },
+      { label: 'Venue', value: 'Albert Theatre, Goodman Theatre' },
+      { label: 'Runtime', value: '90 minutes, no intermission' },
+      { label: 'Scale', value: 'Solo memoir with six-piece orchestra' },
+      { label: 'Afterlife', value: 'Public Theater, New York (2019)' },
+    ],
+    cast: [{ role: 'Performer', name: 'David Cale' }],
+    creativeTeam: [
+      { role: 'Written and Performed by', name: 'David Cale' },
+      { role: 'Lyrics', name: 'David Cale' },
+      { role: 'Music', name: 'David Cale and Matthew Dean Marsh' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Arrangements / Music Direction', name: 'Matthew Dean Marsh' },
+      { role: 'Set Design', name: 'Kevin Depinet' },
+      { role: 'Costume Design', name: 'Paul Marlow' },
+    ],
+    recognition: [
+      {
+        label: 'Transfer story',
+        detail: 'The local source docs and timeline together record a 2019 New York engagement at the Public Theater after the Goodman run.',
+      },
+      {
+        label: 'Form shift',
+        detail: 'The production combines memoir, live music, and solo performance rather than fitting the archive\'s more common ensemble-play model.',
+      },
+      {
+        label: 'Development path',
+        detail: 'David Cale\'s source bio notes that a work-in-progress of the piece appeared in The Public Theater\'s 2018 Under the Radar Festival before the full production life documented here.',
+      },
+      {
+        label: 'Cale collaboration history',
+        detail: 'The Goodman source material places the production within a long-running relationship between David Cale and the theatre, making the piece part of an extended artistic conversation rather than an isolated commission.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Music-theatre context',
+        text: 'The source docs repeatedly frame the piece as a musical memoir of hope, family, and transcendence, anchored by a six-piece orchestra and intimate autobiographical storytelling.',
+      },
+      {
+        label: 'Production history',
+        text: 'The docs outline a full development arc: a work-in-progress appearance in The Public Theater\'s 2018 Under the Radar Festival, the Goodman Theatre run in Chicago from September 15 to October 21, 2018, and a 2019 continuation at the Public Theater in New York.',
+      },
+      {
+        label: 'Artist relationship',
+        text: 'The Goodman press material places the show inside David Cale\'s long relationship with the theatre, noting earlier premieres there including Floyd and Clea Under the Western Sky, Lillian, Somebody Else\'s House, Deep in a Dream of You, Smooch Music, and The Redthroats.',
+      },
+      {
+        label: 'David Cale background',
+        text: 'The same source packet broadens Cale\'s profile beyond Goodman, citing work at Playwrights Horizons and The Public, an Obie Award for Lillian, a Bessie Award for Deep in a Dream of You, a This American Life recording, collaborations with Dael Orlandersmith and Matthew Dean Marsh, lyrics for artists including Debbie Harry and Elvis Costello, and screen work including Pollock, The Slaughter Rule, and The Good Wife.',
+      },
+      {
+        label: 'New York continuation',
+        text: 'A second source doc identifies the 2019 follow-up engagement as We\'re Only Alive for a Short Amount of Time (New York) for Public Theater, New York.',
+      },
+      {
+        label: 'Public Theater framing',
+        text: 'The source docs preserve the New York framing of the piece as a return engagement for Lortel Award-winning writer-performer David Cale, directed by Tony Award winner Robert Falls and presented in co-production with Goodman Theatre.',
+      },
+      {
+        label: 'Local source drop',
+        text: 'The local production folder adds performance stills, rehearsal photography, portraits, poster art, a director video, and the doc-based review trail now surfaced on the page.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/were-only-alive-for-a-short-amount-of-time/',
+        summary:
+          'The official production page describes the show as a musical memoir of hope, family, and transcendence and foregrounds the six-piece orchestra and major local praise.',
+        note: 'Official production page',
+      },
+      {
+        source: 'Goodman Theatre Press Room',
+        href: 'https://www.goodmantheatre.org/press-rooms/were-only-alive-for-a-short-amount-of-time/',
+        summary:
+          'The local doc packet points back to Goodman\'s press room for the production biography, artist background, and house framing used to build out this page.',
+        note: 'Primary source packet',
+      },
+      {
+        source: 'Newcity Stage',
+        href: 'https://www.newcitystage.com/2018/09/26/no-one-gets-out-alive-a-review-of-were-only-alive-for-a-short-amount-of-time-at-goodman-theatre/',
+        summary:
+          'Chicago review coverage linked directly inside the 2018 source document for the Goodman run.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Stage and Cinema',
+        href: 'https://stageandcinema.com/2018/09/25/were-only-alive/',
+        summary:
+          'Another early review link preserved in the local source document for the original Goodman production.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Playbill',
+        href: 'https://playbill.com/article/what-did-critics-think-of-were-only-alive-for-a-short-amount-of-time-at-the-public-theater',
+        summary:
+          'The source packet preserves Playbill\'s critics-roundup link for the Public Theater transfer, connecting the Chicago production to its New York reception.',
+        note: 'Critics roundup',
+      },
+      {
+        source: 'NY Stage Review',
+        href: 'https://nystagereview.com/2019/06/27/were-only-alive-for-a-short-amount-of-time-david-cale-digs-deep/',
+        summary:
+          'New York transfer coverage linked in the source docs for the Public Theater engagement.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'The New York Times',
+        href: 'https://www.nytimes.com/2019/07/03/theater/david-cale-were-only-alive-public-theater.html',
+        summary:
+          'The doc packet also preserves New York Times coverage of the production\'s Public Theater life.',
+        note: 'Source-doc feature link',
+      },
+      {
+        source: 'Theatre In Chicago',
+        href: 'https://www.theatreinchicago.com/were-only-alive-for-a-short-amount-of-time/9986/',
+        summary:
+          'Regional listing and review coverage captured alongside the rest of the local source materials.',
+        note: 'Source-doc listing link',
+      },
+      {
+        source: 'TDF',
+        href: 'https://www.tdf.org/shows/17572/were-only-alive-for-a-short-amount-of-time/',
+        summary:
+          'The source doc preserves a TDF listing that also carries a Chicago Tribune quote used in the New York transfer materials.',
+        note: 'Transfer listing',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/were-only-alive-for-a-short-amount-of-time/' },
+      { label: 'Goodman press room', href: 'https://www.goodmantheatre.org/press-rooms/were-only-alive-for-a-short-amount-of-time/' },
+      { label: 'Playbill critics roundup', href: 'https://playbill.com/article/what-did-critics-think-of-were-only-alive-for-a-short-amount-of-time-at-the-public-theater' },
+      { label: 'NY Stage Review', href: 'https://nystagereview.com/2019/06/27/were-only-alive-for-a-short-amount-of-time-david-cale-digs-deep/' },
+      { label: 'The New York Times', href: 'https://www.nytimes.com/2019/07/03/theater/david-cale-were-only-alive-public-theater.html' },
+      { label: 'Newcity Stage', href: 'https://www.newcitystage.com/2018/09/26/no-one-gets-out-alive-a-review-of-were-only-alive-for-a-short-amount-of-time-at-goodman-theatre/' },
+      { label: 'Stage and Cinema', href: 'https://stageandcinema.com/2018/09/25/were-only-alive/' },
+      { label: 'Theatre In Chicago', href: 'https://www.theatreinchicago.com/were-only-alive-for-a-short-amount-of-time/9986/' },
+      { label: 'TDF listing', href: 'https://www.tdf.org/shows/17572/were-only-alive-for-a-short-amount-of-time/' },
+    ],
+    watchLinks: [
+      {
+        label: 'We\'re Only Alive | Director Video',
+        href: '/media/productions/were-only-alive-for-a-short-amount-of-time/were-only-alive-director-video.mp4',
+        description: 'Local video asset included with the We\'re Only Alive source folder.',
+        thumbnail: onlyAlivePoster,
+      },
+    ],
+    pressQuotes: [
+      {
+        quote: 'an exquisite six-piece orchestra',
+        source: 'PerformInk, quoted in Goodman materials',
+      },
+      {
+        quote: 'survival story, deeply moving in its courage',
+        source: 'Chicago Tribune, quoted in Goodman materials',
+      },
+      {
+        quote: 'A deeply personal, indisputably courageous, frequently shocking and deeply moving autobiographical show.',
+        source: 'Chicago Tribune',
+      },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
+  'an-enemy-of-the-people': {
+    pageMode: 'archive',
+    summary:
+      'An Enemy of the People extends Falls\'s late Goodman adaptation work, turning Ibsen\'s civic crisis into a sharply contemporary conflict over contamination, power, and public truth.',
+    publicSummary:
+      'Falls revisits Ibsen through a politically charged Goodman staging about two brothers, a poisoned community, and the cost of speaking plainly.',
+    synopsis:
+      'A doctor discovers that the local water source is dangerous. What begins as a scientific alarm becomes a brutal fight over money, reputation, family, and whether a public will accept the truth when the truth threatens its own comfort.',
+    fallsContext:
+      'Together with The Seagull, 2666, and The Cherry Orchard, this production helps define the adaptation-heavy phase of Falls\'s later Goodman years.',
+    significance:
+      'A late Goodman adaptation of Ibsen that ties Falls\'s classical work directly to environmental anxiety and civic distrust.',
+    story:
+      'The page matters less as a transfer narrative than as a statement of method. Falls takes a classic political drama and presses it toward immediate contemporary pressure, letting the archive show how often his later work returned to public argument, not just private psychology.',
+    venueAnchor: 'Goodman Theatre',
+    eraLabel: 'Late Goodman years',
+    collaborators: [
+      { role: 'Playwright', name: 'Henrik Ibsen' },
+      { role: 'Director / adapter context', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Mar 10 - Apr 15, 2018' },
+      { label: 'Runtime', value: '2 hr 20 min' },
+      { label: 'Venue', value: 'Goodman Theatre' },
+      { label: 'Frame', value: 'Timely civic classic' },
+    ],
+    recognition: [
+      {
+        label: 'Adaptation context',
+        detail: 'The local timeline and credits frame the production as Falls\'s own adaptation of Ibsen.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman page sells the production on the immediacy of a water-contamination crisis and the collision between political ambition and moral integrity.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/an-enemy-of-the-people/',
+        summary:
+          'The official page presents the production as a timely revival and highlights praise from Chicago Sun-Times and Daily Herald.',
+      },
+    ],
+    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/an-enemy-of-the-people/' }],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'blind-date': {
+    pageMode: 'archive',
+    summary:
+      'Blind Date adds a Cold War political comedy to Falls\'s late Goodman record, treating Reagan and Gorbachev not as textbook figures but as performers inside a high-stakes private negotiation.',
+    publicSummary:
+      'Rogelio Martinez imagines a sly backstage encounter between Reagan and Gorbachev, with Falls shaping the history into comic political chamber theatre.',
+    synopsis:
+      'Before social media and permanent news churn, two geopolitical icons meet to cool the arms race while their spouses wage a more intimate contest nearby. History is reframed as chemistry, theatermanship, and tactical performance.',
+    fallsContext:
+      'Blind Date shows Falls staying active in contemporary political writing even while his later archive is often remembered for classics and adaptations.',
+    significance:
+      'A 2018 world premiere that threads political comedy and historical speculation into the later Goodman years.',
+    story:
+      'The official production pitch makes the play feel almost like diplomatic farce: world history reduced to posture, flirtation, mistrust, and tone. That kind of pressure-cooker structure fits a director interested in how public life becomes performance under scrutiny.',
+    venueAnchor: 'Goodman Theatre',
+    eraLabel: 'Late Goodman years',
+    collaborators: [
+      { role: 'Playwright', name: 'Rogelio Martinez' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Jan 20 - Feb 25, 2018' },
+      { label: 'Venue', value: 'Albert Theatre' },
+      { label: 'Runtime', value: '2 hr 30 min' },
+      { label: 'Status', value: 'World premiere' },
+    ],
+    recognition: [
+      {
+        label: 'World premiere',
+        detail: 'Timeline data identifies Blind Date as a Goodman world premiere.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman page emphasizes the play\'s mix of arms-race history, backstage comedy, and a private battle of wills between world leaders and their spouses.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/blind-date/',
+        summary:
+          'The official page positions the premiere as a sly political comedy and includes critical praise quoted from Daily Herald.',
+      },
+    ],
+    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/blind-date/' }],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'uncle-vanya': {
+    pageMode: 'archive',
+    summary:
+      'Uncle Vanya returns Falls to Chekhov in his 30th-anniversary Goodman season, pairing Annie Baker\'s contemporary-sounding version with a worn country estate, a quietly starry ensemble, and a production tuned to regret, humor, and emotional attrition.',
+    publicSummary:
+      'Falls directs Annie Baker\'s adaptation of Chekhov in the Owen Theatre, leaning into deadpan humor, emotional drift, and the slow ache of a ruined household.',
+    synopsis:
+      'Tensions run high at the remote estate of an elderly professor, where resentments flow as freely as the vodka. As the professor\'s health fails, his extended family is forced to confront disturbing futures while still foundering in a disconcerting past.',
+    fallsContext:
+      'In the Goodman program, Falls links the production directly to the Stanislavsky and Chekhov study that fed his 2010 Seagull. He describes Uncle Vanya as a play he could finally understand at 62: a drama of aging, regret, loss, and the stubborn fact that none of the characters gives up.',
+    significance:
+      'A major 2017 Goodman staging that pairs Falls with Annie Baker\'s adaptation during his 30th anniversary as Artistic Director, turning a canonical Chekhov play into an intimate, actor-driven late-Goodman chamber piece.',
+    story:
+      'Uncle Vanya matters because it shows Falls approaching a canonical text through another living playwright\'s ear while also using the production to think publicly about age, time, and artistic maturity. Baker\'s language update, the Owen Theatre scale, and the 30th-anniversary context all point toward a production interested in intimacy rather than monument, even while working inside one of theatre\'s most haunted classics.',
+    venueAnchor: 'Goodman Theatre',
+    eraLabel: 'Late Goodman years',
+    images: [
+      {
+        src: uncleVanyaShowArt,
+        alt: 'Tim Hopper as Vanya stands amid books and furniture in the dimly lit estate interior used as Uncle Vanya show art.',
+        caption: 'Show art centered on Tim Hopper as Vanya inside Todd Rosenthal\'s cluttered estate interior.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'art',
+      },
+      {
+        src: uncleVanya2,
+        alt: 'A wide stage view of the Uncle Vanya ensemble spread across the weathered country-house set.',
+        caption: 'A full-stage view that shows the production\'s decaying estate and large-family geometry.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: uncleVanya3,
+        alt: 'Sonya embraces Vanya from behind as he sits in grief beside a desk.',
+        caption: 'Sonya and Vanya compress the production\'s emotional world into a single intimate gesture.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: uncleVanya4,
+        alt: 'Astrov reaches toward Yelena near the open doors of the estate house.',
+        caption: 'Astrov and Yelena framed against the open threshold that keeps promising escape.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: uncleVanya6,
+        alt: 'Yelena leans toward Vanya in a dim interior as he kneels beside her.',
+        caption: 'The production pushes desire and disappointment into a hushed, near-candlelit confrontation.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: uncleVanya7,
+        alt: 'Vanya and Astrov sit talking at a table in the country house.',
+        caption: 'Vanya and Astrov in one of the production\'s talk-heavy, tension-filled domestic scenes.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: uncleVanya8,
+        alt: 'Yelena grips Sonya by the shoulders during an intense conversation.',
+        caption: 'Yelena and Sonya bring the play\'s private anguish into sharp physical focus.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: uncleVanya9,
+        alt: 'Yelena bends over the seated professor Serebryakov in a pool of light.',
+        caption: 'The professor and Yelena caught in one of the production\'s most tenderly unhappy images.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: uncleVanya11,
+        alt: 'An empty view of the Uncle Vanya set showing the faded walls, chandelier, furniture, and open doors of the estate.',
+        caption: 'Todd Rosenthal\'s set turns the estate itself into one of the production\'s central characters.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Anton Chekhov' },
+      { role: 'Adaptation', name: 'Annie Baker' },
+      { role: 'Literal translation support', name: 'Margarita Shalina' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Feb 11 - Mar 19, 2017' },
+      { label: 'Venue', value: 'Owen Theatre, Goodman Theatre' },
+      { label: 'Runtime', value: '2 hr 40 min including one intermission' },
+      { label: 'Mode', value: 'Annie Baker adaptation' },
+      { label: 'Season context', value: 'Falls\'s 30th anniversary at Goodman' },
+    ],
+    cast: [
+      { role: 'Ivan Petrovich (Vanya)', name: 'Tim Hopper' },
+      { role: 'Mikhail Lvovich Astrov', name: 'Marton Csokas' },
+      { role: 'Yelena Andreyevna', name: 'Kristen Bush' },
+      { role: 'Sophia Alexandrovna (Sonya)', name: 'Caroline Neff' },
+      { role: 'Alexander Serebryakov', name: 'David Darlow' },
+      { role: 'Maria Vasilyevna', name: 'Marilyn Dodds Frank' },
+      { role: 'Ilya Ilich Telegin (Waffles)', name: 'Larry Neumann Jr.' },
+      { role: 'Marina', name: 'Mary Ann Thebus' },
+      { role: 'Yefim', name: 'Alžan Pelesić' },
+      { role: 'Servant', name: 'Olexiy Kryvych' },
+    ],
+    creativeTeam: [
+      { role: 'By', name: 'Anton Chekhov' },
+      { role: 'Adapted by', name: 'Annie Baker' },
+      { role: 'Working with a Literal Translation by', name: 'Margarita Shalina' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Set Design', name: 'Todd Rosenthal' },
+      { role: 'Costume Design', name: 'Ana Kuzmanic' },
+      { role: 'Lighting Design', name: 'Keith Parham' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Casting', name: 'Adam Belcuore and Erica Sartini-Combs' },
+      { role: 'New York Casting', name: 'Caparelliotis Casting' },
+      { role: 'Dramaturgy', name: 'Neena Arndt' },
+      { role: 'Production Stage Manager', name: 'Kimberly Osgood' },
+      { role: 'Assistant Director', name: 'Vanessa Stalling' },
+    ],
+    recognition: [
+      {
+        label: 'Adaptation pairing',
+        detail: 'The official Goodman page centers Falls\'s direction and Annie Baker\'s adaptation as the production\'s defining artistic hook.',
+      },
+      {
+        label: '30th-anniversary marker',
+        detail: 'The Goodman program explicitly frames the production as part of Robert Falls\'s 30th anniversary season as Artistic Director.',
+      },
+      {
+        label: 'Chekhov return',
+        detail: 'Falls connects the staging to the Chekhov and Stanislavsky work behind his 2010 Seagull, making this production part of a deliberate continuing line rather than a one-off classic revival.',
+      },
+      {
+        label: 'Critical praise',
+        detail: 'The source packet includes a Goodman critical-praise graphic highlighting Chicago Tribune, Daily Herald, and Newcity responses.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman copy positions the production as Chekhov\'s masterpiece in a new adaptation from Pulitzer Prize winner Annie Baker, stressing the work\'s distinctly contemporary American sound while staying true to Chekhov\'s vision.',
+      },
+      {
+        label: 'Falls on the play',
+        text: 'In conversation with Goodman Producer Steve Scott, Falls says Uncle Vanya became newly legible to him with age, describing it as a play about aging, regret, loss, mourning, humiliation, and the stubborn human refusal to give up.',
+      },
+      {
+        label: 'Adaptation context',
+        text: 'The program\'s essay on translation and adaptation places Baker\'s version alongside other playwright-led Chekhov reworkings while noting her collaboration with a literal translation by Margarita Shalina.',
+      },
+      {
+        label: 'Chekhov at Goodman',
+        text: 'The program situates the production within a longer Goodman history of Chekhov that includes a 1961 Uncle Vanya, Michael Maggio\'s 1990 production with John Mahoney, Falls\'s own 1994 Three Sisters, and his 2010 Seagull.',
+      },
+      {
+        label: 'Source package',
+        text: 'The local folder includes a production one-sheet, a full Goodman program with essays and credits, a critical-praise screenshot, and a strong gallery of stage photography and scenic imagery.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/uncle-vanya/',
+        summary:
+          'The official production page presents the 2017 Owen Theatre run and frames the show around Falls, Annie Baker, and the blend of melancholy, humor, and emotional pressure inside the estate drama.',
+        note: 'Official production page',
+      },
+      {
+        source: 'Time Out Chicago',
+        href: 'https://www.timeout.com/chicago/theater/uncle-vanya',
+        summary:
+          'Review link preserved in the 2017 source document for the Goodman run.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Stage and Cinema',
+        href: 'https://stageandcinema.com/2017/02/22/uncle-vanya-goodman/',
+        summary:
+          'Review link preserved in the source packet for the original Goodman production.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Around the Town Chicago',
+        href: 'https://aroundthetownchicago.com/theatre-reviews/uncle-vanya/',
+        summary:
+          'Chicago review coverage linked directly in the local production document.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Theatre In Chicago',
+        href: 'https://www.theatreinchicago.com/uncle-vanya/9070/',
+        summary:
+          'Regional review and listing coverage preserved in the source packet.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Talkin\' Broadway',
+        href: 'https://www.talkinbroadway.com/page/regional/chicago/ch536.html',
+        summary:
+          'Another review link captured in the original Goodman source document.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'The Fourth Walsh',
+        href: 'https://thefourthwalsh.com/2017/02/review-uncle-vanya-goodman-theatre-bursting-with-character/',
+        summary:
+          'Source-doc review link for the Goodman staging.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Daily Herald',
+        href: 'https://www.dailyherald.com/20170222/entertainment/goodmans-impeccably-acted-uncle-vanya-balances-humor-pathos/',
+        summary:
+          'The source packet preserves Daily Herald coverage, echoed in the local critical-praise screenshot.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'PerformInk',
+        href: 'https://perform.ink/goodmans-uncle-vanya-embodies-russian-soul/',
+        summary:
+          'Trade review coverage linked in the original Goodman source document.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Chicago Sun-Times',
+        href: 'https://chicago.suntimes.com/2017/2/23/18383953/uncle-vanya-speaks-to-the-anguished-nature-of-living',
+        summary:
+          'The source packet also includes Sun-Times review coverage of the production.',
+        note: 'Source-doc review link',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/uncle-vanya/' },
+      { label: 'TheaterMania feature', href: 'https://www.theatermania.com/news/uncle-vanya_80129/' },
+      { label: 'Time Out Chicago review', href: 'https://www.timeout.com/chicago/theater/uncle-vanya' },
+      { label: 'Stage and Cinema review', href: 'https://stageandcinema.com/2017/02/22/uncle-vanya-goodman/' },
+      { label: 'TheaterMania scene video', href: 'https://www.theatermania.com/news/watch-scenes-from-annie-bakers-adaptation-of-uncle-vanya_80055/' },
+      { label: 'Around the Town Chicago review', href: 'https://aroundthetownchicago.com/theatre-reviews/uncle-vanya/' },
+      { label: 'Theatre In Chicago review', href: 'https://www.theatreinchicago.com/uncle-vanya/9070/' },
+      { label: 'Talkin\' Broadway review', href: 'https://www.talkinbroadway.com/page/regional/chicago/ch536.html' },
+      { label: 'The Fourth Walsh review', href: 'https://thefourthwalsh.com/2017/02/review-uncle-vanya-goodman-theatre-bursting-with-character/' },
+      { label: 'Daily Herald review', href: 'https://www.dailyherald.com/20170222/entertainment/goodmans-impeccably-acted-uncle-vanya-balances-humor-pathos/' },
+      { label: 'Berkshire Fine Arts review', href: 'https://berkshirefinearts.com/02-25-2017_annie-baker-adapts-uncle-vanya.htm' },
+      { label: 'PerformInk review', href: 'https://perform.ink/goodmans-uncle-vanya-embodies-russian-soul/' },
+      { label: 'Chicago Sun-Times review', href: 'https://chicago.suntimes.com/2017/2/23/18383953/uncle-vanya-speaks-to-the-anguished-nature-of-living' },
+    ],
+    watchLinks: [
+      {
+        label: 'Watch Scenes from Uncle Vanya',
+        href: 'https://www.theatermania.com/news/watch-scenes-from-annie-bakers-adaptation-of-uncle-vanya_80055/',
+        description: 'Video link captured in the source packet for Annie Baker\'s adaptation at Goodman.',
+        thumbnail: uncleVanyaShowArt,
+      },
+    ],
+    pressQuotes: [
+      {
+        quote: 'Resonant, funny, smart, clear, involving and... poignant',
+        source: 'Chicago Tribune',
+      },
+      {
+        quote: 'A remarkably invigorating piece of work that plumbs the existential depths without ever taking itself too seriously',
+        source: 'Chicago Tribune',
+      },
+      {
+        quote: 'Deeply emotional, impeccably acted',
+        source: 'Daily Herald',
+      },
+      {
+        quote: 'It took 40 years before [Robert Falls] helmed Chekhov\'s play about unrequited love. Goodman Theatre\'s production is worth the wait',
+        source: 'Daily Herald',
+      },
+      {
+        quote: 'Navigates the razor\'s edge where humor and pathos meet',
+        source: 'Daily Herald',
+      },
+      {
+        quote: 'An unpretentious, affectionate tribute to a writer that has clearly had an influence on [Annie Baker] and speaks to [her] well-deserved reputation for artistic and authorial maturity',
+        source: 'Newcity',
+      },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
+  pamplona: {
+    pageMode: 'archive',
+    summary:
+      'Pamplona captures an unusual kind of archive entry: a late Goodman world premiere built around Stacy Keach as Ernest Hemingway, then abruptly cut short by illness after opening.',
+    publicSummary:
+      'A compact Hemingway play became one of the more fragile late-career entries in the Falls archive when its Goodman run was canceled after opening.',
+    synopsis:
+      'The play imagines Ernest Hemingway under pressure, with the production designed around Stacy Keach\'s performance in the title role. Instead of becoming a standard run-and-reception story, the staging now survives in the archive partly through its interruption.',
+    fallsContext:
+      'Pamplona shows Falls continuing to champion new writing in the Goodman years, even where the public record is shaped as much by contingency as by review history.',
+    significance:
+      'A 2017 world premiere whose historical importance in the archive comes from both its Hemingway premise and the fact that the run was cut short after Keach became ill.',
+    story:
+      'Most production pages in this system turn on premieres, transfers, or critical afterlife. Pamplona is different. Its record is defined by the gap between intention and completion: a new work, a major leading actor, and a run that effectively became a fragment once the remainder of the performances were canceled.',
+    venueAnchor: 'Goodman Theatre',
+    eraLabel: 'Late Goodman years',
+    collaborators: [{ role: 'Cast highlight', name: 'Stacy Keach' }],
+    quickFacts: [
+      { label: 'Run', value: 'May 19 - Jun 25, 2017' },
+      { label: 'Venue', value: 'Owen Theatre' },
+      { label: 'Runtime', value: '80 minutes, no intermission' },
+      { label: 'Archive note', value: 'Remaining performances canceled' },
+    ],
+    recognition: [
+      {
+        label: 'World premiere',
+        detail: 'Timeline data records Pamplona as a world premiere starring Stacy Keach as Hemingway.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Cancellation context',
+        text: 'The current Goodman page is structured primarily as a cancellation notice after Stacy Keach became ill following the opening-night performance.',
+      },
+      {
+        label: 'Source limits',
+        text: 'Because the official page now foregrounds the cancellation rather than the original production pitch, this entry is intentionally conservative about artistic detail.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/pamplona/',
+        summary:
+          'The official page now functions mainly as a cancellation notice, documenting that the remaining performances were called off after Stacy Keach became ill.',
+      },
+    ],
+    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/pamplona/' }],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'soups-stews-and-casseroles-1976': {
+    pageMode: 'archive',
+    summary:
+      'Soups, Stews, and Casseroles: 1976 extends the Falls/Rebecca Gilman collaboration into labor politics, small-town economics, and the moral pressure created when corporate restructuring reaches everyday life.',
+    publicSummary:
+      'Rebecca Gilman\'s Wisconsin-set drama examines work, loyalty, and the human fallout of acquisition-era capitalism.',
+    synopsis:
+      'A Chicago corporation buys the major employer in a small Wisconsin town, leaving workers and families to read every new opportunity as both promise and threat. One employee\'s professional opening becomes a moral test for everyone around her.',
+    fallsContext:
+      'The production belongs to the Gilman line that runs from Blue Surge through Luna Gale and Swing State, but here the emphasis is squarely on class, work, and the destabilizing language of corporate efficiency.',
+    significance:
+      'A 2016 Goodman production that deepens Falls\'s long-running artistic partnership with Rebecca Gilman while shifting attention from intimate domestic damage to workplace and community strain.',
+    story:
+      'What makes the title useful in the larger archive is its scale. Rather than an epic adaptation or a prestige transfer, this is a Midwestern pressure play about jobs, acquisition, and what happens when business language enters the moral core of a town. It helps show why the Falls/Gilman partnership remained central for so long: both artists keep returning to social systems through ordinary speech and behavior.',
+    venueAnchor: 'Goodman Theatre',
+    eraLabel: 'Late Goodman years',
+    images: [
+      {
+        src: soupsShowArt,
+        alt: 'Show art for Soups, Stews, and Casseroles: 1976 featuring the Durst household gathered in a 1970s kitchen.',
+        caption: 'Show art built from the production\'s warm but increasingly tense kitchen world.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'art',
+      },
+      {
+        src: soups1,
+        alt: 'The family gathers around a telephone in the 1970s kitchen set of Soups, Stews, and Casseroles: 1976.',
+        caption: 'A full-stage kitchen image that makes the production\'s domestic pressure visible all at once.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: soups3,
+        alt: 'JoAnne and Kat sit at the kitchen table in Soups, Stews, and Casseroles: 1976.',
+        caption: 'A quieter table scene that emphasizes the play\'s attention to ordinary talk, labor, and worry.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: soups4,
+        alt: 'A production still from Soups, Stews, and Casseroles: 1976 showing members of the family in the kitchen set.',
+        caption: 'Another kitchen composition from the Goodman run, keeping family and work pressures in the same room.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: soups5,
+        alt: 'A production still from Soups, Stews, and Casseroles: 1976 inside the Durst household.',
+        caption: 'A domestic still from the Goodman production that reinforces the play\'s intimate, community-scale stakes.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: soupsReh2,
+        alt: 'Rebecca Gilman laughs during a rehearsal-room moment for Soups, Stews, and Casseroles: 1976.',
+        caption: 'Rebecca Gilman in rehearsal, a useful reminder that the page documents process as well as performance.',
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+      {
+        src: soupsReh3,
+        alt: 'Cast members sit around a rehearsal table for Soups, Stews, and Casseroles: 1976.',
+        caption: 'A rehearsal-table image that places the ensemble inside the play\'s working-family world before it reaches the stage.',
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+      {
+        src: soupsReh8,
+        alt: 'Robert Falls and Rebecca Gilman sit with the company during rehearsal for Soups, Stews, and Casseroles: 1976.',
+        caption: 'Falls and Gilman with the company in rehearsal, capturing the long collaboration behind the production.',
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Rebecca Gilman' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Cliff Chamberlain' },
+      { role: 'Cast highlight', name: 'Cora Vander Broek' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'May 21 - Jun 19, 2016' },
+      { label: 'Venue', value: 'Owen Theatre' },
+      { label: 'Runtime', value: '2 hr 15 min' },
+      { label: 'Setting', value: 'Reynolds, Wisconsin' },
+    ],
+    cast: [
+      { role: 'Kim Durst', name: 'Cliff Chamberlain' },
+      { role: 'Kat', name: 'Cora Vander Broek' },
+      { role: 'Kelly', name: 'Lindsay Stock' },
+      { role: 'Kyle', name: 'Ty Olwin' },
+      { role: 'Elaine', name: 'Angela Reed' },
+      { role: 'JoAnne', name: 'Ann Whitney' },
+    ],
+    creativeTeam: [
+      { role: 'Playwright', name: 'Rebecca Gilman' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Kevin Depinet' },
+      { role: 'Costume Design', name: 'Jenny Mannis' },
+      { role: 'Lighting Design', name: 'Jesse Klug' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Dramaturgy', name: 'Neena Arndt' },
+      { role: 'Casting', name: 'Adam Belcuore' },
+      { role: 'Casting', name: 'Erica Sartini-Combs' },
+      { role: 'Production Stage Manager', name: 'Kimberly Osgood' },
+      { role: 'Stage Manager', name: 'Shannon Golden' },
+    ],
+    recognition: [
+      {
+        label: 'Gilman collaboration',
+        detail: 'The production continues one of the defining playwright-director collaborations in Falls\'s Goodman years.',
+      },
+      {
+        label: 'Chicago premiere',
+        detail: 'The source packet explicitly calls the Goodman engagement a Chicago premiere, distinguishing it from the play\'s earlier St. Louis life.',
+      },
+      {
+        label: 'Labor focus',
+        detail: 'Both the source doc and the Goodman program frame the production around workers\' rights, union decline, and the human cost of consolidation-era corporate power.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Gilman-Falls partnership',
+        detail: 'The program identifies this as another major chapter in a long collaboration that also includes Blue Surge, Dollhouse, Luna Gale, and later Swing State.',
+      },
+      {
+        label: 'Midwestern labor play',
+        detail: 'Set in bicentennial-era Wisconsin, the production translates national economic shifts into a tightly observed family and factory story.',
+      },
+      {
+        label: 'From workplace to kitchen table',
+        detail: 'The material repeatedly stresses that the play is not only about a cheese plant takeover but about how corporate language invades home, marriage, neighborhood, and self-worth.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Subject focus',
+        text: 'The official Goodman page frames the play through workers\' rights, corporate consolidation, and the effects of big business on small-town life.',
+      },
+      {
+        label: 'Program interview',
+        text: 'In conversation with dramaturg Neena Arndt, Gilman links the play directly to anti-union politics in Wisconsin, Jefferson Cowie\'s writing on the decline of the working class, and her own fascination with the shift from community obligation toward self-empowerment and precarity.',
+      },
+      {
+        label: 'Food history frame',
+        text: 'The program\'s feature essay connects the fictional Farmstead plant to the rise of processed-food conglomerates, arguing that the play tracks not only job loss but a larger move away from knowing who makes what we consume.',
+      },
+      {
+        label: 'Location mismatch',
+        text: 'The local source packet contains both Reynolds, Wisconsin and Monroe, Wisconsin as town references. The page keeps the official synopsis\'s Reynolds setting while preserving the discrepancy as part of the archive context.',
+      },
+      {
+        label: 'Production history',
+        text: 'The accessibility program notes that the play had premiered earlier at the Repertory Theatre of St. Louis, while the Goodman materials consistently frame the 2016 run as the Chicago premiere.',
+      },
+      {
+        label: 'Source package',
+        text: 'The folder includes show art, large production stills, rehearsal photography, a cast-and-creative screenshot, a local video file, and a full accessibility program with essays, interview material, and artist bios.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/soups-stews-and-casseroles-1976/',
+        summary:
+          'The official page presents the production as a timely Rebecca Gilman drama about labor, corporate acquisition, and moral compromise.',
+        note: 'Official production page',
+      },
+      {
+        source: 'Goodman Press Room',
+        href: 'https://www.goodmantheatre.org/press-rooms/soups-stews-and-casseroles-1976/',
+        summary:
+          'The local doc also preserves Goodman\'s press-room copy, which gives fuller synopsis language and explicitly labels the run as a Chicago premiere.',
+        note: 'Primary source packet',
+      },
+      {
+        source: 'Stage and Cinema',
+        href: 'https://stageandcinema.com/2016/06/01/soups-stews-and-casseroles/',
+        summary:
+          'One of the direct review links preserved in the local source document for the 2016 run.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'TheaterMania',
+        href: 'https://www.theatermania.com/news/soups-stews-and-casseroles-1976_77341/',
+        summary:
+          'The local source packet includes TheaterMania coverage tied to the Goodman production.',
+        note: 'Source-doc news link',
+      },
+      {
+        source: 'Becky Sarwate',
+        href: 'https://beckysarwate.com/2016/06/03/rebecca-gilmans-soups-stews-and-casseroles-1976/',
+        summary:
+          'Another direct review or feature link captured in the source document.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'The Fourth Walsh',
+        href: 'https://thefourthwalsh.com/2016/06/review-soups-stews-and-casseroles-goodman-theatre-familiar-recipe/',
+        summary:
+          'The folder preserves this Chicago review link as part of the local reception trail.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Talkin\' Broadway',
+        href: 'https://www.talkinbroadway.com/page/regional/chicago/ch516.html',
+        summary:
+          'Regional Chicago review coverage saved in the source doc.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Windy City Times',
+        href: 'https://windycitytimes.com/2016/06/08/theater-review-soups-stews-and-casseroles-1976/',
+        summary:
+          'The source packet also preserves Windy City Times review coverage of the Goodman engagement.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'ChicagoCritic',
+        href: 'https://chicagocritic.com/soups-stews-and-casseroles-1976/',
+        summary:
+          'Another local review link included with the main production doc.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'TheaterMania Casting Announcement',
+        href: 'https://www.theatermania.com/news/cast-announced-for-rebecca-gilmans-soups-stews-and-casseroles-1976-at-the-goodman_76784/',
+        summary:
+          'Casting coverage preserved alongside the reviews and official materials.',
+        note: 'Source-doc casting link',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/soups-stews-and-casseroles-1976/' },
+      { label: 'Goodman press room', href: 'https://www.goodmantheatre.org/press-rooms/soups-stews-and-casseroles-1976/' },
+      { label: 'Stage and Cinema review', href: 'https://stageandcinema.com/2016/06/01/soups-stews-and-casseroles/' },
+      { label: 'TheaterMania news', href: 'https://www.theatermania.com/news/soups-stews-and-casseroles-1976_77341/' },
+      { label: 'Becky Sarwate review', href: 'https://beckysarwate.com/2016/06/03/rebecca-gilmans-soups-stews-and-casseroles-1976/' },
+      { label: 'The Fourth Walsh review', href: 'https://thefourthwalsh.com/2016/06/review-soups-stews-and-casseroles-goodman-theatre-familiar-recipe/' },
+      { label: 'Talkin\' Broadway review', href: 'https://www.talkinbroadway.com/page/regional/chicago/ch516.html' },
+      { label: 'Windy City Times review', href: 'https://windycitytimes.com/2016/06/08/theater-review-soups-stews-and-casseroles-1976/' },
+      { label: 'ChicagoCritic review', href: 'https://chicagocritic.com/soups-stews-and-casseroles-1976/' },
+      { label: 'Chicago Tribune casting item', href: 'https://www.chicagotribune.com/2016/04/20/casting-announced-for-goodmans-soups-stews-and-casseroles-1976/' },
+      { label: 'BroadwayWorld casting item', href: 'https://www.broadwayworld.com/chicago/article/Cast-Creative-Team-Announced-for-SOUPS-STEWS-AND-CASSEROLES-1976-at-Goodman-Theatre-20160420' },
+      { label: 'American Theatre on Gilman and Falls', href: 'https://www.americantheatre.org/2022/09/28/gilman-and-falls-a-match-made-at-the-goodman/' },
+      { label: 'BroadwayWorld Swing State feature', href: 'https://www.broadwayworld.com/chicago/article/SWING-STATE-at-Goodman-Theatre-Adds-Two-Performances-in-Final-Week-20221022' },
+    ],
+    watchLinks: [
+      {
+        label: 'Soups, Stews, and Casseroles: 1976 | Local Video',
+        href: '/media/productions/soups-stews-and-casseroles-1976/soups-stews-director-video.mp4',
+        description: 'Local video asset included in the production source folder.',
+        thumbnail: soupsShowArt,
+      },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
+  'the-jacksonian': {
+    pageMode: 'archive',
+    summary:
+      'The Jacksonian enters the archive as a Beth Henley world premiere that began at the Geffen Playhouse and continued Off-Broadway, giving Falls a new-play record built around star casting, southern gothic unease, and a life beyond a single city.',
+    publicSummary:
+      'Beth Henley\'s darkly comic Mississippi drama pairs Ed Harris, Amy Madigan, Glenne Headly, Bill Pullman, and Bess Rous in a Falls-directed production that moved from its Geffen world premiere to The New Group Off-Broadway.',
+    synopsis:
+      'Jackson, Mississippi, 1964. When his wife kicks him out, respectable dentist Bill Perch moves into the seedy Jacksonian Motel, where his collapse plays out against encounters with his teenage daughter, a gold-digging motel employee, a treacherous bartender, and his estranged wife. Set against the investigation of a recent lynching and culminating in a crime of passion, the play mixes suspense, dark humor, and the eerie madness of a town poisoned by racism.',
+    fallsContext:
+      'The production shows Falls working in a playwright-centered contemporary mode outside the Goodman orbit that dominates so much of the later archive. What persists across venues is his attraction to pressure-cooker acting ensembles, morally unstable rooms, and American stories where violence and denial seep into everyday behavior.',
+    significance:
+      'A Beth Henley world premiere with a documented Off-Broadway continuation, extending Falls\'s archive into star-driven contemporary American playwriting beyond his core Goodman base.',
+    story:
+      'The Jacksonian matters because the folder preserves a two-stage life cycle rather than a single engagement. The Geffen materials frame it as a full world premiere event in Los Angeles, while the New Group links and production stills show how the play continued in New York with the same high-profile cast. That makes the page less about institutional affiliation and more about how Falls shepherded a new Beth Henley play through multiple public lives.',
+    venueAnchor: 'Geffen Playhouse',
+    eraLabel: 'Late Goodman years',
+    images: [
+      {
+        src: jacksonianHero,
+        alt: 'Amy Madigan and Ed Harris sit on a motel bed in a stage still from The Jacksonian.',
+        caption: 'A Geffen stage still centered on Amy Madigan and Ed Harris in the uneasy intimacy of the motel room.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'production-still',
+      },
+      {
+        src: jacksonianShowArt,
+        alt: 'The Jacksonian world-premiere show art featuring Amy Madigan and Ed Harris with the Geffen run dates and credits.',
+        caption: 'World-premiere show art from the Geffen Playhouse engagement, preserving the February 7 to March 25, 2012 run and the principal cast billing.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
+        src: jacksonian1,
+        alt: 'Ed Harris and Glenne Headly face one another near the bar in The Jacksonian.',
+        caption: 'A New Group production still that keeps the play\'s flirtation, exhaustion, and danger in the same frame.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: jacksonian2,
+        alt: 'Bess Rous and Glenne Headly sit at a table while Bill Pullman stands behind the bar in The Jacksonian.',
+        caption: 'A New Group ensemble image foregrounding Rosy, Eva, and Fred inside the motel-bar world.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: jacksonian3,
+        alt: 'Ed Harris and Amy Madigan argue across the motel room in The Jacksonian.',
+        caption: 'Another world-premiere still that leans into the couple\'s domestic volatility and the play\'s southern-gothic pressure.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Beth Henley' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Ed Harris' },
+      { role: 'Cast highlight', name: 'Amy Madigan' },
+      { role: 'Cast highlight', name: 'Bill Pullman' },
+      { role: 'Cast highlight', name: 'Glenne Headly' },
+    ],
+    quickFacts: [
+      { label: 'World premiere', value: 'Feb 7 - Mar 25, 2012' },
+      { label: 'Venue', value: 'Geffen Playhouse, Los Angeles' },
+      { label: 'Afterlife', value: 'The New Group, Off-Broadway' },
+      { label: 'Setting', value: 'Jackson, Mississippi, 1964' },
+    ],
+    cast: [
+      { role: 'Bill Perch', name: 'Ed Harris' },
+      { role: 'Eva White', name: 'Glenne Headly' },
+      { role: 'Susan Perch', name: 'Amy Madigan' },
+      { role: 'Fred Weber', name: 'Bill Pullman' },
+      { role: 'Rosy Perch', name: 'Bess Rous' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Beth Henley' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    recognition: [
+      {
+        label: 'World premiere',
+        detail: 'The local source packet explicitly frames the Geffen engagement as the world premiere and records its extension through March 25, 2012.',
+      },
+      {
+        label: 'Star ensemble',
+        detail: 'The preserved materials repeatedly foreground Ed Harris, Amy Madigan, Glenne Headly, Bill Pullman, and Bess Rous as the production\'s central draw.',
+      },
+      {
+        label: 'Transfer story',
+        detail: 'The folder also preserves the production\'s New Group Off-Broadway life, showing Falls guiding the same Henley play into a second major run.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Outside-Goodman chapter',
+        detail: 'Unlike many late-career pages in the archive, this one documents Falls\'s work through Geffen Playhouse and The New Group rather than through Goodman Theatre.',
+      },
+      {
+        label: 'Henley collaboration',
+        detail: 'The production adds Pulitzer Prize winner Beth Henley to the archive\'s playwright roster and places Falls in a darker, more surreal corner of contemporary American writing.',
+      },
+      {
+        label: 'Racial and domestic pressure',
+        detail: 'The local synopsis centers both intimate family collapse and the surrounding violence of 1964 Mississippi, making the production as political as it is psychological.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Source cleanup',
+        text: 'The local folder supports a Geffen Playhouse world premiere and a later Off-Broadway continuation, so this page has been rebuilt away from the older Goodman-based repo seed.',
+      },
+      {
+        label: 'Year-label mismatch',
+        text: 'The New York source document is labeled 2014, but several preserved links and news items cluster around the 2013-14 New Group season. The page keeps the local folder\'s own labeling while noting the cross-year run context.',
+      },
+      {
+        label: 'Official framing',
+        text: 'The Geffen material describes the Jacksonian Motel as a place where secrets are buried, the subversive becomes commonplace, and time itself turns hauntingly unstable.',
+      },
+      {
+        label: 'Source package',
+        text: 'The folder includes show art, multiple stage stills from both the Geffen and New Group lives of the production, a cast-card screenshot, and a doc-based press trail that reaches from announcement coverage to reviews and listings.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Geffen Playhouse',
+        href: 'https://www.geffenplayhouse.org/shows/the-jacksonian/',
+        summary:
+          'The official page anchors the world premiere, principal cast, extension notice, and Geffen framing for the 2012 Los Angeles engagement.',
+        note: 'Official production page',
+      },
+      {
+        source: 'Playbill',
+        href: 'https://playbill.com/article/the-jacksonian-with-ed-harris-amy-madigan-and-bill-pullman-opens-off-broadway-nov-7-com-211469',
+        summary:
+          'The preserved Playbill link ties the Geffen premiere directly to the later Off-Broadway opening and helps track the production\'s New Group afterlife.',
+        note: 'Opening coverage',
+      },
+      {
+        source: 'Stage and Cinema',
+        href: 'https://stageandcinema.com/2013/11/07/the-jacksonian-acorn-theatre/',
+        summary:
+          'One of the direct Off-Broadway review links captured in the local source packet.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Hollywood Reporter',
+        href: 'https://www.hollywoodreporter.com/news/general-news/jacksonian-theater-review-295035/',
+        summary:
+          'The local doc preserves Hollywood Reporter review coverage from the play\'s world-premiere life.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'American Theatre',
+        href: 'https://www.americantheatre.org/2014/02/01/the-jacksonian/',
+        summary:
+          'A later feature or review link preserved in the source doc, extending the page\'s documentation beyond simple listings.',
+        note: 'Source-doc feature link',
+      },
+      {
+        source: 'Chicago Magazine',
+        href: 'https://www.chicagomag.com/arts-culture/december-2013/the-jacksonian-and-domesticated/',
+        summary:
+          'The source packet also preserves Chicago Magazine coverage that situates the production in a broader theater conversation of the period.',
+        note: 'Source-doc feature link',
+      },
+      {
+        source: 'TheaterMania Listing',
+        href: 'https://www.theatermania.com/shows/new-york-city-theater/off-broadway/the-jacksonian_200910/',
+        summary:
+          'TheaterMania\'s listing link helps document the Off-Broadway presentation in New York.',
+        note: 'Source-doc listing',
+      },
+      {
+        source: 'TheaterMania News',
+        href: 'https://www.theatermania.com/news/the-jacksonian_66583/',
+        summary:
+          'Another saved news item from the local source document, useful for tracing the production\'s New York rollout.',
+        note: 'Source-doc news link',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Geffen production page', href: 'https://www.geffenplayhouse.org/shows/the-jacksonian/' },
+      { label: 'Playbill opening coverage', href: 'https://playbill.com/article/the-jacksonian-with-ed-harris-amy-madigan-and-bill-pullman-opens-off-broadway-nov-7-com-211469' },
+      { label: 'BroadwayWorld season announcement', href: 'https://www.broadwayworld.com/article/New-Groups-2013-14-Season-to-Include-THE-JACKSONIAN-with-Bill-Pullman-Ed-Harris-More-20130619' },
+      { label: 'American Theatre coverage', href: 'https://www.americantheatre.org/2014/02/01/the-jacksonian/' },
+      { label: 'TheaterMania listing', href: 'https://www.theatermania.com/shows/new-york-city-theater/off-broadway/the-jacksonian_200910/' },
+      { label: 'TheaterMania news', href: 'https://www.theatermania.com/news/the-jacksonian_66583/' },
+      { label: 'Hollywood Reporter review', href: 'https://www.hollywoodreporter.com/news/general-news/jacksonian-theater-review-295035/' },
+      { label: 'Chicago Tribune announcement', href: 'https://www.chicagotribune.com/2013/06/24/robert-falls-to-direct-at-new-group/' },
+      { label: 'Entertainment Weekly item', href: 'https://ew.com/article/2013/06/19/ed-harris-bill-pullman-stage-jacksonian/' },
+      { label: 'Hollywood Reporter casting item', href: 'https://www.hollywoodreporter.com/news/general-news/ed-harris-star-broadway-jacksonian-571695/' },
+      { label: 'Stage and Cinema review', href: 'https://stageandcinema.com/2013/11/07/the-jacksonian-acorn-theatre/' },
+      { label: 'Chicago Magazine feature', href: 'https://www.chicagomag.com/arts-culture/december-2013/the-jacksonian-and-domesticated/' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
+  'king-lear': {
+    pageMode: 'archive',
+    summary:
+      'King Lear anchors the middle Goodman years with scale, violence, and a major Stacy Keach performance, then extends beyond Chicago through a later Washington remount tied in the archive to a Helen Hayes Award.',
+    publicSummary:
+      'Falls turns Shakespeare\'s catastrophe into both family implosion and political spectacle, with Stacy Keach at the center.',
+    synopsis:
+      'An aging king breaks his kingdom apart by demanding love in the language of obedience. What follows is a long collapse through betrayal, exposure, cruelty, and the recognition that power cannot protect anyone from grief or mortality.',
+    fallsContext:
+      'This production sits in the stretch when Falls was still building large canonical events at Goodman scale, using Shakespeare not as ornament but as a vessel for public and private ruin.',
+    significance:
+      'A central 2006 Goodman Shakespeare production and one of the archive\'s clearest Stacy Keach collaborations, later remounted in Washington.',
+    story:
+      'King Lear matters here not just because of the title itself, but because it shows Falls handling true institutional scale without abandoning psychological pressure. The official Goodman language stresses both spectacle and intimacy, which is exactly the tension that keeps recurring across the strongest Falls classics.',
+    venueAnchor: 'Goodman Theatre',
+    eraLabel: 'National and international period',
+    collaborators: [
+      { role: 'Playwright', name: 'William Shakespeare' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Stacy Keach' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Sep 9 - Nov 4, 2006' },
+      { label: 'Venue', value: 'Albert Theatre' },
+      { label: 'Runtime', value: '3 hr 15 min' },
+      { label: 'Afterlife', value: 'Washington remount in 2009' },
+    ],
+    recognition: [
+      {
+        label: 'Helen Hayes context',
+        detail: 'Local credits tie the Goodman production and later remount to a Helen Hayes Award context.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman page presents the production as both intimate family drama and explosive political commentary, emphasizing the size of the event as well as the emotional damage inside it.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/king-lear/',
+        summary:
+          'The official page frames the 2006 staging as a major Stacy Keach-led Shakespeare production and quotes Variety calling it ambitious and important.',
+      },
+    ],
+    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/king-lear/' }],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'a-life-in-the-theatre': {
+    pageMode: 'archive',
+    summary:
+      'A Life in the Theatre gives Falls a smaller, actor-centered David Mamet chamber piece inside the same season that also held the scale of King Lear, showing how wide the Goodman range could be under his leadership.',
+    publicSummary:
+      'David Mamet\'s backstage duet reduces theatre life to mentorship, rivalry, embarrassment, and survival in the dressing room.',
+    synopsis:
+      'An older actor tries to initiate a younger colleague into the habits, insecurities, and rituals of the stage. Their relationship moves through admiration, critique, irritation, and displacement as performance leaks into private identity.',
+    fallsContext:
+      'The production belongs to a recurring Falls interest in rehearsal rooms, theatrical labor, and performer psychology, but here everything is compressed to two actors and a dressing-room scale.',
+    significance:
+      'A 2006 Goodman Mamet staging that complements the archive\'s larger public productions with a tight meta-theatrical study of actors watching each other age.',
+    story:
+      'This entry matters because it narrows the lens. Instead of civic argument or epic family collapse, A Life in the Theatre watches artists trying to hold onto status and technique under the pitiless passage of time. It fits the archive as a theatre-about-theatre piece that lets Falls work in miniature without losing sharpness.',
+    venueAnchor: 'Goodman Theatre',
+    eraLabel: 'National and international period',
+    collaborators: [
+      { role: 'Playwright', name: 'David Mamet' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'David Darlow' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Mar 4 - Apr 9, 2006' },
+      { label: 'Venue', value: 'Albert Theatre' },
+      { label: 'Runtime', value: '75 minutes' },
+      { label: 'Mode', value: 'Backstage two-hander' },
+    ],
+    recognition: [
+      {
+        label: 'Mamet connection',
+        detail: 'The production keeps Mamet inside the Falls archive not just as a Broadway transfer playwright but as a Goodman-stage contemporary classic.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman page emphasizes the dressing-room view of theatre life, letting audiences watch performers critique one another onstage and off.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/a-life-in-the-theatre/',
+        summary:
+          'The official page presents the production as a 75-minute Mamet backstage drama directed by Robert Falls and centered on an aging actor mentoring a younger one.',
+      },
+    ],
+    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/a-life-in-the-theatre/' }],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'american-buffalo': {
+    pageMode: 'archive',
+    summary:
+      'American Buffalo marks Falls\'s 2008 return to Mamet on Broadway, translating the playwright\'s junk-shop pressure cooker into a short, high-profile revival built around celebrity casting.',
+    publicSummary:
+      'Falls directs a Broadway Mamet revival that turns petty theft, male posturing, and failed hustle into compressed stage combat.',
+    synopsis:
+      'Inside a resale shop, a plan to steal a valuable coin mutates into accusation, improvisation, and betrayal. The play strips commerce, friendship, and masculine performance down to a claustrophobic argument about value and trust.',
+    fallsContext:
+      'Within the archive, American Buffalo helps connect Falls\'s Goodman-based Mamet work to his national profile as a Broadway director willing to handle revivals as well as transfers.',
+    significance:
+      'A 2008 Broadway Mamet revival that broadens the Falls production record beyond Goodman-originating work, even if the current site materials remain thinner than for the larger transfer stories.',
+    story:
+      'The value of the entry right now is structural. American Buffalo shows Falls stepping into a high-visibility Broadway revival without the Goodman-premiere scaffolding that supports other pages. It belongs in the archive as a reminder that his national reputation also included direct engagement with canonical American plays already circulating far beyond Chicago.',
+    venueAnchor: 'Broadway',
+    eraLabel: 'Broadway transfer years',
+    collaborators: [{ role: 'Playwright', name: 'David Mamet' }],
+    quickFacts: [
+      { label: 'Year', value: '2008' },
+      { label: 'Venue', value: 'Broadway' },
+      { label: 'Type', value: 'Revival' },
+    ],
+    contextNotes: [
+      {
+        label: 'Source status',
+        text: 'This entry currently leans on the local timeline and credits record and still needs a fuller primary-source pass for casting and production-detail expansion.',
+      },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'repo-only',
+  },
+  'desire-under-the-elms': {
+    pageMode: 'archive',
+    summary:
+      'Desire Under the Elms continues the Falls/Dennehy O\'Neill line with one of its fiercest late chapters, moving from Goodman to Broadway as a story of inheritance, lust, and catastrophic family struggle.',
+    publicSummary:
+      'Falls stages O\'Neill as fever dream and family war, with Brian Dennehy and Carla Gugino at the center of the farm-house tragedy.',
+    synopsis:
+      'On a remote New England farm, an aging patriarch brings home a young wife who becomes entangled with his son. Desire, resentment, property, and bloodline crash together until the family itself becomes an instrument of punishment.',
+    fallsContext:
+      'This production belongs squarely inside the long Dennehy/O\'Neill collaboration that helped define Falls\'s public stature, but its tone is especially concentrated: less expansive than The Iceman Cometh and more erotically dangerous than many of the other O\'Neill chapters.',
+    significance:
+      'A major late Dennehy/O\'Neill collaboration that transferred from Goodman to Broadway, reinforcing one of the most important actor-playwright-director threads in the archive.',
+    story:
+      'Desire Under the Elms is the kind of title that clarifies why the Falls record keeps returning to O\'Neill. It offers mythic family damage, brutal appetite, and language pitched toward nightmare rather than realism. The Goodman page already presents it as a fever dream, and the transfer history confirms it was more than a strong local staging.',
+    venueAnchor: 'Goodman Theatre & Broadway',
+    eraLabel: 'Broadway transfer years',
+    collaborators: [
+      { role: 'Playwright', name: 'Eugene O\'Neill' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Brian Dennehy' },
+      { role: 'Cast highlight', name: 'Carla Gugino' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Jan 17 - Mar 1, 2009' },
+      { label: 'Venue', value: 'Albert Theatre' },
+      { label: 'Runtime', value: '1 hr 45 min' },
+      { label: 'Afterlife', value: 'Goodman transfer to Broadway' },
+    ],
+    recognition: [
+      {
+        label: 'Transfer story',
+        detail: 'Credits identify the Broadway staging as a Goodman transfer.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman page describes the play as a fever dream of inheritance, desire, and tragic consequence, which aligns closely with how the archive positions this O\'Neill chapter.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/desire-under-the-elms/',
+        summary:
+          'The official page presents the 2009 staging as an O\'Neill fever dream and foregrounds the production\'s emotional violence, plus its critical response from The New York Times.',
+      },
+    ],
+    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/desire-under-the-elms/' }],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'measure-for-measure': {
+    pageMode: 'archive',
+    summary:
+      'Measure for Measure shows Falls pushing Shakespeare toward disorder, sexuality, and coercive power rather than treating the play as a tidy moral puzzle.',
+    publicSummary:
+      'Falls turns Shakespeare\'s dark comedy into a raw public argument about law, desire, hypocrisy, and the uses of authority.',
+    synopsis:
+      'When the Duke hands Vienna over to Angelo, a campaign of moral purification quickly reveals itself as another form of appetite and domination. The resulting story knots together religious language, state violence, sibling loyalty, and sexual bargaining.',
+    fallsContext:
+      'The production helps explain the Shakespeare thread in Falls\'s archive: not museum staging, but aggressive reinterpretation aimed at exposing what is unstable or ugly in the text.',
+    significance:
+      'A key 2013 Goodman Shakespeare production, remembered in the local timeline for its bold and unsettling treatment of the ending.',
+    story:
+      'Measure for Measure is useful in the archive because it sharpens a recurring Falls trait: he often approaches canonical work by leaning harder into danger instead of polishing it into respectability. The official response around the production stresses audacity, roughness, and comic force, which makes it a strong precursor to later restless classics like The Winter\'s Tale and An Enemy of the People.',
+    venueAnchor: 'Goodman Theatre',
+    eraLabel: 'Late Goodman years',
+    collaborators: [
+      { role: 'Playwright', name: 'William Shakespeare' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Mar 9 - Apr 14, 2013' },
+      { label: 'Venue', value: 'Albert Theatre' },
+      { label: 'Runtime', value: '2 hr 30 min' },
+      { label: 'Audience note', value: 'Intended for mature audiences' },
+    ],
+    recognition: [
+      {
+        label: 'Interpretive risk',
+        detail: 'Timeline notes the production for its bold, unsettling reinterpretation of the play\'s ending.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman page emphasizes how deeply the production links lust, law, hypocrisy, and civic collapse.',
+      },
+      {
+        label: 'Reception pattern',
+        text: 'Goodman\'s review pull-quotes consistently point toward the staging\'s audacity, comic energy, and rawness.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/measure-for-measure/',
+        summary:
+          'The official page presents the 2013 Albert Theatre run and collects praise describing the production as audacious, raw, and theatrically arresting.',
+      },
+    ],
+    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/measure-for-measure/' }],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
   chinglish: {
     pageMode: 'archive',
     summary:
@@ -1476,41 +3769,270 @@ const productionSeeds: Record<string, ProductionSeed> = {
   'the-seagull': {
     pageMode: 'featured',
     summary:
-      'The Seagull stands at the center of Falls’s Chekhov line in the archive: actor-driven, adapted, and personally important enough for him to later describe the rehearsal process as life-changing.',
+      'The Seagull stands at the center of Falls\'s Chekhov line in the archive: actor-driven, adapted from George Calderon, and personally important enough for him to later describe the rehearsal process as life-changing.',
+    publicSummary:
+      'Falls directs an intimate Owen Theatre Seagull that strips the play down to actors, subtext, and painful collisions between love, art, ambition, and self-invention.',
+    synopsis:
+      'When famed actress Arkadina visits her family with her young lover Trigorin in tow, they become ensnared in a tragicomic tangle of romance, intrigue, and unrequited love. Chekhov\'s artists, strivers, and dependents turn everyday conversation into a long crisis of desire, power, and disappointment.',
+    fallsContext:
+      'The local record consistently frames the production as a turning point for Falls. Review coverage and later timeline notes both suggest that the rehearsal process itself mattered as much as the opening: a return to Stanislavsky, a stripped-down approach, and a version of Chekhov that felt newly immediate rather than museum-bound.',
     significance:
-      'A major Chekhov chapter and a precursor to the later valedictory force of The Cherry Orchard.',
+      'A major Chekhov chapter for Falls: intimate in scale, rich in ensemble detail, and important enough in process and result to become part of his own career story.',
     story:
-      'The repo now has a real stage image for The Seagull, which immediately changes how the page can breathe. More importantly, the textual record frames the production as transformative for Falls personally, making it one of the few titles where rehearsal process itself becomes part of the career story.',
+      'The Seagull matters because it lets the archive show process, not just product. The source trail repeatedly describes a production built on spartan means, close actor work, and a fresh adaptation that made Chekhov feel like new writing. That makes the page more than a classic-play entry: it becomes a record of a rehearsal discovery that later echoed forward into Uncle Vanya and, eventually, The Cherry Orchard.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
     images: [
       {
-        src: seagullStage,
-        alt: 'Two actors in a close scene from The Seagull under black stage space.',
-        caption: 'The Seagull at Goodman Theatre, 2010.',
+        src: seagullShowArt,
+        alt: 'Konstantin cups Arkadina\'s face in a stark black-space image used as The Seagull show art.',
+        caption: 'Show art for Goodman Theatre\'s 2010 production of The Seagull, centered on the charged Arkadina-Konstantin relationship.',
         orientation: 'landscape',
         priority: true,
+        kind: 'art',
+      },
+      {
+        src: seagullEnsemble,
+        alt: 'A wide ensemble image from The Seagull shows Sorin in a wheelchair, Nina seated on a bed, and the family clustered across a bare stage.',
+        caption: 'A wide stage image that captures the production\'s stripped-down environment and ensemble geometry.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: seagull1,
+        alt: 'Konstantin holds Arkadina\'s face in a tense close encounter.',
+        caption: 'Konstantin and Arkadina in one of the production\'s most exposed mother-son confrontations.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: seagull2,
+        alt: 'Arkadina argues face to face with Sorin.',
+        caption: 'Arkadina and Sorin in a confrontation that pushes family history into the open.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: seagull3,
+        alt: 'A group scene from The Seagull with Dorn standing apart while the rest of the family gathers around the playing space.',
+        caption: 'The ensemble arranged across the open floor in Falls\'s spare, actor-centered staging.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: seagull4,
+        alt: 'Arkadina gestures outward while lying across the stage beside Trigorin.',
+        caption: 'A theatrical, half-comic image of Arkadina and Trigorin that keeps the production\'s humor and selfishness in play at once.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: seagull5,
+        alt: 'Konstantin sits on the floor in front of Sorin\'s wheelchair.',
+        caption: 'Sorin and Konstantin share one of the production\'s quietest, most vulnerable compositions.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: seagull6,
+        alt: 'A large group from The Seagull sits and kneels across the stage in a communal scene.',
+        caption: 'The ensemble gathered in a scene that shows how Falls let the play\'s social world breathe on a nearly bare floor.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: seagull7,
+        alt: 'Masha hurls flowers in a comic burst of frustration.',
+        caption: 'Masha supplies one of the production\'s sharpest flashes of comic pain.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: seagull8,
+        alt: 'Arkadina dances closely with Konstantin beside a stack of suitcases.',
+        caption: 'A top-lit embrace that turns maternal intimacy into something unsettled and theatrical.',
+        orientation: 'landscape',
         kind: 'production-still',
       },
     ],
     collaborators: [
       { role: 'Playwright', name: 'Anton Chekhov' },
-      { role: 'Adapter', name: 'Robert Falls', note: 'Adaptation context documented in local notes.' },
+      { role: 'Director / adaptation', name: 'Robert Falls', note: 'Adapted from a translation by George Calderon.' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Oct 16 - Nov 21, 2010' },
+      { label: 'Venue', value: 'Owen Theatre, Goodman Theatre' },
+      { label: 'Runtime', value: '3 hours' },
+      { label: 'Mode', value: 'Falls adaptation from George Calderon' },
+    ],
+    cast: [
+      { role: 'Konstantin', name: 'Stephen Louis Grush' },
+      { role: 'Arkadina', name: 'Mary Beth Fisher' },
+      { role: 'Trigorin', name: 'Cliff Chamberlain' },
+      { role: 'Sorin', name: 'Francis Guinan' },
+      { role: 'Dorn', name: 'Scott Jaeck' },
+      { role: 'Nina', name: 'Heather Wood' },
+      { role: 'Masha', name: 'Kelly O\'Sullivan' },
+      { role: 'Polina', name: 'Janet Ulrich Brooks' },
+      { role: 'Shamrayev', name: 'Steve Pickering' },
+      { role: 'Medvedenko', name: 'Demetrios Troy' },
+      { role: 'Yakov', name: 'Dieterich Gray' },
+      { role: 'Cook', name: 'Laura T. Fisher' },
+      { role: 'Servant', name: 'Will Allan' },
+      { role: 'Maid', name: 'Rebecca Buller' },
+    ],
+    creativeTeam: [
+      { role: 'By', name: 'Anton Chekhov' },
+      { role: 'Directed and Adapted by', name: 'Robert Falls' },
+      { role: 'Translation source', name: 'George Calderon' },
+      { role: 'Scenic Design', name: 'Todd Rosenthal' },
+      { role: 'Costume Design', name: 'Ana Kuzmanic' },
+      { role: 'Lighting Design', name: 'Keith Parham' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Dramaturgy', name: 'Neena Arndt' },
+      { role: 'Casting', name: 'Adam Belcuore' },
+      { role: 'Production Stage Manager', name: 'Kimberly Osgood' },
+      { role: 'Stage Manager', name: 'Jamie Wolfe' },
     ],
     recognition: [
       {
         label: 'Chekhov adaptation',
-        detail: 'Local notes group The Seagull with Falls’s adaptation work on major classics.',
+        detail: 'The source docs and review coverage frame the production as Falls\'s own adaptation from George Calderon, making the text part of his authorship story as well as his directing record.',
       },
       {
         label: 'Process significance',
-        detail: 'Timeline says Falls later called the rehearsal process “life-changing.”',
+        detail: 'Timeline notes that Falls later called the rehearsal process life-changing, a rare case where the archive explicitly treats rehearsal as career-defining.',
+      },
+      {
+        label: 'Reception pattern',
+        detail: 'The source packet preserves a strongly positive review spread, including Chicago Sun-Times, Chicago Tribune, Time Out Chicago, Chicago Theater Beat, and others.',
       },
     ],
     contextNotes: [
       {
+        label: 'Official framing',
+        text: 'The Goodman one-sheet sells the production as an intimate Owen Theatre take on Chekhov\'s masterwork, emphasizing the passion and pathos of everyday life and the tragicomic tangle set off by Arkadina\'s visit.',
+      },
+      {
+        label: 'Review consensus',
+        text: 'The local doc preserves a broad review roundup that repeatedly stresses spontaneity, emotional truth, and the feeling that the three-hour evening moved with the force of new writing rather than academic revival.',
+      },
+      {
         label: 'Career context',
-        text: 'The Seagull and The Cherry Orchard now read as connected bookends inside Falls’s Chekhov work.',
+        text: 'The Seagull now reads as the key early chapter in Falls\'s late-career Chekhov line, with Uncle Vanya and The Cherry Orchard extending discoveries first made here.',
+      },
+      {
+        label: 'Source package',
+        text: 'The local folder includes show art, multiple production stills, a roster screenshot, a review roundup, and links to both a Theater In Chicago page and a YouTube onstage video clip.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/the-seagull-11/',
+        summary:
+          'The official page frames the production as an intimate Owen Theatre Seagull directed by Falls, built around passion, pathos, and a tragicomic web of romance and artistic ambition.',
+        note: 'Official production page',
+      },
+      {
+        source: 'Theatre In Chicago',
+        href: 'https://www.theatreinchicago.com/the-seagull/4166/',
+        summary:
+          'The source doc preserves Theatre In Chicago\'s review roundup page, which aggregates the local critical response to the Goodman staging.',
+        note: 'Source-doc review hub',
+      },
+      {
+        source: 'Chicago Tribune',
+        href: 'https://www.theatreinchicago.com/the-seagull/4166/',
+        summary:
+          'Chris Jones praises the production\'s living, breathing spontaneity and ties it to Falls\'s own artistic journey through a play about art, theater, power, and starting again.',
+        note: 'Quoted via review roundup',
+      },
+      {
+        source: 'Chicago Sun-Times',
+        href: 'https://www.theatreinchicago.com/the-seagull/4166/',
+        summary:
+          'Hedy Weiss writes that the three-hour running time races by and argues that the production makes the classic feel like a new play.',
+        note: 'Quoted via review roundup',
+      },
+      {
+        source: 'Time Out Chicago',
+        href: 'https://www.theatreinchicago.com/the-seagull/4166/',
+        summary:
+          'Time Out highlights the splendid cast and Mary Beth Fisher\'s incandescent Arkadina, describing the evening as the kind of production meant to be talked about for years.',
+        note: 'Quoted via review roundup',
+      },
+      {
+        source: 'Chicago Theater Beat',
+        href: 'https://www.theatreinchicago.com/the-seagull/4166/',
+        summary:
+          'The review calls Falls\'s stripped-down Seagull a stunning swerve from his larger productions and a thrilling example of storytelling at its most powerful.',
+        note: 'Quoted via review roundup',
+      },
+      {
+        source: 'Newcity Stage',
+        href: 'https://www.newcitystage.com/2010/10/26/review-the-seagullgoodman-theatre/',
+        summary:
+          'The local source packet also links directly to Newcity\'s review of the Goodman staging.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'ChicagoCritic',
+        href: 'https://chicagocritic.com/the-seagull/',
+        summary:
+          'Another direct review link preserved in the local source document.',
+        note: 'Source-doc review link',
+      },
+      {
+        source: 'Theater In Chicago Feature',
+        href: 'https://www.theatreinchicago.com/news/artistic-director-robert-falls-directs-an-intimate-fresh-take-on-chekhovs-the-seagull/227/',
+        summary:
+          'Preview and interview coverage linked in the local source packet.',
+        note: 'Source-doc feature link',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/the-seagull-11/' },
+      { label: 'Theatre In Chicago review hub', href: 'https://www.theatreinchicago.com/the-seagull/4166/' },
+      { label: 'Newcity Stage review', href: 'https://www.newcitystage.com/2010/10/26/review-the-seagullgoodman-theatre/' },
+      { label: 'ChicagoCritic review', href: 'https://chicagocritic.com/the-seagull/' },
+      { label: 'Theater In Chicago feature', href: 'https://www.theatreinchicago.com/news/artistic-director-robert-falls-directs-an-intimate-fresh-take-on-chekhovs-the-seagull/227/' },
+      { label: 'YouTube stage clip', href: 'https://www.youtube.com/watch?v=8FoAYU8u0mI' },
+      { label: 'Playbill casting announcement', href: 'https://playbill.com/article/goodmans-seagull-to-spotlight-mary-beth-fisher-francis-guinan-heather-wood-com-170796' },
+      { label: 'Playbill run announcement', href: 'https://playbill.com/article/francis-guinan-mary-beth-fisher-feast-on-seagull-at-the-goodman-oct-16-nov-14-com-172710' },
+      { label: 'BroadwayWorld feature', href: 'https://www.broadwayworld.com/chicago/article/Robert-Falls-Mary-Beth-Fisher-and-Francis-Guinan-Dish-on-The-Seagull-20010101' },
+      { label: 'TheaterMania casting announcement', href: 'https://www.theatermania.com/news/mary-beth-fisher-stephen-louis-grush-francis-guinan-et-al-set-for-goodman-theatres-the-seagull_29578/' },
+      { label: 'The Week mention', href: 'https://theweek.com/articles/489534/seagull' },
+      { label: 'Chicago Maroon review', href: 'https://chicagomaroon.com/9192/artsandculture/modern-yet-misguided-don-t-flock-to-goodman-s-seagull/' },
+    ],
+    watchLinks: [
+      {
+        label: 'The Seagull | On Stage',
+        href: 'https://www.youtube.com/watch?v=8FoAYU8u0mI',
+        description: 'YouTube stage clip linked in the local Seagull source document.',
+        thumbnail: seagullShowArt,
+      },
+    ],
+    pressQuotes: [
+      {
+        quote: 'Raw and Primal',
+        source: 'Chicago Tribune',
+      },
+      {
+        quote: 'Falls Succeeds Spectacularly',
+        source: 'Chicago Tribune',
+      },
+      {
+        quote: 'The play\'s three-hour running time races by',
+        source: 'Chicago Sun-Times, quoted in source doc',
+      },
+      {
+        quote: 'The Seagull is a lone, perfect pebble',
+        source: 'Chicago Theater Beat, quoted in source doc',
+      },
+      {
+        quote: 'the kind of production that aims to be talked about for years',
+        source: 'Time Out Chicago, quoted in source doc',
       },
     ],
     relatedLinks: seedLinks,
@@ -1645,6 +4167,8 @@ export const productions: ProductionRecord[] = Array.from(groupedProductions.ent
       reviews: seed?.reviews ?? [],
       externalSources: seed?.externalSources ?? [],
       watchLinks: seed?.watchLinks ?? [],
+      pressQuotes: seed?.pressQuotes ?? [],
+      audienceFeedback: seed?.audienceFeedback ?? [],
       contextNotes: [...seedContextNotes, ...derivedNotes],
       relatedLinks: seed?.relatedLinks ?? seedLinks,
       sourceStatus: seed?.sourceStatus ?? 'repo-only',

@@ -27,7 +27,12 @@ const assetImages = production.images;
 const hasAssets = assetImages.length > 0 || production.watchLinks.length > 0;
 const hasReviews = production.reviews.length > 0;
 const hasExternalSources = production.externalSources.length > 0;
+const hasPressQuotes = production.pressQuotes.length > 0;
+const hasAudienceFeedback = production.audienceFeedback.length > 0;
 const hasPeople = production.cast.length > 0 || production.creativeTeam.length > 0;
+const hasStory = Boolean(production.story);
+const hasContextNotes = production.contextNotes.length > 0;
+const hasHighlights = production.awardsOrSignificance.length > 0;
 const railFacts = production.quickFacts.some((fact) => /stagings?/i.test(fact.label))
   ? production.quickFacts
   : [...production.quickFacts, { label: 'Stagings', value: String(production.stagingCount) }];
@@ -94,6 +99,33 @@ const introFacts = [
             <p>{fallsContext}</p>
           </article>
         </section>
+
+        {(hasStory || hasContextNotes) && (
+          <section class="production-context-grid">
+            {hasStory && (
+              <article class="production-panel">
+                <p class="production-eyebrow">Why it matters</p>
+                <h2>Archive Perspective</h2>
+                <p>{production.story}</p>
+              </article>
+            )}
+
+            {hasContextNotes && (
+              <article class="production-panel">
+                <p class="production-eyebrow">Source notes</p>
+                <h2>Production History & Context</h2>
+                <div class="production-callouts production-callouts-spacious">
+                  {production.contextNotes.map((item) => (
+                    <article>
+                      <h3>{item.label}</h3>
+                      <p>{item.text}</p>
+                    </article>
+                  ))}
+                </div>
+              </article>
+            )}
+          </section>
+        )}
 
         <section id="assets" class="production-assets-section">
           <div class="production-section-heading production-slider-heading">
@@ -191,45 +223,17 @@ const introFacts = [
           </dl>
         </section>
 
-        {false && production.awardsOrSignificance.length > 0 && (
+        {hasHighlights && (
           <section class="production-rail-card production-significance-card">
             <p class="production-eyebrow">Highlights</p>
             <div class="production-callouts">
-              {production.awardsOrSignificance.slice(0, 2).map((item) => (
+              {production.awardsOrSignificance.slice(0, 3).map((item) => (
                 <article>
                   <h3>{item.label}</h3>
                   <p>{item.detail}</p>
                 </article>
               ))}
             </div>
-          </section>
-        )}
-
-        {false && hasPeople && (
-          <section class="production-rail-card">
-            <p class="production-eyebrow">Cast & creative</p>
-            {production.cast.length > 0 && (
-              <div class="production-people-group">
-                <h3>Cast</h3>
-                {production.cast.map((person) => (
-                  <div class="production-person-row">
-                    <span>{person.role}</span>
-                    <strong>{person.name}</strong>
-                  </div>
-                ))}
-              </div>
-            )}
-            {production.creativeTeam.length > 0 && (
-              <div class="production-people-group">
-                <h3>Creative</h3>
-                {production.creativeTeam.map((person) => (
-                  <div class="production-person-row">
-                    <span>{person.role}</span>
-                    <strong>{person.name}</strong>
-                  </div>
-                ))}
-              </div>
-            )}
           </section>
         )}
       </aside>
@@ -343,6 +347,51 @@ const introFacts = [
         )}
       </div>
     </section>
+
+    {hasPressQuotes && (
+      <section class="production-bottom-section">
+        <div class="production-section-heading">
+          <p class="production-eyebrow">Critical praise</p>
+          <h2>What Critics Pulled Forward</h2>
+        </div>
+
+        <div class="production-quote-grid">
+          {production.pressQuotes.map((item) => (
+            <article class="production-quote-card">
+              <p>{item.quote}</p>
+              {item.href ? (
+                <a href={item.href} class="production-quote-source">
+                  {item.source}
+                </a>
+              ) : (
+                <span class="production-quote-source">{item.source}</span>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {hasAudienceFeedback && (
+      <section class="production-bottom-section">
+        <div class="production-section-heading">
+          <p class="production-eyebrow">Audience response</p>
+          <h2>What Audiences Said</h2>
+        </div>
+
+        <div class="production-feedback-grid">
+          {production.audienceFeedback.map((item) => (
+            <article class="production-feedback-card">
+              <p>{item.quote}</p>
+              <div>
+                <strong>{item.author}</strong>
+                {item.source && <span>{item.source}</span>}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
 
     <section class="production-related-section">
       <div class="production-section-heading">
@@ -468,6 +517,8 @@ const introFacts = [
   .production-panel,
   .production-rail-card,
   .production-review-card,
+  .production-quote-card,
+  .production-feedback-card,
   .production-source-card,
   .production-related-grid a,
   .production-browse-nav a,
@@ -476,7 +527,9 @@ const introFacts = [
   }
   .production-panel,
   .production-rail-card,
-  .production-source-card {
+  .production-source-card,
+  .production-quote-card,
+  .production-feedback-card {
     @apply p-5 md:p-6;
   }
   .production-eyebrow {
@@ -491,6 +544,9 @@ const introFacts = [
   }
   .production-overview-pair {
     @apply grid gap-4 md:grid-cols-[minmax(0,1.35fr)_minmax(16rem,0.65fr)] md:items-stretch;
+  }
+  .production-context-grid {
+    @apply grid gap-4 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)];
   }
   .production-intro-panel {
     @apply bg-white;
@@ -521,6 +577,9 @@ const introFacts = [
   }
   .production-callouts {
     @apply space-y-3;
+  }
+  .production-callouts-spacious {
+    @apply mt-4;
   }
   .production-callouts article {
     @apply border-l-2 border-brand-gold pl-4;
@@ -649,6 +708,27 @@ const introFacts = [
   }
   .production-source-card a {
     @apply block border-b border-brand-ink border-opacity-10 py-2 font-display text-base leading-tight text-brand-ink transition-colors duration-200 last:border-b-0 hover:text-brand-oxblood;
+  }
+  .production-quote-grid,
+  .production-feedback-grid {
+    @apply grid gap-3 md:grid-cols-2 xl:grid-cols-3;
+  }
+  .production-quote-card,
+  .production-feedback-card {
+    @apply flex h-full flex-col justify-between gap-5;
+  }
+  .production-quote-card p,
+  .production-feedback-card p {
+    @apply mt-0 text-base leading-relaxed text-brand-ink text-opacity-80;
+  }
+  .production-quote-source {
+    @apply font-display text-[11px] font-bold uppercase tracking-[0.18em] text-brand-oxblood;
+  }
+  .production-feedback-card strong {
+    @apply block font-display text-xl leading-none text-brand-ink;
+  }
+  .production-feedback-card span {
+    @apply mt-2 block text-[11px] font-bold uppercase tracking-[0.18em] text-brand-oxblood;
   }
   .production-assets-wide,
   .production-credits-section {
