@@ -73,6 +73,7 @@ import mollySweeney1 from '../images/molly-sweeney/molly-sweeney-1.jpg';
 import mollySweeney2 from '../images/molly-sweeney/molly-sweeney-2.jpg';
 import mollySweeney3 from '../images/molly-sweeney/molly-sweeney-3.jpg';
 import mollySweeney4 from '../images/molly-sweeney/molly-sweeney-4.jpg';
+import enemyShowArt from '../images/an-enemy-of-the-people/enemy-show-art.webp';
 import measureShowArt from '../images/measure-for-measure/measure-show-art.png';
 import measurePoster from '../images/measure-for-measure/measure-poster.jpg';
 import measure1 from '../images/measure-for-measure/measure-1.jpg';
@@ -3100,7 +3101,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'an-enemy-of-the-people': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'An Enemy of the People extends Falls\'s late Goodman adaptation work, turning Ibsen\'s civic crisis into a sharply contemporary conflict over contamination, power, and public truth.',
     publicSummary:
@@ -3115,26 +3116,73 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The page matters less as a transfer narrative than as a statement of method. Falls takes a classic political drama and presses it toward immediate contemporary pressure, letting the archive show how often his later work returned to public argument, not just private psychology.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
+    images: [
+      {
+        src: enemyShowArt,
+        alt: 'Lanise Antoine Shelley and Philip Earl Johnson in the Goodman Theatre show art for An Enemy of the People.',
+        caption: 'Official Goodman Theatre show art for An Enemy of the People, featuring Lanise Antoine Shelley and Philip Earl Johnson.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'art',
+      },
+    ],
     collaborators: [
       { role: 'Playwright', name: 'Henrik Ibsen' },
       { role: 'Director / adapter context', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Philip Earl Johnson' },
+      { role: 'Cast highlight', name: 'Scott Jaeck' },
+      { role: 'Cast highlight', name: 'Lanise Antoine Shelley' },
+      { role: 'Cast highlight', name: 'Rebecca Hurd' },
     ],
     quickFacts: [
       { label: 'Run', value: 'Mar 10 - Apr 15, 2018' },
       { label: 'Runtime', value: '2 hr 20 min' },
       { label: 'Venue', value: 'Goodman Theatre' },
-      { label: 'Frame', value: 'Timely civic classic' },
+      { label: 'Frame', value: 'Falls adaptation of Ibsen' },
+    ],
+    cast: [
+      { role: 'Thomas Stockmann', name: 'Philip Earl Johnson' },
+      { role: 'Peter Stockmann', name: 'Scott Jaeck' },
+      { role: 'Katherine', name: 'Lanise Antoine Shelley' },
+      { role: 'Petra', name: 'Rebecca Hurd' },
+      { role: 'Billing', name: 'Jesse Bhamrah' },
+      { role: 'Morten Kiil', name: 'David Darlow' },
+      { role: 'Aslaksen', name: 'Allen Gilmore' },
+      { role: 'Hovstad', name: 'Aubrey Deeker Hernandez' },
+      { role: 'The Drunk', name: 'Larry Neumann, Jr.' },
+    ],
+    creativeTeam: [
+      { role: 'Playwright', name: 'Henrik Ibsen' },
+      { role: 'Director / adapter', name: 'Robert Falls' },
+      { role: 'Translation basis', name: 'Eleanor Marx-Aveling' },
+      { role: 'Scenic Design', name: 'Todd Rosenthal' },
+      { role: 'Costume Design', name: 'Ana Kuzmanic' },
+      { role: 'Lighting Design', name: 'Robert Wierzel' },
+      { role: 'Sound Design / original music', name: 'Richard Woodbury' },
+      { role: 'Dramaturg', name: 'Neena Arndt' },
+      { role: 'Casting', name: 'Adam Belcuore' },
+      { role: 'Casting', name: 'Erica Sartini-Combs' },
+      { role: 'Production Stage Manager', name: 'Alden Vasquez' },
+      { role: 'Stage Manager', name: 'Jonathan Nook' },
     ],
     recognition: [
       {
         label: 'Adaptation context',
         detail: 'The local timeline and credits frame the production as Falls\'s own adaptation of Ibsen.',
       },
+      {
+        label: 'Contemporary pressure',
+        detail: 'Goodman positioned the production as startlingly current, using water contamination and civic corruption to sharpen the play\'s public stakes.',
+      },
     ],
     contextNotes: [
       {
         label: 'Official framing',
         text: 'The Goodman page sells the production on the immediacy of a water-contamination crisis and the collision between political ambition and moral integrity.',
+      },
+      {
+        label: 'Source note',
+        text: 'Cast, design credits, and teaser link are drawn from the local Goodman program booklet and official Goodman production page.',
       },
     ],
     reviews: [
@@ -3145,9 +3193,35 @@ const productionSeeds: Record<string, ProductionSeed> = {
           'The official page presents the production as a timely revival and highlights praise from Chicago Sun-Times and Daily Herald.',
       },
     ],
+    watchLinks: [
+      {
+        label: 'An Enemy of the People | Teaser',
+        href: 'https://www.youtube.com/watch?v=nfE8mrBLv-8',
+        description: 'Official Goodman teaser linked in the local production program.',
+        thumbnail: enemyShowArt,
+      },
+    ],
+    pressQuotes: [
+      {
+        quote: '“A powerhouse production”',
+        source: 'Chicago Sun-Times',
+      },
+      {
+        quote: '“Marvelously staged”',
+        source: 'Chicago Sun-Times',
+      },
+      {
+        quote: 'A “superb revival”',
+        source: 'Daily Herald',
+      },
+      {
+        quote: '“Fiercely acted”',
+        source: 'Daily Herald',
+      },
+    ],
     externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/an-enemy-of-the-people/' }],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'blind-date': {
     pageMode: 'featured',
