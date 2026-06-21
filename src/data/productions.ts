@@ -82,6 +82,17 @@ import measure4 from '../images/measure-for-measure/measure-4.jpg';
 import measure5 from '../images/measure-for-measure/measure-5.jpg';
 import measure6 from '../images/measure-for-measure/measure-6.jpg';
 import measure7 from '../images/measure-for-measure/measure-7.jpg';
+import lunaGaleShowArt from '../images/luna-gale/luna-gale-show-art.png';
+import lunaGalePoster from '../images/luna-gale/luna-gale-poster.jpg';
+import lunaGaleLaPoster from '../images/luna-gale/luna-gale-la-poster.jpg';
+import lunaGale1 from '../images/luna-gale/luna-gale-1.jpg';
+import lunaGale2 from '../images/luna-gale/luna-gale-2.jpg';
+import lunaGale3 from '../images/luna-gale/luna-gale-3.jpg';
+import lunaGale4 from '../images/luna-gale/luna-gale-4.jpg';
+import lunaGale5 from '../images/luna-gale/luna-gale-5.jpg';
+import lunaGale6 from '../images/luna-gale/luna-gale-6.jpg';
+import lunaGaleLa1 from '../images/luna-gale/luna-gale-la-1.jpg';
+import lunaGaleLa2 from '../images/luna-gale/luna-gale-la-2.jpg';
 import swingState1 from '../images/swing-state-1.jpg';
 import swingState2 from '../images/swing-state-2.jpg';
 import swingState3 from '../images/swing-state-3.jpg';
@@ -112,7 +123,6 @@ import holidayGoodmanThumb from '../images/web-sourced/holiday-goodman-thumb.jpg
 import holidayProduction2 from '../images/web-sourced/holiday-production-2.webp';
 import holidayProduction7 from '../images/web-sourced/holiday-production-7.webp';
 import holidayProduction8 from '../images/web-sourced/holiday-production-8.webp';
-import lunaGaleGoodman from '../images/web-sourced/luna-gale-goodman.png';
 import soundInsideGoodmanThumb from '../images/web-sourced/sound-inside-goodman-thumb.jpg';
 import soundInsideWttw from '../images/web-sourced/sound-inside-wttw.jpg';
 import swingStateGoodmanThumb from '../images/web-sourced/swing-state-goodman-thumb.jpg';
@@ -1765,45 +1775,267 @@ const productionSeeds: Record<string, ProductionSeed> = {
   'luna-gale': {
     pageMode: 'featured',
     summary:
-      'Luna Gale is a focused Rebecca Gilman premiere with a clear afterlife, moving from Goodman world premiere status to a Los Angeles transfer within a year.',
+      'Luna Gale is the fourth Rebecca Gilman world premiere Falls directed at the Goodman, a gripping custody drama that drew some of the strongest reviews of his late career and transferred intact, cast and all, to Los Angeles within the year.',
+    publicSummary:
+      'A veteran social worker\'s custody decision exposes a family\'s hidden past in Rebecca Gilman\'s acclaimed drama, which moved from its sold-out Goodman premiere to a celebrated Los Angeles run.',
+    synopsis:
+      'Caroline, a veteran Cedar Rapids social worker, thinks she has a typical case when she meets Peter and Karlie, two teenage drug addicts accused of neglecting their infant daughter, Luna Gale. When Caroline places the baby in the care of Karlie\'s mother, Cindy, an evangelical Christian, she sparks a family conflict that exposes a shadowy past and forces her toward a risky decision with life-altering consequences.',
+    fallsContext:
+      'Luna Gale was the fourth Rebecca Gilman script Falls staged, continuing a playwright-director partnership that runs from Blue Surge and Dollhouse through Soups, Stews, and Casseroles: 1976 and Swing State. It is also one of the cleanest examples in the archive of a Goodman world premiere making a full, cast-intact leap to another market.',
     significance:
-      'A world premiere that extends Falls’s long-running collaboration with Rebecca Gilman and shows a new work moving beyond Chicago.',
+      'A 2014 Goodman world premiere that became one of the most acclaimed productions of Falls\'s later career, drawing high marks across nearly every major Chicago outlet before transferring with its original Chicago cast and creative team to Center Theatre Group\'s Kirk Douglas Theatre in Los Angeles that same year.',
     story:
-      'Compared with the giant institutional chapters elsewhere in the archive, Luna Gale matters because of precision. It is a compact Goodman premiere, a collaborator-driven production, and a title with enough documented transfer movement to show how Falls’s new-work direction could travel.',
+      'Luna Gale\'s archive record is unusually clean: a world premiere, a near-unanimous wave of strong Chicago notices, and then a full transfer that carried the same director, the same star (Mary Beth Fisher as Caroline), and the same design team to Los Angeles, where it drew another round of strong reviews from the Los Angeles Times, the Hollywood Reporter, and LA Weekly. Todd Rosenthal\'s revolving turntable set, which let the action move between Caroline\'s office, a hospital room, a daycare center, and a church without a pause, became one of the most-discussed design elements in either city\'s coverage. The production also reinforced how durable the Falls/Gilman partnership had become by 2014: critics on both coasts noted this was already the fourth Gilman play Falls had directed, and reviewers consistently singled out Fisher\'s performance as some of the best work of her career.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
     images: [
       {
-        src: lunaGaleGoodman,
-        alt: 'An actor holding a file onstage in Luna Gale at Goodman Theatre.',
-        caption: 'Luna Gale at Goodman Theatre. Image sourced from the official Goodman production archive.',
+        src: lunaGaleShowArt,
+        alt: 'Caroline, a social worker, stands holding a folder in a brightly decorated daycare-center set for Luna Gale.',
+        caption: 'Mary Beth Fisher as Caroline in the Goodman production\'s daycare-center set.',
         orientation: 'landscape',
         priority: true,
+        kind: 'art',
+      },
+      {
+        src: lunaGalePoster,
+        alt: 'Luna Gale key art: a close-up of a baby\'s face beside the title and Robert Falls\'s directing credit.',
+        caption: 'Official Goodman key art for the world premiere.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
+        src: lunaGaleLaPoster,
+        alt: 'Luna Gale key art for the Kirk Douglas Theatre transfer, labeled as the Goodman Theatre world premiere production.',
+        caption: 'Key art for the Center Theatre Group run at the Kirk Douglas Theatre, crediting it as the Goodman\'s world-premiere production.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
+        src: lunaGale5,
+        alt: 'Caroline sits with Cliff and Lourdes in an office scene beside a vending machine in Luna Gale.',
+        caption: 'Mary Beth Fisher (Caroline), Erik Hellman (Cliff), and Melissa Francesca DuPrey (Lourdes) at the Goodman.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: lunaGale6,
+        alt: 'Caroline leans over a desk cluttered with case files while Cliff sits across from her.',
+        caption: 'Caroline and her supervisor, Cliff, in one of the production\'s case-review scenes.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: lunaGale4,
+        alt: 'Peter, in work overalls, faces off with Karlie, in a daycare-uniform polo, in a tense exchange.',
+        caption: 'Colin Sphar (Peter) and Reyna de Courcy (Karlie) at the Goodman.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: lunaGale2,
+        alt: 'Peter and Karlie sit slumped in waiting-room chairs beneath a framed motivational poster.',
+        caption: 'Peter and Karlie waiting in Caroline\'s office, beneath the production\'s ironic "Perseverance" poster.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: lunaGale1,
+        alt: 'Peter holds an infant car seat in a colorful daycare-center set as Cindy stands in the background.',
+        caption: 'Colin Sphar (Peter) with Luna\'s car seat, as Jordan Baker (Cindy) looks on.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: lunaGale3,
+        alt: 'Cliff sits alone reading a case file folder in an office.',
+        caption: 'Erik Hellman as Cliff, Caroline\'s supervisor, reviewing the case file at the center of the play.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: lunaGaleLa1,
+        alt: 'Peter and Karlie sit together in a quieter moment in the Kirk Douglas Theatre production.',
+        caption: 'Colin Sphar and Reyna de Courcy reprising their roles at the Kirk Douglas Theatre. Photo by Craig Schwartz.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: lunaGaleLa2,
+        alt: 'Peter holds the infant car seat alone onstage at the Kirk Douglas Theatre.',
+        caption: 'Colin Sphar as Peter in the Los Angeles transfer. Photo by Craig Schwartz.',
+        orientation: 'portrait',
         kind: 'production-still',
       },
     ],
     collaborators: [
       { role: 'Playwright', name: 'Rebecca Gilman' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Mary Beth Fisher' },
+      { role: 'Cast highlight', name: 'Colin Sphar' },
+      { role: 'Cast highlight', name: 'Reyna de Courcy' },
+    ],
+    quickFacts: [
+      { label: 'World premiere', value: 'Jan 18 - Feb 23, 2014, Albert Theatre' },
+      { label: 'LA transfer', value: 'Through Dec 21, 2014, Kirk Douglas Theatre' },
+      { label: 'Runtime', value: '2 hr 15 min, one intermission' },
+      { label: 'Gilman collaboration', value: 'Falls\'s fourth Gilman premiere' },
+    ],
+    cast: [
+      { role: 'Caroline', name: 'Mary Beth Fisher' },
+      { role: 'Peter', name: 'Colin Sphar' },
+      { role: 'Karlie', name: 'Reyna de Courcy' },
+      { role: 'Cliff', name: 'Erik Hellman' },
+      { role: 'Cindy', name: 'Jordan Baker' },
+      { role: 'Lourdes', name: 'Melissa Francesca DuPrey' },
+      { role: 'Pastor Jay', name: 'Richard Thieriot' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Rebecca Gilman' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Todd Rosenthal' },
+      { role: 'Costume Design', name: 'Kaye Voyce' },
+      { role: 'Lighting Design', name: 'Robert Wierzel' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Dramaturgy', name: 'Neena Arndt' },
+      { role: 'Production Stage Manager', name: 'Joseph Drummond' },
     ],
     recognition: [
       {
-        label: 'World premiere',
-        detail: 'Credits identify Luna Gale as a world premiere by Rebecca Gilman.',
+        label: 'Near-unanimous Chicago reception',
+        detail: 'Chicago Tribune, Sun-Times, Reader, Time Out Chicago, and most other Chicago outlets rated the world premiere "Highly Recommended."',
       },
       {
-        label: 'Transfer story',
-        detail: 'Timeline records a later staging at the Kirk Douglas Theatre in Los Angeles.',
+        label: 'Fourth Gilman collaboration',
+        detail: 'Multiple reviewers, including the Chicago Reader and Hollywood Reporter, noted this was the fourth Gilman script Falls had directed, underscoring the depth of the partnership.',
+      },
+      {
+        label: 'Cast-intact transfer',
+        detail: 'The production transferred to Center Theatre Group\'s Kirk Douglas Theatre in Los Angeles with its Chicago cast, director, and design team intact.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'A design talking point',
+        detail: 'Todd Rosenthal\'s revolving turntable set, which moved the action between half a dozen detailed rooms without pausing the story, was singled out by critics in both Chicago and Los Angeles.',
+      },
+      {
+        label: 'A signature Fisher performance',
+        detail: 'The Chicago Tribune wrote that it had "never seen Fisher create so moving a character," and Los Angeles critics echoed the praise for her performance in the transfer.',
       },
     ],
     contextNotes: [
       {
-        label: 'Career context',
-        text: 'Luna Gale helps trace how central Rebecca Gilman remained inside Falls’s late Goodman programming.',
+        label: 'Source dating',
+        text: 'The local source folder labels its Goodman document "2013," but the production itself ran Jan 18 - Feb 23, 2014; this page uses the actual performance dates rather than the season-label year.',
       },
       {
-        label: 'Photo source',
-        text: 'Hero image is sourced from the official Goodman Theatre archive page for the world-premiere production.',
+        label: 'Source package',
+        text: 'The folder includes show art and poster art for both the Goodman premiere and the Kirk Douglas transfer, ten Goodman and Los Angeles production stills, a full cast-and-creative screenshot, an extensive critical-praise pull-quote screenshot, and review trails for both engagements.',
       },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/luna-gale/',
+        summary: 'The official page frames the play around Caroline\'s custody decision and Gilman\'s reputation for writing work that "reaches the heart and head with equal force" (Time).',
+        note: 'Official production page',
+      },
+      {
+        source: 'Chicago Tribune',
+        href: 'http://www.chicagotribune.com/entertainment/theater/chi-luna-gale-review-goodman,0,7676292.column?track=rss',
+        summary: 'Chris Jones called a prayer scene "quite breathtaking" and praised Fisher for doing "some of the best work of her career" opposite Falls\'s staging.',
+        note: 'Highly Recommended',
+      },
+      {
+        source: 'Chicago Sun-Times',
+        href: 'http://www.suntimes.com/entertainment/stage/25216745-421/rebecca-gilmans-luna-gale-offers-ray-of-hope-in-difficult-circumstances.html',
+        summary: 'Hedy Weiss called the play "provocative and impassioned" and centered her review on the question of who is best equipped to care for Luna.',
+        note: 'Highly Recommended',
+      },
+      {
+        source: 'Chicago Reader',
+        href: 'http://www.chicagoreader.com/chicago/rebecca-gilman-luna-gale-goodman-custody-battle/Content?oid=12275410',
+        summary: 'Zac Thompson framed the play around the outsized power child-protective caseworkers hold over families, calling it "gripping" under Falls\'s "efficient direction."',
+        note: 'Highly Recommended',
+      },
+      {
+        source: 'Time Out Chicago',
+        href: 'http://www.timeoutchicago.com/arts-culture/theater/16544171/luna-gale-at-goodman-theatre-theater-review',
+        summary: 'Kris Vire praised Falls for establishing "the perfect rhythm" in a tightly paced staging led by a "terrific ensemble."',
+        note: 'Highly Recommended',
+      },
+      {
+        source: 'Chicago Theatre Review',
+        href: 'http://www.chicagotheatrereview.com/2014/01/baby-love/',
+        summary: 'Colin Douglas called the production "nothing less than remarkable," crediting Todd Rosenthal\'s revolving set and Kaye Voyce\'s costumes.',
+        note: 'Highly Recommended',
+      },
+      {
+        source: 'Los Angeles Times',
+        href: 'http://www.latimes.com/entertainment/arts/la-et-cm-luna-gale-review-20141204-column.html',
+        summary: 'Charles McNulty called the Kirk Douglas transfer "thoroughly absorbing and cracklingly well-acted," urging readers to look past the topical plot to Gilman\'s deeper concerns.',
+        note: 'LA transfer review',
+      },
+      {
+        source: 'The Hollywood Reporter',
+        href: 'http://www.hollywoodreporter.com/review/luna-gale-theater-review-755618',
+        summary: 'Jordan Riefe praised the "sensational" reunion of Fisher and Falls, by then collaborating for the fourth time, calling the production "seamless."',
+        note: 'LA transfer review',
+      },
+      {
+        source: 'LA Weekly',
+        href: 'http://www.laweekly.com/publicspectacle/2014/12/11/the-plays-luna-gale-and-possum-carcass-look-at-the-consequences-of-making-stuff-up',
+        summary: 'Steven Leigh Morris called the play "scintillating" and praised Falls\'s staging of a "superlative ensemble."',
+        note: 'LA transfer review',
+      },
+      {
+        source: 'TheatreInChicago',
+        href: 'https://www.theatreinchicago.com/luna-gale/6234/',
+        summary: 'Aggregates Chicago reviews of the world premiere, with the large majority rated "Highly Recommended."',
+        note: 'Review aggregate',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/luna-gale/' },
+      { label: 'TheatreInChicago review aggregate (Goodman)', href: 'https://www.theatreinchicago.com/luna-gale/6234/' },
+      { label: 'TheatreInLA review aggregate (Kirk Douglas)', href: 'https://www.theatreinla.com/luna-gale/4451/' },
+      { label: 'Newcity review', href: 'https://www.newcitystage.com/2014/01/27/review-luna-galegoodman-theatre/' },
+      { label: 'Around the Town Chicago review', href: 'http://www.aroundthetownchicago.com/theatre-reviews/luna-gale/' },
+      { label: 'Stage and Cinema review (Goodman)', href: 'http://www.stageandcinema.com/2014/01/30/luna-gale-goodman/' },
+      { label: 'Stage and Cinema review (Kirk Douglas)', href: 'https://stageandcinema.com/2014/12/03/luna-gale-ctg/' },
+      { label: 'ChicagoCritic review', href: 'https://chicagocritic.com/luna-gale/' },
+      { label: 'Chicago Tribune on Falls and LA', href: 'https://www.chicagotribune.com/2014/11/28/robert-falls-midwesterner-at-heart-warms-to-la-for-luna-gale/' },
+      { label: 'Playbill on the LA opening', href: 'https://playbill.com/article/award-winning-luna-gale-directed-by-robert-falls-opens-in-la-tonight-com-336359' },
+      { label: 'HowlRound conversation with Gilman and Falls', href: 'https://howlround.com/happenings/conversation-playwright-rebecca-gilman-director-robert-falls-goodman-theatre' },
+    ],
+    watchLinks: [
+      {
+        label: 'Luna Gale | Trailer',
+        href: 'https://www.youtube.com/watch?v=kYmLKut8MHQ',
+        description: 'Official Goodman trailer for the world premiere.',
+        thumbnail: lunaGaleShowArt,
+      },
+      {
+        label: 'Luna Gale | Behind the Scenes',
+        href: 'https://www.youtube.com/watch?v=3D1DJAITGk8',
+        description: 'Goodman behind-the-scenes feature on the production.',
+        thumbnail: lunaGalePoster,
+      },
+    ],
+    pressQuotes: [
+      { quote: 'The high-stakes Luna Gale had the Sunday night Goodman audience in its thrall', source: 'Chicago Tribune' },
+      { quote: 'Clearly, this writer and this actress, who is doing some of the best work of her career here, are simpatico', source: 'Chicago Tribune' },
+      { quote: 'I\'ve never seen Fisher create so moving a character. That\'s really what makes this play so out of the ordinary', source: 'Chicago Tribune' },
+      { quote: 'Provocative and impassioned... Fisher is a marvel', source: 'Chicago Sun-Times' },
+      { quote: 'Gilman\'s bristling dialogue continually pops', source: 'Chicago Sun-Times' },
+      { quote: 'Gilman provides a compelling and compassionate portrait of flawed people making impossible choices', source: 'Chicago Reader' },
+      { quote: 'Terrific ensemble... the best work I\'ve seen from Gilman', source: 'Time Out Chicago' },
+      { quote: 'Robert Falls\' top-notch production keeps the audience constantly alert and a little on edge', source: 'Entertainment Weekly' },
+      { quote: 'Gilman remains a force to be reckoned with', source: 'Entertainment Weekly' },
+      { quote: 'Falls\' direction is brisk, straightforward and reflects a master\'s ability to calibrate... the tension in this remarkable, well-written play', source: 'The Daily Herald' },
+      { quote: 'Fisher\'s is the kind of exquisitely ambivalent, intelligent performance we\'ve come to expect from this award-winning actress', source: 'The Daily Herald' },
+      { quote: 'Hugely entertaining', source: 'Newcity' },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',

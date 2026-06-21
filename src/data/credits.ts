@@ -47,7 +47,7 @@ export const creditGroups: CreditGroup[] = [
       { title: 'Finishing the Picture', venue: 'Goodman Theatre', year: '2004', note: 'World premiere — Arthur Miller’s final play' },
       { title: 'The Seagull', venue: 'Goodman Theatre', year: '2010' },
       { title: 'Measure for Measure', venue: 'Goodman Theatre', year: '2013' },
-      { title: 'Luna Gale', venue: 'Goodman Theatre', year: '2013', note: 'World premiere — Rebecca Gilman' },
+      { title: 'Luna Gale', venue: 'Goodman Theatre', year: '2014', note: 'World premiere — Rebecca Gilman' },
       { title: '2666', venue: 'Goodman Theatre', year: '2016', note: 'World premiere, adapted with Seth Bockley' },
       { title: 'Uncle Vanya', venue: 'Goodman Theatre', year: '2017', note: 'Adaptation by Annie Baker' },
       { title: 'An Enemy of the People', venue: 'Goodman Theatre', year: '2018', note: 'Falls’s own adaptation' },
