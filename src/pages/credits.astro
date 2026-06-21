@@ -2,7 +2,6 @@
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import BaseLayout from '@layouts/BaseLayout.astro';
-import MarqueeLights from '@components/MarqueeLights.astro';
 import { creditGroups } from '@data/credits';
 import { getProductionHref, getFeaturedThumbnail } from '@data/productions';
 import goodmanPhoto from '../images/venues/goodman-theatre.jpg';
@@ -65,7 +64,6 @@ const sectionPhotos: Record<string, { src: ImageMetadata; caption: string } | un
           </a>
         </div>
       </div>
-      <MarqueeLights class="mt-12" />
     </div>
   </section>
 

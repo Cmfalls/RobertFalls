@@ -1,40 +1,23 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
-import MarqueeLights from '@components/MarqueeLights.astro';
 import { pressItems } from '@data/press';
 import portraitPhoto from '../images/robert-falls-portrait.webp';
 import amadeusMozartPhoto from '../images/amadeus-mozart.jpg';
-import portraitAlt from '../images/robert-falls-portrait-2025-alt.jpg';
 ---
 
 <BaseLayout
   title="Press — Robert Falls"
   description="Press coverage of theatre director Robert Falls, from his 35-year tenure at the Goodman Theatre to his current freelance directing work."
 >
-  <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(138,19,36,0.38),_transparent_55%),radial-gradient(ellipse_at_bottom_right,_rgba(138,19,36,0.14),_transparent_45%)]"></div>
-    <div class="absolute inset-y-0 right-0 w-full lg:w-[55%] overflow-hidden pointer-events-none">
-      <Image
-        src={portraitAlt}
-        alt=""
-        aria-hidden="true"
-        widths={[360, 480, 640, 900]}
-        sizes="(max-width: 1023px) 100vw, 55vw"
-        quality={68}
-        loading="eager"
-        class="absolute inset-0 h-full w-full object-cover object-top opacity-[0.13] lg:opacity-[0.30]"
-      />
-      <div class="absolute inset-0 lg:hidden" style="background: linear-gradient(to right, rgba(12,9,8,0.88) 0%, rgba(12,9,8,0.65) 45%, rgba(12,9,8,0.88) 100%), linear-gradient(to bottom, rgba(12,9,8,0.45) 0%, transparent 45%, rgba(12,9,8,0.65) 100%);"></div>
-      <div class="absolute inset-0 hidden lg:block bg-gradient-to-r from-brand-ink via-brand-ink/58 to-brand-ink/12"></div>
-    </div>
+  <section class="bg-brand-oxbloodDeep text-brand-cream relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-oxblood/35 via-transparent to-brand-ink/65"></div>
     <div class="grain-overlay"></div>
     <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
       <div class="section-container !py-0">
         <p class="section-eyebrow text-brand-gold">Press Kit &amp; Coverage</p>
         <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">Press</h1>
       </div>
-      <MarqueeLights class="mt-12" />
     </div>
   </section>
 
