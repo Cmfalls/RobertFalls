@@ -119,6 +119,12 @@ import amadeusBanner from '../images/web-sourced/amadeus-steppenwolf-banner.png'
 import amadeusAudienceVideoThumb from '../images/web-sourced/amadeus-audience-video-thumb.jpg';
 import amadeusChicagoTribune from '../images/web-sourced/amadeus-chicago-tribune.webp';
 import amadeusRehearsalJoelMoorman from '../images/web-sourced/amadeus-rehearsal-joel-moorman.avif';
+import image2666ShowArt from '../images/2666/2666-show-art.png';
+import image2666Wide from '../images/2666/2666-090.jpg';
+import image2666House from '../images/2666/2666-245.jpg';
+import image2666Bar from '../images/2666/2666-347.jpg';
+import image2666Ensemble from '../images/2666/2666-04.jpg';
+import image2666Portrait from '../images/2666/2666-09.jpg';
 import image2666Goodman from '../images/web-sourced/2666-goodman.jpg';
 import cherryOrchardGoodmanThumb from '../images/web-sourced/cherry-orchard-goodman-thumb.jpg';
 import cherryOrchardReview from '../images/web-sourced/cherry-orchard-review.jpeg';
@@ -1822,46 +1828,226 @@ const productionSeeds: Record<string, ProductionSeed> = {
   '2666': {
     pageMode: 'featured',
     summary:
-      '2666 represents Falls at his most structurally ambitious: a five-and-a-half-hour world-premiere adaptation that turns the production page into a record of scale, duration, and literary adaptation.',
+      "2666 captures Falls at his most structurally audacious: a five-part, five-and-a-half-hour Goodman world premiere that turns Roberto Bolano's vast novel into a piece of marathon ensemble theatre.",
+    publicSummary:
+      "Falls and Seth Bockley adapt Roberto Bolano's monumental novel into a five-part Goodman event, using a 15-actor Chicago ensemble to carry nearly 80 roles through a dark, sprawling theatrical epic.",
+    synopsis:
+      "Across Europe, Mexico, and the United States, critics, academics, detectives, journalists, and drifters circle art, violence, and disappearance in a fractured journey through the modern world. The stage version treats the novel not as a single plot machine but as a five-part accumulation of stories, atmospheres, and moral shocks.",
+    fallsContext:
+      '2666 belongs in the featured tier because it condenses several defining Falls instincts into one title at once: literary adaptation, extreme duration, large-canvas ensemble staging, and Goodman-backed appetite for risk.',
     significance:
-      'A major late-career world premiere and one of the most formally ambitious adaptations in the archive.',
+      "A major late-career world premiere and one of the most formally ambitious productions anywhere in the archive, notable for its scale, multimedia language, and the sheer difficulty of translating Bolano's novel to the stage.",
     story:
-      'The source material here is sparse compared with the scale of the event itself, which is exactly why the system needs a richer production model. Even with limited media, 2666 belongs in the featured set because it compresses several defining Falls interests at once: novel-to-stage adaptation, marathon duration, and Goodman-backed world-premiere risk.',
+      "The local source packet makes clear that 2666 was treated as an event, not simply another slot in a season. Official materials describe a world-premiere special event with an all-Chicago ensemble of 15 actors playing nearly 80 roles across a five-part multimedia production shaped by video, projections, underscoring, and original music. That scale matters to Falls's archive because it shows him using theatrical accumulation as the point: the adaptation does not shrink Bolano down to polite prestige drama, it leans into excess, duration, and the instability of moving between continents, stories, and registers. Even beside other ambitious late-career titles, 2666 reads like a wager on what an institutional theatre can still dare to build.",
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
     images: [
       {
-        src: image2666Goodman,
-        alt: 'Henry Godinez onstage in 2666 at Goodman Theatre.',
-        caption: 'Henry Godinez in 2666 at Goodman Theatre. Photo: Liz Lauren via Goodman Theatre press room.',
+        src: image2666Wide,
+        alt: 'A wide stage image from 2666, with multiple performers arranged across a luminous scenic wall.',
+        caption: "A wide still that shows the production's scale, fragmentation, and dense stage picture.",
         orientation: 'landscape',
         priority: true,
         kind: 'production-still',
       },
+      {
+        src: image2666House,
+        alt: 'A lone figure stands in a sparse house-like set in 2666.',
+        caption: "One of the production's quieter stills, giving the page a counterweight to the more crowded ensemble scenes.",
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: image2666Bar,
+        alt: 'Performers gather in a saturated nightlife setting in 2666.',
+        caption: "A vivid still from one of the production's neon-lit social environments.",
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: image2666Ensemble,
+        alt: 'An ensemble scene from 2666 unfolds beneath bold lighting and scenic color.',
+        caption: "An ensemble image that foregrounds the adaptation's theatrical velocity rather than a single star turn.",
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: image2666Portrait,
+        alt: 'A stark character image from 2666 focuses on a single performer in blue light.',
+        caption: 'A more isolated, character-led frame from the Goodman staging.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: image2666Goodman,
+        alt: 'A production still from 2666 preserved via the Goodman Theatre press archive.',
+        caption: 'Press-room still preserved with the Goodman materials. Photo via Goodman Theatre.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: image2666ShowArt,
+        alt: 'Official 2666 show art with the title cracked across a red field.',
+        caption: 'Official Goodman show art for the world-premiere event.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
     ],
     collaborators: [
-      { role: 'Novelist', name: 'Roberto Bolaño' },
+      { role: 'Novelist', name: 'Roberto Bolano' },
+      { role: 'Co-adapter / director', name: 'Robert Falls' },
       { role: 'Co-adapter', name: 'Seth Bockley' },
-      { role: 'Adapter / director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Henry Godinez' },
+      { role: 'Cast highlight', name: 'Janet Ulrich Brooks' },
+      { role: 'Cast highlight', name: 'Sandra Delgado' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Feb 6 - Mar 13, 2016' },
+      { label: 'Venue', value: 'Owen Theatre, Goodman Theatre' },
+      { label: 'Runtime', value: '5 hr 30 min' },
+      { label: 'Scale', value: '15 actors, nearly 80 roles' },
+    ],
+    cast: [
+      { role: 'Ensemble', name: 'Charin Alvarez' },
+      { role: 'Ensemble', name: 'Janet Ulrich Brooks' },
+      { role: 'Ensemble', name: 'Yadira Correa' },
+      { role: 'Ensemble', name: 'Sandra Delgado' },
+      { role: 'Ensemble', name: 'Sean Fortunato' },
+      { role: 'Ensemble', name: 'Henry Godinez' },
+      { role: 'Ensemble', name: 'Lawrence Grimm' },
+      { role: 'Ensemble', name: 'Eric Lynch' },
+      { role: 'Ensemble', name: 'Mark L. Montgomery' },
+      { role: 'Ensemble', name: 'Juan F. Villa' },
+      { role: 'Ensemble', name: 'Jonathan Weir' },
+      { role: 'Ensemble', name: 'Nicole Wiesner' },
+    ],
+    creativeTeam: [
+      { role: 'Based on the novel by', name: 'Roberto Bolano' },
+      { role: 'Adapted and directed by', name: 'Robert Falls' },
+      { role: 'Co-adapted by', name: 'Seth Bockley' },
+      { role: 'Scenic Design', name: 'Walt Spangler' },
+      { role: 'Costume Design', name: 'Ana Kuzmanic' },
+      { role: 'Lighting Design', name: 'Aaron Spivey' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Original Music / underscoring', name: 'Mikhail Fiksel' },
+      { role: 'Projection Design', name: 'Shawn Sagady' },
+      { role: 'Dramaturgy', name: 'Neena Arndt' },
+      { role: 'Dramaturgy', name: 'Tanya Palmer' },
+      { role: 'Casting', name: 'Adam Belcuore' },
+      { role: 'Casting', name: 'Erica Sartini-Combs' },
+      { role: 'Production Stage Manager', name: 'Alden J. Vasquez' },
+      { role: 'Stage Manager', name: 'Joseph Drummond' },
     ],
     recognition: [
       {
-        label: 'World premiere',
-        detail: 'Credits describe it as a world premiere co-adapted with Seth Bockley.',
+        label: 'World-premiere event',
+        detail: 'Goodman billed the production as a world-premiere special event rather than routine repertory.',
       },
       {
-        label: 'Scale',
-        detail: 'Timeline notes the production as a five-and-a-half-hour adaptation.',
+        label: 'Marathon adaptation',
+        detail: "The five-and-a-half-hour runtime and five-part structure make it one of the archive's clearest examples of scale as artistic strategy.",
+      },
+      {
+        label: 'Large ensemble engine',
+        detail: 'Official materials highlight a 15-actor Chicago ensemble covering nearly 80 roles across the adaptation.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Bolano at full size',
+        detail: 'Instead of sanding the novel into a compact prestige drama, the staging embraces duration, fragmentation, and geographic sprawl.',
+      },
+      {
+        label: 'A Goodman risk worth foregrounding',
+        detail: 'The page documents a late-career Goodman production built around institutional ambition: length, multimedia design, and a difficult source text.',
+      },
+      {
+        label: 'Ensemble over iconography',
+        detail: 'The strongest surviving materials emphasize group motion, scenic worlds, and theatrical pressure rather than a single marquee performance.',
       },
     ],
     contextNotes: [
       {
         label: 'Adaptation context',
-        text: '2666 sits beside The Seagull and The Cherry Orchard as part of Falls’s archive of substantial literary adaptation work.',
+        text: "2666 sits alongside titles like The Seagull, The Cherry Orchard, and The Iceman Cometh as part of the archive's record of Falls working at literary and structural scale.",
       },
       {
-        label: 'Photo source',
-        text: 'Hero image is sourced from the Goodman Theatre press room and credited there to Liz Lauren.',
+        label: 'Source packet',
+        text: 'This page is built from the local 2016 production document, preserved Goodman archive materials, stage stills, show art, and linked review trails saved with the production folder.',
+      },
+      {
+        label: 'Credit normalization',
+        text: 'Where local materials listed broad ensemble rosters instead of character assignments, the page preserves that structure rather than inventing role breakdowns.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/2666-2/',
+        summary:
+          'The official production page frames 2666 as a world-premiere special event and preserves the house synopsis, run dates, and scale of the adaptation.',
+        note: 'Official production page',
+      },
+      {
+        source: 'Chicago Sun-Times',
+        href: 'https://chicago.suntimes.com/2016/2/17/18472099/labyrinthine-voyage-through-2666-a-bravura-feat-at-goodman-theatre',
+        summary:
+          'Sun-Times coverage positions the production as a bravura feat, matching the Goodman framing of 2666 as an undertaking of unusual theatrical ambition.',
+        note: 'Chicago review',
+      },
+      {
+        source: 'Newcity Stage',
+        href: 'https://www.newcitystage.com/2016/02/17/review-2666goodman-theatre/',
+        summary:
+          "Newcity treats the Goodman staging as one of the city's most demanding and rewarding live events, underscoring its status as a theatrical event rather than routine adaptation.",
+        note: 'Chicago review',
+      },
+      {
+        source: 'Stage and Cinema',
+        href: 'https://stageandcinema.com/2016/02/18/2666-goodman/',
+        summary:
+          'Another contemporary Chicago response preserved in the source document, useful for mapping how the production landed across local criticism.',
+        note: 'Chicago review',
+      },
+      {
+        source: 'Electric Literature',
+        href: 'https://electricliterature.com/robert-bolanos-epic-2666-is-now-a-five-hour-play/',
+        summary:
+          "Electric Literature focuses on the cultural novelty of moving Bolano's giant novel onto the stage and helps situate the production beyond Chicago theatre coverage.",
+        note: 'Adaptation context',
+      },
+      {
+        source: 'The Millions',
+        href: 'https://themillions.com/2016/03/confining-roberto-bolanos-2666-to-the-stage.html',
+        summary:
+          'A literary response that helps frame the adaptation question itself: what is gained and lost when a giant novel is compressed into live performance.',
+        note: 'Adaptation context',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/2666-2/' },
+      { label: 'Goodman press room', href: 'https://www.goodmantheatre.org/press-rooms/2666-2/' },
+      { label: 'New York Times video excerpt', href: 'https://www.nytimes.com/video/theater/100000004212620/excerpt-2666.html' },
+      { label: 'Theatre In Chicago listing', href: 'https://www.theatreinchicago.com/2666/8313/' },
+      { label: 'Chicago magazine feature', href: 'https://www.chicagomag.com/chicago-magazine/february-2016/goodman-theatre-2666/' },
+      { label: 'HowlRound essay', href: 'https://howlround.com/women-and-men-robert-falls-2666' },
+    ],
+    watchLinks: [
+      {
+        label: '2666 | New York Times excerpt',
+        href: 'https://www.nytimes.com/video/theater/100000004212620/excerpt-2666.html',
+        description: 'Preserved video excerpt from the Goodman production.',
+        thumbnail: image2666ShowArt,
+      },
+    ],
+    pressQuotes: [
+      {
+        quote: 'Equal parts madness, magic and luminous artistic genius.',
+        source: 'Chicago Sun-Times',
+      },
+      {
+        quote: 'The most challenging and rewarding theatrical event currently happening in our city.',
+        source: 'Newcity',
       },
     ],
     relatedLinks: seedLinks,
