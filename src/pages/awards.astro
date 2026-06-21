@@ -22,8 +22,17 @@ function workHref(work?: string) {
   description="Awards and honors received by theatre director Robert Falls, including a Tony Award, Drama Desk Award, Obie Award, and induction into the Theatre Hall of Fame."
 >
   <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(138,19,36,0.45),_transparent_52%),radial-gradient(ellipse_at_bottom_right,_rgba(138,19,36,0.18),_transparent_48%)]"></div>
-    <div class="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 font-display leading-none text-brand-gold/[0.06] pointer-events-none select-none" style="font-size: 28rem;" aria-hidden="true">✦</div>
+    <Image
+      src={rehearsalPhoto}
+      alt=""
+      aria-hidden="true"
+      widths={[640, 960, 1280, 1600]}
+      sizes="100vw"
+      quality={68}
+      loading="eager"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-[0.18] mix-blend-luminosity pointer-events-none"
+    />
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(138,19,36,0.5),_transparent_52%),radial-gradient(ellipse_at_bottom_right,_rgba(201,162,39,0.1),_transparent_48%),linear-gradient(150deg,rgba(12,9,8,0.92),rgba(27,18,14,0.82))]"></div>
     <div class="grain-overlay"></div>
     <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
       <div class="section-container !py-0">

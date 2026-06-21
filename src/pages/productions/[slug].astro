@@ -968,14 +968,31 @@ const productionSchema = [
       return card ? card.offsetWidth + 16 : 340;
     };
 
+    const scrollLeft = () => strip.scrollBy({ left: -cardWidth(), behavior: 'smooth' });
+    const scrollRight = () => strip.scrollBy({ left: cardWidth(), behavior: 'smooth' });
+
     const update = () => {
       prevBtn.disabled = strip.scrollLeft < 8;
       nextBtn.disabled = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 8;
     };
 
-    prevBtn.addEventListener('click', () => strip.scrollBy({ left: -cardWidth(), behavior: 'smooth' }));
-    nextBtn.addEventListener('click', () => strip.scrollBy({ left: cardWidth(), behavior: 'smooth' }));
+    prevBtn.addEventListener('click', scrollLeft);
+    nextBtn.addEventListener('click', scrollRight);
     strip.addEventListener('scroll', update, { passive: true });
+
+    // Arrow-key navigation when the cursor is over the media section
+    const section = strip.closest('section');
+    if (section) {
+      let hovered = false;
+      section.addEventListener('mouseenter', () => { hovered = true; });
+      section.addEventListener('mouseleave', () => { hovered = false; });
+      document.addEventListener('keydown', (e) => {
+        if (!hovered) return;
+        if (e.key === 'ArrowLeft') { e.preventDefault(); scrollLeft(); }
+        else if (e.key === 'ArrowRight') { e.preventDefault(); scrollRight(); }
+      });
+    }
+
     update();
   }
 </script>
