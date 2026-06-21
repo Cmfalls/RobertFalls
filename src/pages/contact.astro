@@ -10,6 +10,20 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
   description="Get in touch with Robert Falls for booking, media inquiries, and representation."
 >
   <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(138,19,36,0.38),_transparent_55%),radial-gradient(ellipse_at_bottom_right,_rgba(138,19,36,0.14),_transparent_45%)]"></div>
+    <div class="absolute inset-y-0 right-0 w-[52%] overflow-hidden hidden lg:block pointer-events-none">
+      <Image
+        src={rehearsalPhoto}
+        alt=""
+        aria-hidden="true"
+        widths={[480, 640, 900]}
+        sizes="52vw"
+        quality={68}
+        loading="eager"
+        class="absolute inset-0 h-full w-full object-cover object-center opacity-[0.28]"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-ink via-brand-ink/55 to-brand-ink/10"></div>
+    </div>
     <div class="grain-overlay"></div>
     <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
       <div class="section-container !py-0">

@@ -7,6 +7,8 @@ import { getProductionBySlug, getProductionHref, productionStats } from '@data/p
 import { pressItems } from '@data/press';
 import rehearsalPhoto from '../images/robert-falls-rehearsal.jpg';
 import kingLearPhoto from '../images/king-lear/king-lear-1.webp';
+import portraitAlt from '../images/robert-falls-portrait-2025-alt.jpg';
+import heroBackground from '../images/falls-rehearsal-recent.jpg';
 
 const featuredAwardNames = [
   'Tony Award, Best Direction of a Play',
@@ -99,7 +101,19 @@ const criticalPraise = criticalPraisePicks
 >
   <!-- HERO -->
   <section class="relative bg-brand-ink text-brand-cream overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-brand-oxbloodDeep/40 via-brand-ink to-brand-ink"></div>
+    <Image
+      src={heroBackground}
+      alt=""
+      aria-hidden="true"
+      widths={[640, 960, 1280, 1600, 2000]}
+      sizes="100vw"
+      quality={76}
+      loading="eager"
+      fetchpriority="high"
+      class="absolute inset-0 h-full w-full object-cover object-center opacity-24"
+    />
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_22%_20%,rgba(138,19,36,0.34),transparent_28%),linear-gradient(90deg,rgba(12,9,8,0.92)_0%,rgba(12,9,8,0.78)_38%,rgba(12,9,8,0.66)_60%,rgba(12,9,8,0.9)_100%),linear-gradient(to_b,rgba(52,14,20,0.42),rgba(12,9,8,0.76)_42%,rgba(12,9,8,1)_100%)]"></div>
+    <div class="absolute inset-0" style="box-shadow: inset 0 0 140px 24px rgba(12,9,8,0.42);"></div>
     <div class="grain-overlay"></div>
 
     <div class="relative pt-32 pb-10 md:pt-44 md:pb-14">
@@ -278,18 +292,33 @@ const criticalPraise = criticalPraisePicks
   </section>
 
   <!-- AWARDS PREVIEW -->
-  <section class="section-container">
-    <p class="section-eyebrow">Recognition</p>
-    <h2 class="section-heading">Awards &amp; Honors</h2>
-    <div class="grid sm:grid-cols-2 gap-px bg-brand-ink/10 mt-8">
-      {featuredAwards.map((award) => (
-        <div class="bg-brand-cream p-6">
-          <div class="font-display text-xl text-brand-ink">{award.name}</div>
-          {award.work && <div class="text-sm text-brand-ink/55 mt-1">{award.work}{award.year ? ` · ${award.year}` : ''}</div>}
-        </div>
-      ))}
+  <section class="relative overflow-hidden bg-brand-cream">
+    <div class="absolute inset-y-0 right-0 w-[44%] overflow-hidden hidden lg:block pointer-events-none">
+      <Image
+        src={portraitAlt}
+        alt=""
+        aria-hidden="true"
+        widths={[480, 640, 900]}
+        sizes="44vw"
+        quality={68}
+        loading="lazy"
+        class="absolute inset-0 h-full w-full object-cover object-top opacity-[0.20] mix-blend-multiply"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-cream via-brand-cream/65 to-transparent"></div>
     </div>
-    <a href="/awards" class="btn-outline mt-8 inline-flex">View All Awards</a>
+    <div class="section-container relative">
+      <p class="section-eyebrow">Recognition</p>
+      <h2 class="section-heading">Awards &amp; Honors</h2>
+      <div class="grid sm:grid-cols-2 gap-px bg-brand-ink/10 mt-8">
+        {featuredAwards.map((award) => (
+          <div class="bg-brand-cream p-6">
+            <div class="font-display text-xl text-brand-ink">{award.name}</div>
+            {award.work && <div class="text-sm text-brand-ink/55 mt-1">{award.work}{award.year ? ` · ${award.year}` : ''}</div>}
+          </div>
+        ))}
+      </div>
+      <a href="/awards" class="btn-outline mt-8 inline-flex">View All Awards</a>
+    </div>
   </section>
 
   <!-- PRESS PREVIEW -->

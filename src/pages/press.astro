@@ -1,7 +1,11 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import MarqueeLights from '@components/MarqueeLights.astro';
 import { pressItems } from '@data/press';
+import portraitPhoto from '../images/robert-falls-portrait.webp';
+import amadeusMozartPhoto from '../images/amadeus-mozart.jpg';
+import portraitAlt from '../images/robert-falls-portrait-2025-alt.jpg';
 ---
 
 <BaseLayout
@@ -10,6 +14,19 @@ import { pressItems } from '@data/press';
 >
   <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(138,19,36,0.38),_transparent_55%),radial-gradient(ellipse_at_bottom_right,_rgba(138,19,36,0.14),_transparent_45%)]"></div>
+    <div class="absolute inset-y-0 right-0 w-[55%] overflow-hidden hidden lg:block pointer-events-none">
+      <Image
+        src={portraitAlt}
+        alt=""
+        aria-hidden="true"
+        widths={[480, 640, 900]}
+        sizes="55vw"
+        quality={68}
+        loading="eager"
+        class="absolute inset-0 h-full w-full object-cover object-top opacity-[0.30]"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-ink via-brand-ink/58 to-brand-ink/12"></div>
+    </div>
     <div class="grain-overlay"></div>
     <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
       <div class="section-container !py-0">
@@ -38,24 +55,52 @@ import { pressItems } from '@data/press';
       <a
         href="/images/robert-falls-portrait.webp"
         download
-        class="flex items-center justify-between gap-4 border border-brand-ink/15 px-5 py-4 hover:border-brand-oxblood transition-colors group"
+        class="group block overflow-hidden border border-brand-ink/15 hover:border-brand-oxblood transition-colors"
       >
-        <div>
-          <div class="text-sm font-semibold text-brand-ink">Headshot</div>
-          <div class="text-xs text-brand-ink/65">High-resolution download</div>
+        <div class="aspect-[3/2] overflow-hidden bg-brand-ink/5 relative">
+          <Image
+            src={portraitPhoto}
+            alt="Robert Falls official headshot"
+            widths={[320, 480, 640]}
+            sizes="(max-width: 639px) 100vw, 50vw"
+            quality={76}
+            loading="lazy"
+            class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+          />
+          <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.5) 0%, transparent 55%);"></div>
         </div>
-        <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors">&darr;</span>
+        <div class="flex items-center justify-between gap-4 px-5 py-4">
+          <div>
+            <div class="text-sm font-semibold text-brand-ink">Headshot</div>
+            <div class="text-xs text-brand-ink/65">High-resolution download</div>
+          </div>
+          <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors text-lg">&darr;</span>
+        </div>
       </a>
       <a
         href="/images/amadeus-mozart.jpg"
         download
-        class="flex items-center justify-between gap-4 border border-brand-ink/15 px-5 py-4 hover:border-brand-oxblood transition-colors group"
+        class="group block overflow-hidden border border-brand-ink/15 hover:border-brand-oxblood transition-colors"
       >
-        <div>
-          <div class="text-sm font-semibold text-brand-ink">Production Photo</div>
-          <div class="text-xs text-brand-ink/65">Amadeus, Steppenwolf Theatre</div>
+        <div class="aspect-[3/2] overflow-hidden bg-brand-ink/5 relative">
+          <Image
+            src={amadeusMozartPhoto}
+            alt="Amadeus production photo, Steppenwolf Theatre"
+            widths={[320, 480, 640]}
+            sizes="(max-width: 639px) 100vw, 50vw"
+            quality={76}
+            loading="lazy"
+            class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+          />
+          <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.5) 0%, transparent 55%);"></div>
         </div>
-        <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors">&darr;</span>
+        <div class="flex items-center justify-between gap-4 px-5 py-4">
+          <div>
+            <div class="text-sm font-semibold text-brand-ink">Production Photo</div>
+            <div class="text-xs text-brand-ink/65">Amadeus, Steppenwolf Theatre</div>
+          </div>
+          <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors text-lg">&darr;</span>
+        </div>
       </a>
     </div>
 
