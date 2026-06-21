@@ -78,6 +78,11 @@ import shiningCityPortrait from '../images/shining-city/shining-city-portrait.we
 import shiningCityGoodman from '../images/shining-city/shining-city-goodman.webp';
 import shiningCityShowArt from '../images/shining-city/shining-city-show-art.png';
 import shiningCityDoor from '../images/shining-city/shining-city-door.jpg';
+import franksHomeEnsemble from '../images/franks-home/franks-home-ensemble.webp';
+import franksHomeWorktable from '../images/franks-home/franks-home-worktable.webp';
+import franksHomeShowArt from '../images/franks-home/franks-home-show-art.webp';
+import franksHomeWeller from '../images/franks-home/franks-home-weller.webp';
+import franksHomePortrait from '../images/franks-home/franks-home-portrait.jpg';
 import enemyShowArt from '../images/an-enemy-of-the-people/enemy-show-art.webp';
 import measureShowArt from '../images/measure-for-measure/measure-show-art.png';
 import measurePoster from '../images/measure-for-measure/measure-poster.jpg';
@@ -2594,42 +2599,138 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   "franks-home": {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
-      'Frank\'s Home gives Falls a Richard Nelson world premiere about Frank Lloyd Wright, using one American visionary\'s public brilliance and domestic failure as the basis for a late-life portrait.',
+      'Frank\'s Home turns Frank Lloyd Wright into a late-life family reckoning: a Richard Nelson world premiere in which artistic grandeur, domestic failure, and American self-mythology all share the same desert room.',
     publicSummary:
-      'A lyrical Richard Nelson world premiere studies Frank Lloyd Wright as artistic genius, family failure, and restless American myth.',
+      'Falls directs Richard Nelson\'s lyrical portrait of Frank Lloyd Wright, following the architect through family rupture, professional uncertainty, and the impossible hope of building a truer home.',
     synopsis:
-      'The play centers on Frank Lloyd Wright, tracing the gap between monumental artistic invention and the inability to create lasting safety or coherence at home. The result is a portrait of ambition shadowed by emotional and moral cost.',
+      'It is summer 1923. Frank Lloyd Wright has left Chicago for California, hoping to revive his career, repair his relationship with his adult children, and settle into a new life after the triumph of Tokyo\'s Imperial Hotel. But family grievances still burn, and when news arrives that the hotel may have been destroyed in an earthquake, the play turns into a reckoning over art, legacy, and what Wright was never able to build for the people closest to him.',
     fallsContext:
-      'This production sits inside the Goodman new-work line of the mid-2000s and shows Falls continuing to commission playwrights for biographical and historically inflected contemporary drama.',
+      'This page shows Falls working inside the Goodman new-play pipeline at a quieter but still ambitious scale: a historical-biographical chamber piece built around actor pressure, family argument, and the mythology of American genius.',
     significance:
-      'A 2006 Richard Nelson world premiere that broadens the archive\'s portrait of Falls as a director of new plays, not only revivals and transfers.',
+      'A 2006 Richard Nelson world premiere at Goodman that transferred intact to Playwrights Horizons, extending Falls\'s archive as a director of new plays built for Chicago and then carried east.',
     story:
-      'Frank\'s Home matters partly because of subject and partly because of scale. It takes an iconic American figure and reduces him to damage, memory, and human contradiction. That makes it a useful counterweight to the bigger theatrical machines elsewhere in the archive: still public, still historical, but quieter and more elegiac.',
-    venueAnchor: "Goodman's Owen Theatre",
+      'Frank\'s Home matters because it treats a monumental cultural figure as a private problem before it treats him as a legend. Nelson\'s script locates Wright at a moment when his public image still gleams but his family life is full of resentment, debt, vanity, and emotional wreckage. The local source trail also gives the production a fuller life than the old seed suggested: a Goodman world premiere in the Owen Theatre, a documented critical response across Chicago, and then an intact transfer to Playwrights Horizons in New York with Peter Weller, Harris Yulin, Mary Beth Fisher, Maggie Siff, and Jay Whittaker all moving with Falls. That transfer story helps the page read less like a one-off commission and more like a serious chapter in Falls\'s new-work record.',
+    venueAnchor: 'Goodman Theatre and Playwrights Horizons',
     eraLabel: 'National and international period',
+    images: [
+      {
+        src: franksHomeEnsemble,
+        alt: 'The ensemble of Frank\'s Home gathers on a sparse desert-like stage under a wide dusk sky.',
+        caption: 'A full-company still that makes the play\'s family geometry and open desert atmosphere visible at once.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'production-still',
+      },
+      {
+        src: franksHomeWorktable,
+        alt: 'Three men in Frank\'s Home sit and sketch on a sparse stage covered in pale ground.',
+        caption: 'A working image of the production\'s men thinking through legacy, architecture, and damage rather than sentimental reconciliation.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: franksHomeShowArt,
+        alt: 'Frank\'s Home show art featuring the production still of three men at work alongside the title.',
+        caption: 'Show art built from the production imagery and preserved in the local source folder.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
+        src: franksHomeWeller,
+        alt: 'Peter Weller as Frank Lloyd Wright sits in costume in a close production still from Frank\'s Home.',
+        caption: 'Peter Weller as Wright, carrying the production\'s uneasy blend of grandeur and exhaustion.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: franksHomePortrait,
+        alt: 'Peter Weller as Frank Lloyd Wright in a pale suit and white hat against a warm sky in Frank\'s Home.',
+        caption: 'A portrait image of Weller that leans harder into Wright as icon, not just father or patient.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+    ],
     collaborators: [
       { role: 'Playwright', name: 'Richard Nelson' },
       { role: 'Director', name: 'Robert Falls' },
-      { role: 'Subject', name: 'Frank Lloyd Wright' },
+      { role: 'Cast highlight', name: 'Peter Weller' },
+      { role: 'Cast highlight', name: 'Harris Yulin' },
+      { role: 'Cast highlight', name: 'Mary Beth Fisher' },
+      { role: 'Cast highlight', name: 'Maggie Siff' },
     ],
     quickFacts: [
-      { label: 'Run', value: 'Nov 25 - Dec 23, 2006' },
-      { label: 'Venue', value: "Goodman's Owen Theatre" },
+      { label: 'World premiere', value: 'Nov 25 - Dec 23, 2006' },
+      { label: 'Venue', value: 'Owen Theatre, Goodman Theatre' },
       { label: 'Runtime', value: '1 hr 45 min' },
-      { label: 'Status', value: 'World premiere' },
+      { label: 'Afterlife', value: 'Playwrights Horizons, Jan - Feb 2007' },
+    ],
+    cast: [
+      { role: 'Frank Lloyd Wright', name: 'Peter Weller' },
+      { role: 'Louis Sullivan', name: 'Harris Yulin' },
+      { role: 'Miriam Noel', name: 'Mary Beth Fisher' },
+      { role: 'Catherine', name: 'Maggie Siff' },
+      { role: 'William', name: 'Jeremy Strong' },
+      { role: 'Lloyd', name: 'Jay Whittaker' },
+      { role: 'Kenneth', name: 'Chris Henry Coffey' },
+      { role: 'Helen Girvin', name: 'Holley Fain' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Richard Nelson' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Thomas Lynch' },
+      { role: 'Costume Design', name: 'Susan Hilferty' },
+      { role: 'Lighting Design', name: 'Michael Philippi' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Dramaturg', name: 'Tom Creamer' },
+      { role: 'Casting', name: 'Adam Belcuore' },
+      { role: 'Production Stage Manager', name: 'T. Paul Lynch' },
     ],
     recognition: [
       {
         label: 'World premiere',
-        detail: 'The official Goodman page identifies the play as a world premiere and notes its association with Playwrights Horizons.',
+        detail: 'Goodman billed the production as a world premiere and linked it directly to Playwrights Horizons.',
+      },
+      {
+        label: 'Intact New York transfer',
+        detail: 'TheaterMania\'s announcement confirms the production moved to Playwrights Horizons with Falls, Weller, Yulin, Fisher, Siff, and Whittaker intact from Chicago.',
+      },
+      {
+        label: 'Strong central performance',
+        detail: 'The preserved Chicago review trail repeatedly singles out Peter Weller as the production\'s animating force.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'American genius as family damage',
+        detail: 'The page belongs in the archive because it reduces a giant public figure to the emotional cost of his own ambition, which is a very Falls-compatible dramatic lens.',
+      },
+      {
+        label: 'A Goodman-to-New York new-play track',
+        detail: 'Rather than arriving as a finished transfer from elsewhere, Frank\'s Home shows Goodman functioning as the originating engine for a new historical drama.',
+      },
+      {
+        label: 'Biographical chamber piece',
+        detail: 'Even with its famous subject, the production works less as spectacle than as an actor-driven debate about art, legacy, resentment, and self-invention.',
       },
     ],
     contextNotes: [
       {
         label: 'Official framing',
-        text: 'Goodman presents the production as a lyrical, heartbreaking portrait of Wright as visionary artist and failed family man.',
+        text: 'Goodman presents the play as a lyrical, heartbreaking portrait of Wright as a visionary who could create a new architectural vocabulary but not a durable home for his own family.',
+      },
+      {
+        label: 'Story setting',
+        text: 'The local production document places the action in summer 1923, after Wright has gone to California and as news arrives that his Imperial Hotel in Tokyo may have collapsed in an earthquake.',
+      },
+      {
+        label: 'Transfer history',
+        text: 'The source packet makes clear that Playwrights Horizons picked up the production immediately after the Goodman run, reinforcing the page as a real transfer story rather than an isolated commission.',
+      },
+      {
+        label: 'Source package',
+        text: 'The folder includes multiple production stills, title treatment art, cast-and-creative roster screenshots, a full compiled production document, Chicago review aggregation, and the New York transfer announcement.',
       },
     ],
     reviews: [
@@ -2637,12 +2738,84 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Goodman Theatre',
         href: 'https://www.goodmantheatre.org/show/franks-home/',
         summary:
-          'The official page presents the production as a Richard Nelson world premiere about Frank Lloyd Wright and highlights its biographical, emotionally reflective angle.',
+          'The official page frames the production as a world-premiere Richard Nelson play about Frank Lloyd Wright, his adult children, and the emotional cost of visionary ambition.',
+        note: 'Official production page',
+      },
+      {
+        source: 'Theatre In Chicago',
+        href: 'https://www.theatreinchicago.com/franks-home/3300/',
+        summary:
+          'The source document preserves a full Chicago review roundup showing a mixed but engaged local response to the Goodman premiere.',
+        note: 'Review aggregate',
+      },
+      {
+        source: 'Chicago Tribune',
+        href: 'https://www.theatreinchicago.com/franks-home/3300/',
+        summary:
+          'Chris Jones called it a tightly focused Chekhovian drama that reveals Wright\'s vulnerability, resentment, and existential despair without reducing him to biography alone.',
+        note: 'Quoted via review roundup',
+      },
+      {
+        source: 'Daily Herald',
+        href: 'https://www.theatreinchicago.com/franks-home/3300/',
+        summary:
+          'Daily Herald praised the cast and described Falls\'s direction as brisk and spare, sustaining emotional tension without wallowing in despair.',
+        note: 'Quoted via review roundup',
+      },
+      {
+        source: 'Chicago Reader',
+        href: 'https://www.theatreinchicago.com/franks-home/3300/',
+        summary:
+          'The Reader tied the Goodman production\'s success to its performances and to Peter Weller\'s ability to render Wright both iconic and painfully human.',
+        note: 'Quoted via review roundup',
+      },
+      {
+        source: 'TheaterMania',
+        href: 'https://www.theatermania.com/news/franks-home_9954/',
+        summary:
+          'Transfer coverage that confirms the New York move and helps document how the Goodman world premiere was positioned for a second life at Playwrights Horizons.',
+        note: 'Transfer announcement',
+      },
+      {
+        source: 'Variety',
+        href: 'https://variety.com/2006/legit/reviews/frank-s-home-2-1200511648/',
+        summary:
+          'The local source packet preserves Variety coverage as part of the play\'s broader professional reception beyond Chicago.',
+        note: 'Trade review',
       },
     ],
-    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/franks-home/' }],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/franks-home/' },
+      { label: 'Playbill photo call', href: 'https://playbill.com/article/photo-call-franks-home-com-138196' },
+      { label: 'Theatre In Chicago review roundup', href: 'https://www.theatreinchicago.com/franks-home/3300/' },
+      { label: 'TheaterMania transfer announcement', href: 'https://www.theatermania.com/news/franks-home_9954/' },
+      { label: 'Variety review', href: 'https://variety.com/2006/legit/reviews/frank-s-home-2-1200511648/' },
+      { label: 'CurtainUp review', href: 'http://www.curtainup.com/frankshomechi.html' },
+    ],
+    pressQuotes: [
+      {
+        quote: 'A thoroughly invigorating, tightly focused piece of Chekhovian drama.',
+        source: 'Chicago Tribune',
+      },
+      {
+        quote: 'This cast is exemplary, and Robert Falls\' direction is brisk and spare.',
+        source: 'Daily Herald',
+      },
+      {
+        quote: 'A sensitive portrait of a middle-aged man.',
+        source: 'TheaterMania',
+      },
+      {
+        quote: 'The Wright stuff to please an audience in this New York-bound world premiere.',
+        source: 'Windy City Times',
+      },
+      {
+        quote: 'A stellar cast of players.',
+        source: 'Epoch Times',
+      },
+    ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   dollhouse: {
     pageMode: 'archive',
