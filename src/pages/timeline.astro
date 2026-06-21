@@ -16,12 +16,12 @@ function decadeOf(yearStr: string): string {
   return '2020s';
 }
 
-const decadeOrder = ['1954–79', '1980s', '1990s', '2000s', '2010s', '2020s'];
+const decadeOrder = ['2020s', '2010s', '2000s', '1990s', '1980s', '1954–79'];
 const defaultOpenDecades = new Set(['2010s', '2020s']);
 
 const groups = decadeOrder
   .map((decade) => {
-    const entries = timelineEntries.filter((e) => decadeOf(e.year) === decade);
+    const entries = timelineEntries.filter((e) => decadeOf(e.year) === decade).reverse();
     const previews = entries
       .map((e) => (e.category === 'Production' ? getFeaturedThumbnail(e.title) : null))
       .filter((img): img is NonNullable<typeof img> => img !== null)
