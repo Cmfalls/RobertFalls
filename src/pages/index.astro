@@ -2,22 +2,9 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import MarqueeLights from '@components/MarqueeLights.astro';
-import { awards } from '@data/awards';
 import { getProductionBySlug, getProductionHref, productionStats } from '@data/productions';
-import { pressItems } from '@data/press';
 import rehearsalPhoto from '../images/robert-falls-rehearsal.jpg';
-import kingLearPhoto from '../images/king-lear/king-lear-1.webp';
-import portraitAlt from '../images/robert-falls-portrait-2025-alt.jpg';
 import heroBackground from '../images/falls-rehearsal-recent.jpg';
-
-const featuredAwardNames = [
-  'Tony Award, Best Direction of a Play',
-  'Special Tony Award, Outstanding Regional Theatre',
-  'Drama Desk Award, Outstanding Director of a Play',
-  'Theater Hall of Fame Induction',
-];
-const featuredAwards = featuredAwardNames.map((name) => awards.find((a) => a.name === name)!);
-const featuredPress = pressItems.slice(0, 3);
 
 // Editorially curated, but every displayed field (title, image, dates) is pulled
 // live from the production archive so this can never drift out of sync with it.
@@ -74,24 +61,6 @@ const selectedProductions = gallerySlugs
   })
   .filter((p): p is NonNullable<typeof p> => p !== null);
 
-// Critical praise wall: each entry names a real production and the index of a real,
-// already-sourced quote on that page, so the homepage can never show invented praise.
-const criticalPraisePicks = [
-  { slug: 'the-iceman-cometh', index: 1 },
-  { slug: 'luna-gale', index: 2 },
-  { slug: 'desire-under-the-elms', index: 1 },
-  { slug: 'pamplona', index: 0 },
-  { slug: 'the-seagull', index: 1 },
-  { slug: 'the-winters-tale', index: 1 },
-];
-const criticalPraise = criticalPraisePicks
-  .map(({ slug, index }) => {
-    const production = getProductionBySlug(slug);
-    const pressQuote = production?.pressQuotes[index];
-    if (!production || !pressQuote) return null;
-    return { quote: pressQuote.quote, source: pressQuote.source, title: production.title, href: getProductionHref(production.title) };
-  })
-  .filter((p): p is NonNullable<typeof p> => p !== null);
 ---
 
 <BaseLayout
@@ -263,86 +232,4 @@ const criticalPraise = criticalPraisePicks
     </div>
   </section>
 
-  <!-- CRITICAL PRAISE -->
-  <section class="relative overflow-hidden bg-brand-cream">
-    <Image
-      src={kingLearPhoto}
-      alt=""
-      aria-hidden="true"
-      widths={[640, 960, 1280, 1600]}
-      sizes="100vw"
-      quality={60}
-      loading="lazy"
-      class="absolute inset-0 w-full h-full object-cover object-center opacity-[0.07] mix-blend-multiply pointer-events-none"
-    />
-    <div class="section-container relative">
-      <p class="section-eyebrow">Five Decades of Notices</p>
-      <h2 class="section-heading">Critical Praise<span class="text-brand-oxblood">.</span></h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-brand-ink/10 mt-8">
-        {criticalPraise.map((item) => (
-          <a href={item.href} class="bg-brand-cream p-6 hover:bg-white transition-colors group flex flex-col">
-            <p class="font-serif italic text-brand-ink text-lg leading-snug flex-1">&ldquo;{item.quote}&rdquo;</p>
-            <div class="mt-4 pt-4 border-t border-dashed border-brand-ink/15">
-              <div class="text-xs uppercase tracking-[0.16em] text-brand-oxblood font-semibold">{item.source}</div>
-              <div class="text-sm text-brand-ink/55 mt-1 group-hover:text-brand-oxblood transition-colors">{item.title}</div>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- AWARDS PREVIEW -->
-  <section class="relative overflow-hidden bg-brand-cream">
-    <div class="absolute inset-y-0 right-0 w-[44%] overflow-hidden hidden lg:block pointer-events-none">
-      <Image
-        src={portraitAlt}
-        alt=""
-        aria-hidden="true"
-        widths={[480, 640, 900]}
-        sizes="44vw"
-        quality={68}
-        loading="lazy"
-        class="absolute inset-0 h-full w-full object-cover object-top opacity-[0.20] mix-blend-multiply"
-      />
-      <div class="absolute inset-0 bg-gradient-to-r from-brand-cream via-brand-cream/65 to-transparent"></div>
-    </div>
-    <div class="section-container relative">
-      <p class="section-eyebrow">Recognition</p>
-      <h2 class="section-heading">Awards &amp; Honors</h2>
-      <div class="grid sm:grid-cols-2 gap-px bg-brand-ink/10 mt-8">
-        {featuredAwards.map((award) => (
-          <div class="bg-brand-cream p-6 hover:bg-white transition-colors group">
-            <div class="flex items-start justify-between gap-3">
-              <span class="text-brand-gold text-base leading-none mt-0.5">✦</span>
-              {award.year && <span class="text-[11px] uppercase tracking-[0.16em] text-brand-ink/45 font-display">{award.year}</span>}
-            </div>
-            <div class="font-display text-xl text-brand-ink mt-3 group-hover:text-brand-oxblood transition-colors leading-snug">{award.name}</div>
-            {award.work && <div class="text-sm text-brand-ink/55 mt-1.5">{award.work}</div>}
-          </div>
-        ))}
-      </div>
-      <a href="/awards" class="btn-outline mt-8 inline-flex">View All Awards</a>
-    </div>
-  </section>
-
-  <!-- PRESS PREVIEW -->
-  <section class="bg-brand-ink text-brand-cream">
-    <div class="section-container">
-      <p class="section-eyebrow text-brand-gold">In the Press</p>
-      <h2 class="section-heading text-brand-cream">Recent Coverage</h2>
-      <div class="space-y-1 mt-8">
-        {featuredPress.map((item) => (
-          <a href={item.url} target="_blank" rel="noopener" class="flex items-center justify-between py-5 border-b border-brand-cream/10 group">
-            <div>
-              <div class="text-xs uppercase tracking-[0.18em] text-brand-gold mb-1">{item.outlet} {item.date && `· ${item.date}`}</div>
-              <div class="font-serif text-lg text-brand-cream group-hover:text-brand-goldBright transition-colors">{item.title}</div>
-            </div>
-            <span class="text-brand-cream/55 group-hover:text-brand-goldBright transition-colors">↗</span>
-          </a>
-        ))}
-      </div>
-      <a href="/press" class="btn-primary mt-10 inline-flex">All Press Coverage</a>
-    </div>
-  </section>
 </BaseLayout>

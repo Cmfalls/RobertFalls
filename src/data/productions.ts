@@ -65,6 +65,7 @@ import pamplona1 from '../images/pamplona/pamplona-1.jpg';
 import pamplona2 from '../images/pamplona/pamplona-2.jpg';
 import pamplona3 from '../images/pamplona/pamplona-3.jpg';
 import pamplona4 from '../images/pamplona/pamplona-4.jpg';
+import pamplona5 from '../images/pamplona/pamplona-5.jpg';
 import pamplonaParis from '../images/pamplona/pamplona-paris.webp';
 import pamplonaPhone from '../images/pamplona/pamplona-phone.jpg';
 import mollySweeneyShowArt from '../images/molly-sweeney/molly-sweeney-show-art.jpg';
@@ -88,6 +89,8 @@ import desireUnderTheElmsTable from '../images/desire-under-the-elms/desire-unde
 import desireUnderTheElmsLovers from '../images/desire-under-the-elms/desire-under-the-elms-lovers.jpg';
 import desireUnderTheElmsAbbieEphraim from '../images/desire-under-the-elms/desire-under-the-elms-abbie-ephraim.jpg';
 import desireUnderTheElmsArrival from '../images/desire-under-the-elms/desire-under-the-elms-arrival.jpg';
+import desireUnderTheElms6 from '../images/desire-under-the-elms/desire-under-the-elms-6.jpg';
+import dollhouseShowArt from '../images/dollhouse/dollhouse-show-art.png';
 import enemyShowArt from '../images/an-enemy-of-the-people/enemy-show-art.webp';
 import measureShowArt from '../images/measure-for-measure/measure-show-art.png';
 import measurePoster from '../images/measure-for-measure/measure-poster.jpg';
@@ -98,6 +101,7 @@ import measure4 from '../images/measure-for-measure/measure-4.jpg';
 import measure5 from '../images/measure-for-measure/measure-5.jpg';
 import measure6 from '../images/measure-for-measure/measure-6.jpg';
 import measure7 from '../images/measure-for-measure/measure-7.jpg';
+import measure8 from '../images/measure-for-measure/measure-8.jpg';
 import blindDateShowArt from '../images/blind-date/blind-date-show-art.png';
 import blindDate1 from '../images/blind-date/blind-date-1.jpg';
 import blindDate2 from '../images/blind-date/blind-date-2.jpg';
@@ -119,6 +123,8 @@ import donGiovanni3 from '../images/don-giovanni/don-giovanni-3.jpg';
 import donGiovanni4 from '../images/don-giovanni/don-giovanni-4.jpg';
 import donGiovanni5 from '../images/don-giovanni/don-giovanni-5.jpg';
 import donGiovanni6 from '../images/don-giovanni/don-giovanni-6.jpg';
+import donGiovanni7 from '../images/don-giovanni/don-giovanni-7.jpg';
+import donGiovanni8 from '../images/don-giovanni/don-giovanni-8.jpg';
 import donGiovanni2019Revival from '../images/don-giovanni/don-giovanni-2019-revival.jpg';
 import americanBuffaloPlaybill from '../images/american-buffalo/american-buffalo-playbill.jpg';
 import americanBuffaloLogo from '../images/american-buffalo/american-buffalo-logo.png';
@@ -145,6 +151,7 @@ import kingLear7 from '../images/king-lear/king-lear-7.webp';
 import kingLear8 from '../images/king-lear/king-lear-8.webp';
 import kingLear9 from '../images/king-lear/king-lear-9.jpg';
 import kingLear10 from '../images/king-lear/king-lear-10.jpg';
+import kingLear11 from '../images/king-lear/king-lear-11.jpg';
 import kingLearCandid from '../images/king-lear/king-lear-candid.jpg';
 import kingLearTitle from '../images/king-lear/king-lear-title.webp';
 import longDaysJourneyPlaybill from '../images/long-days-journey/long-days-journey-playbill.jpg';
@@ -498,7 +505,7 @@ function recognitionFromHighlight(highlight: string): ProductionRecognition | nu
   return null;
 }
 
-const priorityFeaturedTitles = [
+export const priorityFeaturedTitles = [
   'Amadeus',
   'Holiday',
   'Swing State',
@@ -513,7 +520,7 @@ const priorityFeaturedTitles = [
   'The Seagull',
 ];
 
-const priorityFeaturedSlugs = new Set(priorityFeaturedTitles.map((title) => slugify(title)));
+export const priorityFeaturedSlugs = new Set(priorityFeaturedTitles.map((title) => slugify(title)));
 
 const seedLinks: ProductionRelatedLink[] = [
   { label: 'Production library', href: '/productions', type: 'library' },
@@ -1165,6 +1172,20 @@ const productionSeeds: Record<string, ProductionSeed> = {
         alt: 'Donna Elvira, Don Ottavio, and Donna Anna stand together in Don Giovanni at Lyric Opera.',
         caption: 'Ana María Martínez (Donna Elvira), Antonio Poli (Don Ottavio), and Marina Rebeka (Donna Anna) at the Lyric premiere. Photo: Todd Rosenberg.',
         orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: donGiovanni7,
+        alt: 'Masetto brandishes a knife while Zerlina, Leporello, and Don Ottavio react in Don Giovanni.',
+        caption: 'Michael Sumuel, Andriana Chuchman, Kyle Ketelsen, and Antonio Poli in one of the staging\'s sharpest ensemble confrontations. Photo: Todd Rosenberg.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: donGiovanni8,
+        alt: 'Donna Anna stands over a seated Don Ottavio against a towering wall of black roses in Don Giovanni.',
+        caption: 'Marina Rebeka and Antonio Poli framed by one of the production\'s most stylized noir images. Photo: Todd Rosenberg.',
+        orientation: 'portrait',
         kind: 'production-still',
       },
       {
@@ -2531,7 +2552,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'the-speed-of-darkness': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'The Speed of Darkness is one of the earliest entries in Falls\'s Goodman-to-Broadway transfer record: a 1989 Steve Tesich world premiere about two Vietnam veterans confronting a buried toxic-waste crime, brought to Broadway\'s Belasco Theatre in 1991.',
     publicSummary:
@@ -2591,8 +2612,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Archive note',
-        text: 'This page currently relies on a small set of surviving materials and established production references, so it is presented as a tighter archive profile rather than a gallery-heavy feature.',
+        label: 'Source note',
+        text: 'This page relies on a compact surviving source trail, so the editorial framing is fuller than the image record.',
       },
     ],
     externalSources: [
@@ -2602,7 +2623,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'the-rose-tattoo': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'The Rose Tattoo is Falls\'s 1995 Broadway revival of Tennessee Williams\'s Sicilian-Gulf-Coast comedy-drama, with Mercedes Ruehl and Anthony LaPaglia leading a production that drew a Tony nomination for Best Revival.',
     publicSummary:
@@ -2667,8 +2688,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
         text: 'A third Broadway revival of The Rose Tattoo, starring Marisa Tomei, opened at the American Airlines Theatre in 2019 directed by Trip Cullman - not Robert Falls. An earlier site record had misattributed that production to Falls; it has been removed from his credits.',
       },
       {
-        label: 'Archive note',
-        text: 'This page currently relies on a small set of surviving materials and established production references, so it is presented as a tighter archive profile rather than a gallery-heavy feature.',
+        label: 'Source note',
+        text: 'This page is built from a concentrated source packet rather than a large surviving photo archive, so the image record remains intentionally lean.',
       },
     ],
     externalSources: [
@@ -2678,7 +2699,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'the-night-of-the-iguana': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'The Night of the Iguana carried Falls\'s 1994 Goodman staging of Tennessee Williams\'s drama to Broadway in 1996, with William Petersen, Marsha Mason, and Cherry Jones leading a defrocked-priest story of breakdown and reluctant grace.',
     publicSummary:
@@ -2732,8 +2753,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Archive note',
-        text: 'This page currently relies on a small set of surviving materials and established production references, so it is presented as a tighter archive profile rather than a gallery-heavy feature.',
+        label: 'Source note',
+        text: 'The surviving materials are concentrated around the transfer history, cast, and Broadway record rather than a large image archive.',
       },
     ],
     externalSources: [
@@ -2743,7 +2764,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'the-young-man-from-atlanta': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'The Young Man from Atlanta brought Falls together with Horton Foote\'s Pulitzer Prize-winning play, staging it at the Goodman with Rip Torn and Shirley Knight before carrying the same cast to Broadway in 1997.',
     publicSummary:
@@ -2801,8 +2822,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Archive note',
-        text: 'This page currently relies on a small set of surviving materials and established production references, so it is presented as a tighter archive profile rather than a gallery-heavy feature.',
+        label: 'Source note',
+        text: 'The page is anchored by cast, awards, and transfer documentation; surviving visual material is far slimmer than for the Goodman productions with local photography.',
       },
     ],
     externalSources: [
@@ -2891,7 +2912,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'talk-radio': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'Talk Radio places Falls inside a Broadway revival of Eric Bogosian\'s media-age pressure cooker, built around Liev Schreiber\'s unraveling shock-jock performance.',
     publicSummary:
@@ -2951,8 +2972,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Archive note',
-        text: 'This page is anchored by the credits record, surviving Playbill material, and established Broadway references, so it is intentionally presented as a compact archive page rather than a full visual feature.',
+        label: 'Source note',
+        text: 'This page is anchored by the credits record, surviving Playbill material, and period review coverage, with a slimmer visual trail than the Goodman-originated productions.',
       },
     ],
     reviews: [
@@ -3403,7 +3424,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   dollhouse: {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'Dollhouse is a key Rebecca Gilman adaptation in the Goodman years, pulling Ibsen\'s domestic revolt into explicitly contemporary social language without giving up the force of the original break.',
     publicSummary:
@@ -3418,6 +3439,16 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'This entry matters because it shows how the Goodman under Falls handled canonical material through living playwrights instead of only through direct revival. Gilman\'s version reframes Ibsen through contemporary speech and social pressure, which makes the page an important predecessor to later archive entries where Falls uses adaptation as a central method.',
     venueAnchor: "Goodman's Albert Theatre",
     eraLabel: 'National and international period',
+    images: [
+      {
+        src: dollhouseShowArt,
+        alt: 'Show art for Dollhouse at Goodman Theatre, with a red patterned Victorian room and the title in white serif text.',
+        caption: 'Official Goodman show art for Rebecca Gilman\'s adaptation, used here as the page\'s primary surviving visual anchor.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'art',
+      },
+    ],
     collaborators: [
       { role: 'Playwright / adapter', name: 'Rebecca Gilman' },
       { role: 'Original playwright', name: 'Henrik Ibsen' },
@@ -4816,6 +4847,13 @@ const productionSeeds: Record<string, ProductionSeed> = {
         orientation: 'landscape',
         kind: 'rehearsal',
       },
+      {
+        src: pamplona5,
+        alt: 'Stacy Keach stands alone in the hotel-room set of Pamplona with projected posters and bullfighting imagery surrounding him.',
+        caption: 'A fuller stage tableau showing how the production turned Hemingway\'s room into a memory chamber of posters, projections, and unfinished bravado.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
     ],
     collaborators: [
       { role: 'Playwright', name: 'Jim McGrath' },
@@ -5551,6 +5589,13 @@ const productionSeeds: Record<string, ProductionSeed> = {
         kind: 'production-still',
       },
       {
+        src: kingLear11,
+        alt: 'Kent and another figure kneel beside a collapsed Lear on the floor in King Lear.',
+        caption: 'Stacy Keach at the production\'s most exhausted register, with the kingdom already beyond repair.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
         src: kingLearTitle,
         alt: 'Orange title treatment text reading King Lear on a black background.',
         caption: 'Title treatment art for the production.',
@@ -5692,7 +5737,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'a-life-in-the-theatre': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'A Life in the Theatre gives Falls a smaller, actor-centered David Mamet chamber piece, staged as part of Goodman\'s 2006 Mamet festival, that watches an aging star and a young up-and-comer trade mentorship for rivalry across the length of a dressing-room friendship.',
     publicSummary:
@@ -5816,7 +5861,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'american-buffalo': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'American Buffalo is one of the most candid entries in the archive: a star-driven 2008 Broadway revival of David Mamet\'s junk-shop classic that closed after just 20 previews and 8 performances under a wave of largely negative reviews.',
     publicSummary:
@@ -6096,6 +6141,13 @@ const productionSeeds: Record<string, ProductionSeed> = {
         orientation: 'landscape',
         kind: 'production-still',
       },
+      {
+        src: desireUnderTheElms6,
+        alt: 'Brian Dennehy embraces Carla Gugino from behind in Desire Under the Elms.',
+        caption: 'Abbie and Ephraim in one of the production\'s most unsettling images of possession, intimacy, and control.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
     ],
     collaborators: [
       { role: 'Playwright', name: 'Eugene O\'Neill' },
@@ -6358,6 +6410,13 @@ const productionSeeds: Record<string, ProductionSeed> = {
         src: measure7,
         alt: 'Sean Fortunato as Elbow, Kevin Fugaro as Claudio, and Travis A. Knight in an ensemble scene from Measure for Measure.',
         caption: 'Sean Fortunato (Elbow), Kevin Fugaro (Claudio), and Travis A. Knight (Ensemble) in one of the production\'s street scenes.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: measure8,
+        alt: 'Three men escort a struggling prisoner through a dark street scene in Measure for Measure.',
+        caption: 'One of the production\'s rougher street-tableau images, reinforcing the staging\'s police-state pressure and urban grime.',
         orientation: 'landscape',
         kind: 'production-still',
       },
