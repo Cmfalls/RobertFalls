@@ -147,6 +147,13 @@ import kingLear9 from '../images/king-lear/king-lear-9.jpg';
 import kingLear10 from '../images/king-lear/king-lear-10.jpg';
 import kingLearCandid from '../images/king-lear/king-lear-candid.jpg';
 import kingLearTitle from '../images/king-lear/king-lear-title.webp';
+import longDaysJourneyPlaybill from '../images/long-days-journey/long-days-journey-playbill.jpg';
+import nightOfTheIguanaPlaybill from '../images/night-of-the-iguana/night-of-the-iguana-playbill.jpg';
+import roseTattooPlaybill from '../images/rose-tattoo/rose-tattoo-playbill.jpg';
+import speedOfDarknessPlaybill from '../images/speed-of-darkness/speed-of-darkness-playbill.jpg';
+import youngManFromAtlantaPlaybill from '../images/young-man-from-atlanta/young-man-from-atlanta-playbill.jpg';
+import talkRadioPlaybill from '../images/talk-radio/talk-radio-playbill.jpg';
+import aidaPlaybill from '../images/aida/aida-playbill.jpg';
 import swingState1 from '../images/swing-state-1.jpg';
 import swingState2 from '../images/swing-state-2.jpg';
 import swingState3 from '../images/swing-state-3.jpg';
@@ -1655,6 +1662,13 @@ const productionSeeds: Record<string, ProductionSeed> = {
         priority: true,
         kind: 'production-still',
       },
+      {
+        src: aidaPlaybill,
+        alt: 'Playbill cover for Aida at the Palace Theatre, with gold Egyptian-profile key art on a blue background.',
+        caption: 'Playbill cover art for the Palace Theatre engagement.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
     ],
     collaborators: [
       { role: 'Music', name: 'Elton John' },
@@ -2504,6 +2518,366 @@ const productionSeeds: Record<string, ProductionSeed> = {
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
   },
+  'the-speed-of-darkness': {
+    pageMode: 'archive',
+    summary:
+      'The Speed of Darkness is one of the earliest entries in Falls\'s Goodman-to-Broadway transfer record: a 1989 Steve Tesich world premiere about two Vietnam veterans confronting a buried toxic-waste crime, brought to Broadway\'s Belasco Theatre in 1991.',
+    publicSummary:
+      'Steve Tesich\'s drama reunites two Vietnam veterans, one a prosperous businessman, the other unraveling, around a buried secret that implicates them both.',
+    synopsis:
+      'Joe, a successful South Dakota businessman and Vietnam veteran, is reunited with Lou, his old war buddy, now homeless. Lou\'s return forces a reckoning with two buried secrets: that Joe\'s daughter is not biologically his, and that Joe\'s fortune was built on an illegal toxic-waste dumping operation that poisoned the region\'s water supply. The confrontation ends in Lou\'s suicide, leaving Joe to face their shared guilt alone.',
+    fallsContext:
+      'The Speed of Darkness is one of the clearest early examples of the Goodman-to-Broadway pipeline that would define so much of Falls\'s later career: a Chicago world premiere that traveled to a Broadway house largely intact, well before the larger Dennehy-led transfers of the 1990s and 2000s.',
+    significance:
+      'A 1989 Goodman world premiere that transferred to Broadway\'s Belasco Theatre in 1991, drawing Tony nominations for featured performances by Stephen Lang and Kathryn Erbe.',
+    story:
+      'Tesich\'s play sits at the more politically pointed end of Falls\'s Goodman new-work record, using a Vietnam veteran reunion to indict corporate environmental crime years before that subject became a familiar stage and screen theme. The Broadway transfer carried over Stephen Lang from the Goodman company alongside a partly new cast led by Len Cariou, Lisa Eichhorn, and a young Robert Sean Leonard, who would go on to work with Falls again on Long Day\'s Journey Into Night more than a decade later.',
+    venueAnchor: 'Belasco Theatre, Broadway',
+    eraLabel: 'Broadway transfer years',
+    images: [
+      {
+        src: speedOfDarknessPlaybill,
+        alt: 'Playbill cover for The Speed of Darkness at the Belasco Theatre, with a stark black-and-white lightning-bolt design.',
+        caption: 'Playbill cover art for the Belasco Theatre engagement.',
+        orientation: 'portrait',
+        priority: true,
+        kind: 'art',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Steve Tesich' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Stephen Lang' },
+      { role: 'Cast highlight', name: 'Len Cariou' },
+    ],
+    quickFacts: [
+      { label: 'Goodman premiere', value: '1989, World premiere' },
+      { label: 'Broadway run', value: 'Opened Feb 28, 1991, Belasco Theatre' },
+      { label: 'Performances', value: '36 performances' },
+      { label: 'Recognition', value: '2 Tony nominations (Featured Actor, Featured Actress)' },
+    ],
+    cast: [
+      { role: 'Joe', name: 'Len Cariou' },
+      { role: 'Lou', name: 'Stephen Lang' },
+      { role: 'Anne', name: 'Lisa Eichhorn' },
+      { role: 'Mary', name: 'Kathryn Erbe' },
+      { role: 'Eddie', name: 'Robert Sean Leonard' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Steve Tesich' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    recognition: [
+      {
+        label: 'Tony-nominated cast',
+        detail: 'Stephen Lang and Kathryn Erbe each received Tony nominations for their featured performances.',
+      },
+      {
+        label: 'A Goodman-to-Broadway throughline',
+        detail: 'Stephen Lang carried over from the 1989 Goodman world premiere into the 1991 Broadway transfer, anchoring the production\'s continuity between the two stagings.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Source status',
+        text: 'This entry draws on a Playbill cover added directly to the project plus public secondary sources (Wikipedia, IBDB-derived plot and credit summaries) rather than a full local source folder.',
+      },
+    ],
+    externalSources: [
+      { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/The_Speed_of_Darkness_(play)' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
+  'the-rose-tattoo': {
+    pageMode: 'archive',
+    summary:
+      'The Rose Tattoo is Falls\'s 1995 Broadway revival of Tennessee Williams\'s Sicilian-Gulf-Coast comedy-drama, with Mercedes Ruehl and Anthony LaPaglia leading a production that drew a Tony nomination for Best Revival.',
+    publicSummary:
+      'Tennessee Williams\'s comedy of grief, desire, and Sicilian-American widowhood returns to Broadway with Mercedes Ruehl and Anthony LaPaglia under Falls\'s direction.',
+    synopsis:
+      'Serafina Delle Rose, a Sicilian-American seamstress on the Gulf Coast, has shut herself away in mourning since learning her late husband was unfaithful. The arrival of Alvaro Mangiacavallo, a buffoonish but tender truck driver who resembles her dead husband, forces Serafina to choose between grief and the possibility of new, imperfect love.',
+    fallsContext:
+      'The Rose Tattoo extends Falls\'s recurring engagement with Tennessee Williams, alongside his Goodman and Broadway work on The Night of the Iguana, into one of Williams\'s warmer, more comic registers.',
+    significance:
+      'A 1995 Broadway revival at Circle in the Square starring Mercedes Ruehl and Anthony LaPaglia, nominated for the Tony Award for Best Revival of a Play alongside Drama Desk nominations for both leads.',
+    story:
+      'Where much of Falls\'s Williams and O\'Neill work leans toward scale and devastation, The Rose Tattoo gave him a chance to direct toward warmth and comic recovery, even as the play keeps grief close at hand throughout. Santo Loquasto\'s scenic design, here as on several other Falls Broadway productions, helped anchor the revival\'s Gulf Coast specificity.',
+    venueAnchor: 'Circle in the Square Theatre, Broadway',
+    eraLabel: 'Broadway transfer years',
+    images: [
+      {
+        src: roseTattooPlaybill,
+        alt: 'Playbill cover for The Rose Tattoo at Circle in the Square Theatre, featuring a black-and-white embrace beneath the Tennessee Williams title treatment.',
+        caption: 'Playbill cover art for the Circle in the Square Theatre engagement.',
+        orientation: 'portrait',
+        priority: true,
+        kind: 'art',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Tennessee Williams' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Mercedes Ruehl' },
+      { role: 'Cast highlight', name: 'Anthony LaPaglia' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Mar 23 - Apr 30, 1995' },
+      { label: 'Venue', value: 'Circle in the Square Theatre' },
+      { label: 'Performances', value: '73 performances' },
+      { label: 'Recognition', value: 'Tony nomination, Best Revival of a Play' },
+    ],
+    cast: [
+      { role: 'Serafina Delle Rose', name: 'Mercedes Ruehl' },
+      { role: 'Alvaro Mangiacavallo', name: 'Anthony LaPaglia' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Tennessee Williams' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Santo Loquasto' },
+      { role: 'Costume Design', name: 'Catherine Zuber' },
+      { role: 'Lighting Design', name: 'Kenneth Posner' },
+      { role: 'Sound Design', name: 'John Kilgore' },
+      { role: 'Dialect Coach', name: 'K.C. Ligon' },
+      { role: 'Casting', name: 'Stuart Howard' },
+      { role: 'Casting', name: 'Amy Schecter' },
+      { role: 'Stage Manager', name: 'Peggy Peterson' },
+    ],
+    recognition: [
+      {
+        label: 'Tony and Drama Desk nominations',
+        detail: 'The revival earned a Tony nomination for Best Revival of a Play, plus Drama Desk nominations for Ruehl (Outstanding Actress) and LaPaglia (Outstanding Featured Actor).',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'A later, unrelated revival',
+        text: 'A third Broadway revival of The Rose Tattoo, starring Marisa Tomei, opened at the American Airlines Theatre in 2019 directed by Trip Cullman - not Robert Falls. An earlier site record had misattributed that production to Falls; it has been removed from his credits.',
+      },
+      {
+        label: 'Source status',
+        text: 'This entry draws on a Playbill cover added directly to the project plus public secondary sources (Wikipedia) rather than a full local source folder.',
+      },
+    ],
+    externalSources: [
+      { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/The_Rose_Tattoo' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
+  'the-night-of-the-iguana': {
+    pageMode: 'archive',
+    summary:
+      'The Night of the Iguana carried Falls\'s 1994 Goodman staging of Tennessee Williams\'s drama to Broadway in 1996, with William Petersen, Marsha Mason, and Cherry Jones leading a defrocked-priest story of breakdown and reluctant grace.',
+    publicSummary:
+      'A defrocked minister, a stranded tour group, and two women offering very different kinds of rescue collide at a rundown Mexican hotel in Tennessee Williams\'s drama, staged by Falls first at the Goodman and then on Broadway.',
+    synopsis:
+      'Reverend T. Lawrence Shannon, defrocked and reduced to leading disreputable bus tours, brings a group of stranded schoolteachers to a run-down hotel on the Mexican coast run by his old friend Maxine. There he is drawn toward Hannah Jelkes, an itinerant painter traveling with her elderly poet grandfather, in a long night that tests Shannon\'s remaining capacity for faith, restraint, and connection.',
+    fallsContext:
+      'The Night of the Iguana extends Falls\'s recurring Tennessee Williams thread, and like several of his strongest transfers, it moved from a fully realized Goodman staging to Broadway with much of its original creative vision intact, anchored by William Petersen, then a rising Chicago stage actor not yet known nationally for CSI.',
+    significance:
+      'A 1994 Goodman Theatre staging that transferred to Broadway\'s Criterion Center Stage Right (Roundabout Theatre Company) in 1996, with Marsha Mason and Cherry Jones joining Petersen for the New York run.',
+    story:
+      'Williams\'s play, drawn from his own short story, gave Falls another opportunity to direct at the intersection of comedy, spiritual exhaustion, and survival that runs through much of his Williams and O\'Neill work. The Roundabout-produced Broadway transfer carried the production from the Goodman\'s Chicago staging into a 69-performance limited run, with Cherry Jones\'s Hannah singled out in period coverage as a highlight of the New York engagement.',
+    venueAnchor: 'Goodman Theatre and Criterion Center Stage Right, Broadway',
+    eraLabel: 'Broadway transfer years',
+    images: [
+      {
+        src: nightOfTheIguanaPlaybill,
+        alt: 'Playbill cover for The Night of the Iguana at Criterion Center Stage Right, with a black-and-white illustration of a man reclining in a hammock tended by a woman.',
+        caption: 'Playbill cover art for the Broadway engagement, produced by the Roundabout Theatre Company.',
+        orientation: 'portrait',
+        priority: true,
+        kind: 'art',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Tennessee Williams' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'William Petersen' },
+      { role: 'Cast highlight', name: 'Cherry Jones' },
+    ],
+    quickFacts: [
+      { label: 'Goodman run', value: '1994' },
+      { label: 'Broadway run', value: '1996, Criterion Center Stage Right' },
+      { label: 'Producer', value: 'Roundabout Theatre Company' },
+      { label: 'Performances', value: '69 performances' },
+    ],
+    cast: [
+      { role: 'Rev. T. Lawrence Shannon', name: 'William Petersen' },
+      { role: 'Maxine Faulk', name: 'Marsha Mason' },
+      { role: 'Hannah Jelkes', name: 'Cherry Jones' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Tennessee Williams' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    recognition: [
+      {
+        label: 'A Goodman-to-Broadway transfer',
+        detail: 'The production carried its Chicago staging to Broadway with its three leads, William Petersen, Marsha Mason, and Cherry Jones, intact.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Source status',
+        text: 'This entry draws on a Playbill cover added directly to the project plus public secondary sources (Wikipedia) rather than a full local source folder.',
+      },
+    ],
+    externalSources: [
+      { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/The_Night_of_the_Iguana' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
+  'the-young-man-from-atlanta': {
+    pageMode: 'archive',
+    summary:
+      'The Young Man from Atlanta brought Falls together with Horton Foote\'s Pulitzer Prize-winning play, staging it at the Goodman with Rip Torn and Shirley Knight before carrying the same cast to Broadway in 1997.',
+    publicSummary:
+      'Horton Foote\'s Pulitzer Prize-winning drama follows a Houston businessman and his wife as a son\'s death and a mysterious young stranger unravel the comfortable story they have told themselves about their family.',
+    synopsis:
+      'Will Kidder, a confident Houston businessman nearing retirement, and his wife Lily Dale are still grieving the recent, possibly self-inflicted death of their adult son when a young man connected to him, Bobby, begins seeking money from the family. As Will\'s career and certainties crumble alongside the marriage\'s carefully maintained illusions, the play quietly interrogates denial, grief, and the stories families tell to survive each other.',
+    fallsContext:
+      'The production paired Falls with Horton Foote, one of American theatre\'s most understated and esteemed playwrights, and shows him directing toward restraint and accumulation rather than the scale and spectacle of his Shakespeare or O\'Neill work from the same period.',
+    significance:
+      'A Pulitzer Prize-winning Horton Foote play that Falls staged at the Goodman in January 1997 with Rip Torn and Shirley Knight, then carried to Broadway\'s Longacre Theatre two months later, earning three Tony nominations including Best Play.',
+    story:
+      'Foote had already won the Pulitzer Prize for Drama for this play in 1995 before Falls staged it; the Goodman and Broadway productions, with Rip Torn and Shirley Knight as Will and Lily Dale, represented one of the play\'s most prominent stagings. The production\'s three Tony nominations - Best Play, plus featured and leading acting nominations for Biff McGuire and Shirley Knight - underline how seriously the production was received in a Broadway season otherwise dominated by larger commercial fare.',
+    venueAnchor: 'Goodman Theatre and Longacre Theatre, Broadway',
+    eraLabel: 'Broadway transfer years',
+    images: [
+      {
+        src: youngManFromAtlantaPlaybill,
+        alt: 'Playbill cover for The Young Man from Atlanta at the Longacre Theatre, with a lone silhouetted figure against a red sunset.',
+        caption: 'Playbill cover art for the Longacre Theatre engagement.',
+        orientation: 'portrait',
+        priority: true,
+        kind: 'art',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Horton Foote' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Rip Torn' },
+      { role: 'Cast highlight', name: 'Shirley Knight' },
+    ],
+    quickFacts: [
+      { label: 'Goodman run', value: 'January 1997' },
+      { label: 'Broadway run', value: 'Mar 13 - Jun 8, 1997, Longacre Theatre' },
+      { label: 'Source', value: '1995 Pulitzer Prize for Drama' },
+      { label: 'Recognition', value: '3 Tony nominations, including Best Play' },
+    ],
+    cast: [
+      { role: 'Will Kidder', name: 'Rip Torn' },
+      { role: 'Lily Dale Kidder', name: 'Shirley Knight' },
+      { role: 'Pete Davenport', name: 'Biff McGuire' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Horton Foote' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    recognition: [
+      {
+        label: 'Three Tony nominations',
+        detail: 'The production was nominated for Best Play, Best Featured Actor (Biff McGuire), and Best Leading Actress (Shirley Knight).',
+      },
+      {
+        label: 'A Pulitzer-winning text',
+        detail: 'Horton Foote\'s play had already won the 1995 Pulitzer Prize for Drama before this production, one of its most prominent stagings.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Source status',
+        text: 'This entry draws on a Playbill cover added directly to the project plus public secondary sources (Wikipedia) rather than a full local source folder.',
+      },
+    ],
+    externalSources: [
+      { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/The_Young_Man_from_Atlanta' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
+  'long-days-journey-into-night': {
+    pageMode: 'featured',
+    summary:
+      'Long Day\'s Journey Into Night is one of the most decorated productions in Falls\'s career: a 2002 Goodman staging that transferred to Broadway in 2003 with Brian Dennehy, Vanessa Redgrave, Philip Seymour Hoffman, and Robert Sean Leonard, winning the Tony for Best Revival and earning Falls the Drama Desk Award for direction.',
+    publicSummary:
+      'Eugene O\'Neill\'s autobiographical masterpiece, with Brian Dennehy and Vanessa Redgrave as the warring Tyrone parents and Philip Seymour Hoffman and Robert Sean Leonard as their sons, in a revival that swept the 2003 Tony Awards for Best Revival of a Play.',
+    synopsis:
+      'Over the course of one long day in their Connecticut summer home, the Tyrone family - faded actor James, his morphine-addicted wife Mary, and their two sons, the cynical Jamie and the consumptive Edmund - circle the same old wounds of addiction, blame, and disappointed love, each member retreating further into fog, drink, or drugs as the day gives way to night.',
+    fallsContext:
+      'Long Day\'s Journey Into Night sits at the center of Falls\'s long O\'Neill collaboration with Brian Dennehy, following their Iceman Cometh and preceding Desire Under the Elms, and stands as the clearest critical and awards peak of that partnership: a Tony for Best Revival, acting Tonys for both Dennehy and Redgrave, and a Drama Desk Award for Falls\'s direction.',
+    significance:
+      'A 2002 Goodman Theatre staging that transferred to Broadway\'s Plymouth Theatre in 2003, sweeping the major 2003 Tony Awards for Best Revival of a Play, Best Actor (Dennehy), and Best Actress (Redgrave), while Falls won the Drama Desk Award for Outstanding Director of a Play.',
+    story:
+      'This production represents the high-water mark of Falls\'s critical recognition on Broadway. O\'Neill\'s autobiographical play, drawn directly from his own family\'s addiction and grief, gave Falls a four-actor ensemble of extraordinary range: Brian Dennehy\'s blustering, guilt-ridden James Tyrone, Vanessa Redgrave\'s fog-bound Mary, and a young Philip Seymour Hoffman and Robert Sean Leonard as the brothers carrying their parents\' damage forward. The production\'s sweep of the major 2003 Tony categories, and Falls\'s own Drama Desk Award for direction, mark it as the single clearest example in the archive of a Falls revival meeting both critical and institutional consensus at the same time.',
+    venueAnchor: 'Goodman Theatre and Plymouth Theatre, Broadway',
+    eraLabel: 'Broadway transfer years',
+    images: [
+      {
+        src: longDaysJourneyPlaybill,
+        alt: 'Playbill cover for Long Day\'s Journey Into Night at the Plymouth Theatre, with a painted illustration of a New England house at dusk.',
+        caption: 'Playbill cover art for the Plymouth Theatre engagement.',
+        orientation: 'portrait',
+        priority: true,
+        kind: 'art',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Eugene O\'Neill' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Brian Dennehy' },
+      { role: 'Cast highlight', name: 'Vanessa Redgrave' },
+      { role: 'Cast highlight', name: 'Philip Seymour Hoffman' },
+    ],
+    quickFacts: [
+      { label: 'Goodman run', value: '2002' },
+      { label: 'Broadway run', value: '2003, Plymouth Theatre' },
+      { label: 'Performances', value: '117 performances' },
+      { label: 'Recognition', value: 'Tony, Best Revival; Drama Desk, Best Director' },
+    ],
+    cast: [
+      { role: 'James Tyrone', name: 'Brian Dennehy' },
+      { role: 'Mary Tyrone', name: 'Vanessa Redgrave' },
+      { role: 'Jamie Tyrone', name: 'Philip Seymour Hoffman' },
+      { role: 'Edmund Tyrone', name: 'Robert Sean Leonard' },
+      { role: 'Cathleen', name: 'Fiana Toibin' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Eugene O\'Neill' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Santo Loquasto' },
+    ],
+    recognition: [
+      {
+        label: 'Tony Award, Best Revival of a Play',
+        detail: 'The production won the 2003 Tony Award for Best Revival of a Play, plus Best Actor (Dennehy) and Best Actress (Redgrave).',
+      },
+      {
+        label: 'Drama Desk Award, Outstanding Director',
+        detail: 'Falls won the Drama Desk Award for Outstanding Director of a Play; Hoffman, Leonard, and Loquasto received further Tony and Drama Desk nominations.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'A critical and institutional peak',
+        detail: 'This production\'s sweep of the major 2003 Tony categories, alongside Falls\'s own Drama Desk Award for direction, makes it the clearest example of a Falls revival achieving full critical and institutional consensus.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Source status',
+        text: 'This entry draws on a Playbill cover added directly to the project plus public secondary sources (Wikipedia) rather than a full local source folder.',
+      },
+    ],
+    externalSources: [
+      { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/Long_Day%27s_Journey_into_Night' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
   'talk-radio': {
     pageMode: 'archive',
     summary:
@@ -2517,9 +2891,19 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'A 2007 Broadway revival that ties Falls to one of the archive\'s clearest media-saturation plays and brought Tony attention through Liev Schreiber\'s central performance.',
     story:
-      'Talk Radio matters because it lets the archive register another side of Falls: not civic Shakespeare, not O\'Neill tragedy, but fast, acidic contemporary American performance writing. The revival arrived in a period when celebrity confession, aggressive audience intimacy, and media self-display all felt newly volatile again.',
+      'Talk Radio matters because it lets the archive register another side of Falls: not civic Shakespeare, not O\'Neill tragedy, but fast, acidic contemporary American performance writing. The revival arrived in a period when celebrity confession, aggressive audience intimacy, and media self-display all felt newly volatile again, and it gave a young Sebastian Stan, years before his film career, a place in the supporting cast alongside Stephanie March and Peter Hermann.',
     venueAnchor: 'Longacre Theatre, Broadway',
     eraLabel: 'Broadway transfer years',
+    images: [
+      {
+        src: talkRadioPlaybill,
+        alt: 'Playbill cover for Talk Radio at the Longacre Theatre, with a close-up black-and-white photo of Liev Schreiber.',
+        caption: 'Playbill cover art for the Longacre Theatre engagement.',
+        orientation: 'portrait',
+        priority: true,
+        kind: 'art',
+      },
+    ],
     collaborators: [
       { role: 'Playwright', name: 'Eric Bogosian' },
       { role: 'Director', name: 'Robert Falls' },
@@ -2531,16 +2915,32 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { label: 'Type', value: 'Broadway revival' },
       { label: 'Recognition', value: 'Tony-nominated revival' },
     ],
+    cast: [
+      { role: 'Barry Champlain', name: 'Liev Schreiber' },
+      { role: 'Linda MacArthur', name: 'Stephanie March' },
+      { role: 'Stu Noonan', name: 'Peter Hermann' },
+      { role: 'Sid Greenberg', name: 'Sebastian Stan' },
+      { role: 'Caller / Ensemble', name: 'Christine Pedi' },
+      { role: 'Caller / Ensemble', name: 'Barbara Rosenblat' },
+      { role: 'Caller / Ensemble', name: 'Marc Thompson' },
+      { role: 'Caller / Ensemble', name: 'Kit Williamson' },
+      { role: 'Caller / Ensemble', name: 'Cornell Womack' },
+      { role: 'Caller / Ensemble', name: 'Christy Pusz' },
+    ],
     recognition: [
       {
         label: 'Tony context',
         detail: 'The revival received Tony nominations for Best Revival of a Play and Best Actor in a Play for Liev Schreiber.',
       },
+      {
+        label: 'A future star in the cast',
+        detail: 'The supporting cast included a then-largely-unknown Sebastian Stan, years before his film career.',
+      },
     ],
     contextNotes: [
       {
         label: 'Source status',
-        text: 'This entry draws on the local credits record plus public secondary Broadway references rather than a full official production archive page.',
+        text: 'This entry draws on the local credits record, a Playbill cover added directly to the project, and public secondary Broadway references rather than a full official production archive page.',
       },
     ],
     reviews: [
@@ -2556,7 +2956,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/Talk_Radio_(play)' },
     ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'shining-city': {
     pageMode: 'featured',
