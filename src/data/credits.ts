@@ -26,7 +26,6 @@ export const creditGroups: CreditGroup[] = [
       { title: 'Shining City', venue: 'Biltmore Theatre', year: '2006', note: 'Tony nomination, Best Play; 80 performances' },
       { title: 'American Buffalo', venue: 'Broadway', year: '2008' },
       { title: 'Desire Under the Elms', venue: 'Broadway', year: '2009', note: 'Goodman transfer' },
-      { title: 'Chinglish', venue: 'Broadway', year: '2011', note: 'Goodman world premiere transfer' },
       { title: 'The Rose Tattoo', venue: 'Roundabout Theatre', year: '2019', note: 'Tony nomination' },
       { title: 'Talk Radio', venue: 'Longacre Theatre', year: '2007', note: '121 performances' },
     ],

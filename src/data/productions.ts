@@ -437,7 +437,6 @@ const priorityFeaturedTitles = [
   'The Iceman Cometh',
   '2666',
   'Luna Gale',
-  'Chinglish',
   'The Seagull',
 ];
 
@@ -4647,34 +4646,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
-  },
-  chinglish: {
-    pageMode: 'archive',
-    summary:
-      'Chinglish remains in the archive as a Goodman-to-Broadway transfer from Falls’s Goodman years, but current official production pages credit Leigh Silverman as director.',
-    significance:
-      'An institutional transfer marker that now needs attribution cleanup before it should be treated as a Robert Falls featured production.',
-    story:
-      'The timeline and credits material point to a clean Goodman-premiere-to-Broadway arc, but current official Goodman production pages credit Leigh Silverman as director. Until the site-wide production list is audited, this page is better handled as an archive record than as a featured Falls production profile.',
-    venueAnchor: 'Goodman Theatre',
-    eraLabel: 'Late Goodman years',
-    collaborators: [
-      { role: 'Playwright', name: 'David Henry Hwang' },
-    ],
-    recognition: [
-      {
-        label: 'Transfer story',
-        detail: 'The title moved from Goodman world-premiere status to Broadway within the same year.',
-      },
-    ],
-    contextNotes: [
-      {
-        label: 'Attribution audit',
-        text: 'Official Goodman production pages for Chinglish explicitly credit Leigh Silverman as director, so this entry should not be presented as a confirmed Robert Falls production without a broader source review.',
-      },
-    ],
-    relatedLinks: seedLinks,
-    sourceStatus: 'researched',
   },
   'the-seagull': {
     pageMode: 'featured',

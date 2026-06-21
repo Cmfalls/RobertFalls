@@ -112,7 +112,6 @@ export const timelineEntries: TimelineEntry[] = [
   { year: '2009', title: 'Desire Under the Elms', description: 'Major late Dennehy/O’Neill collaboration, transferring from Goodman to Broadway.', category: 'Production', venue: 'Goodman Theatre & Broadway' },
   { year: '2009', title: 'King Lear', description: 'Remount of the 2006 Goodman production; associated with a Helen Hayes Award.', category: 'Production', venue: 'Shakespeare Theatre Company, Washington' },
   { year: '2010', title: 'The Seagull', description: 'Falls later called the rehearsal process for this Chekhov adaptation "life-changing."', category: 'Production', venue: 'Goodman Theatre' },
-  { year: '2011', title: 'Chinglish', description: 'David Henry Hwang’s play — Goodman world premiere in June, Broadway opening that October.', category: 'Production', venue: 'Goodman Theatre & Broadway' },
   { year: '2012', title: 'The Iceman Cometh', description: 'Revival starring Brian Dennehy, Nathan Lane, and John Douglas Thompson; later moved to BAM.', category: 'Production', venue: 'Goodman Theatre' },
   { year: '2012', title: 'Jeff Award', description: 'Awarded for The Iceman Cometh.', category: 'Award' },
   { year: '2013', title: 'Measure for Measure', description: 'Reset in disco-era 1970s Times Square, the staging replaced Shakespeare’s ambiguous ending with Falls’s own: Barnardine stabs Isabella to death mid-dance.', category: 'Production', venue: 'Goodman Theatre' },
