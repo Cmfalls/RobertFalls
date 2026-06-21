@@ -82,6 +82,10 @@ import measure4 from '../images/measure-for-measure/measure-4.jpg';
 import measure5 from '../images/measure-for-measure/measure-5.jpg';
 import measure6 from '../images/measure-for-measure/measure-6.jpg';
 import measure7 from '../images/measure-for-measure/measure-7.jpg';
+import blindDateShowArt from '../images/blind-date/blind-date-show-art.png';
+import blindDate1 from '../images/blind-date/blind-date-1.jpg';
+import blindDate2 from '../images/blind-date/blind-date-2.jpg';
+import blindDate4 from '../images/blind-date/blind-date-4.jpg';
 import lunaGaleShowArt from '../images/luna-gale/luna-gale-show-art.png';
 import lunaGalePoster from '../images/luna-gale/luna-gale-poster.jpg';
 import lunaGaleLaPoster from '../images/luna-gale/luna-gale-la-poster.jpg';
@@ -3146,7 +3150,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'researched',
   },
   'blind-date': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'Blind Date adds a Cold War political comedy to Falls\'s late Goodman record, treating Reagan and Gorbachev not as textbook figures but as performers inside a high-stakes private negotiation.',
     publicSummary:
@@ -3161,26 +3165,89 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The official production pitch makes the play feel almost like diplomatic farce: world history reduced to posture, flirtation, mistrust, and tone. That kind of pressure-cooker structure fits a director interested in how public life becomes performance under scrutiny.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
+    images: [
+      {
+        src: blindDate1,
+        alt: 'Rob Riley as Ronald Reagan and William Dick as Mikhail Gorbachev shaking hands onstage in Blind Date.',
+        caption: 'Rob Riley and William Dick in Blind Date at Goodman Theatre.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'production-still',
+      },
+      {
+        src: blindDate2,
+        alt: 'Deanna Dunagan as Nancy Reagan and Mary Beth Fisher as Raisa Gorbachev seated across a tea table in Blind Date.',
+        caption: 'Deanna Dunagan and Mary Beth Fisher in one of Blind Date’s sharp domestic counter-scenes.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: blindDate4,
+        alt: 'William Dick as Mikhail Gorbachev and Rob Riley as Ronald Reagan crossing the stage in Blind Date.',
+        caption: 'William Dick and Rob Riley in Blind Date at Goodman Theatre.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: blindDateShowArt,
+        alt: 'Blind Date show art featuring Reagan and Gorbachev against a magenta background.',
+        caption: 'Official Blind Date show art from Goodman Theatre.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+    ],
     collaborators: [
       { role: 'Playwright', name: 'Rogelio Martinez' },
       { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Rob Riley' },
+      { role: 'Cast highlight', name: 'William Dick' },
+      { role: 'Cast highlight', name: 'Deanna Dunagan' },
+      { role: 'Cast highlight', name: 'Mary Beth Fisher' },
     ],
     quickFacts: [
       { label: 'Run', value: 'Jan 20 - Feb 25, 2018' },
       { label: 'Venue', value: 'Albert Theatre' },
-      { label: 'Runtime', value: '2 hr 30 min' },
+      { label: 'Runtime', value: '2 hr 30 min, including one intermission' },
       { label: 'Status', value: 'World premiere' },
+    ],
+    cast: [
+      { role: 'Ronald Reagan', name: 'Rob Riley' },
+      { role: 'Nancy Reagan', name: 'Deanna Dunagan' },
+      { role: 'Mikhail Gorbachev', name: 'William Dick' },
+      { role: 'Raisa Gorbachev', name: 'Mary Beth Fisher' },
+      { role: 'George Shultz', name: 'Jim Ortlieb' },
+      { role: 'Eduard Shevardnadze', name: 'Steve Pickering' },
+      { role: 'Edmund Morris', name: 'Thomas J. Cox' },
+    ],
+    creativeTeam: [
+      { role: 'Playwright', name: 'Rogelio Martinez' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Riccardo Hernández' },
+      { role: 'Costume Design', name: 'Amy Clark' },
+      { role: 'Lighting Design', name: 'Aaron Spivey' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Dramaturg', name: 'Jonathan L. Green' },
+      { role: 'Production Stage Manager', name: 'Briana J. Fahey' },
+      { role: 'Stage Manager', name: 'Kimberly Ann McCann' },
     ],
     recognition: [
       {
         label: 'World premiere',
         detail: 'Timeline data identifies Blind Date as a Goodman world premiere.',
       },
+      {
+        label: 'Political chamber piece',
+        detail: 'The production compresses Cold War diplomacy into an intimate comic encounter staged as personality theater.',
+      },
     ],
     contextNotes: [
       {
         label: 'Official framing',
         text: 'The Goodman page emphasizes the play\'s mix of arms-race history, backstage comedy, and a private battle of wills between world leaders and their spouses.',
+      },
+      {
+        label: 'Photo source',
+        text: 'Current stage stills and show art are sourced from the official Goodman Theatre production archive for the 2018 world premiere.',
       },
     ],
     reviews: [
@@ -3191,9 +3258,19 @@ const productionSeeds: Record<string, ProductionSeed> = {
           'The official page positions the premiere as a sly political comedy and includes critical praise quoted from Daily Herald.',
       },
     ],
+    pressQuotes: [
+      {
+        quote: '“Subtle and enlivening performances”',
+        source: 'Daily Herald',
+      },
+      {
+        quote: '“Well worth seeing”',
+        source: 'Chicago Tribune',
+      },
+    ],
     externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/blind-date/' }],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'uncle-vanya': {
     pageMode: 'archive',
