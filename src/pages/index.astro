@@ -312,9 +312,13 @@ const criticalPraise = criticalPraisePicks
       <h2 class="section-heading">Awards &amp; Honors</h2>
       <div class="grid sm:grid-cols-2 gap-px bg-brand-ink/10 mt-8">
         {featuredAwards.map((award) => (
-          <div class="bg-brand-cream p-6">
-            <div class="font-display text-xl text-brand-ink">{award.name}</div>
-            {award.work && <div class="text-sm text-brand-ink/55 mt-1">{award.work}{award.year ? ` · ${award.year}` : ''}</div>}
+          <div class="bg-brand-cream p-6 hover:bg-white transition-colors group">
+            <div class="flex items-start justify-between gap-3">
+              <span class="text-brand-gold text-base leading-none mt-0.5">✦</span>
+              {award.year && <span class="text-[11px] uppercase tracking-[0.16em] text-brand-ink/45 font-display">{award.year}</span>}
+            </div>
+            <div class="font-display text-xl text-brand-ink mt-3 group-hover:text-brand-oxblood transition-colors leading-snug">{award.name}</div>
+            {award.work && <div class="text-sm text-brand-ink/55 mt-1.5">{award.work}</div>}
           </div>
         ))}
       </div>

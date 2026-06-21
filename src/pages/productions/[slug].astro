@@ -887,6 +887,10 @@ const productionSchema = [
   .production-feedback-card p {
     @apply mt-0 text-base leading-relaxed text-brand-ink text-opacity-80;
   }
+  .production-quote-card::before {
+    content: '\201C';
+    @apply block font-display text-5xl text-brand-gold leading-none -mb-3 opacity-40;
+  }
   .production-quote-source {
     @apply font-display text-[11px] font-bold uppercase tracking-[0.18em] text-brand-oxblood;
   }
