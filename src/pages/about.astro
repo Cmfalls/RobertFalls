@@ -5,13 +5,23 @@ import MarqueeLights from '@components/MarqueeLights.astro';
 import portrait from '../images/robert-falls-portrait-2025.jpg';
 import libraryPhoto from '../images/robert-falls-library.webp';
 import wisdomBridgePhoto from '../images/falls-wisdom-bridge-rehearsal.jpg';
+import rehearsalRecentPhoto from '../images/falls-rehearsal-recent.jpg';
 import katFallsPhoto from '../images/kat-falls.webp';
 import gilmanPhoto from '../images/rebecca-gilman.jpeg';
+
+const fastFacts = [
+  { label: 'Born', value: 'March 2, 1954 — Springfield, Illinois' },
+  { label: 'Raised', value: 'Ashland, Illinois' },
+  { label: 'Education', value: 'B.F.A., University of Illinois, 1976' },
+  { label: 'Goodman Theatre', value: 'Artistic Director, 1986–2022' },
+  { label: 'Tony Award', value: 'Best Direction, Death of a Salesman (1999)' },
+  { label: 'Home', value: 'Evanston, Illinois, with wife Kat Falls' },
+];
 ---
 
 <BaseLayout
   title="About Robert Falls — Theatre Director"
-  description="The biography of Robert Falls: rural Illinois roots, Wisdom Bridge Theatre, 35 years as Artistic Director of the Goodman Theatre, and his current freelance directing career."
+  description="The biography of Robert Falls: rural Illinois roots, Wisdom Bridge Theatre, 35 years as Artistic Director of the Goodman Theatre, and his current freelance directing career — including a third Lyric Opera revival of Don Giovanni opening October 2026."
 >
   <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
     <div class="grain-overlay"></div>
@@ -29,13 +39,27 @@ import gilmanPhoto from '../images/rebecca-gilman.jpeg';
       <Image
         src={portrait}
         alt="Portrait of Robert Falls"
-        width={400}
+        widths={[320, 480, 640]}
+        sizes="(max-width: 767px) calc(100vw - 3rem), 260px"
+        quality={78}
+        loading="eager"
+        fetchpriority="high"
         class="w-full aspect-square object-cover grayscale-[15%]"
       />
       <p class="text-xs uppercase tracking-[0.18em] text-brand-ink/65 mt-3">Robert Falls, theatre director</p>
+
+      <dl class="mt-8 border border-brand-ink/10 divide-y divide-dashed divide-brand-ink/15">
+        {fastFacts.map((fact) => (
+          <div class="px-4 py-3">
+            <dt class="text-[10px] uppercase tracking-[0.18em] text-brand-oxblood font-semibold">{fact.label}</dt>
+            <dd class="text-sm text-brand-ink/80 mt-1 leading-snug">{fact.value}</dd>
+          </div>
+        ))}
+      </dl>
     </div>
 
     <div class="space-y-7 text-brand-ink/80 leading-relaxed text-lg font-serif max-w-3xl">
+      <h2 class="font-display text-3xl text-brand-ink mb-2">A Reader, Long Before a Director</h2>
       <p>
         Robert Arthur Falls was born March 2, 1954, in Springfield, Illinois, and raised in
         Ashland, a small town in the rural center of the state. By his own account he was "a major
@@ -53,6 +77,7 @@ import gilmanPhoto from '../images/rebecca-gilman.jpeg';
         company's Artistic Director in 1977, at twenty-three.
       </p>
 
+      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Wisdom Bridge: Cleaning Toilets, Building a Theatre</h2>
       <p>
         From 1977 to 1985, Falls led Wisdom Bridge, a small but fiercely ambitious company on
         Chicago's North Side. He later recalled that being "artistic director" there often meant
@@ -69,7 +94,9 @@ import gilmanPhoto from '../images/rebecca-gilman.jpeg';
         <Image
           src={wisdomBridgePhoto}
           alt="A young Robert Falls in rehearsal during the Wisdom Bridge years"
-          width={1200}
+          widths={[640, 960, 1280, 1600]}
+          sizes="(max-width: 1024px) 100vw, 960px"
+          quality={76}
           loading="lazy"
           class="w-full object-cover"
         />
@@ -80,6 +107,7 @@ import gilmanPhoto from '../images/rebecca-gilman.jpeg';
         "Chicago's most essential director." <span class="not-italic text-sm uppercase tracking-[0.16em] text-brand-ink/65 block mt-2">— Chicago Tribune</span>
       </blockquote>
 
+      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Thirty-Five Years at the Goodman</h2>
       <p>
         In 1986, Falls became Artistic Director of the Goodman Theatre, a position he held for
         thirty-five years — one of the longest tenures of any artistic leader at a major American
@@ -101,6 +129,7 @@ import gilmanPhoto from '../images/rebecca-gilman.jpeg';
         so the Goodman would be an artistic home rather than a single director's theatre.
       </p>
 
+      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Broadway</h2>
       <p>
         His own Broadway work includes the Tony Award for Best Direction of a Play for
         <em> Death of a Salesman</em> (1999), and a 2003 transfer of <em>Long Day's Journey Into
@@ -112,7 +141,7 @@ import gilmanPhoto from '../images/rebecca-gilman.jpeg';
         York for four decades.
       </p>
 
-      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Collaborators &amp; Critical Reception</h2>
+      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Collaborators</h2>
       <p>
         Falls's work is best understood through his collaborators. His most important artistic
         partnership was with actor Brian Dennehy, a relationship that stretched back to Wisdom
@@ -133,7 +162,9 @@ import gilmanPhoto from '../images/rebecca-gilman.jpeg';
         <Image
           src={gilmanPhoto}
           alt="Rebecca Gilman"
-          width={120}
+          widths={[64, 96, 128]}
+          sizes="64px"
+          quality={72}
           loading="lazy"
           class="w-16 h-16 rounded-full object-cover shrink-0"
         />
@@ -143,6 +174,7 @@ import gilmanPhoto from '../images/rebecca-gilman.jpeg';
           <em> Blue Surge</em> (2001) to <em>Swing State</em> (2022).
         </p>
       </div>
+      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Reception, Risk, and Candor</h2>
       <p>
         The longtime Chicago Tribune critic Chris Jones identified Falls's defining signature as a
         taste for "the big project" — the willingness to pursue work of "heft and ambition and
@@ -173,13 +205,17 @@ import gilmanPhoto from '../images/rebecca-gilman.jpeg';
         2020 to develop new work by Black, Indigenous, Latinx, and AAPI artists.
       </p>
 
+      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">A New Chapter</h2>
       <p>
         Falls stepped down as the Goodman's Artistic Director in 2022 after thirty-five years,
         closing one of the longest and most consequential tenures in American regional theatre. He
         has been careful, since, to resist the word "retired." His most recent chapter took him to
         Steppenwolf Theatre for his directorial debut there with <em>Amadeus</em> in late 2025,
-        followed by a return to the Goodman in early 2026 to direct <em>Holiday</em> — his first
-        Goodman production since stepping down, staged in the theatre's Centennial Season.
+        then back to the Goodman in early 2026 to direct <em>Holiday</em> — his first Goodman
+        production since stepping down, staged in the theatre's Centennial Season. This fall,
+        Lyric Opera of Chicago revives his <em>Don Giovanni</em> for a third time, opening October
+        10, 2026 — twelve years after he first staged it there, with audiences and casts that have
+        come and gone in between, the production keeps getting asked back.
       </p>
 
       <blockquote class="font-serif italic text-2xl text-brand-oxblood border-l-2 border-brand-gold pl-6 my-10">
@@ -188,15 +224,18 @@ import gilmanPhoto from '../images/rebecca-gilman.jpeg';
 
       <figure class="my-10 -mx-1">
         <Image
-          src={libraryPhoto}
-          alt="Robert Falls at home, between projects"
-          width={1200}
+          src={rehearsalRecentPhoto}
+          alt="Robert Falls leading a rehearsal, mid-sentence and animated, surrounded by his cast"
+          widths={[640, 960, 1280, 1600]}
+          sizes="(max-width: 1024px) 100vw, 960px"
+          quality={76}
           loading="lazy"
           class="w-full object-cover"
         />
-        <figcaption class="text-xs uppercase tracking-[0.18em] text-brand-ink/65 mt-3">At home, between projects</figcaption>
+        <figcaption class="text-xs uppercase tracking-[0.18em] text-brand-ink/65 mt-3">In rehearsal, still mid-sentence, still in the room</figcaption>
       </figure>
 
+      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Beyond the Stage</h2>
       <p>
         Beyond the stage, Falls served as board president of Theatre Communications Group and led
         Northwestern University's graduate directing program; he was elected a Fellow of the
@@ -204,16 +243,32 @@ import gilmanPhoto from '../images/rebecca-gilman.jpeg';
         Obie Award, the Helen Hayes Award, the League of Chicago Theatres' Artistic Leadership
         Award, induction into the Theater Hall of Fame, the O'Neill Medallion, the Savva Morozov
         Diamond Award from the Moscow Art Theatre, the Illinois Arts Council Governor's Award, and
-        the Goodman's roughly one hundred sixty Jeff Awards earned under his leadership. He lives in
-        Evanston, Illinois, with his wife,
-        <a href="https://katfalls.com" target="_blank" rel="noopener" class="text-brand-oxblood underline underline-offset-4 hover:text-brand-oxbloodBright">author Kat Falls</a>.
+        the Goodman's roughly one hundred sixty Jeff Awards earned under his leadership. He has made
+        a home in Evanston, Illinois, with his wife,
+        <a href="https://katfalls.com" target="_blank" rel="noopener" class="text-brand-oxblood underline underline-offset-4 hover:text-brand-oxbloodBright">author Kat Falls</a>,
+        for over three decades now.
       </p>
+
+      <figure class="my-10 -mx-1">
+        <Image
+          src={libraryPhoto}
+          alt="Robert Falls at home, smiling, seated in front of floor-to-ceiling bookshelves"
+          widths={[640, 960, 1280, 1600]}
+          sizes="(max-width: 1024px) 100vw, 960px"
+          quality={76}
+          loading="lazy"
+          class="w-full object-cover"
+        />
+        <figcaption class="text-xs uppercase tracking-[0.18em] text-brand-ink/65 mt-3">More than sixty years after the Ashland library, the shelves are still full</figcaption>
+      </figure>
 
       <div class="flex items-center gap-4 not-prose bg-brand-cream/60 border border-brand-ink/10 px-5 py-4 my-8">
         <Image
           src={katFallsPhoto}
           alt="Kat Falls"
-          width={120}
+          widths={[64, 96, 128]}
+          sizes="64px"
+          quality={72}
           loading="lazy"
           class="w-16 h-16 rounded-full object-cover shrink-0"
         />
