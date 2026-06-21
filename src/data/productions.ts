@@ -73,6 +73,11 @@ import mollySweeney1 from '../images/molly-sweeney/molly-sweeney-1.jpg';
 import mollySweeney2 from '../images/molly-sweeney/molly-sweeney-2.jpg';
 import mollySweeney3 from '../images/molly-sweeney/molly-sweeney-3.jpg';
 import mollySweeney4 from '../images/molly-sweeney/molly-sweeney-4.jpg';
+import shiningCityWide from '../images/shining-city/shining-city-wide.webp';
+import shiningCityPortrait from '../images/shining-city/shining-city-portrait.webp';
+import shiningCityGoodman from '../images/shining-city/shining-city-goodman.webp';
+import shiningCityShowArt from '../images/shining-city/shining-city-show-art.png';
+import shiningCityDoor from '../images/shining-city/shining-city-door.jpg';
 import enemyShowArt from '../images/an-enemy-of-the-people/enemy-show-art.webp';
 import measureShowArt from '../images/measure-for-measure/measure-show-art.png';
 import measurePoster from '../images/measure-for-measure/measure-poster.jpg';
@@ -2376,56 +2381,217 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'researched',
   },
   'shining-city': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
-      'Shining City brings Falls into Conor McPherson\'s haunted, intimate Dublin world, turning grief and damaged faith into a spare Broadway chamber piece.',
+      'Shining City brings Falls into Conor McPherson\'s haunted Dublin chamber world, where grief, guilt, and failed intimacy are staged with almost no theatrical excess and all the pressure pushed onto actors, silence, and dread.',
     publicSummary:
-      'Falls directs McPherson\'s ghost-haunted drama about therapy, bereavement, and the lives people fail to build for themselves.',
+      'Falls directs McPherson\'s ghost-haunted drama first on Broadway, then again at Goodman, turning therapy, bereavement, and spiritual exhaustion into an intimate two-life reckoning.',
     synopsis:
-      'A widower seeks help after seeing the ghost of his dead wife, while the therapist hearing his story struggles with faith, loneliness, and the wreckage of his own private life. Their conversations turn into a double portrait of men unable to make proper contact with the living or the dead.',
+      'A widower seeks help after seeing the ghost of his dead wife. The therapist hearing him out is himself a former priest, newly adrift in a life he cannot quite inhabit. Their sessions become a double portrait of men trapped between confession and avoidance, each haunted by the life he has already damaged.',
     fallsContext:
-      'This title adds another scale to the archive: a Broadway play of quiet dread and spiritual fatigue, far from the public thunder of O\'Neill or Shakespeare but still deeply actor-driven.',
+      'This page matters because it catches Falls at a very different volume from the epic and civic productions that dominate so much of the archive. Shining City is actor pressure, atmosphere, and listening: a Broadway psychological ghost story with almost no ornament to hide behind.',
     significance:
-      'A 2006 Broadway staging that earned Tony recognition and shows Falls working with contemporary psychological writing at a notably stripped-back pitch.',
+      'A Tony-nominated 2006 Broadway staging that later returned to Goodman in 2008, showing Falls carrying a contemporary McPherson play from Manhattan Theatre Club to his own home institution without losing its spare, haunted scale.',
     story:
-      'Shining City matters because it proves the Falls record is not all volume. Here the work depends on atmosphere, listening, and an almost anti-spectacular patience. That restraint is part of why the title is useful in the archive: it shows how much of his career also rested on giving actors room inside uneasy, inward writing.',
-    venueAnchor: 'Biltmore Theatre, Broadway',
+      'Shining City earns a stronger page because its life is more complete than the old seed suggested. The 2006 Broadway production at Manhattan Theatre Club\'s Biltmore Theatre gave Falls a quiet but high-profile contemporary play, led by Oliver Platt and Brian F. O\'Byrne, and earned Tony nominations for Best Play and Best Actor. The local source material also makes clear that this was not a one-city stop: Falls brought the production to Goodman in early 2008, where the same script was rebuilt with a Chicago cast and reframed for his own audience. That two-step history matters. Instead of treating Shining City as a stray Broadway credit, the archive can show it as part of Falls\'s continuing interest in morally exhausted men, unstable belief, and rooms where the real action is emotional rather than physical.',
+    venueAnchor: 'Broadway and Goodman Theatre',
     eraLabel: 'Broadway transfer years',
+    images: [
+      {
+        src: shiningCityWide,
+        alt: 'A widower sits on a leather sofa across from his therapist beneath a tall window in Shining City.',
+        caption: 'A wide production still that captures the play\'s emotional scale: one room, two men, and a great deal of silence.',
+        orientation: 'portrait',
+        priority: true,
+        kind: 'production-still',
+      },
+      {
+        src: shiningCityPortrait,
+        alt: 'Oliver Platt sits on a leather sofa in Shining City, lit by a table lamp.',
+        caption: 'Oliver Platt as John in the Broadway staging.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: shiningCityShowArt,
+        alt: 'A stage image from Shining City showing John reclining on a sofa while Ian speaks to him.',
+        caption: 'Goodman show art built from one of the production stills, preserving the Chicago return in the page\'s visual record.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
+        src: shiningCityGoodman,
+        alt: 'Two actors stand in the Goodman return of Shining City, one resting a hand on the other\'s shoulder.',
+        caption: 'A still from the 2008 Goodman run, which brought Falls\'s staging back to Chicago with a resident cast.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: shiningCityDoor,
+        alt: 'A silhouetted figure stands in a doorway in a dark Shining City promotional image.',
+        caption: 'Promotional art leaning into the play\'s ghost-story surface and threshold imagery.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+    ],
     collaborators: [
       { role: 'Playwright', name: 'Conor McPherson' },
       { role: 'Director', name: 'Robert Falls' },
       { role: 'Cast highlight', name: 'Oliver Platt' },
-      { role: 'Cast highlight', name: 'Brían F. O\'Byrne' },
+      { role: 'Cast highlight', name: 'Brian F. O\'Byrne' },
+      { role: 'Cast highlight', name: 'Martha Plimpton' },
+      { role: 'Cast highlight', name: 'Peter Scanavino' },
     ],
     quickFacts: [
-      { label: 'Run', value: 'May 9 - Jul 18, 2006' },
-      { label: 'Venue', value: 'Biltmore Theatre' },
-      { label: 'Performances', value: '80 performances, 21 previews' },
-      { label: 'Recognition', value: 'Tony nominations for Best Play and Best Actor' },
+      { label: 'Broadway run', value: 'Apr 20 - Jul 16, 2006' },
+      { label: 'Opening night', value: 'May 9, 2006, Biltmore Theatre' },
+      { label: 'Goodman return', value: 'Jan 12 - Feb 17, 2008' },
+      { label: 'Runtime', value: '90 minutes' },
+    ],
+    cast: [
+      { role: 'John', name: 'Oliver Platt' },
+      { role: 'Ian', name: 'Brian F. O\'Byrne' },
+      { role: 'Neasa', name: 'Martha Plimpton' },
+      { role: 'Laurence', name: 'Peter Scanavino' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Conor McPherson' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Santo Loquasto' },
+      { role: 'Costume Design', name: 'Kaye Voyce' },
+      { role: 'Lighting Design', name: 'Christopher Akerlind' },
+      { role: 'Sound Design', name: 'Obadiah Eaves' },
+      { role: 'Dialect Coach', name: 'Deborah Hecht' },
+      { role: 'Casting', name: 'Nancy Piccione' },
+      { role: 'Casting', name: 'David Caparelliotis' },
+      { role: 'Production Stage Manager', name: 'Barclay Stiff' },
+      { role: 'Stage Manager', name: 'Francesca Russell' },
+      { role: 'Assistant Director', name: 'Henry Wishcamper' },
     ],
     recognition: [
       {
-        label: 'Tony context',
-        detail: 'The production received Tony nominations for Best Play and for Oliver Platt\'s performance.',
+        label: 'Tony recognition',
+        detail: 'The Broadway production received Tony nominations for Best Play and for Oliver Platt as leading actor.',
+      },
+      {
+        label: 'Broadway to Chicago afterlife',
+        detail: 'Falls brought the staging back to Goodman in 2008, giving the production a second institutional life rather than leaving it as a single Broadway engagement.',
+      },
+      {
+        label: 'McPherson chamber piece',
+        detail: 'The page shows Falls operating in a notably stripped-back contemporary mode where atmosphere, confession, and dread do most of the work.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'A quieter Broadway chapter',
+        detail: 'Shining City broadens the archive beyond transfers and large-scale revivals by showing Falls inside a small, haunted contemporary drama.',
+      },
+      {
+        label: 'Two-city life',
+        detail: 'The preserved source trail ties the 2006 Manhattan Theatre Club run to a 2008 Goodman remount, giving the production a fuller record than a one-off Broadway credit.',
+      },
+      {
+        label: 'Actor-led tension',
+        detail: 'Everything in the surviving materials points back to performance pressure: Oliver Platt\'s wounded volatility, Brian F. O\'Byrne\'s spiritual unease, and the room itself as a listening chamber.',
       },
     ],
     contextNotes: [
       {
-        label: 'Source status',
-        text: 'This entry is based on the local credits file and public secondary Broadway documentation rather than a currently reachable official archive page.',
+        label: 'Production history',
+        text: 'The local source document combines Broadway and Goodman materials, which is useful here: it confirms the 2006 Biltmore run while also preserving the 2008 Goodman dates, synopsis, and Chicago feature coverage.',
+      },
+      {
+        label: 'Primary cast choice',
+        text: 'This page uses the Broadway opening-night cast and design team as the primary roster because that is the clearest complete production packet preserved in the source material. The Goodman return is documented in the story, images, and source links rather than treated as a separate page.',
+      },
+      {
+        label: 'Goodman return cast',
+        text: 'The Goodman source screenshot preserves a later Chicago cast including John Judd, Jay Whittaker, Nicole Wiesner, and Keith D. Gallagher, confirming that Falls rebuilt the production locally rather than simply preserving the Broadway company intact.',
+      },
+      {
+        label: 'Source package',
+        text: 'The folder includes Broadway production stills, Goodman show art and source screenshots, Playbill feature scans, and a compiled document that preserves opening-night credits, review links, and both Broadway and Chicago production dates.',
       },
     ],
     reviews: [
       {
-        source: 'Wikipedia summary citing New York Times context',
-        href: 'https://en.wikipedia.org/wiki/Shining_City',
+        source: 'Manhattan Theatre Club',
+        href: 'https://www.manhattantheatreclub.com/shows/2005-06-season/shining-city/',
         summary:
-          'The production history records Falls\'s Broadway staging, major cast, run dates, and the strong critical response highlighted there by Ben Brantley.',
+          'The official production archive preserves the Broadway run dates, venue, runtime, and opening-night creative credits for the Biltmore staging.',
+        note: 'Official production archive',
+      },
+      {
+        source: 'The New York Times',
+        href: 'https://www.nytimes.com/2006/05/10/theater/reviews/shining-city-conor-mcphersons-study-of-loneliness-in-a.html',
+        summary:
+          'Ben Brantley\'s review, cited in the local document, frames the play as a study of loneliness and gives the production one of its strongest preserved notices.',
+        note: 'Broadway review',
+      },
+      {
+        source: 'TheaterMania',
+        href: 'https://www.theatermania.com/news/full-cast-and-creative-team-set-for-shining-city-opening-date-moved-to-may-9_7775/',
+        summary:
+          'Useful for confirming the Broadway cast, creative team, and the shift in the opening date before the production reached the Biltmore.',
+        note: 'Casting and production announcement',
+      },
+      {
+        source: 'Broadway.com',
+        href: 'https://www.broadway.com/buzz/94978/robert-falls-to-helm-conor-mcphersons-shining-city-at-the-biltmore/',
+        summary:
+          'Announcement coverage that places Falls at the center of the Broadway staging before previews began.',
+        note: 'Broadway announcement',
+      },
+      {
+        source: 'Chicago Reader',
+        href: 'https://chicagoreader.com/arts-culture/therapist-heal-thyself/',
+        summary:
+          'Chicago coverage tied to the Goodman return, useful for showing how the production read once Falls brought it back home.',
+        note: 'Goodman-era feature',
+      },
+      {
+        source: 'Theatre In Chicago',
+        href: 'https://www.theatreinchicago.com/articles/robert-falls-brings-his-acclaimed-broadway-staging-of-shining-city-to-goodman-theatre/305/',
+        summary:
+          'Feature coverage explicitly frames the Goodman run as Falls bringing his acclaimed Broadway staging to Chicago.',
+        note: 'Goodman feature',
       },
     ],
-    externalSources: [{ label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/Shining_City' }],
+    externalSources: [
+      { label: 'Official MTC production archive', href: 'https://www.manhattantheatreclub.com/shows/2005-06-season/shining-city/' },
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/shining-city/' },
+      { label: 'New York Times review', href: 'https://www.nytimes.com/2006/05/10/theater/reviews/shining-city-conor-mcphersons-study-of-loneliness-in-a.html' },
+      { label: 'TheaterMania cast announcement', href: 'https://www.theatermania.com/news/full-cast-and-creative-team-set-for-shining-city-opening-date-moved-to-may-9_7775/' },
+      { label: 'Broadway.com announcement', href: 'https://www.broadway.com/buzz/94978/robert-falls-to-helm-conor-mcphersons-shining-city-at-the-biltmore/' },
+      { label: 'Theatre In Chicago feature', href: 'https://www.theatreinchicago.com/articles/robert-falls-brings-his-acclaimed-broadway-staging-of-shining-city-to-goodman-theatre/305/' },
+      { label: 'Chicago Reader feature', href: 'https://chicagoreader.com/arts-culture/therapist-heal-thyself/' },
+      { label: 'Arts Fuse review', href: 'https://artsfuse.org/414/theater-review-a-shining-city-on-the-yawning-heights/' },
+    ],
+    pressQuotes: [
+      {
+        quote: 'Quiet, haunting and absolutely glorious new play.',
+        source: 'The New York Times',
+      },
+      {
+        quote: 'An artful, absorbing new drama about two men deeply haunted by their actions.',
+        source: 'The Star-Ledger',
+      },
+      {
+        quote: 'Everything is right about Shining City.',
+        source: 'The Journal News',
+      },
+      {
+        quote: 'A scrupulous production.',
+        source: 'Associated Press',
+      },
+      {
+        quote: 'An unforgettable production.',
+        source: 'Chicago Tribune',
+      },
+    ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   "franks-home": {
     pageMode: 'archive',
