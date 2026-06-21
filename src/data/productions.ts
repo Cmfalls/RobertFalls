@@ -83,6 +83,11 @@ import franksHomeWorktable from '../images/franks-home/franks-home-worktable.web
 import franksHomeShowArt from '../images/franks-home/franks-home-show-art.webp';
 import franksHomeWeller from '../images/franks-home/franks-home-weller.webp';
 import franksHomePortrait from '../images/franks-home/franks-home-portrait.jpg';
+import desireUnderTheElmsHero from '../images/desire-under-the-elms/desire-under-the-elms-hero.webp';
+import desireUnderTheElmsTable from '../images/desire-under-the-elms/desire-under-the-elms-table.jpg';
+import desireUnderTheElmsLovers from '../images/desire-under-the-elms/desire-under-the-elms-lovers.jpg';
+import desireUnderTheElmsAbbieEphraim from '../images/desire-under-the-elms/desire-under-the-elms-abbie-ephraim.jpg';
+import desireUnderTheElmsArrival from '../images/desire-under-the-elms/desire-under-the-elms-arrival.jpg';
 import enemyShowArt from '../images/an-enemy-of-the-people/enemy-show-art.webp';
 import measureShowArt from '../images/measure-for-measure/measure-show-art.png';
 import measurePoster from '../images/measure-for-measure/measure-poster.jpg';
@@ -115,6 +120,17 @@ import donGiovanni4 from '../images/don-giovanni/don-giovanni-4.jpg';
 import donGiovanni5 from '../images/don-giovanni/don-giovanni-5.jpg';
 import donGiovanni6 from '../images/don-giovanni/don-giovanni-6.jpg';
 import donGiovanni2019Revival from '../images/don-giovanni/don-giovanni-2019-revival.jpg';
+import americanBuffaloPlaybill from '../images/american-buffalo/american-buffalo-playbill.jpg';
+import americanBuffaloLogo from '../images/american-buffalo/american-buffalo-logo.png';
+import americanBuffalo1 from '../images/american-buffalo/american-buffalo-1.jpg';
+import americanBuffalo2 from '../images/american-buffalo/american-buffalo-2.jpg';
+import americanBuffalo3 from '../images/american-buffalo/american-buffalo-3.jpg';
+import americanBuffalo4 from '../images/american-buffalo/american-buffalo-4.jpg';
+import americanBuffalo5 from '../images/american-buffalo/american-buffalo-5.jpg';
+import americanBuffalo6 from '../images/american-buffalo/american-buffalo-6.jpg';
+import americanBuffaloMarquee from '../images/american-buffalo/american-buffalo-marquee.jpg';
+import americanBuffaloCurtainCall from '../images/american-buffalo/american-buffalo-curtain-call.jpg';
+import americanBuffaloAfterparty from '../images/american-buffalo/american-buffalo-afterparty.jpg';
 import swingState1 from '../images/swing-state-1.jpg';
 import swingState2 from '../images/swing-state-2.jpg';
 import swingState3 from '../images/swing-state-3.jpg';
@@ -142,6 +158,7 @@ import cherryOrchardKeithParham1 from '../images/web-sourced/cherry-orchard-keit
 import cherryOrchardSunTimes1 from '../images/web-sourced/cherry-orchard-suntimes-1.jpg';
 import cherryOrchardSunTimes2 from '../images/web-sourced/cherry-orchard-suntimes-2.jpg';
 import deathOfASalesmanPlaybillFull from '../images/web-sourced/death-of-a-salesman-playbill-full.jpg';
+import deathOfASalesmanPlaybillCover from '../images/death-of-a-salesman/salesman-playbill-cover.jpg';
 import donGiovanniDonnaElvira from '../images/web-sourced/don-giovanni-donna-elvira.jpg';
 import donGiovanniFinalCostume from '../images/web-sourced/don-giovanni-final-costume.jpg';
 import holidayGoodman from '../images/web-sourced/holiday-goodman.jpg';
@@ -1414,6 +1431,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
   },
   'death-of-a-salesman': {
     pageMode: 'featured',
+    /*
     summary:
       'Death of a Salesman is one of the central transfer stories in the archive: built in Chicago, reformed for Broadway, and tied directly to Falls’s Tony-winning public profile.',
     significance:
@@ -1459,6 +1477,145 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Photo source',
         text: 'Hero image is drawn from Playbill’s Broadway photo archive and credited there to Eric Y. Exit.',
       },
+    ],
+    */
+    summary:
+      'Death of a Salesman is one of the central transfer stories in the archive: built at the Goodman in 1998, carried to Broadway for the play\'s fiftieth anniversary in 1999, and tied directly to Robert Falls\'s breakthrough Tony win as a director.',
+    publicSummary:
+      'Falls and Brian Dennehy turned Miller\'s tragedy into a defining Goodman-to-Broadway event, then carried it into a filmed version and a later London run.',
+    synopsis:
+      'Willy Loman returns home exhausted, unable to separate his memories, fantasies, and self-mythology from the brutal facts of his failing career and fractured family. As Biff and Happy circle him, and Linda tries to hold the house together, the American dream collapses into blame, longing, and self-destruction.',
+    fallsContext:
+      'This is one of the productions that most cleanly explains Falls\'s whole public arc. The timeline already ties his childhood imagination to Lee J. Cobb\'s Willy Loman on television; four decades later, Falls directs his own Broadway Salesman with Brian Dennehy and wins the Tony Award. That makes this page more than a standard revival entry. It is a career-defining return to an early obsession.',
+    significance:
+      'A defining Brian Dennehy collaboration and the production that brought Falls the Tony Award for Best Direction of a Play, while also winning Best Revival and fixing the Goodman-to-Broadway pipeline in the public imagination.',
+    story:
+      'The documented arc moves with unusual clarity: Goodman Theatre in 1998, Broadway at the Eugene O\'Neill Theatre beginning February 10, 1999, a filmed adaptation released on January 9, 2000, and a London remount in 2005. Few titles show the full Falls machine this cleanly. The Chicago production becomes a major Broadway revival; the revival wins four Tony Awards, including Falls\'s; the central Dennehy-Franz performances become definitive enough to be preserved on film; and the production remains strong enough to travel again to the West End. Even with a sparse image packet, the production reads as one of the archive\'s anchor titles because the achievement is so legible: this is where Falls\'s Chicago authority, actor partnership, and Broadway legitimacy lock together.',
+    venueAnchor: 'Goodman Theatre, Broadway, and London',
+    images: [
+      {
+        src: deathOfASalesmanPlaybillFull,
+        alt: 'Brian Dennehy and Elizabeth Franz in Death of a Salesman.',
+        caption: 'Brian Dennehy and Elizabeth Franz in Death of a Salesman. Photo: Eric Y. Exit via Playbill.',
+        orientation: 'portrait',
+        priority: true,
+        kind: 'production-still',
+      },
+      {
+        src: deathOfASalesmanPlaybillCover,
+        alt: 'Playbill cover for the 1999 Broadway revival of Death of a Salesman at the Eugene O\'Neill Theatre.',
+        caption: 'The 1999 Broadway Playbill, carrying Dennehy\'s Willy Loman into the Eugene O\'Neill Theatre run.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Arthur Miller' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Brian Dennehy' },
+      { role: 'Cast highlight', name: 'Elizabeth Franz' },
+      { role: 'Cast highlight', name: 'Kevin Anderson' },
+      { role: 'Music', name: 'Richard Woodbury' },
+    ],
+    quickFacts: [
+      { label: 'Goodman debut', value: '1998' },
+      { label: 'Broadway opening', value: 'Feb 10, 1999' },
+      { label: 'Broadway venue', value: 'Eugene O\'Neill Theatre' },
+      { label: 'Afterlife', value: 'Showtime film in 2000 and London remount in 2005' },
+    ],
+    cast: [
+      { role: 'Willy Loman', name: 'Brian Dennehy' },
+      { role: 'Linda Loman', name: 'Elizabeth Franz' },
+      { role: 'Biff Loman', name: 'Kevin Anderson' },
+      { role: 'Happy Loman', name: 'Ted Koch' },
+      { role: 'Charley', name: 'Howard Witt' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Arthur Miller' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Original Music', name: 'Richard Woodbury' },
+    ],
+    recognition: [
+      {
+        label: 'Tony sweep',
+        detail: 'The 1999 Broadway revival won four Tony Awards: Best Revival of a Play, Best Actor in a Play for Brian Dennehy, Best Featured Actress in a Play for Elizabeth Franz, and Best Direction of a Play for Robert Falls.',
+      },
+      {
+        label: 'Transfer story',
+        detail: 'The 1998 Goodman production became the basis for the 1999 Broadway revival at the Eugene O\'Neill Theatre, where it ran 274 performances.',
+      },
+      {
+        label: 'Filmed afterlife',
+        detail: 'The Broadway staging was preserved in a 2000 television adaptation with Dennehy and Franz repeating their roles; Dennehy later won a Golden Globe for that screen version.',
+      },
+      {
+        label: 'London continuation',
+        detail: 'The production continued to the Lyric Theatre in London in 2005, where Dennehy\'s Willy Loman performance also earned Olivier recognition.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'A cornerstone Falls transfer',
+        detail: 'This is one of the clearest examples of the Goodman functioning as a launch site for a Broadway revival that kept its artistic identity intact rather than being rebuilt from scratch in New York.',
+      },
+      {
+        label: 'The Dennehy partnership at full force',
+        detail: 'Falls had other major collaborations with Brian Dennehy, but Salesman is the one where that partnership became inseparable from awards history and public memory.',
+      },
+      {
+        label: 'Career myth meeting career fact',
+        detail: 'The timeline\'s note that Falls was marked early by Lee J. Cobb\'s Willy Loman gives this production a rare autobiographical echo inside the broader archive.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Revival context',
+        text: 'The Broadway run lands at the play\'s fiftieth-anniversary moment, which helps explain why this revival reads less like repertory maintenance and more like a major cultural event.',
+      },
+      {
+        label: 'Afterlife',
+        text: 'Timeline and production notes together trace a rare full chain: Goodman in 1998, Broadway in 1999, filmed adaptation in 2000, then a London remount in 2005.',
+      },
+      {
+        label: 'Photo source',
+        text: 'The strongest image currently in the repo is drawn from Playbill\'s Broadway photo archive and credited there to Eric Y. Exit. The rest of the local packet is sparse, so this page stays intentionally text-led rather than forcing a weak gallery.',
+      },
+      {
+        label: 'Source status',
+        text: 'This is one of the archive\'s most important productions, but the local source folder currently contains very little beyond Playbill material and a London notes stub. If stronger Goodman or Broadway stills surface later, this page should be one of the first to receive a fuller media expansion.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'The New Yorker',
+        href: 'https://www.newyorker.com/magazine/1999/01/25/making-willy-loman',
+        summary:
+          'John Lahr situates the Falls/Dennehy revival inside the play\'s fiftieth-anniversary return, treating the Broadway transfer as a major new encounter with Miller rather than a dutiful classic revival.',
+        note: 'Feature on the revival moment',
+      },
+      {
+        source: 'The New Yorker',
+        href: 'https://www.newyorker.com/magazine/1999/03/15/leading-ladies-3',
+        summary:
+          'A profile of Elizabeth Franz during the Broadway run underscores how central Linda Loman was to the revival\'s emotional architecture, not just Dennehy\'s star turn.',
+        note: 'Elizabeth Franz profile during the run',
+      },
+      {
+        source: 'Archive timeline and credits',
+        summary:
+          'Internal source records consistently treat the production as a Goodman-built revival that became a Tony-winning Broadway transfer and later London remount.',
+        note: 'Internal archive record',
+      },
+    ],
+    externalSources: [
+      { label: 'The New Yorker: Arthur Miller and the Making of Willy Loman', href: 'https://www.newyorker.com/magazine/1999/01/25/making-willy-loman' },
+      { label: 'The New Yorker: Leading Ladies', href: 'https://www.newyorker.com/magazine/1999/03/15/leading-ladies-3' },
+      { label: 'Playbill archive', href: 'https://playbill.com' },
+    ],
+    pressQuotes: [
+      { quote: 'Probably the most successful modern play ever published', source: 'John Lahr, The New Yorker' },
+      { quote: 'The performance of Dennehy\'s career', source: 'Referenced in Brian Dennehy biography coverage' },
+      { quote: 'A defining Goodman-to-Broadway event', source: 'Archive synthesis' },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
@@ -4975,72 +5132,365 @@ const productionSeeds: Record<string, ProductionSeed> = {
   'american-buffalo': {
     pageMode: 'archive',
     summary:
-      'American Buffalo marks Falls\'s 2008 return to Mamet on Broadway, translating the playwright\'s junk-shop pressure cooker into a short, high-profile revival built around celebrity casting.',
+      'American Buffalo is one of the most candid entries in the archive: a star-driven 2008 Broadway revival of David Mamet\'s junk-shop classic that closed after just 20 previews and 8 performances under a wave of largely negative reviews.',
     publicSummary:
-      'Falls directs a Broadway Mamet revival that turns petty theft, male posturing, and failed hustle into compressed stage combat.',
+      'A starry, multicultural cast - John Leguizamo, Cedric the Entertainer, and Haley Joel Osment - brought David Mamet\'s 1976 classic back to Broadway in a short-lived revival directed by Falls.',
     synopsis:
-      'Inside a resale shop, a plan to steal a valuable coin mutates into accusation, improvisation, and betrayal. The play strips commerce, friendship, and masculine performance down to a claustrophobic argument about value and trust.',
+      'Junk-shop owner Don sells a buffalo nickel for far less than it is worth, then enlists his young protege Bobby and his volatile friend Teach in a scheme to steal back the buyer\'s entire coin collection. What starts as petty revenge curdles into paranoia, betrayal, and violence among men who talk constantly about business and trust each other least.',
     fallsContext:
-      'Within the archive, American Buffalo helps connect Falls\'s Goodman-based Mamet work to his national profile as a Broadway director willing to handle revivals as well as transfers.',
+      'American Buffalo sits alongside Falls\'s other Mamet work as a rare Broadway revival of an existing classic rather than a Goodman-originated premiere or transfer, and it is one of the few entries in this archive where the dominant critical verdict was negative rather than mixed-to-positive - a useful, honest counterweight to the praise that surrounds most of his Broadway transfers.',
     significance:
-      'A 2008 Broadway Mamet revival that broadens the Falls production record beyond Goodman-originating work, even if the current site materials remain thinner than for the larger transfer stories.',
+      'A 2008 Broadway revival, at the Belasco Theatre, of Mamet\'s 1976 classic, cast with John Leguizamo as Teach, Cedric the Entertainer (in his Broadway debut) as Donny, and Haley Joel Osment (also a Broadway debut) as Bobby - a high-profile pairing of stage and screen names that drew heavy advance interest but closed within a week of opening after reviews judged Falls\'s pacing too deliberate for Mamet\'s usual velocity.',
     story:
-      'The value of the entry right now is structural. American Buffalo shows Falls stepping into a high-visibility Broadway revival without the Goodman-premiere scaffolding that supports other pages. It belongs in the archive as a reminder that his national reputation also included direct engagement with canonical American plays already circulating far beyond Chicago.',
-    venueAnchor: 'Broadway',
+      'American Buffalo had been a Broadway staple before Falls ever directed it: an Off-Broadway debut in 1976, a 1977 Broadway transfer, and a celebrated 1983 revival that starred Al Pacino as Teach. Falls\'s 2008 revival invited the comparison directly, and most critics found it wanting. Ben Brantley in The New York Times called it "deflated," comparing it to "a souped-up sports car\'s flat tire, built for speed but going nowhere." Variety, the Associated Press, the New York Post, and the New York Daily News were similarly unimpressed, generally agreeing that Falls\'s slower, more naturalistic approach drained the play of Mamet\'s characteristic anxiety and dark comic momentum, even as several singled out Santo Loquasto\'s richly detailed junk-shop set for praise. A smaller number of critics pushed back: USA Today\'s Elysa Gardner doubted "many productions have made the thwarted humanity of these men more accessible or moving," and The Record\'s Robert Feldberg found the production "more balanced, funnier and more humane" than the Pacino-led 1983 revival, if less dangerous. The show opened November 17, 2008, and closed November 23 after only 20 previews and 8 regular performances - one of the shortest runs in Falls\'s Broadway record, and a useful reminder that even an accomplished director\'s starry vehicles do not always land.',
+    venueAnchor: 'Belasco Theatre, Broadway',
     eraLabel: 'Broadway transfer years',
-    collaborators: [{ role: 'Playwright', name: 'David Mamet' }],
+    images: [
+      {
+        src: americanBuffaloPlaybill,
+        alt: 'Playbill cover for American Buffalo at the Belasco Theatre, showing Cedric the Entertainer, John Leguizamo, and Haley Joel Osment posed in a shop doorway.',
+        caption: 'Playbill cover art for the Belasco Theatre engagement.',
+        orientation: 'portrait',
+        priority: true,
+        kind: 'art',
+      },
+      {
+        src: americanBuffaloLogo,
+        alt: 'Official black-and-white American Buffalo logo art with Cedric the Entertainer, John Leguizamo, and Haley Joel Osment, credited to David Mamet and Robert Falls.',
+        caption: 'Official production logo art, by David Mamet, directed by Robert Falls.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: americanBuffalo1,
+        alt: 'Donny cradles an injured, bloodied Bobby near the end of American Buffalo.',
+        caption: 'Cedric the Entertainer (Donny) and Haley Joel Osment (Bobby) in the production\'s violent final movement. Photo: Carol Rosegg.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: americanBuffalo2,
+        alt: 'Teach grabs Bobby by the collar in a tense confrontation in the junk shop.',
+        caption: 'John Leguizamo (Teach) confronts Haley Joel Osment\'s Bobby. Photo: Carol Rosegg.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: americanBuffalo3,
+        alt: 'Donny, Bobby, and Teach together in the cluttered junk-shop set of American Buffalo.',
+        caption: 'Cedric the Entertainer, Haley Joel Osment, and John Leguizamo on Santo Loquasto\'s junk-shop set. Photo: Carol Rosegg.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: americanBuffalo4,
+        alt: 'Donny reclines in a chair as Teach leans over him mid-argument.',
+        caption: 'Cedric the Entertainer and John Leguizamo. Photo: Carol Rosegg.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: americanBuffalo5,
+        alt: 'Teach sits alone at a cluttered desk in the junk shop, mid-monologue.',
+        caption: 'John Leguizamo as Teach. Photo: Carol Rosegg.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: americanBuffalo6,
+        alt: 'Bobby sits alone at a table in the junk shop.',
+        caption: 'Haley Joel Osment as Bobby. Photo: Carol Rosegg.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: americanBuffaloMarquee,
+        alt: 'The Belasco Theatre marquee lit up at night, reading American Buffalo, by David Mamet, Directed by Robert Falls.',
+        caption: 'The Belasco Theatre marquee, with Falls\'s directing credit visible beneath the title.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: americanBuffaloCurtainCall,
+        alt: 'The three actors raise their joined hands together during a curtain call bow.',
+        caption: 'Osment, Leguizamo, and Cedric the Entertainer take a curtain call bow.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: americanBuffaloAfterparty,
+        alt: 'Haley Joel Osment, John Leguizamo, Cedric the Entertainer, and Robert Falls pose together at the opening-night after party.',
+        caption: 'Osment, Leguizamo, Cedric the Entertainer, and Robert Falls at the opening-night after party.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'David Mamet' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'John Leguizamo' },
+      { role: 'Cast highlight', name: 'Cedric the Entertainer' },
+      { role: 'Cast highlight', name: 'Haley Joel Osment' },
+    ],
     quickFacts: [
-      { label: 'Year', value: '2008' },
-      { label: 'Venue', value: 'Broadway' },
-      { label: 'Type', value: 'Revival' },
+      { label: 'Run', value: 'Nov 17 - Nov 23, 2008' },
+      { label: 'Venue', value: 'Belasco Theatre, Broadway' },
+      { label: 'Performances', value: '20 previews, 8 regular performances' },
+      { label: 'Two Broadway debuts', value: 'Cedric the Entertainer and Haley Joel Osment' },
+    ],
+    cast: [
+      { role: 'Walter "Teach" Cole', name: 'John Leguizamo' },
+      { role: 'Donny Dubrow', name: 'Cedric the Entertainer' },
+      { role: 'Bobby', name: 'Haley Joel Osment' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'David Mamet' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Assistant Director', name: 'Stephanie Yankwitt' },
+      { role: 'Scenic and Costume Design', name: 'Santo Loquasto' },
+      { role: 'Lighting Design', name: 'Brian MacDevitt' },
+      { role: 'Fight Direction', name: 'Rick Sordelet' },
+      { role: 'Casting', name: 'Marjorie Martin' },
+      { role: 'Production Stage Manager', name: 'Robert Bennett' },
+      { role: 'Stage Manager', name: 'Denise Yaney' },
+    ],
+    recognition: [
+      {
+        label: 'Praised design, mixed staging',
+        detail: 'Even critics who disliked the pacing of Falls\'s production singled out Santo Loquasto\'s densely detailed junk-shop set as a highlight of the evening.',
+      },
+      {
+        label: 'Two Broadway debuts',
+        detail: 'The production marked the Broadway debuts of both Cedric the Entertainer and Haley Joel Osment, alongside Broadway veteran John Leguizamo.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'An honest counterweight',
+        detail: 'Unlike most of the Broadway transfers in this archive, American Buffalo drew a dominant wave of negative reviews, making it a useful, candid record of a high-profile production that did not connect with critics.',
+      },
+      {
+        label: 'Measured against Pacino',
+        detail: 'Several reviewers explicitly compared the revival to the celebrated 1983 Broadway production starring Al Pacino as Teach, generally to Falls\'s production\'s disadvantage on intensity and danger, though The Record\'s Robert Feldberg found it more humane.',
+      },
     ],
     contextNotes: [
       {
-        label: 'Source status',
-        text: 'This entry currently leans on the local timeline and credits record and still needs a fuller primary-source pass for casting and production-detail expansion.',
+        label: 'A short run',
+        text: 'The production played only 20 previews and 8 regular performances before closing, one of the shortest engagements in Falls\'s Broadway record.',
+      },
+      {
+        label: 'Source package',
+        text: 'The folder includes the Playbill cover, official logo art, eleven Carol Rosegg production photographs, a Belasco Theatre marquee photo, a curtain-call photo, and an opening-night after-party photo of the cast with Falls and his wife, Kat Falls.',
       },
     ],
+    reviews: [
+      {
+        source: 'The New York Times',
+        href: 'https://www.nytimes.com/2008/11/18/theater/reviews/18buff.html',
+        summary: 'Ben Brantley called the revival "deflated," likening it to "a souped-up sports car\'s flat tire, built for speed but going nowhere," and found Leguizamo\'s Teach unconvincing.',
+        note: 'Negative',
+      },
+      {
+        source: 'Variety',
+        href: 'http://www.variety.com/review/VE1117939046.html?categoryid=33&cs=1',
+        summary: 'David Rooney wrote that the production "drains much of the humor, urgency and anxiety from the piece," leaving Mamet\'s commerce subtext "lost" in a static character study.',
+        note: 'Negative',
+      },
+      {
+        source: 'Associated Press',
+        href: 'http://news.yahoo.com/s/ap/20081118/ap_en_re/theater_review_american_buffalo_1',
+        summary: 'Michael Kuchwara found the revival "slack" and "unsatisfying," writing that little besides the profanity survived intact.',
+        note: 'Negative',
+      },
+      {
+        source: 'USA Today',
+        href: 'http://www.usatoday.com/life/theater/reviews/2008-11-17-american-buffalo_N.htm',
+        summary: 'Elysa Gardner offered a dissenting view, doubting "many productions have made the thwarted humanity of these men more accessible or moving."',
+        note: 'Positive',
+      },
+      {
+        source: 'The Record',
+        href: 'http://www.northjersey.com/entertainment/stage/34629524.html',
+        summary: 'Robert Feldberg judged Falls\'s staging "more balanced, funnier and more humane" than the 1983 Pacino-led Broadway revival, while noting it carried less danger.',
+        note: 'Mixed-to-positive',
+      },
+      {
+        source: 'Back Stage',
+        href: 'http://www.backstage.com/bso/news_reviews/nyc/review_display.jsp?vnu_content_id=1003891970',
+        summary: 'David Sheward credited Falls with "a solid, straightforward framework" for the play but felt the cast was unevenly balanced.',
+        note: 'Mixed',
+      },
+      {
+        source: 'New York Post',
+        href: 'http://www.nypost.com/seven/11182008/entertainment/theater/barely_worth_a_plugged_nickel_139242.htm',
+        summary: 'Barbara Hoffman wrote that the production had "all the profanity and none of the poetry," calling it "flatter than a cow plop."',
+        note: 'Negative',
+      },
+      {
+        source: 'New York Daily News',
+        href: 'http://www.nydailynews.com/entertainment/arts/2008/11/18/2008-11-18_american_buffalo_not_worth_a_wooden_nick.html',
+        summary: 'Joe Dziemianowicz called the starry revival "tepid," writing that it made the story "seem very slight."',
+        note: 'Negative',
+      },
+      {
+        source: 'BroadwayWorld',
+        href: 'https://www.broadwayworld.com/shows/American-Buffalo-311722.html',
+        summary: 'Production listing confirming the Belasco Theatre run, opening and closing dates, and full cast and creative credits.',
+        note: 'Production record',
+      },
+    ],
+    externalSources: [
+      { label: 'New York Times review', href: 'https://www.nytimes.com/2008/11/18/theater/reviews/18buff.html' },
+      { label: 'Variety review', href: 'http://www.variety.com/review/VE1117939046.html?categoryid=33&cs=1' },
+      { label: 'Associated Press review', href: 'http://news.yahoo.com/s/ap/20081118/ap_en_re/theater_review_american_buffalo_1' },
+      { label: 'USA Today review', href: 'http://www.usatoday.com/life/theater/reviews/2008-11-17-american-buffalo_N.htm' },
+      { label: 'The Record review', href: 'http://www.northjersey.com/entertainment/stage/34629524.html' },
+      { label: 'Back Stage review', href: 'http://www.backstage.com/bso/news_reviews/nyc/review_display.jsp?vnu_content_id=1003891970' },
+      { label: 'New York Post review', href: 'http://www.nypost.com/seven/11182008/entertainment/theater/barely_worth_a_plugged_nickel_139242.htm' },
+      { label: 'New York Daily News review', href: 'http://www.nydailynews.com/entertainment/arts/2008/11/18/2008-11-18_american_buffalo_not_worth_a_wooden_nick.html' },
+      { label: 'Journal News review', href: 'http://www.lohud.com/article/20081118/ENTERTAINMENT/811180311/1186/Entertainment0801' },
+      { label: 'IBDB production record', href: 'https://www.ibdb.com/broadway-production/american-buffalo-480742' },
+      { label: 'BroadwayWorld production page', href: 'https://www.broadwayworld.com/shows/American-Buffalo-311722.html' },
+      { label: 'TheaterMania listing', href: 'https://www.theatermania.com/shows/new-york-city-theater/broadway/american-buffalo_146735/' },
+    ],
     relatedLinks: seedLinks,
-    sourceStatus: 'repo-only',
+    sourceStatus: 'featured-ready',
   },
   'desire-under-the-elms': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
-      'Desire Under the Elms continues the Falls/Dennehy O\'Neill line with one of its fiercest late chapters, moving from Goodman to Broadway as a story of inheritance, lust, and catastrophic family struggle.',
+      'Desire Under the Elms turns the Falls/Dennehy O\'Neill line into something harsher and more expressionistic: a stripped, hundred-minute family tragedy played on a blasted rock field, then carried intact from Goodman to Broadway.',
     publicSummary:
-      'Falls stages O\'Neill as fever dream and family war, with Brian Dennehy and Carla Gugino at the center of the farm-house tragedy.',
+      'Falls stages O\'Neill as a fever dream of property, sex, and punishment, with Brian Dennehy, Carla Gugino, and Pablo Schreiber caught inside a brutal stone landscape.',
     synopsis:
-      'On a remote New England farm, an aging patriarch brings home a young wife who becomes entangled with his son. Desire, resentment, property, and bloodline crash together until the family itself becomes an instrument of punishment.',
+      'On an isolated New England farm, patriarch Ephraim Cabot returns with a new wife, Abbie, igniting resentment among his sons and then a dangerous erotic bond between Abbie and Eben. Questions of inheritance, ownership, lust, and vengeance collapse into a tragedy where home itself feels cursed.',
     fallsContext:
-      'This production belongs squarely inside the long Dennehy/O\'Neill collaboration that helped define Falls\'s public stature, but its tone is especially concentrated: less expansive than The Iceman Cometh and more erotically dangerous than many of the other O\'Neill chapters.',
+      'This sits deep inside Falls\'s long O\'Neill collaboration with Brian Dennehy, but it is more compressed and feral than the larger Dennehy vehicles. Where The Iceman Cometh sprawls and Death of a Salesman devastates through accumulation, Desire Under the Elms hits as a single, concentrated wound: one act, one jagged landscape, one family tearing itself apart.',
     significance:
-      'A major late Dennehy/O\'Neill collaboration that transferred from Goodman to Broadway, reinforcing one of the most important actor-playwright-director threads in the archive.',
+      'A major late Dennehy/O\'Neill collaboration and a full Goodman-to-Broadway transfer, remembered for Falls\'s one-act compression, Walt Spangler\'s boulder-field set, and the production\'s relentless sexual and familial violence.',
     story:
-      'Desire Under the Elms is the kind of title that clarifies why the Falls record keeps returning to O\'Neill. It offers mythic family damage, brutal appetite, and language pitched toward nightmare rather than realism. The Goodman page already presents it as a fever dream, and the transfer history confirms it was more than a strong local staging.',
-    venueAnchor: 'Goodman Theatre & Broadway',
+      'Desire Under the Elms matters because it shows Falls pushing canonical American tragedy away from heritage realism and toward nightmare. He cut O\'Neill\'s three acts into a swift one-act evening, stripped away the literal elm trees, and replaced pastoral setting with an immense field of hanging stones and boulders that made the Cabot farm feel less like property than a spiritual prison. Reviewers kept circling the same result from different angles: operatic scale, fever-dream sensuality, and a willingness to let the play become ugly, erotic, and overripe rather than tasteful. That approach also clarifies why the production transferred. It was not just another solid Goodman classic; it was an aggressive reinterpretation of O\'Neill that could announce itself on Broadway as an event.',
+    venueAnchor: 'Goodman Theatre and Broadway',
     eraLabel: 'Broadway transfer years',
+    images: [
+      {
+        src: desireUnderTheElmsHero,
+        alt: 'A suspended farmhouse and field of boulders dominate the stage in Robert Falls\'s Desire Under the Elms.',
+        caption: 'Falls and scenic designer Walt Spangler replace O\'Neill\'s naturalistic farm with a suspended house and punishing boulder field.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'production-still',
+      },
+      {
+        src: desireUnderTheElmsTable,
+        alt: 'Brian Dennehy, Pablo Schreiber, and Carla Gugino sit in tense silence around a wooden table in Desire Under the Elms.',
+        caption: 'Brian Dennehy, Pablo Schreiber, and Carla Gugino in the production\'s central family triangle.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: desireUnderTheElmsLovers,
+        alt: 'Carla Gugino and Pablo Schreiber in an intimate scene from Desire Under the Elms.',
+        caption: 'The production leans hard into the play\'s dangerous erotic charge between Abbie and Eben.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: desireUnderTheElmsAbbieEphraim,
+        alt: 'Brian Dennehy stands closely behind Carla Gugino in Desire Under the Elms.',
+        caption: 'Abbie and Ephraim, with Gugino and Dennehy playing the marriage as coercion, strategy, and desire all at once.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: desireUnderTheElmsArrival,
+        alt: 'Carla Gugino looks up from the rocks at Brian Dennehy, who stands over her holding a suitcase.',
+        caption: 'Abbie\'s arrival on the farm immediately turns the stage picture into a contest over place and power.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+    ],
     collaborators: [
       { role: 'Playwright', name: 'Eugene O\'Neill' },
       { role: 'Director', name: 'Robert Falls' },
       { role: 'Cast highlight', name: 'Brian Dennehy' },
       { role: 'Cast highlight', name: 'Carla Gugino' },
+      { role: 'Cast highlight', name: 'Pablo Schreiber' },
+      { role: 'Scenic design', name: 'Walt Spangler' },
     ],
     quickFacts: [
       { label: 'Run', value: 'Jan 17 - Mar 1, 2009' },
       { label: 'Venue', value: 'Albert Theatre' },
-      { label: 'Runtime', value: '1 hr 45 min' },
-      { label: 'Afterlife', value: 'Goodman transfer to Broadway' },
+      { label: 'Form', value: '100-minute one-act adaptation' },
+      { label: 'Afterlife', value: 'Transferred to the St. James Theatre on Broadway' },
+    ],
+    cast: [
+      { role: 'Ephraim Cabot', name: 'Brian Dennehy' },
+      { role: 'Abbie Putnam', name: 'Carla Gugino' },
+      { role: 'Eben Cabot', name: 'Pablo Schreiber' },
+      { role: 'Peter Cabot', name: 'Boris McGiver' },
+      { role: 'Simeon Cabot', name: 'Daniel Stewart Sherman' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Eugene O\'Neill' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Walt Spangler' },
+      { role: 'Costume Design', name: 'Ana Kuzmanic' },
+      { role: 'Lighting Design', name: 'Michael Philippi' },
+      { role: 'Sound Design / Original Music', name: 'Richard Woodbury' },
+      { role: 'Fight Direction', name: 'Rick Sordelet' },
+      { role: 'Dialect Coaching', name: 'Linda Gates' },
+      { role: 'Dramaturgy', name: 'Neena Arndt' },
+      { role: 'Dramaturgy', name: 'Tanya Palmer' },
+      { role: 'Casting', name: 'Adam Belcuore' },
+      { role: 'Production Stage Manager', name: 'Joseph Drummond' },
+      { role: 'Stage Manager', name: 'T. Paul Lynch' },
     ],
     recognition: [
       {
-        label: 'Transfer story',
-        detail: 'Credits identify the Broadway staging as a Goodman transfer.',
+        label: 'Broadway transfer',
+        detail: 'The production moved from Goodman to Broadway\'s St. James Theatre, opening there on April 27, 2009.',
+      },
+      {
+        label: 'Design recognition',
+        detail: 'The Broadway transfer earned 2009 Drama Desk nominations for Richard Woodbury\'s music and Walt Spangler\'s set design.',
+      },
+      {
+        label: 'Review consensus',
+        detail: 'TheatreInChicago\'s local aggregate logged sixteen reviews with eleven Highly Recommended, two Recommended, and three Somewhat Recommended notices.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Falls turns O\'Neill expressionist',
+        detail: 'Instead of staging the title literally, Falls and Walt Spangler build a crushing landscape of boulders and suspended weight, making the farm feel psychological before it feels geographic.',
+      },
+      {
+        label: 'A crucial Dennehy chapter',
+        detail: 'This is one of the last major O\'Neill collaborations in the Falls/Dennehy line and one of the clearest examples of how their partnership could carry both scale and ferocity.',
+      },
+      {
+        label: 'Compression as interpretation',
+        detail: 'Falls\'s one-act cut was not just trimming; it re-tuned the play into a fast, oppressive descent driven by sex, inheritance, and humiliation.',
       },
     ],
     contextNotes: [
       {
         label: 'Official framing',
-        text: 'The Goodman page describes the play as a fever dream of inheritance, desire, and tragic consequence, which aligns closely with how the archive positions this O\'Neill chapter.',
+        text: 'The Goodman page explicitly calls the play a fever dream, and that is the right key for this staging: Falls heightens the subconscious and mythic side of O\'Neill more than the domestic-naturalist one.',
+      },
+      {
+        label: 'What changed from the script',
+        text: 'Local notes and later coverage agree that Falls compressed the traditional three-act structure into a roughly 100-minute one-act and removed the literal elms from the stage picture, replacing them with a boulder field and suspended stones.',
+      },
+      {
+        label: 'Source cleanup',
+        text: 'The local folder includes playbill art and other promotional material, but the featured gallery uses only production stills so the page reads as one visual world rather than a mixed-media scrapbook.',
+      },
+      {
+        label: 'Source package',
+        text: 'Available materials include a detailed local notes document, multiple Goodman stills, cast-and-creative screenshots, design references, review aggregates, and several video links from the production\'s original run.',
       },
     ],
     reviews: [
@@ -5048,12 +5498,101 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Goodman Theatre',
         href: 'https://www.goodmantheatre.org/show/desire-under-the-elms/',
         summary:
-          'The official page presents the 2009 staging as an O\'Neill fever dream and foregrounds the production\'s emotional violence, plus its critical response from The New York Times.',
+          'The official page frames the production as a fever dream of inheritance, desire, and tragic consequence and confirms the Goodman run dates and central cast.',
+        note: 'Official production page',
+      },
+      {
+        source: 'TheatreInChicago',
+        href: 'https://www.theatreinchicago.com/desire-under-the-elms/2990/',
+        summary:
+          'Aggregates sixteen Chicago reviews of the Goodman run: eleven Highly Recommended, two Recommended, and three Somewhat Recommended.',
+        note: 'Review aggregate',
+      },
+      {
+        source: 'Chicago Sun-Times',
+        href: 'https://www.theatreinchicago.com/desire-under-the-elms/2990/',
+        summary:
+          'Hedy Weiss called Falls\'s staging "grandly operatic" and described the production as a founding myth of the American family staged in gargantuan terms.',
+        note: 'Highly Recommended',
+      },
+      {
+        source: 'Chicago Tribune',
+        href: 'https://www.theatreinchicago.com/desire-under-the-elms/2990/',
+        summary:
+          'Chris Jones stressed the arid metaphor and the violent, animal quality of the characters trapped in Falls\'s landscape.',
+        note: 'Recommended',
+      },
+      {
+        source: 'Newcity',
+        href: 'https://www.newcitystage.com/2009/01/27/review-desire-under-the-elmsgoodman-theatre/',
+        summary:
+          'Newcity focused on the production\'s bold physical scale and argued that Falls turned O\'Neill\'s domestic tragedy into a major event production.',
+        note: 'Chicago review',
+      },
+      {
+        source: 'New Yorker',
+        href: 'https://www.newyorker.com/magazine/2009/05/11/no-place-like-home-3',
+        summary:
+          'John Lahr noted that Falls reshaped the play into a single act and sharpened its erotic tensions rather than its more antique misogyny.',
+        note: 'Broadway review',
+      },
+      {
+        source: 'The New York Times',
+        href: 'https://www.nytimes.com/2009/02/04/theater/reviews/04elms.html',
+        summary:
+          'The Times praised the play\'s "poetry and terrible beauty," language reused prominently in later official framing of the production.',
+        note: 'Referenced by Goodman',
+      },
+      {
+        source: 'Variety',
+        href: 'https://variety.com/2009/legit/reviews/desire-under-the-elms-3-1200473054/',
+        summary:
+          'Variety covered the Broadway transfer as a large-scale, highly physical O\'Neill staging shaped as much by design pressure as by performance.',
+        note: 'Broadway review',
       },
     ],
-    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/desire-under-the-elms/' }],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/desire-under-the-elms/' },
+      { label: 'TheatreInChicago review aggregate', href: 'https://www.theatreinchicago.com/desire-under-the-elms/2990/' },
+      { label: 'Playbill Broadway opening item', href: 'https://playbill.com/article/desire-under-the-elms-with-dennehy-gugino-and-schreiber-opens-on-broadway-com-160265' },
+      { label: 'Newcity review', href: 'https://www.newcitystage.com/2009/01/27/review-desire-under-the-elmsgoodman-theatre/' },
+      { label: 'Chicago Reader response', href: 'https://chicagoreader.com/blogs/oneill-maven-on-robert-fallss-desire-under-the-elms/' },
+      { label: 'Walt Spangler design page', href: 'https://www.waltspangler.com/desire-under-the-elms' },
+      { label: 'New Yorker Broadway review', href: 'https://www.newyorker.com/magazine/2009/05/11/no-place-like-home-3' },
+      { label: 'Variety Broadway review', href: 'https://variety.com/2009/legit/reviews/desire-under-the-elms-3-1200473054/' },
+      { label: 'Talkin\' Broadway review', href: 'https://www.talkinbroadway.com/page/world/DesireUnderElms.html' },
+      { label: 'Behind-the-scenes design video', href: 'https://www.youtube.com/watch?v=qD3XlqzZYKU&t=144s' },
+    ],
+    watchLinks: [
+      {
+        label: 'Desire Under the Elms | Behind the Scenes',
+        href: 'https://www.youtube.com/watch?v=QwaHqwAaQ48',
+        description: 'Goodman featurette on the production\'s rehearsal and design world.',
+        thumbnail: desireUnderTheElmsHero,
+      },
+      {
+        label: 'Interview with Robert Falls',
+        href: 'https://www.youtube.com/watch?v=lfT_2GZYYak',
+        description: 'Falls discusses his approach to O\'Neill and the production\'s staging choices.',
+        thumbnail: desireUnderTheElmsTable,
+      },
+      {
+        label: 'Desire Under the Elms | In Performance',
+        href: 'https://www.youtube.com/watch?v=CrO1y3ZbAIs',
+        description: 'Performance footage from the original production campaign.',
+        thumbnail: desireUnderTheElmsLovers,
+      },
+    ],
+    pressQuotes: [
+      { quote: 'Grandly operatic', source: 'Chicago Sun-Times' },
+      { quote: 'A founding myth of the American family written in the most gargantuan terms', source: 'Chicago Sun-Times' },
+      { quote: 'The play is full of odious characters... trapped in an arid landscape like purty little American rats', source: 'Chicago Tribune' },
+      { quote: 'The Goodman production heightens the play\'s sensuality to fever pitch', source: 'Copley News Service' },
+      { quote: 'A visceral, visually stunning, and masterfully performed event', source: 'EDGE' },
+      { quote: 'There\'s artistry bordering on magic in the collaboration', source: 'Examiner' },
+    ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'measure-for-measure': {
     pageMode: 'featured',
