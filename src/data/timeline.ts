@@ -105,7 +105,7 @@ export const timelineEntries: TimelineEntry[] = [
   { year: '2006', title: 'King Lear', description: 'Starring Stacy Keach; later remounted in Washington and the source of a Helen Hayes Award.', category: 'Production', venue: 'Goodman Theatre' },
   { year: '2006', title: 'Frank’s Home', description: 'World premiere of Richard Nelson’s play.', category: 'Production', venue: 'Goodman Theatre' },
   { year: '2006', title: 'Shining City', description: 'Tony-nominated Broadway staging of Conor McPherson’s play.', category: 'Production', venue: 'Manhattan Theatre Club, Broadway' },
-  { year: '2006', title: 'A Life in the Theatre', description: 'Goodman staging during Falls’s twentieth-anniversary season.', category: 'Production', venue: 'Goodman Theatre' },
+  { year: '2006', title: 'A Life in the Theatre', description: 'A two-hander backstage drama with David Darlow and Matt Schwader, staged as part of a larger Goodman festival of Mamet\'s work during Falls’s twentieth-anniversary season.', category: 'Production', venue: 'Goodman Theatre' },
   { year: '2006', title: 'Honorary Doctor of Fine Arts', description: 'Awarded by Lake Forest College.', category: 'Award' },
   { year: '2005–06', title: 'Jeff Special Award', description: 'Awarded jointly with executive director Roche Schulfer.', category: 'Award' },
   { year: '2008', title: 'American Buffalo', description: 'Broadway revival of David Mamet’s play starring John Leguizamo, Cedric the Entertainer, and Haley Joel Osment; closed after 8 performances amid largely negative reviews.', category: 'Production', venue: 'Broadway' },

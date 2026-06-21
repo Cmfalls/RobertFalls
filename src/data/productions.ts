@@ -131,6 +131,10 @@ import americanBuffalo6 from '../images/american-buffalo/american-buffalo-6.jpg'
 import americanBuffaloMarquee from '../images/american-buffalo/american-buffalo-marquee.jpg';
 import americanBuffaloCurtainCall from '../images/american-buffalo/american-buffalo-curtain-call.jpg';
 import americanBuffaloAfterparty from '../images/american-buffalo/american-buffalo-afterparty.jpg';
+import lifeInTheatreShowArt from '../images/life-in-the-theatre/life-in-theatre-show-art.png';
+import lifeInTheatreMakeup from '../images/life-in-the-theatre/life-in-theatre-makeup.png';
+import lifeInTheatreTitle from '../images/life-in-the-theatre/life-in-theatre-title.webp';
+import mametFestivalPortrait from '../images/life-in-the-theatre/mamet-festival-portrait.webp';
 import swingState1 from '../images/swing-state-1.jpg';
 import swingState2 from '../images/swing-state-2.jpg';
 import swingState3 from '../images/swing-state-3.jpg';
@@ -5081,40 +5085,95 @@ const productionSeeds: Record<string, ProductionSeed> = {
   'a-life-in-the-theatre': {
     pageMode: 'archive',
     summary:
-      'A Life in the Theatre gives Falls a smaller, actor-centered David Mamet chamber piece inside the same season that also held the scale of King Lear, showing how wide the Goodman range could be under his leadership.',
+      'A Life in the Theatre gives Falls a smaller, actor-centered David Mamet chamber piece, staged as part of Goodman\'s 2006 Mamet festival, that watches an aging star and a young up-and-comer trade mentorship for rivalry across the length of a dressing-room friendship.',
     publicSummary:
-      'David Mamet\'s backstage duet reduces theatre life to mentorship, rivalry, embarrassment, and survival in the dressing room.',
+      'David Mamet\'s backstage duet reduces theatre life to mentorship, rivalry, embarrassment, and survival in the dressing room, with David Darlow and Matt Schwader trading roles across a season of fragmentary performances.',
     synopsis:
-      'An older actor tries to initiate a younger colleague into the habits, insecurities, and rituals of the stage. Their relationship moves through admiration, critique, irritation, and displacement as performance leaks into private identity.',
+      'Robert, an aging actor, sets out to teach John, an eager up-and-comer, the tricks and truths of the trade. As the two spar and critique each other\'s performances across a season together, the audience becomes a fly on the dressing-room wall, watching admiration curdle into irritation as the balance of power between mentor and protege quietly reverses.',
     fallsContext:
-      'The production belongs to a recurring Falls interest in rehearsal rooms, theatrical labor, and performer psychology, but here everything is compressed to two actors and a dressing-room scale.',
+      'The production belongs to a recurring Falls interest in rehearsal rooms, theatrical labor, and performer psychology, but here everything is compressed to two actors and a dressing-room scale, and it sits inside a larger Goodman Mamet festival that paired the playwright\'s small-scale early work with the rest of the company\'s 2006 season.',
     significance:
-      'A 2006 Goodman Mamet staging that complements the archive\'s larger public productions with a tight meta-theatrical study of actors watching each other age.',
+      'A 2006 Goodman Mamet staging, part of a larger Mamet festival in the theatre\'s anniversary season, that complements the archive\'s larger public productions with a tight, well-reviewed meta-theatrical study of two actors watching each other age.',
     story:
-      'This entry matters because it narrows the lens. Instead of civic argument or epic family collapse, A Life in the Theatre watches artists trying to hold onto status and technique under the pitiless passage of time. It fits the archive as a theatre-about-theatre piece that lets Falls work in miniature without losing sharpness.',
+      'This entry matters because it narrows the lens. Instead of civic argument or epic family collapse, A Life in the Theatre watches artists trying to hold onto status and technique under the pitiless passage of time. Newcity\'s review called the production an "awe-inspiring display of craft," crediting David Darlow\'s Robert with "depths of uncertainty and disappointment" beneath his expansive surface and Matt Schwader\'s John with hidden ambition under apparent naivety, and singled out Mark Wendland\'s set for making the dressing room feel "simultaneously claustrophobic and multidimensional." The review went further, predicting that the larger Mamet festival surrounding the production would be "a major event indeed for Chicago\'s theater" - useful confirmation that this 75-minute two-hander was conceived as one part of a broader Goodman celebration of Mamet\'s work, not a standalone booking.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'National and international period',
+    images: [
+      {
+        src: lifeInTheatreShowArt,
+        alt: 'Robert and John sit across from each other in a cluttered backstage dressing room in A Life in the Theatre.',
+        caption: 'David Darlow (Robert) and Matt Schwader (John) in the production\'s dressing-room set.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'production-still',
+      },
+      {
+        src: lifeInTheatreMakeup,
+        alt: 'An older actor applies stage makeup with a pencil while looking into a small mirror.',
+        caption: 'David Darlow\'s Robert applies stage makeup, one of the production\'s recurring backstage rituals.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: mametFestivalPortrait,
+        alt: 'A sepia-toned portrait of playwright David Mamet, used as key art for Goodman\'s 2006 Mamet festival.',
+        caption: 'David Mamet, photographed for the Goodman\'s 2006 festival of his work, of which this production was one part.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
+        src: lifeInTheatreTitle,
+        alt: 'Pink title treatment text reading A Life in the Theatre on a black background.',
+        caption: 'Title treatment art for the production.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+    ],
     collaborators: [
       { role: 'Playwright', name: 'David Mamet' },
       { role: 'Director', name: 'Robert Falls' },
       { role: 'Cast highlight', name: 'David Darlow' },
+      { role: 'Cast highlight', name: 'Matt Schwader' },
     ],
     quickFacts: [
       { label: 'Run', value: 'Mar 4 - Apr 9, 2006' },
       { label: 'Venue', value: 'Albert Theatre' },
       { label: 'Runtime', value: '75 minutes' },
-      { label: 'Mode', value: 'Backstage two-hander' },
+      { label: 'Context', value: 'Part of Goodman\'s 2006 Mamet festival' },
+    ],
+    cast: [
+      { role: 'Robert', name: 'David Darlow' },
+      { role: 'John', name: 'Matt Schwader' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'David Mamet' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Mark Wendland' },
+      { role: 'Costume Design', name: 'Birgit Rattenborg Wise' },
+      { role: 'Lighting Design', name: 'Michael Philippi' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Casting', name: 'Adam Belcuore' },
+      { role: 'Production Stage Manager', name: 'Alden J. Vasquez' },
+      { role: 'Stage Manager', name: 'Sascha Connor' },
     ],
     recognition: [
       {
         label: 'Mamet connection',
-        detail: 'The production keeps Mamet inside the Falls archive not just as a Broadway transfer playwright but as a Goodman-stage contemporary classic.',
+        detail: 'The production keeps Mamet inside the Falls archive not just as a Broadway transfer playwright but as a Goodman-stage contemporary classic, and as the centerpiece of a 2006 festival devoted to his work.',
+      },
+      {
+        label: 'Newcity "Recommended"',
+        detail: 'Newcity\'s review called the production "an awe-inspiring display of craft" and predicted the surrounding Mamet festival would be a major Chicago theatre event.',
       },
     ],
     contextNotes: [
       {
         label: 'Official framing',
         text: 'The Goodman page emphasizes the dressing-room view of theatre life, letting audiences watch performers critique one another onstage and off.',
+      },
+      {
+        label: 'Source package',
+        text: 'The folder includes show art, a backstage makeup detail shot, a title-treatment card, and a portrait of David Mamet used for the Goodman\'s broader 2006 festival of his work, alongside a cast-and-creative screenshot.',
       },
     ],
     reviews: [
@@ -5123,11 +5182,29 @@ const productionSeeds: Record<string, ProductionSeed> = {
         href: 'https://www.goodmantheatre.org/show/a-life-in-the-theatre/',
         summary:
           'The official page presents the production as a 75-minute Mamet backstage drama directed by Robert Falls and centered on an aging actor mentoring a younger one.',
+        note: 'Official production page',
+      },
+      {
+        source: 'Newcity Stage',
+        href: 'https://www.newcitystage.com/2006/03/23/review-a-life-in-the-theatregoodman-theatre/',
+        summary:
+          'Rated the production "Recommended," praising David Darlow\'s and Matt Schwader\'s performances and Mark Wendland\'s claustrophobic, multidimensional dressing-room set.',
+        note: 'Recommended',
+      },
+      {
+        source: 'Chicago Reader',
+        href: 'https://chicagoreader.com/arts-culture/a-life-in-the-theatre/',
+        summary: 'Chicago Reader coverage of the production, preserved in the local source document.',
+        note: 'Source-doc review link',
       },
     ],
-    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/a-life-in-the-theatre/' }],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/a-life-in-the-theatre/' },
+      { label: 'Newcity Stage review', href: 'https://www.newcitystage.com/2006/03/23/review-a-life-in-the-theatregoodman-theatre/' },
+      { label: 'Chicago Reader coverage', href: 'https://chicagoreader.com/arts-culture/a-life-in-the-theatre/' },
+    ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'american-buffalo': {
     pageMode: 'archive',
