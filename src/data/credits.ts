@@ -75,8 +75,9 @@ export const creditGroups: CreditGroup[] = [
       { title: 'Susannah', venue: 'Lyric Opera of Chicago', year: '1993', note: 'Opera directing debut' },
       { title: 'The Consul', venue: 'Lyric Opera of Chicago', year: '1996' },
       { title: 'Susannah', venue: 'Metropolitan Opera, New York', year: '1999' },
-      { title: 'Don Giovanni', venue: 'Lyric Opera of Chicago', year: '2014–15', note: 'Remounted in Dallas, 2020' },
-      { title: 'Don Giovanni', venue: 'Lyric Opera of Chicago', year: '2019–20' },
+      { title: 'Don Giovanni', venue: 'Lyric Opera of Chicago', year: '2014', note: 'Remounted at Dallas Opera, 2018' },
+      { title: 'Don Giovanni', venue: 'Lyric Opera of Chicago', year: '2019' },
+      { title: 'Don Giovanni', venue: 'Lyric Opera of Chicago', year: '2026', note: 'Third Lyric revival of the 2014 staging' },
     ],
   },
   {

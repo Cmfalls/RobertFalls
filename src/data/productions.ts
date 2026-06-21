@@ -93,6 +93,13 @@ import lunaGale5 from '../images/luna-gale/luna-gale-5.jpg';
 import lunaGale6 from '../images/luna-gale/luna-gale-6.jpg';
 import lunaGaleLa1 from '../images/luna-gale/luna-gale-la-1.jpg';
 import lunaGaleLa2 from '../images/luna-gale/luna-gale-la-2.jpg';
+import donGiovanni1 from '../images/don-giovanni/don-giovanni-1.jpg';
+import donGiovanni2 from '../images/don-giovanni/don-giovanni-2.jpg';
+import donGiovanni3 from '../images/don-giovanni/don-giovanni-3.jpg';
+import donGiovanni4 from '../images/don-giovanni/don-giovanni-4.jpg';
+import donGiovanni5 from '../images/don-giovanni/don-giovanni-5.jpg';
+import donGiovanni6 from '../images/don-giovanni/don-giovanni-6.jpg';
+import donGiovanni2019Revival from '../images/don-giovanni/don-giovanni-2019-revival.jpg';
 import swingState1 from '../images/swing-state-1.jpg';
 import swingState2 from '../images/swing-state-2.jpg';
 import swingState3 from '../images/swing-state-3.jpg';
@@ -116,8 +123,6 @@ import cherryOrchardSunTimes2 from '../images/web-sourced/cherry-orchard-suntime
 import deathOfASalesmanPlaybillFull from '../images/web-sourced/death-of-a-salesman-playbill-full.jpg';
 import donGiovanniDonnaElvira from '../images/web-sourced/don-giovanni-donna-elvira.jpg';
 import donGiovanniFinalCostume from '../images/web-sourced/don-giovanni-final-costume.jpg';
-import donGiovanniLyric1 from '../images/web-sourced/don-giovanni-lyric-1.jpg';
-import donGiovanniLyric2 from '../images/web-sourced/don-giovanni-lyric-2.jpg';
 import holidayGoodman from '../images/web-sourced/holiday-goodman.jpg';
 import holidayGoodmanThumb from '../images/web-sourced/holiday-goodman-thumb.jpg';
 import holidayProduction2 from '../images/web-sourced/holiday-production-2.webp';
@@ -1033,42 +1038,81 @@ const productionSeeds: Record<string, ProductionSeed> = {
   'don-giovanni': {
     pageMode: 'featured',
     summary:
-      'Don Giovanni tracks Falls across multiple opera stagings, from Lyric Opera of Chicago to a Dallas remount and a later Lyric revival.',
+      'Don Giovanni is the longest-running production in Falls\'s career: a 2014 Lyric Opera world staging that has now been revived twice at Lyric and remounted at Dallas Opera, with a third Lyric outing opening the company\'s 2026/27 season.',
     publicSummary:
-      'Falls turns Mozart\'s famous seducer into a dark, lavish morality tale built on high drama, danger, and spectacle.',
+      'Falls turns Mozart\'s famous seducer into a dark, lavish morality tale, a staging Lyric Opera of Chicago has now mounted three times across more than a decade.',
+    synopsis:
+      'A charismatic, unrepentant seducer\'s campaign of conquest catches up with him when the man he kills in the opening scene returns as a stone statue to drag him down to hell. Mozart and librettist Lorenzo Da Ponte mix sharp comedy, sexual danger, and supernatural reckoning across one of opera\'s most enduring "morality tales for the ages."',
+    fallsContext:
+      'Don Giovanni is unusual in the archive for its sheer longevity: rather than a single engagement, it is a design and staging concept Falls has now seen through four distinct outings - the 2014 Lyric premiere, a 2018 Dallas Opera remount, a 2019 Lyric revival, and a third Lyric revival opening the 2026/27 season - making it arguably the most durable single production of his career.',
     significance:
-      'A recurring opera production that shows Falls working at Lyric scale, with Ana Kuzmanic\'s costume world becoming a major public signature.',
+      'A 2014 Lyric Opera of Chicago world staging that drew strong reviews for its "carnal, noirish" visual world and Ana Kuzmanic\'s costume design, then proved durable enough to travel to Dallas Opera in 2018, return to Lyric in 2019, and return again for a third Lyric outing opening October 10, 2026 - by far the longest production lifespan in Falls\'s catalogue.',
     story:
-      'This page should read less like an index entry and more like a show page: Mozart, a large opera house, a dangerous antihero, and a visual world remembered for its decadent costumes. The production opened Lyric\'s 2014/15 season, returned in 2019/20, and later traveled through Dallas Opera context.',
+      'Most productions in this archive have a beginning, middle, and end. Don Giovanni keeps coming back. Falls\'s original 2014 Lyric staging, designed with Walt Spangler and Ana Kuzmanic, premiered with Mariusz Kwiecień in the title role and drew praise for being "carnal" and "noirish," a sharp departure from genteel opera-house tradition. Dallas Opera imported the production whole in 2018, with much of the same Lyric cast and design team. Lyric revived it again in 2019 with Lucas Meachem as Don Giovanni under a new musical hand, James Gaffigan, and the production was strong enough that Lyric is bringing it back a third time for the 2026/27 season - more than a decade after its premiere - with Christian Van Horn and Kyle Ketelsen sharing the title role under conductor Enrique Mazzola. Few entries in this archive demonstrate as clearly how a Falls production can outlive its premiere cast, venue, and even decade.',
     venueAnchor: 'Lyric Opera of Chicago',
     eraLabel: 'Late Goodman years',
     images: [
       {
-        src: donGiovanniLyric1,
-        alt: 'Robert Falls production of Don Giovanni at Lyric Opera of Chicago.',
-        caption: 'Robert Falls’s Don Giovanni at Lyric Opera of Chicago, 2019/20 season. Photo: Kyle Flubacker via Lyric Opera of Chicago.',
+        src: donGiovanni1,
+        alt: 'Don Giovanni, Leporello, and Donna Elvira in a tense confrontation on the Lyric Opera stage.',
+        caption: 'Mariusz Kwiecień (Don Giovanni), Kyle Ketelsen (Leporello), and Ana María Martínez (Donna Elvira) in the 2014 world staging. Photo: Todd Rosenberg.',
         orientation: 'landscape',
         priority: true,
         kind: 'production-still',
       },
       {
-        src: donGiovanniLyric2,
-        alt: 'A stage scene from Robert Falls production of Don Giovanni at Lyric Opera of Chicago.',
-        caption: 'Robert Falls’s Don Giovanni at Lyric Opera of Chicago, 2019/20 season. Photo: Kyle Flubacker via Lyric Opera of Chicago.',
+        src: donGiovanni3,
+        alt: 'Masetto, Zerlina, Leporello, and Don Ottavio in an ensemble scene from Don Giovanni.',
+        caption: 'Michael Sumuel (Masetto), Andriana Chuchman (Zerlina), Kyle Ketelsen (Leporello), and Antonio Poli (Don Ottavio) at the Lyric premiere. Photo: Todd Rosenberg.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: donGiovanni2,
+        alt: 'Don Ottavio and Donna Anna in a dramatic confrontation on the Lyric Opera stage.',
+        caption: 'Antonio Poli (Don Ottavio) and Marina Rebeka (Donna Anna) in the 2014 world staging. Photo: Todd Rosenberg.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: donGiovanni4,
+        alt: 'Don Giovanni confronts the stone statue of the Commendatore in the opera\'s climactic scene.',
+        caption: 'Mariusz Kwiecień (Don Giovanni) faces Andrea Silvestrelli\'s Commendatore in the opera\'s supernatural climax. Photo: Todd Rosenberg.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: donGiovanni5,
+        alt: 'The Commendatore, Don Giovanni, and Leporello together onstage in Don Giovanni.',
+        caption: 'Andrea Silvestrelli, Mariusz Kwiecień, and Kyle Ketelsen at the Lyric premiere. Photo: Todd Rosenberg.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: donGiovanni6,
+        alt: 'Donna Elvira, Don Ottavio, and Donna Anna stand together in Don Giovanni at Lyric Opera.',
+        caption: 'Ana María Martínez (Donna Elvira), Antonio Poli (Don Ottavio), and Marina Rebeka (Donna Anna) at the Lyric premiere. Photo: Todd Rosenberg.',
         orientation: 'landscape',
         kind: 'production-still',
       },
       {
         src: donGiovanniFinalCostume,
         alt: 'Don Giovanni final costume from Ana Kuzmanic design feature.',
-        caption: 'Don Giovanni final costume from Ana Kuzmanic’s design feature. Photo: Kyle Flubacker via Lyric Opera of Chicago.',
+        caption: 'Don Giovanni\'s finished costume, from Lyric\'s feature on Ana Kuzmanic\'s design process. Photo: Kyle Flubacker via Lyric Opera of Chicago.',
         orientation: 'landscape',
-        kind: 'production-still',
+        kind: 'art',
       },
       {
         src: donGiovanniDonnaElvira,
         alt: 'Donna Elvira masquerade costume from Don Giovanni at Lyric Opera of Chicago.',
-        caption: 'Donna Elvira masquerade costume from Don Giovanni. Photo: Kyle Flubacker via Lyric Opera of Chicago.',
+        caption: 'Donna Elvira\'s masquerade costume, from the same Ana Kuzmanic design feature. Photo: Kyle Flubacker via Lyric Opera of Chicago.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
+        src: donGiovanni2019Revival,
+        alt: 'Lucas Meachem as Don Giovanni in the 2019 Lyric Opera revival.',
+        caption: 'Lucas Meachem in the title role during the 2019 Lyric revival. Photo: Kyle Flubacker via Lyric Opera of Chicago.',
         orientation: 'landscape',
         kind: 'production-still',
       },
@@ -1076,94 +1120,141 @@ const productionSeeds: Record<string, ProductionSeed> = {
     collaborators: [
       { role: 'Composer', name: 'Wolfgang Amadeus Mozart' },
       { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Mariusz Kwiecień' },
+      { role: 'Cast highlight', name: 'Ana María Martínez' },
       { role: 'Costume Designer', name: 'Ana Kuzmanic' },
-      { role: 'Set Designer', name: 'Walt Spangler' },
-      { role: 'Lighting Designer', name: 'Duane Schuler' },
     ],
     quickFacts: [
-      { label: 'Composer', value: 'Wolfgang Amadeus Mozart' },
-      { label: 'Primary venue', value: 'Lyric Opera of Chicago' },
-      { label: 'Lyric seasons', value: '2014/15 and 2019/20' },
-      { label: 'Remount', value: 'Dallas Opera context' },
+      { label: 'World premiere', value: 'Sep 27, 2014, Lyric Opera of Chicago' },
+      { label: 'Dallas remount', value: '2018, Dallas Opera' },
+      { label: 'First Lyric revival', value: 'Nov 14 - Dec 8, 2019' },
+      { label: 'Second Lyric revival', value: 'Opens Oct 10, 2026' },
     ],
     cast: [
-      { role: 'Don Giovanni', name: 'Mariusz Kwiecien' },
-      { role: 'Donna Anna', name: 'Laura Claycomb' },
-      { role: 'Don Ottavio', name: 'David Portillo' },
-      { role: 'Donna Elvira', name: 'Katie Van Kooten' },
+      { role: 'Don Giovanni', name: 'Mariusz Kwiecień' },
+      { role: 'Donna Anna', name: 'Marina Rebeka' },
+      { role: 'Don Ottavio', name: 'Antonio Poli' },
+      { role: 'Donna Elvira', name: 'Ana María Martínez' },
       { role: 'Leporello', name: 'Kyle Ketelsen' },
-      { role: 'Zerlina', name: 'Virginie Verrez' },
-      { role: 'Masetto', name: 'Craig Verm' },
-      { role: 'Commendatore', name: 'Morris Robinson' },
+      { role: 'Zerlina', name: 'Andriana Chuchman' },
+      { role: 'Masetto', name: 'Michael Sumuel' },
+      { role: 'Commendatore', name: 'Andrea Silvestrelli' },
     ],
     creativeTeam: [
       { role: 'Composer', name: 'Wolfgang Amadeus Mozart' },
-      { role: 'Director', name: 'Robert Falls' },
-      { role: 'Conductor', name: 'Emmanuel Villaume' },
-      { role: 'Set Designer', name: 'Walt Spangler' },
-      { role: 'Costume Designer', name: 'Ana Kuzmanic' },
-      { role: 'Original Lighting Designer', name: 'Duane Schuler' },
-      { role: 'Revival Lighting Designer', name: 'Chris Maravich' },
-      { role: 'Wig and Make-up Designer', name: 'Dawn Rivard' },
-      { role: 'Chorus Master', name: 'Alexander Rom' },
+      { role: 'Librettist', name: 'Lorenzo Da Ponte' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Conductor (2014)', name: 'Sir Andrew Davis' },
+      { role: 'Set Design', name: 'Walt Spangler' },
+      { role: 'Costume Design', name: 'Ana Kuzmanic' },
+      { role: 'Lighting Design', name: 'Duane Schuler' },
+      { role: 'Chorus Master (2014)', name: 'Michael Black' },
     ],
     recognition: [
       {
-        label: 'Lyric revival',
-        detail: 'Lyric describes Falls\'s staging as an instant-classic take on Mozart\'s morality tale.',
+        label: 'Three-time Lyric production',
+        detail: 'Lyric has now staged Falls\'s 2014 production three times - 2014, 2019, and 2026/27 - making it one of the company\'s most-revived stagings of the Falls era.',
       },
       {
-        label: 'Design signature',
-        detail: 'Lyric highlighted Ana Kuzmanic\'s costume work as a defining visual feature of the production.',
+        label: 'Cross-company remount',
+        detail: 'Dallas Opera brought in the Lyric production whole in 2018, crediting Falls as director and retaining much of the original design team.',
+      },
+      {
+        label: '"Carnal, noirish" reception',
+        detail: 'Seen and Heard International\'s review of the 2014 premiere described Falls\'s take as "carnal" and "noirish," a description that stuck to the production through later coverage.',
       },
     ],
     awardsOrSignificance: [
       {
-        label: 'Lyric scale',
-        detail: 'A major opera-house production in Falls\'s late Goodman-era body of work.',
+        label: 'Longest-running Falls staging',
+        detail: 'No other production in this archive has been remounted as many times, across as many companies, or across as long a span - 2014 to a confirmed 2026/27 revival - as this Don Giovanni.',
       },
       {
-        label: 'Costume world',
-        detail: 'The public-facing hook is not archival count; it is the production\'s lush, dangerous visual identity.',
+        label: 'A recurring cast member across revivals',
+        detail: 'Kyle Ketelsen sang Leporello in the 2014 premiere and returns to share the title role itself in the 2026/27 revival, a rare through-line across more than a decade of the same staging.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Multiple stagings, one cast list',
+        text: 'This page lists the 2014 Lyric premiere cast and creative team as the primary record, since it matches the production photography in the local archive. The 2018 Dallas Opera cast (Kwiecień, Laura Claycomb, David Portillo, Katie Van Kooten, Kyle Ketelsen, Virginie Verrez, Craig Verm, and Morris Robinson, conducted by Emmanuel Villaume), the 2019 Lyric revival cast (Lucas Meachem alternating with Davide Luciano as Don Giovanni, Rachel Willis-Sorensen, Amanda Majeski, Ying Fang, Matthew Rose, Ben Bliss, Brandon Cedel, and Mika Kares, conducted by James Gaffigan), and the 2026/27 Lyric revival cast (Christian Van Horn alternating with Kyle Ketelsen as Don Giovanni, Lawrence Brownlee, Mané Galoyan, Nina Solodovnikova, and Tommaso Barea, conducted by Enrique Mazzola) are documented in the reviews and recognition sections instead.',
       },
       {
-        label: 'Afterlife',
-        detail: 'Dallas Opera materials connect the production to a Chicago Lyric import/remount context.',
+        label: 'Source dating correction',
+        text: 'Earlier site data had incorrectly dated the Dallas Opera remount to 2020; Dallas Opera\'s own archive confirms the run was April 13-29, 2018, two years before the 2020 site error and before, not after, the 2019 Lyric revival.',
+      },
+      {
+        label: 'Source package',
+        text: 'The folder includes large-format Todd Rosenberg production photography from the 2014 world premiere, a 2019 revival photo of Lucas Meachem, both Lyric and Dallas program materials, and a full cast-and-creative screenshot for the upcoming 2026/27 revival.',
       },
     ],
     reviews: [
       {
         source: 'Lyric Opera of Chicago',
         href: 'https://www.lyricopera.org/shows/upcoming/2026-27/don-giovanni/',
-        summary:
-          'Lyric presents Falls\'s staging as a hard-hitting, expansive take on a classic story of deceit and retribution.',
+        summary: 'Lyric\'s current page presents Falls\'s staging as an "instant-classic," "expansive and hard-hitting" take on Mozart\'s morality tale, framing the 2026/27 run around bass-baritone Christian Van Horn.',
+        note: 'Official production page (2026/27 revival)',
       },
       {
-        source: 'Lyric Donor Serenade',
-        href: 'https://www.lyricopera.org/donor-serenade/donor-serenade-fall-2019/Ana-Kuzmanic-Don-Giovanni/',
-        summary:
-          'Lyric\'s design feature centers Ana Kuzmanic\'s richly textured costume process and includes Robert Falls commentary on collaboration.',
-        note: 'Images credited by Lyric to Kyle Flubacker.',
+        source: 'Seen and Heard International',
+        href: 'https://seenandheard-international.com/2014/10/robert-falls-carnal-noirish-don-giovanni/',
+        summary: 'A detailed review of the 2014 world premiere, titled "Robert Falls\' Carnal, Noirish Don Giovanni," that lists the full original cast and creative team.',
+        note: '2014 world premiere review',
+      },
+      {
+        source: 'Chicago Classical Review',
+        href: 'https://chicagoclassicalreview.com/2019/11/first-class-cast-stylish-staging-make-a-don-giovanni-to-die-for-in-lyric-operas-2026-27-season/',
+        summary: 'A review of the 2019 Lyric revival praising the cast and Falls\'s "stylish staging."',
+        note: '2019 revival review',
+      },
+      {
+        source: 'Chicago Sun-Times',
+        href: 'https://chicago.suntimes.com/2019/11/15/20966948/don-giovanni-review-lyric-opera-chicago-robert-falls-lucas-meachem',
+        summary: 'Praised Falls\'s straightforward approach, free of "dramatic gimmicks," and singled out Lucas Meachem\'s "rakish" title performance and Ying Fang\'s Zerlina as "the revelation" of the cast.',
+        note: '2019 revival review',
+      },
+      {
+        source: 'WTTW News',
+        href: 'https://news.wttw.com/2019/11/15/stunning-don-giovanni-surprisingly-ideal-fit-metoo-era',
+        summary: 'Called the 2019 revival "stunning" and argued the centuries-old opera fit "surprisingly" well into a #MeToo-era reading of its sexual politics.',
+        note: '2019 revival feature',
+      },
+      {
+        source: 'Chicago Classical Review',
+        href: 'https://chicagoclassicalreview.com/2026/04/don-giovanni-susannah-herodiade-on-tap-in-lyric-operas-2026-27-season/',
+        summary: 'Season-announcement coverage confirming the 2026/27 run is "the third time around" for Falls\'s 2014 production, with Christian Van Horn and Kyle Ketelsen sharing the title role.',
+        note: '2026/27 season announcement',
       },
       {
         source: 'Dallas Opera',
         href: 'https://dallasopera.org/performance/don-giovanni/',
-        summary:
-          'Dallas materials describe the production as brought in from Lyric Opera of Chicago and list Falls as director.',
+        summary: 'Dallas Opera\'s archive page confirms the April 2018 run was "brought in from" Lyric Opera of Chicago, with Falls credited as director and most of the original Lyric design team retained.',
+        note: '2018 Dallas remount',
       },
     ],
     externalSources: [
-      { label: 'Lyric Opera production page', href: 'https://www.lyricopera.org/shows/upcoming/2026-27/don-giovanni/' },
-      {
-        label: 'Lyric design feature',
-        href: 'https://www.lyricopera.org/donor-serenade/donor-serenade-fall-2019/Ana-Kuzmanic-Don-Giovanni/',
-      },
+      { label: 'Lyric Opera production page (2026/27)', href: 'https://www.lyricopera.org/shows/upcoming/2026-27/don-giovanni/' },
+      { label: 'Lyric design feature on Ana Kuzmanic', href: 'https://www.lyricopera.org/donor-serenade/donor-serenade-fall-2019/Ana-Kuzmanic-Don-Giovanni/' },
       { label: 'Dallas Opera archive page', href: 'https://dallasopera.org/performance/don-giovanni/' },
+      { label: 'Seen and Heard International review (2014)', href: 'https://seenandheard-international.com/2014/10/robert-falls-carnal-noirish-don-giovanni/' },
+      { label: 'Chicago Sun-Times review (2019)', href: 'https://chicago.suntimes.com/2019/11/15/20966948/don-giovanni-review-lyric-opera-chicago-robert-falls-lucas-meachem' },
+      { label: 'WTTW News feature (2019)', href: 'https://news.wttw.com/2019/11/15/stunning-don-giovanni-surprisingly-ideal-fit-metoo-era' },
+      { label: 'Chicago Classical Review on the 2026/27 season', href: 'https://chicagoclassicalreview.com/2026/04/don-giovanni-susannah-herodiade-on-tap-in-lyric-operas-2026-27-season/' },
+      { label: 'Newcity review (2014)', href: 'https://www.newcitystage.com/2014/09/30/review-don-giovannilyric-opera/' },
+      { label: 'Stage and Cinema review (2019)', href: 'https://stageandcinema.com/2019/11/17/don-giovanni-lyric/' },
     ],
-    contextNotes: [
+    watchLinks: [
       {
-        label: 'Photo source',
-        text: 'Production and costume images are sourced from Lyric Opera of Chicago’s Donor Serenade feature and credited there to Kyle Flubacker.',
+        label: 'Director Robert Falls discusses Don Giovanni',
+        href: 'https://www.youtube.com/watch?v=dC0hjCMoLOQ',
+        description: 'Falls discusses staging the 2019 Lyric revival.',
+        thumbnail: donGiovanni2019Revival,
+      },
+      {
+        label: 'Director Bob Falls on Don Giovanni',
+        href: 'https://www.youtube.com/watch?v=kUQ4qeRVMS4&t=1s',
+        description: 'Falls discusses the 2014 world premiere ahead of its Lyric opening.',
+        thumbnail: donGiovanni1,
       },
     ],
     relatedLinks: seedLinks,
