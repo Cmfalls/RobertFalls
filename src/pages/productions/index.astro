@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
-import { priorityFeaturedSlugs, productions, productionStats } from '@data/productions';
+import { priorityFeaturedSlugs, productions, productionStats, getFeaturedThumbnail } from '@data/productions';
 import rehearsalPhoto from '../../images/falls-rehearsal-recent.jpg';
 
 const decadeOrder = ['2020s', '2010s', '2000s', '1990s', '1980s', '1970s'];
@@ -267,7 +267,9 @@ function productionTags(production: (typeof productions)[number]) {
           </div>
 
           <div class="grid lg:grid-cols-2 gap-4 md:gap-5">
-            {group.productions.map((production) => (
+            {group.productions.map((production) => {
+              const archiveThumb = getFeaturedThumbnail(production.title);
+              return (
               <a
                 href={`/productions/${production.slug}`}
                 class="group archive-library-card"
@@ -288,10 +290,29 @@ function productionTags(production: (typeof productions)[number]) {
                       {production.title}
                     </h4>
                   </div>
-                  <div class="archive-count-stack">
-                    <div class="archive-count-value">{production.stagingCount}</div>
-                    <div class="archive-count-label">stagings</div>
-                  </div>
+                  {archiveThumb ? (
+                    <div class="relative w-[5.5rem] h-[5.5rem] overflow-hidden shrink-0 border border-brand-ink/10 bg-brand-ink/5">
+                      <Image
+                        src={archiveThumb.src}
+                        alt=""
+                        widths={[88, 176]}
+                        sizes="88px"
+                        quality={72}
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.06]"
+                      />
+                      {production.stagingCount > 1 && (
+                        <div class="absolute bottom-0 right-0 bg-brand-ink/75 px-1.5 py-0.5 text-[10px] font-display text-brand-cream leading-none">
+                          {production.stagingCount}×
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div class="archive-count-stack">
+                      <div class="archive-count-value">{production.stagingCount}</div>
+                      <div class="archive-count-label">stagings</div>
+                    </div>
+                  )}
                 </div>
 
                 <p class="text-brand-ink/78 leading-relaxed mt-4">{previewText(archiveSummary(production), 170)}</p>
@@ -322,7 +343,8 @@ function productionTags(production: (typeof productions)[number]) {
                   </span>
                 </div>
               </a>
-            ))}
+              );
+            })}
           </div>
         </section>
       ))}
