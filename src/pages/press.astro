@@ -108,16 +108,16 @@ import portraitAlt from '../images/robert-falls-portrait-2025-alt.jpg';
     <h2 class="font-display text-3xl text-brand-ink mb-6">Coverage</h2>
     <div class="divide-y divide-brand-ink/10">
       {pressItems.map((item) => (
-        <a href={item.url} target="_blank" rel="noopener" class="flex items-center justify-between gap-6 py-7 group">
+        <a href={item.url} target="_blank" rel="noopener" class="flex items-center justify-between gap-6 py-7 group border-l-[3px] border-transparent hover:border-brand-oxblood pl-0 hover:pl-4 transition-all duration-200">
           <div>
             <div class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-2">
-              {item.outlet}{item.date && ` · ${item.date}`}
+              {item.outlet}{item.date && <span class="text-brand-ink/40 font-normal normal-case tracking-normal"> · {item.date}</span>}
             </div>
             <div class="font-serif text-2xl text-brand-ink group-hover:text-brand-oxblood transition-colors leading-snug">
               {item.title}
             </div>
           </div>
-          <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors shrink-0">↗</span>
+          <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors shrink-0 text-lg">↗</span>
         </a>
       ))}
     </div>

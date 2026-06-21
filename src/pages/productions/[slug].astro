@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
-import { getRelatedProductions, productions, type ProductionRecord } from '@data/productions';
+import { getRelatedProductions, getFeaturedThumbnail, productions, type ProductionRecord } from '@data/productions';
 
 export function getStaticPaths() {
   return productions.map((production) => ({
@@ -21,11 +21,17 @@ const previousProduction = productionIndex > 0 ? productions[productionIndex - 1
 const nextProduction =
   productionIndex >= 0 && productionIndex < productions.length - 1 ? productions[productionIndex + 1] : null;
 const heroImage = production.images.find((image) => image.priority) ?? production.images[0];
+const isFeatured = production.pageMode === 'featured';
+const heroImageIndex = heroImage ? production.images.findIndex((image) => image.src === heroImage.src) : -1;
 const summary = production.publicSummary ?? production.summary;
 const synopsis = production.synopsis ?? production.publicSummary ?? production.story ?? production.summary;
 const fallsContext = production.fallsContext ?? production.significance;
 const assetImages = production.images;
+const featuredPreviewImages = isFeatured
+  ? assetImages.filter((_, index) => index !== heroImageIndex).slice(0, 2)
+  : [];
 const hasAssets = assetImages.length > 0 || production.watchLinks.length > 0;
+const hasFeaturedPreview = featuredPreviewImages.length > 0;
 const hasReviews = production.reviews.length > 0;
 const hasExternalSources = production.externalSources.length > 0;
 const hasPressQuotes = production.pressQuotes.length > 0;
@@ -130,6 +136,7 @@ const productionSchema = [
         </div>
 
         <div class="production-kicker-row">
+          <span class="production-mode-pill">{isFeatured ? 'Editorial feature' : 'Archive record'}</span>
           {introFacts.map((fact) => (
             <span>{fact}</span>
           ))}
@@ -169,6 +176,25 @@ const productionSchema = [
             <p>{fallsContext}</p>
           </article>
         </section>
+
+        {hasFeaturedPreview && (
+          <section class="production-feature-grid" aria-label="Featured production images">
+            {featuredPreviewImages.map((image) => (
+              <figure class="production-feature-card">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  widths={[520, 760, 1080, 1400]}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={78}
+                  loading="lazy"
+                  class="production-feature-image"
+                />
+                <figcaption>{image.caption}</figcaption>
+              </figure>
+            ))}
+          </section>
+        )}
 
         {(hasStory || hasContextNotes) && (
           <section class="production-context-grid">
@@ -316,7 +342,7 @@ const productionSchema = [
       <div class="production-section-heading production-slider-heading">
         <div>
           <p class="production-eyebrow">Gallery & media</p>
-          <h2>Production Images</h2>
+          <h2>{isFeatured ? 'Production Images' : 'Archive Material'}</h2>
         </div>
         <div class="hidden md:flex items-center gap-2">
           <button class="production-strip-btn" data-strip-prev aria-label="Scroll assets left">←</button>
@@ -476,13 +502,31 @@ const productionSchema = [
       </div>
 
       <div class="production-related-grid">
-        {relatedProductions.map((related) => (
-          <a href={`/productions/${related.slug}`}>
-            <span>{related.yearSpan}</span>
-            <h3>{related.title}</h3>
-            <p>{related.venueAnchor}</p>
-          </a>
-        ))}
+        {relatedProductions.map((related) => {
+          const relatedThumb = getFeaturedThumbnail(related.title);
+          return (
+            <a href={`/productions/${related.slug}`} class="group">
+              {relatedThumb && (
+                <div class="aspect-[3/2] overflow-hidden">
+                  <Image
+                    src={relatedThumb.src}
+                    alt=""
+                    widths={[320, 480, 640]}
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    quality={72}
+                    loading="lazy"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
+                </div>
+              )}
+              <div class="related-card-text">
+                <span>{related.yearSpan}</span>
+                <h3>{related.title}</h3>
+                <p>{related.venueAnchor}</p>
+              </div>
+            </a>
+          );
+        })}
       </div>
 
       <nav class="production-browse-nav" aria-label="Production library navigation">
@@ -551,6 +595,9 @@ const productionSchema = [
   .production-kicker-row span {
     @apply rounded-full border border-brand-cream border-opacity-20 bg-brand-cream bg-opacity-5 px-3 py-1.5 font-display text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-cream text-opacity-75;
   }
+  .production-mode-pill {
+    @apply border-brand-gold border-opacity-45 bg-brand-gold bg-opacity-10 text-brand-goldBright;
+  }
   .production-hero-copy h1 {
     @apply max-w-4xl font-display text-6xl font-extrabold leading-none tracking-normal text-brand-cream md:text-8xl;
   }
@@ -589,6 +636,18 @@ const productionSchema = [
   }
   .production-story-stack {
     @apply space-y-6;
+  }
+  .production-feature-grid {
+    @apply grid gap-4 md:grid-cols-2;
+  }
+  .production-feature-card {
+    @apply overflow-hidden border border-brand-ink border-opacity-10 bg-white bg-opacity-90 shadow-[0_18px_48px_rgba(34,24,20,0.08)];
+  }
+  .production-feature-image {
+    @apply h-full w-full object-cover;
+  }
+  .production-feature-card figcaption {
+    @apply border-t border-brand-ink border-opacity-10 px-5 py-4 text-sm leading-relaxed text-brand-ink text-opacity-70;
   }
   .production-panel,
   .production-rail-card,
@@ -820,16 +879,19 @@ const productionSchema = [
     @apply grid gap-4 md:grid-cols-3;
   }
   .production-related-grid a {
-    @apply block p-5 transition-all duration-200 hover:-translate-y-1 hover:border-brand-oxblood hover:border-opacity-25;
+    @apply block overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:border-brand-oxblood hover:border-opacity-25;
+  }
+  .related-card-text {
+    @apply p-5;
   }
   .production-related-grid span {
     @apply font-display text-[11px] font-bold uppercase tracking-[0.16em] text-brand-oxblood;
   }
   .production-related-grid h3 {
-    @apply mt-4 font-display text-3xl leading-none text-brand-ink;
+    @apply mt-3 font-display text-2xl leading-snug text-brand-ink;
   }
   .production-related-grid p {
-    @apply mt-4 text-sm uppercase tracking-[0.14em] text-brand-ink text-opacity-65;
+    @apply mt-3 text-sm uppercase tracking-[0.14em] text-brand-ink text-opacity-65;
   }
   .production-browse-nav {
     @apply mt-6 grid gap-4 md:grid-cols-3;

@@ -74,7 +74,7 @@ const fastFacts = [
       </dl>
     </div>
 
-    <div class="space-y-7 text-brand-ink/80 leading-relaxed text-lg font-serif max-w-3xl">
+    <div class="about-article space-y-7 text-brand-ink/80 leading-relaxed text-lg font-serif max-w-3xl">
       <h2 class="font-display text-3xl text-brand-ink mb-2">A Reader, Long Before a Director</h2>
       <p>
         Robert Arthur Falls was born March 2, 1954, in Springfield, Illinois, and raised in
@@ -303,3 +303,10 @@ const fastFacts = [
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .about-article h2::before {
+    content: '';
+    @apply block w-8 h-0.5 bg-brand-gold mb-3;
+  }
+</style>
