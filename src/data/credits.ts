@@ -42,7 +42,7 @@ export const creditGroups: CreditGroup[] = [
       { title: 'Death of a Salesman', venue: 'Goodman Theatre', year: '1998', note: 'Basis for Tony-winning Broadway revival' },
       { title: 'Long Day’s Journey into Night', venue: 'Goodman Theatre', year: '2002' },
       { title: 'Lobby Hero', venue: 'Goodman Theatre', year: '2002' },
-      { title: 'King Lear', venue: 'Goodman Theatre', year: '2006', note: 'Helen Hayes Award' },
+      { title: 'King Lear', venue: 'Goodman Theatre', year: '2006', note: 'Remounted at Shakespeare Theatre Company, DC, 2009; Helen Hayes Award context ties to that remount' },
       { title: 'Finishing the Picture', venue: 'Goodman Theatre', year: '2004', note: 'World premiere — Arthur Miller’s final play' },
       { title: 'The Seagull', venue: 'Goodman Theatre', year: '2010' },
       { title: 'Measure for Measure', venue: 'Goodman Theatre', year: '2013' },

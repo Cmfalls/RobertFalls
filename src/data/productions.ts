@@ -135,6 +135,18 @@ import lifeInTheatreShowArt from '../images/life-in-the-theatre/life-in-theatre-
 import lifeInTheatreMakeup from '../images/life-in-the-theatre/life-in-theatre-makeup.png';
 import lifeInTheatreTitle from '../images/life-in-the-theatre/life-in-theatre-title.webp';
 import mametFestivalPortrait from '../images/life-in-the-theatre/mamet-festival-portrait.webp';
+import kingLear1 from '../images/king-lear/king-lear-1.webp';
+import kingLear2 from '../images/king-lear/king-lear-2.webp';
+import kingLear3 from '../images/king-lear/king-lear-3.webp';
+import kingLear4 from '../images/king-lear/king-lear-4.webp';
+import kingLear5 from '../images/king-lear/king-lear-5.webp';
+import kingLear6 from '../images/king-lear/king-lear-6.webp';
+import kingLear7 from '../images/king-lear/king-lear-7.webp';
+import kingLear8 from '../images/king-lear/king-lear-8.webp';
+import kingLear9 from '../images/king-lear/king-lear-9.jpg';
+import kingLear10 from '../images/king-lear/king-lear-10.jpg';
+import kingLearCandid from '../images/king-lear/king-lear-candid.jpg';
+import kingLearTitle from '../images/king-lear/king-lear-title.webp';
 import swingState1 from '../images/swing-state-1.jpg';
 import swingState2 from '../images/swing-state-2.jpg';
 import swingState3 from '../images/swing-state-3.jpg';
@@ -5032,42 +5044,179 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'king-lear': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
-      'King Lear anchors the middle Goodman years with scale, violence, and a major Stacy Keach performance, then extends beyond Chicago through a later Washington remount tied in the archive to a Helen Hayes Award.',
+      'King Lear is one of the most visually audacious productions in the archive: a contemporary, Mafia-run, Tito-like dictatorship built by Falls and designer Walt Spangler, anchored by Stacy Keach, that opened at the Goodman in 2006 and returned for a full Washington remount in 2009.',
     publicSummary:
-      'Falls turns Shakespeare\'s catastrophe into both family implosion and political spectacle, with Stacy Keach at the center.',
+      'Falls resets Shakespeare\'s catastrophe inside a brutal, contemporary police state modeled on 1990s former Yugoslavia, with Stacy Keach\'s Lear at the center of both family implosion and political collapse.',
     synopsis:
-      'An aging king breaks his kingdom apart by demanding love in the language of obedience. What follows is a long collapse through betrayal, exposure, cruelty, and the recognition that power cannot protect anyone from grief or mortality.',
+      'An aging king divides his kingdom among his three daughters, rewarding flattery and banishing the daughter who tells him the truth. What follows is a long collapse through betrayal, exposure, and cruelty, as the kingdom and the king\'s mind disintegrate together, ending in a heap of bodies and the king carrying his dead daughter offstage.',
     fallsContext:
-      'This production sits in the stretch when Falls was still building large canonical events at Goodman scale, using Shakespeare not as ornament but as a vessel for public and private ruin.',
+      'King Lear sits in the stretch when Falls was building large canonical events at Goodman scale, but it is also one of his most explicitly political stagings: rather than ornamental classicism, he and Walt Spangler built a contemporary, brutalist, Mafia-run state heavily reminiscent of 1990s former Yugoslavia, with Lear played as a "Tito-like" strongman whose rash division of his land spirals into ethnic and nationalist chaos.',
     significance:
-      'A central 2006 Goodman Shakespeare production and one of the archive\'s clearest Stacy Keach collaborations, later remounted in Washington.',
+      'A landmark, widely discussed 2006 Goodman Shakespeare production starring Stacy Keach, reset inside a contemporary war-zone dictatorship complete with a urinal-set opening scene and Gloucester\'s eyes seared on a kitchen grill, that proved durable enough to be remounted in full at Washington\'s Shakespeare Theatre Company in 2009 with Keach again in the title role.',
     story:
-      'King Lear matters here not just because of the title itself, but because it shows Falls handling true institutional scale without abandoning psychological pressure. The official Goodman language stresses both spectacle and intimacy, which is exactly the tension that keeps recurring across the strongest Falls classics.',
-    venueAnchor: 'Goodman Theatre',
+      'King Lear is one of the clearest examples in this archive of Falls using Shakespeare to argue about the present rather than preserve the past. Variety\'s Steven Oxman captured the production\'s divided reception precisely: even while criticizing it for prioritizing shock over emotional depth, he called it "ambitious, important," writing that it "leaves one feeling pummeled into shellshock rather than stimulated by dark beauty" - a backhanded compliment the Goodman\'s own marketing later quoted as unqualified praise. The Chicago Tribune was more enthusiastic, reportedly calling it "a colossal, eye-popping operatic production." Three years later, Shakespeare Theatre Company artistic director Michael Kahn invited Falls and Keach to remount the production in Washington, where critics again split: some called it "transgressive" and "transcendent," while DCist\'s Missy Frederick found Falls\'s decision to play Goneril and Regan as reality-television-style sisters in sequined fur coats tonally confused, arguing the production "turn[ed] the epic solemnity of King Lear into riveting, train-wreck theater" at the expense of tragic weight. Keach himself later wrote about the role at length, recalling that he swore he would "never do anything like it again" after Chicago, before Kahn talked him into five more years and "six hours of Shakespeare." He described adding small physical premonitions of Lear\'s failing heart throughout the production, drawing on a real heart condition of his own between the two engagements - a detail that gives the production\'s violence an unusually personal undercurrent.',
+    venueAnchor: 'Goodman Theatre and Shakespeare Theatre Company, Washington',
     eraLabel: 'National and international period',
+    images: [
+      {
+        src: kingLear1,
+        alt: 'Two men stand at urinals in a tiled bathroom as a woman sits scrubbing nearby in the opening scene of King Lear.',
+        caption: 'The production\'s contemporary, war-zone staging concept announces itself in its opening scene, set at a bank of urinals.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'production-still',
+      },
+      {
+        src: kingLear3,
+        alt: 'Gloucester, restrained with foil tape to a chair in a steel kitchen, is attacked by several men as a woman holds his head.',
+        caption: 'Gloucester\'s blinding, staged in a stainless-steel kitchen, became one of the production\'s most discussed images.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: kingLear2,
+        alt: 'Two men in dark suits stand beside a Mercedes sedan in a Mafia-styled scene from King Lear.',
+        caption: 'The production reset Lear\'s court as a Mafia-run, Tito-like dictatorship modeled on 1990s former Yugoslavia.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: kingLear7,
+        alt: 'Edmund in a tracksuit stands near a woman in lingerie seated on a satin-draped bed.',
+        caption: 'Goneril and Regan were reimagined as ostentatious, reality-television-style sisters, a choice critics in both Chicago and Washington singled out.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: kingLear4,
+        alt: 'A lone, bloodied figure walks through a field of smoke and rubble in King Lear.',
+        caption: 'A figure walks through the production\'s war-torn rubble field, the staging\'s recurring visual language of collapse.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: kingLear6,
+        alt: 'A man in a coat walks among rows of body bags laid out on a darkened stage.',
+        caption: 'Rows of body bags reinforce the production\'s genocide-era, former-Yugoslavia staging concept.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: kingLear8,
+        alt: 'Lear cradles Cordelia\'s body on a table as Kent and another man look on in the production\'s final scene.',
+        caption: 'The production\'s final tableau, with Cordelia\'s body laid out as Lear collapses nearby.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: kingLear9,
+        alt: 'Lear sits beside a blindfolded, bloodied Gloucester after his blinding.',
+        caption: 'Stacy Keach as Lear beside Edward Gero\'s blinded Gloucester. Photo: Carol Rosegg.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: kingLear10,
+        alt: 'Lear sits in a chair in formal vest and tie as Kent leans over to speak with him.',
+        caption: 'A quieter register of the production, with Lear in formal dress before the kingdom\'s collapse accelerates.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: kingLear5,
+        alt: 'The Fool kneels alone in a green coat amid stage rubble, lit by rows of harsh stage lights.',
+        caption: 'The Fool kneels alone in the production\'s rubble-strewn storm aftermath.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: kingLearCandid,
+        alt: 'Robert Falls, Stacy Keach, and a third man pose together smiling in a rehearsal room.',
+        caption: 'Robert Falls and Stacy Keach, likely with Shakespeare Theatre Company artistic director Michael Kahn, who invited the production\'s 2009 Washington remount.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: kingLearTitle,
+        alt: 'Orange title treatment text reading King Lear on a black background.',
+        caption: 'Title treatment art for the production.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+    ],
     collaborators: [
       { role: 'Playwright', name: 'William Shakespeare' },
       { role: 'Director', name: 'Robert Falls' },
       { role: 'Cast highlight', name: 'Stacy Keach' },
+      { role: 'Cast highlight', name: 'Edward Gero' },
     ],
     quickFacts: [
-      { label: 'Run', value: 'Sep 9 - Nov 4, 2006' },
-      { label: 'Venue', value: 'Albert Theatre' },
+      { label: 'Goodman run', value: 'Sep 9 - Nov 4, 2006, Albert Theatre' },
+      { label: 'DC remount', value: 'Summer 2009, Shakespeare Theatre Company' },
       { label: 'Runtime', value: '3 hr 15 min' },
-      { label: 'Afterlife', value: 'Washington remount in 2009' },
+      { label: 'Concept', value: 'Contemporary, Mafia-run, "Tito-like" dictatorship' },
+    ],
+    cast: [
+      { role: 'Lear', name: 'Stacy Keach' },
+      { role: 'Gloucester', name: 'Edward Gero' },
+      { role: 'Cordelia', name: 'Laura Odeh' },
+      { role: 'Goneril', name: 'Kim Martin-Cotten' },
+      { role: 'Regan', name: 'Kate Arrington' },
+      { role: 'Albany', name: 'Kevin Gudahl' },
+      { role: 'Cornwall', name: 'Chris Genebach' },
+      { role: 'Kent', name: 'Steve Pickering' },
+      { role: 'Edmund', name: 'Jonno Roberts' },
+      { role: 'Edgar', name: 'Joaquín Torres' },
+      { role: 'Fool', name: 'Howard Witt' },
+      { role: 'Oswald', name: 'Dieterich Gray' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'William Shakespeare' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Walt Spangler' },
+      { role: 'Costume Design', name: 'Ana Kuzmanic' },
+      { role: 'Lighting Design', name: 'Michael Philippi' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Fight Direction', name: 'Rick Sordelet' },
+      { role: 'Vocal Coach', name: 'Ralph Zito' },
+      { role: 'Dramaturgy', name: 'Tom Creamer' },
+      { role: 'Production Stage Manager', name: 'Joseph Drummond' },
+      { role: 'Stage Manager', name: 'T. Paul Lynch' },
     ],
     recognition: [
       {
+        label: 'A widely discussed Shakespeare staging',
+        detail: 'Multiple sources describe this as one of the most widely discussed Shakespearean revivals of its decade, driven by its contemporary, war-zone staging concept and Keach\'s performance.',
+      },
+      {
+        label: 'A full Washington remount',
+        detail: 'Shakespeare Theatre Company artistic director Michael Kahn invited Falls to remount the entire production in 2009, with Keach again playing Lear.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
         label: 'Helen Hayes context',
-        detail: 'Local credits tie the Goodman production and later remount to a Helen Hayes Award context.',
+        detail: 'Local credits associate this production with a Helen Hayes Award; because the Helen Hayes Awards recognize Washington, D.C.-area theatre, that recognition almost certainly traces to the 2009 Shakespeare Theatre Company remount rather than the original Chicago run, though this page has not independently confirmed the specific award category.',
+      },
+      {
+        label: 'A personal performance',
+        detail: 'Stacy Keach has written that he built small physical premonitions of Lear\'s failing heart into his performance, drawing on a real heart condition he developed between the Chicago and Washington engagements.',
       },
     ],
     contextNotes: [
       {
-        label: 'Official framing',
-        text: 'The Goodman page presents the production as both intimate family drama and explosive political commentary, emphasizing the size of the event as well as the emotional damage inside it.',
+        label: 'A divided critical reception',
+        text: 'Variety\'s 2006 review is more divided than the Goodman\'s own marketing suggests: critic Steven Oxman called the production "ambitious, important" while also writing that it "leaves one feeling pummeled into shellshock rather than stimulated by dark beauty," criticizing it for prioritizing shock value over Shakespeare\'s emotional complexity. This page presents the fuller, more divided verdict rather than only the flattering fragment.',
+      },
+      {
+        label: 'Two distinct cast lists',
+        text: 'The cast and creative team above reflect the original 2006 Goodman production, which matches the production photography in the local archive. The 2009 Shakespeare Theatre Company remount retained Keach, Gero, Odeh, Martin-Cotten, Arrington, Pickering, Roberts, Torres, Witt, and Gray, but replaced Albany (Andrew Long) and added a larger ensemble, with a different creative team handling sound, dramaturgy, and stage management for the Washington run.',
+      },
+      {
+        label: 'Source package',
+        text: 'The folder includes eight Carol Rosegg-credited production stills spanning the production\'s opening, blinding, storm, and final scenes, a title-treatment card, a candid rehearsal-room photo of Falls and Keach, and a full cast-and-creative screenshot.',
       },
     ],
     reviews: [
@@ -5075,12 +5224,60 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Goodman Theatre',
         href: 'https://www.goodmantheatre.org/show/king-lear/',
         summary:
-          'The official page frames the 2006 staging as a major Stacy Keach-led Shakespeare production and quotes Variety calling it ambitious and important.',
+          'The official page frames the 2006 staging as a major Stacy Keach-led Shakespeare production and quotes Variety calling it "ambitious and important."',
+        note: 'Official production page',
+      },
+      {
+        source: 'Variety',
+        href: 'https://variety.com/2006/legit/reviews/king-lear-12-1200513193/',
+        summary: 'Steven Oxman called the production "ambitious, important" but argued Falls prioritized shock value over emotional depth, writing it left him "pummeled into shellshock rather than stimulated by dark beauty."',
+        note: 'Mixed',
+      },
+      {
+        source: 'DCist',
+        href: 'https://dcist.com/story/09/06/24/a-king-lear-fit-for-bravo/',
+        summary: 'Missy Frederick found the 2009 Washington remount visually inventive but tonally confused, arguing it played Lear\'s madness "for zany laughs" rather than tragedy.',
+        note: 'Mixed (2009 remount)',
+      },
+      {
+        source: 'Washington City Paper',
+        href: 'https://washingtoncitypaper.com/article/228782/reviewed-shakespeare-theatre-companys-transgressive-transcendent-king-lear/',
+        summary: 'Called the 2009 remount "transgressive" and "transcendent" in its headline assessment of the production.',
+        note: 'Positive (2009 remount)',
+      },
+      {
+        source: 'The Washington Post',
+        href: 'https://www.washingtonpost.com/archive/style/2009/06/23/a-magnificent-king-lear-rises-to-the-madness/dc7dc794-bf40-4394-94b1-60808a2faefa/',
+        summary: 'Reviewed the 2009 Shakespeare Theatre Company remount under the headline "A Magnificent King Lear Rises to the Madness."',
+        note: 'Positive (2009 remount)',
+      },
+      {
+        source: 'Newcity Stage',
+        href: 'https://www.newcitystage.com/2006/09/28/review-king-leargoodman-theatre/',
+        summary: 'Newcity\'s review of the original 2006 Goodman production, preserved in the local source document.',
+        note: 'Source-doc review link',
       },
     ],
-    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/king-lear/' }],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/king-lear/' },
+      { label: 'Shakespeare Theatre Company event page', href: 'https://www.shakespearetheatre.org/events/king-lear-08-09' },
+      { label: 'Variety review (2006)', href: 'https://variety.com/2006/legit/reviews/king-lear-12-1200513193/' },
+      { label: 'DCist review (2009)', href: 'https://dcist.com/story/09/06/24/a-king-lear-fit-for-bravo/' },
+      { label: 'Washington City Paper review (2009)', href: 'https://washingtoncitypaper.com/article/228782/reviewed-shakespeare-theatre-companys-transgressive-transcendent-king-lear/' },
+      { label: 'Washington Post review (2009)', href: 'https://www.washingtonpost.com/archive/style/2009/06/23/a-magnificent-king-lear-rises-to-the-madness/dc7dc794-bf40-4394-94b1-60808a2faefa/' },
+      { label: 'Newcity Stage review (2006)', href: 'https://www.newcitystage.com/2006/09/28/review-king-leargoodman-theatre/' },
+      { label: 'Chicago Tribune feature (2006)', href: 'https://www.chicagotribune.com/2006/09/21/extreme-lear-robert-falls-gets-audacious-with-the-great-tragedy-but-did-stacy-keach-get-the-memo/' },
+    ],
+    watchLinks: [
+      {
+        label: 'King Lear Interview with Stacy Keach and Robert Falls',
+        href: 'https://www.youtube.com/watch?v=OONOW9pImiY&t=127s',
+        description: 'Falls and Keach discuss the challenge of staging the production.',
+        thumbnail: kingLear9,
+      },
+    ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'a-life-in-the-theatre': {
     pageMode: 'archive',
