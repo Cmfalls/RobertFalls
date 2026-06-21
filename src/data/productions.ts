@@ -2530,7 +2530,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'researched',
   },
   'molly-sweeney': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'Molly Sweeney is the production the pandemic stopped before it could open: a fully designed, fully cast Brian Friel revival that reached final tech and official production photography in March 2020, then never played a single public performance.',
     publicSummary:
@@ -2732,7 +2732,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'the-winters-tale': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'The Winter\'s Tale records Falls returning to Shakespeare late in his Goodman tenure with a visually bold Goodman staging that critics repeatedly described as inventive, playful, and emotionally generous.',
     publicSummary:
@@ -3533,7 +3533,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'uncle-vanya': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'Uncle Vanya returns Falls to Chekhov in his 30th-anniversary Goodman season, pairing Annie Baker\'s contemporary-sounding version with a worn country estate, a quietly starry ensemble, and a production tuned to regret, humor, and emotional attrition.',
     publicSummary:
@@ -4072,7 +4072,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'soups-stews-and-casseroles-1976': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'Soups, Stews, and Casseroles: 1976 extends the Falls/Rebecca Gilman collaboration into labor politics, small-town economics, and the moral pressure created when corporate restructuring reaches everyday life.',
     publicSummary:
@@ -4332,7 +4332,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'the-jacksonian': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'The Jacksonian enters the archive as a Beth Henley world premiere that began at the Geffen Playhouse and continued Off-Broadway, giving Falls a new-play record built around star casting, southern gothic unease, and a life beyond a single city.',
     publicSummary:
