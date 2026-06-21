@@ -5,6 +5,42 @@ dist
 *.log
 
 # Research documents and unprocessed photo drops at project root —
-# not site content; real assets live under public/images once wired in
+# not site content; real assets live under src/images/ once wired in
 *.pdf
 *.docx
+
+# Research image directories at project root (production research packets)
+/2666/
+/A Life in the Theatre/
+/American Buffalo/
+/An Enemy of the People/
+/Blind Date/
+/Chinglish/
+/Death of a Salesman/
+/Desire Under the Elms/
+/Don Giovanni/
+/Frank's Home/
+/King Lear/
+/Luna Gale/
+/Measure for Measure/
+/Molly Sweeney/
+/Pamplona/
+/playbills/
+/Shining City/
+/Soups, Stews, and Casseroles_ 1976/
+/The Iceman Cometh/
+/The Jacksonian/
+/The Seagull/
+/Uncle Vanya/
+/We're Only Alive for a Short Amount of Time/
+/Winters Tale/
+# Loose image/video drops at project root
+/*.jpg
+/*.jpeg
+/*.png
+/*.webp
+/*.avif
+/*.mp4
+/*.gif
+/*.svg
+/*.docx
