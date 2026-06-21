@@ -20,6 +20,8 @@ const productionIndex = productions.findIndex((item) => item.slug === production
 const previousProduction = productionIndex > 0 ? productions[productionIndex - 1] : null;
 const nextProduction =
   productionIndex >= 0 && productionIndex < productions.length - 1 ? productions[productionIndex + 1] : null;
+const prevThumb = previousProduction ? getFeaturedThumbnail(previousProduction.title) : null;
+const nextThumb = nextProduction ? getFeaturedThumbnail(nextProduction.title) : null;
 const heroImage = production.images.find((image) => image.priority) ?? production.images[0];
 const isFeatured = production.pageMode === 'featured';
 const heroImageIndex = heroImage ? production.images.findIndex((image) => image.src === heroImage.src) : -1;
@@ -530,14 +532,31 @@ const productionSchema = [
       </div>
 
       <nav class="production-browse-nav" aria-label="Production library navigation">
-        <a href="/productions">
-          <span>Library</span>
-          <strong>All Productions</strong>
+        <a href="/productions" class="group overflow-hidden">
+          <div class="browse-nav-inner">
+            <span>Library</span>
+            <strong>All Productions</strong>
+          </div>
         </a>
         {previousProduction ? (
-          <a href={`/productions/${previousProduction.slug}`}>
-            <span>Previous</span>
-            <strong>{previousProduction.title}</strong>
+          <a href={`/productions/${previousProduction.slug}`} class="group overflow-hidden">
+            {prevThumb && (
+              <div class="aspect-[3/2] overflow-hidden">
+                <Image
+                  src={prevThumb.src}
+                  alt=""
+                  widths={[320, 480]}
+                  sizes="33vw"
+                  quality={72}
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                />
+              </div>
+            )}
+            <div class="browse-nav-inner">
+              <span>Previous</span>
+              <strong>{previousProduction.title}</strong>
+            </div>
           </a>
         ) : (
           <div>
@@ -546,9 +565,24 @@ const productionSchema = [
           </div>
         )}
         {nextProduction ? (
-          <a href={`/productions/${nextProduction.slug}`}>
-            <span>Next</span>
-            <strong>{nextProduction.title}</strong>
+          <a href={`/productions/${nextProduction.slug}`} class="group overflow-hidden">
+            {nextThumb && (
+              <div class="aspect-[3/2] overflow-hidden">
+                <Image
+                  src={nextThumb.src}
+                  alt=""
+                  widths={[320, 480]}
+                  sizes="33vw"
+                  quality={72}
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                />
+              </div>
+            )}
+            <div class="browse-nav-inner">
+              <span>Next</span>
+              <strong>{nextProduction.title}</strong>
+            </div>
           </a>
         ) : (
           <div>
@@ -896,9 +930,14 @@ const productionSchema = [
   .production-browse-nav {
     @apply mt-6 grid gap-4 md:grid-cols-3;
   }
-  .production-browse-nav a,
+  .production-browse-nav a {
+    @apply block transition-all duration-200 hover:-translate-y-1 hover:border-brand-oxblood hover:border-opacity-25;
+  }
   .production-browse-nav div {
     @apply flex min-h-[7rem] flex-col justify-between p-5;
+  }
+  .browse-nav-inner {
+    @apply flex min-h-[5rem] flex-col justify-between p-5;
   }
   .production-browse-nav span {
     @apply font-display text-[11px] font-bold uppercase tracking-[0.18em] text-brand-oxblood;
