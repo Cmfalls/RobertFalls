@@ -5,7 +5,38 @@ export interface PressItem {
   url: string;
 }
 
-export const pressItems: PressItem[] = [
+const monthOrder: Record<string, number> = {
+  january: 1,
+  february: 2,
+  march: 3,
+  april: 4,
+  may: 5,
+  june: 6,
+  july: 7,
+  august: 8,
+  september: 9,
+  october: 10,
+  november: 11,
+  december: 12,
+};
+
+function pressSortValue(date: string): number {
+  const normalized = date.trim().toLowerCase();
+  const yearMatch = normalized.match(/\d{4}/);
+  if (!yearMatch) return 0;
+
+  const year = parseInt(yearMatch[0], 10);
+  const month = Object.entries(monthOrder).find(([name]) => normalized.includes(name))?.[1] ?? 0;
+  return year * 100 + month;
+}
+
+const rawPressItems: PressItem[] = [
+  {
+    outlet: 'Chicago Classical Review',
+    title: 'Don Giovanni, Susannah, Herodiade on tap in Lyric Opera’s 2026-27 season',
+    date: 'April 2026',
+    url: 'https://chicagoclassicalreview.com/2026/04/don-giovanni-susannah-herodiade-on-tap-in-lyric-operas-2026-27-season/',
+  },
   {
     outlet: 'WBEZ Chicago',
     title: 'For theater director Robert Falls, one stage door closes and another opens',
@@ -20,15 +51,15 @@ export const pressItems: PressItem[] = [
   },
   {
     outlet: 'American Theatre',
-    title: 'Robert Falls: Letting Go of the Goodman',
-    date: 'March 2023',
-    url: 'https://www.americantheatre.org/2023/03/29/robert-falls-letting-go-of-the-goodman/',
-  },
-  {
-    outlet: 'American Theatre',
     title: 'Goodman, Teatro Vista Take Centerstage at Equity Jeff Awards',
     date: 'October 2023',
     url: 'https://www.americantheatre.org/2023/10/04/goodman-teatro-vista-take-centerstage-at-equity-jeff-awards/',
+  },
+  {
+    outlet: 'American Theatre',
+    title: 'Robert Falls: Letting Go of the Goodman',
+    date: 'March 2023',
+    url: 'https://www.americantheatre.org/2023/03/29/robert-falls-letting-go-of-the-goodman/',
   },
   {
     outlet: 'CBS News Chicago',
@@ -50,12 +81,6 @@ export const pressItems: PressItem[] = [
   },
   {
     outlet: 'Chicago Magazine',
-    title: 'Inside the Mind of Goodman Theatre Artistic Director Robert Falls',
-    date: 'October 2010',
-    url: 'https://www.chicagomag.com/chicago-magazine/october-2010/inside-the-mind-of-goodman-theatre-artistic-director-robert-falls/',
-  },
-  {
-    outlet: 'Chicago Magazine',
     title: 'Robert Falls, 30 years at the Goodman',
     date: 'March 2017',
     url: 'https://www.chicagomag.com/chicago-magazine/march-2017/robert-falls/',
@@ -65,6 +90,12 @@ export const pressItems: PressItem[] = [
     title: 'Robert Falls Celebrates 30 Years as Goodman’s Driving Artistic Force',
     date: 'March 2017',
     url: 'https://www.dailyherald.com/20170303/entertainment/robert-falls-celebrates-30-years-as-goodmans-driving-artistic-force/',
+  },
+  {
+    outlet: 'Chicago Magazine',
+    title: 'Inside the Mind of Goodman Theatre Artistic Director Robert Falls',
+    date: 'October 2010',
+    url: 'https://www.chicagomag.com/chicago-magazine/october-2010/inside-the-mind-of-goodman-theatre-artistic-director-robert-falls/',
   },
   {
     outlet: 'TheatreInChicago',
@@ -85,3 +116,7 @@ export const pressItems: PressItem[] = [
     url: 'https://www.britannica.com/biography/Robert-Falls',
   },
 ];
+
+export const pressItems: PressItem[] = [...rawPressItems].sort(
+  (a, b) => pressSortValue(b.date) - pressSortValue(a.date) || a.outlet.localeCompare(b.outlet),
+);

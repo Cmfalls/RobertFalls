@@ -409,11 +409,12 @@ function buildSummary(title: string, stagings: ProductionStaging[]): string {
   const firstVenue = first.venue ? ` at ${first.venue}` : '';
 
   if (stagings.length === 1) {
-    return `${title} enters Robert Falls's production record in ${first.year}${firstVenue}. ${ensureSentence(first.description)}`.trim();
+    const detail = ensureSentence(first.description);
+    return `${title} was directed by Robert Falls in ${first.year}${firstVenue}.${detail ? ` ${detail}` : ''}`.trim();
   }
 
   const lastVenue = last.venue ? ` at ${last.venue}` : '';
-  return `${title} tracks across ${stagings.length} documented stagings from ${first.year}${firstVenue} to ${last.year}${lastVenue}, showing how the production moved through Falls's directing career.`;
+  return `${title} spans ${stagings.length} documented stagings from ${first.year}${firstVenue} to ${last.year}${lastVenue}.`;
 }
 
 function buildFallbackSignificance(
@@ -422,33 +423,44 @@ function buildFallbackSignificance(
   highlights: string[],
   firstYearValue: number,
 ): string {
+  const first = stagings[0];
+  const last = stagings[stagings.length - 1];
+  const venues = uniqueValues(stagings.map((staging) => staging.venue));
   const highlightText = highlights.join(' ');
 
   if (/world premiere/i.test(highlightText)) {
-    return `${title} marks one of the new-work premieres attached to Falls's later Goodman years.`;
+    return `${title} is documented here as a world-premiere title in Falls's archive.`;
   }
 
   if (/Tony/i.test(highlightText)) {
-    return `${title} connects to one of the award-recognized public peaks in Falls's national career.`;
+    return `${title} is tied to documented Tony recognition within Falls's career record.`;
   }
 
   if (/Jeff/i.test(highlightText)) {
-    return `${title} stands out inside Falls's Chicago record as a production with documented local recognition.`;
+    return `${title} carries documented Chicago awards recognition within the archive.`;
   }
 
   if (stagings.length > 1) {
-    return `${title} became a returning title in Falls's repertory, resurfacing across multiple venues and years.`;
+    return `This archive entry follows ${title} across ${stagings.length} documented stagings${venues.length > 1 ? ` at ${venues.length} venues` : ''}, from ${first.year} to ${last.year}.`;
+  }
+
+  if (first.venue && /goodman/i.test(first.venue)) {
+    return `This entry belongs to Falls's Goodman-era directing record, with a documented staging at ${first.venue} in ${first.year}.`;
   }
 
   if (firstYearValue >= 2020) {
-    return `${title} belongs to the late-career stretch of Falls's work after decades of shaping the Goodman stage.`;
+    return `This entry belongs to Falls's post-Goodman freelance period, with a documented staging in ${first.year}.`;
   }
 
-  if (firstYearValue >= 1990) {
-    return `${title} sits inside the period when Falls's Chicago productions increasingly fed larger national visibility.`;
+  if (firstYearValue >= 1986) {
+    return `This entry belongs to Falls's Goodman-era directing record, with a documented staging in ${first.year}.`;
   }
 
-  return `${title} helps map the shape of Falls's directing record even where only a single staging is documented here.`;
+  return `This archive entry currently preserves a documented ${first.year}${firstVenuePhrase(first.venue)} staging of ${title}.`;
+}
+
+function firstVenuePhrase(venue?: string): string {
+  return venue ? ` at ${venue}` : '';
 }
 
 function creditDescription(credit: Credit): string {
@@ -1604,8 +1616,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
         text: 'The strongest image currently in the repo is drawn from Playbill\'s Broadway photo archive and credited there to Eric Y. Exit. The rest of the local packet is sparse, so this page stays intentionally text-led rather than forcing a weak gallery.',
       },
       {
-        label: 'Source status',
-        text: 'This is one of the archive\'s most important productions, but the local source folder currently contains very little beyond Playbill material and a London notes stub. If stronger Goodman or Broadway stills surface later, this page should be one of the first to receive a fuller media expansion.',
+        label: 'Archive note',
+        text: 'This page stays intentionally text-led for now because the strongest surviving material is still documentary rather than photographic. If stronger Goodman or Broadway stills surface later, this is one of the first productions that should expand visually.',
       },
     ],
     reviews: [
@@ -2579,8 +2591,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Source status',
-        text: 'This entry draws on a Playbill cover added directly to the project plus public secondary sources (Wikipedia, IBDB-derived plot and credit summaries) rather than a full local source folder.',
+        label: 'Archive note',
+        text: 'This page currently relies on a small set of surviving materials and established production references, so it is presented as a tighter archive profile rather than a gallery-heavy feature.',
       },
     ],
     externalSources: [
@@ -2655,8 +2667,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
         text: 'A third Broadway revival of The Rose Tattoo, starring Marisa Tomei, opened at the American Airlines Theatre in 2019 directed by Trip Cullman - not Robert Falls. An earlier site record had misattributed that production to Falls; it has been removed from his credits.',
       },
       {
-        label: 'Source status',
-        text: 'This entry draws on a Playbill cover added directly to the project plus public secondary sources (Wikipedia) rather than a full local source folder.',
+        label: 'Archive note',
+        text: 'This page currently relies on a small set of surviving materials and established production references, so it is presented as a tighter archive profile rather than a gallery-heavy feature.',
       },
     ],
     externalSources: [
@@ -2720,8 +2732,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Source status',
-        text: 'This entry draws on a Playbill cover added directly to the project plus public secondary sources (Wikipedia) rather than a full local source folder.',
+        label: 'Archive note',
+        text: 'This page currently relies on a small set of surviving materials and established production references, so it is presented as a tighter archive profile rather than a gallery-heavy feature.',
       },
     ],
     externalSources: [
@@ -2789,8 +2801,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Source status',
-        text: 'This entry draws on a Playbill cover added directly to the project plus public secondary sources (Wikipedia) rather than a full local source folder.',
+        label: 'Archive note',
+        text: 'This page currently relies on a small set of surviving materials and established production references, so it is presented as a tighter archive profile rather than a gallery-heavy feature.',
       },
     ],
     externalSources: [
@@ -2868,8 +2880,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Source status',
-        text: 'This entry draws on a Playbill cover added directly to the project plus public secondary sources (Wikipedia) rather than a full local source folder.',
+        label: 'Archive note',
+        text: 'This page currently relies on a small set of surviving materials and established production references, so it is presented as a tighter archive profile rather than a gallery-heavy feature.',
       },
     ],
     externalSources: [
@@ -2939,8 +2951,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Source status',
-        text: 'This entry draws on the local credits record, a Playbill cover added directly to the project, and public secondary Broadway references rather than a full official production archive page.',
+        label: 'Archive note',
+        text: 'This page is anchored by the credits record, surviving Playbill material, and established Broadway references, so it is intentionally presented as a compact archive page rather than a full visual feature.',
       },
     ],
     reviews: [

@@ -1,7 +1,21 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import MarqueeLights from '@components/MarqueeLights.astro';
 import { awards } from '@data/awards';
+import { getProductionHref, productions } from '@data/productions';
+import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
+
+const featuredAwards = awards.filter((award) =>
+  /Tony|Drama Desk|Obie|Hall of Fame|Helen Hayes/i.test(award.name),
+);
+const archiveAwards = awards.filter((award) => !featuredAwards.includes(award));
+const productionTitles = new Set(productions.map((production) => production.title.toLowerCase()));
+
+function workHref(work?: string) {
+  if (!work) return null;
+  return productionTitles.has(work.toLowerCase()) ? getProductionHref(work) : null;
+}
 ---
 
 <BaseLayout
@@ -9,6 +23,7 @@ import { awards } from '@data/awards';
   description="Awards and honors received by theatre director Robert Falls, including a Tony Award, Drama Desk Award, Obie Award, and induction into the Theatre Hall of Fame."
 >
   <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(138,19,36,0.38),_transparent_55%),radial-gradient(ellipse_at_bottom_right,_rgba(138,19,36,0.14),_transparent_45%)]"></div>
     <div class="grain-overlay"></div>
     <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
       <div class="section-container !py-0">
@@ -19,19 +34,99 @@ import { awards } from '@data/awards';
     </div>
   </section>
 
-  <section class="section-container">
-    <div class="grid sm:grid-cols-2 gap-px bg-brand-ink/10">
-      {awards.map((award) => (
-        <div class="bg-brand-cream p-8 flex flex-col gap-2">
-          <span class="text-brand-gold text-xl">✦</span>
-          <div class="font-display text-2xl text-brand-ink leading-snug">{award.name}</div>
-          {(award.work || award.year) && (
-            <div class="text-sm text-brand-ink/55">
-              {award.work}{award.work && award.year ? ' · ' : ''}{award.year}
-            </div>
-          )}
+  <section class="relative overflow-hidden bg-brand-ink text-brand-cream">
+    <Image
+      src={rehearsalPhoto}
+      alt=""
+      aria-hidden="true"
+      widths={[640, 960, 1280, 1600]}
+      sizes="100vw"
+      quality={68}
+      loading="lazy"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-[0.22] mix-blend-luminosity pointer-events-none"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-ink/85 via-brand-ink/75 to-brand-ink/90"></div>
+    <div class="grain-overlay"></div>
+    <div class="section-container relative">
+      <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
+        <div>
+          <p class="section-eyebrow text-brand-gold">Major Honors</p>
+          <h2 class="font-display text-5xl md:text-6xl tracking-tight text-brand-cream mb-4">National and Career Recognition</h2>
         </div>
-      ))}
+        <div class="text-xs uppercase tracking-[0.18em] text-brand-cream/45">
+          signature awards and landmark distinctions
+        </div>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-5">
+        {featuredAwards.map((award) => {
+          const href = workHref(award.work);
+          return (
+            <article class="border border-brand-cream/15 bg-white/8 p-7 md:p-8 backdrop-blur-[2px]">
+              <div class="flex items-start justify-between gap-4">
+                <span class="text-brand-gold text-xl">✦</span>
+                {award.year && (
+                  <div class="text-[11px] uppercase tracking-[0.18em] text-brand-gold/80 font-semibold">
+                    {award.year}
+                  </div>
+                )}
+              </div>
+              <h3 class="font-display text-3xl text-brand-cream leading-tight mt-4">{award.name}</h3>
+              {award.work && (
+                <div class="mt-4 text-sm text-brand-cream/60">
+                  {href ? (
+                    <a href={href} class="inline-flex items-center gap-2 text-brand-goldBright hover:text-brand-gold transition-colors">
+                      <span>{award.work}</span>
+                      <span aria-hidden="true">&rarr;</span>
+                    </a>
+                  ) : (
+                    <span>{award.work}</span>
+                  )}
+                </div>
+              )}
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <div>
+      <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
+        <div>
+          <p class="section-eyebrow">Full List</p>
+          <h2 class="section-heading">Additional Awards and Honors</h2>
+        </div>
+        <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/55">
+          chicago, institutional, and career-wide recognition
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-px bg-brand-ink/10">
+        {archiveAwards.map((award) => {
+          const href = workHref(award.work);
+          return (
+            <div class="bg-brand-cream p-7 flex flex-col gap-3">
+              <div class="flex items-start justify-between gap-4">
+                <span class="text-brand-gold text-lg">✦</span>
+                {award.year && <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/65">{award.year}</div>}
+              </div>
+              <div class="font-display text-2xl text-brand-ink leading-snug">{award.name}</div>
+              {award.work && (
+                <div class="text-sm text-brand-ink/60">
+                  {href ? (
+                    <a href={href} class="text-brand-oxblood hover:text-brand-oxbloodBright transition-colors">
+                      {award.work}
+                    </a>
+                  ) : (
+                    <span>{award.work}</span>
+                  )}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   </section>
 </BaseLayout>

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { featuredProductions, productions, productionStats } from '@data/productions';
 
@@ -18,20 +19,26 @@ function sectionId(decade: string) {
   return `decade-${decade.toLowerCase()}`;
 }
 
-function sourceStatusLabel(status: (typeof productions)[number]['sourceStatus']) {
-  if (status === 'featured-ready') return 'Featured ready';
-  if (status === 'researched') return 'Researched';
-  return 'Repo seed';
-}
-
-function sourceStatusClass(status: (typeof productions)[number]['sourceStatus']) {
-  if (status === 'featured-ready') return 'status-ready';
-  if (status === 'researched') return 'status-researched';
-  return 'status-seed';
-}
-
 function previewText(text: string, limit = 150) {
   return text.length > limit ? `${text.slice(0, limit - 3).trim()}...` : text;
+}
+
+function featuredPrimaryBadge(production: (typeof productions)[number]) {
+  return production.pageMode === 'featured' ? 'Editorial feature' : 'Archive page';
+}
+
+function featuredSecondaryBadge(production: (typeof productions)[number]) {
+  if (production.images.length > 1) {
+    return `${production.images.length}-image gallery`;
+  }
+  if (production.images.length === 1) {
+    return 'Photo-led page';
+  }
+  return 'Type-led page';
+}
+
+function archiveSummary(production: (typeof productions)[number]) {
+  return production.publicSummary ?? production.summary;
 }
 
 function productionTags(production: (typeof productions)[number]) {
@@ -105,8 +112,8 @@ function productionTags(production: (typeof productions)[number]) {
         <p class="section-eyebrow">Priority Set</p>
         <h2 class="section-heading">Featured Production Pages</h2>
       </div>
-      <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/45">
-        richer profiles, stronger navigation, cleaner source status
+      <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/55">
+        editorial highlights pulled from the full archive
       </div>
     </div>
 
@@ -117,11 +124,13 @@ function productionTags(production: (typeof productions)[number]) {
           <a href={`/productions/${production.slug}`} class="group featured-library-card">
             <div class="featured-library-media-shell">
               {heroImage ? (
-                <img
-                  src={heroImage.src.src}
+                <Image
+                  src={heroImage.src}
                   alt={heroImage.alt}
-                  width={heroImage.src.width}
-                  height={heroImage.src.height}
+                  widths={[420, 640, 860, 1200]}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={76}
+                  loading="lazy"
                   class="featured-library-media"
                 />
               ) : (
@@ -132,10 +141,8 @@ function productionTags(production: (typeof productions)[number]) {
               )}
               <div class="featured-library-overlay"></div>
               <div class="featured-library-badges">
-                <span class={`featured-status-pill ${sourceStatusClass(production.sourceStatus)}`}>
-                  {sourceStatusLabel(production.sourceStatus)}
-                </span>
-                <span class="featured-mode-pill">{production.images.length > 0 ? 'Media-backed' : 'Type-led'}</span>
+                <span class="featured-badge-primary">{featuredPrimaryBadge(production)}</span>
+                <span class="featured-badge-secondary">{featuredSecondaryBadge(production)}</span>
               </div>
             </div>
 
@@ -243,7 +250,7 @@ function productionTags(production: (typeof productions)[number]) {
               </div>
               <h3 class="font-display text-4xl md:text-5xl text-brand-ink">{group.decade}</h3>
             </div>
-            <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/45" data-decade-count>
+            <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/60" data-decade-count>
               {group.productions.length} titles
             </div>
           </div>
@@ -276,7 +283,7 @@ function productionTags(production: (typeof productions)[number]) {
                   </div>
                 </div>
 
-                <p class="text-brand-ink/78 leading-relaxed mt-4">{previewText(production.significance, 135)}</p>
+                <p class="text-brand-ink/78 leading-relaxed mt-4">{previewText(archiveSummary(production), 170)}</p>
 
                 <div class="grid sm:grid-cols-3 gap-3 mt-5 text-sm">
                   <div>
@@ -288,8 +295,8 @@ function productionTags(production: (typeof productions)[number]) {
                     <div class="archive-meta-value">{production.eraLabel}</div>
                   </div>
                   <div>
-                    <div class="archive-meta-label">Source status</div>
-                    <div class="archive-meta-value">{sourceStatusLabel(production.sourceStatus)}</div>
+                    <div class="archive-meta-label">Venues</div>
+                    <div class="archive-meta-value">{production.venueCount} {production.venueCount === 1 ? 'documented venue' : 'documented venues'}</div>
                   </div>
                 </div>
 
@@ -329,7 +336,7 @@ function productionTags(production: (typeof productions)[number]) {
     @apply relative aspect-[4/3] overflow-hidden bg-brand-ink;
   }
   .featured-library-media {
-    @apply h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03];
+    @apply h-full w-full object-cover scale-[1.03] transition-transform duration-700 group-hover:scale-[1.07];
   }
   .featured-library-type {
     @apply absolute inset-0 flex flex-col justify-end bg-[linear-gradient(160deg,rgba(40,22,18,0.9),rgba(15,12,10,0.95))] p-6 text-brand-cream;
@@ -341,26 +348,23 @@ function productionTags(production: (typeof productions)[number]) {
     @apply mt-3 font-display text-4xl md:text-5xl leading-none max-w-[12ch];
   }
   .featured-library-overlay {
-    @apply absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-brand-ink via-black to-transparent;
+    @apply absolute inset-0;
+    background:
+      linear-gradient(to top, rgba(12, 9, 8, 0.9) 0%, rgba(12, 9, 8, 0.32) 35%, transparent 62%),
+      radial-gradient(ellipse at center, transparent 40%, rgba(12, 9, 8, 0.44) 100%);
   }
   .featured-library-badges {
     @apply absolute left-4 right-4 top-4 flex flex-wrap gap-2;
   }
-  .featured-status-pill,
-  .featured-mode-pill {
+  .featured-badge-primary,
+  .featured-badge-secondary {
     @apply inline-flex items-center rounded-full px-3 py-1.5 text-[11px] font-display font-semibold uppercase tracking-[0.16em];
   }
-  .featured-mode-pill {
-    @apply border border-white border-opacity-20 bg-black bg-opacity-30 text-brand-cream backdrop-blur-sm;
-  }
-  .status-ready {
+  .featured-badge-primary {
     @apply bg-brand-gold text-brand-ink;
   }
-  .status-researched {
-    @apply bg-brand-cream text-brand-oxblood;
-  }
-  .status-seed {
-    @apply bg-white bg-opacity-80 text-brand-ink;
+  .featured-badge-secondary {
+    @apply border border-white border-opacity-20 bg-black bg-opacity-30 text-brand-cream backdrop-blur-sm;
   }
   .featured-count-pill {
     @apply rounded-full border border-brand-oxblood border-opacity-10 bg-brand-oxblood bg-opacity-5 px-3 py-1.5 text-[11px] font-display font-semibold uppercase tracking-[0.16em] text-brand-oxblood;
@@ -381,7 +385,7 @@ function productionTags(production: (typeof productions)[number]) {
     @apply lg:justify-self-end;
   }
   .production-filter-meta {
-    @apply mb-2 text-[11px] uppercase tracking-[0.18em] text-brand-ink text-opacity-40;
+    @apply mb-2 text-[11px] uppercase tracking-[0.18em] text-brand-ink text-opacity-55;
   }
   .production-filter-group {
     @apply flex flex-wrap gap-2;
@@ -393,7 +397,7 @@ function productionTags(production: (typeof productions)[number]) {
     @apply border-brand-oxblood bg-brand-oxblood text-brand-cream;
   }
   .production-results-meta {
-    @apply text-xs uppercase tracking-[0.16em] text-brand-ink text-opacity-50 lg:col-span-2;
+    @apply text-xs uppercase tracking-[0.16em] text-brand-ink text-opacity-65 lg:col-span-2;
   }
   .decade-jump-link {
     @apply inline-flex items-center rounded-full border border-brand-ink border-opacity-10 px-4 py-2 text-xs font-display font-semibold uppercase tracking-[0.18em] text-brand-ink text-opacity-60 transition-colors duration-200 hover:border-brand-oxblood hover:border-opacity-30 hover:text-brand-oxblood focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
@@ -418,10 +422,10 @@ function productionTags(production: (typeof productions)[number]) {
     @apply font-display text-3xl leading-none text-brand-ink;
   }
   .archive-count-label {
-    @apply mt-1 text-[11px] uppercase tracking-[0.16em] text-brand-ink text-opacity-50;
+    @apply mt-1 text-[11px] uppercase tracking-[0.16em] text-brand-ink text-opacity-65;
   }
   .archive-meta-label {
-    @apply text-[11px] uppercase tracking-[0.16em] text-brand-ink text-opacity-40;
+    @apply text-[11px] uppercase tracking-[0.16em] text-brand-ink text-opacity-55;
   }
   .archive-meta-value {
     @apply mt-1 text-sm leading-snug text-brand-ink text-opacity-70;

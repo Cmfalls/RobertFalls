@@ -6,6 +6,7 @@ import { awards } from '@data/awards';
 import { getProductionBySlug, getProductionHref, productionStats } from '@data/productions';
 import { pressItems } from '@data/press';
 import rehearsalPhoto from '../images/robert-falls-rehearsal.jpg';
+import kingLearPhoto from '../images/king-lear/king-lear-1.webp';
 
 const featuredAwardNames = [
   'Tony Award, Best Direction of a Play',
@@ -143,10 +144,14 @@ const criticalPraise = criticalPraisePicks
               <Image
                 src={item.thumbnail.src}
                 alt={item.thumbnail.alt}
-                width={500}
+                widths={[320, 480, 640, 960]}
+                sizes="(max-width: 639px) 100vw, 33vw"
+                quality={76}
                 loading="lazy"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
               />
+              <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.72) 0%, rgba(12,9,8,0.18) 40%, transparent 70%);"></div>
+              <div class="absolute inset-0 pointer-events-none" style="box-shadow: inset 0 0 60px 10px rgba(12,9,8,0.38);"></div>
             </div>
             <div class="font-display text-2xl text-brand-ink leading-tight group-hover:text-brand-oxblood transition-colors">
               {item.title}
@@ -170,7 +175,7 @@ const criticalPraise = criticalPraisePicks
           <p class="section-eyebrow">Five Decades on Stage</p>
           <h2 class="section-heading">Selected Productions</h2>
         </div>
-        <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/45 max-w-xs text-right hidden sm:block">
+        <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/60 max-w-xs text-right hidden sm:block">
           {productionStats.titleCount}+ productions documented, {productionStats.earliestYear}–{productionStats.latestYear}
         </div>
       </div>
@@ -181,15 +186,19 @@ const criticalPraise = criticalPraisePicks
               <Image
                 src={production.thumbnail.src}
                 alt={production.thumbnail.alt}
-                width={400}
+                widths={[240, 360, 480, 720]}
+                sizes="(max-width: 639px) 50vw, 25vw"
+                quality={76}
                 loading="lazy"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
               />
+              <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.65) 0%, rgba(12,9,8,0.12) 38%, transparent 65%);"></div>
+              <div class="absolute inset-0 pointer-events-none" style="box-shadow: inset 0 0 50px 8px rgba(12,9,8,0.35);"></div>
             </div>
             <div class="font-display text-base text-brand-ink leading-tight group-hover:text-brand-oxblood transition-colors">
               {production.title}
             </div>
-            <div class="text-[10px] uppercase tracking-[0.16em] text-brand-ink/45 mt-1">
+            <div class="text-[10px] uppercase tracking-[0.16em] text-brand-ink/60 mt-1">
               {production.venue} · {production.year}
             </div>
           </a>
@@ -207,7 +216,9 @@ const criticalPraise = criticalPraisePicks
       src={rehearsalPhoto}
       alt=""
       aria-hidden="true"
-      width={900}
+      widths={[640, 960, 1280, 1600]}
+      sizes="100vw"
+      quality={72}
       loading="lazy"
       class="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-luminosity"
     />
@@ -238,19 +249,31 @@ const criticalPraise = criticalPraisePicks
   </section>
 
   <!-- CRITICAL PRAISE -->
-  <section class="section-container">
-    <p class="section-eyebrow">Five Decades of Notices</p>
-    <h2 class="section-heading">Critical Praise<span class="text-brand-oxblood">.</span></h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-brand-ink/10 mt-8">
-      {criticalPraise.map((item) => (
-        <a href={item.href} class="bg-brand-cream p-6 hover:bg-white transition-colors group flex flex-col">
-          <p class="font-serif italic text-brand-ink text-lg leading-snug flex-1">&ldquo;{item.quote}&rdquo;</p>
-          <div class="mt-4 pt-4 border-t border-dashed border-brand-ink/15">
-            <div class="text-xs uppercase tracking-[0.16em] text-brand-oxblood font-semibold">{item.source}</div>
-            <div class="text-sm text-brand-ink/55 mt-1 group-hover:text-brand-oxblood transition-colors">{item.title}</div>
-          </div>
-        </a>
-      ))}
+  <section class="relative overflow-hidden bg-brand-cream">
+    <Image
+      src={kingLearPhoto}
+      alt=""
+      aria-hidden="true"
+      widths={[640, 960, 1280, 1600]}
+      sizes="100vw"
+      quality={60}
+      loading="lazy"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-[0.07] mix-blend-multiply pointer-events-none"
+    />
+    <div class="section-container relative">
+      <p class="section-eyebrow">Five Decades of Notices</p>
+      <h2 class="section-heading">Critical Praise<span class="text-brand-oxblood">.</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-brand-ink/10 mt-8">
+        {criticalPraise.map((item) => (
+          <a href={item.href} class="bg-brand-cream p-6 hover:bg-white transition-colors group flex flex-col">
+            <p class="font-serif italic text-brand-ink text-lg leading-snug flex-1">&ldquo;{item.quote}&rdquo;</p>
+            <div class="mt-4 pt-4 border-t border-dashed border-brand-ink/15">
+              <div class="text-xs uppercase tracking-[0.16em] text-brand-oxblood font-semibold">{item.source}</div>
+              <div class="text-sm text-brand-ink/55 mt-1 group-hover:text-brand-oxblood transition-colors">{item.title}</div>
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 

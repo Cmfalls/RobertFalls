@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { getRelatedProductions, productions, type ProductionRecord } from '@data/productions';
 
@@ -33,23 +34,92 @@ const hasPeople = production.cast.length > 0 || production.creativeTeam.length >
 const hasStory = Boolean(production.story);
 const hasContextNotes = production.contextNotes.length > 0;
 const hasHighlights = production.awardsOrSignificance.length > 0;
+const hasReceptionSection = hasReviews || hasExternalSources || hasPressQuotes || hasAudienceFeedback;
+const heroLinks = [
+  { href: '#overview', label: 'Overview' },
+  ...(hasAssets ? [{ href: '#assets-main', label: 'Media' }] : []),
+  ...(hasPeople ? [{ href: '#credits-main', label: 'Credits' }] : []),
+  ...(hasReceptionSection ? [{ href: '#press-main', label: 'Reception' }] : []),
+];
 const railFacts = production.quickFacts.some((fact) => /stagings?/i.test(fact.label))
   ? production.quickFacts
   : [...production.quickFacts, { label: 'Stagings', value: String(production.stagingCount) }];
-const heroStyle = heroImage ? `--production-hero-image: url('${heroImage.src.src}')` : undefined;
 const introFacts = [
   production.yearSpan,
   production.venueAnchor,
   production.eraLabel,
 ].filter(Boolean);
+const siteBase = Astro.site ?? new URL('https://robertfalls.netlify.app');
+const siteOrigin = new URL('/', siteBase).toString().replace(/\/$/, '');
+const productionUrl = new URL(Astro.url.pathname, siteBase).toString();
+const productionImages = production.images
+  .slice(0, 6)
+  .map((image) => new URL(image.src.src, siteBase).toString());
+const productionSchema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+      { '@type': 'ListItem', position: 2, name: 'Productions', item: `${siteOrigin}/productions/` },
+      { '@type': 'ListItem', position: 3, name: production.title, item: productionUrl },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${productionUrl}#webpage`,
+    url: productionUrl,
+    name: `${production.title} — Robert Falls`,
+    description: summary,
+    isPartOf: { '@id': `${siteOrigin}/#website` },
+    about: { '@id': `${productionUrl}#production` },
+    ...(productionImages[0]
+      ? {
+          primaryImageOfPage: {
+            '@type': 'ImageObject',
+            url: productionImages[0],
+          },
+        }
+      : {}),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    '@id': `${productionUrl}#production`,
+    url: productionUrl,
+    name: production.title,
+    description: synopsis,
+    creator: { '@id': `${siteOrigin}/#person` },
+    temporalCoverage: production.yearSpan,
+    dateCreated: production.firstYear,
+    keywords: [production.venueAnchor, production.eraLabel, ...production.venues].filter(Boolean),
+    ...(productionImages.length > 0 ? { image: productionImages } : {}),
+  },
+];
 ---
 
 <BaseLayout
   title={`${production.title} - Robert Falls`}
-  description={`${production.title} production profile for Robert Falls, with synopsis, visual assets, cast, reviews, and source links.`}
+  description={summary}
+  schema={productionSchema}
 >
-  <section class={`production-hero ${heroImage ? 'production-hero-with-image' : ''}`} style={heroStyle}>
+  <section class={`production-hero ${heroImage ? 'production-hero-with-image' : ''}`}>
+    {heroImage && (
+      <Image
+        src={heroImage.src}
+        alt=""
+        aria-hidden="true"
+        widths={[640, 960, 1280, 1600, 2000]}
+        sizes="100vw"
+        quality={78}
+        loading="eager"
+        fetchpriority="high"
+        class="production-hero-image"
+      />
+    )}
     <div class="production-hero-bg"></div>
+    <div class="production-hero-vignette"></div>
     <div class="grain-overlay"></div>
     <div class="production-hero-inner">
       <div class="production-hero-copy">
@@ -69,9 +139,9 @@ const introFacts = [
         <p>{summary}</p>
 
         <div class="production-hero-actions">
-          <a href="#overview">Overview</a>
-          <a href="#assets-main">Assets</a>
-          <a href="#press-main">Press</a>
+          {heroLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))}
         </div>
       </div>
 
@@ -90,7 +160,7 @@ const introFacts = [
         <section class="production-overview-pair">
           <article class="production-panel production-intro-panel">
             <p class="production-eyebrow">Production summary</p>
-            <h2>Synopsis</h2>
+            <h2>Overview</h2>
             <p>{synopsis}</p>
           </article>
 
@@ -112,8 +182,8 @@ const introFacts = [
 
             {hasContextNotes && (
               <article class="production-panel">
-                <p class="production-eyebrow">Source notes</p>
-                <h2>Production History & Context</h2>
+                <p class="production-eyebrow">Archive notes</p>
+                <h2>Production History & Notes</h2>
                 <div class="production-callouts production-callouts-spacious">
                   {production.contextNotes.map((item) => (
                     <article>
@@ -127,6 +197,7 @@ const introFacts = [
           </section>
         )}
 
+        {false && (
         <section id="assets" class="production-assets-section">
           <div class="production-section-heading production-slider-heading">
             <div>
@@ -208,6 +279,7 @@ const introFacts = [
             )}
           </div>
         </section>
+        )}
       </div>
 
       <aside class="production-side-rail" aria-label="Production facts and credits">
@@ -239,35 +311,45 @@ const introFacts = [
       </aside>
     </section>
 
+    {hasAssets && (
     <section id="assets-main" class="production-assets-section production-assets-wide">
       <div class="production-section-heading production-slider-heading">
         <div>
-          <p class="production-eyebrow">Assets</p>
-          <h2>Look & Listen</h2>
+          <p class="production-eyebrow">Gallery & media</p>
+          <h2>Production Images</h2>
         </div>
-        <span class="production-slider-note">Scroll to browse</span>
+        <div class="hidden md:flex items-center gap-2">
+          <button class="production-strip-btn" data-strip-prev aria-label="Scroll assets left">←</button>
+          <span class="production-slider-note">Scroll</span>
+          <button class="production-strip-btn" data-strip-next aria-label="Scroll assets right">→</button>
+        </div>
       </div>
 
-      {hasAssets ? (
-        <div class="production-asset-strip" aria-label={`${production.title} production assets`}>
+      <div class="production-asset-strip" aria-label={`${production.title} production assets`} data-asset-strip>
           {assetImages.map((image) => (
             <figure class="production-asset-card">
-              <img
-                src={image.src.src}
+              <Image
+                src={image.src}
                 alt={image.alt}
-                width={image.src.width}
-                height={image.src.height}
+                widths={[360, 540, 720, 960, 1280]}
+                sizes="(max-width: 640px) 82vw, (max-width: 1024px) 21rem, 25vw"
+                quality={78}
+                loading="lazy"
+                class="w-full"
               />
             </figure>
           ))}
           {production.watchLinks.map((link) => (
             <a href={link.href} class="production-watch-card">
               {link.thumbnail && (
-                <img
-                  src={link.thumbnail.src}
+                <Image
+                  src={link.thumbnail}
                   alt=""
-                  width={link.thumbnail.width}
-                  height={link.thumbnail.height}
+                  widths={[360, 540, 720, 960]}
+                  sizes="(max-width: 640px) 82vw, (max-width: 1024px) 21rem, 25vw"
+                  quality={72}
+                  loading="lazy"
+                  class="absolute inset-0 h-full w-full object-cover opacity-70"
                 />
               )}
               <div class="production-watch-overlay"></div>
@@ -276,16 +358,12 @@ const introFacts = [
               {link.description && <p>{link.description}</p>}
             </a>
           ))}
-        </div>
-      ) : (
-        <div class="production-panel production-empty-visual">
-          <p>Assets have not been attached for this production yet.</p>
-        </div>
-      )}
+      </div>
     </section>
+    )}
 
     {hasPeople && (
-      <section class="production-credits-section production-panel">
+      <section id="credits-main" class="production-credits-section production-panel">
         <p class="production-eyebrow">Cast & creative</p>
         <div class="production-credit-columns">
           {production.cast.length > 0 && (
@@ -314,32 +392,29 @@ const introFacts = [
       </section>
     )}
 
+    {(hasReviews || hasExternalSources) && (
     <section id="press-main" class="production-bottom-section">
       <div class="production-section-heading">
         <p class="production-eyebrow">Reception</p>
-        <h2>Reviews & Links</h2>
+        <h2>{hasReviews ? 'Reviews & Links' : 'Sources & Further Reading'}</h2>
       </div>
 
       <div class="production-review-grid">
-        <div class="production-review-cards">
-          {hasReviews ? (
-            production.reviews.map((review) => (
+        {hasReviews && (
+          <div class="production-review-cards">
+            {production.reviews.map((review) => (
               <a href={review.href} class="production-review-card">
                 <span>{review.source}</span>
                 <p>{review.summary}</p>
                 <small>{review.note ?? 'Open link'}</small>
               </a>
-            ))
-          ) : (
-            <div class="production-panel production-empty-visual">
-              <p>Review cards have not been researched for this production yet.</p>
-            </div>
-          )}
-        </div>
+            ))}
+          </div>
+        )}
 
         {hasExternalSources && (
           <aside class="production-source-card">
-            <p class="production-eyebrow">Sources</p>
+            <p class="production-eyebrow">{hasReviews ? 'Sources' : 'Reading list'}</p>
             {production.externalSources.slice(0, 6).map((source) => (
               <a href={source.href}>{source.label}</a>
             ))}
@@ -347,6 +422,7 @@ const introFacts = [
         )}
       </div>
     </section>
+    )}
 
     {hasPressQuotes && (
       <section class="production-bottom-section">
@@ -443,24 +519,28 @@ const introFacts = [
 
 <style>
   .production-hero {
-    @apply relative min-h-[34rem] overflow-hidden bg-brand-inkDeep text-brand-cream;
+    @apply relative min-h-[44rem] overflow-hidden bg-brand-inkDeep text-brand-cream;
+  }
+  .production-hero-image {
+    @apply absolute inset-0 h-full w-full object-cover scale-[1.03];
   }
   .production-hero-bg {
     @apply absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,_rgba(110,20,35,0.8),_transparent_34%),radial-gradient(circle_at_84%_20%,_rgba(201,162,39,0.18),_transparent_26%),linear-gradient(145deg,_rgba(12,9,8,0.98),_rgba(27,18,15,0.95))];
   }
   .production-hero-with-image .production-hero-bg {
     background-image:
-      linear-gradient(90deg, rgba(12, 9, 8, 0.96) 0%, rgba(16, 10, 9, 0.84) 36%, rgba(16, 10, 9, 0.46) 62%, rgba(12, 9, 8, 0.78) 100%),
-      linear-gradient(180deg, rgba(12, 9, 8, 0.28), rgba(12, 9, 8, 0.92)),
-      var(--production-hero-image);
-    background-position: center;
-    background-size: cover;
+      linear-gradient(90deg, rgba(12, 9, 8, 0.97) 0%, rgba(16, 10, 9, 0.88) 30%, rgba(16, 10, 9, 0.38) 58%, rgba(12, 9, 8, 0.86) 100%),
+      linear-gradient(180deg, rgba(12, 9, 8, 0.55) 0%, transparent 28%, transparent 55%, rgba(12, 9, 8, 0.97) 100%);
+  }
+  .production-hero-vignette {
+    @apply pointer-events-none absolute inset-0;
+    box-shadow: inset 0 0 120px 20px rgba(12, 9, 8, 0.48);
   }
   .production-hero-inner {
-    @apply relative mx-auto flex min-h-[34rem] max-w-7xl items-end px-6 pb-14 pt-28 md:pb-16 md:pt-36;
+    @apply relative mx-auto flex min-h-[44rem] max-w-7xl items-end px-6 pb-14 pt-28 md:pb-16 md:pt-36;
   }
   .production-breadcrumb {
-    @apply mb-6 flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream text-opacity-50;
+    @apply mb-6 flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream text-opacity-60;
   }
   .production-breadcrumb a {
     @apply transition-colors duration-200 hover:text-brand-goldBright;
@@ -509,10 +589,6 @@ const introFacts = [
   }
   .production-story-stack {
     @apply space-y-6;
-  }
-  .production-story-stack > .production-assets-section,
-  .production-story-stack > .production-bottom-section {
-    @apply hidden;
   }
   .production-panel,
   .production-rail-card,
@@ -570,7 +646,7 @@ const introFacts = [
     @apply flex items-baseline justify-between gap-4 border-b border-brand-ink border-opacity-10 py-2.5 first:pt-0 last:border-b-0 last:pb-0;
   }
   .production-facts dt {
-    @apply text-xs text-brand-ink text-opacity-60;
+    @apply text-xs text-brand-ink text-opacity-70;
   }
   .production-facts dd {
     @apply max-w-[12rem] text-right font-display text-base leading-tight text-brand-ink;
@@ -603,7 +679,7 @@ const introFacts = [
     @apply grid grid-cols-[minmax(5.5rem,0.82fr)_1fr] gap-3 border-b border-brand-ink border-opacity-10 py-2 last:border-b-0;
   }
   .production-person-row span {
-    @apply text-xs uppercase tracking-[0.12em] text-brand-ink text-opacity-50;
+    @apply text-xs uppercase tracking-[0.12em] text-brand-ink text-opacity-65;
   }
   .production-person-row strong {
     @apply font-display text-base leading-tight text-brand-ink;
@@ -627,7 +703,7 @@ const introFacts = [
     @apply text-lg leading-none text-brand-oxblood;
   }
   .production-slider-note {
-    @apply hidden border border-brand-ink border-opacity-10 bg-white bg-opacity-60 px-3 py-2 font-display text-xs uppercase tracking-[0.16em] text-brand-ink text-opacity-60 md:inline-flex;
+    @apply hidden border border-brand-ink border-opacity-10 bg-white bg-opacity-60 px-3 py-2 font-display text-xs uppercase tracking-[0.16em] text-brand-ink text-opacity-70 md:inline-flex;
   }
   .production-asset-strip {
     @apply flex snap-x gap-4 overflow-x-auto pr-12;
@@ -645,9 +721,6 @@ const introFacts = [
   }
   .production-watch-card {
     @apply relative flex min-h-0 flex-col justify-end bg-brand-ink p-4 text-brand-cream transition-all duration-200 hover:-translate-y-1 hover:border-brand-gold;
-  }
-  .production-watch-card img {
-    @apply absolute inset-0 h-full w-full object-cover opacity-70;
   }
   .production-watch-overlay {
     @apply absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent;
@@ -701,7 +774,7 @@ const introFacts = [
     @apply line-clamp-2 text-sm leading-relaxed text-brand-ink text-opacity-75 md:mt-0;
   }
   .production-review-card small {
-    @apply block border-t border-brand-ink border-opacity-10 pt-2 text-xs leading-relaxed text-brand-ink text-opacity-50 md:border-t-0 md:pt-0 md:text-right;
+    @apply block border-t border-brand-ink border-opacity-10 pt-2 text-xs leading-relaxed text-brand-ink text-opacity-65 md:border-t-0 md:pt-0 md:text-right;
   }
   .production-source-card {
     @apply self-start p-4;
@@ -756,7 +829,7 @@ const introFacts = [
     @apply mt-4 font-display text-3xl leading-none text-brand-ink;
   }
   .production-related-grid p {
-    @apply mt-4 text-sm uppercase tracking-[0.14em] text-brand-ink text-opacity-50;
+    @apply mt-4 text-sm uppercase tracking-[0.14em] text-brand-ink text-opacity-65;
   }
   .production-browse-nav {
     @apply mt-6 grid gap-4 md:grid-cols-3;
@@ -771,4 +844,33 @@ const introFacts = [
   .production-browse-nav strong {
     @apply font-display text-2xl leading-tight text-brand-ink;
   }
+  .production-strip-btn {
+    @apply flex h-10 w-10 items-center justify-center border border-brand-ink/20 bg-white/80 font-display text-base text-brand-ink transition-all duration-200 hover:border-brand-oxblood hover:bg-brand-oxblood hover:text-brand-cream disabled:cursor-not-allowed;
+  }
+  .production-strip-btn:disabled {
+    opacity: 0.3;
+  }
 </style>
+
+<script>
+  const prevBtn = document.querySelector<HTMLButtonElement>('[data-strip-prev]');
+  const nextBtn = document.querySelector<HTMLButtonElement>('[data-strip-next]');
+  const strip = document.querySelector<HTMLElement>('[data-asset-strip]');
+
+  if (strip && prevBtn && nextBtn) {
+    const cardWidth = () => {
+      const card = strip.querySelector<HTMLElement>('.production-asset-card, .production-watch-card');
+      return card ? card.offsetWidth + 16 : 340;
+    };
+
+    const update = () => {
+      prevBtn.disabled = strip.scrollLeft < 8;
+      nextBtn.disabled = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 8;
+    };
+
+    prevBtn.addEventListener('click', () => strip.scrollBy({ left: -cardWidth(), behavior: 'smooth' }));
+    nextBtn.addEventListener('click', () => strip.scrollBy({ left: cardWidth(), behavior: 'smooth' }));
+    strip.addEventListener('scroll', update, { passive: true });
+    update();
+  }
+</script>

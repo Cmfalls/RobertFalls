@@ -5,24 +5,26 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import MarqueeLights from '@components/MarqueeLights.astro';
 import { creditGroups } from '@data/credits';
 import { getProductionHref, getFeaturedThumbnail } from '@data/productions';
-import goodmanPhoto from '../images/venues/goodman-theatre.jpg';
-import lyricPhoto from '../images/venues/lyric-opera.jpg';
-import oneillPhoto from '../images/venues/eugene-oneill-theatre.jpg';
-import steppenwolfPhoto from '../images/venues/steppenwolf-theatre.jpg';
+import goodmanPhoto from ‘../images/venues/goodman-theatre.jpg’;
+import lyricPhoto from ‘../images/venues/lyric-opera.jpg’;
+import oneillPhoto from ‘../images/venues/eugene-oneill-theatre.jpg’;
+import steppenwolfPhoto from ‘../images/venues/steppenwolf-theatre.jpg’;
+import wisdomBridgePhoto from ‘../images/falls-wisdom-bridge-rehearsal.jpg’;
 
 const sectionIds: Record<string, string> = {
-  'Broadway': 'broadway',
-  'Goodman Theatre': 'goodman',
-  'Wisdom Bridge Theatre': 'wisdom-bridge',
-  'Opera': 'opera',
-  'Recent Work': 'recent-work',
+  ‘Broadway’: ‘broadway’,
+  ‘Goodman Theatre’: ‘goodman’,
+  ‘Wisdom Bridge Theatre’: ‘wisdom-bridge’,
+  ‘Opera’: ‘opera’,
+  ‘Recent Work’: ‘recent-work’,
 };
 
 const sectionPhotos: Record<string, { src: ImageMetadata; caption: string } | undefined> = {
-  'Broadway': { src: oneillPhoto, caption: 'Eugene O’Neill Theatre, Broadway — site of his 1999 Tony Award' },
-  'Goodman Theatre': { src: goodmanPhoto, caption: 'Goodman Theatre, Chicago — his artistic home for 35 years' },
-  'Opera': { src: lyricPhoto, caption: 'Civic Opera Building, home of Lyric Opera of Chicago' },
-  'Recent Work': { src: steppenwolfPhoto, caption: 'Steppenwolf Theatre Company, Chicago' },
+  ‘Broadway’: { src: oneillPhoto, caption: "Eugene O’Neill Theatre, Broadway — site of his 1999 Tony Award" },
+  ‘Goodman Theatre’: { src: goodmanPhoto, caption: "Goodman Theatre, Chicago — his artistic home for 35 years" },
+  ‘Wisdom Bridge Theatre’: { src: wisdomBridgePhoto, caption: "Robert Falls in rehearsal, Wisdom Bridge Theatre, 1977–1985" },
+  ‘Opera’: { src: lyricPhoto, caption: "Civic Opera Building, home of Lyric Opera of Chicago" },
+  ‘Recent Work’: { src: steppenwolfPhoto, caption: "Steppenwolf Theatre Company, Chicago" },
 };
 ---
 
@@ -31,6 +33,7 @@ const sectionPhotos: Record<string, { src: ImageMetadata; caption: string } | un
   description="Selected directing credits of Robert Falls across Broadway, the Goodman Theatre, Wisdom Bridge Theatre, and opera."
 >
   <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(138,19,36,0.38),_transparent_55%),radial-gradient(ellipse_at_bottom_right,_rgba(138,19,36,0.14),_transparent_45%)]"></div>
     <div class="grain-overlay"></div>
     <div class="relative pt-28 pb-16 md:pt-36 md:pb-20">
       <div class="section-container !py-0">
@@ -72,24 +75,29 @@ const sectionPhotos: Record<string, { src: ImageMetadata; caption: string } | un
     return (
       <section id={sectionIds[group.label]} class="border-b border-brand-ink/10 last:border-0 scroll-mt-32 md:scroll-mt-36">
         <!-- VENUE BANNER -->
-        <div class="relative h-56 md:h-72 overflow-hidden bg-brand-oxbloodDeep">
+        <div class="relative h-72 md:h-[26rem] overflow-hidden bg-brand-oxbloodDeep">
           {photo ? (
             <Image
               src={photo.src}
               alt={photo.caption}
-              width={1600}
+              widths={[640, 960, 1280, 1600, 1920]}
+              sizes="100vw"
+              quality={74}
               loading="lazy"
-              class="absolute inset-0 w-full h-full object-cover"
+              class="absolute inset-0 w-full h-full object-cover scale-[1.04]"
             />
           ) : (
             <div class="grain-overlay"></div>
           )}
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/90 via-brand-ink/30 to-brand-ink/10"></div>
-          <div class="relative h-full max-w-6xl mx-auto px-6 flex flex-col justify-end pb-6">
-            <h2 class="font-display text-4xl md:text-5xl text-brand-cream tracking-tight">{group.label}</h2>
-            <div class="flex items-center gap-3 mt-2">
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(12,9,8,0.97) 0%, rgba(12,9,8,0.55) 40%, transparent 72%);"></div>
+          <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(12,9,8,0.55) 0%, transparent 55%);"></div>
+          <div class="absolute inset-0" style="box-shadow: inset 0 0 100px 20px rgba(12,9,8,0.42);"></div>
+          <div class="grain-overlay opacity-30"></div>
+          <div class="relative h-full max-w-6xl mx-auto px-6 flex flex-col justify-end pb-8">
+            <h2 class="font-display text-5xl md:text-6xl text-brand-cream tracking-tight">{group.label}</h2>
+            <div class="flex items-center gap-3 mt-3">
               <span class="text-xs uppercase tracking-[0.18em] text-brand-goldBright font-semibold">{group.count}</span>
-              {photo && <span class="text-xs text-brand-cream/55 hidden md:inline">{photo.caption}</span>}
+              {photo && <span class="text-xs text-brand-cream/50 hidden md:inline">{photo.caption}</span>}
             </div>
           </div>
         </div>
@@ -103,7 +111,15 @@ const sectionPhotos: Record<string, { src: ImageMetadata; caption: string } | un
                 <div class="py-4 flex items-center gap-4">
                   {thumbnail ? (
                     <a href={getProductionHref(credit.title)} class="shrink-0 block w-14 h-14 overflow-hidden bg-brand-ink/5">
-                      <Image src={thumbnail.src} alt="" width={112} loading="lazy" class="w-full h-full object-cover" />
+                      <Image
+                        src={thumbnail.src}
+                        alt=""
+                        widths={[112]}
+                        sizes="56px"
+                        quality={72}
+                        loading="lazy"
+                        class="w-full h-full object-cover"
+                      />
                     </a>
                   ) : (
                     <span class="shrink-0 block w-1.5 h-1.5 rounded-full bg-brand-oxblood/40 ml-1.5 mr-1.5" aria-hidden="true"></span>
@@ -116,7 +132,7 @@ const sectionPhotos: Record<string, { src: ImageMetadata; caption: string } | un
                       >
                         {credit.title}
                       </a>
-                      <span class="text-brand-ink/50 text-sm ml-3">{credit.venue}</span>
+                      <span class="text-brand-ink/65 text-sm ml-3">{credit.venue}</span>
                     </div>
                     <div class="flex items-center gap-4 shrink-0">
                       {credit.note && <span class="text-sm italic text-brand-oxblood/80">{credit.note}</span>}

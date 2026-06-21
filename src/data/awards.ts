@@ -17,7 +17,7 @@ export const awards: Award[] = [
   { name: 'Artistic Leadership Award', work: 'League of Chicago Theatres', year: '2003' },
   { name: 'Jeff Special Award', work: 'with Roche Schulfer', year: '2005–06' },
   { name: 'Honorary Doctor of Fine Arts', work: 'Lake Forest College', year: '2006' },
-  { name: 'Helen Hayes Award', work: 'King Lear' },
+  { name: 'Helen Hayes Award', work: 'King Lear', year: '2009' },
   { name: 'O’Neill Medallion', work: 'Eugene O’Neill Society' },
   { name: 'Savva Morozov Diamond Award', work: 'Moscow Art Theatre' },
   { name: 'Distinguished Service to the Arts Award', work: 'Lawyers for the Creative Arts' },
