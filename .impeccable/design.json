@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-21T00:00:00.000Z",
+  "title": "Design System: Robert Falls",
+  "extensions": {
+    "colorMeta": {
+      "oxblood": { "role": "primary", "displayName": "Oxblood", "canonical": "oklch(33% 0.12 18)", "tonalRamp": ["#1a0508", "#2c0a0e", "#420c16", "#581019", "#6e1423", "#852030", "#9a2235", "#b94f5c"] },
+      "gold": { "role": "secondary", "displayName": "Gold", "canonical": "oklch(68% 0.13 85)", "tonalRamp": ["#3a2e0c", "#5c4a13", "#8a701c", "#ab8a22", "#c9a227", "#dab647", "#e8c35c", "#f0d585"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "oklch(15% 0.005 50)", "tonalRamp": ["#0c0908", "#171210", "#241c18", "#332823", "#46392f", "#5c4c40", "#766353", "#937f6c"] },
+      "cream": { "role": "neutral", "displayName": "Cream", "canonical": "oklch(91% 0.02 80)", "tonalRamp": ["#5c5040", "#7a6c55", "#998a6c", "#b8a786", "#d9cbac", "#e6dac0", "#f1e7d3", "#f8f2e6"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only (the director's name)." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings, always with .section-heading." },
+      "label": { "displayName": "Label", "purpose": "Eyebrows, buttons, metadata tags. Always uppercase, wide-tracked." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy, capped at 65-75ch." },
+      "pullquote": { "displayName": "Pull-quote", "purpose": "Direct sourced quotes from Falls or critics, always italic serif." }
+    },
+    "shadows": [
+      { "name": "hover-lift-rest", "value": "0 18px 48px rgba(34,24,20,0.08)", "purpose": "Resting shadow on cards that are interactive but not yet hovered." },
+      { "name": "hover-lift-active", "value": "0 24px 64px rgba(34,24,20,0.14)", "purpose": "Card shadow on hover, paired with a 4px upward translate." },
+      { "name": "pill-shell", "value": "0 10px 30px rgba(34,24,20,0.06)", "purpose": "Soft shadow under small floating UI shells like filter-pill containers." }
+    ],
+    "motion": [
+      { "name": "card-lift", "value": "transform 200ms ease, box-shadow 200ms ease", "purpose": "Hover lift on production/archive cards." },
+      { "name": "color-shift", "value": "color 200ms ease, border-color 200ms ease, background-color 200ms ease", "purpose": "Default hover transition for links, buttons, and borders." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call-to-action button: oxblood fill, cream uppercase label, square corners.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">View Selected Credits</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #6e1423; color: #f1e7d3; font-family: 'Big Shoulders Display', system-ui, sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.875rem; padding: 14px 28px; border: none; border-radius: 0; transition: background 200ms ease; } .ds-btn-primary:hover { background: #9a2235; } .ds-btn-primary:focus-visible { outline: 2px solid #c9a227; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary button: transparent with a hairline border, used for lower-emphasis CTAs.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">About Robert</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #171210; font-family: 'Big Shoulders Display', system-ui, sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.875rem; padding: 14px 28px; border: 1px solid rgba(23,18,16,0.3); border-radius: 0; transition: color 200ms ease, border-color 200ms ease; } .ds-btn-outline:hover { color: #6e1423; border-color: #6e1423; } .ds-btn-outline:focus-visible { outline: 2px solid #c9a227; outline-offset: 2px; }"
+    },
+    {
+      "name": "Production Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Thumbnail card used for production grids: flat at rest, lifts with a warm shadow on hover.",
+      "html": "<a class=\"ds-card\" href=\"#\"><div class=\"ds-card-media\"></div><div class=\"ds-card-title\">King Lear</div><div class=\"ds-card-meta\">Goodman Theatre &middot; 2006</div></a>",
+      "css": ".ds-card { display: block; text-decoration: none; } .ds-card-media { aspect-ratio: 3/4; background: #171210; overflow: hidden; margin-bottom: 12px; } .ds-card-title { font-family: 'Big Shoulders Display', system-ui, sans-serif; font-size: 1rem; color: #171210; line-height: 1.2; transition: color 200ms ease; } .ds-card:hover .ds-card-title { color: #6e1423; } .ds-card-meta { font-family: 'Big Shoulders Display', system-ui, sans-serif; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.16em; color: rgba(23,18,16,0.45); margin-top: 4px; }"
+    },
+    {
+      "name": "Filter Pill",
+      "kind": "chip",
+      "refersTo": "pill",
+      "description": "Small rounded toggle used for timeline/archive filters; the one place radius is allowed.",
+      "html": "<button class=\"ds-pill ds-pill-active\">All</button>",
+      "css": ".ds-pill { border-radius: 9999px; padding: 8px 16px; font-family: 'Big Shoulders Display', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em; border: 1px solid transparent; color: rgba(23,18,16,0.65); background: transparent; transition: background 200ms ease, color 200ms ease; } .ds-pill-active, .ds-pill[aria-pressed='true'] { background: #6e1423; border-color: #6e1423; color: #f1e7d3; }"
+    },
+    {
+      "name": "Section Eyebrow",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "Small uppercase oxblood (or gold, on dark sections) label that precedes every section heading.",
+      "html": "<p class=\"ds-eyebrow\">Recent Work</p>",
+      "css": ".ds-eyebrow { color: #6e1423; text-transform: uppercase; letter-spacing: 0.28em; font-size: 0.75rem; font-weight: 600; margin-bottom: 16px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Goodman Program Insert",
+    "overview": "This system is built to feel like the printed program you're handed walking into a major regional theater: heavy cream stock, oxblood and gold ink, a serif pulled from a body that's been setting type for centuries, and a display face with the blunt, condensed weight of a marquee. It is not a marketing site pretending to be a portfolio, and it is not a memorial pretending to be an archive. Every choice should read as institutional confidence: the kind of restraint that comes from not needing to perform enthusiasm, because the work already speaks. The system explicitly rejects the generic actor/director portfolio template and the corporate SaaS landing page. Surfaces are flat and square-cornered by default; elevation is earned only through interaction, never decoration.",
+    "keyCharacteristics": [
+      "Flat, square-cornered surfaces; shadow only appears in response to hover, never at rest.",
+      "A strict three-color discipline: cream/ink for structure, oxblood as the one accent, gold for labels and lit states.",
+      "Display type set in heavy, condensed, almost-too-large sizes; body and quotes set in an italic literary serif.",
+      "A fine film-grain texture layered over dark sections, never over light ones.",
+      "Authority through specificity: real titles, real names, real years, real numbers."
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Oxblood is the only saturated color carrying meaning. Gold marks labels and lit states, oxblood marks action and identity.", "section": "colors" },
+      { "name": "The Paper-and-Ink Rule", "body": "At least 80% of any given screen is cream or ink. A third surface color should be a tint of one of those two.", "section": "colors" },
+      { "name": "The Marquee Rule", "body": "Display type is reserved for the hero headline and section headings only, never body copy or captions.", "section": "typography" },
+      { "name": "The Earned-Elevation Rule", "body": "Nothing has a shadow at rest except small floating UI shells. Cards and sections are flat until proven interactive.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do lead every section with a real number, title, name, or date before any adjective.",
+      "Do keep all card and button corners perfectly square; the one radius exception is small pill-shaped controls.",
+      "Do reserve display type for hero headlines and section headings only.",
+      "Do treat the oxblood/cream/ink/gold palette as closed.",
+      "Do let real photography carry visual weight; grain texture is only for dark sections without a photo behind them."
+    ],
+    "donts": [
+      "Don't build a generic actor/director portfolio template.",
+      "Don't build a corporate SaaS landing page with hero-metric tiles, gradient text, or repeated icon-card grids.",
+      "Don't frame any section, including the Goodman tenure, as a retirement retrospective or memorial.",
+      "Don't add resting shadows to cards or sections.",
+      "Don't round corners on anything except small pill-shaped controls.",
+      "Don't use side-stripe colored borders anywhere."
+    ]
+  }
+}

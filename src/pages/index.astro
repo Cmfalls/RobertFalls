@@ -3,11 +3,9 @@ import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import MarqueeLights from '@components/MarqueeLights.astro';
 import { awards } from '@data/awards';
-import { getProductionHref, getFeaturedThumbnail, productionStats } from '@data/productions';
+import { getProductionBySlug, getProductionHref, productionStats } from '@data/productions';
 import { pressItems } from '@data/press';
-import amadeusMozart from '../images/amadeus-mozart.jpg';
 import rehearsalPhoto from '../images/robert-falls-rehearsal.jpg';
-import holidayRehearsal1 from '../images/holiday-rehearsal-1.jpg';
 
 const featuredAwardNames = [
   'Tony Award, Best Direction of a Play',
@@ -18,31 +16,84 @@ const featuredAwardNames = [
 const featuredAwards = featuredAwardNames.map((name) => awards.find((a) => a.name === name)!);
 const featuredPress = pressItems.slice(0, 3);
 
-const goodmanHighlights = [
-  { title: 'The Iceman Cometh', meta: '2012' },
-  { title: 'King Lear', meta: '2006 · Helen Hayes Award' },
-  { title: 'Finishing the Picture', meta: "2004 · Arthur Miller's final play" },
-];
+// Editorially curated, but every displayed field (title, image, dates) is pulled
+// live from the production archive so this can never drift out of sync with it.
+const nowAndUpcoming = [
+  {
+    slug: 'don-giovanni',
+    status: 'Opens October 10, 2026',
+    note: "Lyric Opera of Chicago's third revival of his 2014 staging",
+  },
+  {
+    slug: 'holiday',
+    status: "Goodman Theatre, Centennial Season",
+    note: 'His first Goodman production since stepping down as Artistic Director',
+  },
+  {
+    slug: 'amadeus',
+    status: 'Steppenwolf Theatre, 2025',
+    note: 'His Steppenwolf directorial debut',
+  },
+]
+  .map(({ slug, status, note }) => {
+    const production = getProductionBySlug(slug);
+    const thumbnail = production?.images[0];
+    if (!production || !thumbnail) return null;
+    return { title: production.title, status, note, thumbnail, href: getProductionHref(production.title) };
+  })
+  .filter((p): p is NonNullable<typeof p> => p !== null);
 
-const galleryPicks = [
-  { title: 'Death of a Salesman', venue: 'Goodman & Broadway', year: '1999' },
-  { title: 'The Seagull', venue: 'Goodman Theatre', year: '2010' },
-  { title: '2666', venue: 'Goodman Theatre', year: '2016' },
-  { title: 'The Cherry Orchard', venue: 'Goodman Theatre', year: '2023' },
-  { title: 'Amadeus', venue: 'Steppenwolf Theatre', year: '2025' },
-  { title: 'Holiday', venue: 'Goodman Theatre', year: '2026' },
+const goodmanHighlightSlugs = ['death-of-a-salesman', 'the-iceman-cometh', 'king-lear', 'finishing-the-picture'];
+const goodmanHighlights = goodmanHighlightSlugs
+  .map((slug) => {
+    const production = getProductionBySlug(slug);
+    if (!production) return null;
+    return { title: production.title, meta: `${production.yearSpan} · ${production.venueAnchor}`, href: getProductionHref(production.title) };
+  })
+  .filter((p): p is NonNullable<typeof p> => p !== null);
+
+const gallerySlugs = [
+  'death-of-a-salesman',
+  'the-iceman-cometh',
+  'king-lear',
+  'luna-gale',
+  'uncle-vanya',
+  'the-seagull',
+  '2666',
+  'the-cherry-orchard',
 ];
-const selectedProductions = galleryPicks
-  .map((pick) => {
-    const thumbnail = getFeaturedThumbnail(pick.title);
-    return thumbnail ? { ...pick, thumbnail, href: getProductionHref(pick.title) } : null;
+const selectedProductions = gallerySlugs
+  .map((slug) => {
+    const production = getProductionBySlug(slug);
+    const thumbnail = production?.images[0];
+    if (!production || !thumbnail) return null;
+    return { title: production.title, venue: production.venueAnchor, year: production.yearSpan, thumbnail, href: getProductionHref(production.title) };
+  })
+  .filter((p): p is NonNullable<typeof p> => p !== null);
+
+// Critical praise wall: each entry names a real production and the index of a real,
+// already-sourced quote on that page, so the homepage can never show invented praise.
+const criticalPraisePicks = [
+  { slug: 'the-iceman-cometh', index: 1 },
+  { slug: 'luna-gale', index: 2 },
+  { slug: 'desire-under-the-elms', index: 1 },
+  { slug: 'pamplona', index: 0 },
+  { slug: 'the-seagull', index: 1 },
+  { slug: 'the-winters-tale', index: 1 },
+];
+const criticalPraise = criticalPraisePicks
+  .map(({ slug, index }) => {
+    const production = getProductionBySlug(slug);
+    const pressQuote = production?.pressQuotes[index];
+    if (!production || !pressQuote) return null;
+    return { quote: pressQuote.quote, source: pressQuote.source, title: production.title, href: getProductionHref(production.title) };
   })
   .filter((p): p is NonNullable<typeof p> => p !== null);
 ---
 
 <BaseLayout
   title="Robert Falls — Theatre Director"
-  description="Robert Falls, Tony Award-winning theatre director and Artistic Director of Chicago's Goodman Theatre for 35 years. Recently directed Amadeus at Steppenwolf and Holiday at the Goodman."
+  description="Robert Falls, Tony Award-winning theatre director and Artistic Director of Chicago's Goodman Theatre for 35 years — currently directing a third Lyric Opera revival of Don Giovanni, opening October 2026."
   transparentHeader={true}
 >
   <!-- HERO -->
@@ -59,11 +110,11 @@ const selectedProductions = galleryPicks
         </h1>
         <p class="font-serif italic text-xl md:text-2xl text-brand-cream/75 mt-8 max-w-2xl">
           Five decades shaping the American stage — from Wisdom Bridge to thirty-five years
-          leading Chicago's Goodman Theatre, and now, a new chapter of freelance work.
+          leading Chicago's Goodman Theatre, and now, directing new work in Chicago and beyond.
         </p>
 
         <div class="flex flex-wrap gap-4 mt-10">
-          <a href="/credits" class="btn-primary">View Selected Credits</a>
+          <a href="#now" class="btn-primary">See What's Now</a>
           <a href="/about" class="border border-brand-cream/30 text-brand-cream font-display uppercase tracking-[0.12em] text-sm font-semibold px-7 py-3.5 hover:border-brand-gold hover:text-brand-goldBright transition-colors">
             About Robert
           </a>
@@ -73,62 +124,40 @@ const selectedProductions = galleryPicks
     </div>
   </section>
 
-  <!-- STAT STRIP -->
-  <section class="bg-brand-cream border-b border-brand-ink/10">
-    <div class="max-w-6xl mx-auto px-6 py-14 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
-      <div>
-        <div class="font-display text-5xl text-brand-oxblood">35</div>
-        <div class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/55 mt-2">Years as Artistic<br />Director, Goodman</div>
+  <!-- NOW & UPCOMING -->
+  <section id="now" class="bg-brand-cream border-b border-brand-ink/10">
+    <div class="section-container">
+      <div class="flex items-end justify-between gap-4 flex-wrap mb-10">
+        <div>
+          <p class="section-eyebrow">Now &amp; Upcoming</p>
+          <h2 class="section-heading">Still Directing<span class="text-brand-oxblood">.</span></h2>
+        </div>
+        <p class="font-serif italic text-brand-ink/60 text-lg max-w-sm">
+          "I feel very lucky that I can be selective. I want to continue to work on exciting projects."
+        </p>
       </div>
-      <div>
-        <div class="font-display text-5xl text-brand-oxblood">150+</div>
-        <div class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/55 mt-2">World Premieres<br />Produced</div>
+      <div class="grid sm:grid-cols-3 gap-6">
+        {nowAndUpcoming.map((item) => (
+          <a href={item.href} class="group block">
+            <div class="aspect-[3/4] overflow-hidden bg-brand-ink relative mb-4">
+              <Image
+                src={item.thumbnail.src}
+                alt={item.thumbnail.alt}
+                width={500}
+                loading="lazy"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+              />
+            </div>
+            <div class="font-display text-2xl text-brand-ink leading-tight group-hover:text-brand-oxblood transition-colors">
+              {item.title}
+            </div>
+            <div class="text-xs uppercase tracking-[0.16em] text-brand-oxblood font-semibold mt-2">{item.status}</div>
+            <p class="text-sm text-brand-ink/60 mt-1 leading-snug">{item.note}</p>
+          </a>
+        ))}
       </div>
-      <div>
-        <div class="font-display text-5xl text-brand-oxblood">22</div>
-        <div class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/55 mt-2">Tony Awards for<br />Goodman Broadway Transfers</div>
-      </div>
-      <div>
-        <div class="font-display text-5xl text-brand-oxblood">1999</div>
-        <div class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/55 mt-2">Tony Award,<br />Death of a Salesman</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RECENT WORK -->
-  <section id="recent-work" class="section-container grid md:grid-cols-[1fr_1.2fr] gap-12 items-center">
-    <div>
-      <p class="section-eyebrow">Recent Work</p>
-      <h2 class="section-heading">Amadeus &amp; Holiday<span class="text-brand-oxblood">.</span></h2>
-      <p class="text-brand-ink/70 leading-relaxed mb-6">
-        Robert's most recent chapter took him to two stages: his Steppenwolf directorial debut with
-        <em>Amadeus</em> in late 2025, followed by <em>Holiday</em> at the Goodman in early 2026 — his
-        first production there since stepping down as Artistic Director, staged in the theatre's
-        Centennial Season.
-      </p>
-      <p class="font-serif italic text-brand-oxblood/90 text-lg border-l-2 border-brand-gold pl-5 mb-6">
-        "I feel very lucky that I can be selective. I want to continue to work on exciting projects."
-      </p>
-      <a href="/credits#recent-work" class="btn-outline">See Recent &amp; Current Work</a>
-    </div>
-    <div class="grid grid-cols-2 gap-2">
-      <div class="bg-brand-ink aspect-[3/4] relative overflow-hidden">
-        <Image
-          src={amadeusMozart}
-          alt="A scene from Amadeus at Steppenwolf Theatre, directed by Robert Falls"
-          width={600}
-          loading="lazy"
-          class="w-full h-full object-cover opacity-95"
-        />
-      </div>
-      <div class="bg-brand-ink aspect-[3/4] relative overflow-hidden">
-        <Image
-          src={holidayRehearsal1}
-          alt="Robert Falls in rehearsal for Holiday at the Goodman Theatre"
-          width={600}
-          loading="lazy"
-          class="w-full h-full object-cover opacity-95"
-        />
+      <div class="flex items-center justify-center mt-12">
+        <a href="/credits#recent-work" class="btn-outline">See Recent &amp; Current Work</a>
       </div>
     </div>
   </section>
@@ -138,14 +167,14 @@ const selectedProductions = galleryPicks
     <div class="section-container">
       <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
         <div>
-          <p class="section-eyebrow">Seventy Years on Stage</p>
+          <p class="section-eyebrow">Five Decades on Stage</p>
           <h2 class="section-heading">Selected Productions</h2>
         </div>
         <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/45 max-w-xs text-right hidden sm:block">
           {productionStats.titleCount}+ productions documented, {productionStats.earliestYear}–{productionStats.latestYear}
         </div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {selectedProductions.map((production) => (
           <a href={production.href} class="group block">
             <div class="aspect-[3/4] overflow-hidden bg-brand-ink relative mb-3">
@@ -196,15 +225,32 @@ const selectedProductions = galleryPicks
         When the Goodman opened its downtown Loop campus in 2000, the building's rehearsal hall was
         named the Robert Falls Rehearsal Wing in his honor — a lasting, physical mark of his tenure.
       </p>
-      <div class="grid sm:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {goodmanHighlights.map((item) => (
-          <a href={getProductionHref(item.title)} class="border border-brand-cream/15 p-6 hover:border-brand-gold transition-colors group">
+          <a href={item.href} class="border border-brand-cream/15 p-6 hover:border-brand-gold transition-colors group">
             <div class="font-display text-2xl text-brand-goldBright mb-1 group-hover:text-brand-cream transition-colors">{item.title}</div>
             <div class="text-xs uppercase tracking-[0.16em] text-brand-cream/60">{item.meta}</div>
           </a>
         ))}
       </div>
       <a href="/credits#goodman" class="btn-primary mt-10 inline-flex">Full Goodman Credits</a>
+    </div>
+  </section>
+
+  <!-- CRITICAL PRAISE -->
+  <section class="section-container">
+    <p class="section-eyebrow">Five Decades of Notices</p>
+    <h2 class="section-heading">Critical Praise<span class="text-brand-oxblood">.</span></h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-brand-ink/10 mt-8">
+      {criticalPraise.map((item) => (
+        <a href={item.href} class="bg-brand-cream p-6 hover:bg-white transition-colors group flex flex-col">
+          <p class="font-serif italic text-brand-ink text-lg leading-snug flex-1">&ldquo;{item.quote}&rdquo;</p>
+          <div class="mt-4 pt-4 border-t border-dashed border-brand-ink/15">
+            <div class="text-xs uppercase tracking-[0.16em] text-brand-oxblood font-semibold">{item.source}</div>
+            <div class="text-sm text-brand-ink/55 mt-1 group-hover:text-brand-oxblood transition-colors">{item.title}</div>
+          </div>
+        </a>
+      ))}
     </div>
   </section>
 
