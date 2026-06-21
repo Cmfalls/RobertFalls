@@ -5,7 +5,7 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
 ---
 
 <BaseLayout
-  title="Contact — Robert Falls"
+  title="Contact - Robert Falls"
   description="Get in touch with Robert Falls for booking, media inquiries, and representation."
 >
   <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
@@ -25,60 +25,87 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
       <div class="section-container !py-0">
         <p class="section-eyebrow text-brand-gold">Get in Touch</p>
         <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">Contact</h1>
+        <p class="mt-5 max-w-3xl text-brand-cream/72 leading-relaxed">
+          Booking, media, and general archive inquiries are all routed through this page. Choose the closest
+          subject line, include the basics up front, and the request can be forwarded cleanly.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="section-container grid md:grid-cols-2 gap-16">
+  <section class="section-container grid gap-14 lg:grid-cols-[minmax(0,1fr)_28rem]">
     <div>
-      <h2 class="font-display text-2xl text-brand-ink mb-6">Inquiries</h2>
-      <p class="text-brand-ink/72 leading-relaxed max-w-xl">
-        Use the contact form for all inquiries. Booking, press, and general archive questions are
-        routed from this page, so the fastest way to reach the right person is to choose the
-        closest subject line and include the basics up front.
-      </p>
+      <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
+        <div>
+          <p class="section-eyebrow">Inquiry Paths</p>
+          <h2 class="section-heading">What This Page Handles</h2>
+        </div>
+        <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/55">
+          choose the closest request type
+        </div>
+      </div>
 
-      <div class="mt-8 space-y-5">
-        <div class="border border-brand-ink/12 bg-white/80 p-6">
+      <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div class="border border-brand-ink/12 bg-white p-6">
           <h3 class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-3">Representation &amp; Booking</h3>
           <p class="text-brand-ink/72 text-sm leading-relaxed">
-            For directing invitations, producing conversations, festival appearances, and booking
-            requests. Include the producing organization, venue, city, and proposed timeline.
+            For directing invitations, producing conversations, festival appearances, and booking requests.
           </p>
+          <div class="mt-4 text-[11px] uppercase tracking-[0.16em] text-brand-ink/50">Use subject: Booking / Representation</div>
           <a href="#contact-form" class="inline-flex mt-4 text-sm font-semibold text-brand-oxblood hover:text-brand-oxbloodBright transition-colors">
             Start a booking inquiry &rarr;
           </a>
         </div>
 
-        <div class="border border-brand-ink/12 bg-white/80 p-6">
+        <div class="border border-brand-ink/12 bg-white p-6">
           <h3 class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-3">Media &amp; Press</h3>
           <p class="text-brand-ink/72 text-sm leading-relaxed">
-            For interviews, biographies, headshots, and approved production photography. Review the
-            press page first, then use the form below with the <em>Media / Press</em> subject line.
+            For interviews, biographies, headshots, approved production photography, and publicity requests.
           </p>
+          <div class="mt-4 text-[11px] uppercase tracking-[0.16em] text-brand-ink/50">Use subject: Media / Press</div>
           <div class="flex flex-wrap gap-4 mt-4">
             <a href="/press" class="inline-flex text-sm font-semibold text-brand-oxblood hover:text-brand-oxbloodBright transition-colors">
               Open press page &rarr;
             </a>
             <a href="#contact-form" class="inline-flex text-sm font-semibold text-brand-ink/70 hover:text-brand-oxblood transition-colors">
-              Send a media request &rarr;
+              Send request &rarr;
             </a>
           </div>
         </div>
 
-        <div class="border border-brand-ink/12 bg-brand-cream/70 p-6">
-          <h3 class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-3">What to include</h3>
-          <ul class="space-y-2 text-sm leading-relaxed text-brand-ink/72">
-            <li>Who you are and the organization or publication you represent.</li>
-            <li>What the request is for and any relevant production title.</li>
-            <li>Your deadline, proposed dates, and the best way to reply.</li>
-          </ul>
+        <div class="border border-brand-ink/12 bg-white p-6 md:col-span-2 xl:col-span-1">
+          <h3 class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-3">General Inquiry</h3>
+          <p class="text-brand-ink/72 text-sm leading-relaxed">
+            For archive questions, speaking requests, permissions questions, and anything that does not fit the other lanes.
+          </p>
+          <div class="mt-4 text-[11px] uppercase tracking-[0.16em] text-brand-ink/50">Use subject: General Inquiry</div>
+          <a href="#contact-form" class="inline-flex mt-4 text-sm font-semibold text-brand-oxblood hover:text-brand-oxbloodBright transition-colors">
+            Send a message &rarr;
+          </a>
         </div>
+      </div>
+
+      <div class="mt-8 border border-brand-ink/12 bg-brand-cream/70 p-6">
+        <h3 class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-3">What to include</h3>
+        <ul class="grid gap-3 md:grid-cols-2 text-sm leading-relaxed text-brand-ink/72">
+          <li>Who you are and the organization or publication you represent.</li>
+          <li>What the request is for and any relevant production title.</li>
+          <li>Your deadline, proposed dates, and the best way to reply.</li>
+          <li>Venue, city, producing organization, and timeline for booking requests.</li>
+        </ul>
       </div>
     </div>
 
-    <div id="contact-form">
-      <h2 class="font-display text-2xl text-brand-ink mb-6">Send a Message</h2>
+    <div id="contact-form" class="border border-brand-ink/12 bg-white p-6 md:p-7 self-start">
+      <div class="flex items-end justify-between gap-4 flex-wrap mb-6">
+        <div>
+          <p class="section-eyebrow">Message Form</p>
+          <h2 class="font-display text-3xl text-brand-ink">Send a Message</h2>
+        </div>
+        <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/45">
+          route it cleanly the first time
+        </div>
+      </div>
       <form
         method="POST"
         action="/contact/success/"
@@ -120,7 +147,7 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
         <div>
           <label for="message" class="block text-sm font-medium text-brand-ink mb-1">Message</label>
           <textarea
-            id="message" name="message" rows="5" required
+            id="message" name="message" rows="6" required
             class="w-full border border-brand-ink/20 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-oxblood bg-white resize-y"
           ></textarea>
         </div>

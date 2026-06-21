@@ -43,6 +43,41 @@ const hasStory = Boolean(production.story);
 const hasContextNotes = production.contextNotes.length > 0;
 const hasHighlights = production.awardsOrSignificance.length > 0;
 const hasReceptionSection = hasReviews || hasExternalSources || hasPressQuotes || hasAudienceFeedback;
+const modeLabel = isFeatured ? 'Featured production' : 'Production record';
+const overviewEyebrow = isFeatured ? 'Production story' : 'At a glance';
+const contextEyebrow = isFeatured ? 'Career significance' : 'Career context';
+const storyHeading = isFeatured ? 'Why this production matters' : 'Why it matters';
+const notesEyebrow = isFeatured ? 'Production notes' : 'Reference notes';
+const notesHeading = isFeatured ? 'Production History & Notes' : 'Notes & History';
+const galleryHeading = isFeatured ? 'Production Images' : 'Gallery';
+const previewAriaLabel = isFeatured ? 'Selected production images' : 'Selected images';
+
+function publicNoteLabel(label: string) {
+  const normalized = label.trim();
+  const labelMap: Record<string, string> = {
+    'Archive note': 'Note',
+    'Career context': 'Career note',
+    'Credit normalization': 'Credit note',
+    'Official framing': 'Official note',
+    'Photo source': 'Image source',
+    'Source': 'Source note',
+    'Source cleanup': 'Source note',
+    'Source dating': 'Date note',
+    'Source dating correction': 'Date note',
+    'Source note': 'Source note',
+    'Source package': 'Source material',
+    'Source packet': 'Source material',
+    'Source text': 'Source text',
+    'Source-doc anomaly': 'Source note',
+  };
+
+  if (labelMap[normalized]) return labelMap[normalized];
+  if (normalized.startsWith('Source cleanup')) return 'Source note';
+  if (normalized.startsWith('Source dating')) return 'Date note';
+
+  return normalized;
+}
+
 const heroLinks = [
   { href: '#overview', label: 'Overview' },
   ...(hasAssets ? [{ href: '#assets-main', label: 'Media' }] : []),
@@ -138,7 +173,7 @@ const productionSchema = [
         </div>
 
         <div class="production-kicker-row">
-          <span class="production-mode-pill">{isFeatured ? 'Editorial feature' : 'Archive record'}</span>
+          <span class="production-mode-pill">{modeLabel}</span>
           {introFacts.map((fact) => (
             <span>{fact}</span>
           ))}
@@ -168,19 +203,19 @@ const productionSchema = [
       <div class="production-story-stack">
         <section class="production-overview-pair">
           <article class="production-panel production-intro-panel">
-            <p class="production-eyebrow">Production summary</p>
+            <p class="production-eyebrow">{overviewEyebrow}</p>
             <h2>Overview</h2>
             <p>{synopsis}</p>
           </article>
 
           <article class="production-panel production-context-panel">
-            <p class="production-eyebrow">Robert Falls context</p>
+            <p class="production-eyebrow">{contextEyebrow}</p>
             <p>{fallsContext}</p>
           </article>
         </section>
 
         {hasFeaturedPreview && (
-          <section class="production-feature-grid" aria-label="Featured production images">
+          <section class="production-feature-grid" aria-label={previewAriaLabel}>
             {featuredPreviewImages.map((image) => (
               <figure class="production-feature-card">
                 <Image
@@ -203,19 +238,19 @@ const productionSchema = [
             {hasStory && (
               <article class="production-panel">
                 <p class="production-eyebrow">Why it matters</p>
-                <h2>Archive Perspective</h2>
+                <h2>{storyHeading}</h2>
                 <p>{production.story}</p>
               </article>
             )}
 
             {hasContextNotes && (
               <article class="production-panel">
-                <p class="production-eyebrow">Archive notes</p>
-                <h2>Production History & Notes</h2>
+                <p class="production-eyebrow">{notesEyebrow}</p>
+                <h2>{notesHeading}</h2>
                 <div class="production-callouts production-callouts-spacious">
                   {production.contextNotes.map((item) => (
                     <article>
-                      <h3>{item.label}</h3>
+                      <h3>{publicNoteLabel(item.label)}</h3>
                       <p>{item.text}</p>
                     </article>
                   ))}
@@ -344,7 +379,7 @@ const productionSchema = [
       <div class="production-section-heading production-slider-heading">
         <div>
           <p class="production-eyebrow">Gallery & media</p>
-          <h2>{isFeatured ? 'Production Images' : 'Archive Material'}</h2>
+          <h2>{galleryHeading}</h2>
         </div>
         <div class="hidden md:flex items-center gap-2">
           <button class="production-strip-btn" data-strip-prev aria-label="Scroll assets left">←</button>

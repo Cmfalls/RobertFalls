@@ -10,15 +10,31 @@ const featuredAwards = awards.filter((award) =>
 );
 const archiveAwards = awards.filter((award) => !featuredAwards.includes(award));
 const productionTitles = new Set(productions.map((production) => production.title.toLowerCase()));
+const personalFeaturedCount = featuredAwards.filter((award) => !/Goodman Theatre/i.test(award.work ?? '')).length;
+const institutionalCount = awards.filter((award) =>
+  /Goodman Theatre|League of Chicago Theatres|Chicago Magazine|American Academy|Lawyers for the Creative Arts|Lake Forest College|Moscow Art Theatre|Eugene O.?Neill Society/i.test(
+    `${award.name} ${award.work ?? ''}`,
+  ),
+).length;
+const awardSpan = {
+  first: awards.find((award) => award.year)?.year ?? '1976',
+  latest: [...awards].reverse().find((award) => award.year)?.year ?? '2022-23',
+};
 
 function workHref(work?: string) {
   if (!work) return null;
   return productionTitles.has(work.toLowerCase()) ? getProductionHref(work) : null;
 }
+
+function awardType(award: (typeof awards)[number]) {
+  if (/Goodman Theatre/i.test(award.work ?? '')) return 'Institutional honor';
+  if (/Hall of Fame|Academy|Governor|Doctor/i.test(award.name)) return 'Career honor';
+  return 'Production-linked honor';
+}
 ---
 
 <BaseLayout
-  title="Awards & Honors — Robert Falls"
+  title="Awards & Honors - Robert Falls"
   description="Awards and honors received by theatre director Robert Falls, including a Tony Award, Drama Desk Award, Obie Award, and induction into the Theatre Hall of Fame."
 >
   <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
@@ -38,6 +54,27 @@ function workHref(work?: string) {
       <div class="section-container !py-0">
         <p class="section-eyebrow text-brand-gold">Recognition</p>
         <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">Awards &amp; Honors</h1>
+        <p class="mt-5 max-w-3xl text-brand-cream/72 leading-relaxed">
+          Robert Falls's individual honors appear first here, with broader Goodman and career-wide
+          recognitions separated below so institutional achievements do not read like personal prize totals.
+        </p>
+        <div class="mt-8 grid gap-4 sm:grid-cols-3 max-w-4xl">
+          <div class="border border-brand-gold/20 bg-white/5 px-5 py-5">
+            <div class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-semibold">Personal honors</div>
+            <div class="mt-2 font-display text-4xl text-brand-cream">{personalFeaturedCount}</div>
+            <div class="text-sm text-brand-cream/65 mt-1">major recognitions tied directly to Falls as a director</div>
+          </div>
+          <div class="border border-brand-gold/20 bg-white/5 px-5 py-5">
+            <div class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-semibold">Award span</div>
+            <div class="mt-2 font-display text-4xl text-brand-cream">{awardSpan.first}</div>
+            <div class="text-sm text-brand-cream/65 mt-1">through {awardSpan.latest}, from early Chicago work to late-career honors</div>
+          </div>
+          <div class="border border-brand-gold/20 bg-white/5 px-5 py-5">
+            <div class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-semibold">Institutional honors</div>
+            <div class="mt-2 font-display text-4xl text-brand-cream">{institutionalCount}</div>
+            <div class="text-sm text-brand-cream/65 mt-1">career-wide or institution-level recognitions kept distinct from personal wins</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -62,7 +99,7 @@ function workHref(work?: string) {
           <h2 class="font-display text-5xl md:text-6xl tracking-tight text-brand-cream mb-4">National and Career Recognition</h2>
         </div>
         <div class="text-xs uppercase tracking-[0.18em] text-brand-cream/45">
-          signature awards and landmark distinctions
+          personal awards and headline distinctions
         </div>
       </div>
       <div class="grid lg:grid-cols-2 gap-5">
@@ -71,7 +108,9 @@ function workHref(work?: string) {
           return (
             <article class="border border-brand-cream/15 bg-white/8 p-7 md:p-8 backdrop-blur-[2px]">
               <div class="flex items-start justify-between gap-4">
-                <span class="text-brand-gold text-xl">✦</span>
+                <div class="text-[10px] uppercase tracking-[0.18em] text-brand-gold font-semibold">
+                  {awardType(award)}
+                </div>
                 {award.year && (
                   <div class="text-[11px] uppercase tracking-[0.18em] text-brand-gold/80 font-semibold">
                     {award.year}
@@ -102,8 +141,8 @@ function workHref(work?: string) {
     <div>
       <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
         <div>
-          <p class="section-eyebrow">Full List</p>
-          <h2 class="section-heading">Additional Awards and Honors</h2>
+          <p class="section-eyebrow">Broader Recognition</p>
+          <h2 class="section-heading">Institutional, Chicago, and Career Honors</h2>
         </div>
         <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/55">
           chicago, institutional, and career-wide recognition
@@ -116,7 +155,9 @@ function workHref(work?: string) {
           return (
             <div class="bg-brand-cream p-7 flex flex-col gap-3">
               <div class="flex items-start justify-between gap-4">
-                <span class="text-brand-gold text-lg">✦</span>
+                <div class="text-[10px] uppercase tracking-[0.18em] text-brand-oxblood font-semibold">
+                  {awardType(award)}
+                </div>
                 {award.year && <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/65">{award.year}</div>}
               </div>
               <div class="font-display text-2xl text-brand-ink leading-snug">{award.name}</div>

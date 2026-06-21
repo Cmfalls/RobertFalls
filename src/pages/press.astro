@@ -4,10 +4,21 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import { pressItems } from '@data/press';
 import portraitPhoto from '../images/robert-falls-portrait.webp';
 import amadeusMozartPhoto from '../images/amadeus-mozart.jpg';
+
+const featuredPress = pressItems.slice(0, 3);
+const archivePress = pressItems.slice(3);
+const latestCoverage = featuredPress[0]?.date ?? '2026';
+const earliestCoverage = [...pressItems].reverse().find((item) => item.date)?.date ?? '1999';
+
+function coverageLabel(index: number) {
+  if (index === 0) return 'Latest';
+  if (index === 1) return 'Profile';
+  return 'Archive highlight';
+}
 ---
 
 <BaseLayout
-  title="Press — Robert Falls"
+  title="Press - Robert Falls"
   description="Press coverage of theatre director Robert Falls, from his 35-year tenure at the Goodman Theatre to his current freelance directing work."
 >
   <section class="bg-brand-oxbloodDeep text-brand-cream relative overflow-hidden">
@@ -17,25 +28,52 @@ import amadeusMozartPhoto from '../images/amadeus-mozart.jpg';
       <div class="section-container !py-0">
         <p class="section-eyebrow text-brand-gold">Press Kit &amp; Coverage</p>
         <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">Press</h1>
+        <p class="mt-5 max-w-3xl text-brand-cream/72 leading-relaxed">
+          A compact press kit, downloadable images, and a chronological record of coverage following Falls's
+          work from late-career productions back through the Goodman years and earlier milestones.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="section-container max-w-3xl">
-    <h2 class="font-display text-3xl text-brand-ink mb-6">Press Kit</h2>
-    <div class="bg-brand-cream border border-brand-ink/15 p-7 mb-6">
-      <p class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-3">Official Bio — for use in print</p>
-      <p class="font-serif text-brand-ink/80 leading-relaxed">
-        Robert Falls is a Tony Award-winning theatre director and the former Artistic Director of
-        Chicago's Goodman Theatre, a position he held from 1986 to 2022. Over thirty-five years he
-        led the Goodman to more than one hundred fifty world premieres and over two dozen Broadway
-        transfers earning twenty-two Tony Awards, including his own Tony Award for Best Direction of
-        a Play for <em>Death of a Salesman</em> in 1999. He continues to direct freelance work,
-        including <em>Amadeus</em> at Steppenwolf Theatre (2025) and <em>Holiday</em> at the
-        Goodman (2026).
-      </p>
+  <section class="section-container">
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_18rem] lg:items-start">
+      <div>
+        <h2 class="font-display text-3xl text-brand-ink mb-6">Press Kit</h2>
+        <div class="bg-brand-cream border border-brand-ink/15 p-7 mb-6">
+          <p class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-3">Official Bio - for use in print</p>
+          <p class="font-serif text-brand-ink/80 leading-relaxed">
+            Robert Falls is a Tony Award-winning theatre director and the former Artistic Director of
+            Chicago's Goodman Theatre, a position he held from 1986 to 2022. Over thirty-five years he
+            led the Goodman to more than one hundred fifty world premieres and over two dozen Broadway
+            transfers earning twenty-two Tony Awards, including his own Tony Award for Best Direction of
+            a Play for <em>Death of a Salesman</em> in 1999. He continues to direct freelance work,
+            including <em>Amadeus</em> at Steppenwolf Theatre (2025) and <em>Holiday</em> at the
+            Goodman (2026).
+          </p>
+        </div>
+      </div>
+
+      <aside class="bg-brand-ink text-brand-cream p-6 lg:p-7">
+        <p class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-semibold">Coverage snapshot</p>
+        <div class="mt-4 grid gap-5">
+          <div>
+            <div class="font-display text-4xl text-brand-goldBright">{pressItems.length}</div>
+            <div class="text-sm text-brand-cream/65">linked profiles, reviews, and season-announcement items</div>
+          </div>
+          <div>
+            <div class="font-display text-3xl text-brand-cream">{latestCoverage}</div>
+            <div class="text-sm text-brand-cream/65">most recent article currently surfaced in the archive</div>
+          </div>
+          <div>
+            <div class="font-display text-3xl text-brand-cream">{earliestCoverage}</div>
+            <div class="text-sm text-brand-cream/65">earliest dated item currently linked on the page</div>
+          </div>
+        </div>
+      </aside>
     </div>
-    <div class="grid sm:grid-cols-2 gap-4 mb-14">
+
+    <div class="grid sm:grid-cols-2 gap-4 my-14">
       <a
         href="/images/robert-falls-portrait.webp"
         download
@@ -88,19 +126,56 @@ import amadeusMozartPhoto from '../images/amadeus-mozart.jpg';
       </a>
     </div>
 
-    <h2 class="font-display text-3xl text-brand-ink mb-6">Coverage</h2>
+    <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
+      <div>
+        <p class="section-eyebrow">Recent Coverage</p>
+        <h2 class="section-heading">Current Press Highlights</h2>
+      </div>
+      <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/55">
+        latest articles and profile coverage
+      </div>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-5 mb-14">
+      {featuredPress.map((item, index) => (
+        <a href={item.url} target="_blank" rel="noopener" class="group border border-brand-ink/12 bg-white p-6 hover:border-brand-oxblood transition-colors">
+          <div class="flex items-start justify-between gap-4">
+            <div class="text-[10px] uppercase tracking-[0.18em] text-brand-oxblood font-semibold">
+              {coverageLabel(index)}
+            </div>
+            <div class="text-[11px] uppercase tracking-[0.16em] text-brand-ink/45">{item.date}</div>
+          </div>
+          <div class="mt-5 text-xs uppercase tracking-[0.18em] text-brand-ink/55">{item.outlet}</div>
+          <div class="mt-3 font-serif text-2xl text-brand-ink leading-snug group-hover:text-brand-oxblood transition-colors">
+            {item.title}
+          </div>
+          <div class="mt-6 text-sm font-semibold text-brand-oxblood group-hover:text-brand-oxbloodBright transition-colors">
+            Open article &rarr;
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="flex items-end justify-between gap-4 flex-wrap mb-6">
+      <div>
+        <p class="section-eyebrow">Archive Coverage</p>
+        <h2 class="font-display text-3xl text-brand-ink">Press Archive</h2>
+      </div>
+      <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/55">
+        chronological links, profiles, and notices
+      </div>
+    </div>
     <div class="divide-y divide-brand-ink/10">
-      {pressItems.map((item) => (
+      {archivePress.map((item) => (
         <a href={item.url} target="_blank" rel="noopener" class="flex items-center justify-between gap-6 py-7 group border-l-[3px] border-transparent hover:border-brand-oxblood pl-0 hover:pl-4 transition-all duration-200">
           <div>
             <div class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-2">
-              {item.outlet}{item.date && <span class="text-brand-ink/40 font-normal normal-case tracking-normal"> · {item.date}</span>}
+              {item.outlet}{item.date && <span class="text-brand-ink/40 font-normal normal-case tracking-normal"> - {item.date}</span>}
             </div>
             <div class="font-serif text-2xl text-brand-ink group-hover:text-brand-oxblood transition-colors leading-snug">
               {item.title}
             </div>
           </div>
-          <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors shrink-0 text-lg">↗</span>
+          <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors shrink-0 text-lg">&rarr;</span>
         </a>
       ))}
     </div>
