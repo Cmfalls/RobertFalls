@@ -1,25 +1,21 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
-import { pressItems } from '@data/press';
+import { featuredPress, pressSections, pressStats, type PressCategory } from '@data/press';
 import portraitPhoto from '../images/robert-falls-portrait.webp';
 import amadeusMozartPhoto from '../images/amadeus-mozart.jpg';
 
-const featuredPress = pressItems.slice(0, 3);
-const archivePress = pressItems.slice(3);
-const latestCoverage = featuredPress[0]?.date ?? '2026';
-const earliestCoverage = [...pressItems].reverse().find((item) => item.date)?.date ?? '1999';
-
-function coverageLabel(index: number) {
-  if (index === 0) return 'Latest';
-  if (index === 1) return 'Profile';
-  return 'Archive highlight';
-}
+const categoryLabels: Record<PressCategory, string> = {
+  profile: 'Profile',
+  review: 'Review',
+  retrospective: 'Milestone',
+  announcement: 'Announcement',
+};
 ---
 
 <BaseLayout
   title="Press - Robert Falls"
-  description="Press coverage of theatre director Robert Falls, from his 35-year tenure at the Goodman Theatre to his current freelance directing work."
+  description="A curated press archive of profiles, reviews, retrospectives, and current coverage following Robert Falls from the Goodman years through his present freelance work."
 >
   <section class="bg-brand-oxbloodDeep text-brand-cream relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-brand-oxblood/35 via-transparent to-brand-ink/65"></div>
@@ -29,8 +25,9 @@ function coverageLabel(index: number) {
         <p class="section-eyebrow text-brand-gold">Press Kit &amp; Coverage</p>
         <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">Press</h1>
         <p class="mt-5 max-w-3xl text-brand-cream/72 leading-relaxed">
-          A compact press kit, downloadable images, and a chronological record of coverage following Falls's
-          work from late-career productions back through the Goodman years and earlier milestones.
+          A curated career archive of profiles, reviews, milestones, and current coverage tracing
+          Falls from the Goodman years through Broadway transfers, opera revivals, and his present
+          freelance chapter.
         </p>
       </div>
     </div>
@@ -43,31 +40,35 @@ function coverageLabel(index: number) {
         <div class="bg-brand-cream border border-brand-ink/15 p-7 mb-6">
           <p class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-3">Official Bio - for use in print</p>
           <p class="font-serif text-brand-ink/80 leading-relaxed">
-            Robert Falls is a Tony Award-winning theatre director and the former Artistic Director of
-            Chicago's Goodman Theatre, a position he held from 1986 to 2022. Over thirty-five years he
-            led the Goodman to more than one hundred fifty world premieres and over two dozen Broadway
-            transfers earning twenty-two Tony Awards, including his own Tony Award for Best Direction of
-            a Play for <em>Death of a Salesman</em> in 1999. He continues to direct freelance work,
-            including <em>Amadeus</em> at Steppenwolf Theatre (2025) and <em>Holiday</em> at the
-            Goodman (2026).
+            Robert Falls is a Tony Award-winning theatre director and former Artistic Director of
+            Chicago&apos;s Goodman Theatre. His work spans Broadway, Chicago, opera, and large-scale
+            new-play development, including landmark productions of <em>Death of a Salesman</em>,
+            <em>The Iceman Cometh</em>, <em>Aida</em>, and <em>2666</em>. He continues to direct
+            freelance work, including <em>Amadeus</em> at Steppenwolf Theatre in 2025, <em>Holiday</em>
+            at the Goodman in 2026, and Lyric Opera of Chicago&apos;s 2026 revival of <em>Don Giovanni</em>.
           </p>
         </div>
+        <p class="text-sm text-brand-ink/60 max-w-2xl">
+          This page is intentionally selective. It surfaces the strongest career-level coverage and a
+          curated set of signature production reviews, while deeper title-specific review stacks stay
+          on the individual production pages.
+        </p>
       </div>
 
       <aside class="bg-brand-ink text-brand-cream p-6 lg:p-7">
         <p class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-semibold">Coverage snapshot</p>
         <div class="mt-4 grid gap-5">
           <div>
-            <div class="font-display text-4xl text-brand-goldBright">{pressItems.length}</div>
-            <div class="text-sm text-brand-cream/65">linked profiles, reviews, and season-announcement items</div>
+            <div class="font-display text-4xl text-brand-goldBright">{pressStats.totalItems}</div>
+            <div class="text-sm text-brand-cream/65">curated articles, reviews, and season stories</div>
           </div>
           <div>
-            <div class="font-display text-3xl text-brand-cream">{latestCoverage}</div>
-            <div class="text-sm text-brand-cream/65">most recent article currently surfaced in the archive</div>
+            <div class="font-display text-3xl text-brand-cream">{pressStats.earliestYear}-{pressStats.latestYear}</div>
+            <div class="text-sm text-brand-cream/65">date range currently covered on the page</div>
           </div>
           <div>
-            <div class="font-display text-3xl text-brand-cream">{earliestCoverage}</div>
-            <div class="text-sm text-brand-cream/65">earliest dated item currently linked on the page</div>
+            <div class="font-display text-3xl text-brand-cream">{pressStats.linkedProductionCount}</div>
+            <div class="text-sm text-brand-cream/65">signature productions linked back into the archive</div>
           </div>
         </div>
       </aside>
@@ -128,59 +129,109 @@ function coverageLabel(index: number) {
 
     <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
       <div>
-        <p class="section-eyebrow">Recent Coverage</p>
-        <h2 class="section-heading">Current Press Highlights</h2>
+        <p class="section-eyebrow">Featured Coverage</p>
+        <h2 class="section-heading">Anchor Stories</h2>
       </div>
       <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/55">
-        latest articles and profile coverage
+        {pressStats.featuredItems} intentionally chosen entry points
       </div>
     </div>
-    <div class="grid lg:grid-cols-3 gap-5 mb-14">
+    <div class="grid gap-5 lg:grid-cols-2 mb-16">
       {featuredPress.map((item, index) => (
-        <a href={item.url} target="_blank" rel="noopener" class="group border border-brand-ink/12 bg-white p-6 hover:border-brand-oxblood transition-colors">
-          <div class="flex items-start justify-between gap-4">
-            <div class="text-[10px] uppercase tracking-[0.18em] text-brand-oxblood font-semibold">
-              {coverageLabel(index)}
+        <article class={`border transition-colors hover:border-brand-oxblood ${index === 0 ? 'bg-brand-ink text-brand-cream border-brand-gold/25' : 'bg-white text-brand-ink border-brand-ink/12'}`}>
+          <div class="p-6 md:p-7 h-full flex flex-col">
+            <div class="flex flex-wrap items-center gap-2 mb-5">
+              <span class={`text-[10px] uppercase tracking-[0.18em] font-semibold ${index === 0 ? 'text-brand-goldBright' : 'text-brand-oxblood'}`}>
+                {categoryLabels[item.category]}
+              </span>
+              {item.productionSlug && item.productionTitle && (
+                <a
+                  href={`/productions/${item.productionSlug}`}
+                  class={`text-[10px] uppercase tracking-[0.16em] border px-2 py-1 transition-colors ${index === 0 ? 'border-brand-cream/25 text-brand-cream/75 hover:border-brand-goldBright hover:text-brand-goldBright' : 'border-brand-ink/12 text-brand-ink/60 hover:border-brand-oxblood hover:text-brand-oxblood'}`}
+                >
+                  {item.productionTitle}
+                </a>
+              )}
             </div>
-            <div class="text-[11px] uppercase tracking-[0.16em] text-brand-ink/45">{item.date}</div>
+            <div class={`text-xs uppercase tracking-[0.18em] ${index === 0 ? 'text-brand-cream/55' : 'text-brand-ink/55'}`}>
+              {item.outlet} &middot; {item.dateLabel}
+            </div>
+            <h3 class={`font-serif leading-snug mt-3 ${index === 0 ? 'text-3xl md:text-[2.2rem] text-brand-cream' : 'text-2xl text-brand-ink'}`}>
+              <a href={item.url} target="_blank" rel="noopener" class={index === 0 ? 'hover:text-brand-goldBright transition-colors' : 'hover:text-brand-oxblood transition-colors'}>
+                {item.title}
+              </a>
+            </h3>
+            <p class={`mt-4 leading-relaxed flex-1 ${index === 0 ? 'text-brand-cream/72' : 'text-brand-ink/70'}`}>
+              {item.summary}
+            </p>
+            <div class="mt-6">
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener"
+                class={`text-sm font-semibold transition-colors ${index === 0 ? 'text-brand-goldBright hover:text-brand-cream' : 'text-brand-oxblood hover:text-brand-oxbloodBright'}`}
+              >
+                Open article &rarr;
+              </a>
+            </div>
           </div>
-          <div class="mt-5 text-xs uppercase tracking-[0.18em] text-brand-ink/55">{item.outlet}</div>
-          <div class="mt-3 font-serif text-2xl text-brand-ink leading-snug group-hover:text-brand-oxblood transition-colors">
-            {item.title}
-          </div>
-          <div class="mt-6 text-sm font-semibold text-brand-oxblood group-hover:text-brand-oxbloodBright transition-colors">
-            Open article &rarr;
-          </div>
-        </a>
+        </article>
       ))}
     </div>
 
-    <div class="flex items-end justify-between gap-4 flex-wrap mb-6">
-      <div>
-        <p class="section-eyebrow">Archive Coverage</p>
-        <h2 class="font-display text-3xl text-brand-ink">Press Archive</h2>
-      </div>
-      <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/55">
-        chronological links, profiles, and notices
-      </div>
-    </div>
-    <div class="divide-y divide-brand-ink/10">
-      {archivePress.map((item) => (
-        <a href={item.url} target="_blank" rel="noopener" class="flex items-center justify-between gap-6 py-7 group border-l-[3px] border-transparent hover:border-brand-oxblood pl-0 hover:pl-4 transition-all duration-200">
-          <div>
-            <div class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-2">
-              {item.outlet}{item.date && <span class="text-brand-ink/40 font-normal normal-case tracking-normal"> - {item.date}</span>}
+    <div class="space-y-16">
+      {pressSections.map((section) => (
+        <section>
+          <div class="flex items-end justify-between gap-4 flex-wrap mb-6">
+            <div>
+              <p class="section-eyebrow">{categoryLabels[section.category]}</p>
+              <h2 class="font-display text-3xl text-brand-ink">{section.title}</h2>
             </div>
-            <div class="font-serif text-2xl text-brand-ink group-hover:text-brand-oxblood transition-colors leading-snug">
-              {item.title}
+            <div class="text-sm text-brand-ink/55 max-w-xl leading-relaxed">
+              {section.description}
             </div>
           </div>
-          <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors shrink-0 text-lg">&rarr;</span>
-        </a>
+
+          <div class="grid gap-4 lg:grid-cols-2">
+            {section.items.map((item) => (
+              <article class="border border-brand-ink/12 bg-white p-5 md:p-6 hover:border-brand-oxblood transition-colors">
+                <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-[11px] uppercase tracking-[0.18em]">
+                  <span class="text-brand-oxblood font-semibold">{item.outlet}</span>
+                  <span class="text-brand-ink/35">&middot;</span>
+                  <span class="text-brand-ink/45">{item.dateLabel}</span>
+                </div>
+                <h3 class="font-serif text-2xl text-brand-ink leading-snug mt-3">
+                  <a href={item.url} target="_blank" rel="noopener" class="hover:text-brand-oxblood transition-colors">
+                    {item.title}
+                  </a>
+                </h3>
+                <p class="text-brand-ink/68 leading-relaxed mt-3">{item.summary}</p>
+                <div class="mt-5 flex flex-wrap items-center gap-3">
+                  {item.productionSlug && item.productionTitle && (
+                    <a
+                      href={`/productions/${item.productionSlug}`}
+                      class="text-[10px] uppercase tracking-[0.16em] border border-brand-ink/12 px-2 py-1 text-brand-ink/60 hover:border-brand-oxblood hover:text-brand-oxblood transition-colors"
+                    >
+                      {item.productionTitle}
+                    </a>
+                  )}
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener"
+                    class="text-sm font-semibold text-brand-oxblood hover:text-brand-oxbloodBright transition-colors"
+                  >
+                    Read article &rarr;
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
       ))}
     </div>
 
-    <p class="text-sm text-brand-ink/65 mt-10">
+    <p class="text-sm text-brand-ink/65 mt-12">
       For media inquiries, interview requests, or press photography, see <a href="/contact" class="text-brand-oxblood underline underline-offset-4">Contact</a>.
     </p>
   </section>

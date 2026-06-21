@@ -219,6 +219,7 @@ export interface ProductionImage {
   src: ImageMetadata;
   alt: string;
   caption: string;
+  photographer?: string;
   orientation: ProductionImageOrientation;
   priority?: boolean;
   kind: ProductionImageKind;
@@ -1552,7 +1553,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         src: deathOfASalesmanPlaybillFull,
         alt: 'Brian Dennehy and Elizabeth Franz in Death of a Salesman.',
-        caption: 'Brian Dennehy and Elizabeth Franz in Death of a Salesman. Photo: Eric Y. Exit via Playbill.',
+        caption: 'Brian Dennehy and Elizabeth Franz in Death of a Salesman.',
+        photographer: 'Eric Y. Exit / Playbill',
         orientation: 'portrait',
         priority: true,
         kind: 'production-still',
@@ -1560,7 +1562,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         src: deathOfASalesmanPlaybillCover,
         alt: 'Playbill cover for the 1999 Broadway revival of Death of a Salesman at the Eugene O\'Neill Theatre.',
-        caption: 'The 1999 Broadway Playbill, carrying Dennehy\'s Willy Loman into the Eugene O\'Neill Theatre run.',
+        caption: 'The 1999 Broadway Playbill — Eugene O\'Neill Theatre run.',
         orientation: 'portrait',
         kind: 'art',
       },

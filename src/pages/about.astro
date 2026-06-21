@@ -9,6 +9,17 @@ import rehearsalRecentPhoto from '../images/falls-rehearsal-recent.jpg';
 import katFallsPhoto from '../images/kat-falls.webp';
 import gilmanPhoto from '../images/rebecca-gilman.jpeg';
 
+const jumpLinks = [
+  { href: '#reader',           label: 'Early Life'     },
+  { href: '#wisdom-bridge',    label: 'Wisdom Bridge'  },
+  { href: '#goodman',          label: 'Goodman'        },
+  { href: '#broadway',         label: 'Broadway'       },
+  { href: '#collaborators',    label: 'Collaborators'  },
+  { href: '#reception',        label: 'Reception'      },
+  { href: '#new-chapter',      label: 'New Chapter'    },
+  { href: '#beyond-the-stage', label: 'Beyond the Stage' },
+];
+
 const fastFacts = [
   { label: 'Born', value: 'March 2, 1954 — Springfield, Illinois' },
   { label: 'Raised', value: 'Ashland, Illinois' },
@@ -23,7 +34,7 @@ const fastFacts = [
   title="About Robert Falls — Theatre Director"
   description="The biography of Robert Falls: rural Illinois roots, Wisdom Bridge Theatre, 35 years as Artistic Director of the Goodman Theatre, and his current freelance directing career — including a third Lyric Opera revival of Don Giovanni opening October 2026."
 >
-  <section class="bg-brand-ink text-brand-cream relative overflow-hidden">
+  <section class="about-hero bg-brand-ink text-brand-cream relative overflow-hidden">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(138,19,36,0.38),_transparent_55%),radial-gradient(ellipse_at_bottom_right,_rgba(138,19,36,0.14),_transparent_45%)]"></div>
     <div class="absolute inset-y-0 right-0 w-full lg:w-[58%] overflow-hidden pointer-events-none">
       <Image
@@ -44,9 +55,24 @@ const fastFacts = [
       <div class="section-container !py-0">
         <p class="section-eyebrow text-brand-gold">Biography</p>
         <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">About Robert</h1>
+        <div class="about-jump-links">
+          {jumpLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))}
+        </div>
       </div>
     </div>
   </section>
+
+  <nav id="about-subnav" aria-label="About page sections" class="about-subnav">
+    <div class="about-subnav-inner">
+      {jumpLinks.map((link) => (
+        <a href={link.href} class="about-subnav-link" data-subnav-link={link.href}>
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </nav>
 
   <section class="section-container max-w-5xl grid md:grid-cols-[300px_1fr] gap-12 md:gap-16">
     <div class="md:sticky md:top-28 self-start">
@@ -73,7 +99,7 @@ const fastFacts = [
     </div>
 
     <div class="about-article space-y-7 text-brand-ink/80 leading-relaxed text-lg font-serif max-w-3xl">
-      <h2 class="font-display text-3xl text-brand-ink mb-2">A Reader, Long Before a Director</h2>
+      <h2 id="reader" data-about-section class="font-display text-3xl text-brand-ink mb-2 scroll-mt-32">A Reader, Long Before a Director</h2>
       <p>
         Robert Arthur Falls was born March 2, 1954, in Springfield, Illinois, and raised in
         Ashland, a small town in the rural center of the state. By his own account he was "a major
@@ -91,7 +117,7 @@ const fastFacts = [
         company's Artistic Director in 1977, at twenty-three.
       </p>
 
-      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Wisdom Bridge: Cleaning Toilets, Building a Theatre</h2>
+      <h2 id="wisdom-bridge" data-about-section class="font-display text-3xl text-brand-ink !mt-14 mb-2 scroll-mt-32">Wisdom Bridge: Cleaning Toilets, Building a Theatre</h2>
       <p>
         From 1977 to 1985, Falls led Wisdom Bridge, a small but fiercely ambitious company on
         Chicago's North Side. He later recalled that being "artistic director" there often meant
@@ -121,13 +147,11 @@ const fastFacts = [
         "Chicago's most essential director." <span class="not-italic text-sm uppercase tracking-[0.16em] text-brand-ink/65 block mt-2">— Chicago Tribune</span>
       </blockquote>
 
-      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Thirty-Five Years at the Goodman</h2>
+      <h2 id="goodman" data-about-section class="font-display text-3xl text-brand-ink !mt-14 mb-2 scroll-mt-32">Thirty-Five Years at the Goodman</h2>
       <p>
         In 1986, Falls became Artistic Director of the Goodman Theatre, a position he held for
         thirty-five years — one of the longest tenures of any artistic leader at a major American
-        theatre. Over that span the Goodman produced more than one hundred fifty world premieres
-        and transferred more than two dozen productions to Broadway, earning twenty-two Tony Awards
-        along the way. Under his leadership the Goodman received the 1992 Special Tony Award for
+        theatre. Under his leadership the Goodman received the 1992 Special Tony Award for
         Outstanding Regional Theater and was named the number one regional theater in the United
         States by <em>Time</em> magazine in 2003. In 2000 the Goodman opened its $46 million
         downtown Loop campus, where its rehearsal hall was named the Robert Falls Rehearsal Wing in
@@ -166,7 +190,7 @@ const fastFacts = [
         </div>
       </div>
 
-      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Broadway</h2>
+      <h2 id="broadway" data-about-section class="font-display text-3xl text-brand-ink !mt-14 mb-2 scroll-mt-32">Broadway</h2>
       <p>
         His own Broadway work includes the Tony Award for Best Direction of a Play for
         <em> Death of a Salesman</em> (1999), and a 2003 transfer of <em>Long Day's Journey Into
@@ -178,7 +202,7 @@ const fastFacts = [
         York for four decades.
       </p>
 
-      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Collaborators</h2>
+      <h2 id="collaborators" data-about-section class="font-display text-3xl text-brand-ink !mt-14 mb-2 scroll-mt-32">Collaborators</h2>
       <p>
         Falls's work is best understood through his collaborators. His most important artistic
         partnership was with actor Brian Dennehy, a relationship that stretched back to Wisdom
@@ -211,7 +235,7 @@ const fastFacts = [
           <em> Blue Surge</em> (2001) to <em>Swing State</em> (2022).
         </p>
       </div>
-      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Reception, Risk, and Candor</h2>
+      <h2 id="reception" data-about-section class="font-display text-3xl text-brand-ink !mt-14 mb-2 scroll-mt-32">Reception, Risk, and Candor</h2>
       <p>
         The longtime Chicago Tribune critic Chris Jones identified Falls's defining signature as a
         taste for "the big project" — the willingness to pursue work of "heft and ambition and
@@ -242,7 +266,7 @@ const fastFacts = [
         2020 to develop new work by Black, Indigenous, Latinx, and AAPI artists.
       </p>
 
-      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">A New Chapter</h2>
+      <h2 id="new-chapter" data-about-section class="font-display text-3xl text-brand-ink !mt-14 mb-2 scroll-mt-32">A New Chapter</h2>
       <p>
         Falls stepped down as the Goodman's Artistic Director in 2022 after thirty-five years,
         closing one of the longest and most consequential tenures in American regional theatre. He
@@ -272,7 +296,7 @@ const fastFacts = [
         <figcaption class="text-xs uppercase tracking-[0.18em] text-brand-ink/65 mt-3">In rehearsal, still mid-sentence, still in the room</figcaption>
       </figure>
 
-      <h2 class="font-display text-3xl text-brand-ink !mt-14 mb-2">Beyond the Stage</h2>
+      <h2 id="beyond-the-stage" data-about-section class="font-display text-3xl text-brand-ink !mt-14 mb-2 scroll-mt-32">Beyond the Stage</h2>
       <p>
         Beyond the stage, Falls served as board president of Theatre Communications Group and led
         Northwestern University's graduate directing program; he was elected a Fellow of the
@@ -330,4 +354,66 @@ const fastFacts = [
     content: '';
     @apply block w-8 h-0.5 bg-brand-gold mb-3;
   }
+  .about-jump-links {
+    @apply mt-8 flex flex-wrap gap-3;
+  }
+  .about-jump-links a {
+    @apply inline-flex rounded-full border border-brand-cream/20 bg-black/20
+           px-5 py-3 font-display text-xs font-semibold uppercase tracking-[0.16em]
+           text-brand-cream/80 transition-colors duration-200
+           hover:border-brand-gold hover:text-brand-goldBright;
+  }
+  .about-subnav {
+    @apply sticky top-20 md:top-24 z-40
+           border-b border-brand-ink/10 bg-brand-cream/95 backdrop-blur-sm
+           pointer-events-none opacity-0 -translate-y-full transition-all duration-300;
+  }
+  .about-subnav.is-visible {
+    @apply translate-y-0 opacity-100 pointer-events-auto;
+  }
+  .about-subnav-inner {
+    @apply mx-auto flex max-w-7xl gap-1 overflow-x-auto px-5 md:px-8;
+    scrollbar-width: none;
+  }
+  .about-subnav-inner::-webkit-scrollbar {
+    display: none;
+  }
+  .about-subnav-link {
+    @apply shrink-0 border-b-2 border-transparent px-3 py-3.5
+           font-display text-[11px] font-semibold uppercase tracking-[0.18em]
+           text-brand-ink/55 whitespace-nowrap transition-colors duration-200
+           hover:text-brand-ink;
+  }
+  .about-subnav-link.is-active {
+    @apply border-brand-oxblood text-brand-oxblood;
+  }
 </style>
+
+<script>
+  const hero = document.querySelector('.about-hero');
+  const subnav = document.getElementById('about-subnav');
+  if (hero && subnav) {
+    new IntersectionObserver(
+      ([entry]) => subnav.classList.toggle('is-visible', !entry.isIntersecting),
+      { threshold: 0 },
+    ).observe(hero);
+  }
+
+  const sections = Array.from(document.querySelectorAll('[data-about-section]'));
+  const navLinks = Array.from(document.querySelectorAll('[data-subnav-link]'));
+  if (sections.length && navLinks.length) {
+    const sectionObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = '#' + entry.target.id;
+          navLinks.forEach((link) => {
+            link.classList.toggle('is-active', link.getAttribute('data-subnav-link') === id);
+          });
+        });
+      },
+      { rootMargin: '-10% 0px -60% 0px', threshold: 0 },
+    );
+    sections.forEach((s) => sectionObs.observe(s));
+  }
+</script>

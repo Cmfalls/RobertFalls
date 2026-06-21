@@ -8,39 +8,38 @@ import heroBackground from '../images/falls-rehearsal-recent.jpg';
 
 // Editorially curated, but every displayed field (title, image, dates) is pulled
 // live from the production archive so this can never drift out of sync with it.
-const nowAndUpcoming = [
+const nowAndUpcomingSeeds = [
   {
     slug: 'don-giovanni',
+    statusLabel: 'Upcoming' as const,
     status: 'Opens October 10, 2026',
     note: "Lyric Opera of Chicago's third revival of his 2014 staging",
   },
   {
     slug: 'holiday',
-    status: "Goodman Theatre, Centennial Season",
+    statusLabel: 'Completed' as const,
+    status: 'Goodman Theatre · Winter 2026',
     note: 'His first Goodman production since stepping down as Artistic Director',
   },
   {
     slug: 'amadeus',
-    status: 'Steppenwolf Theatre, 2025',
+    statusLabel: 'Completed' as const,
+    status: 'Steppenwolf Theatre · 2025',
     note: 'His Steppenwolf directorial debut',
   },
-]
-  .map(({ slug, status, note }) => {
+];
+
+const nowAndUpcoming = nowAndUpcomingSeeds
+  .map(({ slug, statusLabel, status, note }) => {
     const production = getProductionBySlug(slug);
     const thumbnail = production?.images[0];
     if (!production || !thumbnail) return null;
-    return { title: production.title, status, note, thumbnail, href: getProductionHref(production.title) };
+    return { title: production.title, statusLabel, status, note, thumbnail, href: getProductionHref(production.title) };
   })
   .filter((p): p is NonNullable<typeof p> => p !== null);
 
-const goodmanHighlightSlugs = ['death-of-a-salesman', 'the-iceman-cometh', 'king-lear', 'finishing-the-picture'];
-const goodmanHighlights = goodmanHighlightSlugs
-  .map((slug) => {
-    const production = getProductionBySlug(slug);
-    if (!production) return null;
-    return { title: production.title, meta: `${production.yearSpan} · ${production.venueAnchor}`, href: getProductionHref(production.title) };
-  })
-  .filter((p): p is NonNullable<typeof p> => p !== null);
+const activeShows    = nowAndUpcoming.filter((p) => p.statusLabel !== 'Completed');
+const recentlyShows  = nowAndUpcoming.filter((p) => p.statusLabel === 'Completed');
 
 const gallerySlugs = [
   'death-of-a-salesman',
@@ -103,8 +102,8 @@ const selectedProductions = gallerySlugs
           <span>Opera</span>
         </div>
         <p class="font-serif italic text-lg md:text-[1.55rem] text-brand-cream/75 mt-5 max-w-2xl leading-relaxed">
-          Five decades shaping the American stage — from Wisdom Bridge to thirty-five years
-          leading Chicago's Goodman Theatre, and now, directing new work in Chicago and beyond.
+          Five decades shaping the American stage &mdash; from Wisdom Bridge through a landmark Goodman era,
+          and now, directing new work in Chicago and beyond.
         </p>
 
         <div class="flex flex-wrap gap-4 mt-10">
@@ -130,31 +129,73 @@ const selectedProductions = gallerySlugs
           "I feel very lucky that I can be selective. I want to continue to work on exciting projects."
         </p>
       </div>
-      <div class="grid sm:grid-cols-3 gap-6">
-        {nowAndUpcoming.map((item) => (
-          <a href={item.href} class="group block">
-            <div class="aspect-[3/4] overflow-hidden bg-brand-ink relative mb-4">
-              <Image
-                src={item.thumbnail.src}
-                alt={item.thumbnail.alt}
-                widths={[320, 480, 640, 960]}
-                sizes="(max-width: 639px) 100vw, 33vw"
-                quality={76}
-                loading="lazy"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
-              />
-              <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.72) 0%, rgba(12,9,8,0.18) 40%, transparent 70%);"></div>
-              <div class="absolute inset-0 pointer-events-none" style="box-shadow: inset 0 0 60px 10px rgba(12,9,8,0.38);"></div>
-            </div>
-            <div class="font-display text-2xl text-brand-ink leading-tight group-hover:text-brand-oxblood transition-colors">
-              {item.title}
-            </div>
-            <div class="text-xs uppercase tracking-[0.16em] text-brand-oxblood font-semibold mt-2">{item.status}</div>
-            <p class="text-sm text-brand-ink/60 mt-1 leading-snug">{item.note}</p>
-          </a>
-        ))}
-      </div>
-      <div class="flex items-center justify-center mt-12">
+      {activeShows.length > 0 && (
+        <div class:list={['grid gap-6 mb-10', activeShows.length === 1 ? 'max-w-xs' : 'sm:grid-cols-3']}>
+          {activeShows.map((item) => (
+            <a href={item.href} class="group block">
+              <div class="aspect-[3/4] overflow-hidden bg-brand-ink relative mb-4">
+                <Image
+                  src={item.thumbnail.src}
+                  alt={item.thumbnail.alt}
+                  widths={[320, 480, 640, 960]}
+                  sizes="(max-width: 639px) 100vw, 33vw"
+                  quality={76}
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
+                />
+                <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.72) 0%, rgba(12,9,8,0.18) 40%, transparent 70%);"></div>
+                <div class="absolute inset-0 pointer-events-none" style="box-shadow: inset 0 0 60px 10px rgba(12,9,8,0.38);"></div>
+                <div class="absolute top-3 left-3">
+                  <span class:list={[
+                    'inline-flex items-center px-2.5 py-1 font-display text-[10px] font-semibold uppercase tracking-[0.18em]',
+                    item.statusLabel === 'Upcoming' && 'bg-brand-gold text-brand-ink',
+                    item.statusLabel === 'Running'  && 'bg-brand-oxbloodBright text-brand-cream',
+                  ]}>
+                    {item.statusLabel}
+                  </span>
+                </div>
+              </div>
+              <div class="font-display text-2xl text-brand-ink leading-tight group-hover:text-brand-oxblood transition-colors">
+                {item.title}
+              </div>
+              <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/55 font-semibold mt-2">{item.status}</div>
+              <p class="text-sm text-brand-ink/60 mt-1 leading-snug">{item.note}</p>
+            </a>
+          ))}
+        </div>
+      )}
+
+      {recentlyShows.length > 0 && (
+        <div class="border-t border-brand-ink/10 pt-8 mb-10">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-brand-ink/40 font-semibold mb-5">Recently Completed</p>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {recentlyShows.map((item) => (
+              <a href={item.href} class="group flex items-center gap-4 border border-brand-ink/10 bg-white/70 px-4 py-3 hover:border-brand-oxblood/25 transition-colors">
+                <div class="w-12 h-16 shrink-0 overflow-hidden bg-brand-ink">
+                  <Image
+                    src={item.thumbnail.src}
+                    alt=""
+                    widths={[48, 96]}
+                    sizes="48px"
+                    quality={72}
+                    loading="lazy"
+                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <div class="min-w-0">
+                  <div class="font-display text-base text-brand-ink/50 leading-tight truncate group-hover:text-brand-ink transition-colors">{item.title}</div>
+                  <div class="text-[10px] uppercase tracking-[0.16em] text-brand-ink/35 mt-1">{item.status}</div>
+                </div>
+                <span class="ml-auto shrink-0 inline-flex items-center px-2 py-0.5 font-display text-[9px] font-semibold uppercase tracking-[0.14em] border border-brand-ink/12 text-brand-ink/35">
+                  Completed
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div class="flex items-center justify-center">
         <a href="/credits#recent-work" class="btn-outline">See Recent &amp; Current Work</a>
       </div>
     </div>
@@ -221,21 +262,29 @@ const selectedProductions = gallerySlugs
       <p class="section-eyebrow text-brand-gold">1986 &mdash; 2022</p>
       <h2 class="section-heading text-brand-cream">The Goodman Years</h2>
       <p class="text-brand-cream/75 leading-relaxed max-w-2xl mb-10">
-        Over thirty-five years as Artistic Director, Robert transformed Chicago's Goodman Theatre
-        into one of the nation's leading arts institutions — producing over one hundred fifty world
-        premieres and twenty-four Broadway transfers that together earned twenty-two Tony Awards.
-        Under his leadership the Goodman received the Special Tony Award for Outstanding Regional
-        Theatre and was named the number one regional theater in the U.S. by <em class="font-serif italic">Time</em>.
-        When the Goodman opened its downtown Loop campus in 2000, the building's rehearsal hall was
-        named the Robert Falls Rehearsal Wing in his honor — a lasting, physical mark of his tenure.
+        Robert's Goodman tenure reshaped the theatre's national profile, pairing ambitious new work
+        with major transfers and a durable Chicago identity. Under his leadership the Goodman received
+        the Special Tony Award for Outstanding Regional Theatre, was named the top regional theater in
+        the country by <em class="font-serif italic">Time</em>, and opened its downtown Loop campus with the
+        Robert Falls Rehearsal Wing bearing his name.
       </p>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {goodmanHighlights.map((item) => (
-          <a href={item.href} class="border border-brand-cream/15 p-6 hover:border-brand-gold transition-colors group">
-            <div class="font-display text-2xl text-brand-goldBright mb-1 group-hover:text-brand-cream transition-colors">{item.title}</div>
-            <div class="text-xs uppercase tracking-[0.16em] text-brand-cream/60">{item.meta}</div>
-          </a>
-        ))}
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-10">
+        <div class="border border-brand-cream/16 bg-brand-cream/[0.04] px-5 py-5">
+          <div class="font-display text-4xl text-brand-goldBright leading-none">35</div>
+          <div class="mt-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream/60">Years as Artistic Director</div>
+        </div>
+        <div class="border border-brand-cream/16 bg-brand-cream/[0.04] px-5 py-5">
+          <div class="font-display text-4xl text-brand-goldBright leading-none">150+</div>
+          <div class="mt-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream/60">World premieres produced</div>
+        </div>
+        <div class="border border-brand-cream/16 bg-brand-cream/[0.04] px-5 py-5">
+          <div class="font-display text-4xl text-brand-goldBright leading-none">22</div>
+          <div class="mt-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream/60">Tony Awards for Broadway transfers</div>
+        </div>
+        <div class="border border-brand-cream/16 bg-brand-cream/[0.04] px-5 py-5">
+          <div class="font-display text-4xl text-brand-goldBright leading-none">#1</div>
+          <div class="mt-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream/60">Regional theater in the U.S. — <em class="font-serif not-italic">Time</em></div>
+        </div>
       </div>
       <a href="/credits#goodman" class="btn-primary mt-10 inline-flex">Full Goodman Credits</a>
     </div>
