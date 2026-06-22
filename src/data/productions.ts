@@ -218,6 +218,14 @@ import cherryOrchardSunTimes1 from '../images/web-sourced/the-cherry-orchard-sun
 import cherryOrchardSunTimes2 from '../images/web-sourced/the-cherry-orchard-suntimes-2.jpg';
 import deathOfASalesmanPlaybillFull from '../images/web-sourced/death-of-a-salesman-playbill-full.jpg';
 import deathOfASalesmanPlaybillCover from '../images/death-of-a-salesman/death-of-a-salesman-playbill-cover.jpg';
+import deathOfASalesmanGoodmanWilly from '../images/web-sourced/death-of-a-salesman-goodman-willy.jpg';
+import deathOfASalesmanDennehyFranz from '../images/web-sourced/death-of-a-salesman-dennehy-franz-joan-marcus.jpg';
+import deathOfASalesmanDvdCover from '../images/web-sourced/death-of-a-salesman-2000-dvd-cover.jpg';
+import wingsYaleRep1978One from '../images/web-sourced/wings-yale-rep-1978-1.jpg';
+import wingsYaleRep1978Two from '../images/web-sourced/wings-yale-rep-1978-2.jpg';
+import wingsYaleRep1978Four from '../images/web-sourced/wings-yale-rep-1978-4.jpg';
+import wingsYoungVic2017Aerial from '../images/web-sourced/wings-young-vic-2017-aerial.jpg';
+import wingsYoungVic2017Language from '../images/web-sourced/wings-young-vic-2017-language.jpg';
 import donGiovanniDonnaElvira from '../images/web-sourced/don-giovanni-donna-elvira.jpg';
 import donGiovanniFinalCostume from '../images/web-sourced/don-giovanni-final-costume.jpg';
 import holidayGoodman from '../images/web-sourced/holiday-goodman.jpg';
@@ -588,12 +596,50 @@ const productionSeeds: Record<string, ProductionSeed> = {
     eraLabel: 'Wisdom Bridge years',
     images: [
       {
-        src: fallsWisdomBridgeRehearsal,
-        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
-        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for Wings.',
+        src: wingsYaleRep1978Two,
+        alt: 'Betty Peltzer, Constance Cummings, and Marianne Owen in the 1978 Yale Rep production of Wings.',
+        caption:
+          'Betty Peltzer, Constance Cummings, and Marianne Owen in Yale Rep\'s 1978 Wings, the original professional production that preceded Falls\'s Midwest premiere.',
+        photographer: 'Yale Repertory Theatre',
         orientation: 'landscape',
         priority: true,
-        kind: 'rehearsal',
+        kind: 'production-still',
+      },
+      {
+        src: wingsYaleRep1978One,
+        alt: 'Constance Cummings isolated in a dark stage image from Yale Rep\'s 1978 Wings.',
+        caption:
+          'Constance Cummings as Emily Stilson in Yale Rep\'s 1978 Wings. Included as original-production context for the play Falls staged in Chicago the following year.',
+        photographer: 'Yale Repertory Theatre',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: wingsYaleRep1978Four,
+        alt: 'Constance Cummings seated between nurse and doctor figures in Yale Rep\'s 1978 Wings.',
+        caption:
+          'A hospital-stage image from Yale Rep\'s 1978 Wings, showing the spare visual language around Emily\'s aphasia and recovery.',
+        photographer: 'Yale Repertory Theatre',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: wingsYoungVic2017Aerial,
+        alt: 'Juliet Stevenson suspended in flight in the 2017 Young Vic production of Wings.',
+        caption:
+          'Juliet Stevenson in the Young Vic\'s 2017 Wings revival. This later image is used only as context for the play\'s aviator and recovery imagery.',
+        photographer: 'Johan Persson / The Guardian',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: wingsYoungVic2017Language,
+        alt: 'Juliet Stevenson reaching forward in the 2017 Young Vic production of Wings.',
+        caption:
+          'A second Young Vic revival image, useful for showing how later productions visualized Kopit\'s language-and-perception drama.',
+        photographer: 'Johan Persson / The Guardian',
+        orientation: 'landscape',
+        kind: 'production-still',
       },
     ],
     collaborators: [
@@ -626,22 +672,61 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Archive note',
-        text: 'No Wings-specific production stills, cast list, program scan, or local review packet has surfaced in the current project files.',
+        label: 'Image packet',
+        text: 'No Wisdom Bridge-specific Wings still has surfaced in the current project files, so the gallery uses original Yale Rep production photos and later Young Vic revival images as clearly labeled play context.',
       },
       {
-        label: 'Image note',
-        text: 'The rehearsal photograph is used as Wisdom Bridge-era context only; it is not presented as a Wings production image.',
+        label: 'Archive note',
+        text: 'No local cast list, program scan, or Chicago review packet has surfaced in the current project files.',
       },
       {
         label: 'Source note',
-        text: 'The page combines the local timeline fact of Falls\'s 1979 Midwest premiere with public context about Kopit\'s play and its Broadway recognition.',
+        text: 'The page combines the local timeline fact of Falls\'s 1979 Midwest premiere with public context about Kopit\'s Yale Rep, Public Theater, Broadway, and later revival history.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Yale Repertory Theatre',
+        href: 'https://yalerep.org/productions/wings-4/',
+        summary:
+          'The Yale Rep archive confirms the March 3-25, 1978 production by Arthur Kopit, directed by John Madden, and supplies the three original-production photos used here as context.',
+      },
+      {
+        source: 'The New York Times',
+        href: 'https://www.nytimes.com/1978/03/08/archives/theater-wings-by-kopit-at-yale.html',
+        summary:
+          'Richard Eder reviewed Wings at Yale in March 1978, giving the page a contemporary critical source for the play before its New York transfer.',
+      },
+      {
+        source: 'Lortel Archives',
+        href: 'https://www.lortel.org/Archives/Production/1873',
+        summary:
+          'The Lortel listing documents the 1978 New York Shakespeare Festival/Public Theater run, between Yale Rep and Broadway.',
+      },
+      {
+        source: 'Playbill Vault',
+        href: 'https://www.playbill.com/production/wings-cort-theatre-vault-0000003524',
+        summary:
+          'The Playbill archive records the 1979 Broadway production, part of the national context around Falls\'s Midwest premiere.',
+      },
+      {
+        source: 'The Guardian',
+        href: 'https://www.theguardian.com/stage/2017/sep/21/wings-review-juliet-stevenson-stroke-recovery-young-vic-london',
+        summary:
+          'Michael Billington\'s 2017 review of the Young Vic revival helps explain the play\'s language, flight, and recovery themes for modern readers.',
       },
     ],
     externalSources: [
+      { label: 'Yale Rep 1978 production archive', href: 'https://yalerep.org/productions/wings-4/' },
+      { label: 'New York Times review: Wings at Yale', href: 'https://www.nytimes.com/1978/03/08/archives/theater-wings-by-kopit-at-yale.html' },
+      { label: 'Lortel archive: 1978 Public Theater run', href: 'https://www.lortel.org/Archives/Production/1873' },
+      { label: 'Playbill Broadway archive', href: 'https://www.playbill.com/production/wings-cort-theatre-vault-0000003524' },
+      { label: 'Guardian review of 2017 Young Vic revival', href: 'https://www.theguardian.com/stage/2017/sep/21/wings-review-juliet-stevenson-stroke-recovery-young-vic-london' },
+      { label: 'Broadway.com Arthur Kopit obituary', href: 'https://www.broadway.com/buzz/200596/three-time-tony-nominated-playwright-arthur-kopit-known-for-oh-dad-poor-dad-dies-at-83/' },
       { label: 'Wings play background', href: 'https://en.wikipedia.org/wiki/Wings_(play)' },
       { label: 'Arthur Kopit biography and Wings context', href: 'https://en.wikipedia.org/wiki/Arthur_Kopit' },
-      { label: '1979 Tony Best Play listing', href: 'https://en.wikipedia.org/wiki/Tony_Award_for_Best_Play' },
+      { label: '1979 Tony Awards context', href: 'https://en.wikipedia.org/wiki/33rd_Tony_Awards' },
+      { label: 'The Best Plays of 1978-1979', href: 'https://archive.org/details/bestplaysof19780000unse' },
       { label: 'Robert Falls Wisdom Bridge context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
     ],
     relatedLinks: seedLinks,
@@ -2077,9 +2162,35 @@ const productionSeeds: Record<string, ProductionSeed> = {
         kind: 'production-still',
       },
       {
+        src: deathOfASalesmanGoodmanWilly,
+        alt: 'Brian Dennehy as Willy Loman in the Goodman Theatre production of Death of a Salesman.',
+        caption:
+          'Brian Dennehy as Willy Loman in the 1998 Goodman Theatre production directed by Robert Falls.',
+        photographer: 'Liz Lauren / Chicago Sun-Times',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: deathOfASalesmanDennehyFranz,
+        alt: 'Brian Dennehy and Elizabeth Franz embrace as Willy and Linda Loman in Death of a Salesman.',
+        caption:
+          'Dennehy and Elizabeth Franz in the 1999 Robert Falls revival, where Franz redefined Linda Loman as fiercely protective.',
+        photographer: 'Joan Marcus / TheaterMania',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
         src: deathOfASalesmanPlaybillCover,
         alt: 'Playbill cover for the 1999 Broadway revival of Death of a Salesman at the Eugene O\'Neill Theatre.',
         caption: 'The 1999 Broadway Playbill — Eugene O\'Neill Theatre run.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: deathOfASalesmanDvdCover,
+        alt: 'DVD cover for the 2000 filmed version of Death of a Salesman starring Brian Dennehy as Willy Loman.',
+        caption:
+          'The 2000 filmed adaptation preserved the Dennehy-Franz performances from the Falls production chain.',
         orientation: 'portrait',
         kind: 'art',
       },
@@ -2153,11 +2264,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Photo source',
-        text: 'The strongest image currently in the repo is drawn from Playbill\'s Broadway photo archive and credited there to Eric Y. Exit. The rest of the local packet is sparse, so this page stays intentionally text-led rather than forcing a weak gallery.',
+        text: 'The image packet now combines Playbill material, a Goodman Theatre still published by the Chicago Sun-Times, TheaterMania\'s Joan Marcus image of Dennehy and Franz, and documentary cover art from the 2000 filmed version.',
       },
       {
         label: 'Archive note',
-        text: 'This page stays intentionally text-led for now because the strongest surviving material is still documentary rather than photographic. If stronger Goodman or Broadway stills surface later, this is one of the first productions that should expand visually.',
+        text: 'The gallery distinguishes production stills from documentary art so the page can carry at least five visual assets without blurring the Goodman, Broadway, and filmed-version record.',
       },
     ],
     reviews: [
@@ -2176,6 +2287,27 @@ const productionSeeds: Record<string, ProductionSeed> = {
         note: 'Elizabeth Franz profile during the run',
       },
       {
+        source: 'Chicago Sun-Times',
+        href: 'https://chicago.suntimes.com/2020/4/16/21224072/brian-dennehy-dead-chicago-goodman-theatre-iceman-cometh-robert-falls-eugene-oneill-death-salesman',
+        summary:
+          'Neil Steinberg\'s Dennehy remembrance confirms the 1998 Goodman staging, the Broadway transfer, the 450-performance Dennehy run, and the Falls-Dennehy collaboration.',
+        note: 'Includes Liz Lauren Goodman production photo',
+      },
+      {
+        source: 'TheaterMania',
+        href: 'https://www.theatermania.com/news/elizabeth-franz-who-redefined-linda-loman-in-death-of-a-salesman-dies-at-84_1812248/',
+        summary:
+          'David Gordon\'s Elizabeth Franz obituary focuses on her Tony-winning Linda Loman opposite Dennehy in the 1999 Robert Falls revival.',
+        note: 'Includes Joan Marcus Dennehy-Franz image',
+      },
+      {
+        source: 'Tony Awards',
+        href: 'https://www.tonyawards.com/winners/year/1999/category/any/show/any/',
+        summary:
+          'The official 1999 winners page verifies the production\'s wins for Brian Dennehy, Elizabeth Franz, Robert Falls, and Best Revival of a Play.',
+        note: 'Official awards record',
+      },
+      {
         source: 'Archive timeline and credits',
         summary:
           'Internal source records consistently treat the production as a Goodman-built revival that became a Tony-winning Broadway transfer and later London remount.',
@@ -2185,6 +2317,16 @@ const productionSeeds: Record<string, ProductionSeed> = {
     externalSources: [
       { label: 'The New Yorker: Arthur Miller and the Making of Willy Loman', href: 'https://www.newyorker.com/magazine/1999/01/25/making-willy-loman' },
       { label: 'The New Yorker: Leading Ladies', href: 'https://www.newyorker.com/magazine/1999/03/15/leading-ladies-3' },
+      {
+        label: 'Chicago Sun-Times: Dennehy and Falls collaboration',
+        href: 'https://chicago.suntimes.com/2020/4/16/21224072/brian-dennehy-dead-chicago-goodman-theatre-iceman-cometh-robert-falls-eugene-oneill-death-salesman',
+      },
+      {
+        label: 'TheaterMania: Elizabeth Franz and Death of a Salesman',
+        href: 'https://www.theatermania.com/news/elizabeth-franz-who-redefined-linda-loman-in-death-of-a-salesman-dies-at-84_1812248/',
+      },
+      { label: 'Tony Awards: 1999 winners', href: 'https://www.tonyawards.com/winners/year/1999/category/any/show/any/' },
+      { label: 'Movie-O-Zone: 2000 filmed-version cover', href: 'https://movieozone.com/products/death-of-a-salesman-2000' },
       { label: 'Playbill archive', href: 'https://playbill.com' },
     ],
     pressQuotes: [
@@ -2341,7 +2483,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'finishing-the-picture': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'Arthur Miller\'s final play arrived at the Goodman as a world premiere in fall 2004, giving Falls a late-career Miller event built around movie-set collapse, celebrity damage, and the wreckage behind American mythmaking.',
     publicSummary:
@@ -2710,7 +2852,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'lobby-hero': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       "Lobby Hero brought Kenneth Lonergan's shaggy off-Broadway breakthrough to Goodman's Owen Theatre in 2002, giving Falls a compact, morally slippery city comedy about authority, loyalty, and people who keep talking past the truth.",
     publicSummary:
@@ -2733,13 +2875,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         orientation: 'landscape',
         priority: true,
         kind: 'production-still',
-      },
-      {
-        src: lobbyHeroTitleTreatmentAsset,
-        alt: 'Lobby Hero title treatment in compact black type.',
-        caption: 'Goodman title-treatment asset for Lobby Hero.',
-        orientation: 'landscape',
-        kind: 'art',
       },
       {
         src: lobbyHeroLanceBaker,
@@ -2774,6 +2909,13 @@ const productionSeeds: Record<string, ProductionSeed> = {
         alt: 'Robert Falls headshot from Goodman artist assets.',
         caption: 'Robert Falls, director of the Goodman production.',
         orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: lobbyHeroTitleTreatmentAsset,
+        alt: 'Lobby Hero title treatment in compact black type.',
+        caption: 'Goodman title-treatment asset for Lobby Hero.',
+        orientation: 'landscape',
         kind: 'art',
       },
     ],
@@ -2831,10 +2973,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Owen Theatre intimacy',
         detail: 'Its scale is part of its identity: four characters, one lobby, and a moral argument that gets funnier and uglier the longer the night goes on.',
       },
-      {
-        label: 'Lean but specific archive record',
-        detail: 'Surviving records for this run are compact, but include trustworthy run data, full casting, creative credits, synopsis, runtime, and an official production still.',
-      },
     ],
     contextNotes: [
       {
@@ -2844,10 +2982,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Off-Broadway context',
         text: 'Goodman described Lobby Hero as a hit of the 2001 off-Broadway season, which helps place the production as a near-contemporary Chicago staging rather than a later revival of an already canonized text.',
-      },
-      {
-        label: 'Image limits',
-        text: 'The page now uses seven Goodman-hosted assets: the production image, title treatment, four cast headshots, and a Robert Falls artist portrait.',
       },
     ],
     reviews: [
@@ -2903,7 +3037,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'hughie': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       "Hughie gave Falls and Brian Dennehy a smaller O'Neill chamber piece in 2004: a one-hour nocturnal encounter about luck, loneliness, and self-invention, staged in Goodman's Owen Theatre.",
     publicSummary:
@@ -2978,10 +3112,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         detail: 'The page documents a different register of one of Falls\'s defining actor collaborations: bruised charisma, memory, and late-night self-mythologizing instead of large family or ensemble collapse.',
       },
       {
-        label: 'Text-forward archive page',
-        detail: 'Surviving documentation for Hughie is concentrated rather than image-rich, so this page leans on synopsis, cast, and context rather than a full photo gallery.',
-      },
-      {
         label: "O'Neill continuity",
         detail: "The production helps connect the major O'Neill landmarks on the site by showing the collaboration reaching not only headline revivals but also smaller, actor-driven works.",
       },
@@ -3037,7 +3167,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'the-guys': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       "The Guys brought Anne Nelson's immediate post-9/11 drama to Chicago in 2002, with Falls directing a concentrated two-character civic elegy co-presented by Goodman and Northlight in the Owen Theatre.",
     publicSummary:
@@ -3116,10 +3246,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         detail: 'Set against Lobby Hero and Long Day\'s Journey into Night, The Guys shows another side of Falls\'s 2002 range: immediate social response instead of ironic urban comedy or canonical epic.',
       },
       {
-        label: 'Lean but meaningful archive record',
-        detail: 'The surviving local packet is small, but the Goodman record clearly preserves the title\'s run, cast, co-producing context, and why it was staged when it was.',
-      },
-      {
         label: 'Chicago within a national response',
         detail: 'The Goodman staging belongs to the larger early life of Anne Nelson\'s play, which moved quickly from its New York premiere into productions and a film adaptation while September 11 remained a live public wound.',
       },
@@ -3132,10 +3258,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: '9/11 context',
         text: 'The play\'s action centers on a fire chief writing eulogies for men lost on September 11, which makes the production one of the archive\'s clearest records of direct response to a still-recent national event.',
-      },
-      {
-        label: 'Dating correction',
-        text: 'The production record is keyed to the official Goodman run dates, September 10-22, 2002; any broader timeline grouping should treat this as a 2002 production rather than a 2003 title.',
       },
     ],
     externalSources: [
