@@ -45,9 +45,9 @@ const gallerySlugs = [
   'death-of-a-salesman',
   'the-iceman-cometh',
   'king-lear',
-  'luna-gale',
+  'amadeus',
   'uncle-vanya',
-  'the-seagull',
+  'don-giovanni',
   '2666',
   'the-cherry-orchard',
 ];
@@ -148,8 +148,7 @@ const selectedProductions = gallerySlugs
                 <div class="absolute top-3 left-3">
                   <span class:list={[
                     'inline-flex items-center px-2.5 py-1 font-display text-[10px] font-semibold uppercase tracking-[0.18em]',
-                    item.statusLabel === 'Upcoming' && 'bg-brand-gold text-brand-ink',
-                    item.statusLabel === 'Running'  && 'bg-brand-oxbloodBright text-brand-cream',
+                    item.statusLabel === 'Upcoming' ? 'bg-brand-gold text-brand-ink' : 'bg-brand-oxbloodBright text-brand-cream',
                   ]}>
                     {item.statusLabel}
                   </span>
@@ -167,7 +166,7 @@ const selectedProductions = gallerySlugs
 
       {recentlyShows.length > 0 && (
         <div class="border-t border-brand-ink/10 pt-8 mb-10">
-          <p class="text-[11px] uppercase tracking-[0.2em] text-brand-ink/40 font-semibold mb-5">Recently Completed</p>
+          <p class="text-[11px] uppercase tracking-[0.2em] text-brand-ink/40 font-semibold mb-5">Recent Work</p>
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {recentlyShows.map((item) => (
               <a href={item.href} class="group flex items-center gap-4 border border-brand-ink/10 bg-white/70 px-4 py-3 hover:border-brand-oxblood/25 transition-colors">
@@ -206,7 +205,7 @@ const selectedProductions = gallerySlugs
     <div class="section-container">
       <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
         <div>
-          <p class="section-eyebrow">Five Decades on Stage</p>
+          <p class="section-eyebrow">Across the Archive</p>
           <h2 class="section-heading">Selected Productions</h2>
         </div>
         <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/60 max-w-xs text-right hidden sm:block">
@@ -283,7 +282,7 @@ const selectedProductions = gallerySlugs
         </div>
         <div class="border border-brand-cream/16 bg-brand-cream/[0.04] px-5 py-5">
           <div class="font-display text-4xl text-brand-goldBright leading-none">#1</div>
-          <div class="mt-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream/60">Regional theater in the U.S. — <em class="font-serif not-italic">Time</em></div>
+          <div class="mt-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream/60">Regional Theatre in the U.S. — <em class="font-serif not-italic">Time</em>, 2003</div>
         </div>
       </div>
       <a href="/credits#goodman" class="btn-primary mt-10 inline-flex">Full Goodman Credits</a>

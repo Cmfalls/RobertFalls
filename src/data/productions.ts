@@ -80,6 +80,8 @@ import shiningCityGoodman from '../images/shining-city/shining-city-goodman.webp
 import shiningCityShowArt from '../images/shining-city/shining-city-show-art.png';
 import shiningCityDoor from '../images/shining-city/shining-city-door.jpg';
 import franksHomeEnsemble from '../images/franks-home/franks-home-ensemble.webp';
+import franksHomeFamily from '../images/franks-home/franks-home-family.webp';
+import franksHomeHandshake from '../images/franks-home/franks-home-handshake.webp';
 import franksHomeWorktable from '../images/franks-home/franks-home-worktable.webp';
 import franksHomeShowArt from '../images/franks-home/franks-home-show-art.webp';
 import franksHomeWeller from '../images/franks-home/franks-home-weller.webp';
@@ -3211,7 +3213,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     summary:
       'Frank\'s Home turns Frank Lloyd Wright into a late-life family reckoning: a Richard Nelson world premiere in which artistic grandeur, domestic failure, and American self-mythology all share the same desert room.',
     publicSummary:
-      'Falls directs Richard Nelson\'s lyrical portrait of Frank Lloyd Wright, following the architect through family rupture, professional uncertainty, and the impossible hope of building a truer home.',
+      'Falls directs Richard Nelson\'s intimate Frank Lloyd Wright drama as a family confrontation staged in the long shadow of genius, vanity, and collapse.',
     synopsis:
       'It is summer 1923. Frank Lloyd Wright has left Chicago for California, hoping to revive his career, repair his relationship with his adult children, and settle into a new life after the triumph of Tokyo\'s Imperial Hotel. But family grievances still burn, and when news arrives that the hotel may have been destroyed in an earthquake, the play turns into a reckoning over art, legacy, and what Wright was never able to build for the people closest to him.',
     fallsContext:
@@ -3219,7 +3221,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'A 2006 Richard Nelson world premiere at Goodman that transferred intact to Playwrights Horizons, extending Falls\'s archive as a director of new plays built for Chicago and then carried east.',
     story:
-      'Frank\'s Home matters because it treats a monumental cultural figure as a private problem before it treats him as a legend. Nelson\'s script locates Wright at a moment when his public image still gleams but his family life is full of resentment, debt, vanity, and emotional wreckage. The local source trail also gives the production a fuller life than the old seed suggested: a Goodman world premiere in the Owen Theatre, a documented critical response across Chicago, and then an intact transfer to Playwrights Horizons in New York with Peter Weller, Harris Yulin, Mary Beth Fisher, Maggie Siff, and Jay Whittaker all moving with Falls. That transfer story helps the page read less like a one-off commission and more like a serious chapter in Falls\'s new-work record.',
+      'Frank\'s Home matters because it treats a monumental cultural figure as a private problem before it treats him as a legend. Nelson\'s script locates Wright at a moment when his public image still gleams but his family life is full of resentment, debt, vanity, and emotional wreckage. The production itself follows that same tension: Thomas Lynch\'s spare, desert-floor setting keeps the evening actor-led and exposed, while Peter Weller\'s Wright is constantly framed against the people forced to live with his self-invention. The local source trail also gives the production a fuller life than the old seed suggested: a Goodman world premiere in the Owen Theatre, a documented critical response across Chicago, and then an intact transfer to Playwrights Horizons in New York with Weller, Harris Yulin, Mary Beth Fisher, Maggie Siff, and Jay Whittaker all moving with Falls. That transfer story helps the page read less like a one-off commission and more like a serious chapter in Falls\'s new-work record.',
     venueAnchor: 'Goodman Theatre and Playwrights Horizons',
     eraLabel: 'National and international period',
     images: [
@@ -3227,15 +3229,49 @@ const productionSeeds: Record<string, ProductionSeed> = {
         src: franksHomeEnsemble,
         alt: 'The ensemble of Frank\'s Home gathers on a sparse desert-like stage under a wide dusk sky.',
         caption: 'A full-company still that makes the play\'s family geometry and open desert atmosphere visible at once.',
+        photographer: 'Michael Brosilow / Goodman Theatre',
         orientation: 'landscape',
         priority: true,
+        kind: 'production-still',
+      },
+      {
+        src: franksHomeHandshake,
+        alt: 'Jeremy Strong, Maggie Siff, and Peter Weller meet in a charged family moment in Frank\'s Home.',
+        caption: 'A deceptively cordial family encounter that lets the page show the production as drama, not just biography.',
+        photographer: 'Michael Brosilow / Goodman Theatre',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: franksHomeFamily,
+        alt: 'Peter Weller, Harris Yulin, Mary Beth Fisher, and Maggie Siff appear together in a tense family tableau from Frank\'s Home.',
+        caption: 'A family tableau that broadens the page beyond Wright alone and makes the play\'s generational pressure visible.',
+        photographer: 'Michael Brosilow / Goodman Theatre',
+        orientation: 'landscape',
         kind: 'production-still',
       },
       {
         src: franksHomeWorktable,
         alt: 'Three men in Frank\'s Home sit and sketch on a sparse stage covered in pale ground.',
         caption: 'A working image of the production\'s men thinking through legacy, architecture, and damage rather than sentimental reconciliation.',
+        photographer: 'Michael Brosilow / Goodman Theatre',
         orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: franksHomeWeller,
+        alt: 'Peter Weller as Frank Lloyd Wright sits in costume in a close production still from Frank\'s Home.',
+        caption: 'Peter Weller as Wright, carrying the production\'s uneasy blend of grandeur and exhaustion.',
+        photographer: 'Michael Brosilow / Goodman Theatre',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: franksHomePortrait,
+        alt: 'Peter Weller as Frank Lloyd Wright in a pale suit and white hat against a warm sky in Frank\'s Home.',
+        caption: 'A portrait image of Weller that leans harder into Wright as icon, not just father or patient.',
+        photographer: 'Michael Brosilow / Goodman Theatre',
+        orientation: 'portrait',
         kind: 'production-still',
       },
       {
@@ -3244,20 +3280,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         caption: 'Show art built from the production imagery and preserved in the local source folder.',
         orientation: 'landscape',
         kind: 'art',
-      },
-      {
-        src: franksHomeWeller,
-        alt: 'Peter Weller as Frank Lloyd Wright sits in costume in a close production still from Frank\'s Home.',
-        caption: 'Peter Weller as Wright, carrying the production\'s uneasy blend of grandeur and exhaustion.',
-        orientation: 'landscape',
-        kind: 'production-still',
-      },
-      {
-        src: franksHomePortrait,
-        alt: 'Peter Weller as Frank Lloyd Wright in a pale suit and white hat against a warm sky in Frank\'s Home.',
-        caption: 'A portrait image of Weller that leans harder into Wright as icon, not just father or patient.',
-        orientation: 'portrait',
-        kind: 'production-still',
       },
     ],
     collaborators: [
@@ -3270,9 +3292,10 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     quickFacts: [
       { label: 'World premiere', value: 'Nov 25 - Dec 23, 2006' },
-      { label: 'Venue', value: 'Owen Theatre, Goodman Theatre' },
+      { label: 'Transfer', value: 'Playwrights Horizons, Jan - Feb 2007' },
+      { label: 'Original venue', value: 'Owen Theatre, Goodman Theatre' },
+      { label: 'Documented stagings', value: '2' },
       { label: 'Runtime', value: '1 hr 45 min' },
-      { label: 'Afterlife', value: 'Playwrights Horizons, Jan - Feb 2007' },
     ],
     cast: [
       { role: 'Frank Lloyd Wright', name: 'Peter Weller' },
@@ -3327,6 +3350,10 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Official framing',
         text: 'Goodman presents the play as a lyrical, heartbreaking portrait of Wright as a visionary who could create a new architectural vocabulary but not a durable home for his own family.',
+      },
+      {
+        label: 'Visual language',
+        text: 'The preserved production stills show Falls and designer Thomas Lynch resisting period clutter in favor of a nearly bare, desert-floor stage and a wide horizon line, keeping the focus on family argument rather than museum reconstruction.',
       },
       {
         label: 'Story setting',
@@ -3404,10 +3431,12 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         quote: 'A thoroughly invigorating, tightly focused piece of Chekhovian drama.',
         source: 'Chicago Tribune',
+        href: 'https://www.theatreinchicago.com/franks-home/3300/',
       },
       {
         quote: 'This cast is exemplary, and Robert Falls\' direction is brisk and spare.',
         source: 'Daily Herald',
+        href: 'https://www.theatreinchicago.com/franks-home/3300/',
       },
       {
         quote: 'A sensitive portrait of a middle-aged man.',

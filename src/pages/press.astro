@@ -14,7 +14,7 @@ const categoryLabels: Record<PressCategory, string> = {
 ---
 
 <BaseLayout
-  title="Press - Robert Falls"
+  title="Press — Robert Falls"
   description="A curated press archive of profiles, reviews, retrospectives, and current coverage following Robert Falls from the Goodman years through his present freelance work."
 >
   <section class="bg-brand-oxbloodDeep text-brand-cream relative overflow-hidden">
@@ -33,19 +33,34 @@ const categoryLabels: Record<PressCategory, string> = {
     </div>
   </section>
 
+  <nav class="bg-brand-cream border-b border-brand-ink/10 sticky top-20 md:top-24 z-30 backdrop-blur-sm" aria-label="Jump to press section">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-x-5 gap-y-1 flex-wrap text-xs">
+      <span class="uppercase tracking-[0.16em] text-brand-ink/40 hidden sm:inline">Jump to</span>
+      <a href="#press-profiles" class="font-display font-semibold uppercase tracking-[0.14em] text-brand-oxblood/75 hover:text-brand-oxblood transition-colors">Profiles</a>
+      <a href="#press-reviews" class="font-display font-semibold uppercase tracking-[0.14em] text-brand-oxblood/75 hover:text-brand-oxblood transition-colors">Reviews</a>
+      <a href="#press-retrospectives" class="font-display font-semibold uppercase tracking-[0.14em] text-brand-oxblood/75 hover:text-brand-oxblood transition-colors">Retrospectives</a>
+      <a href="#press-announcements" class="font-display font-semibold uppercase tracking-[0.14em] text-brand-oxblood/75 hover:text-brand-oxblood transition-colors">Announcements</a>
+    </div>
+  </nav>
+
   <section class="section-container">
     <div class="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_18rem] lg:items-start">
       <div>
         <h2 class="font-display text-3xl text-brand-ink mb-6">Press Kit</h2>
         <div class="bg-brand-cream border border-brand-ink/15 p-7 mb-6">
-          <p class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-3">Official Bio - for use in print</p>
-          <p class="font-serif text-brand-ink/80 leading-relaxed">
+          <p class="text-xs uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-3">Official Bio — for use in print</p>
+          <p class="font-serif text-brand-ink/80 leading-relaxed mb-4">
             Robert Falls is a Tony Award-winning theatre director and former Artistic Director of
-            Chicago&apos;s Goodman Theatre. His work spans Broadway, Chicago, opera, and large-scale
+            Chicago&apos;s Goodman Theatre (1986–2022). His work spans Broadway, Chicago, opera, and large-scale
             new-play development, including landmark productions of <em>Death of a Salesman</em>,
             <em>The Iceman Cometh</em>, <em>Aida</em>, and <em>2666</em>. He continues to direct
             freelance work, including <em>Amadeus</em> at Steppenwolf Theatre in 2025, <em>Holiday</em>
             at the Goodman in 2026, and Lyric Opera of Chicago&apos;s 2026 revival of <em>Don Giovanni</em>.
+          </p>
+          <p class="font-serif text-brand-ink/65 text-sm leading-relaxed">
+            Falls holds the Drama Desk Award, Obie Award, Helen Hayes Award, and O&apos;Neill Medallion. He is a
+            Fellow of the American Academy of Arts and Sciences and a Theatre Hall of Fame inductee.
+            The Chicago Tribune has named him &ldquo;Chicago&apos;s most essential director.&rdquo;
           </p>
         </div>
         <p class="text-sm text-brand-ink/60 max-w-2xl">
@@ -157,7 +172,7 @@ const categoryLabels: Record<PressCategory, string> = {
               {item.outlet} &middot; {item.dateLabel}
             </div>
             <h3 class={`font-serif leading-snug mt-3 ${index === 0 ? 'text-3xl md:text-[2.2rem] text-brand-cream' : 'text-2xl text-brand-ink'}`}>
-              <a href={item.url} target="_blank" rel="noopener" class={index === 0 ? 'hover:text-brand-goldBright transition-colors' : 'hover:text-brand-oxblood transition-colors'}>
+              <a href={item.url} target="_blank" rel="noopener noreferrer" class={index === 0 ? 'hover:text-brand-goldBright transition-colors' : 'hover:text-brand-oxblood transition-colors'}>
                 {item.title}
               </a>
             </h3>
@@ -168,7 +183,7 @@ const categoryLabels: Record<PressCategory, string> = {
               <a
                 href={item.url}
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class={`text-sm font-semibold transition-colors ${index === 0 ? 'text-brand-goldBright hover:text-brand-cream' : 'text-brand-oxblood hover:text-brand-oxbloodBright'}`}
               >
                 Open article &rarr;
@@ -181,7 +196,7 @@ const categoryLabels: Record<PressCategory, string> = {
 
     <div class="space-y-16">
       {pressSections.map((section) => (
-        <section>
+        <section id={`press-${section.category === 'retrospective' ? 'retrospectives' : section.category + 's'}`} class="scroll-mt-32 md:scroll-mt-36">
           <div class="flex items-end justify-between gap-4 flex-wrap mb-6">
             <div>
               <p class="section-eyebrow">{categoryLabels[section.category]}</p>
@@ -201,7 +216,7 @@ const categoryLabels: Record<PressCategory, string> = {
                   <span class="text-brand-ink/45">{item.dateLabel}</span>
                 </div>
                 <h3 class="font-serif text-2xl text-brand-ink leading-snug mt-3">
-                  <a href={item.url} target="_blank" rel="noopener" class="hover:text-brand-oxblood transition-colors">
+                  <a href={item.url} target="_blank" rel="noopener noreferrer" class="hover:text-brand-oxblood transition-colors">
                     {item.title}
                   </a>
                 </h3>
@@ -218,7 +233,7 @@ const categoryLabels: Record<PressCategory, string> = {
                   <a
                     href={item.url}
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     class="text-sm font-semibold text-brand-oxblood hover:text-brand-oxbloodBright transition-colors"
                   >
                     Read article &rarr;

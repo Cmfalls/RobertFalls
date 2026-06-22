@@ -20,6 +20,7 @@ dist
 /Desire Under the Elms/
 /Don Giovanni/
 /Frank's Home/
+/Frank’s Home/
 /King Lear/
 /Luna Gale/
 /Measure for Measure/
@@ -33,6 +34,7 @@ dist
 /The Seagull/
 /Uncle Vanya/
 /We're Only Alive for a Short Amount of Time/
+/We're Only Alive for a Short Amount of Time/
 /Winters Tale/
 # Loose image/video drops at project root
 /*.jpg
@@ -44,3 +46,4 @@ dist
 /*.gif
 /*.svg
 /*.docx
+/We’re Only Alive for a Short Amount of Time/
