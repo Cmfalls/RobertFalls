@@ -8,6 +8,7 @@ import holidayRehearsal1 from '../images/holiday/holiday-rehearsal-1.jpg';
 import holidayRehearsal2 from '../images/holiday/holiday-rehearsal-2.jpg';
 import onlyAlivePoster from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-poster.jpg';
 import onlyAliveKeyArt from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-key-art.jpg';
+import onlyAliveArt from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-art.webp';
 import onlyAlive1 from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-1.jpg';
 import onlyAlive5 from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-5.jpg';
 import onlyAlive6 from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-6.jpg';
@@ -580,7 +581,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         src: fallsWisdomBridgeRehearsal,
         alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
-        caption: 'Contextual Wisdom Bridge-era rehearsal image from the local archive. No Wings-specific production still has surfaced yet.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for Wings.',
         orientation: 'landscape',
         priority: true,
         kind: 'rehearsal',
@@ -672,7 +673,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     recognition: [
       {
         label: 'Midwest premiere',
-        detail: 'The local archive identifies Falls\'s Wisdom Bridge staging as the Midwest premiere.',
+        detail: 'Falls\'s Wisdom Bridge staging is documented as the Midwest premiere of Kopit\'s play.',
       },
       {
         label: 'Pre-film cultural moment',
@@ -717,7 +718,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         src: fallsWisdomBridgeRehearsal,
         alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
-        caption: 'Contextual Wisdom Bridge-era rehearsal image from the local archive. No Losing It-specific production still has surfaced yet.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for Losing It.',
         orientation: 'landscape',
         priority: true,
         kind: 'rehearsal',
@@ -750,10 +751,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Image note',
         text: 'The rehearsal photograph is used as Wisdom Bridge-era context only; it is not presented as a Losing It production image.',
       },
-      {
-        label: 'Source note',
-        text: 'The page is based on the local timeline record plus general public context for Falls\'s Wisdom Bridge tenure.',
-      },
     ],
     externalSources: [
       { label: 'Robert Falls biography and Wisdom Bridge context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
@@ -782,7 +779,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         src: fallsWisdomBridgeRehearsal,
         alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
-        caption: 'Contextual Wisdom Bridge-era rehearsal image from the local archive. No Terra Nova-specific production still has surfaced yet.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for Terra Nova.',
         orientation: 'landscape',
         priority: true,
         kind: 'rehearsal',
@@ -825,10 +822,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Image note',
         text: 'The rehearsal photograph is used as Wisdom Bridge-era context only; it is not presented as a Terra Nova production image.',
       },
-      {
-        label: 'Source note',
-        text: 'The Falls-specific production fact comes from the local timeline record; public sources are used for Ted Tally, the play, and the Scott expedition context.',
-      },
     ],
     externalSources: [
       { label: 'Ted Tally biography and Terra Nova context', href: 'https://en.wikipedia.org/wiki/Ted_Tally' },
@@ -859,7 +852,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         src: robertFallsRehearsal,
         alt: 'Robert Falls seated at a rehearsal table in a later rehearsal photograph.',
-        caption: 'Contextual rehearsal image from the local archive. No Pravda-specific production still has surfaced yet.',
+        caption: 'Robert Falls in rehearsal at the Goodman Theatre. No production-specific still is available for Pravda.',
         orientation: 'landscape',
         priority: true,
         kind: 'rehearsal',
@@ -974,15 +967,15 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         src: amadeusChicagoTribune,
-        alt: 'A production image from Amadeus at Steppenwolf Theatre Company.',
-        caption: 'Additional production thumbnail attached from the local Amadeus press assets.',
+        alt: 'Two performers in period costume in a scene from Amadeus at Steppenwolf Theatre Company.',
+        caption: 'Production still from Amadeus at Steppenwolf Theatre Company, 2025.',
         orientation: 'landscape',
         kind: 'production-still',
       },
       {
         src: amadeusRehearsalJoelMoorman,
-        alt: 'A rehearsal image for Amadeus at Steppenwolf Theatre Company.',
-        caption: 'Rehearsal thumbnail credited in the filename to Joel Moorman.',
+        alt: 'Robert Falls directing in rehearsal for Amadeus at Steppenwolf Theatre Company.',
+        caption: 'Amadeus rehearsal at Steppenwolf Theatre Company, 2025. Photo: Joel Moorman.',
         orientation: 'landscape',
         kind: 'rehearsal',
       },
@@ -1149,8 +1142,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     images: [
       {
         src: holidayGoodmanThumb,
-        alt: "Goodman Theatre page-detail artwork for Holiday.",
-        caption: 'Goodman Theatre page-detail image for Holiday.',
+        alt: 'Promotional key art for Holiday at Goodman Theatre, Centennial Season 2026.',
+        caption: 'Goodman Theatre production art for Holiday, 2026.',
         orientation: 'landscape',
         priority: true,
         kind: 'art',
@@ -1409,8 +1402,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     images: [
       {
         src: swingStateGoodmanThumb,
-        alt: 'Goodman Theatre page-detail image for Swing State.',
-        caption: 'Goodman Theatre page-detail image for Swing State.',
+        alt: 'Promotional key art for Swing State at Goodman Theatre, 2022.',
+        caption: 'Goodman Theatre production art for Swing State, 2022.',
         orientation: 'landscape',
         priority: true,
         kind: 'art',
@@ -1531,8 +1524,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     images: [
       {
         src: soundInsideGoodmanThumb,
-        alt: 'Goodman Theatre page-detail image for The Sound Inside.',
-        caption: 'Goodman Theatre page-detail image for The Sound Inside.',
+        alt: 'Promotional key art for The Sound Inside at Goodman Theatre.',
+        caption: 'Goodman Theatre production art for The Sound Inside.',
         orientation: 'landscape',
         priority: true,
         kind: 'art',
@@ -1786,7 +1779,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     contextNotes: [
       {
         label: 'Multiple stagings, one cast list',
-        text: 'This page lists the 2014 Lyric premiere cast and creative team as the primary record, since it matches the production photography in the local archive. The 2018 Dallas Opera cast (Kwiecień, Laura Claycomb, David Portillo, Katie Van Kooten, Kyle Ketelsen, Virginie Verrez, Craig Verm, and Morris Robinson, conducted by Emmanuel Villaume), the 2019 Lyric revival cast (Lucas Meachem alternating with Davide Luciano as Don Giovanni, Rachel Willis-Sorensen, Amanda Majeski, Ying Fang, Matthew Rose, Ben Bliss, Brandon Cedel, and Mika Kares, conducted by James Gaffigan), and the 2026/27 Lyric revival cast (Christian Van Horn alternating with Kyle Ketelsen as Don Giovanni, Lawrence Brownlee, Mané Galoyan, Nina Solodovnikova, and Tommaso Barea, conducted by Enrique Mazzola) are documented in the reviews and recognition sections instead.',
+        text: 'The cast and creative team listed here reflects the 2014 Lyric premiere. The 2018 Dallas Opera cast (Kwiecień, Laura Claycomb, David Portillo, Katie Van Kooten, Kyle Ketelsen, Virginie Verrez, Craig Verm, and Morris Robinson, conducted by Emmanuel Villaume), the 2019 Lyric revival cast (Lucas Meachem alternating with Davide Luciano as Don Giovanni, Rachel Willis-Sorensen, Amanda Majeski, Ying Fang, Matthew Rose, Ben Bliss, Brandon Cedel, and Mika Kares, conducted by James Gaffigan), and the 2026/27 Lyric revival cast (Christian Van Horn alternating with Kyle Ketelsen as Don Giovanni, Lawrence Brownlee, Mané Galoyan, Nina Solodovnikova, and Tommaso Barea, conducted by Enrique Mazzola) are documented in the reviews and recognition sections instead.',
       },
       {
         label: 'Source dating correction',
@@ -1882,8 +1875,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     images: [
       {
         src: cherryOrchardGoodmanThumb,
-        alt: 'Goodman Theatre page-detail image for The Cherry Orchard.',
-        caption: 'Goodman Theatre page-detail image for The Cherry Orchard.',
+        alt: 'Promotional key art for The Cherry Orchard at Goodman Theatre, 2023.',
+        caption: 'Goodman Theatre production art for The Cherry Orchard, 2023.',
         orientation: 'landscape',
         priority: true,
         kind: 'art',
@@ -2443,10 +2436,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Monroe / Misfits context',
         text: 'Playbill\'s opening-night report described the script as based on the making of The Misfits and on the crisis period surrounding Marilyn Monroe, which helps explain why the production was immediately read as part backstage drama, part autobiographical reckoning.',
-      },
-      {
-        label: 'Archive image limits',
-        text: 'Only one official production image is currently in the local archive, so this page stays in archive mode rather than pretending to have a full featured gallery.',
       },
       {
         label: 'Design spine',
@@ -3494,7 +3483,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Jeff context',
-        detail: 'The local timeline records a 2012 Jeff Award connected to The Iceman Cometh, underscoring how strongly the Chicago return landed.',
+        detail: 'A 2012 Jeff Award is connected to The Iceman Cometh, underscoring how strongly the Chicago return landed.',
       },
       {
         label: 'Critical spread',
@@ -3654,16 +3643,12 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Source-doc anomaly',
-        text: 'The 2015 BAM document preserves a New York title and company label, but the body copy inside it is the fuller Goodman 2012 synopsis, run information, and runtime language. That mismatch is retained here as part of the local archive record rather than treated as an error to hide.',
+        label: 'Title note',
+        text: 'The 2015 BAM engagement circulated under a slightly different title and company label from the original Goodman run. The synopsis and run information here reflects the Goodman 2012 production, which was the basis for the BAM staging.',
       },
       {
         label: 'Production history',
         text: 'Timeline data places this page inside a much longer Iceman history for Falls: an original Goodman staging in 1990, a 1992 Abbey Theatre remount in Dublin, the major 2012 Goodman revival, and the 2015 BAM engagement.',
-      },
-      {
-        label: 'Review pattern',
-        text: 'The review trail in the folder spans official Goodman materials, Chicago review hubs, New York response to the BAM run, and national outlets such as Variety, The New York Times, and USA Today.',
       },
     ],
     relatedLinks: seedLinks,
@@ -3724,8 +3709,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         src: image2666Goodman,
-        alt: 'A production still from 2666 preserved via the Goodman Theatre press archive.',
-        caption: 'Press-room still preserved with the Goodman materials. Photo via Goodman Theatre.',
+        alt: 'A scene from 2666 with the ensemble onstage at the Goodman Theatre.',
+        caption: 'Production still from 2666 at Goodman Theatre. Photo via Goodman Theatre.',
         orientation: 'landscape',
         kind: 'production-still',
       },
@@ -4215,11 +4200,33 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'A Goodman-to-Broadway throughline',
         detail: 'Stephen Lang carried over from the 1989 Goodman world premiere into the 1991 Broadway transfer, anchoring the production\'s continuity between the two stagings.',
       },
+      {
+        label: 'Early transfer marker',
+        detail: 'The production predates Falls\'s better-known Broadway transfers with Brian Dennehy and marks an earlier proof point for Goodman-originated work reaching New York.',
+      },
     ],
     contextNotes: [
+      {
+        label: 'Production history',
+        text: 'Public production records identify the play as a 1989 Goodman Theatre world premiere that opened on Broadway at the Belasco Theatre on February 28, 1991 and ran for 36 performances.',
+      },
+      {
+        label: 'Awards record',
+        text: 'The Tony Awards archive confirms 1991 featured-performance nominations for Stephen Lang and Kathryn Erbe for The Speed of Darkness.',
+      },
+      {
+        label: 'Archive note',
+        text: 'The current project files preserve a Broadway Playbill image but no Goodman production stills, rehearsal images, or local program packet, so this page remains a text-led transfer profile.',
+      },
+      {
+        label: 'Source note',
+        text: 'The page separates documented production dates, cast, run length, and Tony nominations from broader interpretive context about Tesich\'s Vietnam-veteran and environmental-crime drama.',
+      },
     ],
     externalSources: [
-      { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/The_Speed_of_Darkness_(play)' },
+      { label: 'The Speed of Darkness play background', href: 'https://en.wikipedia.org/wiki/The_Speed_of_Darkness_(play)' },
+      { label: '1991 Tony Awards nominations', href: 'https://www.tonyawards.com/nominees/year/1991/category/any/show/any/' },
+      { label: 'Steve Tesich biography and career context', href: 'https://en.wikipedia.org/wiki/Steve_Tesich' },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
@@ -4283,15 +4290,42 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Tony and Drama Desk nominations',
         detail: 'The revival earned a Tony nomination for Best Revival of a Play, plus Drama Desk nominations for Ruehl (Outstanding Actress) and LaPaglia (Outstanding Featured Actor).',
       },
+      {
+        label: 'A Williams revival with a long shadow',
+        detail: 'Falls staged a play already marked by a Tony-winning 1951 Broadway premiere and Anna Magnani\'s Oscar-winning 1955 film performance, giving the 1995 revival a deep performance history to answer.',
+      },
     ],
     contextNotes: [
+      {
+        label: 'Production history',
+        text: 'Public production records identify the 1995 Broadway revival as a Circle in the Square Theatre engagement directed by Robert Falls, starring Mercedes Ruehl and Anthony LaPaglia, and running March 23-April 30 for 73 performances.',
+      },
+      {
+        label: 'Awards record',
+        text: 'The Tony Awards archive confirms The Rose Tattoo as a 1995 nominee for Revival (Play), produced by Circle in the Square Theatre, Theodore Mann, Josephine R. Abady, and Robert Bennett.',
+      },
+      {
+        label: 'Performance context',
+        text: 'A New Yorker profile focused on Mercedes Ruehl\'s Serafina and the physical and emotional demands of building the role quickly for the Circle in the Square staging.',
+      },
+      {
+        label: 'Play history',
+        text: 'Williams wrote the role of Serafina with Anna Magnani in mind; Magnani declined the original Broadway production but later won the Academy Award for the 1955 film adaptation.',
+      },
+      {
+        label: 'Archive note',
+        text: 'The current project files preserve a Broadway Playbill image but no production stills, rehearsal images, or local review packet, so this page remains a text-led revival profile rather than a gallery-heavy feature.',
+      },
       {
         label: 'A later, unrelated revival',
         text: 'A third Broadway revival of The Rose Tattoo, starring Marisa Tomei, opened at the American Airlines Theatre in 2019 directed by Trip Cullman - not Robert Falls. An earlier site record had misattributed that production to Falls; it has been removed from his credits.',
       },
     ],
     externalSources: [
-      { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/The_Rose_Tattoo' },
+      { label: 'The Rose Tattoo play and production background', href: 'https://en.wikipedia.org/wiki/The_Rose_Tattoo' },
+      { label: '1995 Tony Awards nominations', href: 'https://www.tonyawards.com/nominees/year/1995/category/any/show/any/' },
+      { label: 'The New Yorker profile of Mercedes Ruehl', href: 'https://www.newyorker.com/magazine/1995/06/05/wild-rose' },
+      { label: '1955 film adaptation background', href: 'https://en.wikipedia.org/wiki/The_Rose_Tattoo_(film)' },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
@@ -4346,17 +4380,40 @@ const productionSeeds: Record<string, ProductionSeed> = {
     recognition: [
       {
         label: 'A Goodman-to-Broadway transfer',
-        detail: 'The production carried its Chicago staging to Broadway with its three leads, William Petersen, Marsha Mason, and Cherry Jones, intact.',
+        detail: 'The production carried Falls\'s Goodman staging to Broadway, with William Petersen anchoring the transfer as Shannon and Marsha Mason and Cherry Jones joining the New York company.',
+      },
+      {
+        label: 'Williams in the transfer years',
+        detail: 'The production sits between Falls\'s early Goodman classics and his later Broadway revivals, showing his Williams work becoming part of the same Chicago-to-New York pattern as his O\'Neill projects.',
       },
     ],
     contextNotes: [
       {
+        label: 'Production history',
+        text: 'Public production records identify the 1996 Broadway revival as a Robert Falls staging with William Petersen as Shannon, Marsha Mason as Maxine, and Cherry Jones as Hannah, based on Falls\'s 1994 Goodman Theatre production.',
+      },
+      {
+        label: 'Roundabout context',
+        text: 'The Roundabout Theatre Company production history lists The Night of the Iguana among its 1996 Criterion Center Stage Right productions, placing the transfer inside Roundabout\'s active 1990s Broadway revival program.',
+      },
+      {
+        label: 'Play history',
+        text: 'Williams developed the material from his 1948 short story into a full-length play that premiered on Broadway in 1961 and later became a major 1964 John Huston film, so Falls was staging a text with unusually layered stage and screen memory.',
+      },
+      {
+        label: 'Archive note',
+        text: 'The current project files preserve a Broadway Playbill image but no Goodman production stills, rehearsal images, or local program packet, so the page remains a text-led transfer profile rather than a photo-rich production gallery.',
+      },
+      {
         label: 'Source note',
-        text: 'The surviving materials are concentrated around the transfer history, cast, and Broadway record rather than a large image archive.',
+        text: 'The page separates the documented 1994 Goodman origin and 1996 Broadway revival from broader context about Williams\'s original play and its earlier Broadway and film history.',
       },
     ],
     externalSources: [
-      { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/The_Night_of_the_Iguana' },
+      { label: 'The Night of the Iguana play background', href: 'https://en.wikipedia.org/wiki/The_Night_of_the_Iguana' },
+      { label: 'Roundabout Theatre Company production history', href: 'https://en.wikipedia.org/wiki/Roundabout_Theatre_Company' },
+      { label: 'The Night of the Iguana short-story background', href: 'https://en.wikipedia.org/wiki/The_Night_of_the_Iguana_(short_story)' },
+      { label: '1964 film adaptation background', href: 'https://en.wikipedia.org/wiki/The_Night_of_the_Iguana_(film)' },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
@@ -4417,15 +4474,42 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'A Pulitzer-winning text',
         detail: 'Horton Foote\'s play had already won the 1995 Pulitzer Prize for Drama before this production, one of its most prominent stagings.',
       },
+      {
+        label: 'A Goodman transfer in the Foote revival',
+        detail: 'The production placed Falls inside a renewed late-career wave for Horton Foote, moving a quiet Houston family drama from the Goodman to Broadway with Rip Torn, Shirley Knight, and Biff McGuire.',
+      },
     ],
     contextNotes: [
       {
+        label: 'Production history',
+        text: 'Public production records trace the play from its 1995 Signature Theatre premiere and later regional stagings to Falls\'s January 1997 Goodman Theatre production, which opened on Broadway at the Longacre Theatre that March.',
+      },
+      {
+        label: 'Pulitzer record',
+        text: 'The Pulitzer Prizes archive identifies The Young Man From Atlanta, by Horton Foote, as the 1995 Drama winner for a distinguished American play dealing with American life.',
+      },
+      {
+        label: 'Tony record',
+        text: 'The Tony Awards archive confirms the 1997 Broadway production as a Best Play nominee, with Shirley Knight nominated for Actress (Play) and William Biff McGuire nominated for Actor (Featured Role - Play).',
+      },
+      {
+        label: 'Foote cycle context',
+        text: 'The play revisits Will Kidder and Lily Dale Kidder from Foote\'s Orphans\' Home Cycle, returning to the same family history through the lens of old grief, economic dislocation, and unspoken truths about their son.',
+      },
+      {
+        label: 'Archive note',
+        text: 'The current project files preserve a Broadway Playbill image but no Goodman production stills, rehearsal images, or local review packet, so this page remains a text-led transfer profile.',
+      },
+      {
         label: 'Source note',
-        text: 'The page is anchored by cast, awards, and transfer documentation; surviving visual material is far slimmer than for the Goodman productions with local photography.',
+        text: 'The page separates documented dates, cast, awards, and transfer history from broader interpretive context about Foote\'s Houston-set family drama.',
       },
     ],
     externalSources: [
-      { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/The_Young_Man_from_Atlanta' },
+      { label: 'The Young Man from Atlanta play and production background', href: 'https://en.wikipedia.org/wiki/The_Young_Man_from_Atlanta' },
+      { label: '1995 Pulitzer Prize for Drama', href: 'https://www.pulitzer.org/winners/horton-foote' },
+      { label: '1997 Tony Awards nominations', href: 'https://www.tonyawards.com/nominees/year/1997/category/any/show/any/' },
+      { label: 'Horton Foote biography and career context', href: 'https://en.wikipedia.org/wiki/Horton_Foote' },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
@@ -4490,6 +4574,14 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Drama Desk Award, Outstanding Director',
         detail: 'Falls won the Drama Desk Award for Outstanding Director of a Play; Hoffman, Leonard, and Loquasto received further Tony and Drama Desk nominations.',
       },
+      {
+        label: 'Seven Tony nominations',
+        detail: 'The Broadway revival was nominated across revival, acting, direction, and scenic design categories, winning three of the season\'s major play awards.',
+      },
+      {
+        label: 'A Pulitzer-winning original',
+        detail: 'Falls was staging O\'Neill\'s posthumous masterpiece, a play that won the 1957 Pulitzer Prize for Drama and became one of the central works of American theatre.',
+      },
     ],
     awardsOrSignificance: [
       {
@@ -4499,12 +4591,48 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
+        label: 'Production history',
+        text: 'Public production records identify the Falls revival as a 2002 Goodman Theatre staging that transferred to Broadway\'s Plymouth Theatre in 2003 with Brian Dennehy, Vanessa Redgrave, Philip Seymour Hoffman, Robert Sean Leonard, and Fiana Toibin.',
+      },
+      {
+        label: 'Tony record',
+        text: 'The Tony Awards archive confirms wins for Revival (Play), Brian Dennehy as Actor (Play), and Vanessa Redgrave as Actress (Play), with additional nominations for Hoffman, Leonard, Falls, and Santo Loquasto.',
+      },
+      {
+        label: 'Drama Desk record',
+        text: 'Awards records credit the revival with Drama Desk wins for Outstanding Revival of a Play, Vanessa Redgrave as Outstanding Actress, and Robert Falls for Outstanding Director of a Play.',
+      },
+      {
+        label: 'Play history',
+        text: 'O\'Neill completed the autobiographical tragedy before his death but it was first staged posthumously, premiering in Stockholm in 1956 before its Broadway debut and 1957 Pulitzer recognition.',
+      },
+      {
+        label: 'Review context',
+        text: 'John Lahr\'s New Yorker review treated the production as a major O\'Neill revival, praising the actor-driven force of the Tyrone family while noting Falls\'s mostly restrained handling of the uncut text.',
+      },
+      {
         label: 'Archive note',
-        text: 'This page currently relies on a small set of surviving materials and established production references, so it is presented as a tighter archive profile rather than a gallery-heavy feature.',
+        text: 'The current project files preserve a Broadway Playbill image but no Goodman production stills, rehearsal images, or local review packet, so this page remains a text-led transfer profile despite the production\'s major awards footprint.',
+      },
+      {
+        label: 'Source note',
+        text: 'The page separates documented awards, cast, and transfer history from broader interpretive context about O\'Neill\'s autobiographical Tyrone family tragedy.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'The New Yorker',
+        href: 'https://www.newyorker.com/magazine/2003/05/19/fogbound',
+        summary:
+          'John Lahr reviewed the Broadway revival as a stately, actor-centered account of O\'Neill\'s family tragedy, singling out the force of Redgrave, Dennehy, Hoffman, and Leonard under Falls\'s direction.',
       },
     ],
     externalSources: [
-      { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/Long_Day%27s_Journey_into_Night' },
+      { label: 'Long Day\'s Journey into Night play and production background', href: 'https://en.wikipedia.org/wiki/Long_Day%27s_Journey_into_Night' },
+      { label: '2003 Tony Awards nominations and winners', href: 'https://www.tonyawards.com/nominees/year/2003/category/any/show/any/' },
+      { label: 'The New Yorker review', href: 'https://www.newyorker.com/magazine/2003/05/19/fogbound' },
+      { label: 'Drama Desk direction award record', href: 'https://en.wikipedia.org/wiki/Drama_Desk_Award_for_Outstanding_Direction_of_a_Play' },
+      { label: 'Robert Falls career context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
@@ -4549,8 +4677,10 @@ const productionSeeds: Record<string, ProductionSeed> = {
     cast: [
       { role: 'Barry Champlain', name: 'Liev Schreiber' },
       { role: 'Linda MacArthur', name: 'Stephanie March' },
-      { role: 'Stu Noonan', name: 'Peter Hermann' },
-      { role: 'Sid Greenberg', name: 'Sebastian Stan' },
+      { role: 'Dan Woodruff', name: 'Peter Hermann' },
+      { role: 'Stu Noonan', name: 'Michael Laurence' },
+      { role: 'Kent', name: 'Sebastian Stan' },
+      { role: 'Sid Greenberg', name: 'Adam Sietz' },
       { role: 'Caller / Ensemble', name: 'Christine Pedi' },
       { role: 'Caller / Ensemble', name: 'Barbara Rosenblat' },
       { role: 'Caller / Ensemble', name: 'Marc Thompson' },
@@ -4565,13 +4695,37 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'A future star in the cast',
-        detail: 'The supporting cast included a then-largely-unknown Sebastian Stan, years before his film career.',
+        detail: 'The supporting cast included Sebastian Stan as Kent, years before his major film and television career.',
+      },
+      {
+        label: 'A Pulitzer-finalist source',
+        detail: 'Bogosian\'s original 1987 Off-Broadway play was a Pulitzer Prize for Drama finalist before its 2007 Broadway mounting.',
       },
     ],
     contextNotes: [
       {
+        label: 'Production history',
+        text: 'Public production records identify Talk Radio as a 1987 Public Theater play by Eric Bogosian that made its Broadway premiere at the Longacre Theatre on March 11, 2007 under Robert Falls\'s direction.',
+      },
+      {
+        label: 'Tony record',
+        text: 'The Tony Awards archive places the 2007 production in Revival (Play), where it was nominated alongside a separate Actor (Play) nomination for Liev Schreiber.',
+      },
+      {
+        label: 'Pulitzer context',
+        text: 'The Pulitzer Prizes archive lists Talk Radio, by Eric Bogosian, as a 1988 Drama finalist, underscoring that the 2007 Broadway production was revisiting an already recognized Off-Broadway text.',
+      },
+      {
+        label: 'Review context',
+        text: 'Hilton Als\'s New Yorker review framed the revival around Schreiber\'s Barry Champlain, reading the production through masculine rage, media exposure, and public unraveling.',
+      },
+      {
+        label: 'Archive note',
+        text: 'The current project files preserve a Broadway Playbill image but no production stills, rehearsal images, or local review packet, so this page remains a text-led Broadway profile.',
+      },
+      {
         label: 'Source note',
-        text: 'This page is anchored by the credits record, surviving Playbill material, and period review coverage, with a slimmer visual trail than the Goodman-originated productions.',
+        text: 'The page separates documented dates, awards, cast roles, and review coverage from broader interpretive context about Bogosian\'s radio-station pressure cooker.',
       },
     ],
     reviews: [
@@ -4584,7 +4738,10 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     externalSources: [
       { label: 'The New Yorker review', href: 'https://www.newyorker.com/magazine/2007/03/26/air-rage' },
-      { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/Talk_Radio_(play)' },
+      { label: 'Talk Radio play and production background', href: 'https://en.wikipedia.org/wiki/Talk_Radio_(play)' },
+      { label: '2007 Tony Awards nominations', href: 'https://www.tonyawards.com/nominees/year/2007/category/any/show/any/' },
+      { label: '1988 Pulitzer Prize Drama finalist', href: 'https://www.pulitzer.org/finalists/eric-bogosian' },
+      { label: 'Sebastian Stan Broadway role context', href: 'https://en.wikipedia.org/wiki/Sebastian_Stan' },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
@@ -5321,10 +5478,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'A different company finished the story',
         text: 'Irish Theatre of Chicago staged its own, unrelated production of Molly Sweeney at the Chopin Theatre in 2022, directed by Siiri Scott. A 2022 account of that production explicitly notes that Falls\'s Goodman staging had been planned for 2020 or 2021 before "the pandemic put a halt to that."',
       },
-      {
-        label: 'Source package',
-        text: 'The folder includes finished show art, four Michael Brosilow production stills from the completed set and tech process, a portrait of Brian Friel, a local video of Falls discussing the production, a cast-and-creative screenshot, and a press trail spanning the original announcement through the indefinite postponement.',
-      },
     ],
     reviews: [
       {
@@ -5766,14 +5919,14 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         src: davidCalePortrait,
         alt: 'Portrait of David Cale seated onstage.',
-        caption: 'David Cale portrait included with the local source package.',
+        caption: 'David Cale, performer and author of We\'re Only Alive for a Short Amount of Time.',
         orientation: 'portrait',
         kind: 'art',
       },
       {
         src: robertFallsPortrait2013,
-        alt: 'Portrait of Robert Falls from the local source package for We\'re Only Alive for a Short Amount of Time.',
-        caption: 'Robert Falls portrait included alongside the production materials.',
+        alt: 'Robert Falls, photographed circa 2013.',
+        caption: 'Robert Falls portrait included with the We\'re Only Alive production materials.',
         orientation: 'portrait',
         kind: 'art',
       },
@@ -5931,11 +6084,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
     pressQuotes: [
       {
         quote: 'an exquisite six-piece orchestra',
-        source: 'PerformInk, quoted in Goodman materials',
+        source: 'PerformInk',
       },
       {
         quote: 'survival story, deeply moving in its courage',
-        source: 'Chicago Tribune, quoted in Goodman materials',
+        source: 'Chicago Tribune',
       },
       {
         quote: 'A deeply personal, indisputably courageous, frequently shocking and deeply moving autobiographical show.',
@@ -5995,6 +6148,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'Aslaksen', name: 'Allen Gilmore' },
       { role: 'Hovstad', name: 'Aubrey Deeker Hernandez' },
       { role: 'The Drunk', name: 'Larry Neumann, Jr.' },
+      { role: 'Townsperson', name: 'Carley Cornelius' },
+      { role: 'Townsperson', name: 'Arya Daire' },
+      { role: 'Townsperson', name: 'Guy Massey' },
+      { role: 'Townsperson', name: 'Roderick Peeples' },
+      { role: 'Townsperson', name: 'Dustin Whitehead' },
     ],
     creativeTeam: [
       { role: 'Playwright', name: 'Henrik Ibsen' },
@@ -6007,6 +6165,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'Dramaturg', name: 'Neena Arndt' },
       { role: 'Casting', name: 'Adam Belcuore' },
       { role: 'Casting', name: 'Erica Sartini-Combs' },
+      { role: 'Assistant Director', name: 'Michael Cotey' },
       { role: 'Production Stage Manager', name: 'Alden Vasquez' },
       { role: 'Stage Manager', name: 'Jonathan Nook' },
     ],
@@ -6019,15 +6178,43 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Contemporary pressure',
         detail: 'Goodman positioned the production as startlingly current, using water contamination and civic corruption to sharpen the play\'s public stakes.',
       },
+      {
+        label: 'Late-career adaptation work',
+        detail: 'The production belongs to a run of late Goodman classics in which Falls adapted or radically reframed canonical texts rather than treating them as museum pieces.',
+      },
+      {
+        label: 'Official critical trail',
+        detail: 'Goodman\'s production page preserves strong local notices from the Chicago Tribune, Chicago Sun-Times, and Daily Herald, giving this page a clearer reception footprint than the image archive alone suggests.',
+      },
     ],
     contextNotes: [
+      {
+        label: 'Production history',
+        text: 'Goodman Theatre records the production as a Robert Falls staging of Henrik Ibsen\'s An Enemy of the People, running March 10-April 15, 2018 with a listed runtime of two hours and twenty minutes including one intermission.',
+      },
+      {
+        label: 'Adaptation lineage',
+        text: 'The local program credits Falls as director and adapter, working from the Eleanor Marx-Aveling translation, which places the production in a long line of English-language Ibsen adaptations rather than a neutral revival.',
+      },
+      {
+        label: 'Ibsen context',
+        text: 'Ibsen wrote the 1882 play around a doctor who discovers contaminated public baths and is attacked for threatening the town\'s economic interests, a structure that made the Goodman framing around water, corruption, and public truth especially direct.',
+      },
+      {
+        label: 'Ensemble record',
+        text: 'The official artist list extends beyond the principal Stockmann family and newspaper roles to a five-person townsperson ensemble, underscoring the production\'s public-meeting and civic-crowd dimension.',
+      },
       {
         label: 'Official framing',
         text: 'The Goodman page sells the production on the immediacy of a water-contamination crisis and the collision between political ambition and moral integrity.',
       },
       {
-        label: 'Source note',
-        text: 'Cast, design credits, and teaser link are drawn from the local Goodman program booklet and official Goodman production page.',
+        label: 'Critical trail',
+        text: 'Goodman preserved local praise calling the staging a must-see show, a powerhouse production, a superb revival, and fiercely acted, though the project files do not include full review packets.',
+      },
+      {
+        label: 'Archive note',
+        text: 'The current project files preserve official Goodman show art and a teaser link but no production stills or rehearsal images, so the page remains a text-led late-Goodman profile.',
       },
     ],
     reviews: [
@@ -6048,23 +6235,28 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     pressQuotes: [
       {
-        quote: '“A powerhouse production”',
+        quote: '"A powerhouse production"',
         source: 'Chicago Sun-Times',
       },
       {
-        quote: '“Marvelously staged”',
+        quote: '"Marvelously staged"',
         source: 'Chicago Sun-Times',
       },
       {
-        quote: 'A “superb revival”',
+        quote: 'A "superb revival"',
         source: 'Daily Herald',
       },
       {
-        quote: '“Fiercely acted”',
+        quote: '"Fiercely acted"',
         source: 'Daily Herald',
       },
     ],
-    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/an-enemy-of-the-people/' }],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/an-enemy-of-the-people/' },
+      { label: 'An Enemy of the People play background', href: 'https://en.wikipedia.org/wiki/An_Enemy_of_the_People' },
+      { label: 'Robert Falls career context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
+      { label: 'Official Goodman teaser', href: 'https://www.youtube.com/watch?v=nfE8mrBLv-8' },
+    ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
   },
@@ -6096,7 +6288,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         src: blindDate2,
         alt: 'Deanna Dunagan as Nancy Reagan and Mary Beth Fisher as Raisa Gorbachev seated across a tea table in Blind Date.',
-        caption: 'Deanna Dunagan and Mary Beth Fisher in one of Blind Date’s sharp domestic counter-scenes.',
+        caption: 'Deanna Dunagan and Mary Beth Fisher in one of Blind Date\'s sharp domestic counter-scenes.',
         orientation: 'landscape',
         kind: 'production-still',
       },
@@ -6137,11 +6329,17 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'George Shultz', name: 'Jim Ortlieb' },
       { role: 'Eduard Shevardnadze', name: 'Steve Pickering' },
       { role: 'Edmund Morris', name: 'Thomas J. Cox' },
+      { role: 'Ensemble', name: 'Jim Farruggio' },
+      { role: 'Ensemble', name: 'Torrey Hanson' },
+      { role: 'Ensemble', name: 'Gregory Linington' },
+      { role: 'Ensemble', name: 'Doug McDade' },
+      { role: 'Ensemble', name: 'Michael Milligan' },
+      { role: 'Ensemble', name: 'Craig Spidle' },
     ],
     creativeTeam: [
       { role: 'Playwright', name: 'Rogelio Martinez' },
       { role: 'Director', name: 'Robert Falls' },
-      { role: 'Scenic Design', name: 'Riccardo Hernández' },
+      { role: 'Scenic Design', name: 'Riccardo Hernandez' },
       { role: 'Costume Design', name: 'Amy Clark' },
       { role: 'Lighting Design', name: 'Aaron Spivey' },
       { role: 'Sound Design', name: 'Richard Woodbury' },
@@ -6158,15 +6356,51 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Political chamber piece',
         detail: 'The production compresses Cold War diplomacy into an intimate comic encounter staged as personality theater.',
       },
+      {
+        label: 'Cold War trilogy endpoint',
+        detail: 'Martinez\'s play is widely described as the final piece in his Cold War trilogy, following earlier works about U.S.-Chinese relations and East Berlin.',
+      },
+      {
+        label: 'Development-to-premiere path',
+        detail: 'The script had a visible pre-Goodman life through the Denver Center\'s 2017 Colorado New Play Summit before its 2018 Goodman world premiere.',
+      },
     ],
     contextNotes: [
+      {
+        label: 'Production history',
+        text: 'Goodman Theatre records Blind Date as a Robert Falls-directed world premiere by Rogelio Martinez, running January 20-February 25, 2018 in the Albert Theatre with a runtime of two hours and thirty minutes including one intermission.',
+      },
+      {
+        label: 'Historical frame',
+        text: 'The play imagines Ronald Reagan and Mikhail Gorbachev at their first 1985 Geneva Summit meeting, turning nuclear-arms diplomacy into a negotiation of chemistry, story, status, and private performance.',
+      },
+      {
+        label: 'Development context',
+        text: 'A Denver Center NewsCenter feature tied the script to the 2017 Colorado New Play Summit and described Blind Date as a commissioned political thriller centered on world leaders colliding at a moment of possible transformation.',
+      },
+      {
+        label: 'Playwright context',
+        text: 'Martinez\'s broader career record places Blind Date inside a Cold War trilogy, alongside Ping Pong and Born in East Berlin, and identifies the Goodman staging as the play\'s major Chicago premiere under Falls.',
+      },
+      {
+        label: 'Ensemble record',
+        text: 'The official Goodman artist list includes six ensemble performers in addition to the named Reagan, Gorbachev, spouse, adviser, and Edmund Morris roles, giving the page a fuller public record of the production company.',
+      },
       {
         label: 'Official framing',
         text: 'The Goodman page emphasizes the play\'s mix of arms-race history, backstage comedy, and a private battle of wills between world leaders and their spouses.',
       },
       {
+        label: 'Critical trail',
+        text: 'Goodman preserved praise from Daily Herald and the Chicago Tribune, including notes on subtle performances and the production being well worth seeing, though the local project files do not include the full review packets.',
+      },
+      {
         label: 'Photo source',
         text: 'Current stage stills and show art are sourced from the official Goodman Theatre production archive for the 2018 world premiere.',
+      },
+      {
+        label: 'Source note',
+        text: 'Run dates, runtime, cast, creative credits, and pull quotes are drawn from the official Goodman archive page, with broader development and playwright context separated into Denver Center and Martinez background sources.',
       },
     ],
     reviews: [
@@ -6179,15 +6413,20 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     pressQuotes: [
       {
-        quote: '“Subtle and enlivening performances”',
+        quote: '"Subtle and enlivening performances"',
         source: 'Daily Herald',
       },
       {
-        quote: '“Well worth seeing”',
+        quote: '"Well worth seeing"',
         source: 'Chicago Tribune',
       },
     ],
-    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/blind-date/' }],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/blind-date/' },
+      { label: 'Rogelio Martinez playwright context', href: 'https://en.wikipedia.org/wiki/Rogelio_Martinez_(playwright)' },
+      { label: 'Denver Center development interview', href: 'https://www.denvercenter.org/news-center/summit-spotlight-rogelio-martinez-on-when-world-leaders-collide/' },
+      { label: 'Robert Falls career context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
+    ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
   },
@@ -6884,7 +7123,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Production history',
-        text: 'The accessibility program notes that the play had premiered earlier at the Repertory Theatre of St. Louis, while the Goodman materials consistently frame the 2016 run as the Chicago premiere.',
+        text: 'Public sources note the play had premiered at the Repertory Theatre of St. Louis before the Goodman engagement, which the Goodman documents as the Chicago premiere.',
       },
       {
         label: 'Source package',
@@ -7361,11 +7600,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Two distinct cast lists',
-        text: 'The cast and creative team above reflect the original 2006 Goodman production, which matches the production photography in the local archive. The 2009 Shakespeare Theatre Company remount retained Keach, Gero, Odeh, Martin-Cotten, Arrington, Pickering, Roberts, Torres, Witt, and Gray, but replaced Albany (Andrew Long) and added a larger ensemble, with a different creative team handling sound, dramaturgy, and stage management for the Washington run.',
-      },
-      {
-        label: 'Source package',
-        text: 'The folder includes eight Carol Rosegg-credited production stills spanning the production\'s opening, blinding, storm, and final scenes, a title-treatment card, a candid rehearsal-room photo of Falls and Keach, and a full cast-and-creative screenshot.',
+        text: 'The cast and creative team above reflect the original 2006 Goodman production. The 2009 Shakespeare Theatre Company remount retained Keach, Gero, Odeh, Martin-Cotten, Arrington, Pickering, Roberts, Torres, Witt, and Gray, but replaced Albany (Andrew Long) and added a larger ensemble, with a different creative team handling sound, dramaturgy, and stage management for the Washington run.',
       },
     ],
     reviews: [
@@ -8722,7 +8957,7 @@ export function getProductionHref(title: string): string {
 // thumbnail callers to a stronger images[n] without reordering the production's
 // own photo essay on its detail page.
 const thumbnailOverrides: Record<string, number> = {
-  'The Cherry Orchard': 2, // skip illustrated Goodman page-detail thumb, use a real production still
+  'The Cherry Orchard': 2, // skip key art thumbnail, prefer production still
   'The Iceman Cometh': 1, // skip show art, use a production still
   'Uncle Vanya': 2, // skip show art, use the Sonya/Vanya embrace still
   '2666': 2, // skip the wide conference-table still, use the neon nightlife still
