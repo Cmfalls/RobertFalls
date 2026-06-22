@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
-import { priorityFeaturedSlugs, productions, productionStats, getFeaturedThumbnail } from '@data/productions';
+import { priorityFeaturedSlugs, productions, productionStats } from '@data/productions';
 import rehearsalPhoto from '../../images/falls-rehearsal-recent.jpg';
 
 const decadeOrder = ['2020s', '2010s', '2000s', '1990s', '1980s', '1970s'];
@@ -36,10 +36,6 @@ function featuredSecondaryBadge(production: (typeof productions)[number]) {
     return 'Photo-led page';
   }
   return 'Type-led page';
-}
-
-function archiveSummary(production: (typeof productions)[number]) {
-  return production.publicSummary ?? production.summary;
 }
 
 function productionTags(production: (typeof productions)[number]) {
@@ -254,101 +250,49 @@ function productionTags(production: (typeof productions)[number]) {
       No productions match that search or filter.
     </div>
 
-    <div class="space-y-14">
+    <div class="space-y-12">
       {groupedProductions.map((group) => (
         <section id={sectionId(group.decade)} class="scroll-mt-28" data-decade-section={group.decade}>
-          <div class="flex items-end justify-between gap-4 flex-wrap mb-6">
-            <div>
-              <div class="text-[11px] uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-2">
-                Entry Era
-              </div>
-              <h3 class="font-display text-4xl md:text-5xl text-brand-ink">{group.decade}</h3>
-            </div>
-            <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/60" data-decade-count>
+          <div class="archive-decade-header">
+            <h3 class="font-display text-4xl md:text-5xl text-brand-ink">{group.decade}</h3>
+            <div class="archive-decade-rule"></div>
+            <span class="text-xs uppercase tracking-[0.16em] text-brand-ink/50 shrink-0" data-decade-count>
               {group.productions.length} titles
-            </div>
+            </span>
           </div>
 
-          <div class="grid lg:grid-cols-2 gap-4 md:gap-5">
-            {group.productions.map((production) => {
-              const archiveThumb = getFeaturedThumbnail(production.title);
-              return (
+          <div class="archive-list">
+            {group.productions.map((production) => (
               <a
                 href={`/productions/${production.slug}`}
-                class="group archive-library-card"
+                class="group archive-list-row"
                 data-production-card
                 data-decade={group.decade}
                 data-tags={productionTags(production)}
                 data-search={`${production.title} ${production.summary} ${production.significance} ${production.venues.join(' ')}`.toLowerCase()}
               >
-                <div class="flex items-start justify-between gap-4">
-                  <div>
-                    <div class="flex flex-wrap items-center gap-2">
-                      <span class="archive-year-pill">{production.yearSpan}</span>
-                      {production.pageMode === 'featured' && (
-                        <span class="archive-featured-pill">Featured</span>
-                      )}
-                    </div>
-                    <h4 class="font-display text-2xl md:text-[2rem] leading-none text-brand-ink mt-3 group-hover:text-brand-oxblood transition-colors">
-                      {production.title}
-                    </h4>
-                  </div>
-                  {archiveThumb ? (
-                    <div class="relative w-28 h-[4.75rem] overflow-hidden shrink-0 border border-brand-ink/10 bg-brand-ink/5">
-                      <Image
-                        src={archiveThumb.src}
-                        alt=""
-                        widths={[112, 224]}
-                        sizes="112px"
-                        quality={72}
-                        loading="lazy"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.06]"
-                      />
-                      <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.45) 0%, transparent 55%);"></div>
-                      {production.stagingCount > 1 && (
-                        <div class="absolute bottom-0 right-0 bg-brand-ink/75 px-1.5 py-0.5 text-[10px] font-display text-brand-cream leading-none">
-                          {production.stagingCount}×
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <div class="archive-count-stack">
-                      <div class="archive-count-value">{production.stagingCount}</div>
-                      <div class="archive-count-label">stagings</div>
-                    </div>
+                <div class="archive-row-year">{production.yearSpan}</div>
+
+                <div class="archive-row-main">
+                  <h4 class="archive-row-title">
+                    {production.pageMode === 'featured' && (
+                      <span class="archive-row-dot" aria-hidden="true"></span>
+                    )}
+                    {production.title}
+                  </h4>
+                  <div class="archive-row-venue-mobile">{production.venueAnchor}</div>
+                </div>
+
+                <div class="archive-row-venue-desktop">{production.venueAnchor}</div>
+
+                <div class="archive-row-end">
+                  {production.stagingCount > 1 && (
+                    <span class="archive-row-repeat">{production.stagingCount}&times;</span>
                   )}
-                </div>
-
-                <p class="text-brand-ink/78 leading-relaxed mt-4">{previewText(archiveSummary(production), 170)}</p>
-
-                <div class="grid sm:grid-cols-3 gap-3 mt-5 text-sm">
-                  <div>
-                    <div class="archive-meta-label">Venue anchor</div>
-                    <div class="archive-meta-value">{production.venueAnchor}</div>
-                  </div>
-                  <div>
-                    <div class="archive-meta-label">Era</div>
-                    <div class="archive-meta-value">{production.eraLabel}</div>
-                  </div>
-                  <div>
-                    <div class="archive-meta-label">Venues</div>
-                    <div class="archive-meta-value">{production.venueCount} {production.venueCount === 1 ? 'documented venue' : 'documented venues'}</div>
-                  </div>
-                </div>
-
-                <div class="flex items-center justify-between gap-4 mt-6 pt-5 border-t border-brand-ink/10">
-                  <div class="flex flex-wrap gap-2">
-                    {production.venues.slice(0, 2).map((venue) => (
-                      <span class="production-venue-pill">{venue}</span>
-                    ))}
-                  </div>
-                  <span class="font-display uppercase tracking-[0.16em] text-xs text-brand-oxblood group-hover:text-brand-oxbloodBright transition-colors">
-                    Open page
-                  </span>
+                  <svg class="archive-row-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                 </div>
               </a>
-              );
-            })}
+            ))}
           </div>
         </section>
       ))}
@@ -440,36 +384,44 @@ function productionTags(production: (typeof productions)[number]) {
   .decade-jump-link {
     @apply inline-flex items-center rounded-full border border-brand-ink border-opacity-10 px-4 py-2 text-xs font-display font-semibold uppercase tracking-[0.18em] text-brand-ink text-opacity-60 transition-colors duration-200 hover:border-brand-oxblood hover:border-opacity-30 hover:text-brand-oxblood focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
   }
-  .archive-library-card {
-    @apply border border-brand-ink border-opacity-10 bg-white bg-opacity-80 p-5 md:p-6 transition-all duration-200 hover:border-brand-oxblood hover:border-opacity-30 hover:shadow-[0_16px_44px_rgba(34,24,20,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+  .archive-decade-header {
+    @apply flex items-center gap-4 mb-3;
   }
-  .archive-year-pill,
-  .archive-featured-pill {
-    @apply inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-display font-semibold uppercase tracking-[0.16em];
+  .archive-decade-rule {
+    @apply flex-1 h-px bg-brand-ink/10;
   }
-  .archive-year-pill {
-    @apply border border-brand-ink border-opacity-10 bg-brand-cream bg-opacity-40 text-brand-ink text-opacity-70;
+  .archive-list {
+    @apply border-t border-brand-ink/10;
   }
-  .archive-featured-pill {
-    @apply bg-brand-gold text-brand-ink;
+  .archive-list-row {
+    @apply flex items-center gap-4 py-3 md:py-3.5 border-b border-brand-ink/10 transition-colors duration-150 hover:bg-brand-oxblood/[0.03] -mx-3 px-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
   }
-  .archive-count-stack {
-    @apply min-w-[4.25rem] border-l border-brand-ink border-opacity-10 pl-4 text-right;
+  .archive-row-year {
+    @apply w-[5.5rem] shrink-0 font-display text-[0.8rem] leading-none text-brand-oxblood tracking-[0.04em] tabular-nums;
   }
-  .archive-count-value {
-    @apply font-display text-3xl leading-none text-brand-ink;
+  .archive-row-main {
+    @apply flex-1 min-w-0;
   }
-  .archive-count-label {
-    @apply mt-1 text-[11px] uppercase tracking-[0.16em] text-brand-ink text-opacity-65;
+  .archive-row-title {
+    @apply font-display text-xl md:text-2xl leading-tight text-brand-ink group-hover:text-brand-oxblood transition-colors truncate flex items-center gap-2;
   }
-  .archive-meta-label {
-    @apply text-[11px] uppercase tracking-[0.16em] text-brand-ink text-opacity-55;
+  .archive-row-dot {
+    @apply w-1.5 h-1.5 rounded-full bg-brand-oxblood shrink-0 opacity-70;
   }
-  .archive-meta-value {
-    @apply mt-1 text-sm leading-snug text-brand-ink text-opacity-70;
+  .archive-row-venue-mobile {
+    @apply text-xs text-brand-ink/50 mt-0.5 md:hidden truncate;
   }
-  .production-venue-pill {
-    @apply border border-brand-ink border-opacity-10 px-2.5 py-1 text-[11px] uppercase tracking-[0.16em] text-brand-ink text-opacity-60;
+  .archive-row-venue-desktop {
+    @apply hidden md:block w-52 lg:w-64 shrink-0 text-sm text-brand-ink/55 truncate;
+  }
+  .archive-row-end {
+    @apply flex items-center gap-2.5 shrink-0;
+  }
+  .archive-row-repeat {
+    @apply inline-flex items-center rounded-full border border-brand-ink/15 px-2 py-0.5 text-[11px] font-display font-semibold tracking-[0.08em] text-brand-ink/55;
+  }
+  .archive-row-arrow {
+    @apply w-4 h-4 text-brand-oxblood/0 group-hover:text-brand-oxblood transition-colors duration-150 shrink-0;
   }
 </style>
 
