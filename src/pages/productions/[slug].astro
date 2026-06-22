@@ -90,20 +90,19 @@ const heroLinks = [
   ...(hasPeople ? [{ href: '#credits-main', label: 'Credits' }] : []),
   ...(hasReceptionSection ? [{ href: '#press-main', label: 'Reception' }] : []),
 ];
-// Snapshot facts (stagings/venues/span) lead the Quick Facts list rather than
-// living in a separate big-number stat card, which read as a SaaS-style
-// hero-metric block out of place against the rest of the archive's prose voice.
+const existingFactLabels = new Set(production.quickFacts.map((fact) => fact.label.toLowerCase()));
+const hasRunFact = production.quickFacts.some((f) => /^(run|season|dates?)$/i.test(f.label));
+const hasVenueFact = production.quickFacts.some((f) => /^(venue|theater|theatre|company)$/i.test(f.label));
 const snapshotFacts = [
   { label: production.stagingCount === 1 ? 'Staging' : 'Stagings', value: String(production.stagingCount) },
-  { label: production.venueCount === 1 ? 'Venue' : 'Venues', value: String(production.venueCount) },
-  { label: 'Span', value: production.yearSpan },
+  ...(!hasVenueFact ? [{ label: production.venueCount === 1 ? 'Venue' : 'Venues', value: String(production.venueCount) }] : []),
+  ...(!hasRunFact ? [{ label: 'Span', value: production.yearSpan }] : []),
 ];
-const existingFactLabels = new Set(production.quickFacts.map((fact) => fact.label.toLowerCase()));
 const railFacts = [
   ...snapshotFacts.filter((fact) => !existingFactLabels.has(fact.label.toLowerCase())),
   ...production.quickFacts,
 ];
-const railQuickFacts = railFacts.slice(0, isFeatured ? 7 : 6);
+const railQuickFacts = railFacts.slice(0, isFeatured ? 8 : 7);
 const railRecognition = (production.recognition.length > 0 ? production.recognition : production.awardsOrSignificance).slice(0, 2);
 const railQuote = production.pressQuotes[0] ?? null;
 const railReviews = production.reviews.slice(0, 2);
