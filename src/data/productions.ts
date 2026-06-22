@@ -1,22 +1,22 @@
 import type { ImageMetadata } from 'astro';
 
-import amadeus1 from '../images/amadeus-1.jpg';
-import amadeus2 from '../images/amadeus-2.jpg';
-import amadeus3 from '../images/amadeus-3.jpg';
-import amadeusMozart from '../images/amadeus-mozart.jpg';
-import holidayRehearsal1 from '../images/holiday-rehearsal-1.jpg';
-import holidayRehearsal2 from '../images/holiday-rehearsal-2.jpg';
-import onlyAlivePoster from '../images/only-alive/only-alive-poster.jpg';
-import onlyAliveKeyArt from '../images/only-alive/only-alive-key-art.jpg';
-import onlyAlive1 from '../images/only-alive/only-alive-1.jpg';
-import onlyAlive5 from '../images/only-alive/only-alive-5.jpg';
-import onlyAlive6 from '../images/only-alive/only-alive-6.jpg';
-import onlyAliveReh1 from '../images/only-alive/only-alive-reh-1.jpg';
-import onlyAliveReh2 from '../images/only-alive/only-alive-reh-2.jpg';
-import onlyAliveReh3 from '../images/only-alive/only-alive-reh-3.jpg';
-import onlyAliveReh4 from '../images/only-alive/only-alive-reh-4.jpg';
-import davidCalePortrait from '../images/only-alive/david-cale-portrait.jpg';
-import robertFallsPortrait2013 from '../images/only-alive/robert-falls-portrait-2013.jpg';
+import amadeus1 from '../images/amadeus/amadeus-1.jpg';
+import amadeus2 from '../images/amadeus/amadeus-2.jpg';
+import amadeus3 from '../images/amadeus/amadeus-3.jpg';
+import amadeusMozart from '../images/amadeus/amadeus-mozart.jpg';
+import holidayRehearsal1 from '../images/holiday/holiday-rehearsal-1.jpg';
+import holidayRehearsal2 from '../images/holiday/holiday-rehearsal-2.jpg';
+import onlyAlivePoster from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-poster.jpg';
+import onlyAliveKeyArt from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-key-art.jpg';
+import onlyAlive1 from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-1.jpg';
+import onlyAlive5 from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-5.jpg';
+import onlyAlive6 from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-6.jpg';
+import onlyAliveReh1 from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-reh-1.jpg';
+import onlyAliveReh2 from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-reh-2.jpg';
+import onlyAliveReh3 from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-reh-3.jpg';
+import onlyAliveReh4 from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-reh-4.jpg';
+import davidCalePortrait from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-david-cale-portrait.jpg';
+import robertFallsPortrait2013 from '../images/were-only-alive-for-a-short-amount-of-time/robert-falls-portrait-2013.jpg';
 import uncleVanyaShowArt from '../images/uncle-vanya/uncle-vanya-show-art.png';
 import uncleVanya2 from '../images/uncle-vanya/uncle-vanya-2.webp';
 import uncleVanya3 from '../images/uncle-vanya/uncle-vanya-3.webp';
@@ -26,39 +26,39 @@ import uncleVanya7 from '../images/uncle-vanya/uncle-vanya-7.webp';
 import uncleVanya8 from '../images/uncle-vanya/uncle-vanya-8.webp';
 import uncleVanya9 from '../images/uncle-vanya/uncle-vanya-9.webp';
 import uncleVanya11 from '../images/uncle-vanya/uncle-vanya-11.webp';
-import seagullShowArt from '../images/seagull/seagull-show-art.png';
-import seagullEnsemble from '../images/seagull/seagull-ensemble.jpg';
-import seagull1 from '../images/seagull/seagull-1.jpg';
-import seagull2 from '../images/seagull/seagull-2.jpg';
-import seagull3 from '../images/seagull/seagull-3.jpg';
-import seagull4 from '../images/seagull/seagull-4.jpg';
-import seagull5 from '../images/seagull/seagull-5.jpg';
-import seagull6 from '../images/seagull/seagull-6.jpg';
-import seagull7 from '../images/seagull/seagull-7.jpg';
-import seagull8 from '../images/seagull/seagull-8.jpg';
-import icemanShowArt from '../images/iceman-cometh/iceman-show-art.webp';
-import iceman1 from '../images/iceman-cometh/iceman-1.webp';
-import iceman2 from '../images/iceman-cometh/iceman-2.webp';
-import iceman3 from '../images/iceman-cometh/iceman-3.webp';
-import iceman4 from '../images/iceman-cometh/iceman-4.jpg';
-import iceman5 from '../images/iceman-cometh/iceman-5.jpg';
-import icemanBam1 from '../images/iceman-cometh/iceman-bam-1.webp';
-import icemanBam2 from '../images/iceman-cometh/iceman-bam-2.jpg';
-import icemanBam3 from '../images/iceman-cometh/iceman-bam-3.jpg';
-import icemanBam4 from '../images/iceman-cometh/iceman-bam-4.jpg';
-import jacksonianHero from '../images/jacksonian/jacksonian-hero.jpg';
-import jacksonian1 from '../images/jacksonian/jacksonian-1.jpg';
-import jacksonian2 from '../images/jacksonian/jacksonian-2.webp';
-import jacksonian3 from '../images/jacksonian/jacksonian-3.jpg';
-import jacksonianShowArt from '../images/jacksonian/jacksonian-show-art.png';
-import soupsShowArt from '../images/soups-stews/soups-show-art.png';
-import soups1 from '../images/soups-stews/soups-1.jpg';
-import soups3 from '../images/soups-stews/soups-3.jpg';
-import soups4 from '../images/soups-stews/soups-4.jpg';
-import soups5 from '../images/soups-stews/soups-5.jpg';
-import soupsReh2 from '../images/soups-stews/soups-reh-2.jpg';
-import soupsReh3 from '../images/soups-stews/soups-reh-3.jpg';
-import soupsReh8 from '../images/soups-stews/soups-reh-8.jpg';
+import seagullShowArt from '../images/the-seagull/the-seagull-show-art.png';
+import seagullEnsemble from '../images/the-seagull/the-seagull-ensemble.jpg';
+import seagull1 from '../images/the-seagull/the-seagull-1.jpg';
+import seagull2 from '../images/the-seagull/the-seagull-2.jpg';
+import seagull3 from '../images/the-seagull/the-seagull-3.jpg';
+import seagull4 from '../images/the-seagull/the-seagull-4.jpg';
+import seagull5 from '../images/the-seagull/the-seagull-5.jpg';
+import seagull6 from '../images/the-seagull/the-seagull-6.jpg';
+import seagull7 from '../images/the-seagull/the-seagull-7.jpg';
+import seagull8 from '../images/the-seagull/the-seagull-8.jpg';
+import icemanShowArt from '../images/the-iceman-cometh/the-iceman-cometh-show-art.webp';
+import iceman1 from '../images/the-iceman-cometh/the-iceman-cometh-1.webp';
+import iceman2 from '../images/the-iceman-cometh/the-iceman-cometh-2.webp';
+import iceman3 from '../images/the-iceman-cometh/the-iceman-cometh-3.webp';
+import iceman4 from '../images/the-iceman-cometh/the-iceman-cometh-4.jpg';
+import iceman5 from '../images/the-iceman-cometh/the-iceman-cometh-5.jpg';
+import icemanBam1 from '../images/the-iceman-cometh/the-iceman-cometh-bam-1.webp';
+import icemanBam2 from '../images/the-iceman-cometh/the-iceman-cometh-bam-2.jpg';
+import icemanBam3 from '../images/the-iceman-cometh/the-iceman-cometh-bam-3.jpg';
+import icemanBam4 from '../images/the-iceman-cometh/the-iceman-cometh-bam-4.jpg';
+import jacksonianHero from '../images/the-jacksonian/the-jacksonian-hero.jpg';
+import jacksonian1 from '../images/the-jacksonian/the-jacksonian-1.jpg';
+import jacksonian2 from '../images/the-jacksonian/the-jacksonian-2.webp';
+import jacksonian3 from '../images/the-jacksonian/the-jacksonian-3.jpg';
+import jacksonianShowArt from '../images/the-jacksonian/the-jacksonian-show-art.png';
+import soupsShowArt from '../images/soups-stews-and-casseroles-1976/soups-stews-and-casseroles-1976-show-art.png';
+import soups1 from '../images/soups-stews-and-casseroles-1976/soups-stews-and-casseroles-1976-1.jpg';
+import soups3 from '../images/soups-stews-and-casseroles-1976/soups-stews-and-casseroles-1976-3.jpg';
+import soups4 from '../images/soups-stews-and-casseroles-1976/soups-stews-and-casseroles-1976-4.jpg';
+import soups5 from '../images/soups-stews-and-casseroles-1976/soups-stews-and-casseroles-1976-5.jpg';
+import soupsReh2 from '../images/soups-stews-and-casseroles-1976/soups-stews-and-casseroles-1976-rehearsal-2.jpg';
+import soupsReh3 from '../images/soups-stews-and-casseroles-1976/soups-stews-and-casseroles-1976-rehearsal-3.jpg';
+import soupsReh8 from '../images/soups-stews-and-casseroles-1976/soups-stews-and-casseroles-1976-rehearsal-8.jpg';
 import pamplonaShowArt from '../images/pamplona/pamplona-show-art.png';
 import pamplonaPoster from '../images/pamplona/pamplona-poster.jpg';
 import pamplona1 from '../images/pamplona/pamplona-1.jpg';
@@ -93,17 +93,18 @@ import desireUnderTheElmsAbbieEphraim from '../images/desire-under-the-elms/desi
 import desireUnderTheElmsArrival from '../images/desire-under-the-elms/desire-under-the-elms-arrival.jpg';
 import desireUnderTheElms6 from '../images/desire-under-the-elms/desire-under-the-elms-6.jpg';
 import dollhouseShowArt from '../images/dollhouse/dollhouse-show-art.png';
+import dollhouseTitleTreatment from '../images/dollhouse/dollhouse-title-treatment.png';
 import enemyShowArt from '../images/an-enemy-of-the-people/enemy-show-art.webp';
-import measureShowArt from '../images/measure-for-measure/measure-show-art.png';
-import measurePoster from '../images/measure-for-measure/measure-poster.jpg';
-import measure1 from '../images/measure-for-measure/measure-1.jpg';
-import measure2 from '../images/measure-for-measure/measure-2.jpg';
-import measure3 from '../images/measure-for-measure/measure-3.jpg';
-import measure4 from '../images/measure-for-measure/measure-4.jpg';
-import measure5 from '../images/measure-for-measure/measure-5.jpg';
-import measure6 from '../images/measure-for-measure/measure-6.jpg';
-import measure7 from '../images/measure-for-measure/measure-7.jpg';
-import measure8 from '../images/measure-for-measure/measure-8.jpg';
+import measureShowArt from '../images/measure-for-measure/measure-for-measure-show-art.png';
+import measurePoster from '../images/measure-for-measure/measure-for-measure-poster.jpg';
+import measure1 from '../images/measure-for-measure/measure-for-measure-1.jpg';
+import measure2 from '../images/measure-for-measure/measure-for-measure-2.jpg';
+import measure3 from '../images/measure-for-measure/measure-for-measure-3.jpg';
+import measure4 from '../images/measure-for-measure/measure-for-measure-4.jpg';
+import measure5 from '../images/measure-for-measure/measure-for-measure-5.jpg';
+import measure6 from '../images/measure-for-measure/measure-for-measure-6.jpg';
+import measure7 from '../images/measure-for-measure/measure-for-measure-7.jpg';
+import measure8 from '../images/measure-for-measure/measure-for-measure-8.jpg';
 import blindDateShowArt from '../images/blind-date/blind-date-show-art.png';
 import blindDate1 from '../images/blind-date/blind-date-1.jpg';
 import blindDate2 from '../images/blind-date/blind-date-2.jpg';
@@ -139,10 +140,10 @@ import americanBuffalo6 from '../images/american-buffalo/american-buffalo-6.jpg'
 import americanBuffaloMarquee from '../images/american-buffalo/american-buffalo-marquee.jpg';
 import americanBuffaloCurtainCall from '../images/american-buffalo/american-buffalo-curtain-call.jpg';
 import americanBuffaloAfterparty from '../images/american-buffalo/american-buffalo-afterparty.jpg';
-import lifeInTheatreShowArt from '../images/life-in-the-theatre/life-in-theatre-show-art.png';
-import lifeInTheatreMakeup from '../images/life-in-the-theatre/life-in-theatre-makeup.png';
-import lifeInTheatreTitle from '../images/life-in-the-theatre/life-in-theatre-title.webp';
-import mametFestivalPortrait from '../images/life-in-the-theatre/mamet-festival-portrait.webp';
+import lifeInTheatreShowArt from '../images/a-life-in-the-theatre/a-life-in-the-theatre-show-art.png';
+import lifeInTheatreMakeup from '../images/a-life-in-the-theatre/a-life-in-the-theatre-makeup.png';
+import lifeInTheatreTitle from '../images/a-life-in-the-theatre/a-life-in-the-theatre-title.webp';
+import mametFestivalPortrait from '../images/a-life-in-the-theatre/a-life-in-the-theatre-mamet-festival-portrait.webp';
 import kingLear1 from '../images/king-lear/king-lear-1.webp';
 import kingLear2 from '../images/king-lear/king-lear-2.webp';
 import kingLear3 from '../images/king-lear/king-lear-3.webp';
@@ -156,41 +157,50 @@ import kingLear10 from '../images/king-lear/king-lear-10.jpg';
 import kingLear11 from '../images/king-lear/king-lear-11.jpg';
 import kingLearCandid from '../images/king-lear/king-lear-candid.jpg';
 import kingLearTitle from '../images/king-lear/king-lear-title.webp';
-import longDaysJourneyPlaybill from '../images/long-days-journey/long-days-journey-playbill.jpg';
-import nightOfTheIguanaPlaybill from '../images/night-of-the-iguana/night-of-the-iguana-playbill.jpg';
-import roseTattooPlaybill from '../images/rose-tattoo/rose-tattoo-playbill.jpg';
-import speedOfDarknessPlaybill from '../images/speed-of-darkness/speed-of-darkness-playbill.jpg';
-import youngManFromAtlantaPlaybill from '../images/young-man-from-atlanta/young-man-from-atlanta-playbill.jpg';
+import longDaysJourneyPlaybill from '../images/long-days-journey-into-night/long-days-journey-into-night-playbill.jpg';
+import nightOfTheIguanaPlaybill from '../images/the-night-of-the-iguana/the-night-of-the-iguana-playbill.jpg';
+import roseTattooPlaybill from '../images/the-rose-tattoo/the-rose-tattoo-playbill.jpg';
+import speedOfDarknessPlaybill from '../images/the-speed-of-darkness/the-speed-of-darkness-playbill.jpg';
+import youngManFromAtlantaPlaybill from '../images/the-young-man-from-atlanta/the-young-man-from-atlanta-playbill.jpg';
 import talkRadioPlaybill from '../images/talk-radio/talk-radio-playbill.jpg';
 import aidaPlaybill from '../images/aida/aida-playbill.jpg';
-import swingState1 from '../images/swing-state-1.jpg';
-import swingState2 from '../images/swing-state-2.jpg';
-import swingState3 from '../images/swing-state-3.jpg';
-import wintersTaleFeatured from '../images/winter-s-tale/winter-s-tale-featured.png';
-import wintersTale1 from '../images/winter-s-tale/winter-s-tale-1.jpg';
-import wintersTale2 from '../images/winter-s-tale/winter-s-tale-2.jpg';
-import wintersTale3 from '../images/winter-s-tale/winter-s-tale-3.jpg';
-import wintersTale5 from '../images/winter-s-tale/winter-s-tale-5.jpg';
-import wintersTale11 from '../images/winter-s-tale/winter-s-tale-11.jpg';
+import aidaHeadleyPascal from '../images/aida/aida-headley-pascal.jpg';
+import aidaAmnerisEnsemble from '../images/aida/aida-amneris-ensemble.jpg';
+import blueSurgeShowArt from '../images/blue-surge/blue-surge-show-art.png';
+import finishingThePictureShowArt from '../images/finishing-the-picture/finishing-the-picture-show-art.png';
+import houseAndGardenShowArt from '../images/house-and-garden/house-and-garden-show-art.png';
+import hughieShowArt from '../images/hughie/hughie-show-art.png';
+import lobbyHeroShowArt from '../images/lobby-hero/lobby-hero-show-art.png';
+import theGoatShowArt from '../images/the-goat-or-who-is-sylvia/the-goat-or-who-is-sylvia-show-art.png';
+import theGuysShowArt from '../images/the-guys/the-guys-show-art.png';
+import swingState1 from '../images/swing-state/swing-state-1.jpg';
+import swingState2 from '../images/swing-state/swing-state-2.jpg';
+import swingState3 from '../images/swing-state/swing-state-3.jpg';
+import wintersTaleFeatured from '../images/the-winters-tale/the-winters-tale-featured.png';
+import wintersTale1 from '../images/the-winters-tale/the-winters-tale-1.jpg';
+import wintersTale2 from '../images/the-winters-tale/the-winters-tale-2.jpg';
+import wintersTale3 from '../images/the-winters-tale/the-winters-tale-3.jpg';
+import wintersTale5 from '../images/the-winters-tale/the-winters-tale-5.jpg';
+import wintersTale11 from '../images/the-winters-tale/the-winters-tale-11.jpg';
 import aidaPlaybillFull from '../images/web-sourced/aida-playbill-full.jpg';
 import amadeusBanner from '../images/web-sourced/amadeus-steppenwolf-banner.png';
 import amadeusAudienceVideoThumb from '../images/web-sourced/amadeus-audience-video-thumb.jpg';
 import amadeusChicagoTribune from '../images/web-sourced/amadeus-chicago-tribune.webp';
 import amadeusRehearsalJoelMoorman from '../images/web-sourced/amadeus-rehearsal-joel-moorman.avif';
 import image2666ShowArt from '../images/2666/2666-show-art.png';
-import image2666Wide from '../images/2666/2666-090.jpg';
-import image2666House from '../images/2666/2666-245.jpg';
-import image2666Bar from '../images/2666/2666-347.jpg';
+import image2666Wide from '../images/2666/2666-01.jpg';
+import image2666House from '../images/2666/2666-02.jpg';
+import image2666Bar from '../images/2666/2666-03.jpg';
 import image2666Ensemble from '../images/2666/2666-04.jpg';
-import image2666Portrait from '../images/2666/2666-09.jpg';
+import image2666Portrait from '../images/2666/2666-05.jpg';
 import image2666Goodman from '../images/web-sourced/2666-goodman.jpg';
-import cherryOrchardGoodmanThumb from '../images/web-sourced/cherry-orchard-goodman-thumb.jpg';
-import cherryOrchardReview from '../images/web-sourced/cherry-orchard-review.jpeg';
-import cherryOrchardKeithParham1 from '../images/web-sourced/cherry-orchard-keith-parham-1.jpg';
-import cherryOrchardSunTimes1 from '../images/web-sourced/cherry-orchard-suntimes-1.jpg';
-import cherryOrchardSunTimes2 from '../images/web-sourced/cherry-orchard-suntimes-2.jpg';
+import cherryOrchardGoodmanThumb from '../images/web-sourced/the-cherry-orchard-goodman-thumb.jpg';
+import cherryOrchardReview from '../images/web-sourced/the-cherry-orchard-review.jpeg';
+import cherryOrchardKeithParham1 from '../images/web-sourced/the-cherry-orchard-keith-parham-1.jpg';
+import cherryOrchardSunTimes1 from '../images/web-sourced/the-cherry-orchard-suntimes-1.jpg';
+import cherryOrchardSunTimes2 from '../images/web-sourced/the-cherry-orchard-suntimes-2.jpg';
 import deathOfASalesmanPlaybillFull from '../images/web-sourced/death-of-a-salesman-playbill-full.jpg';
-import deathOfASalesmanPlaybillCover from '../images/death-of-a-salesman/salesman-playbill-cover.jpg';
+import deathOfASalesmanPlaybillCover from '../images/death-of-a-salesman/death-of-a-salesman-playbill-cover.jpg';
 import donGiovanniDonnaElvira from '../images/web-sourced/don-giovanni-donna-elvira.jpg';
 import donGiovanniFinalCostume from '../images/web-sourced/don-giovanni-final-costume.jpg';
 import holidayGoodman from '../images/web-sourced/holiday-goodman.jpg';
@@ -198,8 +208,8 @@ import holidayGoodmanThumb from '../images/web-sourced/holiday-goodman-thumb.jpg
 import holidayProduction2 from '../images/web-sourced/holiday-production-2.webp';
 import holidayProduction7 from '../images/web-sourced/holiday-production-7.webp';
 import holidayProduction8 from '../images/web-sourced/holiday-production-8.webp';
-import soundInsideGoodmanThumb from '../images/web-sourced/sound-inside-goodman-thumb.jpg';
-import soundInsideWttw from '../images/web-sourced/sound-inside-wttw.jpg';
+import soundInsideGoodmanThumb from '../images/web-sourced/the-sound-inside-goodman-thumb.jpg';
+import soundInsideWttw from '../images/web-sourced/the-sound-inside-wttw.jpg';
 import swingStateGoodmanThumb from '../images/web-sourced/swing-state-goodman-thumb.jpg';
 
 import { creditGroups, type Credit } from './credits';
@@ -746,11 +756,17 @@ const productionSeeds: Record<string, ProductionSeed> = {
   holiday: {
     pageMode: 'featured',
     summary:
-      "Holiday returns Falls to the Goodman as a director after stepping down as artistic director, making the production read as both repertory event and institutional homecoming.",
+      "Holiday returned Falls to the Goodman as a director after stepping down as artistic director, making the production read as both a sparkling repertory comedy and an institutional homecoming.",
+    publicSummary:
+      "Falls directed Richard Greenberg's contemporary adaptation of Philip Barry's Holiday at Goodman's Albert Theatre in 2026, a Centennial Season return built around privilege, romance, work, and choosing a life.",
+    synopsis:
+      "In Richard Greenberg's adaptation of Philip Barry's 1920s comedy, Johnny Case enters the wealthy world of the Upper East Side Setons as a romantic prospect from outside their class circle. His arrival unsettles a family system built around money, status, marriage, and duty, while the question underneath the champagne comedy keeps sharpening: should a person work to live, or live to work?",
+    fallsContext:
+      "Holiday is significant because it brings Falls back into the Goodman building in a changed role. He is no longer the artistic director shaping the institution's whole slate; he returns as a guest artist inside Susan V. Booth's Centennial Season, directing a late Richard Greenberg adaptation that uses classic high-comedy structure to ask contemporary questions about privilege, freedom, grief, and self-definition.",
     significance:
-      'The first Goodman production he directed after leaving the artistic directorship, staged during the theatre’s Centennial Season.',
+      "The first Goodman production Falls directed after leaving the artistic directorship, staged in the Albert Theatre during the company's Centennial Season and extended by popular demand through March 8, 2026.",
     story:
-      'The 2026 staging places a familiar Robert Falls signature back inside the Goodman building without the administrative frame that defined his earlier decades there. Even with limited media in the repo, the production matters as a visible return and as a test of what a post-tenure Falls/Goodman relationship can look like.',
+      "The 2026 staging places a familiar Robert Falls signature back inside the Goodman building without the administrative frame that defined his earlier decades there. Susan V. Booth's welcome note says Holiday emerged from conversations with Falls about what work felt alive to him, and that Greenberg's adaptation clearly carried joy for both artists. That context gives the page more than comeback value: it becomes a record of Falls returning to a longtime artistic home through buoyancy rather than burden, and of one of Greenberg's final theatre chapters arriving in the hands of a collaborator who knew his wit, bite, and humanity.",
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Post-Goodman transition years',
     images: [
@@ -800,7 +816,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         src: holidayRehearsal2,
         alt: 'Robert Falls in conversation during Holiday rehearsal.',
-        caption: 'Rehearsal-room image from Falls’s Goodman return.',
+        caption: "Rehearsal-room image from Falls's Goodman return.",
         orientation: 'landscape',
         kind: 'rehearsal',
       },
@@ -808,19 +824,27 @@ const productionSeeds: Record<string, ProductionSeed> = {
     collaborators: [
       { role: 'Playwright', name: 'Philip Barry' },
       { role: 'Adapter', name: 'Richard Greenberg' },
+      { role: 'Director', name: 'Robert Falls' },
       { role: 'Cast highlight', name: 'Jessie Fisher' },
       { role: 'Cast highlight', name: 'Erik Hellman' },
+      { role: 'Cast highlight', name: 'Luigi Sottile' },
       { role: 'Cast highlight', name: 'Molly Griggs' },
       { role: 'Cast highlight', name: 'Bryce Gangel' },
+      { role: 'Cast highlight', name: 'Wesley Taylor' },
     ],
     quickFacts: [
-      { label: 'Run', value: 'Jan 31 - Mar 1, 2026' },
-      { label: 'Venue', value: 'Goodman Theatre' },
+      { label: 'Run', value: 'Jan 31 - Mar 8, 2026' },
+      { label: 'Venue', value: "Goodman's Albert Theatre" },
+      { label: 'Runtime', value: 'Approx. 2 hr 15 min, incl. intermission' },
       { label: 'Season', value: 'Centennial Season' },
-      { label: 'Adaptation', value: 'Richard Greenberg' },
+      { label: 'Source', value: 'Philip Barry, adapted by Richard Greenberg' },
+      { label: 'Milestone', value: 'Falls Goodman directing return' },
+      { label: 'Advisory', value: 'Recommended for ages 13+' },
     ],
     cast: [
       { role: 'Susan Feld', name: 'Jessie Fisher' },
+      { role: 'Nikka Washburn', name: 'Christiana Clark' },
+      { role: 'Laura Cram', name: 'Alejandra Escalante' },
       { role: 'Linda Seton', name: 'Bryce Gangel' },
       { role: 'Julia Seton', name: 'Molly Griggs' },
       { role: 'Seton Cram', name: 'Erik Hellman' },
@@ -833,26 +857,75 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'Playwright', name: 'Philip Barry' },
       { role: 'Adapter', name: 'Richard Greenberg' },
       { role: 'Director', name: 'Robert Falls' },
+      { role: 'Set Design', name: 'Walt Spangler' },
+      { role: 'Costume Design', name: 'Kaye Voyce' },
+      { role: 'Lighting Design', name: 'Amith Chandrashaker' },
+      { role: 'Original Music and Sound Design', name: 'Richard Woodbury' },
+      { role: 'Casting Director', name: 'Lauren Port' },
+      { role: 'Line Producer', name: 'Malkia Stampley' },
+      { role: 'Dramaturgy', name: 'Neena Arndt' },
+      { role: 'Assistant Director', name: 'Hannah Todd' },
+      { role: 'Intimacy', name: 'Toranika Washington' },
+      { role: 'Production Stage Manager', name: 'Nikki Blue' },
+      { role: 'Stage Manager', name: 'Krista Kanderski' },
       { role: 'Photography', name: 'Todd Rosenberg' },
     ],
     recognition: [
       {
         label: 'Goodman return',
-        detail: 'First Goodman production since Falls stepped down as Artistic Director.',
+        detail: 'The production is Falls\'s first Goodman directing credit after stepping down as Artistic Director, shifting him from institutional leader back into the rehearsal room as a guest artist.',
       },
       {
         label: 'Centennial season',
-        detail: 'Programmed during the Goodman Theatre Centennial Season.',
+        detail: 'Programmed during the Goodman Theatre Centennial Season, Holiday became both a repertory comedy and a marker of continuity between Falls\'s tenure and Susan V. Booth\'s leadership.',
+      },
+      {
+        label: 'Extended run',
+        detail: 'Goodman extended the production by popular demand through March 8, 2026, moving the page beyond a planned engagement into a documented audience-response success.',
+      },
+      {
+        label: 'Late Greenberg chapter',
+        detail: 'The adaptation stands among Richard Greenberg\'s final theatre works, giving the staging added weight as a collaboration between Falls and a major American playwright near the end of Greenberg\'s career.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Classic comedy, contemporary pressure',
+        detail: 'The production uses Barry\'s high-society comedy as a live argument about class, work, money, marriage, and choosing a life outside inherited expectations.',
+      },
+      {
+        label: 'Albert Theatre scale',
+        detail: 'Unlike the small-room chamber returns elsewhere in the archive, Holiday puts Falls back in the Goodman\'s larger Albert Theatre with a large ensemble, design-forward visual world, and broad comic timing.',
+      },
+      {
+        label: 'Collaborative handoff',
+        detail: 'Susan V. Booth\'s welcome note frames the production as a choice sparked by conversations with Falls, making it a useful record of post-tenure artistic trust rather than a purely nostalgic return.',
       },
     ],
     contextNotes: [
       {
+        label: 'Official framing',
+        text: 'Goodman bills Holiday as a sparkling contemporary adaptation of Philip Barry\'s classic play, adapted by Tony winner Richard Greenberg and directed by Robert Falls in the Albert Theatre.',
+      },
+      {
+        label: 'Run extension',
+        text: 'The official production page records the run as January 31-March 8, 2026 after an extension by popular demand; earlier local data listed the shorter March 1 closing date.',
+      },
+      {
         label: 'Visual approach',
-        text: 'The page now opens on Todd Rosenberg production stills, with official key art and rehearsal images retained as supporting visuals.',
+        text: 'The page opens on Todd Rosenberg production stills, with official key art and rehearsal images retained as supporting visuals so the page reads as a staged production rather than only a show announcement.',
       },
       {
         label: 'Photo source',
         text: 'Production images are sourced from the official Goodman Theatre production page for the 2026 staging.',
+      },
+      {
+        label: 'Content advisory',
+        text: 'Goodman recommended Holiday for ages 13+ and noted themes of grief, loss, and addiction with mature language.',
+      },
+      {
+        label: 'Source packet',
+        text: 'The current source trail includes the official Goodman page, two Goodman feature articles, gallery captions, review pull quotes, rehearsal images, and multiple Goodman video thumbnails embedded on the production page.',
       },
     ],
     reviews: [
@@ -860,28 +933,95 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Goodman Theatre critical praise',
         href: 'https://www.goodmantheatre.org/show/holiday/',
         summary:
-          'Goodman collects praise from The Wall Street Journal, Daily Herald, BroadwayWorld, WGN Radio, and Chicago Tribune for the production.',
+          'Goodman collects praise from The Wall Street Journal, Daily Herald, BroadwayWorld, WGN Radio, and Chicago Tribune for the production, including notices for Greenberg\'s adaptation, Falls\'s staging, and the ensemble.',
       },
       {
         source: 'Chicago Tribune',
         href: 'https://www.goodmantheatre.org/show/holiday/',
         summary:
-          'Goodman excerpts the Tribune describing the production as a four-star comedy with sardonic wit and tenderness.',
+          'Goodman excerpts the Tribune calling Holiday a four-star comedy that sparkles with sardonic wit and disarming tenderness.',
       },
       {
         source: 'Wall Street Journal',
         href: 'https://www.goodmantheatre.org/show/holiday/',
         summary:
-          'Goodman cites the Journal on Greenberg\'s adaptation and Falls\'s sprightly staging.',
+          'Goodman cites The Wall Street Journal on Greenberg\'s adaptation and Falls\'s sprightly, incisive staging.',
+      },
+      {
+        source: 'WGNRadio.com',
+        href: 'https://www.goodmantheatre.org/show/holiday/',
+        summary:
+          'Goodman quotes WGNRadio.com calling Holiday a four-star joyful surprise of the theatre season.',
+      },
+      {
+        source: 'BroadwayWorld',
+        href: 'https://www.goodmantheatre.org/show/holiday/',
+        summary:
+          'Goodman includes BroadwayWorld praise for the production as a superbly acted romantic comedy.',
       },
     ],
     externalSources: [
       { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/holiday/' },
-      { label: 'Goodman recommended read: Susan V. Booth welcomes Holiday', href: 'https://www.goodmantheatre.org/show/holiday/' },
-      { label: 'Goodman recommended read: The Real Life Lovebirds of Holiday', href: 'https://www.goodmantheatre.org/show/holiday/' },
+      { label: 'Susan V. Booth welcomes Holiday', href: 'https://www.goodmantheatre.org/susan-v-booth-welcomes-you-to-holiday/' },
+      { label: 'The Real Life Lovebirds of Holiday', href: 'https://www.goodmantheatre.org/the-real-life-lovebirds-of-holiday/' },
+      { label: 'Holiday play background', href: 'https://en.wikipedia.org/wiki/Holiday_(play)' },
+      { label: 'Richard Greenberg background', href: 'https://en.wikipedia.org/wiki/Richard_Greenberg' },
+    ],
+    watchLinks: [
+      {
+        label: 'Robert Falls Interview',
+        href: 'https://www.youtube.com/watch?v=pfuy6No57bI',
+        description: 'Goodman video feature on Falls and the contemporary revival of Holiday.',
+        thumbnail: holidayGoodman,
+      },
+      {
+        label: 'Holiday Rehearsal Montage',
+        href: 'https://www.youtube.com/watch?v=S9ehrIXcW2s',
+        description: 'Goodman rehearsal-room montage for the 2026 staging.',
+        thumbnail: holidayRehearsal1,
+      },
+      {
+        label: 'Holiday Scene 3',
+        href: 'https://www.youtube.com/watch?v=VndF5ULRXFo',
+        description: 'Goodman scene clip from the extended run.',
+        thumbnail: holidayProduction2,
+      },
+      {
+        label: 'Molly Griggs and Luigi Sottile Interview',
+        href: 'https://www.youtube.com/watch?v=-JxSEyxOshU',
+        description: 'Goodman cast interview with Julia Seton and Johnny Case.',
+        thumbnail: holidayProduction7,
+      },
+    ],
+    pressQuotes: [
+      {
+        quote: 'Richard Greenberg has left the theater with a lovely addition to his legacy with his splendid adaptation.',
+        source: 'The Wall Street Journal, quoted by Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/holiday/',
+      },
+      {
+        quote: 'Highly entertaining... Greenberg\'s comedy has real bite.',
+        source: 'Daily Herald, quoted by Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/holiday/',
+      },
+      {
+        quote: 'Superbly acted romantic comedy.',
+        source: 'BroadwayWorld, quoted by Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/holiday/',
+      },
+      {
+        quote: 'Holiday is the joyful surprise of the theatre season.',
+        source: 'WGNRadio.com, quoted by Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/holiday/',
+      },
+      {
+        quote: 'Sparkles with sardonic wit, as well as disarming tenderness.',
+        source: 'Chicago Tribune, quoted by Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/holiday/',
+      },
     ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'swing-state': {
     pageMode: 'featured',
@@ -1683,20 +1823,40 @@ const productionSeeds: Record<string, ProductionSeed> = {
   aida: {
     pageMode: 'featured',
     summary:
-      'Aida shows Falls operating at musical-theatre scale, bridging Chicago development, Broadway, touring life, and international remounts while also sharing book credit.',
+      'Aida is the archive entry where Falls steps fully into Disney-scale musical theatre: he took over the Chicago rebuild, shared book credit, and shepherded the show into a four-year Broadway hit with a long afterlife beyond New York.',
+    publicSummary:
+      'Falls helped reshape Disney\'s Elton John and Tim Rice musical in Chicago before it opened on Broadway, where it became a long-running hit and one of the largest commercial productions attached to his name.',
+    synopsis:
+      'An enslaved Nubian princess, Aida, falls in love with Radames, an Egyptian soldier already bound to the Pharaoh\'s daughter, Amneris. Their forbidden love pushes all three into a struggle among loyalty, empire, and personal sacrifice, turning a love triangle into a story about national violence and the cost of choosing compassion over duty.',
+    fallsContext:
+      'Aida matters here not just because it ran for years, but because it shows Falls working inside a commercial-musical machine at full scale. He stepped in during the Chicago reworking, shared book credit with Linda Woolverton and David Henry Hwang, and helped transform an unstable out-of-town process into one of the biggest Broadway chapters in the archive.',
     significance:
-      'One of Falls’s largest commercial projects, notable both for scale and for his co-book-writing credit.',
+      'One of Falls\'s largest commercial projects: a Chicago-to-Broadway musical rebuild that left him with both the director\'s chair and co-book credit on a four-Tony, 1,852-performance Broadway run.',
     story:
-      'The timeline records Aida as more than a single opening night: a 1999 pre-Broadway Chicago run, a 2000 Broadway opening, a national tour, and later international productions. It is one of the clearest examples in the archive of Falls moving between nonprofit theatre authority and large commercial musical infrastructure.',
-    venueAnchor: 'Chicago (pre-Broadway)',
-    eraLabel: 'National and international period',
+      'The production history is unusually legible. After the musical\'s troubled earlier development, Falls took over the Chicago staging at the Cadillac Palace, where the piece kept changing in public: Disney executives were still making book and choreography adjustments, and even a new song entered the process before Broadway. A November 13, 1999 set mishap injured Heather Headley and Adam Pascal during the Chicago run but did not derail the larger launch. By March 23, 2000, Aida had reached the Palace Theatre with Falls directing and sharing book credit, and it stayed there through September 5, 2004 for 1,852 performances, then continued through a national tour and international mountings tracked elsewhere in the archive. For Falls, it is one of the clearest records of Chicago tryout labor turning into mass-market Broadway longevity.',
+    venueAnchor: 'Cadillac Palace / Palace Theatre',
+    eraLabel: 'Broadway and commercial-musical years',
     images: [
       {
-        src: aidaPlaybillFull,
-        alt: 'Heather Headley, Adam Pascal, and Sherie Rene Scott in Aida.',
-        caption: 'Heather Headley, Adam Pascal, and Sherie Rene Scott in Aida. Photo: Joan Marcus via Playbill.',
-        orientation: 'landscape',
+        src: aidaHeadleyPascal,
+        alt: 'Heather Headley and Adam Pascal in an intimate embrace in Aida.',
+        caption: 'Heather Headley and Adam Pascal in the original Broadway production. Photo: Joan Marcus. Copyright Disney 2000.',
+        orientation: 'portrait',
         priority: true,
+        kind: 'production-still',
+      },
+      {
+        src: aidaPlaybillFull,
+        alt: 'Heather Headley, Adam Pascal, and Sherie Rene Scott in costume for Aida publicity.',
+        caption: 'Heather Headley, Adam Pascal, and Sherie Rene Scott in Broadway publicity imagery for Aida. Photo: Joan Marcus via Playbill.',
+        orientation: 'square',
+        kind: 'production-still',
+      },
+      {
+        src: aidaAmnerisEnsemble,
+        alt: 'Sherie Rene Scott sings center stage before a brightly lit wall of colored panels in Aida.',
+        caption: 'Sherie Rene Scott and the original Broadway cast in one of the production\'s bold pop-spectacle tableaux. Photo: Joan Marcus. Copyright Disney 2000.',
+        orientation: 'landscape',
         kind: 'production-still',
       },
       {
@@ -1710,30 +1870,912 @@ const productionSeeds: Record<string, ProductionSeed> = {
     collaborators: [
       { role: 'Music', name: 'Elton John' },
       { role: 'Lyrics', name: 'Tim Rice' },
-      { role: 'Director / co-book', name: 'Robert Falls' },
+      { role: 'Book', name: 'Linda Woolverton' },
+      { role: 'Book', name: 'Robert Falls' },
+      { role: 'Book', name: 'David Henry Hwang' },
+      { role: 'Choreography', name: 'Wayne Cilento' },
+      { role: 'Scenic / costume design', name: 'Bob Crowley' },
+      { role: 'Cast highlight', name: 'Heather Headley' },
+      { role: 'Cast highlight', name: 'Adam Pascal' },
+      { role: 'Cast highlight', name: 'Sherie Rene Scott' },
+    ],
+    quickFacts: [
+      { label: 'Chicago run', value: 'Nov 12, 1999 - Jan 9, 2000, Cadillac Palace Theatre' },
+      { label: 'Broadway run', value: 'Mar 23, 2000 - Sept 5, 2004, Palace Theatre' },
+      { label: 'Performances', value: '30 previews, 1,852 Broadway performances' },
+      { label: 'Tony wins', value: '4 Tony Awards in 2000' },
+      { label: 'Falls credit', value: 'Director and co-book writer' },
+    ],
+    cast: [
+      { role: 'Aida', name: 'Heather Headley' },
+      { role: 'Radames', name: 'Adam Pascal' },
+      { role: 'Amneris', name: 'Sherie Rene Scott' },
+      { role: 'Amonasro', name: 'Tyrees Allen' },
+      { role: 'Zoser', name: 'John Hickok' },
+      { role: 'Pharaoh', name: 'Daniel Oreskes' },
+      { role: 'Mereb', name: 'Damian Perkins' },
+      { role: 'Nehebka', name: 'Schele Williams' },
+    ],
+    creativeTeam: [
+      { role: 'Music by', name: 'Elton John' },
+      { role: 'Lyrics by', name: 'Tim Rice' },
+      { role: 'Book by', name: 'Linda Woolverton, Robert Falls, and David Henry Hwang' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Choreographed by', name: 'Wayne Cilento' },
+      { role: 'Scenic and Costume Design', name: 'Bob Crowley' },
+      { role: 'Lighting Design', name: 'Natasha Katz' },
+      { role: 'Sound Design', name: 'Steve C. Kennedy' },
     ],
     recognition: [
       {
-        label: 'Broadway scale',
-        detail: 'Credits note 1,852 performances and 4 Tony wins.',
+        label: 'Long Broadway life',
+        detail: 'The Broadway production ran 1,852 performances after its March 23, 2000 opening at the Palace Theatre, making it one of the longest commercial engagements attached to Falls\'s name.',
       },
       {
-        label: 'Creative role',
-        detail: 'Falls is credited in the archive as both director and co-book writer.',
+        label: 'Four Tony wins',
+        detail: 'The production won four Tony Awards in 2000, including Best Original Score, Best Actress in a Musical for Heather Headley, Best Scenic Design, and Best Lighting Design.',
+      },
+      {
+        label: 'Creative authorship',
+        detail: 'Unlike most productions in this archive, Aida credits Falls not only as director but as one of the musical\'s book writers.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Chicago rebuild into Broadway hit',
+        detail: 'Falls inherited the production during its Chicago reworking stage and carried it into a Broadway run that lasted more than four years.',
+      },
+      {
+        label: 'Commercial-musical scale',
+        detail: 'Aida is one of the clearest examples in the archive of Falls working beyond the nonprofit and classic-revival lanes that define much of the rest of the site.',
+      },
+      {
+        label: 'Global afterlife',
+        detail: 'The internal timeline tracks the title from Chicago to Broadway, then to a national tour and later documented international productions in the Netherlands, Germany, Japan, and South Korea.',
       },
     ],
     contextNotes: [
       {
-        label: 'Production spread',
-        text: 'Timeline entries follow the title from Chicago to Broadway, then to a national tour and international productions.',
+        label: 'Chicago overhaul',
+        text: 'The Chicago run marked a major creative reset. Falls replaced Robert Jess Ross as director, Bob Crowley replaced Stanley A. Meyer as designer, and Wayne Cilento joined the team before the Broadway opening.',
+      },
+      {
+        label: 'Set accident',
+        text: 'During the Chicago engagement, a suspended tomb unit fell during the November 13, 1999 performance, lightly injuring Heather Headley and Adam Pascal before the show resumed days later.',
+      },
+      {
+        label: 'Archive limits',
+        text: 'The local Aida packet is thinner than many other featured productions, so this page leans on documented history, billing records, and a small set of surviving Broadway images rather than a deep per-production gallery.',
+      },
+      {
+        label: 'Image sources',
+        text: 'The added stills are preserved through David Henry Hwang\'s project page and credit Joan Marcus for Disney\'s original Broadway production photography.',
       },
       {
         label: 'Photo source',
         text: 'Current hero image comes from Playbill’s Broadway retrospective gallery and is credited there to Joan Marcus.',
       },
     ],
+    externalSources: [
+      { label: 'Music Theatre International show page', href: 'https://www.mtishows.com/elton-john-and-tim-rices-aida' },
+      { label: 'D23 on the Chicago opening', href: 'https://d23.com/this-day/the-aida-musical-show-opens-at-the-cadillac-palace-theatre-in-chicago/' },
+      { label: 'David Henry Hwang project page', href: 'https://www.davidhenryhwang.com/work-1/2019/6/14/aida' },
+      { label: 'Playbill photo look-back', href: 'https://playbill.com/article/look-back-at-heather-headley-sherie-rene-scott-and-adam-pascal-in-aida-on-broadway' },
+    ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
+  },
+  'finishing-the-picture': {
+    pageMode: 'archive',
+    summary:
+      'Arthur Miller\'s final play arrived at the Goodman as a world premiere in fall 2004, giving Falls a late-career Miller event built around movie-set collapse, celebrity damage, and the wreckage behind American mythmaking.',
+    publicSummary:
+      'Falls directed the Goodman world premiere of Arthur Miller\'s final play, a backstage film-world drama widely read as Miller\'s reckoning with the Marilyn Monroe years and the making of The Misfits.',
+    synopsis:
+      'A distinguished film director is close to losing his picture because the star at its center, adored around the world but unable to steady herself, cannot get out of bed and onto the set. As studio pressure mounts, an acting teacher is brought in to manage the actress, and the production turns into a battle among artistry, commerce, vanity, loyalty, and collapse.',
+    fallsContext:
+      'Finishing the Picture matters less as a transfer story than as a literary and institutional one: Falls became the first director to stage Arthur Miller\'s final completed play, and he did it at the Goodman, the same theatre where the Miller relationship had already produced Finishing the Picture\'s clear predecessor in the archive, the major Death of a Salesman revival. It shows Falls functioning not just as a director of repertory and premieres, but as a trusted first interpreter of a major playwright\'s last work.',
+    significance:
+      'A world premiere of Arthur Miller\'s last play, opened at the Goodman four months before Miller\'s death and staged by Falls with a starry ensemble led by Frances Fisher, Scott Glenn, Stacy Keach, Stephen Lang, Linda Lavin, Matthew Modine, Heather Prete, and Harris Yulin.',
+    story:
+      'This page earns its place because the production sits at a rare junction: late Miller, Hollywood memory, and Goodman prestige. Playbill\'s opening-night coverage treated the script as a thinly veiled return to the Monroe-and-Misfits crisis, while the Goodman framed it as a fable about a director, a fragile star, and the perversion of the American Dream. That combination makes Finishing the Picture more than just another 2004 credit. It is a document of Falls being entrusted with the first production of a major American playwright\'s final stage work, at a moment when Miller\'s personal history and public legacy were inseparable.',
+    venueAnchor: "Goodman's Albert Theatre",
+    eraLabel: 'Late Goodman years',
+    images: [
+      {
+        src: finishingThePictureShowArt,
+        alt: 'Scott Glenn and Frances Fisher seated together in a quiet scene from Finishing the Picture.',
+        caption: 'Official Goodman production image for the world premiere, featuring Scott Glenn and Frances Fisher.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'production-still',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Arthur Miller' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Frances Fisher' },
+      { role: 'Cast highlight', name: 'Scott Glenn' },
+      { role: 'Cast highlight', name: 'Stacy Keach' },
+      { role: 'Cast highlight', name: 'Stephen Lang' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Sep 21 - Nov 7, 2004' },
+      { label: 'Venue', value: "Goodman's Albert Theatre" },
+      { label: 'Status', value: 'World premiere' },
+      { label: 'Runtime', value: '2 hr 15 min' },
+      { label: 'Miller context', value: 'Arthur Miller\'s final play' },
+    ],
+    cast: [
+      { role: 'Edna Meyers', name: 'Frances Fisher' },
+      { role: 'Terry Case', name: 'Scott Glenn' },
+      { role: 'Phillip Ochsner', name: 'Stacy Keach' },
+      { role: 'Jerome Fassinger', name: 'Stephen Lang' },
+      { role: 'Flora Fassinger', name: 'Linda Lavin' },
+      { role: 'Paul', name: 'Matthew Modine' },
+      { role: 'Kitty', name: 'Heather Prete' },
+      { role: 'Derek Clemson', name: 'Harris Yulin' },
+    ],
+    creativeTeam: [
+      { role: 'Playwright', name: 'Arthur Miller' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Thomas Lynch' },
+      { role: 'Costume Design', name: 'Martin Pakledinaz' },
+      { role: 'Lighting Design', name: 'Michael Philippi' },
+      { role: 'Sound Design and Original Music', name: 'Richard Woodbury' },
+      { role: 'Projections Designer', name: 'John Boesche' },
+      { role: 'Chicago Casting', name: 'Adam Belcuore' },
+      { role: 'Casting', name: 'Telsey + Company' },
+      { role: 'Production Stage Manager', name: 'Joseph Drummond' },
+      { role: 'Stage Manager', name: 'T. Paul Lynch' },
+      { role: 'Collaborator', name: 'Delphi Productions' },
+    ],
+    recognition: [
+      {
+        label: 'Miller\'s final play',
+        detail: 'The production premiered Arthur Miller\'s last completed stage work in Chicago only months before the playwright\'s death in February 2005.',
+      },
+      {
+        label: 'First production trust',
+        detail: 'Falls and the Goodman became the first artists and institution entrusted with staging this late Miller script in public.',
+      },
+      {
+        label: 'Prestige ensemble',
+        detail: 'The premiere assembled a notably deep cast, including Frances Fisher, Scott Glenn, Stacy Keach, Stephen Lang, Linda Lavin, Matthew Modine, Heather Prete, and Harris Yulin.',
+      },
+      {
+        label: 'Opening-night marker',
+        detail: 'The production began performances September 21, officially opened October 5, and closed November 7, 2004, placing the Goodman premiere just four months before Miller died in February 2005.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Late-career Miller chapter',
+        detail: 'The page records a new Miller work rather than a revival, which makes it distinct from Falls\'s other Arthur Miller landmarks in the archive.',
+      },
+      {
+        label: 'Hollywood under pressure',
+        detail: 'The play\'s studio setting let Falls work in a register of backstage collapse and celebrity crisis rather than courtroom, family, or civic drama.',
+      },
+      {
+        label: 'Goodman authority',
+        detail: 'Mounting the premiere at the Goodman underscores the theatre\'s national role under Falls as a home for heavyweight American playwrights and difficult first productions.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman preserved the original synopsis, run dates, runtime, and complete artist roster, making the official production page the core factual source for this record.',
+      },
+      {
+        label: 'Monroe / Misfits context',
+        text: 'Playbill\'s opening-night report described the script as based on the making of The Misfits and on the crisis period surrounding Marilyn Monroe, which helps explain why the production was immediately read as part backstage drama, part autobiographical reckoning.',
+      },
+      {
+        label: 'Archive image limits',
+        text: 'Only one official production image is currently in the local archive, so this page stays in archive mode rather than pretending to have a full featured gallery.',
+      },
+      {
+        label: 'Design spine',
+        text: 'Goodman credits Thomas Lynch, Martin Pakledinaz, Michael Philippi, Richard Woodbury, and John Boesche for the visual and sound world, with Joseph Drummond and T. Paul Lynch leading stage management.',
+      },
+      {
+        label: 'Final-play context',
+        text: 'Reference sources consistently identify Finishing the Picture as Miller\'s final play and connect the Goodman production to the late-life public conversation around The Misfits and Marilyn Monroe.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'The New York Times',
+        href: 'https://theater.nytimes.com/2004/10/11/theater/reviews/11fini.html',
+        summary:
+          'Ben Brantley reviewed the Goodman world premiere for The New York Times, marking the production\'s national critical reception beyond Chicago.',
+        note: 'Review of the world premiere',
+      },
+      {
+        source: 'Finishing the Picture background',
+        href: 'https://en.wikipedia.org/wiki/Finishing_the_Picture',
+        summary:
+          'The play background identifies the Goodman staging as the original production of Miller\'s final play and lists the Falls-directed ensemble.',
+        note: 'Production-history context',
+      },
+      {
+        source: 'Arthur Miller background',
+        href: 'https://en.wikipedia.org/wiki/Arthur_Miller',
+        summary:
+          'Miller biographical context helps situate the play among his final works and the public discussion of its relationship to The Misfits.',
+        note: 'Playwright context',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/finishing-the-picture/' },
+      { label: 'Playbill opening-night coverage (archived)', href: 'https://web.archive.org/web/20121021131440/http://www.playbill.com/news/article/88779-Arthur-Millers-Latest-Finishing-the-Picture-Opens-at-Goodman-Theatre-Oct-5' },
+      { label: 'The New York Times review citation trail', href: 'https://theater.nytimes.com/2004/10/11/theater/reviews/11fini.html' },
+      { label: 'Finishing the Picture play background', href: 'https://en.wikipedia.org/wiki/Finishing_the_Picture' },
+      { label: 'Arthur Miller background', href: 'https://en.wikipedia.org/wiki/Arthur_Miller' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
+  'blue-surge': {
+    pageMode: 'archive',
+    summary:
+      'Blue Surge is the first major Falls/Rebecca Gilman entry in the archive: a Goodman world premiere about police, sex work, and class drift that later continued Off-Broadway at the Public Theater.',
+    publicSummary:
+      'Falls directed the Goodman world premiere of Rebecca Gilman\'s Blue Surge in 2001, launching one of the defining playwright-director collaborations in the archive before the play moved on to New York two years later.',
+    synopsis:
+      'As a young cop becomes entangled with a prostitute and with the uneasy moral compromises of the people around him, Gilman uses the traffic among police work, sex work, and ordinary Midwestern aspiration to expose how class pressure distorts intimacy, authority, and the idea of public service.',
+    fallsContext:
+      'Blue Surge is where the long Falls/Gilman line starts in earnest. Later pages like Dollhouse, Luna Gale, Soups, Stews, and Casseroles: 1976, and Swing State all feel richer once this one is in place, because it shows the partnership beginning with urban social realism, working-class pressure, and an unsentimental Chicago lens that would keep evolving for two decades.',
+    significance:
+      'A Goodman world premiere and commission that began Falls\'s long-running collaboration with Rebecca Gilman, then proved durable enough to continue at the Joseph Papp Public Theater in 2003.',
+    story:
+      'The play\'s place in the archive is larger than its surviving asset packet. The official Goodman page preserves the original 2001 run, cast, runtime, and commissioning language; the timeline and credits show that the production did not end in Chicago, but extended to the Joseph Papp Public Theater in New York in 2003. That two-step life matters. Blue Surge was not just a successful local premiere. It was the opening movement in one of the key artistic relationships on the site, establishing the Falls/Gilman partnership as a major new-work engine inside the Goodman years.',
+    venueAnchor: "Goodman's Albert Theatre",
+    eraLabel: 'Early 2000s Goodman years',
+    images: [
+      {
+        src: blueSurgeShowArt,
+        alt: 'Two men in casual clothes argue across a desk in official Blue Surge production art.',
+        caption: 'Official Goodman show art for the world premiere of Blue Surge.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'art',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Rebecca Gilman' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Joe Forbrich' },
+      { role: 'Cast highlight', name: 'Rebecca Jordan' },
+      { role: 'Cast highlight', name: 'Amy Landecker' },
+      { role: 'Cast highlight', name: 'Rachel Miner' },
+    ],
+    quickFacts: [
+      { label: 'Goodman run', value: 'Jun 29 - Aug 4, 2001' },
+      { label: 'Venue', value: "Goodman's Albert Theatre" },
+      { label: 'Runtime', value: '2 hr' },
+      { label: 'Status', value: 'World premiere and Goodman commission' },
+      { label: 'Later staging', value: '2003, Joseph Papp Public Theater' },
+    ],
+    cast: [
+      { role: 'Curt', name: 'Joe Forbrich' },
+      { role: 'Heather', name: 'Rebecca Jordan' },
+      { role: 'Doug', name: 'Steve Key' },
+      { role: 'Beth', name: 'Amy Landecker' },
+      { role: 'Sandy', name: 'Rachel Miner' },
+    ],
+    creativeTeam: [
+      { role: 'Playwright', name: 'Rebecca Gilman' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Walt Spangler' },
+      { role: 'Costume Design', name: 'Birgit Rattenborg Wise' },
+      { role: 'Lighting Design', name: 'Michael Philippi' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Dramaturg', name: 'Tom Creamer' },
+      { role: 'Production Stage Manager', name: 'Alden J. Vasquez' },
+    ],
+    recognition: [
+      {
+        label: 'First Gilman chapter',
+        detail: 'Timeline and later production records consistently treat Blue Surge as the starting point of the Falls/Rebecca Gilman collaboration that would become one of the defining partnerships on the site.',
+      },
+      {
+        label: 'Chicago to New York continuation',
+        detail: 'The archive records a 2003 continuation at the Joseph Papp Public Theater, showing that the play had life beyond its Goodman premiere.',
+      },
+      {
+        label: 'Commissioned new work',
+        detail: 'The Goodman page frames the production explicitly as both a world premiere and a Goodman Theatre commission.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Partnership origin',
+        detail: 'Blue Surge establishes the social and class concerns that would keep resurfacing throughout the Falls/Gilman collaboration.',
+      },
+      {
+        label: 'Urban social realism',
+        detail: 'The play\'s cops-and-prostitutes setting places it near the grittier end of Falls\'s Goodman new-work record, far from genteel literary adaptation or period revival.',
+      },
+      {
+        label: 'Sparse but solid archive',
+        detail: 'Even with limited surviving media, the page has unusually trustworthy institutional facts because the official Goodman production record remains live and detailed.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman page preserves the original commissioning label, run dates, runtime, and full artist roster, making it the anchor source for this record.',
+      },
+      {
+        label: 'Public Theater continuation',
+        text: 'Internal timeline and credits data record a 2003 New York continuation at the Joseph Papp Public Theater. That second staging is kept visible here because it shows the play functioning as more than a one-city premiere.',
+      },
+      {
+        label: 'Image limits',
+        text: 'The local archive currently preserves official show art but not a full still gallery, so this page stays image-light by design rather than padding the layout with unrelated portraits.',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/blue-surge/' },
+      { label: 'Rebecca Gilman artist page', href: 'https://www.goodmantheatre.org/artists/rebecca-gilman/' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'house-and-garden': {
+    pageMode: 'archive',
+    summary:
+      "House and Garden brought Alan Ayckbourn's linked twin-play experiment to the Goodman in 2001, giving Falls an American-premiere event built around simultaneous staging, shared actors, and one country-house day seen from two sides at once.",
+    publicSummary:
+      "Falls directed the American premiere of Alan Ayckbourn's House and Garden at the Goodman in 2001, a dual-play event designed to run simultaneously in two auditoria with the same cast crossing between them.",
+    synopsis:
+      "Set over the course of a single summer day at Teddy Platt's country house during a village fete, House and Garden split the same social world into two plays happening at the same time. One follows the drawing-room unravelling of marriages, flirtations, and political ambition; the other moves outdoors among fête logistics, servants, neighbors, and private reckonings. Seen together, the diptych becomes a farce of overlapping perspectives, collapsing domestic life and public display into one theatrical machine.",
+    fallsContext:
+      "House and Garden matters in the archive because it shows Falls not only as a director of emotional scale, but as a director of logistics and form. Ayckbourn's experiment depends on precision: actors moving between paired stages, scenes echoing each other across spaces, and the audience gradually understanding that no single room contains the full story.",
+    significance:
+      'An American premiere at the Goodman of Alan Ayckbourn\'s unusually demanding diptych, one of the clearest formal experiments in Falls\'s early-2000s record.',
+    story:
+      "The page earns its place less through surviving cast documentation than through the nature of the production itself. Ayckbourn's own archive describes House and Garden as two plays built to run simultaneously with the same cast in two auditoria, and Robert Falls's Goodman record identifies his staging as the American premiere. That makes it a key form-driven title in the 2001 cluster: not a revival, not a premiere of a single script, but a theatrical engineering problem that also had to land as comedy and social observation.",
+    venueAnchor: 'Goodman Theatre',
+    eraLabel: 'Early 2000s Goodman years',
+    images: [
+      {
+        src: houseAndGardenShowArt,
+        alt: 'Official show art for House and Garden depicting a country house split by a silhouette profile.',
+        caption: 'Official Goodman show art for the American premiere of House and Garden.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'art',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Alan Ayckbourn' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Year', value: '2001' },
+      { label: 'Venue', value: 'Goodman Theatre' },
+      { label: 'Status', value: 'American premiere' },
+      { label: 'Structure', value: 'Two linked plays performed simultaneously' },
+      { label: 'Source concept', value: 'Ayckbourn dual-auditoria event' },
+    ],
+    recognition: [
+      {
+        label: 'American premiere',
+        detail: 'Falls\'s Goodman staging is recorded as the American premiere of Ayckbourn\'s twin-play experiment.',
+      },
+      {
+        label: 'A formal challenge, not just a title',
+        detail: 'House and Garden is designed as a simultaneous diptych with one cast crossing between two auditoria, making production logistics part of the artistic identity of the piece itself.',
+      },
+      {
+        label: 'A distinct 2001 entry',
+        detail: 'Within Falls\'s early-2000s Goodman work, this production stands out for theatrical architecture and timing rather than for transfer history, awards, or surviving star-centered photography.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Theatrical engineering as storytelling',
+        detail: 'The play pair belongs in the archive because it required a director who could organize simultaneous action without letting the mechanics eclipse character and social comedy.',
+      },
+      {
+        label: 'Ayckbourn at his most structural',
+        detail: 'Ayckbourn\'s official site frames the work as one of his largest formal experiments, splitting one country-house world into complementary interior and exterior views.',
+      },
+      {
+        label: 'Sparse but credible record',
+        detail: 'Even though the surviving local packet is thinner than for nearby Goodman productions, the page now rests on official show art, internal site chronology, and the Ayckbourn archive rather than generic filler text.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Primary source constraint',
+        text: 'The public Goodman archive page is currently difficult to fetch reliably from this environment, so the page is built from the verified official show art, internal archive chronology, and Ayckbourn\'s own dedicated House and Garden site.',
+      },
+      {
+        label: 'Ayckbourn record',
+        text: 'The official House and Garden website describes the diptych as two plays designed to be performed simultaneously with the same cast moving between them, and documents the world, London, and New York premieres that frame its broader production history.',
+      },
+      {
+        label: 'Archive status',
+        text: 'This page is now materially stronger than the auto-generated fallback, but it remains a good candidate for a later enrichment pass if a fuller Goodman cast or program record surfaces.',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/house-and-garden/' },
+      { label: 'Official Alan Ayckbourn House & Garden site', href: 'http://houseandgarden.alanayckbourn.net/' },
+      { label: 'Ayckbourn production history', href: 'http://houseandgarden.alanayckbourn.net/page17/' },
+      { label: 'Robert Falls career overview', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'lobby-hero': {
+    pageMode: 'archive',
+    summary:
+      "Lobby Hero brought Kenneth Lonergan's shaggy off-Broadway breakthrough to Goodman's Owen Theatre in 2002, giving Falls a compact, morally slippery city comedy about authority, loyalty, and people who keep talking past the truth.",
+    publicSummary:
+      'Falls directed the Goodman staging of Kenneth Lonergan\'s Lobby Hero in 2002, a four-character ethical comedy set on the graveyard shift in a Manhattan apartment building lobby.',
+    synopsis:
+      'Jeff, a security guard drifting through the night shift in a Manhattan lobby, tries to charm his way through boredom, loneliness, and half-understood ambition while orbiting his rule-bound supervisor William and two police officers, the swaggering Bill and the newly idealistic Dawn. When a murder accusation drags William\'s brother into the story and Jeff gets pulled into protecting the lie, the play turns into a comedy of conscience in which nobody can fully separate decency from self-interest.',
+    fallsContext:
+      'Lobby Hero shows Falls in a smaller, more conversational register than the large-canvas O\'Neill, Shakespeare, and musical productions that dominate nearby years in the archive. In the Owen Theatre, the emphasis shifts to quartet dynamics, verbal rhythm, and the unstable moral logic of contemporary urban realism.',
+    significance:
+      'A Goodman engagement of Kenneth Lonergan\'s recent off-Broadway hit, staged in the Owen Theatre just as Lonergan was emerging as one of the key American playwrights of his generation.',
+    story:
+      'The production matters because it marks Falls aligning the Goodman with a then-new contemporary American play that had already made noise downtown in New York but had not yet become canonical. Goodman\'s own copy sold the piece as a heartfelt, loopy ethical comedy rather than a solemn issue play, and that frame helps explain why it belongs in the archive: Lobby Hero let Falls work with comic timing, class friction, and institutional authority on an intimate scale, using the theatre\'s smaller room for a pressure-cooker ensemble instead of spectacle.',
+    venueAnchor: "Goodman's Owen Theatre",
+    eraLabel: 'Early 2000s Goodman years',
+    images: [
+      {
+        src: lobbyHeroShowArt,
+        alt: 'Lance Stuart Baker and Rolando Boyce Sr. in security uniforms in a production still from Lobby Hero.',
+        caption: 'Official Goodman production still for Lobby Hero in the Owen Theatre.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'production-still',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Kenneth Lonergan' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Lance Stuart Baker' },
+      { role: 'Cast highlight', name: 'Rolando Boyce, Sr.' },
+      { role: 'Cast highlight', name: 'Scott Cummins' },
+      { role: 'Cast highlight', name: 'Julie Granata' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Nov 4 - 24, 2002' },
+      { label: 'Venue', value: "Goodman's Owen Theatre" },
+      { label: 'Runtime', value: '2 hr 9 min' },
+      { label: 'Season', value: '2002/2003' },
+      { label: 'Source context', value: 'Following the 2001 off-Broadway breakout' },
+    ],
+    cast: [
+      { role: 'Jeff', name: 'Lance Stuart Baker' },
+      { role: 'William', name: 'Rolando Boyce, Sr.' },
+      { role: 'Bill', name: 'Scott Cummins' },
+      { role: 'Dawn', name: 'Julie Granata' },
+    ],
+    creativeTeam: [
+      { role: 'Playwright', name: 'Kenneth Lonergan' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Linda Buchanan' },
+      { role: 'Costume Design', name: 'Rachel Anne Healy' },
+      { role: 'Lighting Design', name: 'Michelle Habeck' },
+      { role: 'Original Music and Sound Design', name: 'Richard Woodbury' },
+      { role: 'Production Stage Manager', name: 'Kimberly Osgood' },
+      { role: 'Stage Manager', name: 'Ellen Hay' },
+    ],
+    recognition: [
+      {
+        label: 'Lonergan at a formative moment',
+        detail: 'Goodman billed the play in the wake of its 2001 off-Broadway success, catching Kenneth Lonergan before later Broadway and film recognition made Lobby Hero a repertory staple.',
+      },
+      {
+        label: 'A small-room Falls production',
+        detail: 'Mounted in the Owen Theatre with a four-person cast, the production highlights Falls\'s ability to work in chamber scale rather than only in marquee revivals and epics.',
+      },
+      {
+        label: 'Urban ethics comedy',
+        detail: 'The page adds a distinct contemporary-city register to the archive: institutional authority, class unease, and moral confusion played for both humor and damage.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Goodman and new American writing',
+        detail: 'The staging reflects Falls using the Goodman not only for classics and transfers but also for recent American plays already reshaping the off-Broadway conversation.',
+      },
+      {
+        label: 'Owen Theatre intimacy',
+        detail: 'Its scale is part of its identity: four characters, one lobby, and a moral argument that gets funnier and uglier the longer the night goes on.',
+      },
+      {
+        label: 'Lean but specific archive record',
+        detail: 'The surviving source packet is compact, but it includes trustworthy run data, full casting, creative credits, synopsis, runtime, and an official still from the production.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman archive page preserves the original synopsis, run dates, runtime, and complete artist roster, making it the primary factual source for this record.',
+      },
+      {
+        label: 'Off-Broadway context',
+        text: 'Goodman described Lobby Hero as a hit of the 2001 off-Broadway season, which helps place the production as a near-contemporary Chicago staging rather than a later revival of an already canonized text.',
+      },
+      {
+        label: 'Image limits',
+        text: 'The local archive currently holds one official still rather than a full gallery, so the page stays image-light and text-forward by design.',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/lobby-hero/' },
+      { label: 'Lobby Hero production history', href: 'https://en.wikipedia.org/wiki/Lobby_Hero' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'hughie': {
+    pageMode: 'archive',
+    summary:
+      "Hughie gave Falls and Brian Dennehy a smaller O'Neill chamber piece in 2004: a one-hour nocturnal encounter about luck, loneliness, and self-invention, staged in Goodman's Owen Theatre.",
+    publicSummary:
+      "Falls directed Eugene O'Neill's Hughie at the Goodman in 2004 with Brian Dennehy as Erie Smith and Joe Grifasi as the new night clerk who becomes the audience for Erie's fading mythology.",
+    synopsis:
+      'Erie Smith, a once high-rolling gambler now running on memory and bluster, returns to the hotel lobby where the night clerk Hughie used to admire him. Hughie is dead, the city has moved on, and the new clerk is harder to impress. Over the course of one late-night encounter, Erie turns reminiscence into performance, gambling that if he can keep talking, he can keep his luck, his style, and his sense of himself from vanishing entirely.',
+    fallsContext:
+      "Hughie sits inside the long Falls/Brian Dennehy/Eugene O'Neill triangle, but unlike the epic scale of The Iceman Cometh or Long Day's Journey Into Night, it proves how much of that collaboration could live in compression: two actors, one hour, one room, and a whole ruined American mythology hanging on talk.",
+    significance:
+      "A compact O'Neill chapter in Falls's major Brian Dennehy collaboration, staged in Goodman's Owen Theatre from October 21 through November 21, 2004, with Dennehy as Erie Smith and Joe Grifasi as the new night clerk.",
+    story:
+      "The value of Hughie in the archive is contrast. Falls had already directed Dennehy through some of O'Neill's biggest emotional and physical canvases; here the work turns inward. The Goodman record preserves a version of Falls as miniaturist rather than impresario, using the smaller theatre to stage swagger as a survival tactic and to let Dennehy work less as a titan than as a haunted talker trying to charm back his vanished audience.",
+    venueAnchor: "Goodman's Owen Theatre",
+    eraLabel: 'Late Goodman years',
+    images: [
+      {
+        src: hughieShowArt,
+        alt: 'Brian Dennehy in fedora and overcoat in a dim hotel-lobby scene from Hughie.',
+        caption: 'Official Goodman production still featuring Brian Dennehy as Erie Smith.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'production-still',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: "Eugene O'Neill" },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Erie Smith', name: 'Brian Dennehy' },
+      { role: 'A Night Clerk', name: 'Joe Grifasi' },
+      { role: 'Scenic world', name: 'Eugene Lee' },
+      { role: 'Sound world', name: 'Richard Woodbury' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Oct 21 - Nov 21, 2004' },
+      { label: 'Venue', value: "Goodman's Owen Theatre" },
+      { label: 'Runtime', value: '1 hr' },
+      { label: 'Cast size', value: '2 actors' },
+      { label: 'Written by', value: "Eugene O'Neill" },
+      { label: 'Directed by', value: 'Robert Falls' },
+      { label: 'Career context', value: "Falls / Dennehy / O'Neill collaboration" },
+    ],
+    cast: [
+      { role: 'Erie Smith', name: 'Brian Dennehy' },
+      { role: 'A Night Clerk', name: 'Joe Grifasi' },
+    ],
+    creativeTeam: [
+      { role: 'Playwright', name: "Eugene O'Neill" },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Eugene Lee' },
+      { role: 'Costume Design', name: 'Rachel Anne Healy' },
+      { role: 'Lighting Design', name: 'John Culbert' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Production Stage Manager', name: 'Kimberly Osgood' },
+    ],
+    recognition: [
+      {
+        label: "A chamber O'Neill for Dennehy",
+        detail: "The production distilled the Falls/Dennehy O'Neill partnership down to a one-hour two-hander, sharply contrasting with the pair's larger canonical revivals elsewhere in the archive.",
+      },
+      {
+        label: 'Owen Theatre scale',
+        detail: 'Its placement in the Goodman\'s smaller room makes the production an important scale shift within Falls\'s 2000s record, emphasizing intimacy, rhythm, and actor presence over event-size production.',
+      },
+      {
+        label: 'Late-career Goodman pairing',
+        detail: 'Mounted in the same season as Finishing the Picture, Hughie shows Falls toggling between heavyweight literary premiere work and spare repertory revival within months.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Dennehy without the epic frame',
+        detail: 'The page documents a different register of one of Falls\'s defining actor collaborations: bruised charisma, memory, and late-night self-mythologizing instead of large family or ensemble collapse.',
+      },
+      {
+        label: 'Text-forward archive page',
+        detail: 'Because Hughie is built on a concentrated source packet rather than a large image archive, the page leans on synopsis, cast, and context instead of pretending to have fuller visual coverage than survives.',
+      },
+      {
+        label: "O'Neill continuity",
+        detail: "The production helps connect the major O'Neill landmarks on the site by showing the collaboration reaching not only headline revivals but also smaller, actor-driven works.",
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman archive page preserves the run dates, runtime, full artist roster, and the production synopsis used here as the factual anchor for the record.',
+      },
+      {
+        label: 'One-hour compression',
+        text: "The archive makes clear how stripped-down this production was compared with Falls's larger O'Neill work: one hour, two actors, one hotel-lobby encounter, and no ornamental subplotting.",
+      },
+      {
+        label: 'Image limits',
+        text: 'The local archive currently preserves one official still rather than a full gallery, so the page stays deliberately lean and avoids filler media.',
+      },
+      {
+        label: 'Artist roster',
+        text: 'The Goodman record identifies the production team as Eugene Lee, Rachel Anne Healy, John Culbert, Richard Woodbury, and Kimberly Osgood, giving the page a complete credited design spine even with limited imagery.',
+      },
+      {
+        label: 'Source background',
+        text: "The play was written in 1942 and premiered after O'Neill's death, giving this small Goodman revival a late-O'Neill frame alongside its local Falls/Dennehy importance.",
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/hughie/',
+        summary:
+          'The official archive provides the closed-production record: run dates, Owen Theatre venue, one-hour runtime, synopsis, cast, and principal creative credits.',
+        note: 'Primary production source',
+      },
+      {
+        source: 'Hughie background',
+        href: 'https://en.wikipedia.org/wiki/Hughie',
+        summary:
+          "The play background places Hughie as a short two-character late O'Neill work centered on Erie Smith, a gambler trying to recover his luck after the death of Hughie, the clerk who believed in him.",
+        note: 'Source-play context',
+      },
+      {
+        source: 'Brian Dennehy background',
+        href: 'https://en.wikipedia.org/wiki/Brian_Dennehy',
+        summary:
+          "Dennehy's biography helps situate Hughie within his decades-long Goodman relationship and his recurring association with O'Neill roles directed by Falls.",
+        note: 'Collaborator context',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/hughie/' },
+      { label: 'Hughie play background', href: 'https://en.wikipedia.org/wiki/Hughie' },
+      { label: 'Brian Dennehy background', href: 'https://en.wikipedia.org/wiki/Brian_Dennehy' },
+      { label: "Eugene O'Neill background", href: 'https://en.wikipedia.org/wiki/Eugene_O%27Neill' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
+  'the-guys': {
+    pageMode: 'archive',
+    summary:
+      "The Guys brought Anne Nelson's immediate post-9/11 drama to Chicago in 2002, with Falls directing a concentrated two-character civic elegy co-presented by Goodman and Northlight in the Owen Theatre.",
+    publicSummary:
+      'Falls directed the Chicago premiere of Anne Nelson\'s The Guys in 2002, pairing Mary Beth Fisher and B.J. Jones in a compressed 9/11-era drama about grief, language, and public duty.',
+    synopsis:
+      'A New York fire chief, shattered by the loss of eight men from his company on September 11, turns to Joan, an editor and writer, for help composing the eulogies he must deliver. Over the course of their conversations, practical writing work becomes a way to confront grief, obligation, memory, and the impossible task of giving shape to public mourning while the wound is still fresh.',
+    fallsContext:
+      'The Guys marks Falls in a civic-response mode that differs from the large classics and literary revivals surrounding it. Rather than staging historical distance or mythic scale, the production engages an event still immediate in American life, using the Goodman\'s smaller room for direct address, witness, and emotional compression.',
+    significance:
+      'A Goodman and Northlight Theatre co-presentation of the Chicago premiere of Anne Nelson\'s 9/11 drama, mounted less than a year after the attacks and anchored by Mary Beth Fisher and Northlight artistic director B.J. Jones.',
+    story:
+      'This page matters because timing is part of the production\'s meaning. The Guys was not a retrospective September 11 play arriving decades later; it was staged in September 2002, still inside the first year of national mourning. Goodman\'s archive preserves that urgency in miniature: a short runtime, a two-person cast, a co-presentation with Northlight, and a blunt description of a fire chief struggling to write for the dead. In the larger Falls archive, it stands as one of the clearest examples of theatre used as immediate civic response rather than prestige revival or long-gestating new work.',
+    venueAnchor: "Goodman's Owen Theatre",
+    eraLabel: 'Early 2000s Goodman years',
+    images: [
+      {
+        src: theGuysShowArt,
+        alt: 'Mary Beth Fisher and B.J. Jones clasp hands in a production still from The Guys.',
+        caption: 'Official Goodman production still from the Chicago premiere co-presented with Northlight Theatre.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'production-still',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Anne Nelson' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Co-presenting theatre', name: 'Northlight Theatre' },
+      { role: 'Cast highlight', name: 'Mary Beth Fisher' },
+      { role: 'Cast highlight', name: 'B.J. Jones' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Sep 10 - 22, 2002' },
+      { label: 'Venue', value: "Goodman's Owen Theatre" },
+      { label: 'Presented with', value: 'Northlight Theatre' },
+      { label: 'Runtime', value: '80 min' },
+      { label: 'Status', value: 'Chicago premiere' },
+      { label: 'Cast size', value: '2 actors' },
+      { label: 'Source text', value: "Anne Nelson's post-9/11 drama" },
+    ],
+    cast: [
+      { role: 'Joan', name: 'Mary Beth Fisher' },
+      { role: 'Nick', name: 'B.J. Jones' },
+    ],
+    creativeTeam: [
+      { role: 'Playwright', name: 'Anne Nelson' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Co-presenting company', name: 'Northlight Theatre' },
+      { role: 'Production Stage Manager', name: 'Kerry Epstein' },
+    ],
+    recognition: [
+      {
+        label: 'Chicago premiere in real time',
+        detail: 'The production arrived in September 2002, less than a year after the attacks that the play addresses, giving it an immediacy unusual in the archive.',
+      },
+      {
+        label: 'A civic-response production',
+        detail: 'Unlike the major revival titles around it, The Guys functions as a document of theatre stepping into a public grieving process while that grief was still current and unresolved.',
+      },
+      {
+        label: 'Goodman / Northlight collaboration',
+        detail: 'The co-presentation places the page inside a Chicago institutional partnership rather than a single-house production model, which is part of its local significance.',
+      },
+      {
+        label: 'Artist-leader on stage',
+        detail: 'The casting of Northlight artistic director B.J. Jones as Nick makes the partnership visible inside the performance itself, not only in the producing credit.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Scale as purpose',
+        detail: 'Its two-person form and 80-minute runtime are not limitations but the point: the play works through intimacy, testimony, and shared language rather than theatrical sprawl.',
+      },
+      {
+        label: 'Different kind of 2002 production',
+        detail: 'Set against Lobby Hero and Long Day\'s Journey into Night, The Guys shows another side of Falls\'s 2002 range: immediate social response instead of ironic urban comedy or canonical epic.',
+      },
+      {
+        label: 'Lean but meaningful archive record',
+        detail: 'The surviving local packet is small, but the Goodman record clearly preserves the title\'s run, cast, co-producing context, and why it was staged when it was.',
+      },
+      {
+        label: 'Chicago within a national response',
+        detail: 'The Goodman staging belongs to the larger early life of Anne Nelson\'s play, which moved quickly from its New York premiere into productions and a film adaptation while September 11 remained a live public wound.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman archive page provides the Chicago-premiere billing, co-presentation note with Northlight Theatre, cast, runtime, and the short production summary used here.',
+      },
+      {
+        label: '9/11 context',
+        text: 'The play\'s action centers on a fire chief writing eulogies for men lost on September 11, which makes the production one of the archive\'s clearest records of direct response to a still-recent national event.',
+      },
+      {
+        label: 'Image limits',
+        text: 'The local archive currently preserves a single official still rather than a larger photo packet, so the page stays intentionally compact.',
+      },
+      {
+        label: 'Dating correction',
+        text: 'The production record is keyed to the official Goodman run dates, September 10-22, 2002; any broader timeline grouping should treat this as a 2002 production rather than a 2003 title.',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/the-guys/' },
+      { label: 'The Guys play background', href: 'https://en.wikipedia.org/wiki/The_Guys' },
+      { label: 'Anne Nelson background', href: 'https://en.wikipedia.org/wiki/Anne_Nelson' },
+      { label: 'The Flea Theater context', href: 'https://en.wikipedia.org/wiki/The_Flea_Theater' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'featured-ready',
+  },
+  'the-goat-or-who-is-sylvia': {
+    pageMode: 'archive',
+    summary:
+      "Falls brought Edward Albee's The Goat, or Who Is Sylvia? to the Goodman in 2003 as a Midwest premiere, staging the Tony-winning tragicomedy as a razor-edged domestic collapse in the Albert Theatre.",
+    publicSummary:
+      "Falls directed the Goodman Midwest premiere of Edward Albee's The Goat, or Who Is Sylvia? in 2003, following the play's 2002 Tony win with a Chicago staging built around a family undone by an unspeakable confession.",
+    synopsis:
+      'Martin appears to have the ideal life: a major architectural commission, a successful marriage, a bright son, and the glow of his fiftieth birthday. Then a confession detonates the household. Albee turns one impossible revelation into a savage test of intimacy, tolerance, disgust, language, and the stories sophisticated people tell themselves about what can and cannot be understood.',
+    fallsContext:
+      'The Goat shows Falls in another modern-classic register distinct from the civic compression of The Guys or the chamber melancholy of Hughie. Here the work is all tonal brinksmanship: high comedy tipping into horror, social polish giving way to primal damage, and a literate domestic setting blown open from within.',
+    significance:
+      'A Goodman Midwest premiere of Edward Albee\'s 2002 Tony winner for Best Play, mounted less than a year after the script\'s Broadway breakthrough and framed by the theatre as a wickedly funny tragicomedy.',
+    story:
+      'This is one of the clearest examples in the 2000s archive of Falls grabbing a major contemporary American play while it was still hot rather than long canonized. The Goodman page keeps the case simple: Albee\'s play had just won the Tony, the production was sold as the Midwest premiere, and the cast was built to ride the script\'s violent shifts in tone rather than cushion them. In the broader site, that makes The Goat an important bridge between Falls the classicist and Falls the director of contemporary provocation.',
+    venueAnchor: "Goodman's Albert Theatre",
+    eraLabel: 'Early 2000s Goodman years',
+    images: [
+      {
+        src: theGoatShowArt,
+        alt: 'Barbara Robertson leans against Patrick Clear in a production still from The Goat, or Who Is Sylvia?.',
+        caption: 'Official Goodman production still from the Midwest premiere of The Goat, or Who Is Sylvia?.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'production-still',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Edward Albee' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Patrick Clear' },
+      { role: 'Cast highlight', name: 'Barbara Robertson' },
+      { role: 'Cast highlight', name: 'William Dick' },
+      { role: 'Cast highlight', name: 'Michael Stahl-David' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Nov 10 - Dec 2, 2003' },
+      { label: 'Venue', value: "Goodman's Albert Theatre" },
+      { label: 'Runtime', value: '1 hr 45 min' },
+      { label: 'Status', value: 'Midwest premiere' },
+      { label: 'Awards context', value: '2002 Tony winner for Best Play' },
+    ],
+    cast: [
+      { role: 'Martin', name: 'Patrick Clear' },
+      { role: 'Ross', name: 'William Dick' },
+      { role: 'Stevie', name: 'Barbara Robertson' },
+      { role: 'Billy', name: 'Michael Stahl-David' },
+    ],
+    creativeTeam: [
+      { role: 'Playwright', name: 'Edward Albee' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic and Lighting Design', name: 'Michael Philippi' },
+      { role: 'Costume Design', name: 'Nan Cibula-Jenkins' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
+      { role: 'Production Dramaturg', name: 'Tom Creamer' },
+      { role: 'Production Stage Manager', name: 'Joseph Drummond' },
+      { role: 'Stage Manager', name: 'T. Paul Lynch' },
+    ],
+    recognition: [
+      {
+        label: 'Midwest premiere of a major new play',
+        detail: 'The Goodman staged the play as a Midwest premiere almost immediately after its Broadway success, keeping the title in active contemporary conversation rather than archival reverence.',
+      },
+      {
+        label: 'Tony-winning source text',
+        detail: 'Goodman explicitly framed the production in the wake of the play\'s 2002 Tony Award for Best Play, making the staging part of the title\'s first wave of major national recognition.',
+      },
+      {
+        label: 'Albee in provocation mode',
+        detail: 'The page records Falls taking on one of Albee\'s most notorious late-career scripts, where elegant language and civilized surfaces are designed to collapse under pressure.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'A contemporary shock classic',
+        detail: 'In the 2003 moment, The Goat was still less a settled repertory item than a live provocation, which gives the production a different charge than the archive\'s established classics.',
+      },
+      {
+        label: 'Domestic tragedy through comedy',
+        detail: 'Falls\'s 2000s record benefits from having this title in place because it shows him working on a contemporary script whose power depends on tonal whiplash rather than scale or overt sentiment.',
+      },
+      {
+        label: 'Strong institutional documentation',
+        detail: 'The Goodman archive preserves cast, design team, runtime, premiere status, and plot framing in unusually complete form for a page with a relatively small image packet.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Official framing',
+        text: 'The Goodman production page supplies the Midwest-premiere billing, full cast and creative roster, runtime, and the plot summary used here as the factual anchor.',
+      },
+      {
+        label: 'Albee awards context',
+        text: 'The theatre described the play as the winner of the 2002 Tony Award for Best Play, which helps explain why the production arrived at the Goodman so quickly after Broadway.',
+      },
+      {
+        label: 'Image limits',
+        text: 'The local archive currently holds one official production still rather than a broader gallery, so the page stays compact instead of overstating the surviving media record.',
+      },
+    ],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/the-goat-or-who-is-sylvia/' },
+      { label: 'The Goat, or Who Is Sylvia? background', href: 'https://en.wikipedia.org/wiki/The_Goat,_or_Who_Is_Sylvia%3F' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
   },
   'the-iceman-cometh': {
     pageMode: 'featured',
@@ -3459,22 +4501,29 @@ const productionSeeds: Record<string, ProductionSeed> = {
     summary:
       'Dollhouse is a key Rebecca Gilman adaptation in the Goodman years, pulling Ibsen\'s domestic revolt into explicitly contemporary social language without giving up the force of the original break.',
     publicSummary:
-      'Rebecca Gilman reworks Ibsen for Goodman, and Falls directs the commission as a contemporary social drama about marriage, selfhood, and escape.',
+      'Rebecca Gilman recasts Ibsen for contemporary Chicago speech and pressure, and Falls directs the Goodman commission as a brittle domestic drama about performance, obedience, and exit.',
     synopsis:
-      'A woman who has long performed the role expected of her begins to see how thoroughly her home has been structured around obedience, concealment, and charm. The play tracks the cost of that recognition and the danger of acting on it.',
+      'A woman who has long performed the role expected of her begins to see how thoroughly her home has been structured around obedience, concealment, and charm. Gilman\'s version translates the social machinery of A Doll\'s House into a contemporary register, tracking the cost of recognition and the danger of acting on it.',
     fallsContext:
-      'Dollhouse belongs to the collaborative line between Falls and Gilman that later includes Luna Gale, Soups, Stews, and Casseroles: 1976, and Swing State, but here the route in is adaptation rather than wholly original drama.',
+      'Dollhouse belongs to the collaborative line between Falls and Gilman that later includes Luna Gale, Soups, Stews, and Casseroles: 1976, and Swing State, but here the route in is adaptation rather than wholly original drama. It also sits inside Falls\'s larger Goodman habit of re-entering classics through living writers rather than museum revival.',
     significance:
       'A 2005 Goodman commission and world premiere that joins Falls\'s new-work practice to Gilman\'s contemporary rethinking of a foundational feminist classic.',
     story:
-      'This entry matters because it shows how the Goodman under Falls handled canonical material through living playwrights instead of only through direct revival. Gilman\'s version reframes Ibsen through contemporary speech and social pressure, which makes the page an important predecessor to later archive entries where Falls uses adaptation as a central method.',
+      'This entry matters because it shows how the Goodman under Falls handled canonical material through living playwrights instead of only through direct revival. Gilman\'s version reframes Ibsen through contemporary speech, race, labor, and social pressure, making the production an early marker of how Falls and Goodman could use adaptation as present-tense argument rather than literary homage. Even without a surviving still gallery, the official record is clear about the scale of the event: a Goodman commission in the Albert Theatre, a cast led by Maggie Siff, and a creative team built from core Falls collaborators including Robert Brill, Mara Blumenfeld, James F. Ingalls, Richard Woodbury, and Tom Creamer.',
     venueAnchor: "Goodman's Albert Theatre",
     eraLabel: 'National and international period',
     images: [
       {
+        src: dollhouseTitleTreatment,
+        alt: 'Dollhouse title treatment from the Goodman Theatre campaign for the 2005 production.',
+        caption: 'The official title treatment preserved on Goodman\'s archive page for the 2005 world premiere.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
         src: dollhouseShowArt,
         alt: 'Show art for Dollhouse at Goodman Theatre, with a red patterned Victorian room and the title in white serif text.',
-        caption: 'Official Goodman show art for Rebecca Gilman\'s adaptation, used here as the page\'s primary surviving visual anchor.',
+        caption: 'Official Goodman show art for Rebecca Gilman\'s adaptation, preserving the production\'s red, ornamental campaign look.',
         orientation: 'landscape',
         priority: true,
         kind: 'art',
@@ -3484,23 +4533,87 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'Playwright / adapter', name: 'Rebecca Gilman' },
       { role: 'Original playwright', name: 'Henrik Ibsen' },
       { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Maggie Siff' },
+      { role: 'Cast highlight', name: 'Firdous Bamji' },
+      { role: 'Cast highlight', name: 'Anthony Starke' },
     ],
     quickFacts: [
       { label: 'Run', value: 'Jun 18 - Jul 24, 2005' },
+      { label: 'Commission status', value: 'World premiere and Goodman commission' },
       { label: 'Venue', value: "Goodman's Albert Theatre" },
       { label: 'Runtime', value: '2 hr 30 min' },
-      { label: 'Status', value: 'World premiere and Goodman commission' },
+      { label: 'Lead role', value: 'Maggie Siff as Nora' },
+    ],
+    cast: [
+      { role: 'Nora', name: 'Maggie Siff' },
+      { role: 'Raj Patel', name: 'Firdous Bamji' },
+      { role: 'Terry', name: 'Anthony Starke' },
+      { role: 'Marta', name: 'Charin Alvarez' },
+      { role: 'Pete', name: 'Lance Stuart Baker' },
+      { role: 'Iris', name: 'Maritza Cervantes' },
+      { role: 'Kristine', name: 'Elizabeth Rich' },
+      { role: 'Max', name: 'Ryan Cowhey' },
+      { role: 'Max', name: 'Matthew Gerdisch' },
+      { role: 'Skyler', name: 'Melody Hollis' },
+      { role: 'Skyler', name: 'Allison Sparrow' },
+      { role: 'Macey', name: 'Jordyn Knysz' },
+      { role: 'Macey', name: 'Emily Leahy' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Rebecca Gilman' },
+      { role: 'Adapted from the play by', name: 'Henrik Ibsen' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Scenic Design', name: 'Robert Brill' },
+      { role: 'Costume Design', name: 'Mara Blumenfeld' },
+      { role: 'Lighting Design', name: 'James F. Ingalls' },
+      { role: 'Sound Design and Original Music', name: 'Richard Woodbury' },
+      { role: 'Dramaturg', name: 'Tom Creamer' },
+      { role: 'Choreography', name: 'Randy Duncan' },
+      { role: 'New York Casting', name: 'Telsey + Company' },
+      { role: 'Chicago Casting', name: 'Adam Belcuore' },
+      { role: 'Production Stage Manager', name: 'Alden J. Vasquez' },
+      { role: 'Stage Manager', name: 'Sascha Connor' },
     ],
     recognition: [
       {
         label: 'Commission premiere',
         detail: 'The official Goodman page identifies the production as both a world premiere and a Goodman Theatre commission.',
       },
+      {
+        label: 'Gilman adaptation',
+        detail: 'Goodman positions the production as Rebecca Gilman\'s contemporary reworking of Ibsen rather than a direct period revival, making the adaptation itself the event.',
+      },
+      {
+        label: 'Albert Theatre scale',
+        detail: 'This was not a small-lab experiment. Goodman mounted the production in its main Albert Theatre, signaling institutional weight behind the commission.',
+      },
+    ],
+    awardsOrSignificance: [
+      {
+        label: 'Gilman-Falls collaboration, in adaptation form',
+        detail: 'Before Luna Gale and Swing State, Dollhouse shows the partnership testing how a classic text could be rewritten in Gilman\'s social vernacular and staged through Falls\'s large-house Goodman grammar.',
+      },
+      {
+        label: 'Classic material made present tense',
+        detail: 'The production matters less as literary stewardship than as a demonstration of how Falls used adaptation to make canonical work feel argumentative and contemporary.',
+      },
+      {
+        label: 'Star and future-career interest',
+        detail: 'Maggie Siff\'s Nora gives the page a performer anchor, capturing the production at an early moment in a career that would later become widely visible on stage and screen.',
+      },
     ],
     contextNotes: [
       {
         label: 'Official framing',
         text: 'Goodman describes Gilman\'s take as a contemporary-social lens on Ibsen\'s groundbreaking domestic drama.',
+      },
+      {
+        label: 'Visual record limits',
+        text: 'The current archive and official Goodman page preserve campaign art and title treatment, but no production still gallery has surfaced in the repo or on the public production page. The page therefore leans on typography, credits, and context rather than pretending to have a fuller photo record than actually survives here.',
+      },
+      {
+        label: 'Creative team continuity',
+        text: 'The official artist roster links the production to recurring Falls collaborators, including Richard Woodbury on sound, Tom Creamer on dramaturgy, Adam Belcuore on casting, and a design team led by Robert Brill, Mara Blumenfeld, and James F. Ingalls.',
       },
     ],
     reviews: [
@@ -3509,9 +4622,29 @@ const productionSeeds: Record<string, ProductionSeed> = {
         href: 'https://www.goodmantheatre.org/show/dollhouse/',
         summary:
           'The official page frames the production as a Rebecca Gilman world-premiere adaptation of A Doll\'s House directed by Robert Falls.',
+        note: 'Official production page',
+      },
+      {
+        source: 'Goodman Theatre artist roster',
+        href: 'https://www.goodmantheatre.org/show/dollhouse/',
+        summary:
+          'The preserved artist cards on the production page document a cast led by Maggie Siff and a full creative team including Robert Brill, Mara Blumenfeld, James F. Ingalls, Richard Woodbury, and Tom Creamer.',
+        note: 'Official cast and creative credits',
+      },
+      {
+        source: 'Goodman archive metadata',
+        href: 'https://www.goodmantheatre.org/show/dollhouse/',
+        summary:
+          'Goodman\'s archive metadata confirms the exact 2005 run dates, runtime, commission status, and Albert Theatre placement, which helps stabilize an otherwise sparse public record.',
+        note: 'Official archive details',
       },
     ],
-    externalSources: [{ label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/dollhouse/' }],
+    externalSources: [
+      { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/dollhouse/' },
+      { label: 'Rebecca Gilman artist page', href: 'https://www.goodmantheatre.org/artists/rebecca-gilman/' },
+      { label: 'Robert Falls artist page', href: 'https://www.goodmantheatre.org/?post_type=artist&p=10377' },
+      { label: 'Maggie Siff artist page', href: 'https://www.goodmantheatre.org/artists/maggie-siff/' },
+    ],
     relatedLinks: seedLinks,
     sourceStatus: 'researched',
   },
@@ -7062,9 +8195,31 @@ export function getProductionHref(title: string): string {
   return `/productions/${slugify(stripQualifier(title))}`;
 }
 
+// Some productions' images[0] is show art, an illustration, or otherwise a weak
+// thumbnail at small sizes (Timeline avatars, homepage gallery). This points
+// thumbnail callers to a stronger images[n] without reordering the production's
+// own photo essay on its detail page.
+const thumbnailOverrides: Record<string, number> = {
+  'The Cherry Orchard': 2, // skip illustrated Goodman page-detail thumb, use a real production still
+  'The Iceman Cometh': 1, // skip show art, use a production still
+  'Uncle Vanya': 2, // skip show art, use the Sonya/Vanya embrace still
+  '2666': 2, // skip the wide conference-table still, use the neon nightlife still
+  Amadeus: 1, // skip the red show-art banner, use a production still
+  'King Lear': 2, // skip the urinal-scene opener, use the Mafia/Mercedes still
+  'American Buffalo': 3, // skip the text-heavy playbill cover, use the junk-shop ensemble still
+  'We’re Only Alive for a Short Amount of Time': 2, // skip show art, use the performance still
+  'Soups, Stews, and Casseroles: 1976': 1, // skip show art, use the kitchen-set production still
+  'Measure for Measure': 2, // skip show art, use the Times Square set production still
+  'Molly Sweeney': 1, // skip the eye-in-frame show art, use a production still
+};
+
 export function getFeaturedThumbnail(title: string): ProductionImage | null {
   const production = productions.find((p) => p.title === stripQualifier(title));
   if (!production || production.pageMode !== 'featured' || production.images.length === 0) return null;
+  const overrideIndex = thumbnailOverrides[production.title];
+  if (overrideIndex !== undefined && production.images[overrideIndex]) {
+    return production.images[overrideIndex];
+  }
   return production.images[0];
 }
 

@@ -22,13 +22,19 @@ const nextProduction =
   productionIndex >= 0 && productionIndex < productions.length - 1 ? productions[productionIndex + 1] : null;
 const prevThumb = previousProduction ? getFeaturedThumbnail(previousProduction.title) : null;
 const nextThumb = nextProduction ? getFeaturedThumbnail(nextProduction.title) : null;
-const heroImage = production.images.find((image) => image.priority) ?? production.images[0];
 const isFeatured = production.pageMode === 'featured';
+const preferredHeroImage =
+  production.images.find((image) => image.priority && image.kind !== 'art') ??
+  production.images.find((image) => image.kind !== 'art');
+const heroImage =
+  preferredHeroImage ??
+  (isFeatured ? null : production.images.find((image) => image.priority) ?? production.images[0] ?? null);
 const heroImageIndex = heroImage ? production.images.findIndex((image) => image.src === heroImage.src) : -1;
 const summary = production.publicSummary ?? production.summary;
 const synopsis = production.synopsis ?? production.publicSummary ?? production.story ?? production.summary;
 const fallsContext = production.fallsContext ?? production.significance;
 const assetImages = production.images;
+const singleImageOnly = assetImages.length === 1 && production.watchLinks.length === 0;
 const featuredPreviewImages = isFeatured
   ? assetImages.filter((_, index) => index !== heroImageIndex).slice(0, 2)
   : [];
@@ -49,7 +55,7 @@ const contextEyebrow = isFeatured ? 'Career significance' : 'Career context';
 const storyHeading = isFeatured ? 'Why this production matters' : 'Why it matters';
 const notesEyebrow = isFeatured ? 'Production notes' : 'Reference notes';
 const notesHeading = isFeatured ? 'Production History & Notes' : 'Notes & History';
-const galleryHeading = isFeatured ? 'Production Images' : 'Gallery';
+const galleryHeading = singleImageOnly ? 'Production Image' : isFeatured ? 'Production Images' : 'Gallery';
 const previewAriaLabel = isFeatured ? 'Selected production images' : 'Selected images';
 
 function publicNoteLabel(label: string) {
@@ -80,7 +86,7 @@ function publicNoteLabel(label: string) {
 
 const heroLinks = [
   { href: '#overview', label: 'Overview' },
-  ...(hasAssets ? [{ href: '#assets-main', label: 'Media' }] : []),
+  ...(hasAssets ? [{ href: '#assets-main', label: singleImageOnly ? 'Image' : 'Media' }] : []),
   ...(hasPeople ? [{ href: '#credits-main', label: 'Credits' }] : []),
   ...(hasReceptionSection ? [{ href: '#press-main', label: 'Reception' }] : []),
 ];
@@ -152,7 +158,7 @@ const productionSchema = [
 ---
 
 <BaseLayout
-  title={`${production.title} - Robert Falls`}
+  title={`${production.title} — Robert Falls`}
   description={summary}
   schema={productionSchema}
 >
@@ -340,16 +346,39 @@ const productionSchema = [
     <section id="assets-main" class="production-assets-section production-assets-wide">
       <div class="production-section-heading production-slider-heading">
         <div>
-          <p class="production-eyebrow">Gallery & media</p>
+          <p class="production-eyebrow">{singleImageOnly ? 'Production image' : 'Gallery & media'}</p>
           <h2>{galleryHeading}</h2>
         </div>
+        {!singleImageOnly && (
         <div class="hidden md:flex items-center gap-2">
           <button class="production-strip-btn" data-strip-prev aria-label="Scroll assets left">←</button>
           <span class="production-slider-note">Scroll</span>
           <button class="production-strip-btn" data-strip-next aria-label="Scroll assets right">→</button>
         </div>
+        )}
       </div>
 
+      {singleImageOnly ? (
+        <figure class="production-single-asset-card">
+          <Image
+            src={assetImages[0].src}
+            alt={assetImages[0].alt}
+            widths={[720, 1080, 1440, 1800]}
+            sizes="(max-width: 1024px) 100vw, 72rem"
+            quality={80}
+            loading="lazy"
+            class="production-single-asset-image"
+          />
+          {(assetImages[0].caption || assetImages[0].photographer) && (
+            <figcaption class="production-single-asset-caption">
+              {assetImages[0].caption && <span>{assetImages[0].caption}</span>}
+              {assetImages[0].photographer && (
+                <span class="production-single-asset-credit">Photo: {assetImages[0].photographer}</span>
+              )}
+            </figcaption>
+          )}
+        </figure>
+      ) : (
       <div class="production-asset-strip" aria-label={`${production.title} production assets`} data-asset-strip>
           {assetImages.map((image) => (
             <figure class:list={[
@@ -397,6 +426,7 @@ const productionSchema = [
             </a>
           ))}
       </div>
+      )}
     </section>
     )}
 
@@ -840,6 +870,18 @@ const productionSchema = [
   }
   .production-slider-note {
     @apply hidden border border-brand-ink border-opacity-10 bg-white bg-opacity-60 px-3 py-2 font-display text-xs uppercase tracking-[0.16em] text-brand-ink text-opacity-70 md:inline-flex;
+  }
+  .production-single-asset-card {
+    @apply overflow-hidden border border-brand-ink/10 bg-white/90 shadow-[0_18px_54px_rgba(34,24,20,0.08)];
+  }
+  .production-single-asset-image {
+    @apply w-full aspect-[16/10] object-cover;
+  }
+  .production-single-asset-caption {
+    @apply flex flex-col gap-2 border-t border-brand-ink/10 px-5 py-4 text-sm leading-relaxed text-brand-ink text-opacity-70 md:flex-row md:items-start md:justify-between md:gap-6;
+  }
+  .production-single-asset-credit {
+    @apply shrink-0 font-display text-[10px] uppercase tracking-[0.16em] text-brand-ink/45;
   }
   .production-asset-strip {
     @apply flex snap-x gap-4 overflow-x-auto pr-12;

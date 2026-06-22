@@ -95,7 +95,7 @@ export const timelineEntries: TimelineEntry[] = [
   { year: '2003', title: 'Elected Fellow, American Academy of Arts and Sciences', description: 'Listed with affiliations at Goodman Theatre and Northwestern University.', category: 'Award' },
   { year: '2003', title: 'Artistic Leadership Award', description: 'Awarded by the League of Chicago Theatres.', category: 'Award' },
   { year: '2003', title: 'The Goat, or Who Is Sylvia?', description: 'Midwest premiere of Edward Albee’s play.', category: 'Production', venue: 'Goodman Theatre' },
-  { year: '2003', title: 'The Guys', description: 'Co-production with Northlight Theatre.', category: 'Production', venue: 'Goodman & Northlight' },
+  { year: '2002', title: 'The Guys', description: 'Chicago premiere co-presented with Northlight Theatre.', category: 'Production', venue: "Goodman's Owen Theatre" },
   { year: '2003', title: 'Blue Surge', description: 'Off-Broadway continuation of the Gilman collaboration.', category: 'Production', venue: 'Joseph Papp Public Theater, New York' },
   { year: '2003', title: 'Aida', description: 'International mounting in the Netherlands.', category: 'Production', venue: 'Netherlands' },
   { year: '2004', title: 'Hughie', description: 'Another Dennehy/O’Neill chapter.', category: 'Production', venue: 'Goodman Theatre' },

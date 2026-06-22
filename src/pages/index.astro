@@ -6,8 +6,6 @@ import { getProductionBySlug, getProductionHref, productionStats } from '@data/p
 import rehearsalPhoto from '../images/robert-falls-rehearsal.jpg';
 import heroBackground from '../images/falls-rehearsal-recent.jpg';
 
-// Editorially curated, but every displayed field (title, image, dates) is pulled
-// live from the production archive so this can never drift out of sync with it.
 const nowAndUpcomingSeeds = [
   {
     slug: 'don-giovanni',
@@ -38,28 +36,43 @@ const nowAndUpcoming = nowAndUpcomingSeeds
   })
   .filter((p): p is NonNullable<typeof p> => p !== null);
 
-const activeShows    = nowAndUpcoming.filter((p) => p.statusLabel !== 'Completed');
-const recentlyShows  = nowAndUpcoming.filter((p) => p.statusLabel === 'Completed');
+const activeShows   = nowAndUpcoming.filter((p) => p.statusLabel !== 'Completed');
+const recentlyShows = nowAndUpcoming.filter((p) => p.statusLabel === 'Completed');
 
-const gallerySlugs = [
-  'death-of-a-salesman',
-  'the-iceman-cometh',
-  'king-lear',
-  'amadeus',
-  'uncle-vanya',
-  'don-giovanni',
-  '2666',
-  'the-cherry-orchard',
-];
-const selectedProductions = gallerySlugs
-  .map((slug) => {
+// imageIndex picks which images[n] to use as thumbnail (skips show art, picks the strongest photo)
+const gallerySeeds = [
+  { slug: 'death-of-a-salesman', imageIndex: 0 },
+  { slug: 'the-iceman-cometh',   imageIndex: 1 },
+  { slug: 'king-lear',           imageIndex: 2 },
+  { slug: 'amadeus',             imageIndex: 1 },
+  { slug: 'uncle-vanya',         imageIndex: 2 },
+  { slug: 'don-giovanni',        imageIndex: 0 },
+  { slug: '2666',                imageIndex: 2 },
+  { slug: 'the-cherry-orchard',  imageIndex: 2 },
+] as const;
+
+const selectedProductions = gallerySeeds
+  .map(({ slug, imageIndex }) => {
     const production = getProductionBySlug(slug);
-    const thumbnail = production?.images[0];
+    const thumbnail = production?.images[imageIndex] ?? production?.images[0];
     if (!production || !thumbnail) return null;
     return { title: production.title, venue: production.venueAnchor, year: production.yearSpan, thumbnail, href: getProductionHref(production.title) };
   })
   .filter((p): p is NonNullable<typeof p> => p !== null);
 
+const goodmanHighlightSlugs = [
+  'death-of-a-salesman',
+  'the-iceman-cometh',
+  '2666',
+  'the-cherry-orchard',
+];
+const goodmanHighlights = goodmanHighlightSlugs
+  .map((slug) => {
+    const production = getProductionBySlug(slug);
+    if (!production) return null;
+    return { title: production.title, year: production.yearSpan, href: getProductionHref(production.title) };
+  })
+  .filter((p): p is NonNullable<typeof p> => p !== null);
 ---
 
 <BaseLayout
@@ -102,8 +115,8 @@ const selectedProductions = gallerySlugs
           <span>Opera</span>
         </div>
         <p class="font-serif italic text-lg md:text-[1.55rem] text-brand-cream/75 mt-5 max-w-2xl leading-relaxed">
-          Five decades shaping the American stage &mdash; from Wisdom Bridge through a landmark Goodman era,
-          and now, directing new work in Chicago and beyond.
+          Five decades shaping the American stage: from Wisdom Bridge through a landmark Goodman era,
+          now directing new work in Chicago and beyond.
         </p>
 
         <div class="flex flex-wrap gap-4 mt-10">
@@ -120,74 +133,76 @@ const selectedProductions = gallerySlugs
   <!-- NOW & UPCOMING -->
   <section id="now" class="bg-brand-cream border-b border-brand-ink/10">
     <div class="section-container">
-      <div class="flex items-end justify-between gap-4 flex-wrap mb-10">
-        <div>
-          <p class="section-eyebrow">Now &amp; Upcoming</p>
-          <h2 class="section-heading">Still Directing<span class="text-brand-oxblood">.</span></h2>
-        </div>
-        <p class="font-serif italic text-brand-ink/60 text-lg max-w-sm">
-          "I feel very lucky that I can be selective. I want to continue to work on exciting projects."
-        </p>
+
+      <div class="mb-10">
+        <p class="section-eyebrow">Now &amp; Upcoming</p>
+        <h2 class="section-heading">Still Directing<span class="text-brand-oxblood">.</span></h2>
       </div>
+
       {activeShows.length > 0 && (
-        <div class:list={['grid gap-6 mb-10', activeShows.length === 1 ? 'max-w-xs' : 'sm:grid-cols-3']}>
-          {activeShows.map((item) => (
-            <a href={item.href} class="group block">
-              <div class="aspect-[3/4] overflow-hidden bg-brand-ink relative mb-4">
-                <Image
-                  src={item.thumbnail.src}
-                  alt={item.thumbnail.alt}
-                  widths={[320, 480, 640, 960]}
-                  sizes="(max-width: 639px) 100vw, 33vw"
-                  quality={76}
-                  loading="lazy"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
-                />
-                <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.72) 0%, rgba(12,9,8,0.18) 40%, transparent 70%);"></div>
-                <div class="absolute inset-0 pointer-events-none" style="box-shadow: inset 0 0 60px 10px rgba(12,9,8,0.38);"></div>
-                <div class="absolute top-3 left-3">
-                  <span class:list={[
-                    'inline-flex items-center px-2.5 py-1 font-display text-[10px] font-semibold uppercase tracking-[0.18em]',
-                    item.statusLabel === 'Upcoming' ? 'bg-brand-gold text-brand-ink' : 'bg-brand-oxbloodBright text-brand-cream',
-                  ]}>
-                    {item.statusLabel}
-                  </span>
-                </div>
+        <div class="grid md:grid-cols-[3fr_2fr] gap-10 lg:gap-16 mb-12 items-start">
+          <!-- Featured active show -->
+          <a href={activeShows[0].href} class="group block">
+            <div class="aspect-[4/3] overflow-hidden bg-brand-ink relative mb-5">
+              <Image
+                src={activeShows[0].thumbnail.src}
+                alt={activeShows[0].thumbnail.alt}
+                widths={[480, 720, 960, 1280]}
+                sizes="(max-width: 767px) 100vw, 60vw"
+                quality={76}
+                loading="lazy"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+              />
+              <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.68) 0%, rgba(12,9,8,0.14) 38%, transparent 65%);"></div>
+              <div class="absolute inset-0 pointer-events-none" style="box-shadow: inset 0 0 60px 10px rgba(12,9,8,0.32);"></div>
+              <div class="absolute top-4 left-4">
+                <span class:list={[
+                  'inline-flex items-center px-3 py-1.5 font-display text-[10px] font-semibold uppercase tracking-[0.18em]',
+                  activeShows[0].statusLabel === 'Upcoming' ? 'bg-brand-gold text-brand-ink' : 'bg-brand-oxbloodBright text-brand-cream',
+                ]}>
+                  {activeShows[0].statusLabel}
+                </span>
               </div>
-              <div class="font-display text-2xl text-brand-ink leading-tight group-hover:text-brand-oxblood transition-colors">
-                {item.title}
-              </div>
-              <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/55 font-semibold mt-2">{item.status}</div>
-              <p class="text-sm text-brand-ink/60 mt-1 leading-snug">{item.note}</p>
-            </a>
-          ))}
+            </div>
+            <div class="font-display text-3xl md:text-4xl text-brand-ink leading-tight group-hover:text-brand-oxblood transition-colors mb-2">
+              {activeShows[0].title}
+            </div>
+            <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/55 font-semibold mt-2">{activeShows[0].status}</div>
+            <p class="text-sm text-brand-ink/60 mt-2 leading-snug">{activeShows[0].note}</p>
+          </a>
+
+          <!-- Pull-quote companion -->
+          <div class="pt-1 md:pt-6 border-t border-brand-ink/10 md:border-t-0 md:border-l md:border-brand-ink/10 md:pl-10 lg:pl-14">
+            <blockquote class="font-serif italic text-brand-ink/65 text-xl md:text-2xl leading-relaxed">
+              "I feel very lucky that I can be selective. I want to continue to work on exciting projects."
+            </blockquote>
+            <p class="mt-5 text-[11px] uppercase tracking-[0.22em] text-brand-ink/38 font-semibold">Robert Falls</p>
+          </div>
         </div>
       )}
 
       {recentlyShows.length > 0 && (
         <div class="border-t border-brand-ink/10 pt-8 mb-10">
-          <p class="text-[11px] uppercase tracking-[0.2em] text-brand-ink/40 font-semibold mb-5">Recent Work</p>
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-brand-ink/38 font-semibold mb-6">Recent Work</p>
+          <div class="grid sm:grid-cols-2 gap-4">
             {recentlyShows.map((item) => (
-              <a href={item.href} class="group flex items-center gap-4 border border-brand-ink/10 bg-white/70 px-4 py-3 hover:border-brand-oxblood/25 transition-colors">
-                <div class="w-12 h-16 shrink-0 overflow-hidden bg-brand-ink">
+              <a href={item.href} class="group flex gap-5 items-start border border-brand-ink/10 hover:border-brand-oxblood/22 transition-colors p-4 bg-white/40 hover:bg-white/60">
+                <div class="w-20 h-28 shrink-0 overflow-hidden bg-brand-ink">
                   <Image
                     src={item.thumbnail.src}
-                    alt=""
-                    widths={[48, 96]}
-                    sizes="48px"
-                    quality={72}
+                    alt={item.thumbnail.alt}
+                    widths={[80, 160, 240]}
+                    sizes="80px"
+                    quality={76}
                     loading="lazy"
-                    class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                    class="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div class="min-w-0">
-                  <div class="font-display text-base text-brand-ink/50 leading-tight truncate group-hover:text-brand-ink transition-colors">{item.title}</div>
-                  <div class="text-[10px] uppercase tracking-[0.16em] text-brand-ink/35 mt-1">{item.status}</div>
+                <div class="min-w-0 pt-0.5">
+                  <div class="font-display text-xl text-brand-ink leading-tight group-hover:text-brand-oxblood transition-colors mb-1.5">{item.title}</div>
+                  <div class="text-[10px] uppercase tracking-[0.16em] text-brand-ink/50 font-semibold mb-2">{item.status}</div>
+                  <p class="text-xs text-brand-ink/50 leading-snug">{item.note}</p>
                 </div>
-                <span class="ml-auto shrink-0 inline-flex items-center px-2 py-0.5 font-display text-[9px] font-semibold uppercase tracking-[0.14em] border border-brand-ink/12 text-brand-ink/35">
-                  Completed
-                </span>
               </a>
             ))}
           </div>
@@ -209,34 +224,50 @@ const selectedProductions = gallerySlugs
           <h2 class="section-heading">Selected Productions</h2>
         </div>
         <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/60 max-w-xs text-right hidden sm:block">
-          {productionStats.titleCount}+ productions documented, {productionStats.earliestYear}–{productionStats.latestYear}
+          {productionStats.titleCount}+ productions documented, {productionStats.earliestYear}&ndash;{productionStats.latestYear}
         </div>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        {selectedProductions.map((production) => (
-          <a href={production.href} class="group block">
-            <div class="aspect-[3/4] overflow-hidden bg-brand-ink relative mb-3">
+
+      <!-- Editorial grid: first card is a wide feature, rest fill 3-col rows -->
+      <!-- Full-bleed photo cards: overlay + line icon + bottom text -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        {selectedProductions.map((production, i) => (
+          <a
+            href={production.href}
+            class:list={['group block overflow-hidden bg-brand-ink', i === 0 ? 'col-span-2 sm:col-span-2' : '']}
+          >
+            <div class:list={[
+              'relative overflow-hidden',
+              i === 0 ? 'aspect-[4/3] sm:aspect-[16/10]' : 'aspect-[3/4]',
+            ]}>
               <Image
                 src={production.thumbnail.src}
                 alt={production.thumbnail.alt}
-                widths={[240, 360, 480, 720]}
-                sizes="(max-width: 639px) 50vw, 25vw"
+                widths={i === 0 ? [480, 720, 960, 1280] : [240, 360, 480, 720]}
+                sizes={i === 0 ? '(max-width: 639px) 100vw, 67vw' : '(max-width: 639px) 50vw, 33vw'}
                 quality={76}
                 loading="lazy"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
               />
-              <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.65) 0%, rgba(12,9,8,0.12) 38%, transparent 65%);"></div>
-              <div class="absolute inset-0 pointer-events-none" style="box-shadow: inset 0 0 50px 8px rgba(12,9,8,0.35);"></div>
-            </div>
-            <div class="font-display text-base text-brand-ink leading-tight group-hover:text-brand-oxblood transition-colors">
-              {production.title}
-            </div>
-            <div class="text-[10px] uppercase tracking-[0.16em] text-brand-ink/60 mt-1">
-              {production.venue} · {production.year}
+              <!-- Overlay: vignette top + strong gradient bottom for text -->
+              <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.90) 0%, rgba(12,9,8,0.55) 30%, rgba(12,9,8,0.20) 55%, rgba(12,9,8,0.10) 100%);"></div>
+              <!-- Title + venue at bottom of card -->
+              <div class="absolute bottom-0 left-0 right-0 p-4">
+                <div class:list={[
+                  'font-display text-brand-cream leading-tight group-hover:text-brand-goldBright transition-colors duration-300',
+                  i === 0 ? 'text-xl sm:text-2xl' : 'text-base',
+                ]}>
+                  {production.title}
+                </div>
+                <div class="text-[10px] uppercase tracking-[0.16em] text-brand-cream/50 mt-1">
+                  {production.venue} · {production.year}
+                </div>
+              </div>
             </div>
           </a>
         ))}
       </div>
+
       <div class="flex items-center justify-center mt-10">
         <a href="/productions" class="btn-outline">Browse the Full Productions Archive</a>
       </div>
@@ -257,35 +288,43 @@ const selectedProductions = gallerySlugs
     />
     <div class="absolute inset-0 bg-gradient-to-r from-brand-oxbloodDeep via-brand-oxbloodDeep/95 to-brand-oxbloodDeep/70"></div>
     <div class="grain-overlay"></div>
+
     <div class="section-container relative">
-      <p class="section-eyebrow text-brand-gold">1986 &mdash; 2022</p>
+      <p class="section-eyebrow text-brand-gold">1986 &ndash; 2022</p>
       <h2 class="section-heading text-brand-cream">The Goodman Years</h2>
-      <p class="text-brand-cream/75 leading-relaxed max-w-2xl mb-10">
-        Robert's Goodman tenure reshaped the theatre's national profile, pairing ambitious new work
-        with major transfers and a durable Chicago identity. Under his leadership the Goodman received
-        the Special Tony Award for Outstanding Regional Theatre, was named the top regional theater in
-        the country by <em class="font-serif italic">Time</em>, and opened its downtown Loop campus with the
-        Robert Falls Rehearsal Wing bearing his name.
-      </p>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-10">
-        <div class="border border-brand-cream/16 bg-brand-cream/[0.04] px-5 py-5">
-          <div class="font-display text-4xl text-brand-goldBright leading-none">35</div>
-          <div class="mt-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream/60">Years as Artistic Director</div>
+
+      <div class="grid md:grid-cols-[3fr_2fr] gap-10 lg:gap-16 items-start mb-10">
+        <!-- Narrative copy -->
+        <div>
+          <p class="text-brand-cream/75 leading-relaxed mb-5">
+            Thirty-five years as Artistic Director reshaped the Goodman's national profile, pairing ambitious new work with major Broadway transfers and a durable Chicago identity. Under his leadership the Goodman received the Special Tony Award for Outstanding Regional Theatre, was named the top regional theater in the country by <em class="font-serif italic">Time</em>, and opened its downtown Loop campus with the Robert Falls Rehearsal Wing bearing his name.
+          </p>
+          <p class="text-brand-cream/75 leading-relaxed">
+            His tenure produced more than 150 world premieres and generated 22 Tony Awards across Broadway transfers, including <em class="font-serif italic">Death of a Salesman</em>, <em class="font-serif italic">Long Day's Journey Into Night</em>, and <em class="font-serif italic">The Iceman Cometh</em>.
+          </p>
+          <a href="/credits#goodman" class="btn-primary mt-8 inline-flex">Full Goodman Credits</a>
         </div>
-        <div class="border border-brand-cream/16 bg-brand-cream/[0.04] px-5 py-5">
-          <div class="font-display text-4xl text-brand-goldBright leading-none">150+</div>
-          <div class="mt-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream/60">World premieres produced</div>
-        </div>
-        <div class="border border-brand-cream/16 bg-brand-cream/[0.04] px-5 py-5">
-          <div class="font-display text-4xl text-brand-goldBright leading-none">22</div>
-          <div class="mt-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream/60">Tony Awards for Broadway transfers</div>
-        </div>
-        <div class="border border-brand-cream/16 bg-brand-cream/[0.04] px-5 py-5">
-          <div class="font-display text-4xl text-brand-goldBright leading-none">#1</div>
-          <div class="mt-2 text-[11px] uppercase tracking-[0.18em] text-brand-cream/60">Regional Theatre in the U.S. — <em class="font-serif not-italic">Time</em>, 2003</div>
+
+        <!-- Selected Goodman productions list -->
+        <div class="border-t border-brand-cream/15 pt-6 md:border-t-0 md:border-l md:border-brand-cream/12 md:pl-10 lg:pl-14">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-brand-cream/45 font-semibold mb-2">Selected Work</p>
+          {goodmanHighlights.map((p) => (
+            <a
+              href={p.href}
+              class="group flex items-baseline justify-between py-3.5 border-b border-brand-cream/10 hover:border-brand-gold/35 transition-colors"
+            >
+              <span class="font-display text-lg text-brand-cream/85 group-hover:text-brand-goldBright transition-colors leading-tight">{p.title}</span>
+              <span class="text-[10px] uppercase tracking-[0.12em] text-brand-cream/38 font-semibold ml-4 shrink-0">{p.year}</span>
+            </a>
+          ))}
+          <a
+            href="/productions"
+            class="inline-flex mt-5 text-[11px] uppercase tracking-[0.18em] text-brand-gold/65 font-semibold hover:text-brand-goldBright transition-colors"
+          >
+            Browse Full Archive
+          </a>
         </div>
       </div>
-      <a href="/credits#goodman" class="btn-primary mt-10 inline-flex">Full Goodman Credits</a>
     </div>
   </section>
 

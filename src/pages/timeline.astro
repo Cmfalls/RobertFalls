@@ -22,10 +22,21 @@ const defaultOpenDecades = new Set(['2010s', '2020s']);
 const groups = decadeOrder
   .map((decade) => {
     const entries = timelineEntries.filter((e) => decadeOf(e.year) === decade).reverse();
-    const previews = entries
+    const candidates = entries
       .map((e) => (e.category === 'Production' ? getFeaturedThumbnail(e.title) : null))
-      .filter((img): img is NonNullable<typeof img> => img !== null)
-      .slice(0, 3);
+      .filter((img): img is NonNullable<typeof img> => img !== null);
+    // Prefer real production photography over show art/playbill covers for this
+    // small circular preview row, where a text-heavy cover crops illegibly.
+    const photographic = candidates.filter((img) => img.kind !== 'art');
+    const ranked = [...photographic, ...candidates.filter((img) => img.kind === 'art')];
+    const seen = new Set<typeof ranked[number]['src']>();
+    const previews: typeof ranked = [];
+    for (const img of ranked) {
+      if (seen.has(img.src)) continue;
+      seen.add(img.src);
+      previews.push(img);
+      if (previews.length === 3) break;
+    }
     return { decade, entries, previews };
   })
   .filter((g) => g.entries.length > 0);

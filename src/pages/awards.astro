@@ -79,7 +79,15 @@ function awardType(award: (typeof awards)[number]) {
     </div>
   </section>
 
-  <section class="relative overflow-hidden bg-brand-ink text-brand-cream">
+  <nav class="bg-brand-cream border-b border-brand-ink/10 sticky top-20 md:top-24 z-30 backdrop-blur-sm" aria-label="Jump to section">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-x-5 gap-y-1 flex-wrap text-xs">
+      <span class="uppercase tracking-[0.16em] text-brand-ink/40 hidden sm:inline">Jump to</span>
+      <a href="#major-honors" class="font-display font-semibold uppercase tracking-[0.14em] text-brand-oxblood/75 hover:text-brand-oxblood transition-colors">Major Honors</a>
+      <a href="#broader-recognition" class="font-display font-semibold uppercase tracking-[0.14em] text-brand-oxblood/75 hover:text-brand-oxblood transition-colors">Broader Recognition</a>
+    </div>
+  </nav>
+
+  <section id="major-honors" class="relative overflow-hidden bg-brand-ink text-brand-cream scroll-mt-28">
     <Image
       src={rehearsalPhoto}
       alt=""
@@ -137,7 +145,7 @@ function awardType(award: (typeof awards)[number]) {
     </div>
   </section>
 
-  <section class="section-container">
+  <section id="broader-recognition" class="section-container scroll-mt-28">
     <div>
       <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
         <div>
