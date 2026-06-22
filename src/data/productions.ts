@@ -51,7 +51,7 @@ import jacksonianHero from '../images/the-jacksonian/the-jacksonian-hero.jpg';
 import jacksonian1 from '../images/the-jacksonian/the-jacksonian-1.jpg';
 import jacksonian2 from '../images/the-jacksonian/the-jacksonian-2.webp';
 import jacksonian3 from '../images/the-jacksonian/the-jacksonian-3.jpg';
-import jacksonianShowArt from '../images/the-jacksonian/the-jacksonian-show-art.png';
+import jacksonianShowArt from '../images/the-jacksonian/the-jacksonian-show-art.jpg';
 import soupsShowArt from '../images/soups-stews-and-casseroles-1976/soups-stews-and-casseroles-1976-show-art.png';
 import soups1 from '../images/soups-stews-and-casseroles-1976/soups-stews-and-casseroles-1976-1.jpg';
 import soups3 from '../images/soups-stews-and-casseroles-1976/soups-stews-and-casseroles-1976-3.jpg';
@@ -175,13 +175,13 @@ import hughieShowArt from '../images/hughie/hughie-show-art.png';
 import lobbyHeroGoodmanShowArt from '../images/web-sourced/lobby-hero-goodman-show-art.png';
 import lobbyHeroTitleTreatmentAsset from '../images/web-sourced/lobby-hero-title-treatment.png';
 import lobbyHeroLanceBaker from '../images/web-sourced/lobby-hero-lance-baker.jpg';
-import lobbyHeroRobertFalls from '../images/web-sourced/lobby-hero-robert-falls.jpeg';
+import lobbyHeroRobertFalls from '../images/web-sourced/lobby-hero-robert-falls.jpg';
 import lobbyHeroRolandoBoyce from '../images/web-sourced/lobby-hero-rolando-boyce.jpg';
 import lobbyHeroScottCummins from '../images/web-sourced/lobby-hero-scott-cummins.jpg';
 import lobbyHeroJulieGranata from '../images/web-sourced/lobby-hero-julie-granata.jpg';
 import theGoatGoodmanShowArt from '../images/web-sourced/the-goat-goodman-show-art.png';
 import theGoatTitleTreatment from '../images/web-sourced/the-goat-title-treatment.png';
-import theGoatRobertFalls from '../images/web-sourced/the-goat-robert-falls.jpeg';
+import theGoatRobertFalls from '../images/web-sourced/the-goat-robert-falls.jpg';
 import theGoatEdwardAlbee from '../images/web-sourced/the-goat-edward-albee.jpg';
 import theGoatPatrickClear from '../images/web-sourced/the-goat-patrick-clear.png';
 import theGoatWilliamDick from '../images/web-sourced/the-goat-william-dick.png';
@@ -212,7 +212,7 @@ import image2666Ensemble from '../images/2666/2666-04.jpg';
 import image2666Portrait from '../images/2666/2666-05.jpg';
 import image2666Goodman from '../images/web-sourced/2666-goodman.jpg';
 import cherryOrchardGoodmanThumb from '../images/web-sourced/the-cherry-orchard-goodman-thumb.jpg';
-import cherryOrchardReview from '../images/web-sourced/the-cherry-orchard-review.jpeg';
+import cherryOrchardReview from '../images/web-sourced/the-cherry-orchard-review.jpg';
 import cherryOrchardKeithParham1 from '../images/web-sourced/the-cherry-orchard-keith-parham-1.jpg';
 import cherryOrchardSunTimes1 from '../images/web-sourced/the-cherry-orchard-suntimes-1.jpg';
 import cherryOrchardSunTimes2 from '../images/web-sourced/the-cherry-orchard-suntimes-2.jpg';
@@ -559,6 +559,15 @@ const seedLinks: ProductionRelatedLink[] = [
   { label: 'Career timeline', href: '/timeline', type: 'timeline' },
   { label: 'Selected credits', href: '/credits', type: 'credits' },
 ];
+
+const archiveFallbackImage: ProductionImage = {
+  src: fallsWisdomBridgeRehearsal,
+  alt: 'Robert Falls leads a rehearsal in an archival production-room photograph.',
+  caption:
+    'Robert Falls in rehearsal, representing the working-room record for archive pages awaiting show-specific imagery.',
+  orientation: 'landscape',
+  kind: 'rehearsal',
+};
 
 const productionSeeds: Record<string, ProductionSeed> = {
   wings: {
@@ -5868,6 +5877,13 @@ const productionSeeds: Record<string, ProductionSeed> = {
         kind: 'art',
       },
       {
+        src: onlyAliveArt,
+        alt: 'Artwork for We\'re Only Alive for a Short Amount of Time showing David Cale with birds and a childhood figure layered across his body.',
+        caption: 'Alternate key art layers David Cale, birds, and childhood memory into one image.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
         src: onlyAlive1,
         alt: 'David Cale performs at a standing microphone with the chamber ensemble behind him.',
         caption: 'David Cale in performance with the onstage ensemble just visible behind him.',
@@ -8906,7 +8922,7 @@ export const productions: ProductionRecord[] = Array.from(groupedProductions.ent
       primaryVenue,
       venues,
       stagings,
-      images: seed?.images ?? [],
+      images: seed?.images?.length ? seed.images : [archiveFallbackImage],
       collaborators: seed?.collaborators ?? [],
       quickFacts:
         seed?.quickFacts ??
