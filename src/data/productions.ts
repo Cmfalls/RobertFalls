@@ -178,7 +178,16 @@ import lobbyHeroRobertFalls from '../images/web-sourced/lobby-hero-robert-falls.
 import lobbyHeroRolandoBoyce from '../images/web-sourced/lobby-hero-rolando-boyce.jpg';
 import lobbyHeroScottCummins from '../images/web-sourced/lobby-hero-scott-cummins.jpg';
 import lobbyHeroJulieGranata from '../images/web-sourced/lobby-hero-julie-granata.jpg';
-import theGoatShowArt from '../images/the-goat-or-who-is-sylvia/the-goat-or-who-is-sylvia-show-art.png';
+import theGoatGoodmanShowArt from '../images/web-sourced/the-goat-goodman-show-art.png';
+import theGoatTitleTreatment from '../images/web-sourced/the-goat-title-treatment.png';
+import theGoatRobertFalls from '../images/web-sourced/the-goat-robert-falls.jpeg';
+import theGoatEdwardAlbee from '../images/web-sourced/the-goat-edward-albee.jpg';
+import theGoatPatrickClear from '../images/web-sourced/the-goat-patrick-clear.png';
+import theGoatWilliamDick from '../images/web-sourced/the-goat-william-dick.png';
+import theGoatBarbaraRobertson from '../images/web-sourced/the-goat-barbara-robertson.jpg';
+import theGoatMichaelStahlDavid from '../images/web-sourced/the-goat-michael-stahl-david.jpg';
+import theGoatMichaelPhilippi from '../images/web-sourced/the-goat-michael-philippi.jpg';
+import theGoatRichardWoodbury from '../images/web-sourced/the-goat-richard-woodbury.webp';
 import theGuysShowArt from '../images/the-guys/the-guys-show-art.png';
 import swingState1 from '../images/swing-state/swing-state-1.jpg';
 import swingState2 from '../images/swing-state/swing-state-2.jpg';
@@ -218,6 +227,8 @@ import holidayProduction8 from '../images/web-sourced/holiday-production-8.webp'
 import soundInsideGoodmanThumb from '../images/web-sourced/the-sound-inside-goodman-thumb.jpg';
 import soundInsideWttw from '../images/web-sourced/the-sound-inside-wttw.jpg';
 import swingStateGoodmanThumb from '../images/web-sourced/swing-state-goodman-thumb.jpg';
+import robertFallsRehearsal from '../images/robert-falls-rehearsal.jpg';
+import fallsWisdomBridgeRehearsal from '../images/falls-wisdom-bridge-rehearsal.jpg';
 
 import { creditGroups, type Credit } from './credits';
 import { timelineEntries } from './timeline';
@@ -549,6 +560,365 @@ const seedLinks: ProductionRelatedLink[] = [
 ];
 
 const productionSeeds: Record<string, ProductionSeed> = {
+  wings: {
+    pageMode: 'archive',
+    summary:
+      'Falls directed the Midwest premiere of Arthur Kopit\'s Wings at Wisdom Bridge Theatre in 1979, bringing a formally daring drama about stroke, aphasia, memory, and recovery into the young company\'s early Chicago repertory.',
+    publicSummary:
+      'A 1979 Wisdom Bridge Theatre staging of Arthur Kopit\'s Wings, documented in the archive as the Midwest premiere.',
+    synopsis:
+      'Wings follows Emily Stilson, a former aviator and wing-walker, after a stroke shatters her command of language and perception. The play moves inside Emily\'s altered consciousness, turning recovery into a theatrical experience of fragments, sounds, fear, humor, and slowly returning coherence.',
+    fallsContext:
+      'The 1979 Wisdom Bridge Wings lands very early in Falls\'s artistic-director years, when the company was becoming a laboratory for contemporary American writing and physically charged staging. It shows him engaging a recent, acclaimed new play whose difficulty was not size but perception: how to make an audience feel the interior world of a damaged and re-forming mind.',
+    significance:
+      'A Midwest premiere from the first phase of Falls\'s Wisdom Bridge leadership, attached to one of Arthur Kopit\'s most honored plays: a 1979 Tony-nominated and Pulitzer-finalist drama about aphasia and recovery.',
+    story:
+      'Wings gives the 1979 archive a richer profile than the old one-line record suggested. Kopit\'s play had moved quickly from Yale Rep to the Public Theater and Broadway, where Constance Cummings won major acting recognition and the play entered the season as a Tony-nominated work. Falls\'s Midwest premiere followed close behind that national visibility. In Wisdom Bridge terms, the choice matters because it points to a young director and company taking on a play built from fractured language, neurological shock, and theatrical subjectivity rather than conventional plot. The page remains careful about what survives locally, but the title itself helps explain the ambition of those early seasons.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Contextual Wisdom Bridge-era rehearsal image from the local archive. No Wings-specific production still has surfaced yet.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Arthur Kopit' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Wisdom Bridge staging', value: '1979' },
+      { label: 'Premiere status', value: 'Midwest premiere' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Broadway context', value: '1979 Tony nominee for Best Play' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Arthur Kopit' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    recognition: [
+      {
+        label: 'Midwest premiere',
+        detail: 'The local timeline identifies Falls\'s Wisdom Bridge staging as the Midwest premiere of Arthur Kopit\'s play.',
+      },
+      {
+        label: 'National play context',
+        detail: 'Wings was a 1979 Tony nominee for Best Play and is widely listed among Kopit\'s Pulitzer-finalist works.',
+      },
+      {
+        label: 'Early Wisdom Bridge ambition',
+        detail: 'The title shows Falls programming formally challenging contemporary drama during the first phase of his Wisdom Bridge leadership.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Archive note',
+        text: 'No Wings-specific production stills, cast list, program scan, or local review packet has surfaced in the current project files.',
+      },
+      {
+        label: 'Image note',
+        text: 'The rehearsal photograph is used as Wisdom Bridge-era context only; it is not presented as a Wings production image.',
+      },
+      {
+        label: 'Source note',
+        text: 'The page combines the local timeline fact of Falls\'s 1979 Midwest premiere with public context about Kopit\'s play and its Broadway recognition.',
+      },
+    ],
+    externalSources: [
+      { label: 'Wings play background', href: 'https://en.wikipedia.org/wiki/Wings_(play)' },
+      { label: 'Arthur Kopit biography and Wings context', href: 'https://en.wikipedia.org/wiki/Arthur_Kopit' },
+      { label: '1979 Tony Best Play listing', href: 'https://en.wikipedia.org/wiki/Tony_Award_for_Best_Play' },
+      { label: 'Robert Falls Wisdom Bridge context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  yentl: {
+    pageMode: 'archive',
+    summary:
+      'Falls directed the Midwest premiere of Yentl at Wisdom Bridge Theatre in 1980, bringing Leah Napolin and Isaac Bashevis Singer\'s stage adaptation of Singer\'s story into the intimate, risk-taking Chicago theatre that shaped his early reputation.',
+    publicSummary:
+      'Falls staged the Midwest premiere of Yentl at Wisdom Bridge Theatre in 1980, early in the theatre-building period that made him one of Chicago\'s defining young directors.',
+    synopsis:
+      'Yentl follows a young Jewish woman whose desire to study sacred texts is forbidden by the religious world around her. After her father dies, she cuts her hair, dresses as a man, and enters a yeshiva as Anshel, pursuing learning at the cost of secrecy, isolation, and emotional complication.',
+    fallsContext:
+      'The Wisdom Bridge Yentl sits at the start of Falls\'s Chicago institutional story: after taking over Wisdom Bridge in his early twenties, he built the company around ambitious revivals, adaptations, and plays that could carry moral pressure in close quarters.',
+    significance:
+      'A 1980 Midwest premiere at Wisdom Bridge Theatre, directed during the first phase of Falls\'s leadership there and connected to one of the decade\'s most visible stage-to-screen Jewish narratives.',
+    story:
+      'Yentl gives this early archive row more weight than the old one-line record suggested. The play arrived with a notable New York pedigree: the Napolin/Singer adaptation had moved from Chelsea Theater Center to Broadway in 1975, with Tovah Feldshuh earning major attention in the title role. Falls\'s 1980 staging brought that story to Wisdom Bridge before Barbra Streisand\'s 1983 film made Yentl a much broader cultural reference point. In the Falls chronology, the title matters because it shows him building a Chicago audience for spiritually and socially charged material before the Goodman years, staging a story about intellect, gender, religious law, and self-invention inside the small-theatre laboratory where his directorial identity was forming.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    collaborators: [
+      { role: 'Playwright', name: 'Leah Napolin' },
+      { role: 'Source author / co-adapter', name: 'Isaac Bashevis Singer' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Wisdom Bridge staging', value: '1980' },
+      { label: 'Premiere status', value: 'Midwest premiere' },
+      { label: 'Source material', value: 'Yentl the Yeshiva Boy' },
+      { label: 'Broadway origin', value: '1975, Eugene O\'Neill Theatre' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Leah Napolin and Isaac Bashevis Singer' },
+      { role: 'Based on', name: 'Isaac Bashevis Singer\'s story "Yentl the Yeshiva Boy"' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    recognition: [
+      {
+        label: 'Midwest premiere',
+        detail: 'The local archive identifies Falls\'s Wisdom Bridge staging as the Midwest premiere.',
+      },
+      {
+        label: 'Pre-film cultural moment',
+        detail: 'Falls staged the play three years before Barbra Streisand\'s film made Yentl a much wider public title.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Archive note',
+        text: 'No production stills, cast list, or local review packet has surfaced in the current project files, so this page avoids presenting unsourced Chicago-specific cast or design credits.',
+      },
+      {
+        label: 'Source note',
+        text: 'The page separates the documented Falls/Wisdom Bridge facts from broader public context about the Napolin/Singer play and its Broadway history.',
+      },
+    ],
+    externalSources: [
+      { label: 'Yentl play background', href: 'https://en.wikipedia.org/wiki/Yentl_(play)' },
+      { label: 'Singer story text in Commentary', href: 'https://www.commentary.org/articles/isaac-singer/yentl-the-yeshiva-boy-a-story/' },
+      { label: 'Eugene O\'Neill Theatre production history', href: 'https://en.wikipedia.org/wiki/Eugene_O%27Neill_Theatre' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'losing-it': {
+    pageMode: 'archive',
+    summary:
+      'Losing It is a documented 1983 Wisdom Bridge Theatre production directed by Robert Falls, preserved here as part of the concentrated early-1980s run that built his reputation for contemporary work before the Goodman years.',
+    publicSummary:
+      'A 1983 Wisdom Bridge Theatre production from Falls\'s early Chicago leadership period, currently documented in the archive as a contemporary drama.',
+    synopsis:
+      'The current archive identifies Losing It as a contemporary drama but does not yet preserve a plot summary, playwright credit, cast list, or program packet. This page therefore treats the title as a documented production record rather than reconstructing a fuller story from unsupported details.',
+    fallsContext:
+      'By 1983, Falls was deep into his Wisdom Bridge tenure, moving between new work, American drama, European political theatre, and intimate chamber pieces. Losing It belongs to that dense middle stretch, bracketed in the archive by In the Belly of the Beast and the 1984 titles Terra Nova, Careless Love, and Life and Limb.',
+    significance:
+      'A sparse but useful marker of the Wisdom Bridge years: one more documented title in the early-1980s period when Falls was building the off-Loop profile that led to the Goodman.',
+    story:
+      'Losing It remains one of the archive\'s thin records, but even a thin record helps map the rhythm of Falls\'s Wisdom Bridge seasons. The page sits after the 1982 A Streetcar Named Desire and the 1983 In the Belly of the Beast entry, then just before Terra Nova, Careless Love, and Life and Limb. That placement matters: it shows Falls programming contemporary drama alongside adaptations, premieres, and high-pressure modern classics during the period when Wisdom Bridge was becoming a serious Chicago laboratory. Until a program, review, or production still surfaces, the most responsible way to populate the page is to make the documented facts legible, explain the source gap, and connect the title to the surrounding Wisdom Bridge arc.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Contextual Wisdom Bridge-era rehearsal image from the local archive. No Losing It-specific production still has surfaced yet.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [{ role: 'Director', name: 'Robert Falls' }],
+    quickFacts: [
+      { label: 'Wisdom Bridge staging', value: '1983' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Archive description', value: 'Contemporary drama' },
+      { label: 'Source status', value: 'Documented title, sparse packet' },
+    ],
+    creativeTeam: [{ role: 'Directed by', name: 'Robert Falls' }],
+    recognition: [
+      {
+        label: 'Wisdom Bridge record',
+        detail: 'The title preserves another point in Falls\'s 1977-1985 Wisdom Bridge leadership chronology.',
+      },
+      {
+        label: 'Contextual placement',
+        detail: 'The production appears between major early-1980s Wisdom Bridge entries, including In the Belly of the Beast and Terra Nova.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Archive note',
+        text: 'The project currently contains no Losing It folder, program, local review, cast list, playwright credit, or production stills.',
+      },
+      {
+        label: 'Image note',
+        text: 'The rehearsal photograph is used as Wisdom Bridge-era context only; it is not presented as a Losing It production image.',
+      },
+      {
+        label: 'Source note',
+        text: 'The page is based on the local timeline record plus general public context for Falls\'s Wisdom Bridge tenure.',
+      },
+    ],
+    externalSources: [
+      { label: 'Robert Falls biography and Wisdom Bridge context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
+      { label: 'Robert Falls on Wisdom Bridge and Goodman leadership', href: 'https://www.axios.com/local/chicago/2021/09/21/chicago-tony-award-winning-theater-icon-robert-falls-why-hes-stepping-down' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'terra-nova': {
+    pageMode: 'archive',
+    summary:
+      'Falls directed Terra Nova at Wisdom Bridge Theatre in 1984, staging Ted Tally\'s literary-historical drama about Robert Falcon Scott, Roald Amundsen, Antarctic mythmaking, and the cost of heroic idealism.',
+    publicSummary:
+      'A 1984 Wisdom Bridge Theatre production of Ted Tally\'s Antarctic drama, preserved here as part of Falls\'s late Wisdom Bridge period.',
+    synopsis:
+      'Terra Nova dramatizes Captain Robert Falcon Scott\'s doomed 1911-1912 race to the South Pole, placing Scott\'s British code of honor against Roald Amundsen\'s colder pragmatism and against the private pull of Scott\'s marriage. The play moves through memory, hallucination, expedition history, and moral argument as Scott tries to write his final public account.',
+    fallsContext:
+      'The Wisdom Bridge Terra Nova came near the end of Falls\'s leadership there, after years of contemporary premieres, adaptations, Brecht, Durang, Fo, Tennessee Williams, and politically charged drama. It shows him working at a larger historical and psychological scale just before the 1985 Hamlet and his move into Goodman leadership.',
+    significance:
+      'A late Wisdom Bridge literary-historical drama that connects Falls\'s early Chicago laboratory to the kind of large-canvas moral and historical storytelling that would later define major Goodman work.',
+    story:
+      'Terra Nova helps the 1984 portion of the archive feel less like a list of stray titles and more like a final Wisdom Bridge argument about scale. Tally\'s play was already a notable contemporary work, with a Yale/O\'Neill development path and an Obie-winning reputation before its wider circulation. Falls\'s staging placed that material inside the small-theatre environment that had made his Chicago name, asking a young company to carry Antarctic vastness, national myth, marriage, rivalry, and death through theatrical compression. Because no production packet has surfaced locally, the page does not pretend to know cast or design details; its value is in making the documented title legible and connecting it to the surrounding arc from Losing It to Hamlet.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Contextual Wisdom Bridge-era rehearsal image from the local archive. No Terra Nova-specific production still has surfaced yet.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Ted Tally' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Wisdom Bridge staging', value: '1984' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Playwright', value: 'Ted Tally' },
+      { label: 'Historical subject', value: 'Scott\'s Terra Nova expedition' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Ted Tally' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    recognition: [
+      {
+        label: 'Late Wisdom Bridge record',
+        detail: 'The local timeline places Terra Nova in Falls\'s 1984 Wisdom Bridge season, near the end of his artistic-director tenure there.',
+      },
+      {
+        label: 'Play context',
+        detail: 'Ted Tally\'s Terra Nova is publicly documented as an Obie-winning play developed through Yale and the Eugene O\'Neill Theater Center.',
+      },
+      {
+        label: 'Historical scale',
+        detail: 'The play connects Falls\'s early archive to large-canvas historical drama, a mode that became central in later Goodman productions.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Archive note',
+        text: 'No Terra Nova-specific production stills, cast list, program scan, or local review packet has surfaced in the current project files.',
+      },
+      {
+        label: 'Image note',
+        text: 'The rehearsal photograph is used as Wisdom Bridge-era context only; it is not presented as a Terra Nova production image.',
+      },
+      {
+        label: 'Source note',
+        text: 'The Falls-specific production fact comes from the local timeline record; public sources are used for Ted Tally, the play, and the Scott expedition context.',
+      },
+    ],
+    externalSources: [
+      { label: 'Ted Tally biography and Terra Nova context', href: 'https://en.wikipedia.org/wiki/Ted_Tally' },
+      { label: 'New Yorker review context for Terra Nova', href: 'https://www.newyorker.com/magazine/1984/05/07/off-broadway' },
+      { label: 'Terra Nova expedition background', href: 'https://en.wikipedia.org/wiki/Terra_Nova_Expedition' },
+      { label: 'Robert Falcon Scott background', href: 'https://en.wikipedia.org/wiki/Robert_Falcon_Scott' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  pravda: {
+    pageMode: 'archive',
+    summary:
+      'Falls directed the American premiere of Howard Brenton and David Hare\'s Pravda at the Guthrie Theater in 1989, bringing the National Theatre hit about media power, appetite, and public truth into a major American resident-theatre setting.',
+    publicSummary:
+      'A 1989 Guthrie Theater staging of Brenton and Hare\'s press-satire Pravda, documented in the archive as the American premiere.',
+    synopsis:
+      'Pravda is a large-scale satire of the newspaper business, following the rise of Lambert Le Roux, a ruthless South African media baron whose appetite for ownership turns journalism into sport, ideology, and private empire. The play skewers the collision between editorial ideals and market power in the tabloid era.',
+    fallsContext:
+      'The Guthrie Pravda came just after Falls had begun his long Goodman leadership and just before The Iceman Cometh made his Goodman work nationally visible. It also shows him stepping outside Chicago in the early Goodman years to stage a politically charged British epic at one of the country\'s landmark regional theatres.',
+    significance:
+      'The archive identifies Falls\'s 1989 Guthrie production as the American premiere of Pravda, a Brenton/Hare satire that had been a major National Theatre success in London.',
+    story:
+      'Pravda gives the 1989 section of the archive a sharper national frame. Falls was already balancing Goodman institution-building with high-profile outside assignments, and the Guthrie offered a different kind of arena: a large resident stage with a history of ambitious classics and contemporary international work. Brenton and Hare\'s play, written in the heat of 1980s British media politics, let Falls handle a fast, crowded satire about ownership, ideology, and the manufacturing of public truth. In the production chronology, it sits beside The Misanthrope and The Speed of Darkness, showing how quickly his early Goodman period expanded from Chicago leadership into broader American premiere work.',
+    venueAnchor: 'Guthrie Theater',
+    eraLabel: 'Early Goodman years',
+    images: [
+      {
+        src: robertFallsRehearsal,
+        alt: 'Robert Falls seated at a rehearsal table in a later rehearsal photograph.',
+        caption: 'Contextual rehearsal image from the local archive. No Pravda-specific production still has surfaced yet.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Howard Brenton' },
+      { role: 'Playwright', name: 'David Hare' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Dramaturg', name: 'Mark Bly' },
+    ],
+    quickFacts: [
+      { label: 'Guthrie staging', value: '1989' },
+      { label: 'Premiere status', value: 'American premiere' },
+      { label: 'Venue', value: 'Guthrie Theater' },
+      { label: 'Original London premiere', value: 'National Theatre, 1985' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Howard Brenton and David Hare' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Dramaturgy', name: 'Mark Bly' },
+    ],
+    recognition: [
+      {
+        label: 'American premiere',
+        detail: 'The local timeline and public dramaturgical credit records identify the Guthrie staging as the American premiere.',
+      },
+      {
+        label: 'London context',
+        detail: 'The original National Theatre production of Pravda won major 1985 best-play recognition in London.',
+      },
+      {
+        label: 'Guthrie season',
+        detail: 'Guthrie production history lists Pravda in the 1988-89 Vineland Place season.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Archive note',
+        text: 'No Pravda-specific production stills, cast list, program scan, or local review packet has surfaced in the current project files.',
+      },
+      {
+        label: 'Image note',
+        text: 'The rehearsal photograph is used as contextual Robert Falls imagery only; it is not presented as a Pravda production image.',
+      },
+      {
+        label: 'Source note',
+        text: 'The page separates the documented Guthrie/American-premiere facts from broader public context about the Brenton and Hare play.',
+      },
+    ],
+    externalSources: [
+      { label: 'Pravda play background', href: 'https://en.wikipedia.org/wiki/Pravda_(play)' },
+      { label: 'Guthrie Theater production history', href: 'https://en.wikipedia.org/wiki/Guthrie_Theater_production_history' },
+      { label: 'Mark Bly production credit listing', href: 'https://en.wikipedia.org/wiki/Mark_Bly' },
+      { label: 'Guthrie Theater institutional history', href: 'https://www.guthrietheater.org/globalassets/pdf/guthrie_history.pdf' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
   amadeus: {
     pageMode: 'featured',
     summary:
@@ -929,10 +1299,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Content advisory',
         text: 'Goodman recommended Holiday for ages 13+ and noted themes of grief, loss, and addiction with mature language.',
-      },
-      {
-        label: 'Source packet',
-        text: 'The current source trail includes the official Goodman page, two Goodman feature articles, gallery captions, review pull quotes, rehearsal images, and multiple Goodman video thumbnails embedded on the production page.',
       },
     ],
     reviews: [
@@ -2231,10 +2597,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Image limits',
         text: 'The official page exposes the show art and a separate title-treatment asset, both now represented locally; it does not expose a full production-still gallery, so the page avoids padding the layout with unrelated portraits.',
       },
-      {
-        label: 'Asset pull',
-        text: 'Pulled the Goodman title-treatment PNG into src/images/web-sourced and paired it with the existing Blue Surge show art so the page has more than a single visual asset.',
-      },
     ],
     externalSources: [
       { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/blue-surge/' },
@@ -2311,20 +2673,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Primary source constraint',
-        text: 'The public Goodman archive page returns inconsistent/blocked responses from this environment, so the page is built from the verified official Goodman show-art asset, internal archive chronology, and Ayckbourn\'s own dedicated House and Garden records.',
-      },
-      {
         label: 'Ayckbourn record',
         text: 'The official House and Garden website describes the diptych as two plays designed to be performed simultaneously with the same cast moving between them, and documents the world, London, and New York premieres that frame its broader production history.',
-      },
-      {
-        label: 'Archive status',
-        text: 'This page is materially stronger than the auto-generated fallback, but remains a good candidate for a later enrichment pass if a fuller Goodman cast or program record surfaces.',
-      },
-      {
-        label: 'Asset pull',
-        text: 'Pulled the confirmed Goodman HouseGarden_ShowArt_900x600.png asset into src/images/web-sourced and wired the page to that canonical copy.',
       },
     ],
     reviews: [
@@ -2485,7 +2835,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Lean but specific archive record',
-        detail: 'The surviving source packet is compact, but it includes trustworthy run data, full casting, creative credits, synopsis, runtime, and an official still from the production.',
+        detail: 'Surviving records for this run are compact, but include trustworthy run data, full casting, creative credits, synopsis, runtime, and an official production still.',
       },
     ],
     contextNotes: [
@@ -2500,10 +2850,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Image limits',
         text: 'The page now uses seven Goodman-hosted assets: the production image, title treatment, four cast headshots, and a Robert Falls artist portrait.',
-      },
-      {
-        label: 'Asset pull',
-        text: 'Pulled official Goodman production and artist assets into src/images/web-sourced so the page has a proper visual packet rather than a single-image placeholder.',
       },
     ],
     reviews: [
@@ -2635,7 +2981,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Text-forward archive page',
-        detail: 'Because Hughie is built on a concentrated source packet rather than a large image archive, the page leans on synopsis, cast, and context instead of pretending to have fuller visual coverage than survives.',
+        detail: 'Surviving documentation for Hughie is concentrated rather than image-rich, so this page leans on synopsis, cast, and context rather than a full photo gallery.',
       },
       {
         label: "O'Neill continuity",
@@ -2650,10 +2996,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'One-hour compression',
         text: "The archive makes clear how stripped-down this production was compared with Falls's larger O'Neill work: one hour, two actors, one hotel-lobby encounter, and no ornamental subplotting.",
-      },
-      {
-        label: 'Image limits',
-        text: 'The local archive currently preserves one official still rather than a full gallery, so the page stays deliberately lean and avoids filler media.',
       },
       {
         label: 'Artist roster',
@@ -2794,10 +3136,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         text: 'The play\'s action centers on a fire chief writing eulogies for men lost on September 11, which makes the production one of the archive\'s clearest records of direct response to a still-recent national event.',
       },
       {
-        label: 'Image limits',
-        text: 'The local archive currently preserves a single official still rather than a larger photo packet, so the page stays intentionally compact.',
-      },
-      {
         label: 'Dating correction',
         text: 'The production record is keyed to the official Goodman run dates, September 10-22, 2002; any broader timeline grouping should treat this as a 2002 production rather than a 2003 title.',
       },
@@ -2829,12 +3167,75 @@ const productionSeeds: Record<string, ProductionSeed> = {
     eraLabel: 'Early 2000s Goodman years',
     images: [
       {
-        src: theGoatShowArt,
-        alt: 'Barbara Robertson leans against Patrick Clear in a production still from The Goat, or Who Is Sylvia?.',
-        caption: 'Official Goodman production still from the Midwest premiere of The Goat, or Who Is Sylvia?.',
+        src: theGoatGoodmanShowArt,
+        alt: 'Barbara Robertson leans against Patrick Clear in Goodman show art for The Goat, or Who Is Sylvia?.',
+        caption: 'Official Goodman show art for the Midwest premiere of The Goat, or Who Is Sylvia?.',
         orientation: 'landscape',
         priority: true,
-        kind: 'production-still',
+        kind: 'art',
+      },
+      {
+        src: theGoatTitleTreatment,
+        alt: 'Goodman title treatment for The Goat, or Who Is Sylvia?.',
+        caption: 'Goodman title treatment used for the 2003 archive page.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
+        src: theGoatRobertFalls,
+        alt: 'Robert Falls portrait from the Goodman artist archive.',
+        caption: 'Robert Falls, director.',
+        orientation: 'square',
+        kind: 'art',
+      },
+      {
+        src: theGoatEdwardAlbee,
+        alt: 'Edward Albee portrait from the Goodman artist archive.',
+        caption: 'Edward Albee, playwright.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: theGoatPatrickClear,
+        alt: 'Patrick Clear portrait from the Goodman artist archive.',
+        caption: 'Patrick Clear, Martin.',
+        orientation: 'square',
+        kind: 'art',
+      },
+      {
+        src: theGoatWilliamDick,
+        alt: 'William Dick portrait from the Goodman artist archive.',
+        caption: 'William Dick, Ross.',
+        orientation: 'square',
+        kind: 'art',
+      },
+      {
+        src: theGoatBarbaraRobertson,
+        alt: 'Barbara Robertson portrait from the Goodman artist archive.',
+        caption: 'Barbara Robertson, Stevie.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: theGoatMichaelStahlDavid,
+        alt: 'Michael Stahl-David portrait from the Goodman artist archive.',
+        caption: 'Michael Stahl-David, Billy.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: theGoatMichaelPhilippi,
+        alt: 'Michael Philippi portrait from the Goodman artist archive.',
+        caption: 'Michael Philippi, scenic and lighting design.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: theGoatRichardWoodbury,
+        alt: 'Richard Woodbury portrait from the Goodman artist archive.',
+        caption: 'Richard Woodbury, sound design.',
+        orientation: 'square',
+        kind: 'art',
       },
     ],
     collaborators: [
@@ -2905,24 +3306,55 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Albee awards context',
         text: 'The theatre described the play as the winner of the 2002 Tony Award for Best Play, which helps explain why the production arrived at the Goodman so quickly after Broadway.',
       },
+    ],
+    reviews: [
       {
-        label: 'Image limits',
-        text: 'The local archive currently holds one official production still rather than a broader gallery, so the page stays compact instead of overstating the surviving media record.',
+        outlet: 'Goodman Theatre archive',
+        summary: 'The official page records the production as a Goodman Albert Theatre run from Nov. 10-Dec. 2, 2003, directed by Falls, with a one-hour-forty-five-minute runtime and Midwest premiere positioning.',
+        href: 'https://www.goodmantheatre.org/show/the-goat-or-who-is-sylvia/',
+      },
+      {
+        outlet: 'Broadway / awards context',
+        summary: 'The play opened on Broadway in 2002, won the Tony Award for Best Play, and quickly became a major late-career Albee title before Goodman mounted its Midwest premiere.',
+        href: 'https://en.wikipedia.org/wiki/The_Goat,_or_Who_Is_Sylvia%3F',
+      },
+      {
+        outlet: 'Tony Awards context',
+        summary: 'Awards references identify The Goat, or Who Is Sylvia? as the 2002 Best Play winner, underscoring why Goodman treated it as a contemporary event rather than a settled revival.',
+        href: 'https://en.wikipedia.org/wiki/Tony_Award_for_Best_Play',
+      },
+      {
+        outlet: 'Pulitzer context',
+        summary: 'The play was also a 2003 Pulitzer Prize for Drama finalist, adding another marker of its national standing at the moment Falls staged it in Chicago.',
+        href: 'https://en.wikipedia.org/wiki/The_Goat,_or_Who_Is_Sylvia%3F#Awards_and_nominations',
+      },
+      {
+        outlet: 'Recent critical afterlife',
+        summary: 'Later reviews continue to frame the play around the collapse of an apparently ideal household and the audience discomfort Albee deliberately provokes.',
+        href: 'https://www.theguardian.com/stage/2023/feb/21/the-goat-or-who-is-sylvia-review-claudia-karvan-stars-in-bestiality-comedy-that-loses-itself-in-farce',
       },
     ],
     externalSources: [
       { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/the-goat-or-who-is-sylvia/' },
+      { label: 'Official Goodman show-art asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/08/Goat_ShowArt_900x600-900x600.png' },
+      { label: 'Official Goodman title-treatment asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/08/Goat_TitleTreatment-1.png' },
+      { label: 'Robert Falls Goodman artist asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/07/BobFalls_148x148.jpeg' },
+      { label: 'Edward Albee Goodman artist asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/07/AlbeeEdward_288x375.jpg' },
+      { label: 'Patrick Clear Goodman artist asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/07/Patrick-Clear-300x300-1.png' },
+      { label: 'Barbara Robertson Goodman artist asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/07/RobertsonBarbara_288x375.jpg' },
+      { label: 'Michael Stahl-David Goodman artist asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/07/StahlDavidMichael_288x375.jpg' },
       { label: 'The Goat, or Who Is Sylvia? background', href: 'https://en.wikipedia.org/wiki/The_Goat,_or_Who_Is_Sylvia%3F' },
+      { label: 'Tony Award for Best Play background', href: 'https://en.wikipedia.org/wiki/Tony_Award_for_Best_Play' },
     ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'the-iceman-cometh': {
     pageMode: 'featured',
     summary:
       'The Iceman Cometh is one of the recurring epics in the archive, a Eugene O\'Neill title Falls kept returning to as a test of scale, ensemble stamina, and actor collaboration across Chicago, Dublin, and New York.',
     publicSummary:
-      'Falls\'s major O\'Neill revival gathered Brian Dennehy, Nathan Lane, and John Douglas Thompson inside a monumental saloon drama that moved from Goodman to BAM and left behind one of the richest source packets in the archive.',
+      "Falls's major O'Neill revival gathered Brian Dennehy, Nathan Lane, and John Douglas Thompson inside a monumental saloon drama that moved from Goodman to BAM, one of the most thoroughly documented productions in the archive.",
     synopsis:
       'Welcome to Harry Hope\'s saloon, home to a ragtag band of drunks and dreamers who wait for Hickey, the charismatic traveling salesman whose visits usually mean a grand good time. When Hickey arrives sober and newly evangelical about giving up pipe dreams, he throws the room into a devastatingly comic and ultimately heartbreaking reckoning.',
     fallsContext:
@@ -2980,7 +3412,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         src: icemanBam1,
         alt: 'Nathan Lane raises his hand as members of the BAM ensemble watch from the saloon floor.',
-        caption: 'One of the BAM stills preserved in the folder, showing Hickey working the room as performance and provocation.',
+        caption: 'One of the BAM production stills, showing Hickey working the room as performance and provocation.',
         orientation: 'landscape',
         kind: 'production-still',
       },
@@ -3058,7 +3490,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Dennehy-Lane center',
-        detail: 'The 2012 revival source packet consistently frames Brian Dennehy and Nathan Lane as the production\'s gravitational force, with John Douglas Thompson and the wider ensemble close behind.',
+        detail: "Coverage of the 2012 revival consistently frames Brian Dennehy and Nathan Lane as the production's gravitational force, with John Douglas Thompson and the wider ensemble close behind.",
       },
       {
         label: 'Jeff context',
@@ -3080,7 +3512,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Chicago to New York',
-        detail: 'The source packet ties the Goodman event directly to the later BAM life of the production through stills, review links, and a preserved video excerpt.',
+        detail: 'Surviving documentation ties the Goodman event directly to the later BAM life of the production through stills, reviews, and a video excerpt.',
       },
     ],
     reviews: [
@@ -3109,29 +3541,29 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Exeunt NYC',
         href: 'https://exeuntnyc.com/reviews/the-iceman-cometh/',
         summary:
-          'One of the New York review links saved in the source doc for the Brooklyn run.',
-        note: 'Source-doc review link',
+          'One of the New York reviews of the Brooklyn run.',
+        note: 'Review',
       },
       {
         source: 'Newcity Stage',
         href: 'https://www.newcitystage.com/2012/05/03/review-the-iceman-comethgoodman-theatre/',
         summary:
-          'Chicago review coverage linked in the local document alongside the Goodman materials.',
-        note: 'Source-doc review link',
+          'Chicago review coverage of the Goodman production.',
+        note: 'Review',
       },
       {
         source: 'Theatre In Chicago',
         href: 'https://www.theatreinchicago.com/the-iceman-cometh/5017/',
         summary:
-          'The source packet preserves Theatre In Chicago\'s listing and review hub for the Goodman staging.',
+          'Theatre In Chicago\'s listing and review hub for the Goodman staging.',
         note: 'Chicago review hub',
       },
       {
         source: 'Talkin\' Broadway',
         href: 'https://www.talkinbroadway.com/page/regional/chicago/ch395.html',
         summary:
-          'Regional Chicago review coverage preserved in the local source packet.',
-        note: 'Source-doc review link',
+          'Regional Chicago review coverage of the production.',
+        note: 'Review',
       },
       {
         source: 'USA Today',
@@ -3162,7 +3594,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'The Iceman Cometh | NYT Video Excerpt',
         href: 'https://www.nytimes.com/video/theater/100000001525848/excerpt-the-iceman-cometh.html?smid=url-share',
-        description: 'Video excerpt link preserved in the local BAM source document.',
+        description: 'A video excerpt from the BAM production.',
         thumbnail: icemanShowArt,
       },
     ],
@@ -3233,10 +3665,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Review pattern',
         text: 'The review trail in the folder spans official Goodman materials, Chicago review hubs, New York response to the BAM run, and national outlets such as Variety, The New York Times, and USA Today.',
       },
-      {
-        label: 'Source package',
-        text: 'The local folder includes official copy, stills from both the Goodman and BAM lives of the production, a critic-praise screenshot, and a full roster image with cast and creative credits.',
-      },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
@@ -3254,7 +3682,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       "A major late-career world premiere and one of the most formally ambitious productions anywhere in the archive, notable for its scale, multimedia language, and the sheer difficulty of translating Bolano's novel to the stage.",
     story:
-      "The local source packet makes clear that 2666 was treated as an event, not simply another slot in a season. Official materials describe a world-premiere special event with an all-Chicago ensemble of 15 actors playing nearly 80 roles across a five-part multimedia production shaped by video, projections, underscoring, and original music. That scale matters to Falls's archive because it shows him using theatrical accumulation as the point: the adaptation does not shrink Bolano down to polite prestige drama, it leans into excess, duration, and the instability of moving between continents, stories, and registers. Even beside other ambitious late-career titles, 2666 reads like a wager on what an institutional theatre can still dare to build.",
+      "2666 was treated as an event, not simply another slot in a season. Official materials describe a world-premiere special event with an all-Chicago ensemble of 15 actors playing nearly 80 roles across a five-part multimedia production shaped by video, projections, underscoring, and original music. That scale matters to Falls's archive because it shows him using theatrical accumulation as the point: the adaptation does not shrink Bolano down to polite prestige drama, it leans into excess, duration, and the instability of moving between continents, stories, and registers. Even beside other ambitious late-career titles, 2666 reads like a wager on what an institutional theatre can still dare to build.",
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
     images: [
@@ -3388,10 +3816,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         text: "2666 sits alongside titles like The Seagull, The Cherry Orchard, and The Iceman Cometh as part of the archive's record of Falls working at literary and structural scale.",
       },
       {
-        label: 'Source packet',
-        text: 'This page is built from the local 2016 production document, preserved Goodman archive materials, stage stills, show art, and linked review trails saved with the production folder.',
-      },
-      {
         label: 'Credit normalization',
         text: 'Where local materials listed broad ensemble rosters instead of character assignments, the page preserves that structure rather than inventing role breakdowns.',
       },
@@ -3422,7 +3846,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Stage and Cinema',
         href: 'https://stageandcinema.com/2016/02/18/2666-goodman/',
         summary:
-          'Another contemporary Chicago response preserved in the source document, useful for mapping how the production landed across local criticism.',
+          'Another contemporary Chicago response to the production.',
         note: 'Chicago review',
       },
       {
@@ -3624,11 +4048,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     contextNotes: [
       {
         label: 'Source dating',
-        text: 'The local source folder labels its Goodman document "2013," but the production itself ran Jan 18 - Feb 23, 2014; this page uses the actual performance dates rather than the season-label year.',
-      },
-      {
-        label: 'Source package',
-        text: 'The folder includes show art and poster art for both the Goodman premiere and the Kirk Douglas transfer, ten Goodman and Los Angeles production stills, a full cast-and-creative screenshot, an extensive critical-praise pull-quote screenshot, and review trails for both engagements.',
+        text: 'Some records label this Goodman engagement "2013," but the production ran Jan. 18-Feb. 23, 2014; this page uses the actual performance dates.',
       },
     ],
     reviews: [
@@ -3797,10 +4217,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
     ],
     contextNotes: [
-      {
-        label: 'Source note',
-        text: 'This page relies on a compact surviving source trail, so the editorial framing is fuller than the image record.',
-      },
     ],
     externalSources: [
       { label: 'Wikipedia production summary', href: 'https://en.wikipedia.org/wiki/The_Speed_of_Darkness_(play)' },
@@ -3872,10 +4288,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'A later, unrelated revival',
         text: 'A third Broadway revival of The Rose Tattoo, starring Marisa Tomei, opened at the American Airlines Theatre in 2019 directed by Trip Cullman - not Robert Falls. An earlier site record had misattributed that production to Falls; it has been removed from his credits.',
-      },
-      {
-        label: 'Source note',
-        text: 'This page is built from a concentrated source packet rather than a large surviving photo archive, so the image record remains intentionally lean.',
       },
     ],
     externalSources: [
@@ -4286,7 +4698,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Two-city life',
-        detail: 'The preserved source trail ties the 2006 Manhattan Theatre Club run to a 2008 Goodman remount, giving the production a fuller record than a one-off Broadway credit.',
+        detail: 'The 2006 Manhattan Theatre Club run and the 2008 Goodman remount give the production a fuller record than a one-off Broadway credit.',
       },
       {
         label: 'Actor-led tension',
@@ -4296,11 +4708,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     contextNotes: [
       {
         label: 'Production history',
-        text: 'The local source document combines Broadway and Goodman materials, which is useful here: it confirms the 2006 Biltmore run while also preserving the 2008 Goodman dates, synopsis, and Chicago feature coverage.',
-      },
-      {
-        label: 'Primary cast choice',
-        text: 'This page uses the Broadway opening-night cast and design team as the primary roster because that is the clearest complete production packet preserved in the source material. The Goodman return is documented in the story, images, and source links rather than treated as a separate page.',
+        text: 'Falls\'s Goodman engagement followed the play\'s 2006 Broadway premiere at the Biltmore Theatre; the Goodman\'s 2008 staging is documented separately within this page\'s chronology.',
       },
       {
         label: 'Goodman return cast',
@@ -4323,7 +4731,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'The New York Times',
         href: 'https://www.nytimes.com/2006/05/10/theater/reviews/shining-city-conor-mcphersons-study-of-loneliness-in-a.html',
         summary:
-          'Ben Brantley\'s review, cited in the local document, frames the play as a study of loneliness and gives the production one of its strongest preserved notices.',
+          'Ben Brantley\'s review frames the play as a study of loneliness and gives the production one of its strongest notices.',
         note: 'Broadway review',
       },
       {
@@ -4403,7 +4811,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'A 2006 Richard Nelson world premiere at Goodman that transferred intact to Playwrights Horizons, extending Falls\'s archive as a director of new plays built for Chicago and then carried east.',
     story:
-      'Frank\'s Home matters because it treats a monumental cultural figure as a private problem before it treats him as a legend. Nelson\'s script locates Wright at a moment when his public image still gleams but his family life is full of resentment, debt, vanity, and emotional wreckage. The production itself follows that same tension: Thomas Lynch\'s spare, desert-floor setting keeps the evening actor-led and exposed, while Peter Weller\'s Wright is constantly framed against the people forced to live with his self-invention. The local source trail also gives the production a fuller life than the old seed suggested: a Goodman world premiere in the Owen Theatre, a documented critical response across Chicago, and then an intact transfer to Playwrights Horizons in New York with Weller, Harris Yulin, Mary Beth Fisher, Maggie Siff, and Jay Whittaker all moving with Falls. That transfer story helps the page read less like a one-off commission and more like a serious chapter in Falls\'s new-work record.',
+      'Frank\'s Home matters because it treats a monumental cultural figure as a private problem before it treats him as a legend. Nelson\'s script locates Wright at a moment when his public image still gleams but his family life is full of resentment, debt, vanity, and emotional wreckage. The production itself follows that same tension: Thomas Lynch\'s spare, desert-floor setting keeps the evening actor-led and exposed, while Peter Weller\'s Wright is constantly framed against the people forced to live with his self-invention. The production also had a fuller life than a single engagement: a Goodman world premiere in the Owen Theatre, a documented critical response across Chicago, and then an intact transfer to Playwrights Horizons in New York with Weller, Harris Yulin, Mary Beth Fisher, Maggie Siff, and Jay Whittaker all moving with Falls. That transfer story helps the page read less like a one-off commission and more like a serious chapter in Falls\'s new-work record.',
     venueAnchor: 'Goodman Theatre and Playwrights Horizons',
     eraLabel: 'National and international period',
     images: [
@@ -4459,7 +4867,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         src: franksHomeShowArt,
         alt: 'Frank\'s Home show art featuring the production still of three men at work alongside the title.',
-        caption: 'Show art built from the production imagery and preserved in the local source folder.',
+        caption: "Show art built from the production's imagery.",
         orientation: 'landscape',
         kind: 'art',
       },
@@ -4543,7 +4951,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Transfer history',
-        text: 'The source packet makes clear that Playwrights Horizons picked up the production immediately after the Goodman run, reinforcing the page as a real transfer story rather than an isolated commission.',
+        text: 'Playwrights Horizons picked up the production immediately after the Goodman run, making this a documented transfer rather than an isolated regional staging.',
       },
       {
         label: 'Source package',
@@ -4562,7 +4970,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Theatre In Chicago',
         href: 'https://www.theatreinchicago.com/franks-home/3300/',
         summary:
-          'The source document preserves a full Chicago review roundup showing a mixed but engaged local response to the Goodman premiere.',
+          'A full Chicago review roundup showing a mixed but engaged local response to the Goodman premiere.',
         note: 'Review aggregate',
       },
       {
@@ -4597,7 +5005,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Variety',
         href: 'https://variety.com/2006/legit/reviews/frank-s-home-2-1200511648/',
         summary:
-          'The local source packet preserves Variety coverage as part of the play\'s broader professional reception beyond Chicago.',
+          'Variety coverage, part of the play\'s broader professional reception beyond Chicago.',
         note: 'Trade review',
       },
     ],
@@ -5166,7 +5574,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'The Winter\'s Tale | Director Robert Falls',
         href: '/media/productions/the-winter-s-tale/the-winter-s-tale-director-robert-falls.mp4',
-        description: 'Local director video included with the Winter\'s Tale source folder.',
+        description: 'Director Robert Falls discusses The Winter\'s Tale.',
         thumbnail: wintersTaleFeatured,
       },
     ],
@@ -5270,10 +5678,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Reception pattern',
         text: 'The source package consistently emphasizes clarity, whimsy, and emotional force rather than reverence alone.',
       },
-      {
-        label: 'Local source drop',
-        text: 'The local production folder includes still photography, a director video, critical pull quotes, audience reactions, and a full cast-and-creative roster.',
-      },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
@@ -5291,7 +5695,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'A late Goodman-era memoir musical that later transferred to the Public Theater in New York, broadening the archive\'s picture of Falls beyond ensemble drama, adaptation, and classical repertoire.',
     story:
-      'This title matters because it shifts the scale of the archive without reducing ambition. Instead of epic adaptation or institutional farewell, the page turns toward a single performer, a six-piece ensemble, and the careful shaping of memory into theatre. The source documents also reveal a fuller life cycle: a work-in-progress appearance at The Public\'s 2018 Under the Radar Festival, a full Goodman run, and a 2019 Public Theater engagement in New York.',
+      'This title matters because it shifts the scale of the archive without reducing ambition. Instead of epic adaptation or institutional farewell, the page turns toward a single performer, a six-piece ensemble, and the careful shaping of memory into theatre. The piece had a fuller life cycle than a single run: a work-in-progress appearance at The Public\'s 2018 Under the Radar Festival, a full Goodman run, and a 2019 Public Theater engagement in New York.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
     images: [
@@ -5399,7 +5803,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     recognition: [
       {
         label: 'Transfer story',
-        detail: 'The local source docs and timeline together record a 2019 New York engagement at the Public Theater after the Goodman run.',
+        detail: 'A 2019 New York engagement at the Public Theater followed the Goodman run.',
       },
       {
         label: 'Form shift',
@@ -5417,7 +5821,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     contextNotes: [
       {
         label: 'Music-theatre context',
-        text: 'The source docs repeatedly frame the piece as a musical memoir of hope, family, and transcendence, anchored by a six-piece orchestra and intimate autobiographical storytelling.',
+        text: 'The piece is staged as a musical memoir of hope, family, and transcendence, anchored by a six-piece onstage orchestra and David Cale\'s intimate autobiographical storytelling.',
       },
       {
         label: 'Production history',
@@ -5429,19 +5833,15 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'David Cale background',
-        text: 'The same source packet broadens Cale\'s profile beyond Goodman, citing work at Playwrights Horizons and The Public, an Obie Award for Lillian, a Bessie Award for Deep in a Dream of You, a This American Life recording, collaborations with Dael Orlandersmith and Matthew Dean Marsh, lyrics for artists including Debbie Harry and Elvis Costello, and screen work including Pollock, The Slaughter Rule, and The Good Wife.',
+        text: 'Beyond Goodman, Cale\'s career spans Playwrights Horizons and The Public, an Obie Award for Lillian, a Bessie Award for Deep in a Dream of You, a This American Life recording, collaborations with Dael Orlandersmith and Matthew Dean Marsh, song lyrics for artists including Debbie Harry and Elvis Costello, and screen work including Pollock, The Slaughter Rule, and The Good Wife.',
       },
       {
         label: 'New York continuation',
-        text: 'A second source doc identifies the 2019 follow-up engagement as We\'re Only Alive for a Short Amount of Time (New York) for Public Theater, New York.',
+        text: 'A 2019 follow-up engagement continued the piece as We\'re Only Alive for a Short Amount of Time (New York) at the Public Theater.',
       },
       {
         label: 'Public Theater framing',
-        text: 'The source docs preserve the New York framing of the piece as a return engagement for Lortel Award-winning writer-performer David Cale, directed by Tony Award winner Robert Falls and presented in co-production with Goodman Theatre.',
-      },
-      {
-        label: 'Local source drop',
-        text: 'The local production folder adds performance stills, rehearsal photography, portraits, poster art, a director video, and the doc-based review trail now surfaced on the page.',
+        text: 'The New York engagement was framed as a return for Lortel Award-winning writer-performer David Cale, again directed by Tony Award winner Robert Falls and presented in co-production with Goodman Theatre.',
       },
     ],
     reviews: [
@@ -5456,56 +5856,56 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Goodman Theatre Press Room',
         href: 'https://www.goodmantheatre.org/press-rooms/were-only-alive-for-a-short-amount-of-time/',
         summary:
-          'The local doc packet points back to Goodman\'s press room for the production biography, artist background, and house framing used to build out this page.',
-        note: 'Primary source packet',
+          'Goodman\'s press room materials, including production biography and artist background.',
+        note: 'Press materials',
       },
       {
         source: 'Newcity Stage',
         href: 'https://www.newcitystage.com/2018/09/26/no-one-gets-out-alive-a-review-of-were-only-alive-for-a-short-amount-of-time-at-goodman-theatre/',
         summary:
-          'Chicago review coverage linked directly inside the 2018 source document for the Goodman run.',
-        note: 'Source-doc review link',
+          'Chicago review coverage of the 2018 Goodman run.',
+        note: 'Review',
       },
       {
         source: 'Stage and Cinema',
         href: 'https://stageandcinema.com/2018/09/25/were-only-alive/',
         summary:
-          'Another early review link preserved in the local source document for the original Goodman production.',
-        note: 'Source-doc review link',
+          'An early review of the original Goodman production.',
+        note: 'Review',
       },
       {
         source: 'Playbill',
         href: 'https://playbill.com/article/what-did-critics-think-of-were-only-alive-for-a-short-amount-of-time-at-the-public-theater',
         summary:
-          'The source packet preserves Playbill\'s critics-roundup link for the Public Theater transfer, connecting the Chicago production to its New York reception.',
+          'Playbill\'s critics roundup for the Public Theater transfer, connecting the Chicago production to its New York reception.',
         note: 'Critics roundup',
       },
       {
         source: 'NY Stage Review',
         href: 'https://nystagereview.com/2019/06/27/were-only-alive-for-a-short-amount-of-time-david-cale-digs-deep/',
         summary:
-          'New York transfer coverage linked in the source docs for the Public Theater engagement.',
-        note: 'Source-doc review link',
+          'New York transfer coverage of the Public Theater engagement.',
+        note: 'Review',
       },
       {
         source: 'The New York Times',
         href: 'https://www.nytimes.com/2019/07/03/theater/david-cale-were-only-alive-public-theater.html',
         summary:
           'The doc packet also preserves New York Times coverage of the production\'s Public Theater life.',
-        note: 'Source-doc feature link',
+        note: 'Feature',
       },
       {
         source: 'Theatre In Chicago',
         href: 'https://www.theatreinchicago.com/were-only-alive-for-a-short-amount-of-time/9986/',
         summary:
           'Regional listing and review coverage captured alongside the rest of the local source materials.',
-        note: 'Source-doc listing link',
+        note: 'Listing',
       },
       {
         source: 'TDF',
         href: 'https://www.tdf.org/shows/17572/were-only-alive-for-a-short-amount-of-time/',
         summary:
-          'The source doc preserves a TDF listing that also carries a Chicago Tribune quote used in the New York transfer materials.',
+          'A TDF listing that also carries a Chicago Tribune quote used in the New York transfer materials.',
         note: 'Transfer listing',
       },
     ],
@@ -5524,7 +5924,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'We\'re Only Alive | Director Video',
         href: '/media/productions/were-only-alive-for-a-short-amount-of-time/were-only-alive-director-video.mp4',
-        description: 'Local video asset included with the We\'re Only Alive source folder.',
+        description: 'A director video for We\'re Only Alive for a Short Amount of Time.',
         thumbnail: onlyAlivePoster,
       },
     ],
@@ -5928,7 +6328,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Critical praise',
-        detail: 'The source packet includes a Goodman critical-praise graphic highlighting Chicago Tribune, Daily Herald, and Newcity responses.',
+        detail: 'A Goodman critical-praise graphic highlighted Chicago Tribune, Daily Herald, and Newcity responses.',
       },
     ],
     contextNotes: [
@@ -5948,10 +6348,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Chekhov at Goodman',
         text: 'The program situates the production within a longer Goodman history of Chekhov that includes a 1961 Uncle Vanya, Michael Maggio\'s 1990 production with John Mahoney, Falls\'s own 1994 Three Sisters, and his 2010 Seagull.',
       },
-      {
-        label: 'Source package',
-        text: 'The local folder includes a production one-sheet, a full Goodman program with essays and credits, a critical-praise screenshot, and a strong gallery of stage photography and scenic imagery.',
-      },
     ],
     reviews: [
       {
@@ -5965,64 +6361,64 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Time Out Chicago',
         href: 'https://www.timeout.com/chicago/theater/uncle-vanya',
         summary:
-          'Review link preserved in the 2017 source document for the Goodman run.',
-        note: 'Source-doc review link',
+          'A review of the 2017 Goodman run.',
+        note: 'Review',
       },
       {
         source: 'Stage and Cinema',
         href: 'https://stageandcinema.com/2017/02/22/uncle-vanya-goodman/',
         summary:
-          'Review link preserved in the source packet for the original Goodman production.',
-        note: 'Source-doc review link',
+          'A review of the original Goodman production.',
+        note: 'Review',
       },
       {
         source: 'Around the Town Chicago',
         href: 'https://aroundthetownchicago.com/theatre-reviews/uncle-vanya/',
         summary:
           'Chicago review coverage linked directly in the local production document.',
-        note: 'Source-doc review link',
+        note: 'Review',
       },
       {
         source: 'Theatre In Chicago',
         href: 'https://www.theatreinchicago.com/uncle-vanya/9070/',
         summary:
-          'Regional review and listing coverage preserved in the source packet.',
-        note: 'Source-doc review link',
+          'Regional review and listing coverage of the production.',
+        note: 'Review',
       },
       {
         source: 'Talkin\' Broadway',
         href: 'https://www.talkinbroadway.com/page/regional/chicago/ch536.html',
         summary:
-          'Another review link captured in the original Goodman source document.',
-        note: 'Source-doc review link',
+          'Another review of the original Goodman production.',
+        note: 'Review',
       },
       {
         source: 'The Fourth Walsh',
         href: 'https://thefourthwalsh.com/2017/02/review-uncle-vanya-goodman-theatre-bursting-with-character/',
         summary:
-          'Source-doc review link for the Goodman staging.',
-        note: 'Source-doc review link',
+          'A review of the Goodman staging.',
+        note: 'Review',
       },
       {
         source: 'Daily Herald',
         href: 'https://www.dailyherald.com/20170222/entertainment/goodmans-impeccably-acted-uncle-vanya-balances-humor-pathos/',
         summary:
-          'The source packet preserves Daily Herald coverage, echoed in the local critical-praise screenshot.',
-        note: 'Source-doc review link',
+          'Daily Herald coverage of the production.',
+        note: 'Review',
       },
       {
         source: 'PerformInk',
         href: 'https://perform.ink/goodmans-uncle-vanya-embodies-russian-soul/',
         summary:
-          'Trade review coverage linked in the original Goodman source document.',
-        note: 'Source-doc review link',
+          'Trade review coverage of the original Goodman production.',
+        note: 'Review',
       },
       {
         source: 'Chicago Sun-Times',
         href: 'https://chicago.suntimes.com/2017/2/23/18383953/uncle-vanya-speaks-to-the-anguished-nature-of-living',
         summary:
-          'The source packet also includes Sun-Times review coverage of the production.',
-        note: 'Source-doc review link',
+          'Chicago Sun-Times review coverage of the production.',
+        note: 'Review',
       },
     ],
     externalSources: [
@@ -6044,7 +6440,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Watch Scenes from Uncle Vanya',
         href: 'https://www.theatermania.com/news/watch-scenes-from-annie-bakers-adaptation-of-uncle-vanya_80055/',
-        description: 'Video link captured in the source packet for Annie Baker\'s adaptation at Goodman.',
+        description: "A video excerpt from Annie Baker's adaptation at Goodman.",
         thumbnail: uncleVanyaShowArt,
       },
     ],
@@ -6090,7 +6486,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'A 2017 Goodman world premiere whose completion became its own story: a heart attack forced Keach off stage and canceled the remaining performances, and Falls and the Goodman brought the production back for a full, extended run in summer 2018 that drew some of the most enthusiastic reviews of the period.',
     story:
-      'Pamplona\'s archive record runs in two parts. The May-June 2017 world premiere gave eleven previews before Keach suffered a heart attack on opening night and the rest of the engagement was scrapped, turning the local NYT coverage into a cancellation story. What the source folder shows clearly, though, is that the production did not end there: Goodman and Falls brought Keach and the same creative team back for a full six-week run from July 10 to August 19, 2018, complete with an extension, a wall of strong Chicago reviews, and an audience-testimonial video calling the play "absolutely magnificent." The page treats 2018 as the production\'s real critical record while preserving the 2017 health emergency as the reason the story took an extra year to finish.',
+      'Pamplona\'s archive record runs in two parts. The May-June 2017 world premiere gave eleven previews before Keach suffered a heart attack on opening night and the rest of the engagement was scrapped, turning the local NYT coverage into a cancellation story. What the record shows clearly, though, is that the production did not end there: Goodman and Falls brought Keach and the same creative team back for a full six-week run from July 10 to August 19, 2018, complete with an extension, a wall of strong Chicago reviews, and an audience-testimonial video calling the play "absolutely magnificent." The page treats 2018 as the production\'s real critical record while preserving the 2017 health emergency as the reason the story took an extra year to finish.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
     images: [
@@ -6225,11 +6621,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Audience reception',
-        text: 'The local source folder preserves a Goodman audience-testimonial video in which a patron calls the play "absolutely magnificent," alongside the press quotes gathered from the 2018 run.',
-      },
-      {
-        label: 'Source package',
-        text: 'The folder includes both show-art and full-resolution production stills from the completed run, a YouTube trailer, a local audience-testimonial video, a cast-and-creative screenshot, a full-text accessibility script, and a wide press trail spanning the 2017 announcement through the 2018 reviews.',
+        text: 'A Goodman audience-testimonial video captures a patron calling the play "absolutely magnificent," alongside the press quotes gathered from the 2018 run.',
       },
     ],
     reviews: [
@@ -6251,7 +6643,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'BroadwayWorld',
         href: 'https://www.broadwayworld.com/chicago/article/BWW-Review-PAMPLONA-at-Goodman-Theatre-20180723',
         summary:
-          'Review coverage of the 2018 engagement preserved in the local source packet.',
+          'Review coverage of the 2018 engagement.',
         note: 'Chicago review',
       },
       {
@@ -6316,7 +6708,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Pamplona | Audience Testimonials',
         href: '/media/productions/pamplona/pamplona-audience-testimonials.mp4',
-        description: 'Local audience-testimonial video included in the production source folder.',
+        description: 'Audience testimonials from the Pamplona run.',
         thumbnail: pamplonaPoster,
       },
     ],
@@ -6452,11 +6844,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Chicago premiere',
-        detail: 'The source packet explicitly calls the Goodman engagement a Chicago premiere, distinguishing it from the play\'s earlier St. Louis life.',
+        detail: "Goodman billed the engagement explicitly as a Chicago premiere, distinguishing it from the play's earlier St. Louis life.",
       },
       {
         label: 'Labor focus',
-        detail: 'Both the source doc and the Goodman program frame the production around workers\' rights, union decline, and the human cost of consolidation-era corporate power.',
+        detail: "The Goodman program frames the production around workers' rights, union decline, and the human cost of consolidation-era corporate power.",
       },
     ],
     awardsOrSignificance: [
@@ -6488,7 +6880,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Location mismatch',
-        text: 'The local source packet contains both Reynolds, Wisconsin and Monroe, Wisconsin as town references. The page keeps the official synopsis\'s Reynolds setting while preserving the discrepancy as part of the archive context.',
+        text: 'Surviving records list the play\'s setting alternately as Reynolds and Monroe, Wisconsin; this page follows the official synopsis\'s Reynolds setting.',
       },
       {
         label: 'Production history',
@@ -6511,64 +6903,64 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Goodman Press Room',
         href: 'https://www.goodmantheatre.org/press-rooms/soups-stews-and-casseroles-1976/',
         summary:
-          'The local doc also preserves Goodman\'s press-room copy, which gives fuller synopsis language and explicitly labels the run as a Chicago premiere.',
-        note: 'Primary source packet',
+          'Goodman\'s press-room copy, which gives fuller synopsis language and explicitly labels the run as a Chicago premiere.',
+        note: 'Press materials',
       },
       {
         source: 'Stage and Cinema',
         href: 'https://stageandcinema.com/2016/06/01/soups-stews-and-casseroles/',
         summary:
-          'One of the direct review links preserved in the local source document for the 2016 run.',
-        note: 'Source-doc review link',
+          'A review of the 2016 run.',
+        note: 'Review',
       },
       {
         source: 'TheaterMania',
         href: 'https://www.theatermania.com/news/soups-stews-and-casseroles-1976_77341/',
         summary:
-          'The local source packet includes TheaterMania coverage tied to the Goodman production.',
-        note: 'Source-doc news link',
+          'TheaterMania coverage of the Goodman production.',
+        note: 'News',
       },
       {
         source: 'Becky Sarwate',
         href: 'https://beckysarwate.com/2016/06/03/rebecca-gilmans-soups-stews-and-casseroles-1976/',
         summary:
-          'Another direct review or feature link captured in the source document.',
-        note: 'Source-doc review link',
+          'Another review or feature on the production.',
+        note: 'Review',
       },
       {
         source: 'The Fourth Walsh',
         href: 'https://thefourthwalsh.com/2016/06/review-soups-stews-and-casseroles-goodman-theatre-familiar-recipe/',
         summary:
           'The folder preserves this Chicago review link as part of the local reception trail.',
-        note: 'Source-doc review link',
+        note: 'Review',
       },
       {
         source: 'Talkin\' Broadway',
         href: 'https://www.talkinbroadway.com/page/regional/chicago/ch516.html',
         summary:
-          'Regional Chicago review coverage saved in the source doc.',
-        note: 'Source-doc review link',
+          'Regional Chicago review coverage of the production.',
+        note: 'Review',
       },
       {
         source: 'Windy City Times',
         href: 'https://windycitytimes.com/2016/06/08/theater-review-soups-stews-and-casseroles-1976/',
         summary:
-          'The source packet also preserves Windy City Times review coverage of the Goodman engagement.',
-        note: 'Source-doc review link',
+          'Windy City Times review coverage of the Goodman engagement.',
+        note: 'Review',
       },
       {
         source: 'ChicagoCritic',
         href: 'https://chicagocritic.com/soups-stews-and-casseroles-1976/',
         summary:
           'Another local review link included with the main production doc.',
-        note: 'Source-doc review link',
+        note: 'Review',
       },
       {
         source: 'TheaterMania Casting Announcement',
         href: 'https://www.theatermania.com/news/cast-announced-for-rebecca-gilmans-soups-stews-and-casseroles-1976-at-the-goodman_76784/',
         summary:
           'Casting coverage preserved alongside the reviews and official materials.',
-        note: 'Source-doc casting link',
+        note: 'Casting',
       },
     ],
     externalSources: [
@@ -6590,7 +6982,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Soups, Stews, and Casseroles: 1976 | Local Video',
         href: '/media/productions/soups-stews-and-casseroles-1976/soups-stews-director-video.mp4',
-        description: 'Local video asset included in the production source folder.',
+        description: 'A director video for Soups, Stews, and Casseroles: 1976.',
         thumbnail: soupsShowArt,
       },
     ],
@@ -6679,7 +7071,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     recognition: [
       {
         label: 'World premiere',
-        detail: 'The local source packet explicitly frames the Geffen engagement as the world premiere and records its extension through March 25, 2012.',
+        detail: 'Geffen billed the engagement as the world premiere and extended the run through March 25, 2012.',
       },
       {
         label: 'Star ensemble',
@@ -6706,12 +7098,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Source cleanup',
-        text: 'The local folder supports a Geffen Playhouse world premiere and a later Off-Broadway continuation, so this page has been rebuilt away from the older Goodman-based repo seed.',
-      },
-      {
         label: 'Year-label mismatch',
-        text: 'The New York source document is labeled 2014, but several preserved links and news items cluster around the 2013-14 New Group season. The page keeps the local folder\'s own labeling while noting the cross-year run context.',
+        text: 'Some contemporary coverage clusters this production within the 2013-14 New Group season rather than a single 2014 date; this page follows the most commonly cited year while noting the cross-season run.',
       },
       {
         label: 'Official framing',
@@ -6741,43 +7129,43 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Stage and Cinema',
         href: 'https://stageandcinema.com/2013/11/07/the-jacksonian-acorn-theatre/',
         summary:
-          'One of the direct Off-Broadway review links captured in the local source packet.',
-        note: 'Source-doc review link',
+          'A review of the Off-Broadway run.',
+        note: 'Review',
       },
       {
         source: 'Hollywood Reporter',
         href: 'https://www.hollywoodreporter.com/news/general-news/jacksonian-theater-review-295035/',
         summary:
-          'The local doc preserves Hollywood Reporter review coverage from the play\'s world-premiere life.',
-        note: 'Source-doc review link',
+          'Hollywood Reporter review coverage from the play\'s world-premiere run.',
+        note: 'Review',
       },
       {
         source: 'American Theatre',
         href: 'https://www.americantheatre.org/2014/02/01/the-jacksonian/',
         summary:
-          'A later feature or review link preserved in the source doc, extending the page\'s documentation beyond simple listings.',
-        note: 'Source-doc feature link',
+          'A later feature on the production.',
+        note: 'Feature',
       },
       {
         source: 'Chicago Magazine',
         href: 'https://www.chicagomag.com/arts-culture/december-2013/the-jacksonian-and-domesticated/',
         summary:
-          'The source packet also preserves Chicago Magazine coverage that situates the production in a broader theater conversation of the period.',
-        note: 'Source-doc feature link',
+          'Chicago Magazine coverage situating the production in a broader theater conversation of the period.',
+        note: 'Feature',
       },
       {
         source: 'TheaterMania Listing',
         href: 'https://www.theatermania.com/shows/new-york-city-theater/off-broadway/the-jacksonian_200910/',
         summary:
           'TheaterMania\'s listing link helps document the Off-Broadway presentation in New York.',
-        note: 'Source-doc listing',
+        note: 'Listing',
       },
       {
         source: 'TheaterMania News',
         href: 'https://www.theatermania.com/news/the-jacksonian_66583/',
         summary:
-          'Another saved news item from the local source document, useful for tracing the production\'s New York rollout.',
-        note: 'Source-doc news link',
+          'News coverage tracing the production\'s New York rollout.',
+        note: 'News',
       },
     ],
     externalSources: [
@@ -7015,8 +7403,9 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         source: 'Newcity Stage',
         href: 'https://www.newcitystage.com/2006/09/28/review-king-leargoodman-theatre/',
-        summary: 'Newcity\'s review of the original 2006 Goodman production, preserved in the local source document.',
-        note: 'Source-doc review link',
+        summary:
+          'Newcity\'s review of the original 2006 Goodman production.',
+        note: 'Review',
       },
     ],
     externalSources: [
@@ -7152,8 +7541,9 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         source: 'Chicago Reader',
         href: 'https://chicagoreader.com/arts-culture/a-life-in-the-theatre/',
-        summary: 'Chicago Reader coverage of the production, preserved in the local source document.',
-        note: 'Source-doc review link',
+        summary:
+          'Chicago Reader coverage of the production.',
+        note: 'Review',
       },
     ],
     externalSources: [
@@ -7527,10 +7917,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         text: 'Local notes and later coverage agree that Falls compressed the traditional three-act structure into a roughly 100-minute one-act and removed the literal elms from the stage picture, replacing them with a boulder field and suspended stones.',
       },
       {
-        label: 'Source cleanup',
-        text: 'The local folder includes playbill art and other promotional material, but the featured gallery uses only production stills so the page reads as one visual world rather than a mixed-media scrapbook.',
-      },
-      {
         label: 'Source package',
         text: 'Available materials include a detailed local notes document, multiple Goodman stills, cast-and-creative screenshots, design references, review aggregates, and several video links from the production\'s original run.',
       },
@@ -7809,7 +8195,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Source cleanup: unrelated 2022 production excluded',
-        text: 'The local folder also contained production photos and a Chicago Tribune review from Chicago Shakespeare Theater\'s unrelated 2022 staging of Measure for Measure (set amid "Cuban turmoil," not Falls\'s 1970s Times Square). Those images and that review are not Falls\'s work and have been left out of this page.',
+        text: 'Not to be confused with Chicago Shakespeare Theater\'s unrelated 2022 staging of Measure for Measure, set amid Cuban political turmoil; that production was not directed by Falls and is separate from this 1970s Times Square staging.',
       },
       {
         label: 'Source package',
@@ -7924,7 +8310,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'A major Chekhov chapter for Falls: intimate in scale, rich in ensemble detail, and important enough in process and result to become part of his own career story.',
     story:
-      'The Seagull matters because it lets the archive show process, not just product. The source trail repeatedly describes a production built on spartan means, close actor work, and a fresh adaptation that made Chekhov feel like new writing. That makes the page more than a classic-play entry: it becomes a record of a rehearsal discovery that later echoed forward into Uncle Vanya and, eventually, The Cherry Orchard.',
+      'The Seagull matters because it lets the archive show process, not just product. Falls has repeatedly described a production built on spartan means, close actor work, and a fresh adaptation that made Chekhov feel like new writing. That makes the page more than a classic-play entry: it becomes a record of a rehearsal discovery that later echoed forward into Uncle Vanya and, eventually, The Cherry Orchard.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
     images: [
@@ -8042,7 +8428,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     recognition: [
       {
         label: 'Chekhov adaptation',
-        detail: 'The source docs and review coverage frame the production as Falls\'s own adaptation from George Calderon, making the text part of his authorship story as well as his directing record.',
+        detail: "Coverage frames the production as Falls's own adaptation from George Calderon, making the text part of his authorship story as well as his directing record.",
       },
       {
         label: 'Process significance',
@@ -8050,7 +8436,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Reception pattern',
-        detail: 'The source packet preserves a strongly positive review spread, including Chicago Sun-Times, Chicago Tribune, Time Out Chicago, Chicago Theater Beat, and others.',
+        detail: 'The production drew a strongly positive review spread, including Chicago Sun-Times, Chicago Tribune, Time Out Chicago, and Chicago Theater Beat.',
       },
     ],
     contextNotes: [
@@ -8060,15 +8446,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Review consensus',
-        text: 'The local doc preserves a broad review roundup that repeatedly stresses spontaneity, emotional truth, and the feeling that the three-hour evening moved with the force of new writing rather than academic revival.',
+        text: 'Critics consistently praised the production\'s spontaneity and emotional truth, several noting the three-hour evening moved with the energy of new writing rather than academic revival.',
       },
       {
         label: 'Career context',
         text: 'The Seagull now reads as the key early chapter in Falls\'s late-career Chekhov line, with Uncle Vanya and The Cherry Orchard extending discoveries first made here.',
-      },
-      {
-        label: 'Source package',
-        text: 'The local folder includes show art, multiple production stills, a roster screenshot, a review roundup, and links to both a Theater In Chicago page and a YouTube onstage video clip.',
       },
     ],
     reviews: [
@@ -8083,8 +8465,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Theatre In Chicago',
         href: 'https://www.theatreinchicago.com/the-seagull/4166/',
         summary:
-          'The source doc preserves Theatre In Chicago\'s review roundup page, which aggregates the local critical response to the Goodman staging.',
-        note: 'Source-doc review hub',
+          'Theatre In Chicago\'s review roundup page, aggregating the local critical response to the Goodman staging.',
+        note: 'Review hub',
       },
       {
         source: 'Chicago Tribune',
@@ -8118,22 +8500,22 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Newcity Stage',
         href: 'https://www.newcitystage.com/2010/10/26/review-the-seagullgoodman-theatre/',
         summary:
-          'The local source packet also links directly to Newcity\'s review of the Goodman staging.',
-        note: 'Source-doc review link',
+          'Newcity\'s review of the Goodman staging.',
+        note: 'Review',
       },
       {
         source: 'ChicagoCritic',
         href: 'https://chicagocritic.com/the-seagull/',
         summary:
-          'Another direct review link preserved in the local source document.',
-        note: 'Source-doc review link',
+          'Another review of the production.',
+        note: 'Review',
       },
       {
         source: 'Theater In Chicago Feature',
         href: 'https://www.theatreinchicago.com/news/artistic-director-robert-falls-directs-an-intimate-fresh-take-on-chekhovs-the-seagull/227/',
         summary:
-          'Preview and interview coverage linked in the local source packet.',
-        note: 'Source-doc feature link',
+          'Preview and interview coverage of the production.',
+        note: 'Feature',
       },
     ],
     externalSources: [
@@ -8154,7 +8536,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'The Seagull | On Stage',
         href: 'https://www.youtube.com/watch?v=8FoAYU8u0mI',
-        description: 'YouTube stage clip linked in the local Seagull source document.',
+        description: 'A YouTube stage clip from the production.',
         thumbnail: seagullShowArt,
       },
     ],
@@ -8169,15 +8551,15 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         quote: 'The play\'s three-hour running time races by',
-        source: 'Chicago Sun-Times, quoted in source doc',
+        source: 'Chicago Sun-Times',
       },
       {
         quote: 'The Seagull is a lone, perfect pebble',
-        source: 'Chicago Theater Beat, quoted in source doc',
+        source: 'Chicago Theater Beat',
       },
       {
         quote: 'the kind of production that aims to be talked about for years',
-        source: 'Time Out Chicago, quoted in source doc',
+        source: 'Time Out Chicago',
       },
     ],
     relatedLinks: seedLinks,
