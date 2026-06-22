@@ -71,21 +71,21 @@ const categoryLabels: Record<PressCategory, string> = {
       </div>
 
       <aside class="bg-brand-ink text-brand-cream p-6 lg:p-7">
-        <p class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-semibold">Coverage snapshot</p>
-        <div class="mt-4 grid gap-5">
-          <div>
-            <div class="font-display text-4xl text-brand-goldBright">{pressStats.totalItems}</div>
-            <div class="text-sm text-brand-cream/65">curated articles, reviews, and season stories</div>
+        <p class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-semibold mb-4">Coverage Snapshot</p>
+        <dl class="divide-y divide-brand-cream/10">
+          <div class="flex items-baseline justify-between gap-4 py-3 first:pt-0">
+            <dt class="text-sm text-brand-cream/65">Curated articles &amp; reviews</dt>
+            <dd class="font-display text-lg text-brand-goldBright">{pressStats.totalItems}</dd>
           </div>
-          <div>
-            <div class="font-display text-3xl text-brand-cream">{pressStats.earliestYear}-{pressStats.latestYear}</div>
-            <div class="text-sm text-brand-cream/65">date range currently covered on the page</div>
+          <div class="flex items-baseline justify-between gap-4 py-3">
+            <dt class="text-sm text-brand-cream/65">Coverage date range</dt>
+            <dd class="text-sm text-brand-cream/85">{pressStats.earliestYear}&ndash;{pressStats.latestYear}</dd>
           </div>
-          <div>
-            <div class="font-display text-3xl text-brand-cream">{pressStats.linkedProductionCount}</div>
-            <div class="text-sm text-brand-cream/65">signature productions linked back into the archive</div>
+          <div class="flex items-baseline justify-between gap-4 py-3 last:pb-0">
+            <dt class="text-sm text-brand-cream/65">Productions linked back</dt>
+            <dd class="font-display text-lg text-brand-goldBright">{pressStats.linkedProductionCount}</dd>
           </div>
-        </div>
+        </dl>
       </aside>
     </div>
 

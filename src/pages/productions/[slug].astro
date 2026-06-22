@@ -90,18 +90,23 @@ const heroLinks = [
   ...(hasPeople ? [{ href: '#credits-main', label: 'Credits' }] : []),
   ...(hasReceptionSection ? [{ href: '#press-main', label: 'Reception' }] : []),
 ];
-const railFacts = production.quickFacts.some((fact) => /stagings?/i.test(fact.label))
-  ? production.quickFacts
-  : [...production.quickFacts, { label: 'Stagings', value: String(production.stagingCount) }];
-const railQuickFacts = railFacts.slice(0, isFeatured ? 5 : 4);
-const railRecognition = (production.recognition.length > 0 ? production.recognition : production.awardsOrSignificance).slice(0, 2);
-const railQuote = production.pressQuotes[0] ?? null;
-const railReviews = production.reviews.slice(0, 2);
-const railStats = [
+// Snapshot facts (stagings/venues/span) lead the Quick Facts list rather than
+// living in a separate big-number stat card, which read as a SaaS-style
+// hero-metric block out of place against the rest of the archive's prose voice.
+const snapshotFacts = [
   { label: production.stagingCount === 1 ? 'Staging' : 'Stagings', value: String(production.stagingCount) },
   { label: production.venueCount === 1 ? 'Venue' : 'Venues', value: String(production.venueCount) },
   { label: 'Span', value: production.yearSpan },
 ];
+const existingFactLabels = new Set(production.quickFacts.map((fact) => fact.label.toLowerCase()));
+const railFacts = [
+  ...snapshotFacts.filter((fact) => !existingFactLabels.has(fact.label.toLowerCase())),
+  ...production.quickFacts,
+];
+const railQuickFacts = railFacts.slice(0, isFeatured ? 7 : 6);
+const railRecognition = (production.recognition.length > 0 ? production.recognition : production.awardsOrSignificance).slice(0, 2);
+const railQuote = production.pressQuotes[0] ?? null;
+const railReviews = production.reviews.slice(0, 2);
 const introFacts = [
   production.yearSpan,
   production.venueAnchor,
@@ -278,18 +283,6 @@ const productionSchema = [
       </div>
 
       <aside class="production-side-rail" aria-label={`${production.title} production details`}>
-        <section class="production-rail-card production-rail-stat-card">
-          <p class="production-eyebrow">Production snapshot</p>
-          <div class="production-rail-stats">
-            {railStats.map((stat) => (
-              <article>
-                <span>{stat.label}</span>
-                <strong>{stat.value}</strong>
-              </article>
-            ))}
-          </div>
-        </section>
-
         <section class="production-rail-card">
           <p class="production-eyebrow">Quick facts</p>
           <dl class="production-facts">
@@ -771,18 +764,6 @@ const productionSchema = [
   }
   .production-side-rail {
     @apply space-y-4 lg:sticky lg:top-24;
-  }
-  .production-rail-stats {
-    @apply grid gap-3 sm:grid-cols-3 lg:grid-cols-1;
-  }
-  .production-rail-stats article {
-    @apply border border-brand-ink/10 bg-brand-cream/60 px-4 py-4;
-  }
-  .production-rail-stats span {
-    @apply block text-[10px] uppercase tracking-[0.18em] text-brand-ink/45;
-  }
-  .production-rail-stats strong {
-    @apply mt-2 block font-display text-3xl leading-none text-brand-ink;
   }
   .production-facts {
     @apply space-y-0;

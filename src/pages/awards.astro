@@ -16,9 +16,21 @@ const institutionalCount = awards.filter((award) =>
     `${award.name} ${award.work ?? ''}`,
   ),
 ).length;
+// Award years can themselves be a span (e.g. "2022–23" for a season); take just
+// the first and last 4-digit year so the page-level range reads as one clean span.
+function leadingYear(value: string): string {
+  return value.match(/\d{4}/)?.[0] ?? value;
+}
+function trailingYear(value: string): string {
+  const parts = value.split(/[–-]/);
+  const last = parts[parts.length - 1]?.trim() ?? value;
+  if (/^\d{4}$/.test(last)) return last;
+  if (/^\d{2}$/.test(last)) return leadingYear(value).slice(0, 2) + last;
+  return leadingYear(value);
+}
 const awardSpan = {
-  first: awards.find((award) => award.year)?.year ?? '1976',
-  latest: [...awards].reverse().find((award) => award.year)?.year ?? '2022-23',
+  first: leadingYear(awards.find((award) => award.year)?.year ?? '1976'),
+  latest: trailingYear([...awards].reverse().find((award) => award.year)?.year ?? '2022–23'),
 };
 
 function workHref(work?: string) {
@@ -58,22 +70,12 @@ function awardType(award: (typeof awards)[number]) {
           Robert Falls's individual honors appear first here, with broader Goodman and career-wide
           recognitions separated below so institutional achievements do not read like personal prize totals.
         </p>
-        <div class="mt-8 grid gap-4 sm:grid-cols-3 max-w-4xl">
-          <div class="border border-brand-gold/20 bg-white/5 px-5 py-5">
-            <div class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-semibold">Personal honors</div>
-            <div class="mt-2 font-display text-4xl text-brand-cream">{personalFeaturedCount}</div>
-            <div class="text-sm text-brand-cream/65 mt-1">major recognitions tied directly to Falls as a director</div>
-          </div>
-          <div class="border border-brand-gold/20 bg-white/5 px-5 py-5">
-            <div class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-semibold">Award span</div>
-            <div class="mt-2 font-display text-4xl text-brand-cream">{awardSpan.first}</div>
-            <div class="text-sm text-brand-cream/65 mt-1">through {awardSpan.latest}, from early Chicago work to late-career honors</div>
-          </div>
-          <div class="border border-brand-gold/20 bg-white/5 px-5 py-5">
-            <div class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-semibold">Institutional honors</div>
-            <div class="mt-2 font-display text-4xl text-brand-cream">{institutionalCount}</div>
-            <div class="text-sm text-brand-cream/65 mt-1">career-wide or institution-level recognitions kept distinct from personal wins</div>
-          </div>
+        <div class="mt-8 max-w-3xl text-sm uppercase tracking-[0.16em] text-brand-cream/55 flex flex-wrap items-center gap-x-3 gap-y-2">
+          <span>{personalFeaturedCount} personal honors</span>
+          <span class="text-brand-gold/50">&middot;</span>
+          <span>{institutionalCount} institutional honors</span>
+          <span class="text-brand-gold/50">&middot;</span>
+          <span>{awardSpan.first}&ndash;{awardSpan.latest}</span>
         </div>
       </div>
     </div>

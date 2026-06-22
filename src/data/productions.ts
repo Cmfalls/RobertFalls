@@ -167,10 +167,17 @@ import aidaPlaybill from '../images/aida/aida-playbill.jpg';
 import aidaHeadleyPascal from '../images/aida/aida-headley-pascal.jpg';
 import aidaAmnerisEnsemble from '../images/aida/aida-amneris-ensemble.jpg';
 import blueSurgeShowArt from '../images/blue-surge/blue-surge-show-art.png';
+import blueSurgeTitleTreatment from '../images/web-sourced/blue-surge-title-treatment.png';
 import finishingThePictureShowArt from '../images/finishing-the-picture/finishing-the-picture-show-art.png';
-import houseAndGardenShowArt from '../images/house-and-garden/house-and-garden-show-art.png';
+import houseAndGardenShowArt from '../images/web-sourced/house-and-garden-goodman-show-art.png';
 import hughieShowArt from '../images/hughie/hughie-show-art.png';
-import lobbyHeroShowArt from '../images/lobby-hero/lobby-hero-show-art.png';
+import lobbyHeroGoodmanShowArt from '../images/web-sourced/lobby-hero-goodman-show-art.png';
+import lobbyHeroTitleTreatmentAsset from '../images/web-sourced/lobby-hero-title-treatment.png';
+import lobbyHeroLanceBaker from '../images/web-sourced/lobby-hero-lance-baker.jpg';
+import lobbyHeroRobertFalls from '../images/web-sourced/lobby-hero-robert-falls.jpeg';
+import lobbyHeroRolandoBoyce from '../images/web-sourced/lobby-hero-rolando-boyce.jpg';
+import lobbyHeroScottCummins from '../images/web-sourced/lobby-hero-scott-cummins.jpg';
+import lobbyHeroJulieGranata from '../images/web-sourced/lobby-hero-julie-granata.jpg';
 import theGoatShowArt from '../images/the-goat-or-who-is-sylvia/the-goat-or-who-is-sylvia-show-art.png';
 import theGuysShowArt from '../images/the-guys/the-guys-show-art.png';
 import swingState1 from '../images/swing-state/swing-state-1.jpg';
@@ -2142,6 +2149,13 @@ const productionSeeds: Record<string, ProductionSeed> = {
         priority: true,
         kind: 'art',
       },
+      {
+        src: blueSurgeTitleTreatment,
+        alt: 'Blue Surge title treatment in bright blue block lettering.',
+        caption: 'Goodman title treatment asset for Blue Surge, pulled from the official production page.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
     ],
     collaborators: [
       { role: 'Playwright', name: 'Rebecca Gilman' },
@@ -2174,6 +2188,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'Sound Design', name: 'Richard Woodbury' },
       { role: 'Dramaturg', name: 'Tom Creamer' },
       { role: 'Production Stage Manager', name: 'Alden J. Vasquez' },
+      { role: 'Stage Manager', name: 'Laxmi Kumaran' },
     ],
     recognition: [
       {
@@ -2214,15 +2229,20 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Image limits',
-        text: 'The local archive currently preserves official show art but not a full still gallery, so this page stays image-light by design rather than padding the layout with unrelated portraits.',
+        text: 'The official page exposes the show art and a separate title-treatment asset, both now represented locally; it does not expose a full production-still gallery, so the page avoids padding the layout with unrelated portraits.',
+      },
+      {
+        label: 'Asset pull',
+        text: 'Pulled the Goodman title-treatment PNG into src/images/web-sourced and paired it with the existing Blue Surge show art so the page has more than a single visual asset.',
       },
     ],
     externalSources: [
       { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/blue-surge/' },
       { label: 'Rebecca Gilman artist page', href: 'https://www.goodmantheatre.org/artists/rebecca-gilman/' },
+      { label: 'Blue Surge title-treatment asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/08/BlueSurge_TitleTreatment-1.png' },
     ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'house-and-garden': {
     pageMode: 'archive',
@@ -2231,7 +2251,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     publicSummary:
       "Falls directed the American premiere of Alan Ayckbourn's House and Garden at the Goodman in 2001, a dual-play event designed to run simultaneously in two auditoria with the same cast crossing between them.",
     synopsis:
-      "Set over the course of a single summer day at Teddy Platt's country house during a village fete, House and Garden split the same social world into two plays happening at the same time. One follows the drawing-room unravelling of marriages, flirtations, and political ambition; the other moves outdoors among fête logistics, servants, neighbors, and private reckonings. Seen together, the diptych becomes a farce of overlapping perspectives, collapsing domestic life and public display into one theatrical machine.",
+      "Set over the course of a single summer day at Teddy Platt's country house during a village fete, House and Garden split the same social world into two plays happening at the same time. One follows the drawing-room unravelling of marriages, flirtations, and political ambition; the other moves outdoors among fete logistics, servants, neighbors, and private reckonings. Seen together, the diptych becomes a farce of overlapping perspectives, collapsing domestic life and public display into one theatrical machine.",
     fallsContext:
       "House and Garden matters in the archive because it shows Falls not only as a director of emotional scale, but as a director of logistics and form. Ayckbourn's experiment depends on precision: actors moving between paired stages, scenes echoing each other across spaces, and the audience gradually understanding that no single room contains the full story.",
     significance:
@@ -2244,7 +2264,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         src: houseAndGardenShowArt,
         alt: 'Official show art for House and Garden depicting a country house split by a silhouette profile.',
-        caption: 'Official Goodman show art for the American premiere of House and Garden.',
+        caption: 'Official Goodman show art for the American premiere of House and Garden, pulled from the Goodman archive asset path.',
         orientation: 'landscape',
         priority: true,
         kind: 'art',
@@ -2292,7 +2312,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     contextNotes: [
       {
         label: 'Primary source constraint',
-        text: 'The public Goodman archive page is currently difficult to fetch reliably from this environment, so the page is built from the verified official show art, internal archive chronology, and Ayckbourn\'s own dedicated House and Garden site.',
+        text: 'The public Goodman archive page returns inconsistent/blocked responses from this environment, so the page is built from the verified official Goodman show-art asset, internal archive chronology, and Ayckbourn\'s own dedicated House and Garden records.',
       },
       {
         label: 'Ayckbourn record',
@@ -2300,17 +2320,46 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Archive status',
-        text: 'This page is now materially stronger than the auto-generated fallback, but it remains a good candidate for a later enrichment pass if a fuller Goodman cast or program record surfaces.',
+        text: 'This page is materially stronger than the auto-generated fallback, but remains a good candidate for a later enrichment pass if a fuller Goodman cast or program record surfaces.',
+      },
+      {
+        label: 'Asset pull',
+        text: 'Pulled the confirmed Goodman HouseGarden_ShowArt_900x600.png asset into src/images/web-sourced and wired the page to that canonical copy.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Official Goodman production page',
+        href: 'https://www.goodmantheatre.org/show/house-and-garden/',
+        summary:
+          'The Goodman production page is retained as the production anchor and provides the official asset path used for the local show-art pull.',
+        note: 'Primary production source',
+      },
+      {
+        source: 'House & Garden play background',
+        href: 'https://en.wikipedia.org/wiki/House_%26_Garden_(plays)',
+        summary:
+          'The play background explains the unusual diptych structure: two self-contained plays, House and Garden, designed for simultaneous performance by the same cast in adjacent spaces.',
+        note: 'Source-play context',
+      },
+      {
+        source: 'Robert Falls background',
+        href: 'https://en.wikipedia.org/wiki/Robert_Falls',
+        summary:
+          'Falls background sources identify House and Garden among the American premieres he directed during his Goodman tenure.',
+        note: 'Career context',
       },
     ],
     externalSources: [
       { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/house-and-garden/' },
+      { label: 'Official Goodman show-art asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/08/HouseGarden_ShowArt_900x600.png' },
       { label: 'Official Alan Ayckbourn House & Garden site', href: 'http://houseandgarden.alanayckbourn.net/' },
       { label: 'Ayckbourn production history', href: 'http://houseandgarden.alanayckbourn.net/page17/' },
+      { label: 'House & Garden play background', href: 'https://en.wikipedia.org/wiki/House_%26_Garden_(plays)' },
       { label: 'Robert Falls career overview', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
     ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'lobby-hero': {
     pageMode: 'archive',
@@ -2330,12 +2379,54 @@ const productionSeeds: Record<string, ProductionSeed> = {
     eraLabel: 'Early 2000s Goodman years',
     images: [
       {
-        src: lobbyHeroShowArt,
+        src: lobbyHeroGoodmanShowArt,
         alt: 'Lance Stuart Baker and Rolando Boyce Sr. in security uniforms in a production still from Lobby Hero.',
-        caption: 'Official Goodman production still for Lobby Hero in the Owen Theatre.',
+        caption: 'Official Goodman production image for Lobby Hero in the Owen Theatre.',
         orientation: 'landscape',
         priority: true,
         kind: 'production-still',
+      },
+      {
+        src: lobbyHeroTitleTreatmentAsset,
+        alt: 'Lobby Hero title treatment in compact black type.',
+        caption: 'Goodman title-treatment asset for Lobby Hero.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
+        src: lobbyHeroLanceBaker,
+        alt: 'Lance Stuart Baker headshot from the Goodman Lobby Hero artist roster.',
+        caption: 'Lance Stuart Baker, who played Jeff.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: lobbyHeroRolandoBoyce,
+        alt: 'Rolando Boyce Sr. headshot from the Goodman Lobby Hero artist roster.',
+        caption: 'Rolando Boyce, Sr., who played William.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: lobbyHeroScottCummins,
+        alt: 'Scott Cummins headshot from the Goodman Lobby Hero artist roster.',
+        caption: 'Scott Cummins, who played Bill.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: lobbyHeroJulieGranata,
+        alt: 'Julie Granata headshot from the Goodman Lobby Hero artist roster.',
+        caption: 'Julie Granata, who played Dawn.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: lobbyHeroRobertFalls,
+        alt: 'Robert Falls headshot from Goodman artist assets.',
+        caption: 'Robert Falls, director of the Goodman production.',
+        orientation: 'portrait',
+        kind: 'art',
       },
     ],
     collaborators: [
@@ -2408,15 +2499,64 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Image limits',
-        text: 'The local archive currently holds one official still rather than a full gallery, so the page stays image-light and text-forward by design.',
+        text: 'The page now uses seven Goodman-hosted assets: the production image, title treatment, four cast headshots, and a Robert Falls artist portrait.',
+      },
+      {
+        label: 'Asset pull',
+        text: 'Pulled official Goodman production and artist assets into src/images/web-sourced so the page has a proper visual packet rather than a single-image placeholder.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'Goodman Theatre',
+        href: 'https://www.goodmantheatre.org/show/lobby-hero/',
+        summary:
+          'The official archive supplies the Goodman run dates, Owen Theatre venue, runtime, synopsis, full cast, creative team, and asset references used here.',
+        note: 'Primary production source',
+      },
+      {
+        source: 'Lobby Hero background',
+        href: 'https://en.wikipedia.org/wiki/Lobby_Hero',
+        summary:
+          'The play background tracks Lobby Hero from its 2001 Playwrights Horizons premiere through later London and Broadway productions.',
+        note: 'Production-history context',
+      },
+      {
+        source: 'Kenneth Lonergan background',
+        href: 'https://en.wikipedia.org/wiki/Kenneth_Lonergan',
+        summary:
+          'Lonergan background places Lobby Hero among the early plays that established his reputation before his later Broadway and film recognition.',
+        note: 'Playwright context',
+      },
+      {
+        source: 'Vogue',
+        href: 'https://www.vogue.com/article/lobby-hero-broadway-michael-cera-chris-evans-opening-night',
+        summary:
+          'Coverage of the 2018 Broadway opening helps show the play’s later cultural life and the durability of its questions about uniforms, authority, and duty.',
+        note: 'Later revival context',
+      },
+      {
+        source: 'Awards context',
+        href: 'https://en.wikipedia.org/wiki/List_of_awards_and_nominations_received_by_Kenneth_Lonergan',
+        summary:
+          'Awards listings preserve Lobby Hero’s early recognition and its later revival attention, including Outer Critics Circle and Tony-era context.',
+        note: 'Recognition context',
       },
     ],
     externalSources: [
       { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/lobby-hero/' },
+      { label: 'Official Goodman show-art asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/08/LobbyHero_ShowArt_900x600.png' },
+      { label: 'Official Goodman title-treatment asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/08/LobbyHero_TitleTreatment-1.png' },
+      { label: 'Lance Stuart Baker Goodman asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/07/BakerLance_288x375.jpg' },
+      { label: 'Rolando Boyce Goodman asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/07/BoyceRolando_288x375.jpg' },
+      { label: 'Scott Cummins Goodman asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/07/CumminsScott_288x375.jpg' },
+      { label: 'Julie Granata Goodman asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/07/GranataJulie_288x375.jpg' },
+      { label: 'Robert Falls Goodman asset', href: 'https://www.goodmantheatre.org/wp-content/uploads/2022/07/BobFalls_148x148.jpeg' },
       { label: 'Lobby Hero production history', href: 'https://en.wikipedia.org/wiki/Lobby_Hero' },
+      { label: 'Kenneth Lonergan background', href: 'https://en.wikipedia.org/wiki/Kenneth_Lonergan' },
     ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'hughie': {
     pageMode: 'archive',
