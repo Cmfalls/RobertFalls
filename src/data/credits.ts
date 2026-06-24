@@ -80,8 +80,9 @@ export const creditGroups: CreditGroup[] = [
   },
   {
     label: 'Recent Work',
-    count: '2025–2026',
+    count: '2023–2026',
     credits: [
+      { title: "You Don't Know the Lonely One", venue: 'Ancram Opera House', year: '2023', note: 'First-look staged production with David Cale, Dael Orlandersmith, and Matthew Dean Marsh' },
       { title: 'Amadeus', venue: 'Steppenwolf Theatre Company', year: '2025', note: 'Steppenwolf directorial debut' },
       { title: 'Holiday', venue: 'Goodman Theatre', year: '2026', note: 'First Goodman production since stepping down as Artistic Director' },
     ],

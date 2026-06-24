@@ -600,6 +600,82 @@ const archiveFallbackImage: ProductionImage = {
 };
 
 const productionSeeds: Record<string, ProductionSeed> = {
+  'you-dont-know-the-lonely-one': {
+    pageMode: 'archive',
+    summary:
+      'You Don\'t Know the Lonely One is a post-Goodman development credit: a first-look staged production at Ancram Opera House, written by David Cale and Dael Orlandersmith with music by Cale and Matthew Dean Marsh, and directed by Robert Falls.',
+    publicSummary:
+      'A first-look staged production at Ancram Opera House, pairing David Cale, Dael Orlandersmith, and Matthew Dean Marsh in a song-cycle portrait of aloneness directed by Falls.',
+    synopsis:
+      'Built as a story and song cycle, the piece draws on paintings, albums, and the isolation of the COVID period to make a collaborative portrait of people living alone and trying to navigate a changing world with humor, bravery, and compassion.',
+    fallsContext:
+      'The credit matters because it catches Falls in the freelance-development chapter after Goodman: working with David Cale again after We\'re Only Alive for a Short Amount of Time, and extending that solo-performance/music-theatre line into a new collaborative chamber piece with Dael Orlandersmith and Matthew Dean Marsh.',
+    significance:
+      'A 2023 Ancram Opera House first-look staging that belongs to Falls\'s post-Goodman freelance period and reconnects him with David Cale in new-work development rather than institutional revival.',
+    story:
+      'The General Bob packet included this as a smaller but meaningful recent item. BroadwayWorld described the October 2023 Ancram engagement as a return by Cale, Orlandersmith, Marsh, and Falls to continue developing a new work first read that spring. It should not outweigh the larger Goodman, Broadway, or Lyric entries, but it keeps the archive honest about the kind of work Falls was choosing after leaving the Artistic Director post: selective, collaborative, actor-writer centered, and still in process.',
+    venueAnchor: 'Ancram Opera House',
+    eraLabel: 'Post-Goodman transition years',
+    collaborators: [
+      { role: 'Writers', name: 'David Cale and Dael Orlandersmith' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Music and lyrics', name: 'David Cale and Matthew Dean Marsh' },
+      { role: 'Performers', name: 'David Cale, Dael Orlandersmith, and Matthew Dean Marsh' },
+    ],
+    quickFacts: [
+      { label: 'Run', value: 'Oct 20 - 29, 2023' },
+      { label: 'Venue', value: 'Ancram Opera House' },
+      { label: 'Format', value: 'First-look staged production' },
+      { label: 'Period', value: 'Post-Goodman freelance work' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'David Cale and Dael Orlandersmith' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Music and lyrics', name: 'David Cale and Matthew Dean Marsh' },
+      { role: 'Musical underscoring', name: 'Matthew Dean Marsh' },
+    ],
+    cast: [
+      { role: 'Performer', name: 'David Cale' },
+      { role: 'Performer', name: 'Dael Orlandersmith' },
+      { role: 'Performer', name: 'Matthew Dean Marsh' },
+    ],
+    recognition: [
+      {
+        label: 'New-work development',
+        detail:
+          'The Ancram notice presents the engagement as a first-look staged production following an earlier spring reading, making it a development credit rather than a finished commercial run.',
+      },
+      {
+        label: 'Cale collaboration continued',
+        detail:
+          'The piece reconnects Falls with David Cale after their Goodman and Public Theater work on We\'re Only Alive for a Short Amount of Time.',
+      },
+    ],
+    contextNotes: [
+      {
+        label: 'Source packet recovery',
+        text:
+          'This credit was present in the broad General Bob source packet but was easy to miss because it sits outside the Goodman/Broadway/Lyric production clusters.',
+      },
+    ],
+    reviews: [
+      {
+        source: 'BroadwayWorld',
+        href: 'https://www.broadwayworld.com/bwwopera/article/YOU-DONT-KNOW-THE-LONELY-ONEReturns-ToAncram-Opera-House-In-October-20231004',
+        summary:
+          'Announcement of the October 2023 Ancram Opera House first-look staged production, naming Falls as director and Cale, Orlandersmith, and Marsh as the core collaborators.',
+        note: 'Announcement',
+      },
+    ],
+    externalSources: [
+      {
+        label: 'BroadwayWorld Ancram announcement',
+        href: 'https://www.broadwayworld.com/bwwopera/article/YOU-DONT-KNOW-THE-LONELY-ONEReturns-ToAncram-Opera-House-In-October-20231004',
+      },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
   wings: {
     pageMode: 'archive',
     summary:
@@ -1644,7 +1720,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'A world premiere and one of Falls’s signature late Goodman collaborations with Rebecca Gilman.',
     story:
-      'Premiering in 2022, Swing State arrived after years of collaboration between Falls and Gilman and carried the scale of a chamber piece without giving up social reach. The Owen Theatre setting and Liz Lauren photography reinforce how much the production depended on close behavioral detail rather than large scenic rhetoric.',
+      'Premiering in October 2022 at the Goodman Owen Theatre, Swing State transferred to Audible Theater\'s Minetta Lane in New York the following September, earning Falls an Outer Critics Circle nomination for Outstanding Direction of a Play. The production\'s scale and Liz Lauren photography reinforce how much it depended on close behavioral detail rather than large scenic rhetoric.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
     images: [
@@ -1688,6 +1764,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     quickFacts: [
       { label: 'Premiere', value: 'Oct 7 - Nov 13, 2022' },
       { label: 'Venue', value: 'Goodman Owen Theatre' },
+      { label: 'New York run', value: 'Audible Theater, Minetta Lane Theatre, Sep–Oct 2023' },
       { label: 'Runtime', value: '1 hour 45 minutes' },
       { label: 'Collaboration', value: 'Sixth Falls/Gilman Goodman production' },
     ],
@@ -1719,12 +1796,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'New York recognition',
         detail: 'Falls received a 2024 Outer Critics Circle nomination for Outstanding Direction of a Play for the New York run.',
-      },
-    ],
-    contextNotes: [
-      {
-        label: 'Photo source',
-        text: 'Current image captions in the repo identify these production stills as Goodman Theatre photos by Liz Lauren from the 2022 Owen Theatre run.',
       },
     ],
     reviews: [
@@ -2224,17 +2295,17 @@ const productionSeeds: Record<string, ProductionSeed> = {
     recognition: [
       {
         label: 'Valedictory production',
-        detail: 'Credits describe it as Falls’s own adaptation and his valedictory Goodman production.',
+        detail: 'Credits describe it as Falls\'s own adaptation and his valedictory Goodman production.',
+      },
+      {
+        label: 'Jeff Awards: Production and Direction',
+        detail: 'The Cherry Orchard won two 2022-23 Equity Jeff Awards - Production - Play (Large) and Direction - Play (Large) - at the 55th anniversary ceremony in October 2023, one of the Goodman\'s strongest Jeff showings of the Falls era.',
       },
     ],
     contextNotes: [
       {
         label: 'Adaptation note',
         text: 'The production belongs to the cluster of Falls-directed adaptations that reworked canonical texts through his own dramaturgical lens.',
-      },
-      {
-        label: 'Photo source',
-        text: 'Current hero image is sourced from a contemporary review page documenting the Goodman production.',
       },
     ],
     reviews: [
@@ -5015,6 +5086,10 @@ const productionSeeds: Record<string, ProductionSeed> = {
         detail: 'The supporting cast included Sebastian Stan as Kent, years before his major film and television career.',
       },
       {
+        label: '100-performance Broadway run marker',
+        detail: 'BroadwayWorld coverage from the source packet records the revival celebrating its 100th performance on May 12, 2007.',
+      },
+      {
         label: 'A Pulitzer-finalist source',
         detail: 'Bogosian\'s original 1987 Off-Broadway play was a Pulitzer Prize for Drama finalist before its 2007 Broadway mounting.',
       },
@@ -5023,6 +5098,10 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Production history',
         text: 'Public production records identify Talk Radio as a 1987 Public Theater play by Eric Bogosian that made its Broadway premiere at the Longacre Theatre on March 11, 2007 under Robert Falls\'s direction.',
+      },
+      {
+        label: '2007 media context',
+        text: 'The source packet frames the revival as arriving in the "Don Imus age," when radio hosts and public-speech controversies made Barry Champlain\'s on-air volatility feel newly current.',
       },
       {
         label: 'Tony record',
@@ -5658,7 +5737,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { label: 'Maggie Siff artist page', href: 'https://www.goodmantheatre.org/artists/maggie-siff/' },
     ],
     relatedLinks: seedLinks,
-    sourceStatus: 'researched',
+    sourceStatus: 'featured-ready',
   },
   'molly-sweeney': {
     pageMode: 'featured',
@@ -7850,6 +7929,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { label: 'DC remount', value: 'Summer 2009, Shakespeare Theatre Company' },
       { label: 'Runtime', value: '3 hr 15 min' },
       { label: 'Concept', value: 'Contemporary, Mafia-run, "Tito-like" dictatorship' },
+      { label: 'Goodman context', value: '20th Anniversary Season production' },
     ],
     cast: [
       { role: 'Lear', name: 'Stacy Keach' },
@@ -7904,6 +7984,10 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'A full Washington remount',
         detail: 'Shakespeare Theatre Company artistic director Michael Kahn invited Falls to remount the entire production in 2009, with Keach again playing Lear.',
+      },
+      {
+        label: 'Goodman anniversary frame',
+        detail: 'Goodman billed the original staging as part of Falls\'s 20th Anniversary Season, giving the production extra institutional weight inside his artistic-director tenure.',
       },
       {
         label: 'National critical attention',
@@ -9360,7 +9444,12 @@ export function getFeaturedThumbnail(title: string): ProductionImage | null {
   if (overrideIndex !== undefined && production.images[overrideIndex]) {
     return production.images[overrideIndex];
   }
-  return production.images[0];
+  return (
+    production.images.find((image) => image.priority && image.kind !== 'art') ??
+    production.images.find((image) => image.kind !== 'art') ??
+    production.images.find((image) => image.priority) ??
+    production.images[0]
+  );
 }
 
 export function getProductionBySlug(slug: string): ProductionRecord | undefined {

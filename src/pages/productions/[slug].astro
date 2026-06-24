@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { getRelatedProductions, getFeaturedThumbnail, productions, type ProductionRecord } from '@data/productions';
 
@@ -26,9 +26,9 @@ const isFeatured = production.pageMode === 'featured';
 const preferredHeroImage =
   production.images.find((image) => image.priority && image.kind !== 'art') ??
   production.images.find((image) => image.kind !== 'art');
-const heroImage =
-  preferredHeroImage ??
-  (isFeatured ? null : production.images.find((image) => image.priority) ?? production.images[0] ?? null);
+const fallbackHeroImage = production.images.find((image) => image.priority) ?? production.images[0] ?? null;
+const heroImage = preferredHeroImage ?? fallbackHeroImage;
+const heroUsesArtFallback = Boolean(heroImage && heroImage.kind === 'art' && !preferredHeroImage);
 const heroImageIndex = heroImage ? production.images.findIndex((image) => image.src === heroImage.src) : -1;
 const summary = production.publicSummary ?? production.summary;
 const synopsis = production.synopsis ?? production.publicSummary ?? production.story ?? production.summary;
@@ -114,9 +114,17 @@ const introFacts = [
 const siteBase = Astro.site ?? new URL('https://robertfalls.netlify.app');
 const siteOrigin = new URL('/', siteBase).toString().replace(/\/$/, '');
 const productionUrl = new URL(Astro.url.pathname, siteBase).toString();
-const productionImages = production.images
-  .slice(0, 6)
-  .map((image) => new URL(image.src.src, siteBase).toString());
+const productionImages = await Promise.all(
+  production.images.slice(0, 4).map(async (image) => {
+    const optimizedImage = await getImage({
+      src: image.src,
+      width: 1200,
+      format: 'webp',
+      quality: 72,
+    });
+    return new URL(optimizedImage.src, siteBase).toString();
+  })
+);
 const productionSchema = [
   {
     '@context': 'https://schema.org',
@@ -166,7 +174,7 @@ const productionSchema = [
   description={summary}
   schema={productionSchema}
 >
-  <section class={`production-hero ${heroImage ? 'production-hero-with-image' : ''}`}>
+  <section class={`production-hero ${heroImage ? 'production-hero-with-image' : ''} ${heroUsesArtFallback ? 'production-hero-with-art' : ''}`}>
     {heroImage && (
       <Image
         src={heroImage.src}
@@ -174,10 +182,11 @@ const productionSchema = [
         aria-hidden="true"
         widths={[640, 960, 1280, 1600, 2000]}
         sizes="100vw"
+        format="webp"
         quality={78}
         loading="eager"
         fetchpriority="high"
-        class="production-hero-image"
+        class={`production-hero-image ${heroUsesArtFallback ? 'production-hero-art-image' : ''}`}
       />
     )}
     <div class="production-hero-bg"></div>
@@ -242,6 +251,7 @@ const productionSchema = [
                   alt={image.alt}
                   widths={[520, 760, 1080, 1400]}
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  format="webp"
                   quality={78}
                   loading="lazy"
                   class="production-feature-image"
@@ -357,6 +367,7 @@ const productionSchema = [
             alt={assetImages[0].alt}
             widths={[720, 1080, 1440, 1800]}
             sizes="(max-width: 1024px) 100vw, 72rem"
+            format="webp"
             quality={80}
             loading="lazy"
             class="production-single-asset-image"
@@ -382,8 +393,9 @@ const productionSchema = [
               <Image
                 src={image.src}
                 alt={image.alt}
-                widths={[360, 540, 720, 960, 1280]}
+                widths={[360, 540, 720, 960]}
                 sizes="(max-width: 640px) 82vw, (max-width: 1024px) 21rem, 25vw"
+                format="webp"
                 quality={78}
                 loading="lazy"
                 class="w-full object-cover"
@@ -406,6 +418,7 @@ const productionSchema = [
                   alt=""
                   widths={[360, 540, 720, 960]}
                   sizes="(max-width: 640px) 82vw, (max-width: 1024px) 21rem, 25vw"
+                  format="webp"
                   quality={72}
                   loading="lazy"
                   class="absolute inset-0 h-full w-full object-cover opacity-70"
@@ -547,6 +560,7 @@ const productionSchema = [
                     alt=""
                     widths={[320, 480, 640]}
                     sizes="(max-width: 768px) 100vw, 33vw"
+                    format="webp"
                     quality={72}
                     loading="lazy"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
@@ -579,6 +593,7 @@ const productionSchema = [
                   alt=""
                   widths={[320, 480]}
                   sizes="33vw"
+                  format="webp"
                   quality={72}
                   loading="lazy"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
@@ -605,6 +620,7 @@ const productionSchema = [
                   alt=""
                   widths={[320, 480]}
                   sizes="33vw"
+                  format="webp"
                   quality={72}
                   loading="lazy"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
@@ -634,6 +650,9 @@ const productionSchema = [
   .production-hero-image {
     @apply absolute inset-0 h-full w-full object-cover scale-[1.03];
   }
+  .production-hero-art-image {
+    @apply opacity-55 scale-100;
+  }
   .production-hero-bg {
     @apply absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,_rgba(110,20,35,0.8),_transparent_34%),radial-gradient(circle_at_84%_20%,_rgba(201,162,39,0.18),_transparent_26%),linear-gradient(145deg,_rgba(12,9,8,0.98),_rgba(27,18,15,0.95))];
   }
@@ -641,6 +660,11 @@ const productionSchema = [
     background-image:
       linear-gradient(90deg, rgba(12, 9, 8, 0.97) 0%, rgba(16, 10, 9, 0.88) 30%, rgba(16, 10, 9, 0.38) 58%, rgba(12, 9, 8, 0.86) 100%),
       linear-gradient(180deg, rgba(12, 9, 8, 0.55) 0%, transparent 28%, transparent 55%, rgba(12, 9, 8, 0.97) 100%);
+  }
+  .production-hero-with-art .production-hero-bg {
+    background-image:
+      linear-gradient(90deg, rgba(12, 9, 8, 0.98) 0%, rgba(16, 10, 9, 0.9) 34%, rgba(16, 10, 9, 0.58) 62%, rgba(12, 9, 8, 0.9) 100%),
+      linear-gradient(180deg, rgba(12, 9, 8, 0.55) 0%, transparent 26%, transparent 54%, rgba(12, 9, 8, 0.98) 100%);
   }
   .production-hero-vignette {
     @apply pointer-events-none absolute inset-0;

@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import MarqueeLights from '@components/MarqueeLights.astro';
-import { getProductionBySlug, getProductionHref, productionStats } from '@data/productions';
+import { getFeaturedThumbnail, getProductionBySlug, getProductionHref, productionStats } from '@data/productions';
 import rehearsalPhoto from '../images/robert-falls-rehearsal.jpg';
 import heroBackground from '../images/falls-rehearsal-recent.jpg';
 
@@ -30,7 +30,7 @@ const nowAndUpcomingSeeds = [
 const nowAndUpcoming = nowAndUpcomingSeeds
   .map(({ slug, statusLabel, status, note }) => {
     const production = getProductionBySlug(slug);
-    const thumbnail = production?.images[0];
+    const thumbnail = production ? (getFeaturedThumbnail(production.title) ?? production.images[0]) : null;
     if (!production || !thumbnail) return null;
     return { title: production.title, statusLabel, status, note, thumbnail, href: getProductionHref(production.title) };
   })

@@ -23,5 +23,8 @@ export const awards: Award[] = [
   { name: 'Distinguished Service to the Arts Award', work: 'Lawyers for the Creative Arts' },
   { name: 'Jeff Award', work: 'The Iceman Cometh', year: '2012' },
   { name: 'Theater Hall of Fame Induction', year: '2015' },
+  { name: 'Jeff Award, Production – Play (Large)', work: 'The Cherry Orchard', year: '2022-23' },
+  { name: 'Jeff Award, Direction – Play (Large)', work: 'The Cherry Orchard', year: '2022-23' },
   { name: 'Jeff Special Award', work: 'Lifelong commitment to Chicago theatre', year: '2022–23' },
+  { name: 'Outer Critics Circle Award nomination, Outstanding Direction of a Play', work: 'Swing State', year: '2024' },
 ];

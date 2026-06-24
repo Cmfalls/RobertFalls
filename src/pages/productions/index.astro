@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
-import { priorityFeaturedSlugs, productions, productionStats } from '@data/productions';
+import { getFeaturedThumbnail, priorityFeaturedSlugs, productions, productionStats } from '@data/productions';
 import rehearsalPhoto from '../../images/falls-rehearsal-recent.jpg';
 
 const decadeOrder = ['2020s', '2010s', '2000s', '1990s', '1980s', '1970s'];
@@ -126,7 +126,7 @@ function productionTags(production: (typeof productions)[number]) {
 
     <div class="grid lg:grid-cols-2 gap-5 xl:gap-6">
       {featuredRail.map((production) => {
-        const heroImage = production.images[0];
+        const heroImage = getFeaturedThumbnail(production.title) ?? production.images[0];
         return (
           <a href={`/productions/${production.slug}`} class="group featured-library-card">
             <div class="featured-library-media-shell">
