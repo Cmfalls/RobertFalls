@@ -73,7 +73,7 @@ export const creditGroups: CreditGroup[] = [
       { title: 'Bent', venue: 'Wisdom Bridge Theatre', year: '1981', note: 'Midwest premiere — Martin Sherman' },
       { title: 'Mother Courage and Her Children', venue: 'Wisdom Bridge Theatre', year: '1981' },
       { title: 'We Won\'t Pay, We Won\'t Pay', venue: 'Wisdom Bridge Theatre', year: '1982', note: 'Midwest premiere — Dario Fo' },
-      { title: 'Sister Mary Ignatius Explains It All / The Actor\'s Nightmare', venue: 'Wisdom Bridge Theatre', year: '1982', note: 'Midwest premiere — Christopher Durang double bill' },
+      { title: 'Sister Mary Ignatius / The Actor\'s Nightmare', venue: 'Wisdom Bridge Theatre', year: '1982', note: 'Midwest premiere — Christopher Durang double bill' },
       { title: 'A Streetcar Named Desire', venue: 'Wisdom Bridge Theatre', year: '1982' },
       { title: 'In the Belly of the Beast', venue: 'Wisdom Bridge at Goodman Studio Theatre', year: '1983', note: 'World premiere; toured internationally in 1985' },
       { title: 'Losing It', venue: 'Wisdom Bridge Theatre', year: '1983' },

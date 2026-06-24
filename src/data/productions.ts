@@ -1316,6 +1316,261 @@ const productionSeeds: Record<string, ProductionSeed> = {
     relatedLinks: seedLinks,
     sourceStatus: 'researched',
   },
+  bagtime: {
+    pageMode: 'archive',
+    summary:
+      'Falls directed the world premiere of Bagtime at Wisdom Bridge Theatre in 1979, staging the original work as one of his earliest world premieres as Artistic Director — in the same season as the Midwest premiere of Arthur Kopit\'s Wings.',
+    publicSummary:
+      'The world premiere of Bagtime at Wisdom Bridge Theatre in 1979, directed by Falls in the third year of his Artistic Directorship.',
+    synopsis:
+      'Bagtime is set in the ragtime era and follows characters navigating the collision between the old world and the new — immigrant aspiration against American indifference — across a fabric of music, memory, and social upheaval.',
+    fallsContext:
+      'The world premiere of Bagtime in 1979 came the same year Falls staged the Midwest premiere of Wings and co-directed Tartuffe with Michael Maggio. Three notable premieres in a single season showed how aggressively Falls was building the Wisdom Bridge identity as a generator of new work, not only a presenter of recent American plays.',
+    significance:
+      'A 1979 world premiere that demonstrated Wisdom Bridge\'s capacity to originate new work in only the third year of Falls\'s Artistic Directorship.',
+    story:
+      'Bagtime was among Falls\'s first world premieres at Wisdom Bridge, arriving just two years into his tenure. Staging an original work in 1979 — alongside the Midwest premiere of Kopit\'s Wings and a Tartuffe co-directed with Michael Maggio — showed that Falls was not only curating significant recent plays but also taking on new commissions and originations. The ragtime setting placed the piece in a vein of American historical drama prominent in the late 1970s, following the cultural moment of Ragtime (the novel, 1975) and before the musical (1998).',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for Bagtime.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'World premiere', value: '1979' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+    ],
+    recognition: [
+      {
+        label: 'World premiere',
+        detail: 'Falls directed the world premiere of Bagtime at Wisdom Bridge in 1979, one of the first world premieres of his Artistic Directorship.',
+      },
+    ],
+    externalSources: [
+      { label: 'Robert Falls biography and Wisdom Bridge context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'mother-courage-and-her-children': {
+    pageMode: 'archive',
+    summary:
+      'Falls directed Brecht\'s Mother Courage and Her Children at Wisdom Bridge Theatre in 1981 — a large-scale antiwar epic staged in the same season as Bent and Standing on My Knees, showing the breadth of ambition he was holding simultaneously at the height of his Wisdom Bridge years.',
+    publicSummary:
+      'A 1981 Wisdom Bridge Theatre production of Brecht\'s Mother Courage and Her Children, directed by Falls in his most creatively dense Wisdom Bridge season.',
+    synopsis:
+      'Mother Courage, a sutler following the Thirty Years\' War with her wagon and her children, survives by supplying both sides. She loses each of her children to the war she profits from. Brecht\'s play is a study in the inescapable complicity of survival, and one of the defining texts of twentieth-century epic theatre.',
+    fallsContext:
+      'Mother Courage in 1981 placed Falls inside the Brecht canon at the same moment he was staging Bent and Standing on My Knees — a combination that shows him holding European political theatre and new American writing in the same season. His Goodman debut with Galileo (1987) extended this Brecht relationship into the institutional phase of his career.',
+    significance:
+      'A major Brecht epic staged by Falls in 1981 at the height of his Wisdom Bridge ambitions — the clearest predecessor to his later Goodman staging of Galileo as his directorial debut there.',
+    story:
+      'Mother Courage confirmed that Falls could work at Brecht\'s scale in his mid-twenties. Brecht\'s play demands a lead role requiring epic physical endurance, a large company, and a staging intelligence capable of handling anti-narrative form without making it inert. Staging it at Wisdom Bridge in 1981, with Bent and Standing on My Knees in the same season, showed that Falls was not programming conservatively to consolidate the company\'s success but asking more of the organization at every turn. The production sets up his choice of Galileo as his first Goodman production six years later: Brecht was not new territory for him when he arrived.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for Mother Courage.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Bertolt Brecht' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Wisdom Bridge staging', value: '1981' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Playwright', value: 'Bertolt Brecht' },
+      { label: 'Goodman connection', value: 'Galileo followed as Falls\'s Goodman debut, 1987' },
+    ],
+    recognition: [
+      {
+        label: 'Brecht at scale',
+        detail: 'Staging Mother Courage at Wisdom Bridge in 1981 demonstrated Falls\'s ability to work at the full scale and complexity of Brecht\'s epic theatre before his Goodman career began.',
+      },
+      {
+        label: 'Precursor to Galileo',
+        detail: 'The 1981 Mother Courage set up Falls\'s choice of Galileo as his 1987 Goodman directorial debut — Brecht was familiar territory when he arrived at the Goodman.',
+      },
+    ],
+    externalSources: [
+      { label: 'Mother Courage and Her Children background', href: 'https://en.wikipedia.org/wiki/Mother_Courage_and_Her_Children' },
+      { label: 'Robert Falls biography and Wisdom Bridge context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'we-wont-pay-we-wont-pay': {
+    pageMode: 'archive',
+    summary:
+      'Falls directed the Midwest premiere of Dario Fo\'s We Won\'t Pay! We Won\'t Pay! at Wisdom Bridge Theatre in 1982, bringing the Italian Nobel laureate\'s political farce about working-class resistance to Chicago audiences at a moment when Fo was still little known in the United States.',
+    publicSummary:
+      'The Midwest premiere of Dario Fo\'s political farce We Won\'t Pay! We Won\'t Pay! at Wisdom Bridge Theatre in 1982, directed by Falls.',
+    synopsis:
+      'In Milan, a group of working-class women refuse to pay inflated grocery prices and begin pilfering from the supermarket. Their husbands — ideologically committed to law-abiding behavior — are dragged into escalating comic schemes to conceal the contraband. Fo\'s play builds a farcical argument about collective resistance and the absurdity of poverty in an affluent society.',
+    fallsContext:
+      'The Wisdom Bridge We Won\'t Pay came the same year as Sister Mary Ignatius and A Streetcar Named Desire — a year when Falls was simultaneously staging European political comedy, American domestic tragedy, and provocative contemporary satire. Dario Fo would not win the Nobel Prize until 1997, but Falls was already building a case for his work\'s theatrical vitality fifteen years earlier.',
+    significance:
+      'The Midwest premiere of Dario Fo\'s major political farce in 1982 — fifteen years before Fo won the Nobel Prize in Literature — showing Falls\'s commitment to European political comedy before it had institutional cachet.',
+    story:
+      'Dario Fo was controversial in the United States in the late 1970s and early 1980s: the State Department had twice denied him a visa. By 1982 he was more accessible but still decidedly off the mainstream American theater map. Falls bringing We Won\'t Pay to Chicago as the Midwest premiere placed him in the company of directors programming Fo alongside Brecht and new American premieres. The play\'s farcical energy and political directness suited the Wisdom Bridge spirit: serious about content, theatrically alive in execution.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for We Won\'t Pay.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Dario Fo' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Wisdom Bridge staging', value: '1982' },
+      { label: 'Premiere status', value: 'Midwest premiere' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Playwright later honor', value: 'Dario Fo won the Nobel Prize in Literature, 1997' },
+    ],
+    recognition: [
+      {
+        label: 'Midwest premiere',
+        detail: 'Falls staged the Midwest premiere of Fo\'s major political farce fifteen years before Fo won the Nobel Prize in Literature.',
+      },
+      {
+        label: 'Early Fo champion',
+        detail: 'Programming Dario Fo in 1982, when the playwright had only recently become accessible to American stages, placed Falls among the earliest U.S. directors to take his work seriously as major theatre.',
+      },
+    ],
+    externalSources: [
+      { label: 'Dario Fo biography and Nobel Prize', href: 'https://en.wikipedia.org/wiki/Dario_Fo' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'sister-mary-ignatius-the-actors-nightmare': {
+    pageMode: 'archive',
+    summary:
+      'Falls directed the Midwest premiere of Christopher Durang\'s double bill — Sister Mary Ignatius Explains It All for You and The Actor\'s Nightmare — at Wisdom Bridge Theatre in 1982, staging two of the decade\'s most sharply satirical one-acts as a paired evening of Durang\'s confrontational black comedy.',
+    publicSummary:
+      'The Midwest premiere of Christopher Durang\'s Sister Mary Ignatius Explains It All for You and The Actor\'s Nightmare as a double bill at Wisdom Bridge Theatre in 1982, directed by Falls.',
+    synopsis:
+      'Sister Mary Ignatius Explains It All for You follows a dogmatic nun who systematically dismantles her audience\'s comfortable understanding of Catholicism until the evening ends in violence and revelation. The Actor\'s Nightmare pairs it as a short absurdist piece about an actor thrust onstage without knowing the play. Together they form a Durang evening of comic menace, institutional critique, and theatrical self-consciousness.',
+    fallsContext:
+      'The Durang double bill in 1982 was among the most provocative programming choices of the Wisdom Bridge years. Sister Mary Ignatius had caused controversy wherever it was produced — Catholic groups protested it across the country. Falls staging the Midwest premiere at Wisdom Bridge, in the same year as We Won\'t Pay, showed a pattern of deliberately choosing work that put pressure on audiences and institutions alike.',
+    significance:
+      'The Midwest premiere of the most controversial Durang double bill of the early 1980s — Sister Mary Ignatius had sparked protests and cancellations across the country, and Falls staged it anyway.',
+    story:
+      'Sister Mary Ignatius Explains It All for You had its Off-Broadway premiere at Playwrights Horizons in 1981 and immediately became a flashpoint. Catholic organizations picketed productions across the country; some theatres canceled scheduled runs. Falls brought it to Wisdom Bridge as the Midwest premiere in 1982, paired with The Actor\'s Nightmare for a full Durang evening. The choice was consistent with the Wisdom Bridge aesthetic: work of serious theatrical quality that also had the capacity to disturb, to confront, and to provoke conversation beyond the theatre itself.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for the Durang double bill.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Christopher Durang' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Wisdom Bridge staging', value: '1982' },
+      { label: 'Premiere status', value: 'Midwest premiere' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Program', value: 'Sister Mary Ignatius / The Actor\'s Nightmare double bill' },
+    ],
+    recognition: [
+      {
+        label: 'Midwest premiere',
+        detail: 'Falls staged the Midwest premiere of the Durang double bill in 1982, one year after the Off-Broadway debut at Playwrights Horizons.',
+      },
+      {
+        label: 'Provocative programming',
+        detail: 'Sister Mary Ignatius had caused cancellations and protests nationally; Falls staged it anyway, consistent with the Wisdom Bridge commitment to work of serious theatrical and cultural weight.',
+      },
+    ],
+    externalSources: [
+      { label: 'Sister Mary Ignatius Explains It All for You background', href: 'https://en.wikipedia.org/wiki/Sister_Mary_Ignatius_Explains_It_All_for_You' },
+      { label: 'Christopher Durang biography', href: 'https://en.wikipedia.org/wiki/Christopher_Durang' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'life-and-limb': {
+    pageMode: 'archive',
+    summary:
+      'Falls directed the world premiere of Life and Limb at Wisdom Bridge Theatre in 1984, staging Keith Reddin\'s debut full-length play — a dark, compressed drama about a Korean War veteran returning to an America that has no place for him — in one of the last major world premieres of his Wisdom Bridge tenure.',
+    publicSummary:
+      'The world premiere of Keith Reddin\'s Life and Limb at Wisdom Bridge Theatre in 1984, directed by Falls — one of the final major world premieres before he departed for the Goodman.',
+    synopsis:
+      'A Korean War veteran returns home to find the domestic promise of postwar America hollow, violent, and indifferent to what he has been through. Reddin\'s play strips the mythology of the 1950s back to reveal a world of frustrated aspiration, marital instability, and institutional failure.',
+    fallsContext:
+      'Life and Limb in 1984 was among the last world premieres of Falls\'s Wisdom Bridge tenure. Reddin was an emerging playwright whose career would include significant Off-Broadway and regional theatre work; Falls was among the first directors to produce a full-length Reddin play. The production confirms the pattern throughout the Wisdom Bridge years: Falls chose writers at the beginning of their careers and gave them a major production.',
+    significance:
+      'The world premiere of Keith Reddin\'s debut full-length play in 1984 — one of the last major world premieres of Falls\'s Wisdom Bridge career, confirming his decade-long pattern of staging important new American voices early.',
+    story:
+      'Life and Limb arrived in 1984, the year before Hamlet closed Falls\'s Wisdom Bridge chapter. Reddin was at the beginning of a career that would include Rum and Coke, Brutality of Fact, and other significant works for Off-Broadway and regional theatres. Falls gave Reddin his first full-length world premiere at a moment when the play\'s dark, compressed examination of postwar American mythology was sharper than conventional new-play programming allowed. The production follows the logic of the entire Wisdom Bridge decade: find the writers before they are established, give them a proper production, send them into the world.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for Life and Limb.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Keith Reddin' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'World premiere', value: '1984' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Playwright', value: 'Keith Reddin (debut full-length play)' },
+    ],
+    recognition: [
+      {
+        label: 'World premiere',
+        detail: 'Falls directed the world premiere of Reddin\'s debut full-length play at Wisdom Bridge in 1984, one of the last major premieres of his Wisdom Bridge tenure.',
+      },
+      {
+        label: 'Early career pattern',
+        detail: 'Life and Limb confirms Falls\'s consistent Wisdom Bridge practice: staging writers at the beginning of their careers with full productions rather than readings or limited runs.',
+      },
+    ],
+    externalSources: [
+      { label: 'Keith Reddin playwright background', href: 'https://en.wikipedia.org/wiki/Keith_Reddin' },
+      { label: 'Robert Falls biography and Wisdom Bridge context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
   pravda: {
     pageMode: 'archive',
     summary:
@@ -5203,7 +5458,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
         photographer: 'Walter McBride',
         orientation: 'landscape',
         priority: true,
-        kind: 'art',
+        kind: 'documentation',
       },
       {
         src: longDaysJourneyMarqueeStreet,
@@ -5212,7 +5467,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
           'A wider Times Square street view of the Plymouth Theatre marquee for the 2003 Broadway engagement. Photo: Walter McBride.',
         photographer: 'Walter McBride',
         orientation: 'portrait',
-        kind: 'art',
+        kind: 'documentation',
       },
       {
         src: longDaysJourneyPlymouthMarquee,
@@ -5221,7 +5476,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
           'The Plymouth Theatre lights framing the Long Day\'s Journey Into Night marquee. Photo: Walter McBride.',
         photographer: 'Walter McBride',
         orientation: 'portrait',
-        kind: 'art',
+        kind: 'documentation',
       },
     ],
     collaborators: [
