@@ -4,8 +4,22 @@ import amadeus1 from '../images/amadeus/amadeus-1.jpg';
 import amadeus2 from '../images/amadeus/amadeus-2.jpg';
 import amadeus3 from '../images/amadeus/amadeus-3.jpg';
 import amadeusMozart from '../images/amadeus/amadeus-mozart.jpg';
+import amadeusSteppenwolfWide from '../images/amadeus/amadeus-steppenwolf-wide.jpg';
+import amadeusOpening1 from '../images/amadeus/amadeus-opening-1.avif';
+import amadeusOpening3 from '../images/amadeus/amadeus-opening-3.jpg';
+import amadeusOpening9 from '../images/amadeus/amadeus-opening-9.avif';
+import amadeusRehearsal3 from '../images/amadeus/amadeus-rehearsal-3.jpg';
+import amadeusRehearsal6 from '../images/amadeus/amadeus-rehearsal-6.jpg';
+import amadeusRehearsal7 from '../images/amadeus/amadeus-rehearsal-7.jpg';
+import amadeusRehearsal11 from '../images/amadeus/amadeus-rehearsal-11.jpg';
 import holidayRehearsal1 from '../images/holiday/holiday-rehearsal-1.jpg';
 import holidayRehearsal2 from '../images/holiday/holiday-rehearsal-2.jpg';
+import holidayCastBackdrop from '../images/holiday/holiday-cast-backdrop.avif';
+import holidayRehearsalBww2 from '../images/holiday/holiday-rehearsal-bww-2.avif';
+import holidayRehearsalBww3 from '../images/holiday/holiday-rehearsal-bww-3.avif';
+import holidayRehearsalBww4 from '../images/holiday/holiday-rehearsal-bww-4.avif';
+import holidayRehearsalBww5 from '../images/holiday/holiday-rehearsal-bww-5.jpg';
+import holidayProductionBww8 from '../images/holiday/holiday-production-bww-8.avif';
 import onlyAlivePoster from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-poster.jpg';
 import onlyAliveKeyArt from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-key-art.jpg';
 import onlyAliveArt from '../images/were-only-alive-for-a-short-amount-of-time/were-only-alive-for-a-short-amount-of-time-art.webp';
@@ -95,6 +109,7 @@ import desireUnderTheElmsArrival from '../images/desire-under-the-elms/desire-un
 import desireUnderTheElms6 from '../images/desire-under-the-elms/desire-under-the-elms-6.jpg';
 import dollhouseShowArt from '../images/dollhouse/dollhouse-show-art.png';
 import dollhouseTitleTreatment from '../images/dollhouse/dollhouse-title-treatment.png';
+import dollhouseSiffStarke from '../images/dollhouse/dollhouse-siff-starke.jpg';
 import enemyShowArt from '../images/an-enemy-of-the-people/enemy-show-art.webp';
 import measureShowArt from '../images/measure-for-measure/measure-for-measure-show-art.png';
 import measurePoster from '../images/measure-for-measure/measure-for-measure-poster.jpg';
@@ -158,7 +173,11 @@ import kingLear10 from '../images/king-lear/king-lear-10.jpg';
 import kingLear11 from '../images/king-lear/king-lear-11.jpg';
 import kingLearCandid from '../images/king-lear/king-lear-candid.jpg';
 import kingLearTitle from '../images/king-lear/king-lear-title.webp';
+import kingLearDcKeach from '../images/king-lear/king-lear-dc-keach.jpg';
 import longDaysJourneyPlaybill from '../images/long-days-journey-into-night/long-days-journey-into-night-playbill.jpg';
+import longDaysJourneyMarqueeClose from '../images/long-days-journey-into-night/long-days-journey-into-night-marquee-close.png';
+import longDaysJourneyMarqueeStreet from '../images/long-days-journey-into-night/long-days-journey-into-night-marquee-street.png';
+import longDaysJourneyPlymouthMarquee from '../images/long-days-journey-into-night/long-days-journey-into-night-plymouth-marquee.png';
 import nightOfTheIguanaPlaybill from '../images/the-night-of-the-iguana/the-night-of-the-iguana-playbill.jpg';
 import roseTattooPlaybill from '../images/the-rose-tattoo/the-rose-tattoo-playbill.jpg';
 import speedOfDarknessPlaybill from '../images/the-speed-of-darkness/the-speed-of-darkness-playbill.jpg';
@@ -1073,6 +1092,62 @@ const productionSeeds: Record<string, ProductionSeed> = {
         orientation: 'landscape',
         kind: 'rehearsal',
       },
+      {
+        src: amadeusSteppenwolfWide,
+        alt: 'Salieri watches Mozart against bright red Amadeus production art.',
+        caption: 'Steppenwolf promotional image for Amadeus, part of the company\'s 50th anniversary season.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
+        src: amadeusOpening1,
+        alt: 'Amadeus opening-night image from Steppenwolf Theatre Company.',
+        caption: 'Opening-night image from Amadeus at Steppenwolf Theatre Company. Photo: Elias Carmona-Rivera via BroadwayWorld.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: amadeusOpening3,
+        alt: 'Cast members and guests at the Amadeus opening at Steppenwolf.',
+        caption: 'Opening-night coverage for Falls\'s Steppenwolf debut. Photo: Elias Carmona-Rivera via BroadwayWorld.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: amadeusOpening9,
+        alt: 'Amadeus opening-night photograph from Steppenwolf Theatre Company.',
+        caption: 'Additional Amadeus opening-night image from the BroadwayWorld photo set.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
+        src: amadeusRehearsal3,
+        alt: 'Amadeus rehearsal image from Steppenwolf Theatre Company.',
+        caption: 'Amadeus rehearsal at Steppenwolf Theatre Company. Photo: Joel Moorman via BroadwayWorld.',
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+      {
+        src: amadeusRehearsal6,
+        alt: 'Actors rehearse Amadeus at Steppenwolf Theatre Company.',
+        caption: 'Rehearsal image from the Steppenwolf Amadeus source packet. Photo: Joel Moorman.',
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+      {
+        src: amadeusRehearsal7,
+        alt: 'Amadeus rehearsal table work at Steppenwolf Theatre Company.',
+        caption: 'Another rehearsal-room view from Amadeus at Steppenwolf. Photo: Joel Moorman.',
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+      {
+        src: amadeusRehearsal11,
+        alt: 'Robert Falls kneels beside a rehearsal table during Amadeus rehearsal.',
+        caption: 'Falls in rehearsal for Amadeus at Steppenwolf Theatre Company. Photo: Joel Moorman via BroadwayWorld.',
+        orientation: 'portrait',
+        kind: 'rehearsal',
+      },
     ],
     collaborators: [
       { role: 'Playwright', name: 'Peter Shaffer' },
@@ -1281,6 +1356,48 @@ const productionSeeds: Record<string, ProductionSeed> = {
         src: holidayRehearsal2,
         alt: 'Robert Falls in conversation during Holiday rehearsal.',
         caption: "Rehearsal-room image from Falls's Goodman return.",
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+      {
+        src: holidayCastBackdrop,
+        alt: 'Holiday cast members in front of a branded Goodman Theatre backdrop.',
+        caption: 'Holiday company image from Goodman Theatre coverage via BroadwayWorld.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: holidayProductionBww8,
+        alt: 'Holiday production photograph from Goodman Theatre.',
+        caption: 'Production image from Holiday at Goodman Theatre, 2026, included in the BroadwayWorld photo packet.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: holidayRehearsalBww2,
+        alt: 'Holiday rehearsal-room image at Goodman Theatre.',
+        caption: 'Holiday rehearsal image from the BroadwayWorld source packet.',
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+      {
+        src: holidayRehearsalBww3,
+        alt: 'Actors rehearse Holiday at Goodman Theatre.',
+        caption: 'Additional Holiday rehearsal image from the BroadwayWorld source packet.',
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+      {
+        src: holidayRehearsalBww4,
+        alt: 'Holiday rehearsal at Goodman Theatre.',
+        caption: 'Rehearsal image documenting Falls\'s Goodman directing return.',
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+      {
+        src: holidayRehearsalBww5,
+        alt: 'Holiday rehearsal photo from Goodman Theatre.',
+        caption: 'Holiday rehearsal photo from Goodman Theatre coverage via BroadwayWorld.',
         orientation: 'landscape',
         kind: 'rehearsal',
       },
@@ -4667,7 +4784,34 @@ const productionSeeds: Record<string, ProductionSeed> = {
         alt: 'Playbill cover for Long Day\'s Journey Into Night at the Plymouth Theatre, with a painted illustration of a New England house at dusk.',
         caption: 'Playbill cover art for the Plymouth Theatre engagement.',
         orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: longDaysJourneyMarqueeClose,
+        alt: 'Close view of the Plymouth Theatre marquee for Long Day\'s Journey Into Night, naming Vanessa Redgrave, Brian Dennehy, Philip Seymour Hoffman, and Robert Sean Leonard above the title.',
+        caption:
+          'The Plymouth Theatre marquee advertising the Broadway transfer, with the four principal actors named above the title. Photo: Walter McBride.',
+        photographer: 'Walter McBride',
+        orientation: 'landscape',
         priority: true,
+        kind: 'art',
+      },
+      {
+        src: longDaysJourneyMarqueeStreet,
+        alt: 'Street-level view of the Plymouth Theatre marquee for Long Day\'s Journey Into Night during the Broadway run.',
+        caption:
+          'A wider Times Square street view of the Plymouth Theatre marquee for the 2003 Broadway engagement. Photo: Walter McBride.',
+        photographer: 'Walter McBride',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: longDaysJourneyPlymouthMarquee,
+        alt: 'Plymouth Theatre sign and Long Day\'s Journey Into Night marquee stacked above the theater entrance.',
+        caption:
+          'The Plymouth Theatre lights framing the Long Day\'s Journey Into Night marquee. Photo: Walter McBride.',
+        photographer: 'Walter McBride',
+        orientation: 'portrait',
         kind: 'art',
       },
     ],
@@ -4677,6 +4821,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'Cast highlight', name: 'Brian Dennehy' },
       { role: 'Cast highlight', name: 'Vanessa Redgrave' },
       { role: 'Cast highlight', name: 'Philip Seymour Hoffman' },
+      { role: 'Cast highlight', name: 'Robert Sean Leonard' },
     ],
     quickFacts: [
       { label: 'Goodman run', value: '2002' },
@@ -4743,7 +4888,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Archive note',
-        text: 'The current project files preserve a Broadway Playbill image but no Goodman production stills, rehearsal images, or local review packet, so this page remains a text-led transfer profile despite the production\'s major awards footprint.',
+        text: 'The current project files preserve a Broadway Playbill image, three Walter McBride marquee photographs from the Plymouth Theatre engagement, and a compact source document identifying the title, 2002 year, and Goodman Theatre company.',
+      },
+      {
+        label: 'Image packet',
+        text: 'The newly added Long Days Journey folder includes three distinct marquee views for the Broadway transfer; the duplicate close-up screenshot and tracking GIFs are intentionally left out of the public gallery.',
       },
       {
         label: 'Source note',
@@ -5114,16 +5263,16 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         src: franksHomeHandshake,
-        alt: 'Jeremy Strong, Maggie Siff, and Peter Weller meet in a charged family moment in Frank\'s Home.',
-        caption: 'A deceptively cordial family encounter that lets the page show the production as drama, not just biography.',
+        alt: 'Four characters in an unguarded family scene from Frank\'s Home: a woman with a teacup, a tall man reading a newspaper, a seated older man, and a young woman in white.',
+        caption: 'A four-person scene that opens the page beyond Wright alone to show the full weight of family presence surrounding him.',
         photographer: 'Michael Brosilow / Goodman Theatre',
         orientation: 'landscape',
         kind: 'production-still',
       },
       {
         src: franksHomeFamily,
-        alt: 'Peter Weller, Harris Yulin, Mary Beth Fisher, and Maggie Siff appear together in a tense family tableau from Frank\'s Home.',
-        caption: 'A family tableau that broadens the page beyond Wright alone and makes the play\'s generational pressure visible.',
+        alt: 'A character in a gray suit shakes hands with an older man holding a cane in Frank\'s Home, as a woman watches smiling from the background.',
+        caption: 'A cordial meeting that carries the production\'s tension between public graciousness and private damage.',
         photographer: 'Michael Brosilow / Goodman Theatre',
         orientation: 'landscape',
         kind: 'production-still',
@@ -5146,16 +5295,16 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         src: franksHomePortrait,
-        alt: 'Peter Weller as Frank Lloyd Wright in a pale suit and white hat against a warm sky in Frank\'s Home.',
-        caption: 'A portrait image of Weller that leans harder into Wright as icon, not just father or patient.',
+        alt: 'Peter Weller and Harris Yulin as Wright and Sullivan seated together on the bare stage of Frank\'s Home.',
+        caption: 'A two-shot of the production\'s central pairing: the visionary and his mentor, reduced to chairs and silence.',
         photographer: 'Michael Brosilow / Goodman Theatre',
-        orientation: 'portrait',
+        orientation: 'landscape',
         kind: 'production-still',
       },
       {
         src: franksHomeShowArt,
-        alt: 'Frank\'s Home show art featuring the production still of three men at work alongside the title.',
-        caption: "Show art built from the production's imagery.",
+        alt: 'Frank\'s Home show art: a dramatic close scene showing a young man in bow tie, an older man in a fedora, and a woman in flowing pale dress.',
+        caption: 'Official Goodman show art for the world premiere of Frank\'s Home.',
         orientation: 'landscape',
         kind: 'art',
       },
@@ -5240,10 +5389,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Transfer history',
         text: 'Playwrights Horizons picked up the production immediately after the Goodman run, making this a documented transfer rather than an isolated regional staging.',
-      },
-      {
-        label: 'Source package',
-        text: 'The folder includes multiple production stills, title treatment art, cast-and-creative roster screenshots, a full compiled production document, Chicago review aggregation, and the New York transfer announcement.',
       },
     ],
     reviews: [
@@ -5345,23 +5490,31 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'A 2005 Goodman commission and world premiere that joins Falls\'s new-work practice to Gilman\'s contemporary rethinking of a foundational feminist classic.',
     story:
-      'This entry matters because it shows how the Goodman under Falls handled canonical material through living playwrights instead of only through direct revival. Gilman\'s version reframes Ibsen through contemporary speech, race, labor, and social pressure, making the production an early marker of how Falls and Goodman could use adaptation as present-tense argument rather than literary homage. Even without a surviving still gallery, the official record is clear about the scale of the event: a Goodman commission in the Albert Theatre, a cast led by Maggie Siff, and a creative team built from core Falls collaborators including Robert Brill, Mara Blumenfeld, James F. Ingalls, Richard Woodbury, and Tom Creamer.',
+      'This entry matters because it shows how the Goodman under Falls handled canonical material through living playwrights instead of only through direct revival. Gilman\'s version reframes Ibsen through contemporary speech, race, labor, and social pressure, making the production an early marker of how Falls and Goodman could use adaptation as present-tense argument rather than literary homage. The official record is clear about the scale of the event: a Goodman commission in the Albert Theatre, a cast led by Maggie Siff, and a creative team built from core Falls collaborators including Robert Brill, Mara Blumenfeld, James F. Ingalls, Richard Woodbury, and Tom Creamer.',
     venueAnchor: "Goodman's Albert Theatre",
     eraLabel: 'National and international period',
     images: [
       {
-        src: dollhouseTitleTreatment,
-        alt: 'Dollhouse title treatment from the Goodman Theatre campaign for the 2005 production.',
-        caption: 'The official title treatment preserved on Goodman\'s archive page for the 2005 world premiere.',
-        orientation: 'landscape',
-        kind: 'art',
+        src: dollhouseSiffStarke,
+        alt: 'Maggie Siff as Nora and Anthony Starke as Terry in a tense domestic scene from Dollhouse at Goodman Theatre.',
+        caption: 'Maggie Siff and Anthony Starke in Robert Falls\'s 2005 production of Dollhouse by Rebecca Gilman. Photo: Michael Brosilow.',
+        photographer: 'Michael Brosilow',
+        orientation: 'portrait',
+        priority: true,
+        kind: 'production-still',
       },
       {
         src: dollhouseShowArt,
         alt: 'Show art for Dollhouse at Goodman Theatre, with a red patterned Victorian room and the title in white serif text.',
         caption: 'Official Goodman show art for Rebecca Gilman\'s adaptation, preserving the production\'s red, ornamental campaign look.',
         orientation: 'landscape',
-        priority: true,
+        kind: 'art',
+      },
+      {
+        src: dollhouseTitleTreatment,
+        alt: 'Dollhouse title treatment from the Goodman Theatre campaign for the 2005 production.',
+        caption: 'The official title treatment preserved on Goodman\'s archive page for the 2005 world premiere.',
+        orientation: 'landscape',
         kind: 'art',
       },
     ],
@@ -5444,10 +5597,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         text: 'Goodman describes Gilman\'s take as a contemporary-social lens on Ibsen\'s groundbreaking domestic drama.',
       },
       {
-        label: 'Visual record limits',
-        text: 'The current archive and official Goodman page preserve campaign art and title treatment, but no production still gallery has surfaced in the repo or on the public production page. The page therefore leans on typography, credits, and context rather than pretending to have a fuller photo record than actually survives here.',
-      },
-      {
         label: 'Creative team continuity',
         text: 'The official artist roster links the production to recurring Falls collaborators, including Richard Woodbury on sound, Tom Creamer on dramaturgy, Adam Belcuore on casting, and a design team led by Robert Brill, Mara Blumenfeld, and James F. Ingalls.',
       },
@@ -5457,28 +5606,29 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'Goodman Theatre',
         href: 'https://www.goodmantheatre.org/show/dollhouse/',
         summary:
-          'The official page frames the production as a Rebecca Gilman world-premiere adaptation of A Doll\'s House directed by Robert Falls.',
+          'The official page frames the production as a world-premiere Goodman commission of Rebecca Gilman\'s contemporary adaptation, documenting run dates, the full Albert Theatre cast and creative team, and the commission status.',
         note: 'Official production page',
       },
       {
-        source: 'Goodman Theatre artist roster',
-        href: 'https://www.goodmantheatre.org/show/dollhouse/',
+        source: 'New City Stage',
+        href: 'https://www.newcitystage.com/2005/07/07/review-dollhousegoodman-theatre/',
         summary:
-          'The preserved artist cards on the production page document a cast led by Maggie Siff and a full creative team including Robert Brill, Mara Blumenfeld, James F. Ingalls, Richard Woodbury, and Tom Creamer.',
-        note: 'Official cast and creative credits',
+          'Chicago review of the Goodman world premiere, providing local critical context for the Gilman adaptation.',
+        note: 'Chicago review',
       },
       {
-        source: 'Goodman archive metadata',
-        href: 'https://www.goodmantheatre.org/show/dollhouse/',
+        source: 'Playbill',
+        href: 'https://playbill.com/article/goodman-theatre-puts-finishing-touches-on-2004-05-season-com-120615',
         summary:
-          'Goodman\'s archive metadata confirms the exact 2005 run dates, runtime, commission status, and Albert Theatre placement, which helps stabilize an otherwise sparse public record.',
-        note: 'Official archive details',
+          'Season announcement placing Dollhouse within the Goodman\'s 2004-05 program alongside other Falls-directed premieres.',
+        note: 'Season context',
       },
     ],
     externalSources: [
       { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/dollhouse/' },
+      { label: 'New City Stage review', href: 'https://www.newcitystage.com/2005/07/07/review-dollhousegoodman-theatre/' },
+      { label: 'Playbill season announcement', href: 'https://playbill.com/article/goodman-theatre-puts-finishing-touches-on-2004-05-season-com-120615' },
       { label: 'Rebecca Gilman artist page', href: 'https://www.goodmantheatre.org/artists/rebecca-gilman/' },
-      { label: 'Robert Falls artist page', href: 'https://www.goodmantheatre.org/?post_type=artist&p=10377' },
       { label: 'Maggie Siff artist page', href: 'https://www.goodmantheatre.org/artists/maggie-siff/' },
     ],
     relatedLinks: seedLinks,
@@ -7658,6 +7808,13 @@ const productionSeeds: Record<string, ProductionSeed> = {
         kind: 'production-still',
       },
       {
+        src: kingLearDcKeach,
+        alt: 'Stacy Keach as Lear in a white shirt, suspenders, and loose tie, lit against a dark blue background.',
+        caption: 'Stacy Keach in the 2009 Shakespeare Theatre Company remount. Source image preserved in the King Lear packet.',
+        orientation: 'portrait',
+        kind: 'production-still',
+      },
+      {
         src: kingLear11,
         alt: 'Kent and another figure kneel beside a collapsed Lear on the floor in King Lear.',
         caption: 'Stacy Keach at the production\'s most exhausted register, with the kingdom already beyond repair.',
@@ -7697,6 +7854,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'Edgar', name: 'Joaquín Torres' },
       { role: 'Fool', name: 'Howard Witt' },
       { role: 'Oswald', name: 'Dieterich Gray' },
+      { role: 'France / Ensemble', name: 'Brian J. Gill' },
+      { role: 'Burgundy / Ensemble', name: 'Andrew Navarro' },
+      { role: 'Old Man / Ensemble', name: 'Ronald Keaton' },
+      { role: 'Messenger / Ensemble', name: 'Kareem Bandealy' },
+      { role: 'Curan / Ensemble', name: 'Jeffrey Baumgartner' },
+      { role: 'Captain / Cornwall\'s Guard / Ensemble', name: 'David Blixt' },
+      { role: 'Medic / Ensemble', name: 'Patrick Clear' },
+      { role: 'Goneril\'s Servant / Ensemble', name: 'Carolyn Defrin' },
+      { role: 'Cornwall\'s Guard / Ensemble', name: 'Hans Fleischmann' },
+      { role: 'Cornwall\'s Guard / Ensemble', name: 'José Antonio García' },
+      { role: 'Knight / Ensemble', name: 'Michael F. Goldberg' },
+      { role: 'Goneril\'s Servant / Ensemble', name: 'Ann James' },
+      { role: 'Gloucester\'s Guard / Ensemble', name: 'Christopher Johnson' },
+      { role: 'Goneril\'s Servant / Ensemble', name: 'Elise Kauzlaric' },
+      { role: 'Soldier / Ensemble', name: 'Kyle Lemieux' },
+      { role: 'Ensemble', name: 'Matthew Lon Walker' },
+      { role: 'Cornwall\'s Man / Ensemble', name: 'Steve Schine' },
     ],
     creativeTeam: [
       { role: 'Written by', name: 'William Shakespeare' },
@@ -7708,6 +7882,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'Fight Direction', name: 'Rick Sordelet' },
       { role: 'Vocal Coach', name: 'Ralph Zito' },
       { role: 'Dramaturgy', name: 'Tom Creamer' },
+      { role: 'Casting', name: 'Adam Belcuore and Nancy Piccione, C.S.A.' },
       { role: 'Production Stage Manager', name: 'Joseph Drummond' },
       { role: 'Stage Manager', name: 'T. Paul Lynch' },
     ],
@@ -7719,6 +7894,10 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'A full Washington remount',
         detail: 'Shakespeare Theatre Company artistic director Michael Kahn invited Falls to remount the entire production in 2009, with Keach again playing Lear.',
+      },
+      {
+        label: 'National critical attention',
+        detail: 'The Washington source packet quotes the Chicago Tribune calling the Goodman staging "a colossal, eye-popping operatic production" and The New York Times naming it among the best productions of 2006.',
       },
     ],
     awardsOrSignificance: [
@@ -7739,6 +7918,18 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Two distinct cast lists',
         text: 'The cast and creative team above reflect the original 2006 Goodman production. The 2009 Shakespeare Theatre Company remount retained Keach, Gero, Odeh, Martin-Cotten, Arrington, Pickering, Roberts, Torres, Witt, and Gray, but replaced Albany (Andrew Long) and added a larger ensemble, with a different creative team handling sound, dramaturgy, and stage management for the Washington run.',
+      },
+      {
+        label: 'Washington cast',
+        text: 'The 2009 Shakespeare Theatre Company cast list in the source packet identifies Steve Pickering as Kent, Edward Gero as Gloucester, Jonno Roberts as Edmund, Stacy Keach as Lear, Kim Martin-Cotten as Goneril, Kate Arrington as Regan, Laura Odeh as Cordelia, Andrew Long as Albany, Chris Genebach as Cornwall, Brian MacDonald as Burgundy, Aubrey Deeker as France, Joaquín Torres as Edgar, Dieterich Gray as Oswald, Gary Neal Johnson as a Knight in Lear\'s retinue, Howard Witt as Fool, Hugh Nees as Old Man, Conrad Feininger as Medic, David Blixt as Captain, and a Washington ensemble including Norman Aronovic, Stacey Cabaj, Billy Finn, Dan Istrate, Dan Lawrence, William LeDent, Matt Baxter Luceno, Carol Randolph, Jeffrey Scott, Amanda Tudor, and Scott Westerman.',
+      },
+      {
+        label: 'Washington artistic team',
+        text: 'The Shakespeare Theatre Company remount credited Robert Falls as director, Walt Spangler as set designer, Ana Kuzmanic as costume designer, Michael Philippi as lighting designer, Richard Woodbury as sound designer, Rick Sordelet as fight director, Ellen O\'Brien as voice and text coach, David Paul as assistant director and musical director, Akiva Fox as literary associate, Hannah Todd as directorial assistant, Lloyd Davis Jr. as stage manager, Benjamin Royer as assistant stage manager, and Merry Alderman and David Muse as casting directors.',
+      },
+      {
+        label: 'Source package',
+        text: 'The newly added King Lear folder includes compact 2006 and 2009 DOCX source files, Goodman production imagery already mirrored into the site asset folder, a Goodman cast-and-creative screenshot, and a distinct 2009 Shakespeare Theatre Company image of Stacy Keach as Lear.',
       },
     ],
     reviews: [
@@ -7780,16 +7971,55 @@ const productionSeeds: Record<string, ProductionSeed> = {
           'Newcity\'s review of the original 2006 Goodman production.',
         note: 'Review',
       },
+      {
+        source: 'The New York Times',
+        href: 'https://www.nytimes.com/2006/10/18/theater/18ishe.html',
+        summary:
+          'Charles Isherwood included the Goodman King Lear in his national theatre coverage of the 2006 season.',
+        note: '2006 coverage',
+      },
+      {
+        source: 'DC Theatre Scene',
+        href: 'https://dctheatrescene.com/2009/06/24/king-lear-3/',
+        summary:
+          'A Washington review of the 2009 Shakespeare Theatre Company remount.',
+        note: '2009 remount',
+      },
+      {
+        source: 'CurtainUp',
+        href: 'http://www.curtainup.com/kingleardc09.html',
+        summary:
+          'A review of the Washington remount preserved in the packet\'s external source list.',
+        note: '2009 remount',
+      },
+      {
+        source: 'Windy City Times',
+        href: 'https://windycitytimes.com/2006/09/27/theater-king-lear/',
+        summary:
+          'Chicago coverage of Falls\'s original Goodman staging.',
+        note: '2006 review',
+      },
     ],
     externalSources: [
       { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/king-lear/' },
       { label: 'Shakespeare Theatre Company event page', href: 'https://www.shakespearetheatre.org/events/king-lear-08-09' },
       { label: 'Variety review (2006)', href: 'https://variety.com/2006/legit/reviews/king-lear-12-1200513193/' },
+      { label: 'New York Times coverage (2006)', href: 'https://www.nytimes.com/2006/10/18/theater/18ishe.html' },
       { label: 'DCist review (2009)', href: 'https://dcist.com/story/09/06/24/a-king-lear-fit-for-bravo/' },
       { label: 'Washington City Paper review (2009)', href: 'https://washingtoncitypaper.com/article/228782/reviewed-shakespeare-theatre-companys-transgressive-transcendent-king-lear/' },
       { label: 'Washington Post review (2009)', href: 'https://www.washingtonpost.com/archive/style/2009/06/23/a-magnificent-king-lear-rises-to-the-madness/dc7dc794-bf40-4394-94b1-60808a2faefa/' },
       { label: 'Newcity Stage review (2006)', href: 'https://www.newcitystage.com/2006/09/28/review-king-leargoodman-theatre/' },
       { label: 'Chicago Tribune feature (2006)', href: 'https://www.chicagotribune.com/2006/09/21/extreme-lear-robert-falls-gets-audacious-with-the-great-tragedy-but-did-stacy-keach-get-the-memo/' },
+      { label: 'TheaterMania cast announcement (2009)', href: 'https://www.theatermania.com/washington-dc/news/05-2009/stacy-keach-edward-gero-laura-odeh-et-al-set-for-s_19069.html/' },
+      { label: 'Chicago Sun-Times Falls remembrance', href: 'https://chicago.suntimes.com/2017/2/11/18376221/when-you-see-a-bob-falls-play-you-remember-it' },
+      { label: 'DC Theatre Scene review (2009)', href: 'https://dctheatrescene.com/2009/06/24/king-lear-3/' },
+      { label: 'Playbill 2006 Goodman season announcement', href: 'https://playbill.com/article/king-lear-two-wilsons-and-new-nelson-part-of-goodman-2006-season-com-130940' },
+      { label: 'Shakespeareances review and background', href: 'https://www.shakespeareances.com/willpower/onstage/King_Lear-06-STC09.html' },
+      { label: 'CurtainUp review (2009)', href: 'http://www.curtainup.com/kingleardc09.html' },
+      { label: 'Walt Spangler King Lear portfolio', href: 'https://www.waltspangler.com/king-lear' },
+      { label: 'Two Hours Traffic review (2009)', href: 'http://www.twohourstrafficdc.com/2009/06/king-lear-shakespeare-theatre.html' },
+      { label: 'Playbill DC opening coverage (2009)', href: 'https://playbill.com/article/keach-rages-against-the-storm-in-dc-king-lear-with-odeh-witt-torres-and-more-com-161875' },
+      { label: 'Windy City Times review (2006)', href: 'https://windycitytimes.com/2006/09/27/theater-king-lear/' },
     ],
     watchLinks: [
       {
@@ -7797,6 +8027,30 @@ const productionSeeds: Record<string, ProductionSeed> = {
         href: 'https://www.youtube.com/watch?v=OONOW9pImiY&t=127s',
         description: 'Falls and Keach discuss the challenge of staging the production.',
         thumbnail: kingLear9,
+      },
+      {
+        label: 'Shakespeare Theatre Company King Lear video',
+        href: 'https://www.youtube.com/watch?v=HR2_IOU8LbQ&list=PLL25UAgYgps3B8jkQU1bK66YmCHIRQ_sl&index=2',
+        description: 'A Shakespeare Theatre Company video related to the 2009 remount.',
+        thumbnail: kingLearDcKeach,
+      },
+      {
+        label: 'King Lear production video',
+        href: 'https://www.youtube.com/watch?v=bkxb80kWB14&list=PLL25UAgYgps3B8jkQU1bK66YmCHIRQ_sl&index=3',
+        description: 'Additional video material preserved in the King Lear source packet.',
+        thumbnail: kingLear10,
+      },
+      {
+        label: 'King Lear audience testimonials',
+        href: 'https://www.youtube.com/watch?v=7URPpg_G5IE&list=PLL25UAgYgps3B8jkQU1bK66YmCHIRQ_sl&index=5',
+        description: 'Audience response video from the Shakespeare Theatre Company material.',
+        thumbnail: kingLear11,
+      },
+      {
+        label: 'King Lear video feature',
+        href: 'https://www.youtube.com/watch?v=M16CAHnuKHM&list=PLL25UAgYgps3B8jkQU1bK66YmCHIRQ_sl&index=1',
+        description: 'A further King Lear video link included in the source packet.',
+        thumbnail: kingLear1,
       },
     ],
     relatedLinks: seedLinks,
