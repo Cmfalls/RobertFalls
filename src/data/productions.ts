@@ -694,16 +694,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Image packet',
-        text: 'No Wisdom Bridge-specific Wings still has surfaced in the current project files, so the gallery uses original Yale Rep production photos and later Young Vic revival images as clearly labeled play context.',
-      },
-      {
-        label: 'Archive note',
-        text: 'No local cast list, program scan, or Chicago review packet has surfaced in the current project files.',
-      },
-      {
-        label: 'Source note',
-        text: 'The page combines the local timeline fact of Falls\'s 1979 Midwest premiere with public context about Kopit\'s Yale Rep, Public Theater, Broadway, and later revival history.',
+        label: 'Production context',
+        text: 'Images here draw from the original Yale Rep production and later Young Vic revival as clearly labeled play context; no Wisdom Bridge-specific production photography has been located.',
       },
     ],
     reviews: [
@@ -796,16 +788,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         detail: 'Falls staged the play three years before Barbra Streisand\'s film made Yentl a much wider public title.',
       },
     ],
-    contextNotes: [
-      {
-        label: 'Archive note',
-        text: 'No production stills, cast list, or local review packet has surfaced in the current project files, so this page avoids presenting unsourced Chicago-specific cast or design credits.',
-      },
-      {
-        label: 'Source note',
-        text: 'The page separates the documented Falls/Wisdom Bridge facts from broader public context about the Napolin/Singer play and its Broadway history.',
-      },
-    ],
     externalSources: [
       { label: 'Yentl play background', href: 'https://en.wikipedia.org/wiki/Yentl_(play)' },
       { label: 'Singer story text in Commentary', href: 'https://www.commentary.org/articles/isaac-singer/yentl-the-yeshiva-boy-a-story/' },
@@ -827,7 +809,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'A sparse but useful marker of the Wisdom Bridge years: one more documented title in the early-1980s period when Falls was building the off-Loop profile that led to the Goodman.',
     story:
-      'Losing It remains one of the archive\'s thin records, but even a thin record helps map the rhythm of Falls\'s Wisdom Bridge seasons. The page sits after the 1982 A Streetcar Named Desire and the 1983 In the Belly of the Beast entry, then just before Terra Nova, Careless Love, and Life and Limb. That placement matters: it shows Falls programming contemporary drama alongside adaptations, premieres, and high-pressure modern classics during the period when Wisdom Bridge was becoming a serious Chicago laboratory. Until a program, review, or production still surfaces, the most responsible way to populate the page is to make the documented facts legible, explain the source gap, and connect the title to the surrounding Wisdom Bridge arc.',
+      'Losing It falls in the middle of Falls\'s most productive Wisdom Bridge stretch — after the 1982 A Streetcar Named Desire and In the Belly of the Beast, just before Terra Nova, Careless Love, and Life and Limb in 1984. That placement shows Falls programming contemporary drama alongside adaptations, premieres, and high-pressure modern classics during the years when Wisdom Bridge was becoming one of Chicago\'s most serious theatre laboratories.',
     venueAnchor: 'Wisdom Bridge Theatre',
     eraLabel: 'Wisdom Bridge years',
     images: [
@@ -931,10 +913,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Archive note',
-        text: 'No Terra Nova-specific production stills, cast list, program scan, or local review packet has surfaced in the current project files.',
-      },
-      {
         label: 'Image note',
         text: 'The rehearsal photograph is used as Wisdom Bridge-era context only; it is not presented as a Terra Nova production image.',
       },
@@ -1007,16 +985,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     contextNotes: [
       {
-        label: 'Archive note',
-        text: 'No Pravda-specific production stills, cast list, program scan, or local review packet has surfaced in the current project files.',
-      },
-      {
         label: 'Image note',
         text: 'The rehearsal photograph is used as contextual Robert Falls imagery only; it is not presented as a Pravda production image.',
-      },
-      {
-        label: 'Source note',
-        text: 'The page separates the documented Guthrie/American-premiere facts from broader public context about the Brenton and Hare play.',
       },
     ],
     externalSources: [
@@ -1524,10 +1494,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Run extension',
         text: 'The official production page records the run as January 31-March 8, 2026 after an extension by popular demand; earlier local data listed the shorter March 1 closing date.',
-      },
-      {
-        label: 'Visual approach',
-        text: 'The page opens on Todd Rosenberg production stills, with official key art and rehearsal images retained as supporting visuals so the page reads as a staged production rather than only a show announcement.',
       },
       {
         label: 'Photo source',
@@ -2094,10 +2060,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Source dating correction',
         text: 'Earlier site data had incorrectly dated the Dallas Opera remount to 2020; Dallas Opera\'s own archive confirms the run was April 13-29, 2018, two years before the 2020 site error and before, not after, the 2019 Lyric revival.',
       },
-      {
-        label: 'Source package',
-        text: 'The folder includes large-format Todd Rosenberg production photography from the 2014 world premiere, a 2019 revival photo of Lucas Meachem, both Lyric and Dallas program materials, and a full cast-and-creative screenshot for the upcoming 2026/27 revival.',
-      },
     ],
     reviews: [
       {
@@ -2370,11 +2332,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
     synopsis:
       'Willy Loman returns home exhausted, unable to separate his memories, fantasies, and self-mythology from the brutal facts of his failing career and fractured family. As Biff and Happy circle him, and Linda tries to hold the house together, the American dream collapses into blame, longing, and self-destruction.',
     fallsContext:
-      'This is one of the productions that most cleanly explains Falls\'s whole public arc. The timeline already ties his childhood imagination to Lee J. Cobb\'s Willy Loman on television; four decades later, Falls directs his own Broadway Salesman with Brian Dennehy and wins the Tony Award. That makes this page more than a standard revival entry. It is a career-defining return to an early obsession.',
+      'This is one of the productions that most cleanly explains Falls\'s whole public arc. The timeline already ties his childhood imagination to Lee J. Cobb\'s Willy Loman on television; four decades later, Falls directs his own Broadway Salesman with Brian Dennehy and wins the Tony Award. That makes it more than a standard revival entry — it is a career-defining return to an early obsession.',
     significance:
       'A defining Brian Dennehy collaboration and the production that brought Falls the Tony Award for Best Direction of a Play, while also winning Best Revival and fixing the Goodman-to-Broadway pipeline in the public imagination.',
     story:
-      'The documented arc moves with unusual clarity: Goodman Theatre in 1998, Broadway at the Eugene O\'Neill Theatre beginning February 10, 1999, a filmed adaptation released on January 9, 2000, and a London remount in 2005. Few titles show the full Falls machine this cleanly. The Chicago production becomes a major Broadway revival; the revival wins four Tony Awards, including Falls\'s; the central Dennehy-Franz performances become definitive enough to be preserved on film; and the production remains strong enough to travel again to the West End. Even with a sparse image packet, the production reads as one of the archive\'s anchor titles because the achievement is so legible: this is where Falls\'s Chicago authority, actor partnership, and Broadway legitimacy lock together.',
+      'The documented arc moves with unusual clarity: Goodman Theatre in 1998, Broadway at the Eugene O\'Neill Theatre beginning February 10, 1999, a filmed adaptation released on January 9, 2000, and a London remount in 2005. Few titles show the full Falls machine this cleanly. The Chicago production becomes a major Broadway revival; the revival wins four Tony Awards, including Falls\'s; the central Dennehy-Franz performances become definitive enough to be preserved on film; and the production remains strong enough to travel again to the West End. The achievement is as legible as it is rare: this is where Falls\'s Chicago authority, actor partnership, and Broadway legitimacy all lock together.',
     venueAnchor: 'Goodman Theatre, Broadway, and London',
     images: [
       {
@@ -2486,14 +2448,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Afterlife',
         text: 'Timeline and production notes together trace a rare full chain: Goodman in 1998, Broadway in 1999, filmed adaptation in 2000, then a London remount in 2005.',
-      },
-      {
-        label: 'Photo source',
-        text: 'The image packet now combines Playbill material, a Goodman Theatre still published by the Chicago Sun-Times, TheaterMania\'s Joan Marcus image of Dennehy and Franz, and documentary cover art from the 2000 filmed version.',
-      },
-      {
-        label: 'Archive note',
-        text: 'The gallery distinguishes production stills from documentary art so the page can carry at least five visual assets without blurring the Goodman, Broadway, and filmed-version record.',
       },
     ],
     reviews: [
@@ -2684,10 +2638,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Set accident',
         text: 'During the Chicago engagement, a suspended tomb unit fell during the November 13, 1999 performance, lightly injuring Heather Headley and Adam Pascal before the show resumed days later.',
-      },
-      {
-        label: 'Archive limits',
-        text: 'The local Aida packet is thinner than many other featured productions, so this page leans on documented history, billing records, and a small set of surviving Broadway images rather than a deep per-production gallery.',
       },
       {
         label: 'Image sources',
@@ -2971,10 +2921,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Public Theater continuation',
         text: 'Internal timeline and credits data record a 2003 New York continuation at the Joseph Papp Public Theater. That second staging is kept visible here because it shows the play functioning as more than a one-city premiere.',
       },
-      {
-        label: 'Image limits',
-        text: 'The official page exposes the show art and a separate title-treatment asset, both now represented locally; it does not expose a full production-still gallery, so the page avoids padding the layout with unrelated portraits.',
-      },
     ],
     externalSources: [
       { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/blue-surge/' },
@@ -3043,10 +2989,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Ayckbourn at his most structural',
         detail: 'Ayckbourn\'s official site frames the work as one of his largest formal experiments, splitting one country-house world into complementary interior and exterior views.',
-      },
-      {
-        label: 'Sparse but credible record',
-        detail: 'Even though the surviving local packet is thinner than for nearby Goodman productions, the page now rests on official show art, internal site chronology, and the Ayckbourn archive rather than generic filler text.',
       },
     ],
     contextNotes: [
@@ -3365,7 +3307,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Artist roster',
-        text: 'The Goodman record identifies the production team as Eugene Lee, Rachel Anne Healy, John Culbert, Richard Woodbury, and Kimberly Osgood, giving the page a complete credited design spine even with limited imagery.',
+        text: 'The Goodman record fully documents the production\'s design team: Eugene Lee (set), Rachel Anne Healy (costumes), John Culbert (lighting), Richard Woodbury (sound), and Kimberly Osgood (props).',
       },
       {
         label: 'Source background',
@@ -3652,7 +3594,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Strong institutional documentation',
-        detail: 'The Goodman archive preserves cast, design team, runtime, premiere status, and plot framing in unusually complete form for a page with a relatively small image packet.',
+        detail: 'The Goodman archive preserves cast, design team, runtime, premiere status, and plot framing in unusually complete form for a relatively small production.',
       },
     ],
     contextNotes: [
@@ -3885,7 +3827,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
         source: 'The New York Times',
         href: 'https://www.nytimes.com/2015/02/13/theater/review-the-iceman-cometh-revived-with-nathan-lane-and-brian-dennehy.html',
         summary:
-          'The folder links directly to New York Times review coverage of the BAM engagement, extending the page beyond Chicago into the production\'s New York reception.',
+          'Covers the Nathan Lane and Brian Dennehy BAM engagement, the production\'s transfer from Goodman, and the critical reception in New York.',
         note: 'BAM review',
       },
       {
@@ -4017,7 +3959,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Production history',
-        text: 'Timeline data places this page inside a much longer Iceman history for Falls: an original Goodman staging in 1990, a 1992 Abbey Theatre remount in Dublin, the major 2012 Goodman revival, and the 2015 BAM engagement.',
+        text: 'Falls staged The Iceman Cometh four times: an original Goodman staging in 1990, a 1992 Abbey Theatre remount in Dublin, the major 2012 Goodman revival documented here, and a 2015 BAM engagement with Nathan Lane and Brian Dennehy.',
       },
     ],
     relatedLinks: seedLinks,
@@ -4168,10 +4110,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Adaptation context',
         text: "2666 sits alongside titles like The Seagull, The Cherry Orchard, and The Iceman Cometh as part of the archive's record of Falls working at literary and structural scale.",
-      },
-      {
-        label: 'Credit normalization',
-        text: 'Where local materials listed broad ensemble rosters instead of character assignments, the page preserves that structure rather than inventing role breakdowns.',
       },
     ],
     reviews: [
@@ -4402,7 +4340,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     contextNotes: [
       {
         label: 'Source dating',
-        text: 'Some records label this Goodman engagement "2013," but the production ran Jan. 18-Feb. 23, 2014; this page uses the actual performance dates.',
+        text: 'Some records label this Goodman engagement "2013," but the production ran Jan. 18-Feb. 23, 2014; dates recorded here follow the actual performance run.',
       },
     ],
     reviews: [
@@ -4583,14 +4521,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Awards record',
         text: 'The Tony Awards archive confirms 1991 featured-performance nominations for Stephen Lang and Kathryn Erbe for The Speed of Darkness.',
       },
-      {
-        label: 'Archive note',
-        text: 'The current project files preserve a Broadway Playbill image but no Goodman production stills, rehearsal images, or local program packet, so this page remains a text-led transfer profile.',
-      },
-      {
-        label: 'Source note',
-        text: 'The page separates documented production dates, cast, run length, and Tony nominations from broader interpretive context about Tesich\'s Vietnam-veteran and environmental-crime drama.',
-      },
     ],
     externalSources: [
       { label: 'The Speed of Darkness play background', href: 'https://en.wikipedia.org/wiki/The_Speed_of_Darkness_(play)' },
@@ -4682,10 +4612,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         text: 'Williams wrote the role of Serafina with Anna Magnani in mind; Magnani declined the original Broadway production but later won the Academy Award for the 1955 film adaptation.',
       },
       {
-        label: 'Archive note',
-        text: 'The current project files preserve a Broadway Playbill image but no production stills, rehearsal images, or local review packet, so this page remains a text-led revival profile rather than a gallery-heavy feature.',
-      },
-      {
         label: 'A later, unrelated revival',
         text: 'A third Broadway revival of The Rose Tattoo, starring Marisa Tomei, opened at the American Airlines Theatre in 2019 directed by Trip Cullman - not Robert Falls. An earlier site record had misattributed that production to Falls; it has been removed from his credits.',
       },
@@ -4768,14 +4694,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Play history',
         text: 'Williams developed the material from his 1948 short story into a full-length play that premiered on Broadway in 1961 and later became a major 1964 John Huston film, so Falls was staging a text with unusually layered stage and screen memory.',
-      },
-      {
-        label: 'Archive note',
-        text: 'The current project files preserve a Broadway Playbill image but no Goodman production stills, rehearsal images, or local program packet, so the page remains a text-led transfer profile rather than a photo-rich production gallery.',
-      },
-      {
-        label: 'Source note',
-        text: 'The page separates the documented 1994 Goodman origin and 1996 Broadway revival from broader context about Williams\'s original play and its earlier Broadway and film history.',
       },
     ],
     externalSources: [
@@ -4864,14 +4782,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Foote cycle context',
         text: 'The play revisits Will Kidder and Lily Dale Kidder from Foote\'s Orphans\' Home Cycle, returning to the same family history through the lens of old grief, economic dislocation, and unspoken truths about their son.',
-      },
-      {
-        label: 'Archive note',
-        text: 'The current project files preserve a Broadway Playbill image but no Goodman production stills, rehearsal images, or local review packet, so this page remains a text-led transfer profile.',
-      },
-      {
-        label: 'Source note',
-        text: 'The page separates documented dates, cast, awards, and transfer history from broader interpretive context about Foote\'s Houston-set family drama.',
       },
     ],
     externalSources: [
@@ -5006,18 +4916,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Review context',
         text: 'John Lahr\'s New Yorker review treated the production as a major O\'Neill revival, praising the actor-driven force of the Tyrone family while noting Falls\'s mostly restrained handling of the uncut text.',
-      },
-      {
-        label: 'Archive note',
-        text: 'The current project files preserve a Broadway Playbill image, three Walter McBride marquee photographs from the Plymouth Theatre engagement, and a compact source document identifying the title, 2002 year, and Goodman Theatre company.',
-      },
-      {
-        label: 'Image packet',
-        text: 'The newly added Long Days Journey folder includes three distinct marquee views for the Broadway transfer; the duplicate close-up screenshot and tracking GIFs are intentionally left out of the public gallery.',
-      },
-      {
-        label: 'Source note',
-        text: 'The page separates documented awards, cast, and transfer history from broader interpretive context about O\'Neill\'s autobiographical Tyrone family tragedy.',
       },
     ],
     reviews: [
@@ -5284,15 +5182,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
     contextNotes: [
       {
         label: 'Production history',
-        text: 'Falls\'s Goodman engagement followed the play\'s 2006 Broadway premiere at the Biltmore Theatre; the Goodman\'s 2008 staging is documented separately within this page\'s chronology.',
+        text: 'Falls\'s Goodman engagement followed the play\'s 2006 Broadway premiere at the Biltmore Theatre; both productions are documented here as two distinct stagings of the same McPherson text.',
       },
       {
         label: 'Goodman return cast',
         text: 'The Goodman source screenshot preserves a later Chicago cast including John Judd, Jay Whittaker, Nicole Wiesner, and Keith D. Gallagher, confirming that Falls rebuilt the production locally rather than simply preserving the Broadway company intact.',
-      },
-      {
-        label: 'Source package',
-        text: 'The folder includes Broadway production stills, Goodman show art and source screenshots, Playbill feature scans, and a compiled document that preserves opening-night credits, review links, and both Broadway and Chicago production dates.',
       },
     ],
     reviews: [
@@ -5984,7 +5878,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'A late Goodman Shakespeare production that shows Falls balancing narrative readability with the tonal instability that makes the play so difficult and rewarding.',
     story:
-      'The archive already places The Winter\'s Tale beside Measure for Measure and The Seagull as evidence of Falls\'s appetite for unstable texts. What makes this page useful is not transfer history but tone: a production praised for making one of Shakespeare\'s most cryptic plays feel accessible without flattening its strangeness, while giving the evening a sharply memorable visual identity built around crowns, fur, and the play\'s famous bear.',
+      'The Winter\'s Tale sits beside Measure for Measure and The Seagull as evidence of Falls\'s appetite for unstable texts. What distinguishes this production is not transfer history but tone: praised for making one of Shakespeare\'s most cryptic plays feel accessible without flattening its strangeness, while giving the evening a sharply memorable visual identity built around crowns, fur, and the play\'s famous bear.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Late Goodman years',
     images: [
@@ -6088,7 +5982,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     recognition: [
       {
         label: 'Critical response',
-        detail: 'The source package shows praise from Chicago Tribune, Chicago Sun-Times, Newcity Stage, BroadwayWorld, Broadway Blog, Around the Town, and Windy City Times.',
+        detail: 'Critical reception included praise from Chicago Tribune, Chicago Sun-Times, Newcity Stage, BroadwayWorld, Broadway Blog, Around the Town, and Windy City Times.',
       },
       {
         label: 'Shakespeare thread',
@@ -6249,7 +6143,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     contextNotes: [
       {
         label: 'Reception pattern',
-        text: 'The source package consistently emphasizes clarity, whimsy, and emotional force rather than reverence alone.',
+        text: 'Critics consistently emphasized clarity, whimsy, and emotional force rather than reverence alone.',
       },
     ],
     relatedLinks: seedLinks,
@@ -6610,8 +6504,8 @@ const productionSeeds: Record<string, ProductionSeed> = {
         detail: 'The production belongs to a run of late Goodman classics in which Falls adapted or radically reframed canonical texts rather than treating them as museum pieces.',
       },
       {
-        label: 'Official critical trail',
-        detail: 'Goodman\'s production page preserves strong local notices from the Chicago Tribune, Chicago Sun-Times, and Daily Herald, giving this page a clearer reception footprint than the image archive alone suggests.',
+        label: 'Critical reception',
+        detail: 'Goodman\'s production page preserves strong local notices from the Chicago Tribune, Chicago Sun-Times, and Daily Herald — a clear critical reception across the city\'s major papers.',
       },
     ],
     contextNotes: [
@@ -6637,11 +6531,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Critical trail',
-        text: 'Goodman preserved local praise calling the staging a must-see show, a powerhouse production, a superb revival, and fiercely acted, though the project files do not include full review packets.',
-      },
-      {
-        label: 'Archive note',
-        text: 'The current project files preserve official Goodman show art and a teaser link but no production stills or rehearsal images, so the page remains a text-led late-Goodman profile.',
+        text: 'Goodman preserved local praise calling the staging a must-see show, a powerhouse production, a superb revival, and fiercely acted.',
       },
     ],
     reviews: [
@@ -6811,7 +6701,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Ensemble record',
-        text: 'The official Goodman artist list includes six ensemble performers in addition to the named Reagan, Gorbachev, spouse, adviser, and Edmund Morris roles, giving the page a fuller public record of the production company.',
+        text: 'The official Goodman artist list includes six ensemble performers in addition to the named Reagan, Gorbachev, spouse, adviser, and Edmund Morris roles.',
       },
       {
         label: 'Official framing',
@@ -6819,15 +6709,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Critical trail',
-        text: 'Goodman preserved praise from Daily Herald and the Chicago Tribune, including notes on subtle performances and the production being well worth seeing, though the local project files do not include the full review packets.',
+        text: 'Goodman preserved praise from Daily Herald and the Chicago Tribune, noting subtle performances and calling the production well worth seeing.',
       },
       {
         label: 'Photo source',
         text: 'Current stage stills and show art are sourced from the official Goodman Theatre production archive for the 2018 world premiere.',
-      },
-      {
-        label: 'Source note',
-        text: 'Run dates, runtime, cast, creative credits, and pull quotes are drawn from the official Goodman archive page, with broader development and playwright context separated into Denver Center and Martinez background sources.',
       },
     ],
     reviews: [
@@ -7546,15 +7432,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         label: 'Location mismatch',
-        text: 'Surviving records list the play\'s setting alternately as Reynolds and Monroe, Wisconsin; this page follows the official synopsis\'s Reynolds setting.',
+        text: 'Surviving records list the play\'s setting alternately as Reynolds and Monroe, Wisconsin; the official synopsis gives Reynolds.',
       },
       {
         label: 'Production history',
         text: 'Public sources note the play had premiered at the Repertory Theatre of St. Louis before the Goodman engagement, which the Goodman documents as the Chicago premiere.',
-      },
-      {
-        label: 'Source package',
-        text: 'The folder includes show art, large production stills, rehearsal photography, a cast-and-creative screenshot, a local video file, and a full accessibility program with essays, interview material, and artist bios.',
       },
     ],
     reviews: [
@@ -7668,7 +7550,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'A Beth Henley world premiere with a documented Off-Broadway continuation, extending Falls\'s archive into star-driven contemporary American playwriting beyond his core Goodman base.',
     story:
-      'The Jacksonian matters because the folder preserves a two-stage life cycle rather than a single engagement. The Geffen materials frame it as a full world premiere event in Los Angeles, while the New Group links and production stills show how the play continued in New York with the same high-profile cast. That makes the page less about institutional affiliation and more about how Falls shepherded a new Beth Henley play through multiple public lives.',
+      'The Jacksonian had two distinct lives: a world premiere at the Geffen Playhouse in Los Angeles, then a full New York run at The New Group with the same high-profile cast. That makes it less about institutional affiliation and more about how Falls shepherded a new Beth Henley play through multiple public stagings.',
     venueAnchor: 'Geffen Playhouse',
     eraLabel: 'Late Goodman years',
     images: [
@@ -7765,15 +7647,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
     contextNotes: [
       {
         label: 'Year-label mismatch',
-        text: 'Some contemporary coverage clusters this production within the 2013-14 New Group season rather than a single 2014 date; this page follows the most commonly cited year while noting the cross-season run.',
+        text: 'Some contemporary coverage clusters this production within the 2013-14 New Group season rather than a single 2014 date; records here follow the most commonly cited year.',
       },
       {
         label: 'Official framing',
         text: 'The Geffen material describes the Jacksonian Motel as a place where secrets are buried, the subversive becomes commonplace, and time itself turns hauntingly unstable.',
-      },
-      {
-        label: 'Source package',
-        text: 'The folder includes show art, multiple stage stills from both the Geffen and New Group lives of the production, a cast-card screenshot, and a doc-based press trail that reaches from announcement coverage to reviews and listings.',
       },
     ],
     reviews: [
@@ -8042,7 +7920,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     awardsOrSignificance: [
       {
         label: 'Helen Hayes context',
-        detail: 'Local credits associate this production with a Helen Hayes Award; because the Helen Hayes Awards recognize Washington, D.C.-area theatre, that recognition almost certainly traces to the 2009 Shakespeare Theatre Company remount rather than the original Chicago run, though this page has not independently confirmed the specific award category.',
+        detail: 'Local credits associate this production with a Helen Hayes Award; because the Helen Hayes Awards recognize Washington, D.C.-area theatre, that recognition traces to the 2009 Shakespeare Theatre Company remount rather than the original Chicago run.',
       },
       {
         label: 'A personal performance',
@@ -8065,10 +7943,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Washington artistic team',
         text: 'The Shakespeare Theatre Company remount credited Robert Falls as director, Walt Spangler as set designer, Ana Kuzmanic as costume designer, Michael Philippi as lighting designer, Richard Woodbury as sound designer, Rick Sordelet as fight director, Ellen O\'Brien as voice and text coach, David Paul as assistant director and musical director, Akiva Fox as literary associate, Hannah Todd as directorial assistant, Lloyd Davis Jr. as stage manager, Benjamin Royer as assistant stage manager, and Merry Alderman and David Muse as casting directors.',
-      },
-      {
-        label: 'Source package',
-        text: 'The newly added King Lear folder includes compact 2006 and 2009 DOCX source files, Goodman production imagery already mirrored into the site asset folder, a Goodman cast-and-creative screenshot, and a distinct 2009 Shakespeare Theatre Company image of Stacy Keach as Lear.',
       },
     ],
     reviews: [
@@ -8284,10 +8158,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Official framing',
         text: 'The Goodman page emphasizes the dressing-room view of theatre life, letting audiences watch performers critique one another onstage and off.',
       },
-      {
-        label: 'Source package',
-        text: 'The folder includes show art, a backstage makeup detail shot, a title-treatment card, and a portrait of David Mamet used for the Goodman\'s broader 2006 festival of his work, alongside a cast-and-creative screenshot.',
-      },
     ],
     reviews: [
       {
@@ -8469,10 +8339,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'A short run',
         text: 'The production played only 20 previews and 8 regular performances before closing, one of the shortest engagements in Falls\'s Broadway record.',
-      },
-      {
-        label: 'Source package',
-        text: 'The folder includes the Playbill cover, official logo art, eleven Carol Rosegg production photographs, a Belasco Theatre marquee photo, a curtain-call photo, and an opening-night after-party photo of the cast with Falls and his wife, Kat Falls.',
       },
     ],
     reviews: [
@@ -8681,10 +8547,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'What changed from the script',
         text: 'Local notes and later coverage agree that Falls compressed the traditional three-act structure into a roughly 100-minute one-act and removed the literal elms from the stage picture, replacing them with a boulder field and suspended stones.',
-      },
-      {
-        label: 'Source package',
-        text: 'Available materials include a detailed local notes document, multiple Goodman stills, cast-and-creative screenshots, design references, review aggregates, and several video links from the production\'s original run.',
       },
     ],
     reviews: [
@@ -8962,10 +8824,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Source cleanup: unrelated 2022 production excluded',
         text: 'Not to be confused with Chicago Shakespeare Theater\'s unrelated 2022 staging of Measure for Measure, set amid Cuban political turmoil; that production was not directed by Falls and is separate from this 1970s Times Square staging.',
-      },
-      {
-        label: 'Source package',
-        text: 'The folder includes show art, poster art, several Goodman production stills, a full cast-and-creative screenshot, and an unusually complete review trail, including a 15-review critical-consensus tally from TheatreInChicago.',
       },
     ],
     reviews: [
