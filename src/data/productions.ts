@@ -2819,7 +2819,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'blue-surge': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       'Blue Surge is the first major Falls/Rebecca Gilman entry in the archive: a Goodman world premiere about police, sex work, and class drift that later continued Off-Broadway at the Public Theater.',
     publicSummary:
@@ -2837,11 +2837,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
     images: [
       {
         src: blueSurgeShowArt,
-        alt: 'Two men in casual clothes argue across a desk in official Blue Surge production art.',
-        caption: 'Official Goodman show art for the world premiere of Blue Surge.',
+        alt: 'Two men face off in a blinds-lit office: one seated on the edge of a desk in jeans, the other standing in a scene from Blue Surge at Goodman Theatre.',
+        caption: 'Curt and Doug in the 2001 Goodman world premiere of Blue Surge by Rebecca Gilman.',
         orientation: 'landscape',
         priority: true,
-        kind: 'art',
+        kind: 'production-still',
       },
       {
         src: blueSurgeTitleTreatment,
@@ -2931,7 +2931,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'house-and-garden': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       "House and Garden brought Alan Ayckbourn's linked twin-play experiment to the Goodman in 2001, giving Falls an American-premiere event built around simultaneous staging, shared actors, and one country-house day seen from two sides at once.",
     publicSummary:
@@ -2943,7 +2943,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'An American premiere at the Goodman of Alan Ayckbourn\'s unusually demanding diptych, one of the clearest formal experiments in Falls\'s early-2000s record.',
     story:
-      "The page earns its place less through surviving cast documentation than through the nature of the production itself. Ayckbourn's own archive describes House and Garden as two plays built to run simultaneously with the same cast in two auditoria, and Robert Falls's Goodman record identifies his staging as the American premiere. That makes it a key form-driven title in the 2001 cluster: not a revival, not a premiere of a single script, but a theatrical engineering problem that also had to land as comedy and social observation.",
+      "House and Garden earns its place less through surviving cast documentation than through the nature of the production itself. Ayckbourn's own archive describes it as two plays built to run simultaneously with the same cast in two auditoria, and Falls's Goodman record identifies his staging as the American premiere. That makes it a key form-driven title in the 2001 cluster: not a revival, not a premiere of a single script, but a theatrical engineering problem that also had to land as comedy and social observation.",
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Early 2000s Goodman years',
     images: [
@@ -3450,7 +3450,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     sourceStatus: 'featured-ready',
   },
   'the-goat-or-who-is-sylvia': {
-    pageMode: 'archive',
+    pageMode: 'featured',
     summary:
       "Falls brought Edward Albee's The Goat, or Who Is Sylvia? to the Goodman in 2003 as a Midwest premiere, staging the Tony-winning tragicomedy as a razor-edged domestic collapse in the Albert Theatre.",
     publicSummary:
@@ -3468,11 +3468,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
     images: [
       {
         src: theGoatGoodmanShowArt,
-        alt: 'Barbara Robertson leans against Patrick Clear in Goodman show art for The Goat, or Who Is Sylvia?.',
-        caption: 'Official Goodman show art for the Midwest premiere of The Goat, or Who Is Sylvia?.',
+        alt: 'Barbara Robertson as Stevie and Patrick Clear as Martin in The Goat, or Who Is Sylvia? at Goodman Theatre — she leans into him as he gazes forward, both in muted naturalistic dress.',
+        caption: 'Barbara Robertson and Patrick Clear in the 2003 Goodman Midwest premiere of The Goat, or Who Is Sylvia? by Edward Albee.',
         orientation: 'landscape',
         priority: true,
-        kind: 'art',
+        kind: 'production-still',
       },
       {
         src: theGoatTitleTreatment,
@@ -3609,29 +3609,22 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     reviews: [
       {
-        outlet: 'Goodman Theatre archive',
+        source: 'Goodman Theatre',
         summary: 'The official page records the production as a Goodman Albert Theatre run from Nov. 10-Dec. 2, 2003, directed by Falls, with a one-hour-forty-five-minute runtime and Midwest premiere positioning.',
         href: 'https://www.goodmantheatre.org/show/the-goat-or-who-is-sylvia/',
+        note: 'Official production page',
       },
       {
-        outlet: 'Broadway / awards context',
+        source: 'Wikipedia',
         summary: 'The play opened on Broadway in 2002, won the Tony Award for Best Play, and quickly became a major late-career Albee title before Goodman mounted its Midwest premiere.',
         href: 'https://en.wikipedia.org/wiki/The_Goat,_or_Who_Is_Sylvia%3F',
+        note: 'Play background',
       },
       {
-        outlet: 'Tony Awards context',
-        summary: 'Awards references identify The Goat, or Who Is Sylvia? as the 2002 Best Play winner, underscoring why Goodman treated it as a contemporary event rather than a settled revival.',
-        href: 'https://en.wikipedia.org/wiki/Tony_Award_for_Best_Play',
-      },
-      {
-        outlet: 'Pulitzer context',
-        summary: 'The play was also a 2003 Pulitzer Prize for Drama finalist, adding another marker of its national standing at the moment Falls staged it in Chicago.',
-        href: 'https://en.wikipedia.org/wiki/The_Goat,_or_Who_Is_Sylvia%3F#Awards_and_nominations',
-      },
-      {
-        outlet: 'Recent critical afterlife',
-        summary: 'Later reviews continue to frame the play around the collapse of an apparently ideal household and the audience discomfort Albee deliberately provokes.',
+        source: 'The Guardian',
+        summary: 'A later revival review that continues to frame the play around the collapse of an apparently ideal household and the audience discomfort Albee deliberately provokes.',
         href: 'https://www.theguardian.com/stage/2023/feb/21/the-goat-or-who-is-sylvia-review-claudia-karvan-stars-in-bestiality-comedy-that-loses-itself-in-farce',
+        note: 'Later revival review',
       },
     ],
     externalSources: [
