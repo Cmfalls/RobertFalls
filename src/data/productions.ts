@@ -267,7 +267,7 @@ import { timelineEntries } from './timeline';
 export type ProductionPageMode = 'archive' | 'featured';
 export type ProductionSourceStatus = 'repo-only' | 'researched' | 'featured-ready';
 export type ProductionImageOrientation = 'landscape' | 'portrait' | 'square';
-export type ProductionImageKind = 'production-still' | 'rehearsal' | 'art';
+export type ProductionImageKind = 'production-still' | 'rehearsal' | 'documentation' | 'art';
 
 export interface ProductionStaging {
   title: string;
@@ -463,13 +463,14 @@ function buildYearSpan(firstYear: string, latestYear: string): string {
   return firstYear === latestYear ? firstYear : `${firstYear} - ${latestYear}`;
 }
 
-function buildEraLabel(firstYearValue: number, latestYearValue: number): string {
+function buildEraLabel(firstYearValue: number, _latestYearValue: number): string {
   if (firstYearValue >= 2020) return 'Post-Goodman transition years';
   if (firstYearValue >= 2010) return 'Late Goodman years';
   if (firstYearValue >= 2000) return 'National and international period';
   if (firstYearValue >= 1990) return 'Broadway transfer years';
-  if (firstYearValue >= 1980) return 'Early Goodman years';
-  return latestYearValue > firstYearValue ? 'Wisdom Bridge foundation years' : 'Early directing years';
+  if (firstYearValue >= 1987) return 'Early Goodman years';
+  if (firstYearValue >= 1977) return 'Wisdom Bridge years';
+  return 'Early directing years';
 }
 
 function buildSummary(title: string, stagings: ProductionStaging[]): string {
@@ -651,13 +652,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
           'The piece reconnects Falls with David Cale after their Goodman and Public Theater work on We\'re Only Alive for a Short Amount of Time.',
       },
     ],
-    contextNotes: [
-      {
-        label: 'Source packet recovery',
-        text:
-          'This credit was present in the broad General Bob source packet but was easy to miss because it sits outside the Goodman/Broadway/Lyric production clusters.',
-      },
-    ],
+    contextNotes: [],
     reviews: [
       {
         source: 'BroadwayWorld',
@@ -998,6 +993,325 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { label: 'New Yorker review context for Terra Nova', href: 'https://www.newyorker.com/magazine/1984/05/07/off-broadway' },
       { label: 'Terra Nova expedition background', href: 'https://en.wikipedia.org/wiki/Terra_Nova_Expedition' },
       { label: 'Robert Falcon Scott background', href: 'https://en.wikipedia.org/wiki/Robert_Falcon_Scott' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'a-streetcar-named-desire': {
+    pageMode: 'archive',
+    summary:
+      'Falls directed A Streetcar Named Desire at Wisdom Bridge Theatre in 1982, staging Tennessee Williams\'s great American drama of desire, delusion, and destruction during the decade when he was building one of Chicago\'s most adventurous young companies.',
+    publicSummary:
+      'A 1982 Wisdom Bridge Theatre production of Tennessee Williams\'s A Streetcar Named Desire, directed by Falls in the middle of his Wisdom Bridge years.',
+    synopsis:
+      'Blanche DuBois arrives at her sister Stella\'s New Orleans apartment, where her fragile world of illusion collides with the rough physicality of Stanley Kowalski. Williams\'s play is one of the great studies of delusion, desire, and the violence of reality breaking through.',
+    fallsContext:
+      'The Wisdom Bridge Streetcar sits in Falls\'s most concentrated period of classical and contemporary production at the company — the same stretch that included Bent, Standing on My Knees, Mother Courage, and In the Belly of the Beast. Falls later recalled the production warmly as one of the formative Wisdom Bridge experiences.',
+    significance:
+      'A major Tennessee Williams revival staged during Falls\'s most productive Wisdom Bridge period, showing him working within the American dramatic canon that would later define his Goodman programming.',
+    story:
+      'A Streetcar Named Desire gave Falls a chance to work at the full emotional and theatrical scale of Williams\'s most celebrated drama during the middle of his Wisdom Bridge years. By 1982 he had already staged Brecht, Fo, Durang, and new American plays at the company; Streetcar put him in contact with the kind of dense, layered, actor-driven American realism that would animate much of his future work. The Wisdom Bridge space — small, close, and live — suited the play\'s suffocating domestic pressure.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for this production.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Tennessee Williams' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Wisdom Bridge staging', value: '1982' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Playwright', value: 'Tennessee Williams' },
+    ],
+    recognition: [
+      {
+        label: 'Major Williams revival',
+        detail: 'Staging Streetcar during his Wisdom Bridge years placed Falls in direct contact with the American dramatic canon he would revisit and expand throughout his Goodman tenure.',
+      },
+    ],
+    externalSources: [
+      { label: 'Robert Falls biography and Wisdom Bridge context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  bent: {
+    pageMode: 'archive',
+    summary:
+      'Falls directed the Midwest premiere of Bent at Wisdom Bridge Theatre in 1981, bringing Martin Sherman\'s landmark drama about gay men in the Nazi camps to Chicago audiences less than two years after its Broadway run.',
+    publicSummary:
+      'The Midwest premiere of Martin Sherman\'s Bent at Wisdom Bridge Theatre in 1981, directed by Falls shortly after the play\'s celebrated Broadway debut.',
+    synopsis:
+      'Max, a hedonistic gay man in 1930s Berlin, is arrested and transported to Dachau, where he struggles to survive, deny, and ultimately accept who he is. Sherman\'s play was one of the first major American dramas to confront the Nazi persecution of gay men.',
+    fallsContext:
+      'The 1981 Bent came during the most politically charged stretch of Falls\'s Wisdom Bridge programming — the same years as Standing on My Knees, Mother Courage, and We Won\'t Pay. Staging Sherman\'s play in Chicago less than two years after its Broadway premiere placed Falls at the leading edge of serious American theatre on the subject of identity, violence, and survival.',
+    significance:
+      'The Midwest premiere of one of the defining plays of its decade, staged by Falls while still in his mid-twenties and building Wisdom Bridge\'s reputation as a theatre willing to take on work of serious moral and political weight.',
+    story:
+      'Martin Sherman\'s Bent had made its Broadway debut in December 1979, running for ninety performances with Richard Gere. By 1981 Falls was programming it as the Midwest premiere at Wisdom Bridge, showing the speed with which he was tracking and staging significant new work. The play\'s subject — the systematic persecution and murder of gay men by the Nazis, and the cost of denial in the face of extermination — was not standard Chicago Off-Loop repertory in 1981. Bringing it to Wisdom Bridge was a statement about what the company was for.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for Bent.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Martin Sherman' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Wisdom Bridge staging', value: '1981' },
+      { label: 'Premiere status', value: 'Midwest premiere' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Broadway debut', value: 'December 1979, with Richard Gere' },
+    ],
+    recognition: [
+      {
+        label: 'Midwest premiere',
+        detail: 'Falls staged the Midwest premiere of Bent in 1981, less than two years after its Broadway run — one of the earliest major U.S. productions of the play outside New York.',
+      },
+      {
+        label: 'Politically significant programming',
+        detail: 'Bringing Sherman\'s drama about the Nazi persecution of gay men to Wisdom Bridge in 1981 demonstrated Falls\'s commitment to work of serious moral weight at a moment when the subject was far from mainstream theatrical fare.',
+      },
+    ],
+    externalSources: [
+      { label: 'Bent (play) background', href: 'https://en.wikipedia.org/wiki/Bent_(play)' },
+      { label: 'Robert Falls biography and Wisdom Bridge context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'getting-out': {
+    pageMode: 'archive',
+    summary:
+      'Falls directed the Midwest premiere of Getting Out at Wisdom Bridge Theatre in 1980, staging Marsha Norman\'s debut play — a formally inventive drama about a woman released from prison and confronting the split between her violent past and fragile present — during the same years he was establishing Wisdom Bridge as a laboratory for important new American writing.',
+    publicSummary:
+      'The Midwest premiere of Marsha Norman\'s Getting Out at Wisdom Bridge Theatre in 1980, directed by Falls early in his tenure as the company\'s Artistic Director.',
+    synopsis:
+      'Arlene, recently paroled after serving time for murder and robbery, returns to a Louisville apartment and tries to piece together a life. On stage with her is Arlie — her younger self, present in simultaneous time, acting out the crimes and the rage that brought them here. The two share the space but not the future.',
+    fallsContext:
+      'The Wisdom Bridge Getting Out came in 1980, during the stretch when Falls was most aggressively staging Midwest premieres of significant recent American plays. Marsha Norman\'s debut had won the American Theatre Critics Association Award for new plays in 1977-78 and run at the Mark Taper Forum and Actors Theatre of Louisville before its New York premiere; bringing it to Chicago as the Midwest premiere was a clear signal of what Wisdom Bridge was becoming.',
+    significance:
+      'The Midwest premiere of Marsha Norman\'s debut play, staged by Falls in 1980 — three years before Normal would win the Pulitzer Prize for \'night, Mother and become one of the most celebrated American playwrights of the decade.',
+    story:
+      'Getting Out announced Marsha Norman before most of America knew her name. Falls staged the Midwest premiere at Wisdom Bridge in 1980, the same year he also staged The Importance of Being Earnest and Travesties in rotating repertory and Yentl as another Midwest premiere. The volume and range of that one-year stretch shows how rapidly Falls was programming at Wisdom Bridge, and how consistently he was choosing plays by writers who would prove consequential. Normal\'s split-time structure — two versions of Arlene sharing the stage, past and present refusing to separate — anticipated the kind of formally demanding staging Falls would continue to pursue throughout his career.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for Getting Out.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'Marsha Norman' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Wisdom Bridge staging', value: '1980' },
+      { label: 'Premiere status', value: 'Midwest premiere' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Playwright later honor', value: 'Norman won the Pulitzer Prize for \'night, Mother in 1983' },
+    ],
+    recognition: [
+      {
+        label: 'Midwest premiere',
+        detail: 'Falls staged the Midwest premiere of Marsha Norman\'s debut play in 1980, before she became one of the central figures of American drama.',
+      },
+      {
+        label: 'Early Norman champion',
+        detail: 'Staging Getting Out three years before \'night, Mother made Falls one of the earliest Chicago directors to give Marsha Norman\'s work a serious local platform.',
+      },
+    ],
+    externalSources: [
+      { label: 'Getting Out (play) background', href: 'https://en.wikipedia.org/wiki/Getting_Out_(play)' },
+      { label: 'Marsha Norman biography', href: 'https://en.wikipedia.org/wiki/Marsha_Norman' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'standing-on-my-knees': {
+    pageMode: 'archive',
+    summary:
+      'Falls directed the world premiere of Standing on My Knees at Wisdom Bridge Theatre in 1981, staging John Olive\'s drama about a schizophrenic woman poet navigating institutional treatment and creative identity — a production that later transferred to Manhattan Theatre Club in New York.',
+    publicSummary:
+      'The world premiere of John Olive\'s Standing on My Knees at Wisdom Bridge Theatre in 1981, directed by Falls; the production later transferred to Manhattan Theatre Club.',
+    synopsis:
+      'Catherine is a young poet who is also schizophrenic, moving between acute episodes and the unstable peace of medication. The play tracks her relationships with a psychiatrist, a lover, and a patron, and asks what it costs to be treated — and what is lost when the illness is stabilized and the poetry slows.',
+    fallsContext:
+      'Standing on My Knees was a world premiere at Wisdom Bridge in the same year as Bent and Mother Courage, showing the range Falls was holding simultaneously: a new American play about mental illness and creative identity alongside a politically charged gay drama and Brecht\'s most scaleable epic. The Manhattan Theatre Club transfer demonstrates that Falls was already producing work that New York would notice.',
+    significance:
+      'A world premiere by Chicago playwright John Olive that transferred to Manhattan Theatre Club after its Wisdom Bridge debut — one of the first clear examples of Falls generating New York-bound work from the Chicago stage.',
+    story:
+      'The world premiere of Standing on My Knees at Wisdom Bridge in 1981 showed Falls working at the intimate, character-driven end of new American writing while simultaneously staging large-scale political drama. Olive\'s play demanded precise, sustained work with a lead actor navigating mental illness across a fractured structure. The production\'s transfer to Manhattan Theatre Club confirmed what the Midwest premiere of Bent and the world premiere of Bagtime had already suggested: that Falls\'s Wisdom Bridge was producing work capable of sustaining national attention.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for Standing on My Knees.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'John Olive' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Wisdom Bridge staging', value: '1981' },
+      { label: 'Premiere status', value: 'World premiere' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'New York transfer', value: 'Manhattan Theatre Club' },
+    ],
+    recognition: [
+      {
+        label: 'World premiere',
+        detail: 'Falls staged the world premiere of John Olive\'s play at Wisdom Bridge in 1981.',
+      },
+      {
+        label: 'Manhattan Theatre Club transfer',
+        detail: 'The production transferred to Manhattan Theatre Club in New York, making it one of the first Falls-directed Wisdom Bridge productions to reach a major New York stage.',
+      },
+    ],
+    externalSources: [
+      { label: 'Robert Falls biography and Wisdom Bridge context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
+      { label: 'Manhattan Theatre Club history', href: 'https://en.wikipedia.org/wiki/Manhattan_Theatre_Club' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  'in-the-belly-of-the-beast': {
+    pageMode: 'archive',
+    summary:
+      'Falls directed the world premiere of In the Belly of the Beast at Wisdom Bridge in 1983, adapting Jack Henry Abbott\'s prison memoir for the stage in a production that toured internationally in 1985, reaching Mayfest Glasgow and the Lyric Hammersmith in London.',
+    publicSummary:
+      'The world premiere of Falls\'s stage adaptation of Jack Henry Abbott\'s prison memoir In the Belly of the Beast, first staged at Goodman Studio Theatre in 1983 and toured internationally in 1985.',
+    synopsis:
+      'Jack Henry Abbott\'s letters from prison described a life spent inside the American penal system from childhood — its violence, its dehumanization, its strange culture. Abbott became famous when Norman Mailer championed his writing and helped get him published and paroled in 1981. Months later, Abbott killed a man. Falls adapted the letters into a theater piece before Abbott\'s case had settled into history.',
+    fallsContext:
+      'In the Belly of the Beast was the most internationally visible production of Falls\'s Wisdom Bridge years, and one of his most formally audacious. Adapting prison letters for the stage — raw, first-person, without conventional dramatic structure — placed him at the intersection of documentary theater, monologue performance, and moral provocation. The 1985 international tour, to Glasgow and London, was Wisdom Bridge\'s first major international statement, and Falls\'s first European presence.',
+    significance:
+      'A world-premiere stage adaptation that toured to Mayfest Glasgow and the Lyric Hammersmith, London in 1985 — the first major international credit of Falls\'s career and one of the most talked-about Chicago productions of the early 1980s.',
+    story:
+      'Jack Henry Abbott had been paroled from federal prison in June 1981 with Norman Mailer\'s advocacy and a published book. Six weeks later he killed a waiter in New York. The case became a flashpoint in debates about rehabilitation, intellectual sympathy, and the romantic mythology of the criminal-as-artist. Falls adapted Abbott\'s letters — written before the murder — for the stage at Wisdom Bridge in 1983, staging them at the Goodman Studio Theatre in a collaboration with the Goodman before either institution had cemented the relationship that would define Falls\'s career. The 1985 international tour took the production to Glasgow and London, making it the first Wisdom Bridge production to carry Falls\'s name beyond North America.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No production-specific still is available for In the Belly of the Beast.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Source text', name: 'Jack Henry Abbott' },
+      { role: 'Adapter / Director', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'World premiere', value: '1983, Wisdom Bridge at Goodman Studio Theatre' },
+      { label: 'International tour', value: '1985 — Mayfest Glasgow; Lyric Hammersmith, London' },
+      { label: 'Source text', value: 'In the Belly of the Beast: Letters from Prison by Jack Henry Abbott' },
+    ],
+    cast: [
+      { role: 'Jack Henry Abbott', name: 'William L. Petersen' },
+    ],
+    recognition: [
+      {
+        label: 'World premiere',
+        detail: 'Falls adapted and directed the world-premiere stage version of Abbott\'s prison letters at Wisdom Bridge in 1983.',
+      },
+      {
+        label: 'International tour',
+        detail: 'The 1985 tour to Mayfest Glasgow and the Lyric Hammersmith was Falls\'s first European directing credit and Wisdom Bridge\'s first significant international production.',
+      },
+    ],
+    externalSources: [
+      { label: 'Jack Henry Abbott background', href: 'https://en.wikipedia.org/wiki/Jack_Henry_Abbott' },
+      { label: 'In the Belly of the Beast (book)', href: 'https://en.wikipedia.org/wiki/In_the_Belly_of_the_Beast' },
+      { label: 'Lyric Hammersmith history', href: 'https://en.wikipedia.org/wiki/Lyric_Hammersmith' },
+      { label: 'Robert Falls biography and Wisdom Bridge context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
+    ],
+    relatedLinks: seedLinks,
+    sourceStatus: 'researched',
+  },
+  hamlet: {
+    pageMode: 'archive',
+    summary:
+      'Falls directed Hamlet at Wisdom Bridge Theatre in 1985 starring Aidan Quinn in the title role, staging Shakespeare\'s tragedy as the valedictory production of his Wisdom Bridge tenure before moving to the Goodman.',
+    publicSummary:
+      'Falls\'s 1985 Hamlet at Wisdom Bridge Theatre, starring Aidan Quinn — the last major production of the Falls era there and a landmark of Chicago theater in the mid-1980s.',
+    synopsis:
+      'The Prince of Denmark returns home to find his father dead, his uncle crowned, and his mother remarried. What follows is Shakespeare\'s most sustained meditation on doubt, action, mortality, and revenge.',
+    fallsContext:
+      'The Wisdom Bridge Hamlet was Falls\'s farewell to the company. He had arrived in 1977 as a twenty-three-year-old and built Wisdom Bridge into one of Chicago\'s most serious theatrical laboratories over eight years. Staging Hamlet — Shakespeare\'s most demanding title role — with a young actor on the edge of his film career, as the final production before his transition to the Goodman, made it a landmark of the Chicago theater generation that had formed under his leadership.',
+    significance:
+      'Falls\'s valedictory Wisdom Bridge production, starring Aidan Quinn as Hamlet in 1985 — a production that crystallized the Falls era at the company and announced his departure to the Goodman.',
+    story:
+      'By 1985, Falls had directed twenty-plus productions at Wisdom Bridge, introduced Chicago audiences to dozens of Midwest and world premieres, and established a company identity inseparable from his own. Hamlet was the production that closed that chapter. Aidan Quinn, who would gain wide film notice the following year in At Close Range and Desperately Seeking Susan, played the Prince. The production confirmed that Falls could work in the full classical repertory before he arrived at the Goodman with the full scope of his ambitions.',
+    venueAnchor: 'Wisdom Bridge Theatre',
+    eraLabel: 'Wisdom Bridge years',
+    images: [
+      {
+        src: fallsWisdomBridgeRehearsal,
+        alt: 'Robert Falls in a black-and-white Wisdom Bridge-era rehearsal photograph.',
+        caption: 'Robert Falls in rehearsal during the Wisdom Bridge years. No Wisdom Bridge Hamlet production still is available.',
+        orientation: 'landscape',
+        priority: true,
+        kind: 'rehearsal',
+      },
+    ],
+    collaborators: [
+      { role: 'Playwright', name: 'William Shakespeare' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Cast highlight', name: 'Aidan Quinn' },
+    ],
+    quickFacts: [
+      { label: 'Wisdom Bridge staging', value: '1985' },
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Lead', value: 'Aidan Quinn as Hamlet' },
+    ],
+    cast: [
+      { role: 'Hamlet', name: 'Aidan Quinn' },
+    ],
+    recognition: [
+      {
+        label: 'Valedictory Wisdom Bridge production',
+        detail: 'Hamlet was the final major production of Falls\'s Wisdom Bridge tenure; he moved to the Goodman the following year.',
+      },
+      {
+        label: 'Aidan Quinn',
+        detail: 'Quinn\'s performance as Hamlet came as he was emerging as a film actor; At Close Range and Desperately Seeking Susan both appeared in 1986.',
+      },
+    ],
+    externalSources: [
+      { label: 'Aidan Quinn biography', href: 'https://en.wikipedia.org/wiki/Aidan_Quinn' },
+      { label: 'Robert Falls biography and Wisdom Bridge context', href: 'https://en.wikipedia.org/wiki/Robert_Falls' },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'researched',
@@ -5029,14 +5343,15 @@ const productionSeeds: Record<string, ProductionSeed> = {
         alt: 'The Longacre Theatre facade at night, marquee reading "Liev Schreiber in Talk Radio by Eric Bogosian directed by Robert Falls."',
         caption: 'The Longacre Theatre marquee on a Broadway night — the production\'s most public-facing record.',
         orientation: 'landscape',
-        kind: 'art',
+        priority: true,
+        kind: 'documentation',
       },
       {
         src: talkRadioMarqueeDay,
         alt: 'Longacre Theatre marquee sign in daylight, reading "Liev Schreiber in Talk Radio by Eric Bogosian directed by Robert Falls."',
         caption: 'Daytime marquee documentation from the Longacre run.',
         orientation: 'portrait',
-        kind: 'art',
+        kind: 'documentation',
       },
       {
         src: talkRadioPlaybill,
@@ -6510,11 +6825,11 @@ const productionSeeds: Record<string, ProductionSeed> = {
     images: [
       {
         src: enemyShowArt,
-        alt: 'Lanise Antoine Shelley and Philip Earl Johnson in the Goodman Theatre show art for An Enemy of the People.',
-        caption: 'Official Goodman Theatre show art for An Enemy of the People, featuring Lanise Antoine Shelley and Philip Earl Johnson.',
+        alt: 'Lanise Antoine Shelley and Philip Earl Johnson onstage in An Enemy of the People at Goodman Theatre.',
+        caption: 'Lanise Antoine Shelley and Philip Earl Johnson in Goodman Theatre\'s An Enemy of the People.',
         orientation: 'landscape',
         priority: true,
-        kind: 'art',
+        kind: 'production-still',
       },
     ],
     collaborators: [
