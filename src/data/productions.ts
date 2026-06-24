@@ -183,6 +183,9 @@ import roseTattooPlaybill from '../images/the-rose-tattoo/the-rose-tattoo-playbi
 import speedOfDarknessPlaybill from '../images/the-speed-of-darkness/the-speed-of-darkness-playbill.jpg';
 import youngManFromAtlantaPlaybill from '../images/the-young-man-from-atlanta/the-young-man-from-atlanta-playbill.jpg';
 import talkRadioPlaybill from '../images/talk-radio/talk-radio-playbill.jpg';
+import talkRadioPoster from '../images/talk-radio/talk-radio-poster.jpg';
+import talkRadioMarqueeDay from '../images/talk-radio/talk-radio-marquee-day.jpg';
+import talkRadioMarqueeNight from '../images/talk-radio/talk-radio-marquee-night.jpg';
 import aidaPlaybill from '../images/aida/aida-playbill.jpg';
 import aidaHeadleyPascal from '../images/aida/aida-headley-pascal.jpg';
 import aidaAmnerisEnsemble from '../images/aida/aida-amneris-ensemble.jpg';
@@ -1244,6 +1247,20 @@ const productionSeeds: Record<string, ProductionSeed> = {
           'Coverage frames the production as a major Steppenwolf 50th anniversary event and Falls\'s first time directing for the company.',
       },
       {
+        source: 'BroadwayWorld',
+        href: 'https://www.broadwayworld.com/chicago/article/Review-AMADEUS-at-Steppenwolf-Theatre-Company-20251117',
+        summary:
+          'Rachel Weinberg\'s review records the 18-member Steppenwolf production and its extended January 2026 run.',
+        note: 'General Bob source packet',
+      },
+      {
+        source: 'BroadwayWorld photos',
+        href: 'https://www.broadwayworld.com/article/Photos-AMADEUS-Opens-at-Steppenwolf-Theatre-Company-20251121',
+        summary:
+          'Opening-night coverage documents the production after its first extension and supplies additional public imagery for the archive.',
+        note: 'Photo coverage',
+      },
+      {
         source: 'Audience reaction video',
         href: 'https://www.youtube.com/watch?v=-Cqo99vwxCk',
         summary:
@@ -1272,6 +1289,22 @@ const productionSeeds: Record<string, ProductionSeed> = {
       {
         label: 'Axios coverage of Steppenwolf season',
         href: 'https://www.axios.com/local/chicago/2025/07/01/director-robert-falls-steppenwolf-50th-anniversary-season-amadeus-goodman',
+      },
+      {
+        label: 'BroadwayWorld Amadeus review',
+        href: 'https://www.broadwayworld.com/chicago/article/Review-AMADEUS-at-Steppenwolf-Theatre-Company-20251117',
+      },
+      {
+        label: 'BroadwayWorld Amadeus opening photos',
+        href: 'https://www.broadwayworld.com/article/Photos-AMADEUS-Opens-at-Steppenwolf-Theatre-Company-20251121',
+      },
+      {
+        label: 'BroadwayWorld full cast announcement',
+        href: 'https://www.broadwayworld.com/chicago/article/Full-Cast-Set-for-AMADEUS-at-Steppenwolf-Theatre-Company-20250828',
+      },
+      {
+        label: 'BroadwayWorld extension announcement',
+        href: 'https://www.broadwayworld.com/chicago/article/AMADEUS-Now-Extended-at-Steppenwolf-Theatre-Company-20251006',
       },
       { label: 'Steppenwolf Theatre Company', href: 'https://www.steppenwolf.org/' },
     ],
@@ -1532,15 +1565,53 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         source: 'BroadwayWorld',
-        href: 'https://www.goodmantheatre.org/show/holiday/',
+        href: 'https://www.broadwayworld.com/chicago/article/Review-HOLIDAY-at-Goodman-Theatre-20260210',
         summary:
-          'Goodman includes BroadwayWorld praise for the production as a superbly acted romantic comedy.',
+          'Rachel Weinberg\'s review calls the Falls-directed revival a lively romantic comedy and records the March 8 extended run.',
+      },
+      {
+        source: 'BroadwayWorld photos',
+        href: 'https://www.broadwayworld.com/chicago/article/Photos-Wesley-Taylor-Molly-Griggs-and-More-in-HOLIDAY-at-Goodman-Theatre-20260204',
+        summary:
+          'Production-photo coverage documents the Goodman cast and the visual life of Falls\'s Centennial Season return.',
+      },
+      {
+        source: 'BroadwayWorld video',
+        href: 'https://www.broadwayworld.com/chicago/article/Video-Wesley-Taylor-Molly-Griggs-and-More-in-HOLIDAY-at-Goodman-Theatre-20260210',
+        summary:
+          'Video coverage pairs with the Goodman montage and preserves another public-facing record of the production in performance.',
+      },
+      {
+        source: 'BroadwayWorld extension announcement',
+        href: 'https://www.broadwayworld.com/chicago/article/HOLIDAY-Starring-Wesley-Taylor-Molly-Griggs-and-More-Extends-at-The-Goodman-20260212',
+        summary:
+          'Coverage confirms the popular-demand extension through March 8, 2026.',
       },
     ],
     externalSources: [
       { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/holiday/' },
       { label: 'Susan V. Booth welcomes Holiday', href: 'https://www.goodmantheatre.org/susan-v-booth-welcomes-you-to-holiday/' },
       { label: 'The Real Life Lovebirds of Holiday', href: 'https://www.goodmantheatre.org/the-real-life-lovebirds-of-holiday/' },
+      {
+        label: 'BroadwayWorld Holiday review',
+        href: 'https://www.broadwayworld.com/chicago/article/Review-HOLIDAY-at-Goodman-Theatre-20260210',
+      },
+      {
+        label: 'BroadwayWorld Holiday extension',
+        href: 'https://www.broadwayworld.com/chicago/article/HOLIDAY-Starring-Wesley-Taylor-Molly-Griggs-and-More-Extends-at-The-Goodman-20260212',
+      },
+      {
+        label: 'BroadwayWorld Holiday production photos',
+        href: 'https://www.broadwayworld.com/chicago/article/Photos-Wesley-Taylor-Molly-Griggs-and-More-in-HOLIDAY-at-Goodman-Theatre-20260204',
+      },
+      {
+        label: 'BroadwayWorld Holiday video',
+        href: 'https://www.broadwayworld.com/chicago/article/Video-Wesley-Taylor-Molly-Griggs-and-More-in-HOLIDAY-at-Goodman-Theatre-20260210',
+      },
+      {
+        label: 'BroadwayWorld Holiday rehearsal photos',
+        href: 'https://www.broadwayworld.com/chicago/article/Photos-Wesley-Taylor-Molly-Griggs-and-More-in-Rehearsals-for-HOLIDAY-at-Goodman-20260107',
+      },
       { label: 'Holiday play background', href: 'https://en.wikipedia.org/wiki/Holiday_(play)' },
       { label: 'Richard Greenberg background', href: 'https://en.wikipedia.org/wiki/Richard_Greenberg' },
     ],
@@ -1552,10 +1623,10 @@ const productionSeeds: Record<string, ProductionSeed> = {
         thumbnail: holidayGoodman,
       },
       {
-        label: 'Holiday Rehearsal Montage',
-        href: 'https://www.youtube.com/watch?v=S9ehrIXcW2s',
-        description: 'Goodman rehearsal-room montage for the 2026 staging.',
-        thumbnail: holidayRehearsal1,
+        label: 'Holiday Montage',
+        href: 'https://www.youtube.com/watch?v=kiSTmy5FeyY',
+        description: 'Goodman production montage for the 2026 staging.',
+        thumbnail: holidayProductionBww8,
       },
       {
         label: 'Holiday Scene 3',
@@ -1679,6 +1750,10 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Long collaboration',
         detail: 'Timeline notes describe it as Falls and Rebecca Gilman’s sixth Goodman collaboration.',
       },
+      {
+        label: 'New York recognition',
+        detail: 'Falls received a 2024 Outer Critics Circle nomination for Outstanding Direction of a Play for the New York run.',
+      },
     ],
     contextNotes: [
       {
@@ -1711,11 +1786,34 @@ const productionSeeds: Record<string, ProductionSeed> = {
         summary:
           'The New Yorker review of the New York transfer foregrounds the Wisconsin landscape, Fisher\'s central performance, and the polished ensemble.',
       },
+      {
+        source: 'BroadwayWorld',
+        href: 'https://www.broadwayworld.com/article/Video-Audible-Theater-Celebrates-Opening-Night-of-SWING-STATE-20230920',
+        summary:
+          'Opening-night video coverage from the Audible Theater transfer documents the New York afterlife of the Goodman world premiere.',
+        note: 'Video coverage',
+      },
     ],
     externalSources: [
       { label: 'Official Goodman production page', href: 'https://www.goodmantheatre.org/show/swing-state/' },
       { label: 'New Yorker review of New York transfer', href: 'https://www.newyorker.com/magazine/2023/10/02/swing-state-dig-theatre-reviews' },
       { label: 'New York Theatre Guide review', href: 'https://www.newyorktheatreguide.com/reviews/swing-state-off-broadway-review' },
+      {
+        label: 'BroadwayWorld opening-night video',
+        href: 'https://www.broadwayworld.com/article/Video-Audible-Theater-Celebrates-Opening-Night-of-SWING-STATE-20230920',
+      },
+      {
+        label: 'Outer Critics Circle nominations',
+        href: 'https://www.broadwayworld.com/article/DEAD-OUTLAW-STEREOPHONIC-More-Lead-in-Nominations-for-2024-Outer-Critics-Circle-Awards-20240423',
+      },
+    ],
+    watchLinks: [
+      {
+        label: 'Audible Theater Opening Night',
+        href: 'https://www.broadwayworld.com/article/Video-Audible-Theater-Celebrates-Opening-Night-of-SWING-STATE-20230920',
+        description: 'BroadwayWorld video coverage of the New York opening night.',
+        thumbnail: swingStateGoodmanThumb,
+      },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
@@ -2039,6 +2137,12 @@ const productionSeeds: Record<string, ProductionSeed> = {
         note: '2026/27 season announcement',
       },
       {
+        source: 'BroadwayWorld',
+        href: 'https://www.broadwayworld.com/chicago/article/DON-GIOVANNI-LA-TRAVIATA-and-More-Set-for-Lyric-Opera-of-Chicago-202627-Season-20260409',
+        summary: 'Lyric season-announcement coverage confirms the October 10-November 1, 2026 Don Giovanni revival, Enrique Mazzola conducting, and the 2026/27 cast led by Christian Van Horn with Kyle Ketelsen sharing the title role.',
+        note: 'General Bob source packet',
+      },
+      {
         source: 'Dallas Opera',
         href: 'https://dallasopera.org/performance/don-giovanni/',
         summary: 'Dallas Opera\'s archive page confirms the April 2018 run was "brought in from" Lyric Opera of Chicago, with Falls credited as director and most of the original Lyric design team retained.',
@@ -2053,6 +2157,10 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { label: 'Chicago Sun-Times review (2019)', href: 'https://chicago.suntimes.com/2019/11/15/20966948/don-giovanni-review-lyric-opera-chicago-robert-falls-lucas-meachem' },
       { label: 'WTTW News feature (2019)', href: 'https://news.wttw.com/2019/11/15/stunning-don-giovanni-surprisingly-ideal-fit-metoo-era' },
       { label: 'Chicago Classical Review on the 2026/27 season', href: 'https://chicagoclassicalreview.com/2026/04/don-giovanni-susannah-herodiade-on-tap-in-lyric-operas-2026-27-season/' },
+      {
+        label: 'BroadwayWorld Lyric 2026/27 season announcement',
+        href: 'https://www.broadwayworld.com/chicago/article/DON-GIOVANNI-LA-TRAVIATA-and-More-Set-for-Lyric-Opera-of-Chicago-202627-Season-20260409',
+      },
       { label: 'Newcity review (2014)', href: 'https://www.newcitystage.com/2014/09/30/review-don-giovannilyric-opera/' },
       { label: 'Stage and Cinema review (2019)', href: 'https://stageandcinema.com/2019/11/17/don-giovanni-lyric/' },
     ],
@@ -2590,11 +2698,24 @@ const productionSeeds: Record<string, ProductionSeed> = {
         text: 'Current hero image comes from Playbill’s Broadway retrospective gallery and is credited there to Joan Marcus.',
       },
     ],
+    reviews: [
+      {
+        source: 'BroadwayWorld',
+        href: 'https://www.broadwayworld.com/article/Back-to-Nubia-Stories-from-the-Making-of-AIDA-After-25-Years-20251206',
+        summary:
+          'A 25-year retrospective gathers Heather Headley, Adam Pascal, and Sherie Rene Scott looking back on the original Broadway production and its long afterlife.',
+        note: 'General Bob source packet',
+      },
+    ],
     externalSources: [
       { label: 'Music Theatre International show page', href: 'https://www.mtishows.com/elton-john-and-tim-rices-aida' },
       { label: 'D23 on the Chicago opening', href: 'https://d23.com/this-day/the-aida-musical-show-opens-at-the-cadillac-palace-theatre-in-chicago/' },
       { label: 'David Henry Hwang project page', href: 'https://www.davidhenryhwang.com/work-1/2019/6/14/aida' },
       { label: 'Playbill photo look-back', href: 'https://playbill.com/article/look-back-at-heather-headley-sherie-rene-scott-and-adam-pascal-in-aida-on-broadway' },
+      {
+        label: 'BroadwayWorld Aida 25-year retrospective',
+        href: 'https://www.broadwayworld.com/article/Back-to-Nubia-Stories-from-the-Making-of-AIDA-After-25-Years-20251206',
+      },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
@@ -4935,11 +5056,31 @@ const productionSeeds: Record<string, ProductionSeed> = {
     eraLabel: 'Broadway transfer years',
     images: [
       {
+        src: talkRadioPoster,
+        alt: 'Tall vertical lobby poster for Talk Radio at the Longacre Theatre, showing Liev Schreiber\'s face in dramatic black-and-white over Barry Champlain\'s monologue text: "I\'m here to lead you by the hand through the dark forest of your own hatred and humiliation."',
+        caption: 'The show\'s lobby card distills the production into one image: Schreiber\'s face and Champlain\'s voice, nothing else.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
+        src: talkRadioMarqueeNight,
+        alt: 'The Longacre Theatre facade at night, marquee reading "Liev Schreiber in Talk Radio by Eric Bogosian directed by Robert Falls."',
+        caption: 'The Longacre Theatre marquee on a Broadway night — the production\'s most public-facing record.',
+        orientation: 'landscape',
+        kind: 'art',
+      },
+      {
+        src: talkRadioMarqueeDay,
+        alt: 'Longacre Theatre marquee sign in daylight, reading "Liev Schreiber in Talk Radio by Eric Bogosian directed by Robert Falls."',
+        caption: 'Daytime marquee documentation from the Longacre run.',
+        orientation: 'portrait',
+        kind: 'art',
+      },
+      {
         src: talkRadioPlaybill,
         alt: 'Playbill cover for Talk Radio at the Longacre Theatre, with a close-up black-and-white photo of Liev Schreiber.',
         caption: 'Playbill cover art for the Longacre Theatre engagement.',
         orientation: 'portrait',
-        priority: true,
         kind: 'art',
       },
     ],
@@ -4947,6 +5088,10 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'Playwright', name: 'Eric Bogosian' },
       { role: 'Director', name: 'Robert Falls' },
       { role: 'Cast highlight', name: 'Liev Schreiber' },
+      { role: 'Set Design', name: 'Mark Wendland' },
+      { role: 'Costume Design', name: 'Laura Bauer' },
+      { role: 'Lighting Design', name: 'Christopher Akerlind' },
+      { role: 'Sound Design', name: 'Richard Woodbury' },
     ],
     quickFacts: [
       { label: 'Run', value: 'Mar 11 - Jun 24, 2007' },
@@ -4967,6 +5112,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'Caller / Ensemble', name: 'Kit Williamson' },
       { role: 'Caller / Ensemble', name: 'Cornell Womack' },
       { role: 'Caller / Ensemble', name: 'Christy Pusz' },
+      { role: 'Caller / Ensemble', name: 'Oliver Vaquer' },
     ],
     recognition: [
       {
@@ -4999,14 +5145,6 @@ const productionSeeds: Record<string, ProductionSeed> = {
         label: 'Review context',
         text: 'Hilton Als\'s New Yorker review framed the revival around Schreiber\'s Barry Champlain, reading the production through masculine rage, media exposure, and public unraveling.',
       },
-      {
-        label: 'Archive note',
-        text: 'The current project files preserve a Broadway Playbill image but no production stills, rehearsal images, or local review packet, so this page remains a text-led Broadway profile.',
-      },
-      {
-        label: 'Source note',
-        text: 'The page separates documented dates, awards, cast roles, and review coverage from broader interpretive context about Bogosian\'s radio-station pressure cooker.',
-      },
     ],
     reviews: [
       {
@@ -5022,6 +5160,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { label: '2007 Tony Awards nominations', href: 'https://www.tonyawards.com/nominees/year/2007/category/any/show/any/' },
       { label: '1988 Pulitzer Prize Drama finalist', href: 'https://www.pulitzer.org/finalists/eric-bogosian' },
       { label: 'Sebastian Stan Broadway role context', href: 'https://en.wikipedia.org/wiki/Sebastian_Stan' },
+      { label: 'Talk Radio celebrates 100th performance (BroadwayWorld)', href: 'https://www.broadwayworld.com/article/Talk-Radio-Celebrates-100th-Performance-on-May-12-20070430' },
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
@@ -9151,6 +9290,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { label: 'Newcity Stage review', href: 'https://www.newcitystage.com/2010/10/26/review-the-seagullgoodman-theatre/' },
       { label: 'ChicagoCritic review', href: 'https://chicagocritic.com/the-seagull/' },
       { label: 'Theater In Chicago feature', href: 'https://www.theatreinchicago.com/news/artistic-director-robert-falls-directs-an-intimate-fresh-take-on-chekhovs-the-seagull/227/' },
+      { label: 'Goodman Theatre study guide', href: 'https://www.yumpu.com/en/document/view/22043144/the-seagull-study-guide-12mb-goodman-theatre' },
       { label: 'YouTube stage clip', href: 'https://www.youtube.com/watch?v=8FoAYU8u0mI' },
       { label: 'Playbill casting announcement', href: 'https://playbill.com/article/goodmans-seagull-to-spotlight-mary-beth-fisher-francis-guinan-heather-wood-com-170796' },
       { label: 'Playbill run announcement', href: 'https://playbill.com/article/francis-guinan-mary-beth-fisher-feast-on-seagull-at-the-goodman-oct-16-nov-14-com-172710' },
