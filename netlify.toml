@@ -1,3 +1,8 @@
+# This file is the single source of truth for headers. Do not add a
+# public/_headers file alongside it: Netlify applies both and netlify.toml
+# wins on conflicts, so the _headers values silently do nothing and drift
+# out of sync with what is actually served.
+
 [build]
 command = "npm run build"
 publish = "dist"
@@ -71,6 +76,18 @@ NODE_VERSION = "20"
 
 [[headers]]
   for = "/timeline/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Generated at build time from the production data — must not go stale,
+# or crawlers keep seeing a sitemap that no longer matches the site.
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/robots.txt"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
