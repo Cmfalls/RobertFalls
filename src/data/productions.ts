@@ -41,7 +41,8 @@ import uncleVanya7 from '../images/uncle-vanya/uncle-vanya-7.webp';
 import uncleVanya8 from '../images/uncle-vanya/uncle-vanya-8.webp';
 import uncleVanya9 from '../images/uncle-vanya/uncle-vanya-9.webp';
 import uncleVanya11 from '../images/uncle-vanya/uncle-vanya-11.webp';
-import seagullShowArt from '../images/the-seagull/the-seagull-show-art.png';
+// Same photograph as the-seagull-show-art.png, at 900x600 instead of 768x512.
+import seagullShowArt from '../images/the-seagull/the-seagull-art.png';
 import seagullEnsemble from '../images/the-seagull/the-seagull-ensemble.jpg';
 import seagull1 from '../images/the-seagull/the-seagull-1.jpg';
 import seagull2 from '../images/the-seagull/the-seagull-2.jpg';
@@ -61,6 +62,9 @@ import icemanBam1 from '../images/the-iceman-cometh/the-iceman-cometh-bam-1.webp
 import icemanBam2 from '../images/the-iceman-cometh/the-iceman-cometh-bam-2.jpg';
 import icemanBam3 from '../images/the-iceman-cometh/the-iceman-cometh-bam-3.jpg';
 import icemanBam4 from '../images/the-iceman-cometh/the-iceman-cometh-bam-4.jpg';
+import icemanHickeyEntrance from '../images/web-sourced/the-iceman-cometh-112.jpg';
+import icemanLarrySlade from '../images/web-sourced/the-iceman-cometh-114.jpg';
+import brooklynAcademyOfMusic from '../images/venues/brooklyn-academy-of-music.jpg';
 import jacksonianHero from '../images/the-jacksonian/the-jacksonian-hero.jpg';
 import jacksonian1 from '../images/the-jacksonian/the-jacksonian-1.jpg';
 import jacksonian2 from '../images/the-jacksonian/the-jacksonian-2.webp';
@@ -125,7 +129,8 @@ import blindDateShowArt from '../images/blind-date/blind-date-show-art.png';
 import blindDate1 from '../images/blind-date/blind-date-1.jpg';
 import blindDate2 from '../images/blind-date/blind-date-2.jpg';
 import blindDate4 from '../images/blind-date/blind-date-4.jpg';
-import lunaGaleShowArt from '../images/luna-gale/luna-gale-show-art.png';
+// Same artwork as luna-gale/luna-gale-show-art.png, at 900x600 instead of 768x512.
+import lunaGaleShowArt from '../images/web-sourced/luna-gale-goodman.png';
 import lunaGalePoster from '../images/luna-gale/luna-gale-poster.jpg';
 import lunaGaleLaPoster from '../images/luna-gale/luna-gale-la-poster.jpg';
 import lunaGale1 from '../images/luna-gale/luna-gale-1.jpg';
@@ -145,6 +150,8 @@ import donGiovanni6 from '../images/don-giovanni/don-giovanni-6.jpg';
 import donGiovanni7 from '../images/don-giovanni/don-giovanni-7.jpg';
 import donGiovanni8 from '../images/don-giovanni/don-giovanni-8.jpg';
 import donGiovanni2019Revival from '../images/don-giovanni/don-giovanni-2019-revival.jpg';
+import donGiovanniMaskedTrio from '../images/web-sourced/don-giovanni-lyric-1.jpg';
+import donGiovanniFinale from '../images/web-sourced/don-giovanni-lyric-2.jpg';
 import americanBuffaloPlaybill from '../images/american-buffalo/american-buffalo-playbill.jpg';
 import americanBuffaloLogo from '../images/american-buffalo/american-buffalo-logo.png';
 import americanBuffalo1 from '../images/american-buffalo/american-buffalo-1.jpg';
@@ -2633,6 +2640,20 @@ const productionSeeds: Record<string, ProductionSeed> = {
         orientation: 'landscape',
         kind: 'production-still',
       },
+      {
+        src: donGiovanniMaskedTrio,
+        alt: 'Three masked guests in elaborate period costume cross the stage before a bank of candles and a laid banquet table.',
+        caption: 'The masked trio arrives at Giovanni\'s ball, the stage banked with candles behind them.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: donGiovanniFinale,
+        alt: 'Six singers stand spread across a dark stage around a gilded shrine to the Virgin of Guadalupe, one man kneeling at centre in a white suit.',
+        caption: 'The closing scene gathers the survivors around a candlelit shrine after Giovanni\'s damnation.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
     ],
     collaborators: [
       { role: 'Composer', name: 'Wolfgang Amadeus Mozart' },
@@ -4369,6 +4390,27 @@ const productionSeeds: Record<string, ProductionSeed> = {
         caption: 'Another BAM ensemble still, emphasizing the worn room and the production\'s patient group dynamics.',
         orientation: 'landscape',
         kind: 'production-still',
+      },
+      {
+        src: icemanHickeyEntrance,
+        alt: 'Nathan Lane as Hickey stands in a pinstripe suit beneath paper party chains in Harry Hope\'s saloon.',
+        caption: 'Hickey holds the room during the birthday party, the saloon dressed in paper chains and a gold star.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: icemanLarrySlade,
+        alt: 'Brian Dennehy as Larry Slade gestures from a chair while a younger man in a pinstripe suit watches from behind.',
+        caption: 'Dennehy\'s Larry Slade argues from the sidelines he claims to have retired to.',
+        orientation: 'landscape',
+        kind: 'production-still',
+      },
+      {
+        src: brooklynAcademyOfMusic,
+        alt: 'The 1907 Brooklyn Academy of Music building on a clear day, its name carved above the arched windows.',
+        caption: 'The Brooklyn Academy of Music, where the Goodman production transferred in 2015.',
+        orientation: 'landscape',
+        kind: 'documentation',
       },
     ],
     collaborators: [

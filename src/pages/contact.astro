@@ -40,7 +40,7 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
           <p class="section-eyebrow">Inquiry Paths</p>
           <h2 class="section-heading">What This Page Handles</h2>
         </div>
-        <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/55">
+        <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/70">
           choose the closest request type
         </div>
       </div>
@@ -51,7 +51,7 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
           <p class="text-brand-ink/72 text-sm leading-relaxed">
             For directing invitations, producing conversations, festival appearances, and booking requests.
           </p>
-          <div class="mt-4 text-[11px] uppercase tracking-[0.16em] text-brand-ink/50">Use subject: Booking / Representation</div>
+          <div class="mt-4 text-[11px] uppercase tracking-[0.16em] text-brand-ink/70">Use subject: Booking / Representation</div>
           <a href="#contact-form" class="inline-flex mt-4 text-sm font-semibold text-brand-oxblood hover:text-brand-oxbloodBright transition-colors">
             Start a booking inquiry &rarr;
           </a>
@@ -62,7 +62,7 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
           <p class="text-brand-ink/72 text-sm leading-relaxed">
             For interviews, biographies, headshots, approved production photography, and publicity requests.
           </p>
-          <div class="mt-4 text-[11px] uppercase tracking-[0.16em] text-brand-ink/50">Use subject: Media / Press</div>
+          <div class="mt-4 text-[11px] uppercase tracking-[0.16em] text-brand-ink/70">Use subject: Media / Press</div>
           <div class="flex flex-wrap gap-4 mt-4">
             <a href="/press" class="inline-flex text-sm font-semibold text-brand-oxblood hover:text-brand-oxbloodBright transition-colors">
               Open press page &rarr;
@@ -78,7 +78,7 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
           <p class="text-brand-ink/72 text-sm leading-relaxed">
             For archive questions, speaking requests, permissions questions, and anything that does not fit the other lanes.
           </p>
-          <div class="mt-4 text-[11px] uppercase tracking-[0.16em] text-brand-ink/50">Use subject: General Inquiry</div>
+          <div class="mt-4 text-[11px] uppercase tracking-[0.16em] text-brand-ink/70">Use subject: General Inquiry</div>
           <a href="#contact-form" class="inline-flex mt-4 text-sm font-semibold text-brand-oxblood hover:text-brand-oxbloodBright transition-colors">
             Send a message &rarr;
           </a>
@@ -102,7 +102,7 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
           <p class="section-eyebrow">Message Form</p>
           <h2 class="font-display text-3xl text-brand-ink">Send a Message</h2>
         </div>
-        <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/45">
+        <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/65">
           route it cleanly the first time
         </div>
       </div>
@@ -113,6 +113,7 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
         data-netlify="true"
         netlify-honeypot="bot-field"
         class="space-y-5"
+        data-contact-form
       >
         <input type="hidden" name="form-name" value="contact" />
         <p class="hidden">
@@ -122,6 +123,7 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
           <label for="name" class="block text-sm font-medium text-brand-ink mb-1">Name</label>
           <input
             type="text" id="name" name="name" required
+            autocomplete="name"
             class="w-full border border-brand-ink/20 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-oxblood bg-white"
           />
         </div>
@@ -129,6 +131,7 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
           <label for="email" class="block text-sm font-medium text-brand-ink mb-1">Email</label>
           <input
             type="email" id="email" name="email" required
+            autocomplete="email"
             class="w-full border border-brand-ink/20 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-oxblood bg-white"
           />
         </div>
@@ -151,8 +154,25 @@ import rehearsalPhoto from '../images/falls-rehearsal-recent.jpg';
             class="w-full border border-brand-ink/20 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-oxblood bg-white resize-y"
           ></textarea>
         </div>
-        <button type="submit" class="btn-primary w-full justify-center">Send Message</button>
+        <button type="submit" class="btn-primary w-full justify-center" data-submit-label>Send Message</button>
+        <p class="text-xs leading-relaxed text-brand-ink/60" aria-live="polite" data-submit-status>
+          Messages are sent through the site's secure Netlify form handler.
+        </p>
       </form>
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const contactForm = document.querySelector<HTMLFormElement>('[data-contact-form]');
+  const submitLabel = document.querySelector<HTMLButtonElement>('[data-submit-label]');
+  const submitStatus = document.querySelector<HTMLElement>('[data-submit-status]');
+
+  if (contactForm && submitLabel && submitStatus) {
+    contactForm.addEventListener('submit', () => {
+      submitLabel.disabled = true;
+      submitLabel.textContent = 'Sending...';
+      submitStatus.textContent = 'Sending your message now.';
+    });
+  }
+</script>

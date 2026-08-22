@@ -1,9 +1,48 @@
 ---
 import { Image } from 'astro:assets';
+import fs from 'node:fs';
+import path from 'node:path';
+import sharp from 'sharp';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { featuredPress, pressSections, pressStats, type PressCategory } from '@data/press';
-import portraitPhoto from '../images/robert-falls-portrait.webp';
+import portraitPhoto from '../images/robert-falls-portrait-2025.jpg';
 import amadeusMozartPhoto from '../images/amadeus/amadeus-mozart.jpg';
+
+// Downloadable media assets. Specs are measured from the real files at build
+// time rather than typed by hand — this block previously advertised a
+// "high-resolution" headshot that was a 300x300, 40 KB thumbnail.
+async function measure(publicHref: string) {
+  const file = path.join(process.cwd(), 'public', publicHref.replace(/^\//, ''));
+  const { width, height } = await sharp(file).metadata();
+  const bytes = fs.statSync(file).size;
+  const size = bytes >= 1024 * 1024
+    ? `${(bytes / 1024 / 1024).toFixed(1)} MB`
+    : `${Math.round(bytes / 1024)} KB`;
+  return `${path.extname(file).slice(1).toUpperCase()} · ${width} × ${height} · ${size}`;
+}
+
+const mediaAssets = [
+  {
+    href: '/images/press/robert-falls-headshot-2025.jpg',
+    preview: portraitPhoto,
+    alt: 'Robert Falls, 2025 portrait',
+    title: 'Headshot',
+    subtitle: 'Robert Falls, 2025 — print resolution',
+    objectPosition: 'object-center',
+  },
+  {
+    href: '/images/amadeus-mozart.jpg',
+    preview: amadeusMozartPhoto,
+    alt: 'Amadeus production photo, Steppenwolf Theatre',
+    title: 'Production Photo',
+    subtitle: 'Amadeus, Steppenwolf Theatre — web resolution',
+    objectPosition: 'object-center',
+  },
+];
+
+const mediaDownloads = await Promise.all(
+  mediaAssets.map(async (asset) => ({ ...asset, spec: await measure(asset.href) })),
+);
 
 const categoryLabels: Record<PressCategory, string> = {
   profile: 'Profile',
@@ -35,7 +74,7 @@ const categoryLabels: Record<PressCategory, string> = {
 
   <nav class="bg-brand-cream border-b border-brand-ink/10 sticky top-20 md:top-24 z-30 backdrop-blur-sm" aria-label="Jump to press section">
     <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-x-5 gap-y-1 flex-wrap text-xs">
-      <span class="uppercase tracking-[0.16em] text-brand-ink/40 hidden sm:inline">Jump to</span>
+      <span class="uppercase tracking-[0.16em] text-brand-ink/65 hidden sm:inline">Jump to</span>
       <a href="#press-profiles" class="font-display font-semibold uppercase tracking-[0.14em] text-brand-oxblood/75 hover:text-brand-oxblood transition-colors">Profiles</a>
       <a href="#press-reviews" class="font-display font-semibold uppercase tracking-[0.14em] text-brand-oxblood/75 hover:text-brand-oxblood transition-colors">Reviews</a>
       <a href="#press-retrospectives" class="font-display font-semibold uppercase tracking-[0.14em] text-brand-oxblood/75 hover:text-brand-oxblood transition-colors">Retrospectives</a>
@@ -89,57 +128,49 @@ const categoryLabels: Record<PressCategory, string> = {
       </aside>
     </div>
 
-    <div class="grid sm:grid-cols-2 gap-4 my-14">
-      <a
-        href="/images/robert-falls-portrait.webp"
-        download
-        class="group block overflow-hidden border border-brand-ink/15 hover:border-brand-oxblood transition-colors"
-      >
-        <div class="aspect-[3/2] overflow-hidden bg-brand-ink/5 relative">
-          <Image
-            src={portraitPhoto}
-            alt="Robert Falls official headshot"
-            widths={[320, 480, 640]}
-            sizes="(max-width: 639px) 100vw, 50vw"
-            quality={76}
-            loading="lazy"
-            class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-          />
-          <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.5) 0%, transparent 55%);"></div>
-        </div>
-        <div class="flex items-center justify-between gap-4 px-5 py-4">
-          <div>
-            <div class="text-sm font-semibold text-brand-ink">Headshot</div>
-            <div class="text-xs text-brand-ink/65">High-resolution download</div>
-          </div>
-          <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors text-lg">&darr;</span>
-        </div>
-      </a>
-      <a
-        href="/images/amadeus-mozart.jpg"
-        download
-        class="group block overflow-hidden border border-brand-ink/15 hover:border-brand-oxblood transition-colors"
-      >
-        <div class="aspect-[3/2] overflow-hidden bg-brand-ink/5 relative">
-          <Image
-            src={amadeusMozartPhoto}
-            alt="Amadeus production photo, Steppenwolf Theatre"
-            widths={[320, 480, 640]}
-            sizes="(max-width: 639px) 100vw, 50vw"
-            quality={76}
-            loading="lazy"
-            class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
-          />
-          <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.5) 0%, transparent 55%);"></div>
-        </div>
-        <div class="flex items-center justify-between gap-4 px-5 py-4">
-          <div>
-            <div class="text-sm font-semibold text-brand-ink">Production Photo</div>
-            <div class="text-xs text-brand-ink/65">Amadeus, Steppenwolf Theatre</div>
-          </div>
-          <span class="text-brand-ink/30 group-hover:text-brand-oxblood transition-colors text-lg">&darr;</span>
-        </div>
-      </a>
+    <div class="my-14">
+      <div class="flex items-baseline justify-between gap-4 flex-wrap mb-5">
+        <p class="section-eyebrow !mb-0">Media Assets</p>
+        <p class="text-xs text-brand-ink/65">
+          Cleared for editorial use. Please credit the photographer where noted.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        {mediaDownloads.map((asset) => (
+          <a
+            href={asset.href}
+            download
+            class="group block overflow-hidden border border-brand-ink/15 hover:border-brand-oxblood transition-colors"
+          >
+            <div class="aspect-[3/2] overflow-hidden bg-brand-ink/5 relative">
+              <Image
+                src={asset.preview}
+                alt={asset.alt}
+                widths={[320, 480, 640]}
+                sizes="(max-width: 639px) 100vw, 50vw"
+                quality={76}
+                loading="lazy"
+                class:list={[
+                  'w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]',
+                  asset.objectPosition,
+                ]}
+              />
+              <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(12,9,8,0.5) 0%, transparent 55%);"></div>
+            </div>
+            <div class="flex items-center justify-between gap-4 px-5 py-4">
+              <div class="min-w-0">
+                <div class="text-sm font-semibold text-brand-ink">{asset.title}</div>
+                <div class="text-xs text-brand-ink/65 mt-0.5">{asset.subtitle}</div>
+                <div class="text-[11px] uppercase tracking-[0.14em] text-brand-ink/65 mt-2 font-semibold">
+                  {asset.spec}
+                </div>
+              </div>
+              <span class="text-brand-ink/65 group-hover:text-brand-oxblood transition-colors text-lg shrink-0">&darr;</span>
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
 
     <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
@@ -147,7 +178,7 @@ const categoryLabels: Record<PressCategory, string> = {
         <p class="section-eyebrow">Featured Coverage</p>
         <h2 class="section-heading">Anchor Stories</h2>
       </div>
-      <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/55">
+      <div class="text-xs uppercase tracking-[0.18em] text-brand-ink/70">
         {pressStats.featuredItems} intentionally chosen entry points
       </div>
     </div>
@@ -168,7 +199,7 @@ const categoryLabels: Record<PressCategory, string> = {
                 </a>
               )}
             </div>
-            <div class={`text-xs uppercase tracking-[0.18em] ${index === 0 ? 'text-brand-cream/55' : 'text-brand-ink/55'}`}>
+            <div class={`text-xs uppercase tracking-[0.18em] ${index === 0 ? 'text-brand-cream/55' : 'text-brand-ink/70'}`}>
               {item.outlet} &middot; {item.dateLabel}
             </div>
             <h3 class={`font-serif leading-snug mt-3 ${index === 0 ? 'text-3xl md:text-[2.2rem] text-brand-cream' : 'text-2xl text-brand-ink'}`}>
@@ -202,7 +233,7 @@ const categoryLabels: Record<PressCategory, string> = {
               <p class="section-eyebrow">{categoryLabels[section.category]}</p>
               <h2 class="font-display text-3xl text-brand-ink">{section.title}</h2>
             </div>
-            <div class="text-sm text-brand-ink/55 max-w-xl leading-relaxed">
+            <div class="text-sm text-brand-ink/70 max-w-xl leading-relaxed">
               {section.description}
             </div>
           </div>
@@ -212,8 +243,8 @@ const categoryLabels: Record<PressCategory, string> = {
               <article class="border border-brand-ink/12 bg-white p-5 md:p-6 hover:border-brand-oxblood transition-colors">
                 <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-[11px] uppercase tracking-[0.18em]">
                   <span class="text-brand-oxblood font-semibold">{item.outlet}</span>
-                  <span class="text-brand-ink/35">&middot;</span>
-                  <span class="text-brand-ink/45">{item.dateLabel}</span>
+                  <span class="text-brand-ink/65">&middot;</span>
+                  <span class="text-brand-ink/65">{item.dateLabel}</span>
                 </div>
                 <h3 class="font-serif text-2xl text-brand-ink leading-snug mt-3">
                   <a href={item.url} target="_blank" rel="noopener noreferrer" class="hover:text-brand-oxblood transition-colors">

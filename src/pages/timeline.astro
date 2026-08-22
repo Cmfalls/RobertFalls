@@ -67,11 +67,11 @@ function slug(decade: string) {
       <div class="section-container !py-0">
         <p class="section-eyebrow text-brand-gold">Seven Decades</p>
         <h1 class="font-display font-extrabold text-6xl md:text-8xl tracking-tight">Career Timeline</h1>
-        <p class="font-serif italic text-brand-cream/70 text-lg mt-6 max-w-xl">
+        <p class="font-serif italic text-brand-cream/78 text-lg mt-6 max-w-xl">
           From a childhood in Ashland, Illinois, to four decades shaping Chicago theatre: a life on the American stage.
         </p>
         <div class="flex flex-wrap gap-3 mt-8 border-t border-brand-cream/10 pt-6">
-          <span class="text-xs uppercase tracking-[0.22em] text-brand-cream/35">1954 &middot; Wisdom Bridge &middot; Goodman Theatre &middot; Broadway &middot; Present</span>
+          <span class="text-xs uppercase tracking-[0.16em] text-brand-cream/58">1954 &middot; Wisdom Bridge &middot; Goodman Theatre &middot; Broadway &middot; Present</span>
         </div>
       </div>
     </div>
@@ -94,13 +94,16 @@ function slug(decade: string) {
         <button type="button" class="filter-pill" data-filter="Production" aria-pressed="false">Productions</button>
         <button type="button" class="filter-pill" data-filter="Award" aria-pressed="false">Awards</button>
       </div>
+      <div class="timeline-results-meta" aria-live="polite">
+        <span data-timeline-visible-count>{timelineEntries.length}</span> visible
+      </div>
     </div>
 
     <nav class="mb-10" aria-label="Jump to decade">
-      <div class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/50 mb-3">Jump to decade</div>
+      <div class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/70 mb-3">Jump to decade</div>
       <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
         {groups.map((g) => (
-          <a href={`#${slug(g.decade)}`} class="jump-pill" data-jump-decade={slug(g.decade)}>{g.decade} <span class="text-brand-ink/35">({g.entries.length})</span></a>
+          <a href={`#${slug(g.decade)}`} class="jump-pill" data-jump-decade={slug(g.decade)}>{g.decade} <span class="text-brand-ink/65">({g.entries.length})</span></a>
         ))}
       </div>
     </nav>
@@ -110,7 +113,7 @@ function slug(decade: string) {
         <details class="decade-group group border border-brand-ink/12" id={slug(g.decade)} open={defaultOpenDecades.has(g.decade)}>
           <summary class="decade-summary list-none cursor-pointer select-none flex items-center gap-4 px-5 py-5 border-l-[3px] border-brand-oxblood hover:bg-brand-ink/[0.04] transition-colors duration-150 [&::-webkit-details-marker]:hidden">
             <span class="font-display text-4xl md:text-5xl text-brand-oxblood leading-none tabular-nums">{g.decade}</span>
-            <span class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/45 font-semibold">{g.entries.length} entries</span>
+            <span class="text-[11px] uppercase tracking-[0.18em] text-brand-ink/65 font-semibold">{g.entries.length} entries</span>
             {g.previews.length > 0 && (
               <span class="hidden sm:flex items-center -space-x-2.5 ml-2">
                 {g.previews.map((img) => (
@@ -126,7 +129,7 @@ function slug(decade: string) {
                 ))}
               </span>
             )}
-            <svg class="ml-auto w-5 h-5 text-brand-ink/35 transition-transform duration-200 group-open:rotate-180 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="ml-auto w-5 h-5 text-brand-ink/65 transition-transform duration-200 group-open:rotate-180 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <ul class="relative pt-5 px-5 pb-2">
             {g.entries.map((entry, i) => (
@@ -144,13 +147,16 @@ function slug(decade: string) {
     @apply inline-flex flex-wrap gap-1.5 border border-brand-ink/15 bg-white/70 p-1 shadow-[0_8px_24px_rgba(34,24,20,0.07)];
   }
   .filter-pill {
-    @apply px-3.5 py-1.5 text-[11px] font-display font-semibold uppercase tracking-[0.18em] border border-transparent text-brand-ink/60 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+    @apply px-3.5 py-1.5 text-[11px] font-display font-semibold uppercase tracking-[0.14em] border border-transparent text-brand-ink/70 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
   }
   .filter-pill[aria-pressed='true'] {
     @apply bg-brand-oxblood border-brand-oxblood text-brand-cream;
   }
   .jump-pill {
-    @apply text-xs font-display font-semibold uppercase tracking-[0.16em] text-brand-oxblood/70 underline decoration-brand-oxblood/20 underline-offset-[0.35rem] transition-colors duration-200 hover:text-brand-oxblood focus-visible:outline-none focus-visible:text-brand-oxblood focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+    @apply text-xs font-display font-semibold uppercase tracking-[0.14em] text-brand-oxblood/80 underline decoration-brand-oxblood/20 underline-offset-[0.35rem] transition-colors duration-200 hover:text-brand-oxblood focus-visible:outline-none focus-visible:text-brand-oxblood focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+  }
+  .timeline-results-meta {
+    @apply w-full text-xs uppercase tracking-[0.14em] text-brand-ink/65 sm:w-auto sm:ml-auto;
   }
   .decade-group[open] > .decade-summary {
     @apply border-b border-brand-ink/10;
@@ -165,6 +171,7 @@ function slug(decade: string) {
     const buttons = filterBar.querySelectorAll<HTMLButtonElement>('[data-filter]');
     const items = decadeList.querySelectorAll<HTMLElement>('li[data-category]');
     const decadeDetails = decadeList.querySelectorAll<HTMLDetailsElement>('details.decade-group');
+    const visibleCount = document.querySelector('[data-timeline-visible-count]');
 
     filterBar.addEventListener('click', (e) => {
       const target = e.target as HTMLElement;
@@ -184,6 +191,10 @@ function slug(decade: string) {
         // Expand decades that contain matches for a non-"all" filter so results are immediately visible
         if (filter !== 'all' && visibleCount > 0) details.open = true;
       });
+
+      if (visibleCount) {
+        visibleCount.textContent = String(decadeList.querySelectorAll('li[data-category]:not(.hidden)').length);
+      }
     });
   }
 

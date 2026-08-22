@@ -24,15 +24,15 @@ const legacyLinks = [
   <div class="border-b border-brand-gold/15">
     <div class="max-w-7xl mx-auto px-6 md:px-10 py-16 grid md:grid-cols-[1.3fr_1fr_1fr] gap-12">
       <div>
-        <a href="/" class="font-display font-extrabold text-3xl text-brand-cream hover:text-brand-goldBright transition-colors">
+        <a href="/" class="font-display font-extrabold text-3xl text-brand-cream hover:text-brand-goldBright transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-ink">
           ROBERT <span class="text-brand-gold">FALLS</span>
         </a>
-        <p class="text-sm text-brand-cream/60 mt-4 max-w-sm leading-relaxed">
+        <p class="text-sm text-brand-cream/72 mt-4 max-w-sm leading-relaxed">
           Theatre director. Artistic Director of Chicago's Goodman Theatre, 1986–2022.
           Tony Award winner. Currently directing freelance work across Chicago and beyond.
         </p>
-        <div class="flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-brand-cream/60 mt-6">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="flex items-center gap-2 text-xs uppercase tracking-[0.14em] text-brand-cream/70 mt-6">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Chicago, Illinois
         </div>
       </div>
@@ -44,9 +44,9 @@ const legacyLinks = [
         <ul class="flex flex-col gap-1">
           {exploreLinks.map(({ href, label }) => (
             <li>
-              <a href={href} class="flex items-center justify-between py-2.5 text-sm text-brand-cream/70 hover:text-brand-goldBright transition-colors border-b border-dashed border-brand-cream/10">
+              <a href={href} class="flex items-center justify-between py-2.5 text-sm text-brand-cream/75 hover:text-brand-goldBright transition-colors border-b border-dashed border-brand-cream/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ink">
                 <span>{label}</span>
-                <span class="text-brand-cream/30">&rarr;</span>
+                <span class="text-brand-cream/65" aria-hidden="true">&rarr;</span>
               </a>
             </li>
           ))}
@@ -64,10 +64,10 @@ const legacyLinks = [
                 href={href}
                 target={external ? '_blank' : undefined}
                 rel={external ? 'noopener' : undefined}
-                class="flex items-center justify-between py-2.5 text-sm text-brand-cream/70 hover:text-brand-goldBright transition-colors border-b border-dashed border-brand-cream/10"
+                class="flex items-center justify-between py-2.5 text-sm text-brand-cream/75 hover:text-brand-goldBright transition-colors border-b border-dashed border-brand-cream/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ink"
               >
                 <span>{label}</span>
-                <span class="text-brand-cream/30">{external ? '↗' : '→'}</span>
+                <span class="text-brand-cream/65" aria-hidden="true">{external ? '↗' : '→'}</span>
               </a>
             </li>
           ))}
@@ -80,12 +80,12 @@ const legacyLinks = [
   <div class="border-b border-brand-gold/15">
     <div class="max-w-7xl mx-auto px-6 md:px-10 py-8 grid md:grid-cols-2 gap-4">
       <div class="bg-brand-cream/[0.03] border border-brand-gold/15 px-5 py-4">
-        <div class="text-[10px] uppercase tracking-[0.18em] text-brand-cream/60">Press &amp; Media</div>
-        <a href="/press" class="text-sm text-brand-cream/85 hover:text-brand-goldBright transition-colors">View Press Kit</a>
+        <div class="text-[10px] uppercase tracking-[0.14em] text-brand-cream/70">Press &amp; Media</div>
+        <a href="/press" class="text-sm text-brand-cream/90 hover:text-brand-goldBright transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ink">View Press Kit</a>
       </div>
       <div class="bg-brand-cream/[0.03] border border-brand-gold/15 px-5 py-4">
-        <div class="text-[10px] uppercase tracking-[0.18em] text-brand-cream/60">General Inquiries</div>
-        <a href="/contact" class="text-sm text-brand-cream/85 hover:text-brand-goldBright transition-colors">Send a Message</a>
+        <div class="text-[10px] uppercase tracking-[0.14em] text-brand-cream/70">General Inquiries</div>
+        <a href="/contact" class="text-sm text-brand-cream/90 hover:text-brand-goldBright transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ink">Send a Message</a>
       </div>
     </div>
   </div>
@@ -95,9 +95,9 @@ const legacyLinks = [
     <div class="flex items-center gap-4 text-[10.5px] uppercase tracking-[0.14em] text-brand-cream/55">
       <span>&copy; {year} Robert Falls</span>
       <span class="w-px h-3 bg-brand-cream/15"></span>
-      <a href="https://connorfalls.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-goldBright transition-colors">Site by Connor Falls Digital</a>
+      <a href="https://connorfalls.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-goldBright transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ink">Site by Connor Falls Digital</a>
     </div>
-    <button id="back-to-top" class="text-[10.5px] uppercase tracking-[0.16em] text-brand-cream/60 border border-brand-cream/15 px-4 py-2 hover:border-brand-gold hover:text-brand-goldBright transition-colors">
+    <button id="back-to-top" type="button" aria-label="Back to top" data-back-to-top class="text-[10.5px] uppercase tracking-[0.14em] text-brand-cream/75 border border-brand-cream/20 px-4 py-2 hover:border-brand-gold hover:text-brand-goldBright transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ink">
       Back to top
     </button>
   </div>
@@ -107,7 +107,8 @@ const legacyLinks = [
   var btt = document.getElementById('back-to-top');
   if (btt) {
     btt.addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
     });
   }
 </script>

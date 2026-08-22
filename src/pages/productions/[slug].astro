@@ -2,6 +2,7 @@
 import { Image, getImage } from 'astro:assets';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { getRelatedProductions, getFeaturedThumbnail, productions, type ProductionRecord } from '@data/productions';
+import { SITE_URL } from '@data/site';
 
 export function getStaticPaths() {
   return productions.map((production) => ({
@@ -111,8 +112,8 @@ const introFacts = [
   production.venueAnchor,
   production.eraLabel,
 ].filter(Boolean);
-const siteBase = Astro.site ?? new URL('https://robertfalls.netlify.app');
-const siteOrigin = new URL('/', siteBase).toString().replace(/\/$/, '');
+const siteBase = new URL(`${SITE_URL}/`);
+const siteOrigin = SITE_URL;
 const productionUrl = new URL(Astro.url.pathname, siteBase).toString();
 const productionImages = await Promise.all(
   production.images.slice(0, 4).map(async (image) => {
@@ -120,7 +121,7 @@ const productionImages = await Promise.all(
       src: image.src,
       width: 1200,
       format: 'webp',
-      quality: 72,
+      quality: 68,
     });
     return new URL(optimizedImage.src, siteBase).toString();
   })
@@ -183,7 +184,7 @@ const productionSchema = [
         widths={[640, 960, 1280, 1600, 2000]}
         sizes="100vw"
         format="webp"
-        quality={78}
+        quality={72}
         loading="eager"
         fetchpriority="high"
         class={`production-hero-image ${heroUsesArtFallback ? 'production-hero-art-image' : ''}`}
@@ -252,7 +253,7 @@ const productionSchema = [
                   widths={[520, 760, 1080, 1400]}
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   format="webp"
-                  quality={78}
+                  quality={72}
                   loading="lazy"
                   class="production-feature-image"
                 />
@@ -368,7 +369,7 @@ const productionSchema = [
             widths={[720, 1080, 1440, 1800]}
             sizes="(max-width: 1024px) 100vw, 72rem"
             format="webp"
-            quality={80}
+            quality={74}
             loading="lazy"
             class="production-single-asset-image"
           />
@@ -382,7 +383,7 @@ const productionSchema = [
           )}
         </figure>
       ) : (
-      <div class="production-asset-strip" aria-label={`${production.title} production assets`} data-asset-strip>
+      <div class="production-asset-strip" aria-label={`${production.title} production assets`} tabindex="0" data-asset-strip>
           {assetImages.map((image) => (
             <figure class:list={[
               'production-asset-card',
@@ -393,10 +394,10 @@ const productionSchema = [
               <Image
                 src={image.src}
                 alt={image.alt}
-                widths={[360, 540, 720, 960]}
+                widths={[320, 480, 640, 760]}
                 sizes="(max-width: 640px) 82vw, (max-width: 1024px) 21rem, 25vw"
                 format="webp"
-                quality={78}
+                quality={58}
                 loading="lazy"
                 class="w-full object-cover"
               />
@@ -411,7 +412,7 @@ const productionSchema = [
             </figure>
           ))}
           {production.watchLinks.map((link) => (
-            <a href={link.href} class="production-watch-card">
+            <a href={link.href} class="production-watch-card" aria-label={`Watch ${link.label}`}>
               {link.thumbnail && (
                 <Image
                   src={link.thumbnail}
@@ -419,7 +420,7 @@ const productionSchema = [
                   widths={[360, 540, 720, 960]}
                   sizes="(max-width: 640px) 82vw, (max-width: 1024px) 21rem, 25vw"
                   format="webp"
-                  quality={72}
+                  quality={68}
                   loading="lazy"
                   class="absolute inset-0 h-full w-full object-cover opacity-70"
                 />
@@ -834,7 +835,7 @@ const productionSchema = [
     @apply block text-sm text-brand-ink;
   }
   .production-rail-links span {
-    @apply mt-1 block text-[11px] uppercase tracking-[0.14em] text-brand-ink/45;
+    @apply mt-1 block text-[11px] uppercase tracking-[0.14em] text-brand-ink/65;
   }
   .production-people-group {
     @apply border-t border-brand-ink border-opacity-10 pt-4 first:border-t-0 first:pt-0;
@@ -885,7 +886,7 @@ const productionSchema = [
     @apply flex flex-col gap-2 border-t border-brand-ink/10 px-5 py-4 text-sm leading-relaxed text-brand-ink text-opacity-70 md:flex-row md:items-start md:justify-between md:gap-6;
   }
   .production-single-asset-credit {
-    @apply shrink-0 font-display text-[10px] uppercase tracking-[0.16em] text-brand-ink/45;
+    @apply shrink-0 font-display text-[10px] uppercase tracking-[0.16em] text-brand-ink/65;
   }
   .production-asset-strip {
     @apply flex snap-x gap-4 overflow-x-auto pr-12;
@@ -908,10 +909,10 @@ const productionSchema = [
     @apply border-t border-brand-ink/10 px-4 py-3 text-[11px] leading-snug text-brand-ink/60;
   }
   .production-asset-credit {
-    @apply mt-1 block text-[10px] uppercase tracking-[0.14em] text-brand-ink/40;
+    @apply mt-1 block text-[10px] uppercase tracking-[0.14em] text-brand-ink/65;
   }
   .production-watch-card {
-    @apply relative flex min-h-0 flex-col justify-end bg-brand-ink p-4 text-brand-cream transition-all duration-200 hover:-translate-y-1 hover:border-brand-gold;
+    @apply relative flex min-h-0 flex-col justify-end bg-brand-ink p-4 text-brand-cream transition-all duration-200 hover:-translate-y-1 hover:border-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
   }
   .production-watch-overlay {
     @apply absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent;
@@ -956,7 +957,7 @@ const productionSchema = [
     @apply grid gap-2.5;
   }
   .production-review-card {
-    @apply grid gap-3 p-3.5 transition-all duration-200 hover:-translate-y-1 hover:border-brand-oxblood hover:border-opacity-25 hover:shadow-[0_18px_48px_rgba(34,24,20,0.09)] md:grid-cols-[12rem_minmax(0,1fr)_6rem] md:items-center;
+    @apply grid gap-3 p-3.5 transition-all duration-200 hover:-translate-y-1 hover:border-brand-oxblood hover:border-opacity-25 hover:shadow-[0_18px_48px_rgba(34,24,20,0.09)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream md:grid-cols-[12rem_minmax(0,1fr)_6rem] md:items-center;
   }
   .production-review-card span {
     @apply font-display text-[11px] font-bold uppercase tracking-[0.18em] text-brand-oxblood;
@@ -971,7 +972,7 @@ const productionSchema = [
     @apply self-start p-4;
   }
   .production-source-card a {
-    @apply block border-b border-brand-ink border-opacity-10 py-2 font-display text-base leading-tight text-brand-ink transition-colors duration-200 last:border-b-0 hover:text-brand-oxblood;
+    @apply block border-b border-brand-ink border-opacity-10 py-2 font-display text-base leading-tight text-brand-ink transition-colors duration-200 last:border-b-0 hover:text-brand-oxblood focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
   }
   .production-quote-grid,
   .production-feedback-grid {
@@ -1015,7 +1016,7 @@ const productionSchema = [
     @apply grid gap-4 md:grid-cols-3;
   }
   .production-related-grid a {
-    @apply block overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:border-brand-oxblood hover:border-opacity-25;
+    @apply block overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:border-brand-oxblood hover:border-opacity-25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
   }
   .related-card-text {
     @apply p-5;
@@ -1033,7 +1034,7 @@ const productionSchema = [
     @apply mt-6 grid gap-4 md:grid-cols-3;
   }
   .production-browse-nav a {
-    @apply block transition-all duration-200 hover:-translate-y-1 hover:border-brand-oxblood hover:border-opacity-25;
+    @apply block transition-all duration-200 hover:-translate-y-1 hover:border-brand-oxblood hover:border-opacity-25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
   }
   .production-browse-nav div {
     @apply flex min-h-[7rem] flex-col justify-between p-5;
@@ -1048,7 +1049,7 @@ const productionSchema = [
     @apply font-display text-2xl leading-tight text-brand-ink;
   }
   .production-strip-btn {
-    @apply flex h-10 w-10 items-center justify-center border border-brand-ink/20 bg-white/80 font-display text-base text-brand-ink transition-all duration-200 hover:border-brand-oxblood hover:bg-brand-oxblood hover:text-brand-cream disabled:cursor-not-allowed;
+    @apply flex h-10 w-10 items-center justify-center border border-brand-ink/20 bg-white/80 font-display text-base text-brand-ink transition-all duration-200 hover:border-brand-oxblood hover:bg-brand-oxblood hover:text-brand-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream disabled:cursor-not-allowed;
   }
   .production-strip-btn:disabled {
     opacity: 0.3;
@@ -1078,14 +1079,14 @@ const productionSchema = [
     nextBtn.addEventListener('click', scrollRight);
     strip.addEventListener('scroll', update, { passive: true });
 
-    // Arrow-key navigation when the cursor is over the media section
+    // Arrow-key navigation when the media section is hovered or the strip has keyboard focus.
     const section = strip.closest('section');
     if (section) {
       let hovered = false;
       section.addEventListener('mouseenter', () => { hovered = true; });
       section.addEventListener('mouseleave', () => { hovered = false; });
       document.addEventListener('keydown', (e) => {
-        if (!hovered) return;
+        if (!hovered && document.activeElement !== strip) return;
         if (e.key === 'ArrowLeft') { e.preventDefault(); scrollLeft(); }
         else if (e.key === 'ArrowRight') { e.preventDefault(); scrollRight(); }
       });

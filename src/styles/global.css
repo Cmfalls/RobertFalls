@@ -11,6 +11,14 @@
     @apply bg-brand-cream text-brand-ink font-serif antialiased;
   }
 
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-gold ring-offset-2 ring-offset-brand-cream;
+  }
+
+  main:focus {
+    outline: none;
+  }
+
   h1, h2, h3, h4 {
     @apply font-display font-semibold;
   }
@@ -18,33 +26,72 @@
 
 @layer components {
   .section-container {
-    @apply max-w-6xl mx-auto px-6 py-20;
+    @apply max-w-6xl mx-auto px-6 py-16 md:py-20;
   }
 
   .section-eyebrow {
-    @apply text-brand-oxblood uppercase tracking-[0.28em] text-xs font-semibold mb-4;
+    @apply text-brand-oxblood uppercase tracking-[0.2em] md:tracking-[0.28em] text-xs font-semibold mb-4;
   }
 
   .section-heading {
-    @apply text-5xl md:text-6xl font-display tracking-tight text-brand-ink mb-4;
+    @apply text-4xl sm:text-5xl md:text-6xl font-display tracking-normal text-brand-ink mb-4;
   }
 
   .btn-primary {
     @apply inline-flex items-center gap-2 bg-brand-oxblood text-brand-cream font-display
            uppercase tracking-[0.12em] text-sm font-semibold
            px-7 py-3.5
-           hover:bg-brand-oxbloodBright transition-colors duration-200;
+           hover:bg-brand-oxbloodBright transition-colors duration-200
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold
+           focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
   }
 
   .btn-outline {
     @apply inline-flex items-center gap-2 border border-brand-ink/30 text-brand-ink font-display
            uppercase tracking-[0.12em] text-sm font-semibold
            px-7 py-3.5
-           hover:border-brand-oxblood hover:text-brand-oxblood transition-colors duration-200;
+           hover:border-brand-oxblood hover:text-brand-oxblood transition-colors duration-200
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold
+           focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
   }
 
   /* faint film-grain texture for dark sections, layered via ::after in markup */
   .grain-overlay {
     @apply pointer-events-none absolute inset-0 bg-grain mix-blend-overlay opacity-40;
+  }
+
+  .skip-link {
+    @apply fixed left-4 top-4 z-[100] -translate-y-24 bg-brand-gold px-4 py-3
+           font-display text-xs font-bold uppercase tracking-[0.14em] text-brand-ink
+           shadow-lg transition-transform duration-200 focus:translate-y-0;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-outline {
+    @apply w-full justify-center px-5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .marquee-lights span,
+  .marquee-lights i,
+  [class*="group-hover:scale"],
+  [class*="hover:-translate-y"] {
+    transform: none !important;
   }
 }

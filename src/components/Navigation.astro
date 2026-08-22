@@ -34,7 +34,7 @@ function isActive(href: string) {
   <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:h-24 md:px-8">
 
     <!-- Wordmark -->
-    <a href="/" class="shrink-0 group">
+    <a href="/" class="shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-ink">
       <span class="block font-display font-extrabold text-2xl md:text-3xl tracking-tight text-brand-cream group-hover:text-brand-goldBright transition-colors">
         ROBERT <span class="text-brand-gold group-hover:text-brand-goldBright">FALLS</span>
       </span>
@@ -48,6 +48,7 @@ function isActive(href: string) {
             href={href}
             class:list={[
               'inline-flex items-center text-[0.8rem] font-display font-semibold uppercase tracking-[0.22em] transition-colors whitespace-nowrap',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-ink',
               isActive(href) ? 'text-brand-gold' : 'text-brand-cream/75 hover:text-brand-cream',
             ]}
             aria-current={isActive(href) ? 'page' : undefined}
@@ -58,25 +59,32 @@ function isActive(href: string) {
       ))}
     </ul>
 
-    <!-- Mobile hamburger -->
-    <label class="lg:hidden cursor-pointer p-2 text-brand-cream" for="mobile-menu-toggle" aria-label="Toggle menu">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <!-- Mobile menu button -->
+    <button
+      type="button"
+      class="lg:hidden inline-flex h-11 w-11 items-center justify-center text-brand-cream transition-colors hover:text-brand-goldBright focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-4 focus-visible:ring-offset-brand-ink"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      data-mobile-menu-button
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
-    </label>
+    </button>
   </nav>
 
   <!-- Mobile menu -->
-  <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
-  <div class="peer-checked:block hidden lg:hidden border-t border-brand-gold/15 bg-brand-ink">
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-brand-gold/15 bg-brand-ink" data-mobile-menu>
     <ul class="max-w-7xl mx-auto px-6 py-5 grid grid-cols-2 gap-3">
       {navLinks.map(({ href, label }) => (
         <li>
           <a href={href}
              class:list={[
-               'block px-2 py-3 text-xs font-display font-semibold uppercase tracking-[0.2em] transition-colors',
+               'block px-2 py-3 text-xs font-display font-semibold uppercase tracking-[0.16em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ink',
                isActive(href) ? 'text-brand-gold' : 'text-brand-cream hover:text-brand-goldBright',
-             ]}>
+             ]}
+             aria-current={isActive(href) ? 'page' : undefined}>
             {label}
           </a>
         </li>
@@ -87,9 +95,9 @@ function isActive(href: string) {
 
 {transparent && (
   <script is:inline>
-    const header = document.querySelector('[data-overlay-nav="true"]');
+    var header = document.querySelector('[data-overlay-nav="true"]');
     if (header) {
-      const applyState = () => {
+      var applyState = () => {
         if (window.scrollY > 18) {
           header.classList.add('bg-brand-ink', 'shadow-md', 'border-brand-gold/15');
           header.classList.remove('bg-transparent', 'border-transparent');
@@ -103,3 +111,42 @@ function isActive(href: string) {
     }
   </script>
 )}
+
+<script is:inline>
+  (function () {
+    var button = document.querySelector('[data-mobile-menu-button]');
+    var menu = document.querySelector('[data-mobile-menu]');
+    if (!button || !menu) return;
+
+    // restoreFocus is for keyboard dismissal only. Closing because a link was
+    // clicked must not steal focus from the page being navigated to.
+    var setOpen = function (open, restoreFocus) {
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      menu.classList.toggle('hidden', !open);
+      if (!open && restoreFocus) button.focus();
+    };
+
+    button.addEventListener('click', function () {
+      setOpen(button.getAttribute('aria-expanded') !== 'true');
+    });
+
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        setOpen(false);
+      });
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key !== 'Escape') return;
+      if (button.getAttribute('aria-expanded') !== 'true') return;
+      // Without this the menu hides while focus is still inside it, dropping
+      // the keyboard user back to <body> at the top of the document.
+      setOpen(false, true);
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.matchMedia('(min-width: 1024px)').matches) setOpen(false);
+    });
+  })();
+</script>

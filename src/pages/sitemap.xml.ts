@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { productions } from '@data/productions';
+import { SITE_URL } from '@data/site';
 
 const staticRoutes = ['/', '/about/', '/productions/', '/timeline/', '/credits/', '/awards/', '/press/', '/contact/'];
 
@@ -12,8 +13,8 @@ function escapeXml(value: string) {
     .replace(/>/g, '&gt;');
 }
 
-export const GET: APIRoute = ({ site }) => {
-  const base = site ?? new URL('https://robertfalls.netlify.app');
+export const GET: APIRoute = () => {
+  const base = new URL(`${SITE_URL}/`);
   const routes = [
     ...staticRoutes,
     ...productions.map((production) => `/productions/${production.slug}/`),

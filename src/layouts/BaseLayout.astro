@@ -1,6 +1,32 @@
 ---
 import Navigation from '@components/Navigation.astro';
 import Footer from '@components/Footer.astro';
+import { SITE_URL, schemaIds } from '@data/site';
+
+// Preload the two Big Shoulders weights that carry every above-the-fold
+// heading and nav label. Without this they are only discovered after the font
+// CSS parses, so the hero headline paints in Georgia and then reflows to a
+// much narrower condensed face — a very visible snap.
+//
+// Deliberately only these two. Measured on a throttled connection (median of
+// 5 cold loads), preloading more costs first paint without buying anything:
+//
+//   preloads                      FCP     display ready   headline swap?
+//   none                          472ms       971ms       yes, ~500ms late
+//   +800 only                     644ms       989ms       yes (600 still late)
+//   +600 +800            (this)   704ms       607ms       no
+//   +Newsreader 400               780ms       658ms       no
+//   +Newsreader 400 italic        844ms       736ms       no (italic still late)
+//
+// Body serif is left unpreloaded on purpose: Georgia is metrically close to
+// Newsreader, so its swap is barely visible, and it is never the LCP element.
+//
+// Imported with ?url so the hashed build filename stays correct; Vite emits
+// the same asset the @fontsource stylesheet references, so nothing is fetched
+// twice. Only the latin subset is preloaded — the other subsets are
+// unicode-range gated and never fetched for this site's content.
+import displayBold from '@fontsource/big-shoulders-display/files/big-shoulders-display-latin-800-normal.woff2?url';
+import displaySemibold from '@fontsource/big-shoulders-display/files/big-shoulders-display-latin-600-normal.woff2?url';
 import '@fontsource/big-shoulders-display/600.css';
 import '@fontsource/big-shoulders-display/800.css';
 import '@fontsource/newsreader/400.css';
@@ -13,30 +39,44 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
+  robots?: string;
   schema?: Record<string, unknown> | Record<string, unknown>[] | null;
   transparentHeader?: boolean;
 }
 
+// Purpose-built 1200×630 social card. Social platforms reject or drop oversized
+// images (X caps at 5 MB), so anything used here must stay small — files in
+// public/ bypass Astro's optimizer and ship exactly as they sit on disk.
+const DEFAULT_OG_IMAGE = '/images/og-default.jpg';
+const DEFAULT_OG_DIMENSIONS = { width: 1200, height: 630 };
+
 const {
   title,
   description = 'Robert Falls — Tony Award-winning theatre director, 35 years as Artistic Director of Chicago’s Goodman Theatre.',
-  image = '/images/robert-falls-portrait-2025.jpg',
+  image = DEFAULT_OG_IMAGE,
+  imageAlt = 'Robert Falls, Tony Award-winning theatre director',
+  robots = 'index,follow',
   schema = null,
   transparentHeader = false,
 } = Astro.props;
 
-const siteUrl = 'https://robertfalls.netlify.app';
-const siteBase = Astro.site ?? siteUrl;
+const siteBase = `${SITE_URL}/`;
 const canonicalURL = new URL(Astro.url.pathname, siteBase);
 const absoluteImage = new URL(image, siteBase).toString();
+
+// Only advertise dimensions we actually know; a page passing its own image
+// would otherwise get the card's size stamped onto a different picture.
+const ogDimensions = image === DEFAULT_OG_IMAGE ? DEFAULT_OG_DIMENSIONS : null;
+const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
 
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  '@id': `${siteUrl}/#person`,
+  '@id': schemaIds.person,
   name: 'Robert Falls',
-  url: siteUrl,
-  image: `${siteUrl}/images/robert-falls-portrait-2025.jpg`,
+  url: SITE_URL,
+  image: `${SITE_URL}/images/portrait-schema.jpg`,
   sameAs: [
     'https://en.wikipedia.org/wiki/Robert_Falls',
     'https://www.goodmantheatre.org/about/people-at-goodman/artistic-director/',
@@ -63,24 +103,24 @@ const personSchema = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': `${siteUrl}/#organization`,
+  '@id': schemaIds.organization,
   name: 'Robert Falls',
-  url: siteUrl,
-  founder: { '@id': `${siteUrl}/#person` },
+  url: SITE_URL,
+  founder: { '@id': schemaIds.person },
   sameAs: personSchema.sameAs,
 };
 
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': `${siteUrl}/#website`,
-  url: siteUrl,
+  '@id': schemaIds.website,
+  url: SITE_URL,
   name: 'Robert Falls',
   alternateName: 'Robert Falls Official Website',
   description: 'Official website of Robert Falls, Tony Award-winning theatre director.',
-  publisher: { '@id': `${siteUrl}/#organization` },
-  creator: { '@id': `${siteUrl}/#person` },
-  about: { '@id': `${siteUrl}/#person` },
+  publisher: { '@id': schemaIds.organization },
+  creator: { '@id': schemaIds.person },
+  about: { '@id': schemaIds.person },
   inLanguage: 'en-US',
 };
 ---
@@ -92,9 +132,15 @@ const websiteSchema = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href={canonicalURL} />
 
+    <!-- Fonts: crossorigin is required even same-origin, or the preload is
+         discarded and the file is fetched a second time. -->
+    <link rel="preload" href={displayBold} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={displaySemibold} as="font" type="font/woff2" crossorigin />
+
     <title set:html={title} />
     <meta name="description" content={description} />
-    <meta name="robots" content="index,follow" />
+    <meta name="robots" content={robots} />
+    <meta name="theme-color" content="#171210" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -103,12 +149,20 @@ const websiteSchema = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={absoluteImage} />
+    <meta property="og:image:alt" content={imageAlt} />
+    {ogDimensions && (
+      <>
+        <meta property="og:image:width" content={String(ogDimensions.width)} />
+        <meta property="og:image:height" content={String(ogDimensions.height)} />
+      </>
+    )}
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={absoluteImage} />
+    <meta name="twitter:image:alt" content={imageAlt} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
@@ -120,10 +174,18 @@ const websiteSchema = {
     {schema && (
       <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
     )}
+    {plausibleDomain && (
+      <script
+        defer
+        data-domain={plausibleDomain}
+        src="https://plausible.io/js/script.js"
+      />
+    )}
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <Navigation transparent={transparentHeader} />
-    <main>
+    <main id="main-content" tabindex="-1">
       <slot />
     </main>
     <Footer />

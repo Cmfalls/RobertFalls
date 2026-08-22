@@ -32,12 +32,24 @@ const nowAndUpcoming = nowAndUpcomingSeeds
     const production = getProductionBySlug(slug);
     const thumbnail = production ? (getFeaturedThumbnail(production.title) ?? production.images[0]) : null;
     if (!production || !thumbnail) return null;
-    return { title: production.title, statusLabel, status, note, thumbnail, href: getProductionHref(production.title) };
+    return {
+      title: production.title,
+      venue: production.venueAnchor,
+      statusLabel,
+      status,
+      note,
+      thumbnail,
+      href: getProductionHref(production.title),
+    };
   })
   .filter((p): p is NonNullable<typeof p> => p !== null);
 
 const activeShows   = nowAndUpcoming.filter((p) => p.statusLabel !== 'Completed');
 const recentlyShows = nowAndUpcoming.filter((p) => p.statusLabel === 'Completed');
+
+// The hero answers "is he still working?" above the fold. Derived from the
+// same list that drives the Now & Upcoming section so the two cannot drift.
+const heroNow = activeShows[0] ?? null;
 
 // imageIndex picks which images[n] to use as thumbnail (skips show art, picks the strongest photo)
 const gallerySeeds = [
@@ -98,15 +110,37 @@ const goodmanHighlights = goodmanHighlightSlugs
     <div class="absolute inset-0 pointer-events-none" style="box-shadow: inset 0 0 130px 22px rgba(12,9,8,0.48);"></div>
     <div class="grain-overlay"></div>
 
-    <div class="relative pt-32 pb-10 md:pt-44 md:pb-14">
-      <MarqueeLights class="mb-12 md:mb-16" />
+    <div class="relative pt-28 pb-10 md:pt-36 md:pb-14">
+      <MarqueeLights class="mb-9 md:mb-12" />
       <div class="max-w-6xl mx-auto px-6">
         <p class="section-eyebrow text-brand-gold">Tony Award-Winning Director</p>
         <h1 class="font-display font-extrabold leading-[0.85] tracking-tight text-[16vw] md:text-[9rem] lg:text-[10.5rem]">
           ROBERT<br /><span class="text-brand-oxbloodBright">FALLS</span>
         </h1>
-        <div class="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-[0.72rem] md:text-[0.82rem] font-display font-semibold uppercase tracking-[0.28em] text-brand-cream/58">
-          <span>Wisdom Bridge</span>
+        {heroNow && (
+          <a
+            href={heroNow.href}
+            class="group mt-8 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-l-2 border-brand-gold pl-4 md:pl-5"
+          >
+            <span class="text-[0.68rem] md:text-[0.72rem] font-display font-semibold uppercase tracking-[0.28em] text-brand-goldBright">
+              Now Directing
+            </span>
+            <span class="font-display text-xl md:text-2xl leading-tight text-brand-cream group-hover:text-brand-goldBright transition-colors">
+              {heroNow.title}
+            </span>
+            <span class="text-[0.7rem] md:text-xs uppercase tracking-[0.16em] text-brand-cream/70">
+              {heroNow.venue} &middot; {heroNow.status}
+            </span>
+          </a>
+        )}
+
+        <!-- Scale and standing. Deliberately typographic, not metric tiles —
+             and no longer hidden below the sm breakpoint, where the archive's
+             size was previously invisible. -->
+        <div class="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-[0.72rem] md:text-[0.82rem] font-display font-semibold uppercase tracking-[0.28em] text-brand-cream/65">
+          <span class="text-brand-goldBright">{productionStats.titleCount} Productions</span>
+          <span class="text-brand-gold/55">/</span>
+          <span>{productionStats.earliestYear}&ndash;{productionStats.latestYear}</span>
           <span class="hidden sm:inline text-brand-gold/55">/</span>
           <span>Goodman Theatre</span>
           <span class="hidden sm:inline text-brand-gold/55">/</span>
@@ -167,7 +201,7 @@ const goodmanHighlights = goodmanHighlightSlugs
             <div class="font-display text-3xl md:text-4xl text-brand-ink leading-tight group-hover:text-brand-oxblood transition-colors mb-2">
               {activeShows[0].title}
             </div>
-            <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/55 font-semibold mt-2">{activeShows[0].status}</div>
+            <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/70 font-semibold mt-2">{activeShows[0].status}</div>
             <p class="text-sm text-brand-ink/60 mt-2 leading-snug">{activeShows[0].note}</p>
           </a>
 
@@ -176,14 +210,14 @@ const goodmanHighlights = goodmanHighlightSlugs
             <blockquote class="font-serif italic text-brand-ink/65 text-xl md:text-2xl leading-relaxed">
               "I feel very lucky that I can be selective. I want to continue to work on exciting projects."
             </blockquote>
-            <p class="mt-5 text-[11px] uppercase tracking-[0.22em] text-brand-ink/38 font-semibold">Robert Falls</p>
+            <p class="mt-5 text-[11px] uppercase tracking-[0.22em] text-brand-ink/65 font-semibold">Robert Falls</p>
           </div>
         </div>
       )}
 
       {recentlyShows.length > 0 && (
         <div class="border-t border-brand-ink/10 pt-8 mb-10">
-          <p class="text-[11px] uppercase tracking-[0.2em] text-brand-ink/38 font-semibold mb-6">Recent Work</p>
+          <p class="text-[11px] uppercase tracking-[0.2em] text-brand-ink/65 font-semibold mb-6">Recent Work</p>
           <div class="grid sm:grid-cols-2 gap-4">
             {recentlyShows.map((item) => (
               <a href={item.href} class="group flex gap-5 items-start border border-brand-ink/10 hover:border-brand-oxblood/22 transition-colors p-4 bg-white/40 hover:bg-white/60">
@@ -200,8 +234,8 @@ const goodmanHighlights = goodmanHighlightSlugs
                 </div>
                 <div class="min-w-0 pt-0.5">
                   <div class="font-display text-xl text-brand-ink leading-tight group-hover:text-brand-oxblood transition-colors mb-1.5">{item.title}</div>
-                  <div class="text-[10px] uppercase tracking-[0.16em] text-brand-ink/50 font-semibold mb-2">{item.status}</div>
-                  <p class="text-xs text-brand-ink/50 leading-snug">{item.note}</p>
+                  <div class="text-[10px] uppercase tracking-[0.16em] text-brand-ink/70 font-semibold mb-2">{item.status}</div>
+                  <p class="text-xs text-brand-ink/70 leading-snug">{item.note}</p>
                 </div>
               </a>
             ))}
@@ -307,14 +341,14 @@ const goodmanHighlights = goodmanHighlightSlugs
 
         <!-- Selected Goodman productions list -->
         <div class="border-t border-brand-cream/15 pt-6 md:border-t-0 md:border-l md:border-brand-cream/12 md:pl-10 lg:pl-14">
-          <p class="text-[10px] uppercase tracking-[0.22em] text-brand-cream/45 font-semibold mb-2">Selected Work</p>
+          <p class="text-[10px] uppercase tracking-[0.22em] text-brand-cream/65 font-semibold mb-2">Selected Work</p>
           {goodmanHighlights.map((p) => (
             <a
               href={p.href}
               class="group flex items-baseline justify-between py-3.5 border-b border-brand-cream/10 hover:border-brand-gold/35 transition-colors"
             >
               <span class="font-display text-lg text-brand-cream/85 group-hover:text-brand-goldBright transition-colors leading-tight">{p.title}</span>
-              <span class="text-[10px] uppercase tracking-[0.12em] text-brand-cream/38 font-semibold ml-4 shrink-0">{p.year}</span>
+              <span class="text-[10px] uppercase tracking-[0.12em] text-brand-cream/65 font-semibold ml-4 shrink-0">{p.year}</span>
             </a>
           ))}
           <a

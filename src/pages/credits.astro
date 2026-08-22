@@ -69,7 +69,7 @@ const sectionPhotos: Record<string, { src: ImageMetadata; caption: string } | un
   <!-- QUICK JUMP NAV -->
   <nav class="bg-brand-cream border-b border-brand-ink/10 sticky top-20 md:top-24 z-30 backdrop-blur-sm" aria-label="Jump to venue">
     <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-x-5 gap-y-1 flex-wrap text-xs">
-      <span class="uppercase tracking-[0.16em] text-brand-ink/40 hidden sm:inline">Jump to</span>
+      <span class="uppercase tracking-[0.16em] text-brand-ink/65 hidden sm:inline">Jump to</span>
       {creditGroups.map((group) => (
         <a
           href={`#${sectionIds[group.label]}`}
@@ -108,7 +108,7 @@ const sectionPhotos: Record<string, { src: ImageMetadata; caption: string } | un
             <h2 class="font-display text-5xl md:text-6xl text-brand-cream tracking-tight">{group.label}</h2>
             <div class="flex items-center gap-3 mt-3">
               <span class="text-xs uppercase tracking-[0.18em] text-brand-goldBright font-semibold">{group.count}</span>
-              {photo && <span class="text-xs text-brand-cream/50 hidden md:inline">{photo.caption}</span>}
+              {photo && <span class="text-xs text-brand-cream/65 hidden md:inline">{photo.caption}</span>}
             </div>
           </div>
         </div>

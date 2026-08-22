@@ -119,7 +119,7 @@ function productionTags(production: (typeof productions)[number]) {
         <p class="section-eyebrow">Priority Set</p>
         <h2 class="section-heading">Featured Production Pages</h2>
       </div>
-      <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/55">
+      <div class="text-xs uppercase tracking-[0.16em] text-brand-ink/70">
         editorial highlights pulled from the full archive
       </div>
     </div>
@@ -176,7 +176,7 @@ function productionTags(production: (typeof productions)[number]) {
 
               <div class="flex items-center justify-between gap-4 mt-6 pt-5 border-t border-brand-ink/10">
                 <div class="space-y-1">
-                  <div class="text-[11px] uppercase tracking-[0.16em] text-brand-ink/42">Primary venue</div>
+                  <div class="text-[11px] uppercase tracking-[0.16em] text-brand-ink/65">Primary venue</div>
                   <div class="text-sm text-brand-ink/68">{production.venueAnchor}</div>
                 </div>
                 <span class="font-display uppercase tracking-[0.16em] text-xs text-brand-oxblood group-hover:text-brand-oxbloodBright transition-colors">
@@ -205,11 +205,12 @@ function productionTags(production: (typeof productions)[number]) {
       <label class="production-search-shell">
         <span class="production-search-label">Search titles, venues, or context</span>
         <div class="relative">
-          <svg class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-ink/35 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <svg class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-ink/65 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
           <input
             type="search"
             placeholder="Search productions"
             class="production-search-input pl-10"
+            aria-label="Search productions by title, venue, or context"
             data-production-search
           />
         </div>
@@ -227,8 +228,9 @@ function productionTags(production: (typeof productions)[number]) {
         </div>
       </div>
 
-      <div class="production-results-meta">
+      <div class="production-results-meta" aria-live="polite" data-production-results-meta>
         <span data-visible-count>{productions.length}</span> visible
+        <span class="production-results-filter" data-active-filter-label>All productions</span>
       </div>
     </div>
 
@@ -244,7 +246,8 @@ function productionTags(production: (typeof productions)[number]) {
     </nav>
 
     <div
-      class="hidden border border-brand-ink/10 bg-white/80 px-5 py-8 text-center text-brand-ink/60"
+      class="hidden border border-brand-ink/10 bg-white/80 px-5 py-8 text-center text-brand-ink/70"
+      role="status"
       data-empty-state
     >
       No productions match that search or filter.
@@ -256,7 +259,7 @@ function productionTags(production: (typeof productions)[number]) {
           <div class="archive-decade-header">
             <h3 class="font-display text-4xl md:text-5xl text-brand-ink">{group.decade}</h3>
             <div class="archive-decade-rule"></div>
-            <span class="text-xs uppercase tracking-[0.16em] text-brand-ink/50 shrink-0" data-decade-count>
+            <span class="text-xs uppercase tracking-[0.16em] text-brand-ink/70 shrink-0" data-decade-count>
               {group.productions.length} titles
             </span>
           </div>
@@ -361,13 +364,13 @@ function productionTags(production: (typeof productions)[number]) {
     @apply block text-[11px] uppercase tracking-[0.18em] text-brand-oxblood font-semibold mb-2;
   }
   .production-search-input {
-    @apply w-full border border-brand-ink border-opacity-20 bg-white px-4 py-3 text-brand-ink outline-none transition-colors duration-200 placeholder:text-stone-400 focus:border-brand-oxblood;
+    @apply w-full border border-brand-ink border-opacity-20 bg-white px-4 py-3 text-brand-ink outline-none transition-colors duration-200 placeholder:text-stone-500 focus:border-brand-oxblood focus:ring-2 focus:ring-brand-gold;
   }
   .production-filter-stack {
     @apply lg:justify-self-end;
   }
   .production-filter-meta {
-    @apply mb-2 text-[11px] uppercase tracking-[0.18em] text-brand-ink text-opacity-55;
+    @apply mb-2 text-[11px] uppercase tracking-[0.14em] text-brand-ink text-opacity-65;
   }
   .production-filter-group {
     @apply flex flex-wrap gap-2;
@@ -379,10 +382,13 @@ function productionTags(production: (typeof productions)[number]) {
     @apply border-brand-oxblood bg-brand-oxblood text-brand-cream;
   }
   .production-results-meta {
-    @apply text-xs uppercase tracking-[0.16em] text-brand-ink text-opacity-65 lg:col-span-2;
+    @apply flex flex-wrap items-center gap-x-3 gap-y-1 text-xs uppercase tracking-[0.14em] text-brand-ink text-opacity-70 lg:col-span-2;
+  }
+  .production-results-filter {
+    @apply border-l border-brand-ink/15 pl-3 text-brand-oxblood;
   }
   .decade-jump-link {
-    @apply inline-flex items-center rounded-full border border-brand-ink border-opacity-10 px-4 py-2 text-xs font-display font-semibold uppercase tracking-[0.18em] text-brand-ink text-opacity-60 transition-colors duration-200 hover:border-brand-oxblood hover:border-opacity-30 hover:text-brand-oxblood focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+    @apply inline-flex items-center rounded-full border border-brand-ink border-opacity-10 px-4 py-2 text-xs font-display font-semibold uppercase tracking-[0.14em] text-brand-ink text-opacity-70 transition-colors duration-200 hover:border-brand-oxblood hover:border-opacity-30 hover:text-brand-oxblood focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
   }
   .archive-decade-header {
     @apply flex items-center gap-4 mb-3;
@@ -409,16 +415,16 @@ function productionTags(production: (typeof productions)[number]) {
     @apply w-1.5 h-1.5 rounded-full bg-brand-oxblood shrink-0 opacity-70;
   }
   .archive-row-venue-mobile {
-    @apply text-xs text-brand-ink/50 mt-0.5 md:hidden truncate;
+    @apply text-xs text-brand-ink/70 mt-0.5 md:hidden truncate;
   }
   .archive-row-venue-desktop {
-    @apply hidden md:block w-52 lg:w-64 shrink-0 text-sm text-brand-ink/55 truncate;
+    @apply hidden md:block w-52 lg:w-64 shrink-0 text-sm text-brand-ink/70 truncate;
   }
   .archive-row-end {
     @apply flex items-center gap-2.5 shrink-0;
   }
   .archive-row-repeat {
-    @apply inline-flex items-center rounded-full border border-brand-ink/15 px-2 py-0.5 text-[11px] font-display font-semibold tracking-[0.08em] text-brand-ink/55;
+    @apply inline-flex items-center rounded-full border border-brand-ink/15 px-2 py-0.5 text-[11px] font-display font-semibold tracking-[0.08em] text-brand-ink/70;
   }
   .archive-row-arrow {
     @apply w-4 h-4 text-brand-oxblood/0 group-hover:text-brand-oxblood transition-colors duration-150 shrink-0;
@@ -432,6 +438,7 @@ function productionTags(production: (typeof productions)[number]) {
   const sections = Array.from(document.querySelectorAll('[data-decade-section]'));
   const emptyState = document.querySelector('[data-empty-state]');
   const visibleCountEl = document.querySelector('[data-visible-count]');
+  const activeFilterLabelEl = document.querySelector('[data-active-filter-label]');
   let activeFilter = 'all';
 
   const applyFilters = () => {
@@ -460,6 +467,11 @@ function productionTags(production: (typeof productions)[number]) {
     });
 
     if (visibleCountEl) visibleCountEl.textContent = String(visibleCount);
+    if (activeFilterLabelEl) {
+      const activeButton = filterBar?.querySelector(`[data-filter="${activeFilter}"]`);
+      const activeLabel = activeButton?.textContent?.trim() || 'All';
+      activeFilterLabelEl.textContent = `${activeLabel} filter`;
+    }
     if (emptyState) emptyState.classList.toggle('hidden', visibleCount !== 0);
   };
 

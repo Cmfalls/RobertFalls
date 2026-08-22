@@ -48,3 +48,12 @@ dist
 /*.svg
 /*.docx
 /We’re Only Alive for a Short Amount of Time/
+
+# Further research packets at project root (same as the list above)
+/Dollhouse/
+/General Bob/
+/Long Days Journey/
+/Talk Radio/
+
+# Generated QA screenshots — recreated by `npm run browser:qa`
+/audit/browser-qa/
