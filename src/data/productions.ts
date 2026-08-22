@@ -2962,7 +2962,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
     significance:
       'A defining Brian Dennehy collaboration and the production that brought Falls the Tony Award for Best Direction of a Play.',
     story:
-      'The documented arc moves cleanly from Goodman Theatre in 1998 to the Eugene O’Neill Theatre on Broadway in 1999, then onward to London in 2005. Few titles in the archive show the full Robert Falls machine as clearly: Chicago staging, major actor partnership, Broadway transfer, awards attention, and afterlife.',
+      'The documented arc moves cleanly from Goodman Theatre in 1998 to the Eugene O'Neill Theatre on Broadway in 1999, then onward to London in 2005. Few titles in the archive show the full Robert Falls machine as clearly: Chicago staging, major actor partnership, Broadway transfer, awards attention, and afterlife.',
     venueAnchor: 'Goodman Theatre',
     eraLabel: 'Broadway transfer years',
     images: [
@@ -4455,7 +4455,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'Pete Wetjoen', name: 'John Judd' },
       { role: 'Hickey', name: 'Nathan Lane' },
       { role: 'Moran', name: 'Loren Lazerine' },
-      { role: 'Ed Mosher', name: 'Larry Neumann Jr.' },
+      { role: 'Ed Mosher', name: 'Larry Neumann, Jr.' },
       { role: 'Harry Hope', name: 'Stephen Ouimette' },
       { role: 'Cecil Lewis', name: 'John Reeger' },
       { role: 'Pearl', name: 'Tara Sissom' },
@@ -7547,7 +7547,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       { role: 'Sophia Alexandrovna (Sonya)', name: 'Caroline Neff' },
       { role: 'Alexander Serebryakov', name: 'David Darlow' },
       { role: 'Maria Vasilyevna', name: 'Marilyn Dodds Frank' },
-      { role: 'Ilya Ilich Telegin (Waffles)', name: 'Larry Neumann Jr.' },
+      { role: 'Ilya Ilich Telegin (Waffles)', name: 'Larry Neumann, Jr.' },
       { role: 'Marina', name: 'Mary Ann Thebus' },
       { role: 'Yefim', name: 'Alžan Pelesić' },
       { role: 'Servant', name: 'Olexiy Kryvych' },
@@ -9906,6 +9906,24 @@ const productionSeeds: Record<string, ProductionSeed> = {
   // that are not recorded elsewhere in this file.
   // ---------------------------------------------------------------------
   'moonchildren': {
+    collaborators: [
+      { role: 'Playwright', name: 'Michael Weller' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Michael Weller' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Apollo Productions / St. Nicholas Theatre, Chicago' },
+      { label: 'Year', value: '1976' },
+      { label: 'Playwright', value: 'Michael Weller' },
+      { label: 'Milestone', value: 'Professional directing debut' },
+      { label: 'Award', value: 'Joseph Jefferson Award, 1976-77' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Falls\'s professional directing debut: a 1976 Chicago remount of Michael Weller\'s Moonchildren, carried over from the production he had staged as a university student, and the credit that won him his first Joseph Jefferson Award.',
     synopsis:
@@ -9914,6 +9932,20 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'This is the origin point of the whole record that follows. A student production carried into a professional Chicago house, rewarded immediately with a Jeff Award, established Falls at the very start of his twenties as a director who could be trusted with an ensemble and a difficult tonal register. Everything in the Wisdom Bridge years grows out of the credibility this credit bought him.',
   },
   'the-wax-museum': {
+    collaborators: [
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Direct Theatre, New York' },
+      { label: 'Year', value: '1976' },
+      { label: 'Milestone', value: 'Early New York credit' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'An early New York professional credit, staged in 1976 at Direct Theatre — one of the first entries in the record and the earliest documented outside Chicago.',
     synopsis:
@@ -9922,6 +9954,19 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The credit matters chronologically rather than critically. It places Falls in New York in the same year as his Chicago professional debut, showing that his early career was not confined to one city before Wisdom Bridge gave him an institutional base.',
   },
   'ladyhouse-blues': {
+    collaborators: [
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Year', value: '1977' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'A 1977 Wisdom Bridge Theatre production, staged during the period in which Falls was establishing himself at the company he would go on to lead.',
     synopsis:
@@ -9930,6 +9975,24 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The entry belongs to the run of Wisdom Bridge work in 1977 that culminated in Falls being appointed Artistic Director. It is part of the evidence that his elevation followed a body of work rather than a single success.',
   },
   'of-mice-and-men': {
+    collaborators: [
+      { role: 'Playwright', name: 'John Steinbeck' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'John Steinbeck' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Year', value: '1977' },
+      { label: 'Playwright', value: 'John Steinbeck' },
+      { label: 'Award', value: 'Joseph Jefferson Award, 1977' },
+      { label: 'Outcome', value: 'Led to his appointment as Artistic Director' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Steinbeck\'s Of Mice and Men at Wisdom Bridge Theatre in 1977 — the production that earned Falls a second Joseph Jefferson Award and led directly to his appointment as the company\'s Artistic Director.',
     synopsis:
@@ -9938,6 +10001,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The single most consequential early credit in the archive. A second Jeff Award in as many years converted Falls from a promising young director into the obvious candidate to run Wisdom Bridge — a post he took in his mid-twenties, and the platform from which the entire Goodman era eventually followed.',
   },
   'the-tempest': {
+    collaborators: [
+      { role: 'Playwright', name: 'William Shakespeare' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'William Shakespeare' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Court Theatre, University of Chicago' },
+      { label: 'Year', value: '1977, 1987' },
+      { label: 'Playwright', value: 'William Shakespeare' },
+      { label: 'Second staging', value: 'Goodman Theatre, 1987' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Shakespeare\'s The Tempest twice over: an early Court Theatre staging at the University of Chicago in 1977, and a major Goodman Theatre production in 1987, the year after Falls became its Artistic Director.',
     synopsis:
@@ -9946,6 +10026,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The two stagings, a decade apart, bracket Falls\'s arrival. The first belongs to the university-adjacent Chicago scene he came up in; the second is one of the earliest large-scale classical statements of his Goodman leadership, made while he was still defining what that theatre would be under him.',
   },
   'the-runner-stumbles': {
+    collaborators: [
+      { role: 'Playwright', name: 'Milan Stitt' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Milan Stitt' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Year', value: '1978' },
+      { label: 'Playwright', value: 'Milan Stitt' },
+      { label: 'Premiere status', value: 'Midwest premiere' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'The Midwest premiere of The Runner Stumbles at Wisdom Bridge Theatre in 1978, part of the run of regional premieres that defined the company\'s early ambition.',
     synopsis:
@@ -9954,6 +10051,22 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'A characteristic Wisdom Bridge move: securing a regional premiere of serious new American writing and staging it at a scale the storefront could carry. Falls\'s early programming instinct — claim the play first, then make the room fit it — is already visible here.',
   },
   'the-idiots-karamazov': {
+    collaborators: [
+      { role: 'Playwright', name: 'Christopher Durang and Albert Innaurato' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Christopher Durang and Albert Innaurato' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Year', value: '1978' },
+      { label: 'Playwright', value: 'Christopher Durang and Albert Innaurato' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'A 1978 Wisdom Bridge Theatre production of the comic literary send-up The Idiots Karamazov, staged early in Falls\'s tenure at the company.',
     synopsis:
@@ -9962,6 +10075,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'Set against the Steinbeck and Shakespeare credits of the same period, this entry shows how wide the early Wisdom Bridge programming ran. Falls was not building a house style so much as testing registers, and comedy of this kind was part of the range.',
   },
   'othello': {
+    collaborators: [
+      { role: 'Playwright', name: 'William Shakespeare' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'William Shakespeare' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Oak Park Shakespeare Festival' },
+      { label: 'Year', value: '1978' },
+      { label: 'Playwright', value: 'William Shakespeare' },
+      { label: 'Format', value: 'Outdoor summer Shakespeare' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Shakespeare\'s Othello for the Oak Park Shakespeare Festival in 1978 — an outdoor summer Shakespeare credit from Falls\'s first years directing professionally.',
     synopsis:
@@ -9970,6 +10100,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'An early demonstration of the Shakespeare fluency that runs through the rest of the record, from the 1987 Goodman Tempest to the King Lear of 2006. Festival work of this kind also meant playing to a broad, non-subscriber audience outdoors — a discipline distinct from the storefront.',
   },
   'happy-end': {
+    collaborators: [
+      { role: 'Composer and lyricist', name: 'Bertolt Brecht and Kurt Weill' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Music and lyrics by', name: 'Bertolt Brecht and Kurt Weill' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'SCT Productions, Athenaeum Theatre, Chicago' },
+      { label: 'Year', value: '1978' },
+      { label: 'Playwright', value: 'Bertolt Brecht and Kurt Weill' },
+      { label: 'Form', value: 'Music theatre' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'An early Brecht and Kurt Weill credit, staged in 1978 with SCT Productions at Chicago\'s Athenaeum Theatre.',
     synopsis:
@@ -9978,6 +10125,20 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The first documented music-theatre entry in the archive, and an early sign of a strand that runs a long way forward: through Pal Joey at the Goodman, the opera work at Lyric and the Met, and eventually the Broadway musical Aida.',
   },
   'fits-and-starts': {
+    collaborators: [
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Northlight Theatre, Evanston' },
+      { label: 'Year', value: '1978' },
+      { label: 'Premiere status', value: 'World premiere' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'A 1978 world premiere at Northlight Theatre in Evanston, from the period when Falls was directing new work across several Chicago-area companies at once.',
     synopsis:
@@ -9986,6 +10147,25 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'Notable for the venue as much as the play: it places Falls at Northlight in the same years he was working at Wisdom Bridge, evidence of how mobile a working director had to be in the Chicago theatre economy of the period.',
   },
   'tartuffe': {
+    collaborators: [
+      { role: 'Playwright', name: 'Molière' },
+      { role: 'Director', name: 'Robert Falls' },
+      { role: 'Co-director', name: 'Michael Maggio' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Molière' },
+      { role: 'Directed by', name: 'Robert Falls' },
+      { role: 'Co-directed by', name: 'Michael Maggio' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Year', value: '1979' },
+      { label: 'Playwright', value: 'Molière' },
+      { label: 'Co-director', value: 'Michael Maggio' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Molière\'s Tartuffe at Wisdom Bridge Theatre in 1979, co-directed with Michael Maggio — one of the few explicitly shared directing credits in the archive.',
     synopsis:
@@ -9994,6 +10174,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The co-direction is the point. Maggio was a defining figure of the same Chicago generation, and a shared credit between them documents how closely that cohort of directors worked before each took over a major institution of his own.',
   },
   'curse-of-the-starving-class': {
+    collaborators: [
+      { role: 'Playwright', name: 'Sam Shepard' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Sam Shepard' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Goodman Theatre, Stage 2' },
+      { label: 'Year', value: '1979' },
+      { label: 'Playwright', value: 'Sam Shepard' },
+      { label: 'Note', value: 'A Goodman credit seven years before his artistic directorship' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Sam Shepard\'s Curse of the Starving Class on the Goodman Theatre\'s Stage 2 in 1979 — a Goodman credit that predates Falls\'s artistic directorship there by seven years.',
     synopsis:
@@ -10002,6 +10199,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'A useful corrective to the tidy version of the career. Falls was working in the Goodman\'s smaller studio a full seven years before he ran the building, on precisely the kind of hard contemporary American writing he would later program there at full scale.',
   },
   'the-importance-of-being-earnest-and-travesties': {
+    collaborators: [
+      { role: 'Playwright', name: 'Oscar Wilde and Tom Stoppard' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Oscar Wilde and Tom Stoppard' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Year', value: '1980' },
+      { label: 'Playwright', value: 'Oscar Wilde and Tom Stoppard' },
+      { label: 'Format', value: 'Rotating repertory' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Wilde and Stoppard in rotating repertory at Wisdom Bridge Theatre in 1980 — The Importance of Being Earnest paired with Travesties across a single company.',
     synopsis:
@@ -10010,6 +10224,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The most conceptually ambitious programming of the Wisdom Bridge years, and an early instance of a habit that never left: putting a classic and its modern answer in direct dialogue, which Falls would later describe as a deliberate strategy at the Goodman.',
   },
   'a-sorrow-beyond-dreams': {
+    collaborators: [
+      { role: 'Playwright', name: 'Peter Handke' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Peter Handke' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'St. Nicholas Theatre, Chicago' },
+      { label: 'Year', value: '1981' },
+      { label: 'Playwright', value: 'Peter Handke' },
+      { label: 'Form', value: 'Literary adaptation' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'An experimental adaptation of Peter Handke\'s A Sorrow Beyond Dreams, staged at Chicago\'s St. Nicholas Theatre in 1981.',
     synopsis:
@@ -10018,6 +10249,22 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The most formally experimental entry of the early period. It shows Falls working outside conventional dramatic structure well before the large-canvas literary adaptations of the Goodman years, of which 2666 is the eventual descendant.',
   },
   'careless-love': {
+    collaborators: [
+      { role: 'Playwright', name: 'John Olive' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'John Olive' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Wisdom Bridge Theatre' },
+      { label: 'Year', value: '1984' },
+      { label: 'Playwright', value: 'John Olive' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'A 1984 Wisdom Bridge Theatre production continuing Falls\'s working relationship with the playwright John Olive.',
     synopsis:
@@ -10026,6 +10273,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'Documents a sustained writer-director relationship rather than a one-off commission. Repeat collaboration with a single playwright is a pattern that recurs throughout the archive — later with Rebecca Gilman, Richard Nelson, and David Cale.',
   },
   'road': {
+    collaborators: [
+      { role: 'Playwright', name: 'Jim Cartwright' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Jim Cartwright' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Remains Theatre, Chicago' },
+      { label: 'Year', value: '1987' },
+      { label: 'Playwright', value: 'Jim Cartwright' },
+      { label: 'Premiere status', value: 'American premiere' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'The American premiere of Jim Cartwright\'s Road at Remains Theatre, Chicago, in 1987 — the year after Falls took over the Goodman.',
     synopsis:
@@ -10034,6 +10298,24 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'Falls claimed a significant British play for its first American staging, and did it at Remains rather than at the theatre he had just been given. The credit shows him continuing to work with Chicago\'s independent companies in the same year he assumed institutional leadership.',
   },
   'galileo': {
+    collaborators: [
+      { role: 'Playwright', name: 'Bertolt Brecht' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Bertolt Brecht' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Goodman Theatre' },
+      { label: 'Year', value: '1987' },
+      { label: 'Playwright', value: 'Bertolt Brecht' },
+      { label: 'Milestone', value: 'Goodman directorial debut' },
+      { label: 'Collaboration', value: 'First of the Brian Dennehy productions' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Brecht\'s Galileo at the Goodman Theatre in 1987: Falls\'s directorial debut at the theatre he had just been appointed to lead, and the beginning of his long working partnership with Brian Dennehy.',
     synopsis:
@@ -10042,6 +10324,22 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The single most load-bearing credit in the early Goodman record. It announced the scale and seriousness of the new artistic direction, and it started the Dennehy collaboration that would run through A Touch of the Poet, Death of a Salesman, Long Day\'s Journey Into Night, and The Iceman Cometh — the spine of Falls\'s reputation.',
   },
   'landscape-of-the-body': {
+    collaborators: [
+      { role: 'Playwright', name: 'John Guare' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'John Guare' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Goodman Theatre' },
+      { label: 'Year', value: '1988' },
+      { label: 'Playwright', value: 'John Guare' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'John Guare\'s Landscape of the Body at the Goodman Theatre in 1988, early in Falls\'s tenure as Artistic Director.',
     synopsis:
@@ -10050,6 +10348,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'Part of the deliberate early-tenure program of modern American classics that established what the Goodman would be under Falls: contemporary, formally restless, and unwilling to treat recent American writing as less serious than the canon.',
   },
   'pal-joey': {
+    collaborators: [
+      { role: 'Composer and lyricist', name: 'Richard Rodgers and Lorenz Hart' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Music and lyrics by', name: 'Richard Rodgers and Lorenz Hart' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Goodman Theatre' },
+      { label: 'Year', value: '1988' },
+      { label: 'Playwright', value: 'Richard Rodgers and Lorenz Hart' },
+      { label: 'Later work', value: 'Falls subsequently wrote a new book for the musical' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Rodgers and Hart\'s Pal Joey at the Goodman Theatre in 1988 — an early marker of the music-theatre practice Falls would later carry to Lyric Opera, the Met, and Broadway. He subsequently wrote a new book for the musical.',
     synopsis:
@@ -10058,6 +10373,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The later book rewrite is what makes this more than a revival credit. It shows Falls willing to intervene in the text of a canonical American musical, the same authorial instinct that produced his co-book credit on Aida a decade later.',
   },
   'the-misanthrope': {
+    collaborators: [
+      { role: 'Playwright', name: 'Molière' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Molière' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Goodman Theatre / La Jolla Playhouse' },
+      { label: 'Year', value: '1989' },
+      { label: 'Playwright', value: 'Molière' },
+      { label: 'Format', value: 'Co-production' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Molière\'s The Misanthrope in 1989, a Goodman Theatre and La Jolla Playhouse co-production, which Falls later counted among his notable Goodman credits.',
     synopsis:
@@ -10066,6 +10398,20 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'An early instance of the co-production model Falls used to give Goodman work a second life and a wider budget — the mechanism that would later carry productions to Broadway, BAM, and beyond, rather than closing them at the end of a Chicago run.',
   },
   'book-of-the-night': {
+    collaborators: [
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Goodman Theatre' },
+      { label: 'Year', value: '1991' },
+      { label: 'Premiere status', value: 'World premiere' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'A world premiere at the Goodman Theatre in 1991, from the stretch of Falls\'s early tenure most concentrated on new work.',
     synopsis:
@@ -10074,6 +10420,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'One entry in the premiere record that eventually ran past 150 world premieres under Falls\'s leadership. Individually modest, credits like this are the substance of the claim that the Goodman became a new-work theatre on his watch.',
   },
   'riverview': {
+    collaborators: [
+      { role: 'Playwright', name: 'John Logan' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'John Logan' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Goodman Theatre' },
+      { label: 'Year', value: '1992' },
+      { label: 'Playwright', value: 'John Logan' },
+      { label: 'Premiere status', value: 'World premiere' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'A 1992 Goodman Theatre world premiere, and an early credit with John Logan — a writer Falls would later cite as a major collaborator.',
     synopsis:
@@ -10082,6 +10445,21 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The Logan relationship is the significant thread. Beginning a collaboration at the world-premiere stage with a writer who would go on to a substantial career is exactly the developmental function Falls built the Goodman\'s new-work program to perform.',
   },
   'on-the-open-road': {
+    collaborators: [
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Goodman Theatre' },
+      { label: 'Year', value: '1992, 1993' },
+      { label: 'Premiere status', value: 'World premiere' },
+      { label: 'Transfer', value: 'New York Shakespeare Festival, 1993' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'A Goodman Theatre world premiere in 1992 that transferred to the New York Shakespeare Festival the following year — one of the earliest Goodman-to-New York moves of Falls\'s tenure.',
     synopsis:
@@ -10090,6 +10468,24 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'An early proof of the transfer model. A play premiered in Chicago and picked up by a major New York institution within a year demonstrated that the Goodman could originate work of national consequence, which is the argument Falls\'s whole tenure rests on.',
   },
   'susannah': {
+    collaborators: [
+      { role: 'Composer and lyricist', name: 'Carlisle Floyd' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Music and lyrics by', name: 'Carlisle Floyd' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Lyric Opera of Chicago' },
+      { label: 'Year', value: '1993, 1999' },
+      { label: 'Playwright', value: 'Carlisle Floyd' },
+      { label: 'Milestone', value: 'Opera directing debut' },
+      { label: 'Second staging', value: 'Metropolitan Opera, 1999' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Falls\'s opera directing debut: Susannah at Lyric Opera of Chicago in 1993, followed by a staging at the Metropolitan Opera in New York in 1999.',
     synopsis:
@@ -10098,6 +10494,22 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The credit that opens the entire opera side of the archive. From this debut the line runs directly to The Consul at Lyric, and then to Don Giovanni — the production Lyric has now revived three times. That an opera debut reached the Metropolitan within six years indicates how quickly the transition was accepted.',
   },
   'three-sisters': {
+    collaborators: [
+      { role: 'Playwright', name: 'Anton Chekhov' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Anton Chekhov' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Goodman Theatre' },
+      { label: 'Year', value: '1995' },
+      { label: 'Playwright', value: 'Anton Chekhov' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Chekhov\'s Three Sisters at the Goodman Theatre in 1995, part of what Falls later described as a deliberate dialogue between classic and new work.',
     synopsis:
@@ -10106,6 +10518,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The first of the major Chekhov stagings in the record, ahead of The Seagull, Uncle Vanya, and The Cherry Orchard. Read together, they amount to a sustained engagement with a single writer across decades rather than a series of unrelated revivals.',
   },
   'the-food-chain': {
+    collaborators: [
+      { role: 'Playwright', name: 'Nicky Silver' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Nicky Silver' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Westside Theatre, New York' },
+      { label: 'Year', value: '1995' },
+      { label: 'Playwright', value: 'Nicky Silver' },
+      { label: 'Format', value: 'Off-Broadway' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'An off-Broadway credit at New York\'s Westside Theatre in 1995, staged in the same period as Falls\'s Lincoln Center work.',
     synopsis:
@@ -10114,6 +10543,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'Evidence of a commercial off-Broadway strand running alongside the institutional work. In the mid-1990s Falls was directing at Lincoln Center, in a commercial off-Broadway house, at Lyric Opera, and at the Goodman — often within the same seasons.',
   },
   'suburbia': {
+    collaborators: [
+      { role: 'Playwright', name: 'Eric Bogosian' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Eric Bogosian' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Lincoln Center Theater, New York' },
+      { label: 'Year', value: '1994' },
+      { label: 'Playwright', value: 'Eric Bogosian' },
+      { label: 'Award', value: 'Obie Award for Direction, 1995' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Eric Bogosian\'s subUrbia at Lincoln Center Theater in 1994 — the production that won Falls the Obie Award for direction.',
     synopsis:
@@ -10122,6 +10568,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'The Obie is one of the defining honors in the record, and it came from New York for contemporary American work rather than from Chicago or from a classic. Together with the Lincoln Center platform, it established Falls nationally as a director of new writing in the same years he was consolidating the Goodman.',
   },
   'a-touch-of-the-poet': {
+    collaborators: [
+      { role: 'Playwright', name: 'Eugene O\'Neill' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Eugene O\'Neill' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Goodman Theatre' },
+      { label: 'Year', value: '1996' },
+      { label: 'Playwright', value: 'Eugene O\'Neill' },
+      { label: 'Collaboration', value: 'Brian Dennehy' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'O\'Neill\'s A Touch of the Poet at the Goodman Theatre in 1996, another chapter in the long Falls and Brian Dennehy engagement with O\'Neill.',
     synopsis:
@@ -10130,6 +10593,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'A key link in the O\'Neill sequence that runs from here through Long Day\'s Journey Into Night and The Iceman Cometh. Approaching a major playwright repeatedly, with the same leading actor, is the pattern that produced the most decorated work of Falls\'s career.',
   },
   'the-consul': {
+    collaborators: [
+      { role: 'Composer and lyricist', name: 'Gian Carlo Menotti' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Music and lyrics by', name: 'Gian Carlo Menotti' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Lyric Opera of Chicago' },
+      { label: 'Year', value: '1996' },
+      { label: 'Playwright', value: 'Gian Carlo Menotti' },
+      { label: 'Form', value: 'Opera' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Menotti\'s The Consul at Lyric Opera of Chicago in 1996, Falls\'s second major opera credit after his 1993 Susannah debut.',
     synopsis:
@@ -10138,6 +10618,20 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'Confirms that the Susannah debut was the start of an opera practice rather than an isolated experiment. Both are twentieth-century American operas driven by text and situation, which is the repertoire a theatre director is best placed to serve.',
   },
   'griller': {
+    collaborators: [
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'Goodman Theatre' },
+      { label: 'Year', value: '1997' },
+      { label: 'Premiere status', value: 'World premiere' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'A 1997 world premiere at the Goodman Theatre, which Falls later named among his signature premieres.',
     synopsis:
@@ -10146,6 +10640,23 @@ const productionSeeds: Record<string, ProductionSeed> = {
       'Falls singling this out among his own premieres is the reason it belongs in the record with more than a line. The archive\'s premiere count is large; the ones a director chooses to remember indicate what he thought the program was for.',
   },
   'orchards': {
+    collaborators: [
+      { role: 'Playwright', name: 'Anton Chekhov, adapted by María Irene Fornés, Spalding Gray, John Guare, David Mamet, and Wendy Wasserstein' },
+      { role: 'Director', name: 'Robert Falls' },
+    ],
+    creativeTeam: [
+      { role: 'Written by', name: 'Anton Chekhov, adapted by María Irene Fornés, Spalding Gray, John Guare, David Mamet, and Wendy Wasserstein' },
+      { role: 'Directed by', name: 'Robert Falls' },
+    ],
+    quickFacts: [
+      { label: 'Venue', value: 'The Acting Company, New York and tour' },
+      { label: 'Year', value: '1986' },
+      { label: 'Playwright', value: 'Anton Chekhov, adapted by María Irene Fornés, Spalding Gray, John Guare, David Mamet, and Wendy Wasserstein' },
+      { label: 'Format', value: 'Adaptation cycle, seven short stories' },
+    ],
+    contextNotes: [
+      { label: 'Image note', text: 'The rehearsal photograph on this page is used as period context only. It is not a production image from this staging; no production photography has surfaced for it in this archive.' },
+    ],
     summary:
       'Orchards for The Acting Company in 1986: a Chekhov adaptation cycle with new pieces by writers including María Irene Fornés, Spalding Gray, John Guare, David Mamet, and Wendy Wasserstein, staged in New York and on tour.',
     synopsis:
@@ -10346,21 +10857,29 @@ export function getRelatedProductions(slug: string, limit = 3): ProductionRecord
   const current = getProductionBySlug(slug);
   if (!current) return [];
 
-  const currentCollaborators = current.collaborators.map((item) => item.name);
+  // Falls is a collaborator on every record, so counting him scores a constant
+  // for every pair and tells the reader nothing.
+  const currentCollaborators = current.collaborators
+    .map((item) => item.name)
+    .filter((name) => name !== 'Robert Falls');
 
   return productions
     .filter((production) => production.slug !== slug)
     .map((production) => {
       const sharedVenues = production.venues.filter((venue) => current.venues.includes(venue)).length;
-      const sharedCollaborators = production.collaborators.filter((item) =>
-        currentCollaborators.includes(item.name),
+      const sharedCollaborators = production.collaborators.filter(
+        (item) => item.name !== 'Robert Falls' && currentCollaborators.includes(item.name),
       ).length;
       const yearDistance = Math.abs(production.firstYearValue - current.firstYearValue);
       const sameDecade = production.decadeLabel === current.decadeLabel ? 2 : 0;
       const sameMode = production.pageMode === current.pageMode ? 1 : 0;
+      // A shared playwright or performer is rare and meaningful. A shared venue
+      // is not: Wisdom Bridge alone accounts for 20 productions and the Goodman
+      // for another 21, so venue barely discriminates and used to crowd out the
+      // connection a reader actually wants ("what else did he do of Chekhov's").
       const score =
-        sharedVenues * 5 +
-        sharedCollaborators * 4 +
+        sharedCollaborators * 9 +
+        sharedVenues * 2 +
         sameDecade +
         sameMode +
         Math.max(0, 4 - Math.floor(yearDistance / 10));
