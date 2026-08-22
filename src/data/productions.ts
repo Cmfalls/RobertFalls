@@ -2651,7 +2651,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
       },
       {
         src: donGiovanniFinale,
-        alt: 'Six singers stand spread across a dark stage around a gilded shrine to the Virgin of Guadalupe, one man kneeling at centre in a white suit.',
+        alt: 'Six singers stand spread across a dark stage around a gilded shrine to the Virgin of Guadalupe, one man kneeling at center in a white suit.',
         caption: 'The closing scene gathers the survivors around a candlelit shrine after Giovanni\'s damnation.',
         orientation: 'landscape',
         kind: 'production-still',
@@ -2825,7 +2825,7 @@ const productionSeeds: Record<string, ProductionSeed> = {
   'the-cherry-orchard': {
     pageMode: 'featured',
     summary:
-      'The Cherry Orchard lands as a concluding Goodman chapter: Falls adapting Chekhov himself and closing out the final season he programmed for the theatre.',
+      'The Cherry Orchard lands as a concluding Goodman chapter: Falls adapting Chekhov himself and closing out the final season he programd for the theatre.',
     significance:
       'Falls’s own adaptation and the valedictory Goodman production attached to the end of his artistic-director era.',
     story:
@@ -9896,6 +9896,262 @@ const productionSeeds: Record<string, ProductionSeed> = {
     ],
     relatedLinks: seedLinks,
     sourceStatus: 'featured-ready',
+  },
+  // ---------------------------------------------------------------------
+  // Archive entries written from the documented staging record. Each carries
+  // a distinct summary, synopsis, and significance so the page does not fall
+  // back to the builder's generated sentence. Deliberately scoped to what the
+  // archive can support: the work itself, the venue, the date, and the place
+  // the credit occupies in Falls's chronology — no casting or review claims
+  // that are not recorded elsewhere in this file.
+  // ---------------------------------------------------------------------
+  'moonchildren': {
+    summary:
+      'Falls\'s professional directing debut: a 1976 Chicago remount of Michael Weller\'s Moonchildren, carried over from the production he had staged as a university student, and the credit that won him his first Joseph Jefferson Award.',
+    synopsis:
+      'Weller\'s play gathers a house of American students in the late 1960s, letting draft notices, politics, and the Vietnam era press in around a group whose defence is comedy and evasion. Its tone shifts without warning from farce to grief, which is what makes it a demanding first professional assignment.',
+    significance:
+      'This is the origin point of the whole record that follows. A student production carried into a professional Chicago house, rewarded immediately with a Jeff Award, established Falls at the very start of his twenties as a director who could be trusted with an ensemble and a difficult tonal register. Everything in the Wisdom Bridge years grows out of the credibility this credit bought him.',
+  },
+  'the-wax-museum': {
+    summary:
+      'An early New York professional credit, staged in 1976 at Direct Theatre — one of the first entries in the record and the earliest documented outside Chicago.',
+    synopsis:
+      'A short-form piece mounted in the New York off-off-Broadway ecosystem of the mid-1970s, where small companies like Direct Theatre gave emerging directors room to work quickly and cheaply on new and unconventional material.',
+    significance:
+      'The credit matters chronologically rather than critically. It places Falls in New York in the same year as his Chicago professional debut, showing that his early career was not confined to one city before Wisdom Bridge gave him an institutional base.',
+  },
+  'ladyhouse-blues': {
+    summary:
+      'A 1977 Wisdom Bridge Theatre production, staged during the period in which Falls was establishing himself at the company he would go on to lead.',
+    synopsis:
+      'A domestic chamber piece for a small ensemble, of the kind Wisdom Bridge built its early reputation on: intimate American realism scaled to a storefront house and its audience.',
+    significance:
+      'The entry belongs to the run of Wisdom Bridge work in 1977 that culminated in Falls being appointed Artistic Director. It is part of the evidence that his elevation followed a body of work rather than a single success.',
+  },
+  'of-mice-and-men': {
+    summary:
+      'Steinbeck\'s Of Mice and Men at Wisdom Bridge Theatre in 1977 — the production that earned Falls a second Joseph Jefferson Award and led directly to his appointment as the company\'s Artistic Director.',
+    synopsis:
+      'Steinbeck\'s Depression-era novella of two itinerant ranch hands, George and Lennie, and the smallholding they will never own, adapted by the author for the stage. It is a play about the cost of tenderness in a world with no room for it, and it lives or dies on the central pairing.',
+    significance:
+      'The single most consequential early credit in the archive. A second Jeff Award in as many years converted Falls from a promising young director into the obvious candidate to run Wisdom Bridge — a post he took in his mid-twenties, and the platform from which the entire Goodman era eventually followed.',
+  },
+  'the-tempest': {
+    summary:
+      'Shakespeare\'s The Tempest twice over: an early Court Theatre staging at the University of Chicago in 1977, and a major Goodman Theatre production in 1987, the year after Falls became its Artistic Director.',
+    synopsis:
+      'Prospero, exiled and enthroned on his island, raises a storm to bring his usurpers within reach, then has to decide what to do with the power he has spent twelve years accumulating. The play holds a magician\'s spectacle and a late-career renunciation in the same frame.',
+    significance:
+      'The two stagings, a decade apart, bracket Falls\'s arrival. The first belongs to the university-adjacent Chicago scene he came up in; the second is one of the earliest large-scale classical statements of his Goodman leadership, made while he was still defining what that theatre would be under him.',
+  },
+  'the-runner-stumbles': {
+    summary:
+      'The Midwest premiere of The Runner Stumbles at Wisdom Bridge Theatre in 1978, part of the run of regional premieres that defined the company\'s early ambition.',
+    synopsis:
+      'A courtroom-framed drama in which a priest stands accused over the death of a nun, and the account of what happened between them is assembled in retrospect from testimony and memory.',
+    significance:
+      'A characteristic Wisdom Bridge move: securing a regional premiere of serious new American writing and staging it at a scale the storefront could carry. Falls\'s early programming instinct — claim the play first, then make the room fit it — is already visible here.',
+  },
+  'the-idiots-karamazov': {
+    summary:
+      'A 1978 Wisdom Bridge Theatre production of the comic literary send-up The Idiots Karamazov, staged early in Falls\'s tenure at the company.',
+    synopsis:
+      'A deliberately anarchic spoof that turns Dostoevsky and the business of literary translation into farce, mixing high-cultural reference with broad comic playing.',
+    significance:
+      'Set against the Steinbeck and Shakespeare credits of the same period, this entry shows how wide the early Wisdom Bridge programming ran. Falls was not building a house style so much as testing registers, and comedy of this kind was part of the range.',
+  },
+  'othello': {
+    summary:
+      'Shakespeare\'s Othello for the Oak Park Shakespeare Festival in 1978 — an outdoor summer Shakespeare credit from Falls\'s first years directing professionally.',
+    synopsis:
+      'Iago talks a decorated general into destroying the one relationship that grounds him. The play\'s engine is proximity and speed: the whole catastrophe runs on private conversations that the audience hears and the victims do not.',
+    significance:
+      'An early demonstration of the Shakespeare fluency that runs through the rest of the record, from the 1987 Goodman Tempest to the King Lear of 2006. Festival work of this kind also meant playing to a broad, non-subscriber audience outdoors — a discipline distinct from the storefront.',
+  },
+  'happy-end': {
+    summary:
+      'An early Brecht and Kurt Weill credit, staged in 1978 with SCT Productions at Chicago\'s Athenaeum Theatre.',
+    synopsis:
+      'Brecht and Weill\'s Chicago-set musical throws a Salvation Army mission and a criminal gang at each other, using the collision — and Weill\'s score — to argue about salvation, commerce, and who gets to be respectable.',
+    significance:
+      'The first documented music-theatre entry in the archive, and an early sign of a strand that runs a long way forward: through Pal Joey at the Goodman, the opera work at Lyric and the Met, and eventually the Broadway musical Aida.',
+  },
+  'fits-and-starts': {
+    summary:
+      'A 1978 world premiere at Northlight Theatre in Evanston, from the period when Falls was directing new work across several Chicago-area companies at once.',
+    synopsis:
+      'A new play given its first production, of the kind the young Chicago-area theatres of the late 1970s were built to develop and stage.',
+    significance:
+      'Notable for the venue as much as the play: it places Falls at Northlight in the same years he was working at Wisdom Bridge, evidence of how mobile a working director had to be in the Chicago theatre economy of the period.',
+  },
+  'tartuffe': {
+    summary:
+      'Molière\'s Tartuffe at Wisdom Bridge Theatre in 1979, co-directed with Michael Maggio — one of the few explicitly shared directing credits in the archive.',
+    synopsis:
+      'A pious fraud talks his way into a prosperous household and very nearly walks off with it, while the head of the family refuses to see what everyone else can. Molière\'s verse comedy runs on the gap between what the audience knows and what the dupe will admit.',
+    significance:
+      'The co-direction is the point. Maggio was a defining figure of the same Chicago generation, and a shared credit between them documents how closely that cohort of directors worked before each took over a major institution of his own.',
+  },
+  'curse-of-the-starving-class': {
+    summary:
+      'Sam Shepard\'s Curse of the Starving Class on the Goodman Theatre\'s Stage 2 in 1979 — a Goodman credit that predates Falls\'s artistic directorship there by seven years.',
+    synopsis:
+      'Shepard sets a broke family against the land under their feet, with an empty refrigerator at the center of the stage as the play\'s recurring accusation. Inheritance, appetite, and the American farm turn on each other.',
+    significance:
+      'A useful corrective to the tidy version of the career. Falls was working in the Goodman\'s smaller studio a full seven years before he ran the building, on precisely the kind of hard contemporary American writing he would later program there at full scale.',
+  },
+  'the-importance-of-being-earnest-and-travesties': {
+    summary:
+      'Wilde and Stoppard in rotating repertory at Wisdom Bridge Theatre in 1980 — The Importance of Being Earnest paired with Travesties across a single company.',
+    synopsis:
+      'Stoppard\'s Travesties is itself built on Earnest, running Joyce, Tzara, and Lenin through the shape of Wilde\'s comedy as recalled by an unreliable narrator. Staging the two in repertory lets an audience watch the source and the riff in the same week, with the same actors.',
+    significance:
+      'The most conceptually ambitious programming of the Wisdom Bridge years, and an early instance of a habit that never left: putting a classic and its modern answer in direct dialogue, which Falls would later describe as a deliberate strategy at the Goodman.',
+  },
+  'a-sorrow-beyond-dreams': {
+    summary:
+      'An experimental adaptation of Peter Handke\'s A Sorrow Beyond Dreams, staged at Chicago\'s St. Nicholas Theatre in 1981.',
+    synopsis:
+      'Handke\'s book is a spare, self-interrogating account of his mother\'s life and suicide, written against the consolations of biography. Bringing it to a stage means finding a theatrical form for prose that actively distrusts storytelling.',
+    significance:
+      'The most formally experimental entry of the early period. It shows Falls working outside conventional dramatic structure well before the large-canvas literary adaptations of the Goodman years, of which 2666 is the eventual descendant.',
+  },
+  'careless-love': {
+    summary:
+      'A 1984 Wisdom Bridge Theatre production continuing Falls\'s working relationship with the playwright John Olive.',
+    synopsis:
+      'An intimate American play of the kind Olive was writing for Chicago stages in the early 1980s, scaled for a small company and a close house.',
+    significance:
+      'Documents a sustained writer-director relationship rather than a one-off commission. Repeat collaboration with a single playwright is a pattern that recurs throughout the archive — later with Rebecca Gilman, Richard Nelson, and David Cale.',
+  },
+  'road': {
+    summary:
+      'The American premiere of Jim Cartwright\'s Road at Remains Theatre, Chicago, in 1987 — the year after Falls took over the Goodman.',
+    synopsis:
+      'Cartwright walks an audience down a single street in Thatcher-era northern England, handing over one household at a time. It is written for a small company playing many parts, and its power comes from accumulation rather than plot.',
+    significance:
+      'Falls claimed a significant British play for its first American staging, and did it at Remains rather than at the theatre he had just been given. The credit shows him continuing to work with Chicago\'s independent companies in the same year he assumed institutional leadership.',
+  },
+  'galileo': {
+    summary:
+      'Brecht\'s Galileo at the Goodman Theatre in 1987: Falls\'s directorial debut at the theatre he had just been appointed to lead, and the beginning of his long working partnership with Brian Dennehy.',
+    synopsis:
+      'Brecht follows Galileo from the telescope to the recantation, refusing to let either the science or the surrender settle into heroism. The play asks what a thinker owes the truth when the cost of holding it is his life.',
+    significance:
+      'The single most load-bearing credit in the early Goodman record. It announced the scale and seriousness of the new artistic direction, and it started the Dennehy collaboration that would run through A Touch of the Poet, Death of a Salesman, Long Day\'s Journey Into Night, and The Iceman Cometh — the spine of Falls\'s reputation.',
+  },
+  'landscape-of-the-body': {
+    summary:
+      'John Guare\'s Landscape of the Body at the Goodman Theatre in 1988, early in Falls\'s tenure as Artistic Director.',
+    synopsis:
+      'Guare frames a mother\'s account of her son\'s death as something between a murder investigation and a fever dream, cutting between Greenwich Village and Nantucket and letting songs interrupt the evidence.',
+    significance:
+      'Part of the deliberate early-tenure program of modern American classics that established what the Goodman would be under Falls: contemporary, formally restless, and unwilling to treat recent American writing as less serious than the canon.',
+  },
+  'pal-joey': {
+    summary:
+      'Rodgers and Hart\'s Pal Joey at the Goodman Theatre in 1988 — an early marker of the music-theatre practice Falls would later carry to Lyric Opera, the Met, and Broadway. He subsequently wrote a new book for the musical.',
+    synopsis:
+      'A nightclub hustler works his way between an ambitious chorus girl and a wealthy married patron, in a musical that was unusually unsentimental about its own leading man for 1940.',
+    significance:
+      'The later book rewrite is what makes this more than a revival credit. It shows Falls willing to intervene in the text of a canonical American musical, the same authorial instinct that produced his co-book credit on Aida a decade later.',
+  },
+  'the-misanthrope': {
+    summary:
+      'Molière\'s The Misanthrope in 1989, a Goodman Theatre and La Jolla Playhouse co-production, which Falls later counted among his notable Goodman credits.',
+    synopsis:
+      'Alceste demands total honesty from a society built on flattery, and falls in love with the woman least able to give it to him. Molière lets him be right about everything and insufferable at the same time.',
+    significance:
+      'An early instance of the co-production model Falls used to give Goodman work a second life and a wider budget — the mechanism that would later carry productions to Broadway, BAM, and beyond, rather than closing them at the end of a Chicago run.',
+  },
+  'book-of-the-night': {
+    summary:
+      'A world premiere at the Goodman Theatre in 1991, from the stretch of Falls\'s early tenure most concentrated on new work.',
+    synopsis:
+      'A new play given its first staging at the Goodman, developed and produced in-house rather than imported after a premiere elsewhere.',
+    significance:
+      'One entry in the premiere record that eventually ran past 150 world premieres under Falls\'s leadership. Individually modest, credits like this are the substance of the claim that the Goodman became a new-work theatre on his watch.',
+  },
+  'riverview': {
+    summary:
+      'A 1992 Goodman Theatre world premiere, and an early credit with John Logan — a writer Falls would later cite as a major collaborator.',
+    synopsis:
+      'A Chicago story built around the city\'s vanished Riverview amusement park, staged with music as a period entertainment and an act of civic memory at once.',
+    significance:
+      'The Logan relationship is the significant thread. Beginning a collaboration at the world-premiere stage with a writer who would go on to a substantial career is exactly the developmental function Falls built the Goodman\'s new-work program to perform.',
+  },
+  'on-the-open-road': {
+    summary:
+      'A Goodman Theatre world premiere in 1992 that transferred to the New York Shakespeare Festival the following year — one of the earliest Goodman-to-New York moves of Falls\'s tenure.',
+    synopsis:
+      'Two men drag a cart of salvaged masterpieces across a country in the middle of an unnamed civil war, arguing about what art is worth when the civilization that produced it has collapsed.',
+    significance:
+      'An early proof of the transfer model. A play premiered in Chicago and picked up by a major New York institution within a year demonstrated that the Goodman could originate work of national consequence, which is the argument Falls\'s whole tenure rests on.',
+  },
+  'susannah': {
+    summary:
+      'Falls\'s opera directing debut: Susannah at Lyric Opera of Chicago in 1993, followed by a staging at the Metropolitan Opera in New York in 1999.',
+    synopsis:
+      'Carlisle Floyd\'s American opera transplants the Susanna and the Elders story to a Tennessee valley community, where a young woman seen bathing becomes the object of the congregation\'s certainty. Its idiom is folk-inflected and its cruelty is communal.',
+    significance:
+      'The credit that opens the entire opera side of the archive. From this debut the line runs directly to The Consul at Lyric, and then to Don Giovanni — the production Lyric has now revived three times. That an opera debut reached the Metropolitan within six years indicates how quickly the transition was accepted.',
+  },
+  'three-sisters': {
+    summary:
+      'Chekhov\'s Three Sisters at the Goodman Theatre in 1995, part of what Falls later described as a deliberate dialogue between classic and new work.',
+    synopsis:
+      'Three sisters in a provincial garrison town organise their lives around a return to Moscow that recedes further with every act. Chekhov gives them intelligence, wit, and no exit.',
+    significance:
+      'The first of the major Chekhov stagings in the record, ahead of The Seagull, Uncle Vanya, and The Cherry Orchard. Read together, they amount to a sustained engagement with a single writer across decades rather than a series of unrelated revivals.',
+  },
+  'the-food-chain': {
+    summary:
+      'An off-Broadway credit at New York\'s Westside Theatre in 1995, staged in the same period as Falls\'s Lincoln Center work.',
+    synopsis:
+      'A comedy of appetite and self-loathing in which desire, body image, and the New York dating economy are played at farce speed and volume.',
+    significance:
+      'Evidence of a commercial off-Broadway strand running alongside the institutional work. In the mid-1990s Falls was directing at Lincoln Center, in a commercial off-Broadway house, at Lyric Opera, and at the Goodman — often within the same seasons.',
+  },
+  'suburbia': {
+    summary:
+      'Eric Bogosian\'s subUrbia at Lincoln Center Theater in 1994 — the production that won Falls the Obie Award for direction.',
+    synopsis:
+      'A group of young people spend the night in a convenience-store parking lot waiting for a friend who has actually made it out, and use the hours to circle their own inertia. Bogosian writes the boredom as pressure, not as absence.',
+    significance:
+      'The Obie is one of the defining honors in the record, and it came from New York for contemporary American work rather than from Chicago or from a classic. Together with the Lincoln Center platform, it established Falls nationally as a director of new writing in the same years he was consolidating the Goodman.',
+  },
+  'a-touch-of-the-poet': {
+    summary:
+      'O\'Neill\'s A Touch of the Poet at the Goodman Theatre in 1996, another chapter in the long Falls and Brian Dennehy engagement with O\'Neill.',
+    synopsis:
+      'A failing Massachusetts innkeeper sustains himself on the story of the officer and gentleman he once was, while his wife and daughter absorb the cost of the performance. O\'Neill wrote it as part of an unfinished cycle on American acquisition.',
+    significance:
+      'A key link in the O\'Neill sequence that runs from here through Long Day\'s Journey Into Night and The Iceman Cometh. Approaching a major playwright repeatedly, with the same leading actor, is the pattern that produced the most decorated work of Falls\'s career.',
+  },
+  'the-consul': {
+    summary:
+      'Menotti\'s The Consul at Lyric Opera of Chicago in 1996, Falls\'s second major opera credit after his 1993 Susannah debut.',
+    synopsis:
+      'A woman tries to obtain an exit visa from an unnamed police state and never reaches the consul himself, only the waiting room and its paperwork. Menotti wrote it as a mid-century opera about bureaucracy as a lethal instrument.',
+    significance:
+      'Confirms that the Susannah debut was the start of an opera practice rather than an isolated experiment. Both are twentieth-century American operas driven by text and situation, which is the repertoire a theatre director is best placed to serve.',
+  },
+  'griller': {
+    summary:
+      'A 1997 world premiere at the Goodman Theatre, which Falls later named among his signature premieres.',
+    synopsis:
+      'A new American play given its first production at the Goodman during the most premiere-heavy stretch of Falls\'s artistic directorship.',
+    significance:
+      'Falls singling this out among his own premieres is the reason it belongs in the record with more than a line. The archive\'s premiere count is large; the ones a director chooses to remember indicate what he thought the program was for.',
+  },
+  'orchards': {
+    summary:
+      'Orchards for The Acting Company in 1986: a Chekhov adaptation cycle with new pieces by writers including María Irene Fornés, Spalding Gray, John Guare, David Mamet, and Wendy Wasserstein, staged in New York and on tour.',
+    synopsis:
+      'Seven Chekhov short stories handed to seven contemporary American playwrights, each free to answer the source as they chose, and then played by a single touring ensemble across a single evening.',
+    significance:
+      'An unusually concentrated collaboration: five or more of the significant American playwrights of the period, one director, one company, on tour. It also marks an early instance of the Chekhov engagement that Falls returned to for the next thirty years.',
   },
 };
 
