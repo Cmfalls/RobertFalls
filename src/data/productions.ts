@@ -150,6 +150,8 @@ import donGiovanni6 from '../images/don-giovanni/don-giovanni-6.jpg';
 import donGiovanni7 from '../images/don-giovanni/don-giovanni-7.jpg';
 import donGiovanni8 from '../images/don-giovanni/don-giovanni-8.jpg';
 import donGiovanni2019Revival from '../images/don-giovanni/don-giovanni-2019-revival.jpg';
+import donGiovanniRehearsalSet from '../images/don-giovanni/don-giovanni-rehearsal-set-2014.webp';
+import donGiovanniLyricHouse from '../images/don-giovanni/don-giovanni-lyric-house-2014.webp';
 import donGiovanniMaskedTrio from '../images/web-sourced/don-giovanni-lyric-1.jpg';
 import donGiovanniFinale from '../images/web-sourced/don-giovanni-lyric-2.jpg';
 import americanBuffaloPlaybill from '../images/american-buffalo/american-buffalo-playbill.jpg';
@@ -2653,6 +2655,22 @@ const productionSeeds: Record<string, ProductionSeed> = {
         caption: 'The closing scene gathers the survivors around a candlelit shrine after Giovanni\'s damnation.',
         orientation: 'landscape',
         kind: 'production-still',
+      },
+      // Candid working-room record from the 2014 build, dated by the camera
+      // timestamps on the originals. Placed last so the production stills lead.
+      {
+        src: donGiovanniRehearsalSet,
+        alt: 'Performers and crew work across a large ivy-covered mound filling a rehearsal room, with others watching from the floor.',
+        caption: 'The greenery-covered mound in the rehearsal room, September 2014, weeks before the Lyric premiere.',
+        orientation: 'landscape',
+        kind: 'rehearsal',
+      },
+      {
+        src: donGiovanniLyricHouse,
+        alt: 'The gilded Lyric Opera auditorium seen from the stage, its tiers of empty red seats lit by the house lights.',
+        caption: 'The house seen from the stage at Lyric Opera of Chicago during the September 2014 rehearsal period.',
+        orientation: 'landscape',
+        kind: 'documentation',
       },
     ],
     collaborators: [
